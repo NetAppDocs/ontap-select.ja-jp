@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>よくある質問</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="よくある質問" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-select/reference_faq.html" />
+	<meta property="og:description" content="ONTAP Select に関するよくある質問とその回答をご確認ください。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/ontap-select/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="ONTAP Select に関するよくある質問とその回答をご確認ください。">
+  <meta name="keywords" content=" faq, frequently asked questions">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ja-jp/ontap-select/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/ontap-select/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/ontap-select/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/ontap-select/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ja-jp/ontap-select/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ja-jp/ontap-select/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ja-jp/ontap-select/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/ontap-select/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/ontap-select/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/ja-jp/ontap-select/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/ja-jp/ontap-select/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ja-jp/ontap-select/js/na-search.js'></script>
+  
+
+  
+  <script src='/ja-jp/ontap-select/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ja-jp/ontap-select/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/ontap-select/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ja-jp/ontap-select/js/na-utility.js'></script>
+  <script src='/ja-jp/ontap-select/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/ja-jp/ontap-select/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ja-jp/ontap-select/js/toc.js'></script>
+  <script src='/ja-jp/ontap-select/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/ja-jp/ontap-select/js/version-dropdown.js'></script>
+  <script src='/ja-jp/ontap-select/js/product-family.js'></script>
+  <script src='/ja-jp/ontap-select/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/ontap-select/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/ontap-select/js/jszip.min.js'></script>
+  <script src='/ja-jp/ontap-select/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">製品とソリューション</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">サポートとトレーニング</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">コミュニティ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">ブログ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">ユーザ事例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ja-jp/ontap-select/search.html"
+          data-type="widget" 
+          data-placeholder="ドキュメントを検索" 
+          data-no-results-found="{query}に該当する結果はありません" 
+          data-did-you-mean="{suggestion} を検索" 
+          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
+          data-results-found="{hitCount} 件見つかりました"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">日本語</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/ontap-select/reference_faq.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/ontap-select/reference_faq.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/ontap-select/reference_faq.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/ontap-select/reference_faq.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ja-jp/ontap-select/pdfs/fullsite-sidebar/ONTAP_Select_のドキュメント.pdf" >
+          <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ビジネスユースケース.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ビジネスユースケース
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/計画.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            計画
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ONTAP_Select_の場合.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ONTAP Select の場合
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ONTAP_Select_導入.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ONTAP Select 導入
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/使用許諾.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            使用許諾
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/オプション__Options__.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            オプション（ Options ）
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/容量プールのライセンスモデル.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            容量プールのライセンスモデル
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/購入.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            購入
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            をインストールします
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/インストール前のチェックリスト.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            インストール前のチェックリスト
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/管理.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            管理
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ノードとホスト.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ノードとホスト
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/詳細.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            詳細
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ストレージ.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ストレージ
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ネットワーキング.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ネットワーキング
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/高可用性アーキテクチャ.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            高可用性アーキテクチャ
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/パフォーマンス.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            パフォーマンス
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/vCenter_と統合.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            vCenter と統合
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/はじめに.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            はじめに
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/プラグインを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            プラグインを管理します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/管理.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            管理
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/REST_による自動化.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            REST による自動化
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ブラウザを使用してにアクセスします.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ブラウザを使用してにアクセスします
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ワークフロープロセス.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ワークフロープロセス
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/Python_を使用してアクセスします.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            Python を使用してアクセスします
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/Python_コードサンプル.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            Python コードサンプル
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/CLI_を使用します.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            CLI を使用します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ノードとホスト.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            ノードとホスト
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/Deploy_ユーティリティ.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+            Deploy ユーティリティ
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/ontap-select/pdfs/pages/reference_faq.pdf" >
+    <img src="/ja-jp/ontap-select/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/ontap-select/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/index.html">
+        ONTAP Select 9.10.1 のドキュメント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_release_notes.html">
+        リリースノート
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_ots_overview.html">
+        製品の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_ots_deploy.html">
+        ONTAP Select 導入
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ビジネスユースケース</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_usecase_overview.html">
+        ビジネスニーズと使用シナリオ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_usecase_robo.html">
+        リモートオフィス、ブランチオフィス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_usecase_private_cloud.html">
+        プライベートクラウドとデータセンター
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_usecase_mc_sds.html">
+        MetroCluster SDS
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_terminology.html">
+        用語集
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 計画</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_workflow_deploy.html">
+        導入のワークフロー
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select の場合</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_general.html">
+        一般的な要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_hardware.html">
+        ハイパーバイザーとハードウェア
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_storage.html">
+        ストレージと RAID
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_vnas.html">
+        ONTAP Select vNAS
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_networking.html">
+        ネットワーキング
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_two_node.html">
+        2 ノードクラスタ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_robo.html">
+        リモートオフィス、ブランチオフィス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_mcc_sds.html">
+        MetroCluster SDS
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_vcenter.html">
+        VMware vCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_ots_plugin.html">
+        VMware vCenter プラグイン
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select 導入</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_dep_general.html">
+        一般的な要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_dep_vmware.html">
+        VMware 環境
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_plan_best_practices.html">
+        ベストプラクティス
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 使用許諾</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> オプション（ Options ）</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_evaluation.html">
+        評価用ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_production.html">
+        本番環境用ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_platforms.html">
+        プラットフォームライセンスの提供
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 容量プールのライセンスモデル</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_cp_operation.html">
+        運用の詳細
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_cp_serial_number.html">
+        ノードのシリアル番号
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_cp_restrictions.html">
+        制限事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_cp_compare_ct.html">
+        容量プールと大容量階層の比較
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_cp_benefits.html">
+        利点のまとめ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 購入</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_lic_workflow.html">
+        ライセンス関連のワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_lic_acquire_ct.html">
+        大容量階層
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_lic_acquire_cp.html">
+        容量プール
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_lic_ontap_features.html">
+        ONTAP の機能
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> をインストールします</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> インストール前のチェックリスト</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_chk_host_prep.html">
+        ホスト準備チェックリスト
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_chk_deploy_req_info.html">
+        Deploy ユーティリティの必要な情報
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_chk_select_req_info.html">
+        ONTAP Select に必要な情報
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_chk_nvme_configure.html">
+        NVMe ホストの設定
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_install_deploy.html">
+        ONTAP Select Deploy をインストールする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_deploy_cluster.html">
+        クラスタを導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_initial_state.html">
+        クラスタの初期状態
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_adm_before.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_adm_upgrading_nodes.html">
+        ノードをアップグレードする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_support.html">
+        診断とサポート
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_security.html">
+        セキュリティ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_connectivity.html">
+        ネットワーク接続
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_mediators.html">
+        メディエーター
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_clusters.html">
+        クラスタ
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ノードとホスト</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_video_console.html">
+        VM ビデオコンソール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_resize.html">
+        クラスタノードのサイズを変更しています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_replace_drives_swraid.html">
+        障害が発生した SW RAID ドライブの交換
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_upgrade_vmfs6.html">
+        VMFS6 にアップグレードしています
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_adm_licenses.html">
+        ライセンス
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 詳細</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ストレージ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_stor_concepts_chars.html">
+        一般的な概念と特徴
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_stor_hwraid_local.html">
+        ローカル接続ストレージ向けのハードウェア RAID サービス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_stor_swraid_local.html">
+        ローカル接続ストレージ向けのソフトウェア RAID サービス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_stor_vsan_external.html">
+        VSAN および外付けアレイの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_stor_capacity_inc.html">
+        ストレージ容量を増やしています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_stor_eff_support.html">
+        Storage Efficiency のサポート
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ネットワーキング</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_nw_concepts_chars.html">
+        一般的な概念と特徴
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_nw_single_multi_node.html">
+        シングルノード構成とマルチノード構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_nw_internal_external.html">
+        内部ネットワークと外部ネットワーク
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_nw_supported_configs.html">
+        サポートされている構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_nw_vsphere_vswitch_config.html">
+        VMware vSphere vSwitch の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_nw_physical_switch_config.html">
+        物理スイッチの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_nw_data_mgmt_separation.html">
+        データと管理の分離
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 高可用性アーキテクチャ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_ha_config.html">
+        HA の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_ha_mirroring.html">
+        同期レプリケーションとミラーアグリゲート
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_ha_other.html">
+        その他のハイアベイラビリティ機能
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> パフォーマンス</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_perf_general.html">
+        一般的な考慮事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_94.html">
+        9.4 Premium HA 直接接続 SSD ストレージ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_95.html">
+        9.5 Premium HA 直接接続 SSD ストレージ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html">
+        9.6 Premium HA 直接接続 SSD ストレージ
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> vCenter と統合</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> はじめに</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_vpi_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_vpi_architecture.html">
+        アーキテクチャ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_vpi_planning.html">
+        計画
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> プラグインを管理します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_vpi_manage_before.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_install.html">
+        をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_access.html">
+        にアクセスします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_upgrade.html">
+        をアップグレードして削除します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_manually_remove.html">
+        プラグインを手動で削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_deploy_cluster.html">
+        クラスタを導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_vpi_vcenter_integration.html">
+        vCenter との統合
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_adm_support.html">
+        診断とサポート
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_adm_network.html">
+        ネットワーキング
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_adm_clusters.html">
+        クラスタ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_vpi_adm_licenses.html">
+        ライセンス
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_vpi_troubleshooting.html">
+        トラブルシューティングを行う
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> REST による自動化</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_rest.html">
+        REST Web サービス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_how_access.html">
+        Deploy API にアクセスします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_versions.html">
+        API のバージョン管理を導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_operation.html">
+        基本操作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_transaction.html">
+        リクエストおよびレスポンストランザクション
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_async_proc.html">
+        非同期処理
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ブラウザを使用してにアクセスします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_before_browser.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_api_access_doc_page.html">
+        ドキュメントページにアクセスします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_api_understanding_call.html">
+        API 呼び出しについて
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ワークフロープロセス</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_before_workflows.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_api_workflow01.html">
+        ワークフロー 1 ：クラスタの作成
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Python を使用してアクセスします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_before_python.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_api_understanding_scripts.html">
+        スクリプトの理解
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Python コードサンプル</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_api_script_cc.html">
+        クラスタを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_api_json_cc.html">
+        JSON を使用してクラスタを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_api_script_anl.html">
+        ノードライセンスを追加
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_api_script_dc.html">
+        クラスタを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_api_script_common.html">
+        共通サポートモジュール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_api_script_resize.html">
+        クラスタノードのサイズを変更
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_automate_ansible.html">
+        Ansible で自動化
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CLI を使用します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/concept_cli_before.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_signing_in.html">
+        SSH を使用してサインインします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_deploy_cluster.html">
+        クラスタを導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_security.html">
+        セキュリティ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_connectivity.html">
+        ネットワーク接続
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_clusters.html">
+        クラスタ
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ノードとホスト</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_upgrade_esxi65.html">
+        ESXi を 6.5 以降にアップグレードしています
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Deploy ユーティリティ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_upgrade_deploy.html">
+        Deploy インスタンスをアップグレードする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_migrate_deploy.html">
+        Deploy インスタンスを移行する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_deploy_image_add.html">
+        ONTAP Select イメージを追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_deploy_image_remove.html">
+        ONTAP Select イメージを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/task_cli_deploy_recover_two_node.html">
+        2 ノードクラスタの Deploy をリカバリします
+      </a></li></ul></li></ul></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_faq.html">
+        よく寄せられる質問
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_additional_info.html">
+        詳細はこちらをご覧ください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_earlier_versions.html">
+        以前のバージョン
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_legal_notices.html">
+        法的通知
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">ホーム</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">ドキュメント</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/ontap-select/">ONTAP&nbsp;Select</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          よくある質問
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">よくある質問</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-02-28 18:01:24 +0000">02/28/2022</time>
+    
+  
+
+<span>寄稿者
+  <a target="_blank" href="https://github.com/dmp-netapp">
+    <img  class="avatar avatar-small"
+          alt="dmp-netapp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/50704017?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-barbe">
+    <img  class="avatar avatar-small"
+          alt="netapp-barbe"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/55463742?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>ONTAP Select に関するよくある質問とその回答をご確認ください。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="注記">
+</td>
+<td class="content">
+ONTAP Select 9.10.1 以降では、 KVM ハイパーバイザーがサポートされなくなりました。KVM に関する質問は、 KVM をサポートする以前のリリースにのみ該当します。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="全般">全般</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>一般的な質問と回答を参照してください。</p>
+</div>
+<div class="sect4">
+<h5 id="ontap-deploy-と-ontap-select-の違いは何ですか">ONTAP Deploy と ONTAP Select の違いは何ですか。</h5>
+<div class="paragraph">
+<p>ONTAP Deploy は、 ONTAP Select クラスタの作成に使用するユーティリティです。現時点では、本番環境クラスタの作成に使用できるのは ONTAP Deploy のみです。また、 ONTAP Deploy を使用して評価用の Select クラスタを作成し、クライアントが本番環境の実際の手順をテストして文書化できるようにすることもできます。また、 ONTAP Deploy は、評価時に消費されるスペースに十分な容量を持つ適切な大容量階層ライセンスを使用して、評価用クラスタを本番環境のクラスタに変換することもできます。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy は、 ONTAP Select のイメージが格納された仮想マシンです。クラスタのインストール時に、 ONTAP Deploy はいくつかのチェックを実施して、 ONTAP Select の最小要件が満たされていることを確認します。ONTAP Deploy VM と Select クラスタは別々にアップグレードできます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-でパフォーマンス問題-のトラブルシューティングを行うにはどうすればよいですか">ONTAP Select でパフォーマンス問題 のトラブルシューティングを行うにはどうすればよいですか。</h5>
+<div class="paragraph">
+<p>FAS の ONTAP と同様に、 Perfstat ユーティリティを使用してパフォーマンスデータを収集する必要があります。コマンドの例を次に示します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>* perfstat8 –i N,m -t &lt;sample time in minutes&gt; --verbose --nodes=&lt;filer IP&gt; --diag-passwd=abcxyz --mode="cluster-mode" &gt; &lt;name of output file&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-deploy-の-swagger-api-ページにアクセスする方法を教えてください">ONTAP Deploy の Swagger API ページにアクセスする方法を教えてください。</h5>
+<div class="listingblock">
+<div class="content">
+<pre>http://&lt;IP address of Deploy&gt;/api/ui</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="注記">
+</td>
+<td class="content">
+API v3 リリースは、以前のバージョンの API と後方互換性がありません。新しい API ガイドはにあります <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2845694">"Field Portal"</a>。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-vm-は-vmware-またはその他のサードパーティのスナップショットを使用してバックアップできますか">ONTAP Select VM は、 VMware またはその他のサードパーティのスナップショットを使用してバックアップできますか。</h5>
+<div class="paragraph">
+<p>いいえONTAP Select VM は、 VMware ベースの Snapshot から除外される独立した永続的ドライブを使用します。ONTAP Select のバックアップ方法としてサポートされているのは、 SnapMirror 、 SnapVault 、または SVM DR （該当する場合）のみです。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="この-faq-に記載されていない質問についてどこで明確にしていますか">この FAQ に記載されていない質問について、どこで明確にしていますか。</h5>
+<div class="paragraph">
+<p>連絡先 <a href="mailto:ng-ses-ontap-select@netapp.com">"<a href="mailto:ng-ses-ontap-select@netapp.com">ng-ses-ontap-select@netapp.com</a>"</a>。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ライセンスインストールアップグレードリバート">ライセンス、インストール、アップグレード、リバート</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ライセンス、インストール、アップグレード、および復元に関する質問を参照できます。</p>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-と-ontap-deploy-は別々にアップグレードできますか">ONTAP Select と ONTAP Deploy は別々にアップグレードできますか。</h5>
+<div class="paragraph">
+<p>はい。ONTAP Deploy ユーティリティは、 ONTAP Select クラスタとは別にアップグレードできます。同様に、 Select クラスタも ONTAP Deploy ユーティリティとは別にアップグレードできます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="fas-クラスタと同じ手順-を使用して-ontap-select-をアップグレードできますか">FAS クラスタと同じ手順 を使用して ONTAP Select をアップグレードできますか。</h5>
+<div class="paragraph">
+<p>はい。 Select クラスタのアップグレード手順 は FAS クラスタのアップグレードと同じですが、 ONTAP Select アップグレードバイナリは FAS のアップグレードバイナリの ONTAP とは別のダウンロードです。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="fas-クラスタと同じ手順-を使用して-ontap-select-をリバートできますか">FAS クラスタと同じ手順 を使用して ONTAP Select をリバートできますか。</h5>
+<div class="paragraph">
+<p>はい、 ONTAP Select クラスタのリバート手順 は、 FAS クラスタのリバート手順 とほぼ同じです。ただし、いくつかの違いがあります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>リバートできるのは、アップグレードされた ONTAP Select インスタンスのみで、元のインストールバージョンのみです。ONTAP Select が以前のリリースをサポートしていても、新しいインストールは古いコードリリースに戻すことはできません。</p>
+</li>
+<li>
+<p>ソフトウェア RAID を使用する ONTAP Select （ KVM ）および ONTAP Select （ ESX ）の場合、ソフトウェア RAID をサポートしていない以前のバージョンにリバートすることはできません。さらに、 ESX への ONTAP Select 9.5 以降の新規インストールでは、 VMXNET3 ネットワークドライバおよび可能な場合は vNMVE ドライバが使用されます。これらの新規インストールを以前のバージョンの ONTAP Select にリバートすることはできません。</p>
+</li>
+<li>
+<p>ONTAP Select VM も（ Premium XL ライセンスを使用して）大規模なインスタンスにアップグレードされた場合、以前のバージョンでは大規模なインスタンス機能は使用できないため、 9.6 より前のバージョンにリバートすることはできません。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-metrocluster-sds-には-premium-ライセンス以上が必要ですか">ONTAP MetroCluster SDS には、 Premium ライセンス以上が必要ですか？</h5>
+<div class="paragraph">
+<p>はい。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-deploy-および-ontap-select-クラスタとノードの管理の-ip-アドレスをインストール後に変更することはできますか">ONTAP Deploy および ONTAP Select クラスタとノードの管理の IP アドレスをインストール後に変更することはできますか。</h5>
+<div class="paragraph">
+<p>ONTAP Deploy は、 GUI 、 CLI 、または REST API から実行できるクラスタ更新処理を使用して、次の ONTAP Select クラスタプロパティへの変更を認識します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ネットワークの設定（ IP アドレス、 DNS 、 NTP 、ネットマスク、ゲートウェイ）</p>
+</li>
+<li>
+<p>ONTAP Select クラスタ、ノード名、およびバージョン</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>次の ONTAP Select VM の変更も認識されます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP Select VM の名前と状態の変更（オンラインやオフラインなど）</p>
+</li>
+<li>
+<p>ホストのネットワーク名とストレージプール名が変更された</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="注記">
+</td>
+<td class="content">
+ONTAP Deploy VM の IP アドレスの変更はサポートされていません。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy 2.6 にアップグレードすると、導入済みだが元の構成からは変更されていない ONTAP Select クラスタに対して、これらの変更をサポートできるようになります。つまり、上記の ONTAP Select クラスタプロパティが System Manager または vCenter を使用して変更された場合、 ONTAP Deploy 2.6 にアップグレードしても、これらの不整合は修正されません。ONTAP Deploy によって一意のメタデータが各 ONTAP Select VM に追加されるようにするには、 ONTAP Select プロパティの変更を最初にロールバックする必要があります。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ストレージ">ストレージ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ストレージに関する質問を参照できます。</p>
+</div>
+<div class="sect4">
+<h5 id="1-つの-ontap-deploy-インスタンスで-esx-と-kvm-の両方にクラスタを作成できますか">1 つの ONTAP Deploy インスタンスで ESX と KVM の両方にクラスタを作成できますか。</h5>
+<div class="paragraph">
+<p>はい。ONTAP Deploy は KVM または ESX にインストールできます。両方のインストール環境で、どちらのハイパーバイザーにも ONTAP Select クラスタを作成できます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="esx-上の-ontap-select-には-vcenter-が必要ですか">ESX 上の ONTAP Select には vCenter が必要ですか。</h5>
+<div class="paragraph">
+<p>ESX ホストのライセンスが適切な場合は、 ESX ホストを vCenter Server で管理する必要はありません。ただし、ホストが vCenter サーバで管理されている場合は、その vCenter Server を使用するように ONTAP Deploy を設定する必要があります。つまり、 ESX ホストが vCenter Server によってアクティブに管理されている場合、 ONTAP Deploy で ESX ホストをスタンドアロンとして設定することはできません。ONTAP Deploy VM は、 vMotion または VMware の HA イベントが原因で、 vCenter に依存して ESXi ホスト間のすべての ONTAP Select VM 移行を追跡します。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ソフトウェア-raid-とは">ソフトウェア RAID とは</h5>
+<div class="paragraph">
+<p>ONTAP Select では、 RAID コントローラを使用しないサーバを使用できます。ソフトウェア RAID でサポートされるのは SSD のみです。それ以外のドライブタイプ（ NVMe を含む）はサポートされません。ONTAP Select ブートディスクおよびコアディスクは、引き続き仮想化されたパーティション（ストレージプールまたはデータストア）内に配置する必要があります。ONTAP Select は、 RD2 （ルート / データ / データパーティショニング）を使用して SSD をパーティショニングします。したがって、 ONTAP Select ルートパーティションは、データアグリゲートに使用される物理スピンドルと同じ上にあります。ただし、ルートアグリゲートおよびブートディスクとコア仮想ディスクは容量ライセンスには含まれません。</p>
+</div>
+<div class="paragraph">
+<p>AFF / FAS で使用できるすべての RAID 方式を ONTAP Select でも使用できます。これには、 RAID 4 、 RAID DP 、および RAID-TEC が含まれます。SSD の最小数は、選択した RAID 構成のタイプによって異なります。ベストプラクティスとして、少なくとも 1 つのスペアが必要です。スペアディスクとパリティディスクは容量ライセンスには含まれません。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ソフトウェア-raid-とハードウェア-raid-構成の違いは何ですか">ソフトウェア RAID とハードウェア RAID 構成の違いは何ですか。</h5>
+<div class="paragraph">
+<p>ソフトウェア RAID は、 ONTAP ソフトウェアスタックのレイヤです。ソフトウェア RAID では、物理ドライブが ONTAP Select VM 内でパーティショニングされ、 raw ディスクとして使用できるため、管理性が向上します。一方、ハードウェア RAID では、通常は 1 つの大きな LUN を使用でき、その LUN を ONTAP Select で使用して VMDISK を作成できます。ソフトウェア RAID はオプションとして使用でき、ハードウェア RAID の代わりに使用できます。</p>
+</div>
+<div class="paragraph">
+<p>ソフトウェア RAID の要件には、次のものがあります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>KVM および ESX でサポートされます</p>
+</li>
+<li>
+<p>サポートされる物理ディスクのサイズ： 200GB~32TB</p>
+</li>
+<li>
+<p>DAS 構成でのみサポートされます</p>
+</li>
+<li>
+<p>SSD でのみサポートされます</p>
+</li>
+<li>
+<p>Premium または Premium XL ONTAP Select ライセンスが必要です</p>
+</li>
+<li>
+<p>ハードウェア RAID コントローラがないか無効になっているか、 SAS HBA モードで動作している必要があります</p>
+</li>
+<li>
+<p>システムディスクのコアダンプ、ブート / NVRAM 、メディエーターなどに、専用の LUN に基づく LVM ストレージプールまたはデータストアを使用する必要があります。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-for-kvm-では複数の-nic-ボンドをサポートしていますか">ONTAP Select for KVM では複数の NIC ボンドをサポートしていますか。</h5>
+<div class="paragraph">
+<p>KVM にインストールするときは、単一のボンドと単一のブリッジを使用する必要があります。物理ポートが 2 つまたは 4 つあるホストでは、すべてのポートを同じボンドに含める必要があります。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ハイパーバイザーホスト内の障害が発生した物理ディスクまたは-nic-について-ontap-select-で報告またはアラートを生成する方法を教えてくださいontap-select-はハイパーバイザーからこの情報を取得しますかそれともハイパーバイザーレベルで監視を設定する必要がありますか">ハイパーバイザーホスト内の障害が発生した物理ディスクまたは NIC について、 ONTAP Select で報告またはアラートを生成する方法を教えてください。ONTAP Select はハイパーバイザーからこの情報を取得しますか、それともハイパーバイザーレベルで監視を設定する必要がありますか？</h5>
+<div class="paragraph">
+<p>ハードウェア RAID コントローラを使用する場合、 ONTAP Select は、基盤となるサーバの問題をほとんど認識しません。ベストプラクティスに従ってサーバを設定する場合は、ある程度の冗長性が必要です。ドライブ障害に備えて RAID 5/6 を使用することを推奨します。ソフトウェア RAID 構成の場合、 ONTAP はディスク障害に関するアラートを発行し、スペアドライブがある場合は、ドライブのリビルドを開始します。</p>
+</div>
+<div class="paragraph">
+<p>ネットワークレイヤでの単一点障害を回避するために、 2 つ以上の物理 NIC を使用する必要があります。ネットアップでは、データポートグループ、管理ポートグループには NIC チーミングとボンディングを設定し、チームまたはボンドに 2 つ以上のアップリンクを使用することを推奨します。このような構成により、アップリンクに障害が発生した場合に、仮想スイッチは、障害が発生したアップリンクから NIC チーム内の正常なアップリンクにトラフィックを移動します。推奨されるネットワーク構成の詳細については、を参照してください <a href="ct_nw_supported_configuraitons.html#network-configuration-best-practices">"ネットワーク構成のベストプラクティス"</a>。</p>
+</div>
+<div class="paragraph">
+<p>2 ノードクラスタまたは 4 ノードクラスタの場合、それ以外のエラーはすべて ONTAP HA で処理されます。ハイパーバイザーサーバを交換する必要があり、 ONTAP Select クラスタを新しいサーバで構成する必要がある場合は、ネットアップテクニカルサポートにお問い合わせください。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-でサポートされるデータストアの最大サイズはいくつですか">ONTAP Select でサポートされるデータストアの最大サイズはいくつですか。</h5>
+<div class="paragraph">
+<p>VSAN を含むすべての構成で、 ONTAP Select ノードあたり 400TB のストレージがサポートされます。</p>
+</div>
+<div class="paragraph">
+<p>サポートされる最大サイズを超えるデータストアにインストールする場合は、製品のセットアップ時に容量の上限を使用する必要があります。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-ノードの容量はどのようにして拡張できますか">ONTAP Select ノードの容量はどのようにして拡張できますか。</h5>
+<div class="paragraph">
+<p>ONTAP Deploy には、 ONTAP Select ノードでの容量拡張処理をサポートするストレージ追加ワークフローが含まれています。管理下でストレージを拡張するには、同じデータストアのスペースを使用するか（使用可能なスペースが残っている場合）、別のデータストアのスペースを追加します。ローカルデータストアとリモートデータストアを同じアグリゲートに混在させることはできません。</p>
+</div>
+<div class="paragraph">
+<p>ストレージの追加はソフトウェア RAID もサポートします。ただし、ソフトウェア RAID の場合は、 ONTAP Select VM に物理ドライブを追加する必要があります。この場合のストレージ追加は、 FAS または AFF アレイの管理と似ています。ソフトウェア RAID を使用して ONTAP Select ノードにストレージを追加する場合は、 RAID グループのサイズとドライブサイズを考慮する必要があります。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-は-vsan-または外付けアレイタイプのデータストアをサポートしますか">ONTAP Select は、 VSAN または外付けアレイタイプのデータストアをサポートしますか。</h5>
+<div class="paragraph">
+<p>ONTAP Deploy および ONTAP Select for ESX では、 VSAN または外付けアレイタイプのデータストアをストレージプールに使用する ONTAP Select シングルノードクラスタの構成をサポートしています。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy および ONTAP Select for KVM では、外部アレイで共有論理ストレージプールタイプを使用する ONTAP Select シングルノードクラスタの設定がサポートされます。ストレージプールのベースには iSCSI と FC / FCoE があります。それ以外のタイプのストレージプールはサポートされません。</p>
+</div>
+<div class="paragraph">
+<p>共有ストレージ上のマルチノード HA クラスタがサポートされます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-は-vsan-または一部の-hci-スタックを含むその他の共有外付けストレージ上のマルチノードクラスタをサポートしていますか">ONTAP Select は、 VSAN または一部の HCI スタックを含むその他の共有外付けストレージ上のマルチノードクラスタをサポートしていますか。</h5>
+<div class="paragraph">
+<p>外付けストレージ（マルチノード VNAS ）を使用するマルチノードクラスタは、 ESX と KVM の両方でサポートされます。同じクラスタ内にハイパーバイザーを混在させることはサポートされていません。共有ストレージ上の HA アーキテクチャは、 HA ペア内の各ノードにパートナーデータのミラーコピーがあることを意味します。ただし、マルチノードクラスタを使用すると、 ONTAP HA または KVM Live Motion を使用するシングルノードクラスタに比べて、のノンストップオペレーションのメリットが得られます。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy は同じホスト上の複数の ONTAP Select VM のサポートを追加しますが、クラスタの作成時にこれらのインスタンスを同じ ONTAP Select クラスタに含めることはできません。ESX 環境については、 VMware HA が同じ ONTAP Select クラスタから 1 つの ESX ホストに複数の ONTAP Select VM を移行しないように、 VM の非アフィニティルールを作成することを推奨します。さらに、 ONTAP Deploy は、管理（ユーザが開始） vMotion または ONTAP Select VM のライブマイグレーションが検出された場合、 2 つの ONTAP Select ノードが同じ物理ホストで終了するなどのネットアップのベストプラクティスに違反したとみなされます。 ONTAP Deploy は、 Deploy の GUI およびログにアラートを送信します。ONTAP Deploy が ONTAP Select VM の場所を認識する唯一の方法は、クラスタ更新処理によってです。これは、 ONTAP Deploy 管理者が手動で実行する必要がある処理です。プロアクティブな監視を可能にする ONTAP Deploy には機能がなく、 Deploy の GUI またはログにのみアラートが表示されます。つまり、このアラートを集中型の監視インフラストラクチャに転送することはできません。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-は-vmware-の-nsx-vxlan-をサポートしていますか">ONTAP Select は、 VMware の NSX VXLAN をサポートしていますか。</h5>
+<div class="paragraph">
+<p>NSX と V の VXLAN ポートグループがサポートされます。マルチノード HA （ ONTAP MetroCluster SDS を含む）の場合は、 VXLAN のオーバーヘッドに対応するために、内部ネットワーク MTU を（ 9000 ではなく） 7500 ～ 8900 の範囲で設定する必要があります。内部ネットワーク MTU は、クラスタの導入時に ONTAP Deploy で設定できます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-は-kvm-のライブマイグレーションをサポートしていますか">ONTAP Select は KVM のライブマイグレーションをサポートしていますか。</h5>
+<div class="paragraph">
+<p>外部アレイストレージプールで実行される ONTAP Select VM は、 virsh ライブマイグレーションをサポートします。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsan-af-に-ontap-select-premium-が必要ですか">VSAN AF に ONTAP Select Premium が必要ですか。</h5>
+<div class="paragraph">
+<p>いいえ。外付けアレイ構成と VSAN 構成のどちらがオールフラッシュであるかに関係なく、すべてのバージョンがサポートされます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="サポートされている-vsan-ftt-ftm-設定はどれか">サポートされている VSAN FTT / FTM 設定はどれか？</h5>
+<div class="paragraph">
+<p>Select VM は VSAN データストアのストレージポリシーを継承し、 FTT / FTM の設定に制限はありません。ただし、 FTT / FTM の設定によっては、 ONTAP Select VM のサイズがセットアップ時に設定した容量よりも大幅に大きくなる可能性があることに注意してください。ONTAP Select は、セットアップ時に作成される eager-zeroed-thick VMDK を使用します。同じ共有データストアを使用する他の VM への影響を回避するためには、 Select の容量と FTT / FTM の設定から導き出された実際の Select VM のサイズに対応できる十分な空き容量をデータストアに確保することが重要です。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="複数の-ontap-select-ノードが異なる-select-クラスタに属している場合それらのノードを同じホストで実行することはできますか">複数の ONTAP Select ノードが異なる Select クラスタに属している場合、それらのノードを同じホストで実行することはできますか。</h5>
+<div class="paragraph">
+<p>vNAS 構成では、同じホスト上の複数の ONTAP Select ノードを vNAS 構成でのみ設定できます。ただし、それらのノードが同じ ONTAP Select クラスタに含まれていない必要があります。この方法は DAS 構成ではサポートされていません。同じ物理ホスト上の複数の ONTAP Select ノードが RAID コントローラへのアクセスで競合するためです。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="1-つの-10ge-ポートを搭載したホストで-ontap-select-を実行できますかまた-esx-と-kvm-の両方に使用できますか">1 つの 10GE ポートを搭載したホストで ONTAP Select を実行できますか。また、 ESX と KVM の両方に使用できますか。</h5>
+<div class="paragraph">
+<p>1 つの 10GE ポートを使用して外部ネットワークに接続できます。ただし、この方法は、制約のあるスモールフォームファクタ環境でのみ使用することを推奨します。これは ESX と KVM の両方でサポートされます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="kvm-でライブマイグレーションを実行するにはどのような追加プロセスを実行する必要がありますか">KVM でライブマイグレーションを実行するには、どのような追加プロセスを実行する必要がありますか。</h5>
+<div class="paragraph">
+<p>CLVM および Pacemaker （ PC ）コンポーネントは、ライブマイグレーションに参加する各ホストにインストールして実行する必要があります。これは、各ホストで同じボリュームグループにアクセスするために必要です。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vcenter">vCenter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>vCenter に関する質問を参照できます。</p>
+</div>
+<div class="sect4">
+<h5 id="ontap-deploy-はどのようにして-vcenter-と通信しどのファイアウォールポートを開く必要がありますか">ONTAP Deploy はどのようにして vCenter と通信し、どのファイアウォールポートを開く必要がありますか？</h5>
+<div class="paragraph">
+<p>ONTAP Deploy は、 VMware VIX API を使用して vCenter や ESX ホストと通信します。VMware のドキュメントでは、 vCenter Server または ESX ホストへの初期接続には、 TCP ポート 443 上の HTTPS/SOAP を使用します。これは、 TLS / SSL を介したセキュア HTTP のポートです。次に、 ESX ホストへの接続が TCP ポート 902 のソケットで開かれます。この接続を経由するデータは SSL で暗号化されます。また、 ONTAP Deploy は ping コマンドを発行して、指定した IP アドレスで応答する ESX ホストがあることを確認します。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy は、次のように ONTAP Select ノードおよびクラスタ管理 IP アドレスと通信できる必要もあります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ping</p>
+</li>
+<li>
+<p>SSH （ポート 22 ）</p>
+</li>
+<li>
+<p>SSL （ポート 443 ）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>2 ノードクラスタの場合、 ONTAP Deploy はクラスタのメールボックスをホストします。各 ONTAP Select ノードは、 iSCSI （ポート 3260 ）を使用して ONTAP Deploy にアクセスできる必要があります。</p>
+</div>
+<div class="paragraph">
+<p>マルチノードクラスタの場合、内部ネットワークを完全に開く必要があります（ NAT やファイアウォールは使用しない）。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-deploy-で-ontap-select-クラスタを作成するために必要な-vcenter-の権限はどれですか">ONTAP Deploy で ONTAP Select クラスタを作成するために必要な vCenter の権限はどれですか？</h5>
+<div class="paragraph">
+<p>必要な vCenter 権限の一覧については、以下を参照してください。 <a href="reference_plan_ots_vcenter.html">"VMware vCenter サーバ"</a>。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vcenter-deploy-プラグインとは何ですか">vCenter Deploy プラグインとは何ですか。</h5>
+<div class="paragraph">
+<p>vCenter Server の ONTAP Deploy 機能を ONTAP Deploy プラグインと統合することができます。このプラグインは、 ONTAP Deploy に代わるものではありません。代わりに、 ONTAP Deploy はバックグラウンドで動作します。 vCenter 管理者は、 ONTAP Deploy のほとんどの機能をプラグインで呼び出すことができます。一部の ONTAP Deploy 処理は CLI でのみ実行できます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="プラグインを-1-台の-vcenter-server-に登録できる-ontap-deploy-vm-の数はいくつですか">プラグインを 1 台の vCenter Server に登録できる ONTAP Deploy VM の数はいくつですか。</h5>
+<div class="paragraph">
+<p>特定の vCenter サーバにプラグインを登録できる ONTAP Deploy VM は 1 台だけです。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-deploy-vcenter-プラグインのメリットは何ですか">ONTAP Deploy vCenter プラグインのメリットは何ですか。</h5>
+<div class="paragraph">
+<p>vCenter の管理者および IT ジェネラリストは、 vCenter HTML5 GUI を使用して ONTAP Select クラスタを作成できます。Flash vCenter GUI はサポートされていません。</p>
+</div>
+<div class="paragraph">
+<p>また、 ONTAP Deploy が vCenter RBAC を認証に使用できるようにします。ONTAP Deploy プラグインを使用するための vCenter 権限が付与されたユーザには、そのユーザの vCenter アカウントが ONTAP Deploy 管理ユーザにマッピングされている。ONTAP Deploy はすべての処理のユーザ ID をログに記録し、次のファイルを基本的な監査ログとして使用できます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>nginx_access.log</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ha-およびクラスタ">HA およびクラスタ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>高可用性とクラスタに関する質問を参照できます。</p>
+</div>
+<div class="sect4">
+<h5 id="4-ノード-6-ノードまたは-8-ノードのクラスタと-2-ノードの-ontap-select-クラスタの違いは何ですか">4 ノード、 6 ノード、または 8 ノードのクラスタと 2 ノードの ONTAP Select クラスタの違いは何ですか。</h5>
+<div class="paragraph">
+<p>ONTAP Deploy VM が主にクラスタの作成に使用される 4 ノード、 6 ノード、および 8 ノードクラスタとは異なり、 2 ノードクラスタは、 HA クォーラム用に ONTAP Deploy VM を継続的に利用します。ONTAP Deploy VM が使用できない場合、フェイルオーバーサービスは無効になります。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="metrocluster-sds-とは">MetroCluster SDS とは</h5>
+<div class="paragraph">
+<p>MetroCluster SDS は、ネットアップの MetroCluster ビジネス継続性ソリューションのカテゴリに分類される、低コストの同期レプリケーションオプションです。FAS ハイブリッドフラッシュ、 AFF 、クラウド向け NetApp Private Storage 、および NetApp FlexArray ® テクノロジで利用できる NetApp MetroCluster とは異なり、 ONTAP Select でのみ利用できます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="metrocluster-sds-と-netapp-metrocluster-の違いは何ですか">MetroCluster SDS と NetApp MetroCluster の違いは何ですか。</h5>
+<div class="paragraph">
+<p>MetroCluster SDS は、同期レプリケーション解決策 を提供し、ネットアップの MetroCluster ソリューションに該当します。ただし、主な違いは、サポートされる距離（約 10km と 300km ）と接続タイプ（ FC と IP ではなく IP ネットワークのみがサポート）です。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="2-ノード-ontap-select-クラスタと-2-ノード-ontap-metrocluster-sds-の違いは何ですか">2 ノード ONTAP Select クラスタと 2 ノード ONTAP MetroCluster SDS の違いは何ですか。</h5>
+<div class="paragraph">
+<p>2 ノードクラスタとは、同じデータセンター内にある 2 つのノードが相互に 300m 以内の範囲にあるクラスタです。一般に、両方のノードには、スイッチ間リンクで接続された同じネットワークスイッチまたは一連のネットワークスイッチへのアップリンクがあります。</p>
+</div>
+<div class="paragraph">
+<p>2 ノード MetroCluster SDS は、ノードが物理的に分離され（異なる部屋、異なる建物、または異なるデータセンター）、各ノードのアップリンク接続が別々のネットワークスイッチに接続されているクラスタとして定義されます。MetroCluster SDS には専用のハードウェアは必要ありませんが、環境ではレイテンシ（ 5 ミリ秒 RTT と 5 ミリ秒ジッター）と物理距離（ 10km ）の観点から一連の最小要件をサポートする必要があります。</p>
+</div>
+<div class="paragraph">
+<p>MetroCluster SDS はプレミアム機能であり、 Premium または Premium XL ライセンスが必要です。Premium ライセンスは、中小規模の VM のほか、 HDD および SSD メディアの作成をサポートします。これらの構成はすべてサポートされます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-metrocluster-sds-にはローカルストレージ-das-が必要ですか">ONTAP MetroCluster SDS にはローカルストレージ（ DAS ）が必要ですか。</h5>
+<div class="paragraph">
+<p>ONTAP MetroCluster SDS は、あらゆるタイプのストレージ構成（ DAS と vNAS ）をサポートします。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-metrocluster-sds-はソフトウェア-raid-をサポートしていますか">ONTAP MetroCluster SDS はソフトウェア RAID をサポートしていますか。</h5>
+<div class="paragraph">
+<p>はい。ソフトウェア RAID は、 KVM と ESX の両方の SSD メディアでサポートされています。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-metrocluster-sds-は-ssd-と回転式メディアの両方をサポートしていますか">ONTAP MetroCluster SDS は、 SSD と回転式メディアの両方をサポートしていますか。</h5>
+<div class="paragraph">
+<p>はい。 Premium ライセンスが必要ですが、このライセンスでは、中小規模の VM 、 SSD と回転式メディアの両方がサポートされます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-metrocluster-sds-では-4-ノード以上のクラスタサイズはサポートされますか">ONTAP MetroCluster SDS では、 4 ノード以上のクラスタサイズはサポートされますか。</h5>
+<div class="paragraph">
+<p>いいえ。メディエーターを持つ 2 ノードクラスタのみを MetroCluster SDS として設定できます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-metrocluster-sds-の要件は何ですか">ONTAP MetroCluster SDS の要件は何ですか。</h5>
+<div class="paragraph">
+<p>要件は次のとおりです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>3 つのデータセンター（ ONTAP Deploy メディエーター用に 1 つ、ノードごとに 1 つ）。</p>
+</li>
+<li>
+<p>5 ミリ秒 RTT と 5 ミリ秒ジッタ。 ONTAP Select ノード間の最大合計 10 ミリ秒と最大物理距離 10 ミリ秒です。</p>
+</li>
+<li>
+<p>ONTAP Deploy メディエーターと各 ONTAP Select ノードの間で 125 ミリ秒 RTT 、最小帯域幅 5Mbps</p>
+</li>
+<li>
+<p>Premium または Premium XL ライセンス。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-は-vmotion-または-vmware-ha-をサポートしていますか">ONTAP Select は vMotion または VMware HA をサポートしていますか。</h5>
+<div class="paragraph">
+<p>VSAN データストアまたは外付けアレイデータストア（ vNAS 環境）上で実行される ONTAP Select VM は、 vMotion 、 DRS 、 VMware HA 機能をサポートします。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-は-storage-vmotion-をサポートしていますか">ONTAP Select は Storage vMotion をサポートしていますか。</h5>
+<div class="paragraph">
+<p>Storage vMotion は、シングルノードおよびマルチノードの ONTAP Select クラスタと ONTAP Deploy VM を含むすべての構成でサポートされます。Storage vMotion を使用して、 ONTAP Select または ONTAP Deploy VM を異なる VMFS バージョン（ VMFS 5 から VMFS 6 など）間で移行できますが、このユースケースに限定されません。Storage vMotion 処理を開始する前に VM をシャットダウンすることを推奨します。ONTAP Deploy は、 Storage vMotion 処理の完了後に次の処理を問題 する必要があります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster refresh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>異なるタイプのデータストア間での Storage vMotion 処理はサポートされていないことに注意してください。つまり、 NFS タイプのデータストアと VMFS データストア間の Storage vMotion 処理はサポートされません。一般に、外付けデータストアと DAS データストア間の Storage vMotion 処理はサポートされていません。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-ノード間の-ha-トラフィックは異なる-vswitch-または分離された物理ポートあるいは-esx-ホスト間のポイントツーポイント-ip-ケーブルを使用して実行できますか">ONTAP Select ノード間の HA トラフィックは、異なる vSwitch 、または分離された物理ポート、あるいは ESX ホスト間のポイントツーポイント IP ケーブルを使用して実行できますか。</h5>
+<div class="paragraph">
+<p>これらの構成はサポートされていません。ONTAP Select では、クライアントトラフィックを伝送する物理ネットワークアップリンクのステータスは確認できません。したがって、 ONTAP Select は、 HA ハートビートを使用して、 VM がクライアントとそのピアに対して同時にアクセス可能であることを確認します。物理的な接続が失われると、 HA ハートビートを受信できなくなると、もう一方のノードへの自動フェイルオーバーが実行されます。これは望ましい動作です。</p>
+</div>
+<div class="paragraph">
+<p>HA トラフィックを別の物理インフラに分離することで、 Select VM はピアと通信できますが、クライアントとは通信できません。これにより、自動 HA プロセスが無効になるため、手動フェイルオーバーが開始されるまではデータを使用できなくなります。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="メディエーターサービス">メディエーターサービス</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>メディエーターサービスに関するいくつかの質問にアクセスします。</p>
+</div>
+<div class="sect4">
+<h5 id="メディエーターサービスとは何ですか">メディエーターサービスとは何ですか？</h5>
+<div class="paragraph">
+<p>2 ノードクラスタでは、 ONTAP Deploy VM で HA クォーラムが継続的に利用されます。2 ノードの HA クォーラムネゴシエーションに参加する ONTAP Deploy VM には、メディエーター VM というラベルが付けられます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="メディエーターサービスはリモートで実行できますか">メディエーターサービスはリモートで実行できますか。</h5>
+<div class="paragraph">
+<p>はい。2 ノード HA ペアのメディエーターとして機能する ONTAP Deploy は、 500ms RTT の WAN レイテンシをサポートします。最小帯域幅は 5Mbps です。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="メディエーターサービスで使用されるプロトコル">メディエーターサービスで使用されるプロトコル</h5>
+<div class="paragraph">
+<p>メディエータートラフィックは iSCSI で、 ONTAP Select ノードの管理 IP アドレスから始まり、 ONTAP Deploy の IP アドレスで終端します。2 ノードクラスタを使用している場合、 ONTAP Select ノード管理 IP アドレスに IPv6 を使用することはできません。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="1-つのメディエーターサービスを複数の-2-ノード-ha-クラスタに使用できますか">1 つのメディエーターサービスを複数の 2 ノード HA クラスタに使用できますか。</h5>
+<div class="paragraph">
+<p>はい。各 ONTAP Deploy VM は、最大 100 個の 2 ノード ONTAP Select クラスタの共通のメディエーターサービスとして機能できます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="導入後にメディエーターサービスの場所を変更することはできますか">導入後にメディエーターサービスの場所を変更することはできますか。</h5>
+<div class="paragraph">
+<p>はい。別の ONTAP Deploy VM を使用してメディエーターサービスをホストすることができます。</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ontap-select-ではメディエーターを使用するかどうかに関係なく拡張されたクラスタをサポートしていますか">ONTAP Select では、メディエーターを使用するかどうかに関係なく、拡張されたクラスタをサポートしていますか。</h5>
+<div class="paragraph">
+<p>ストレッチ HA 導入モデルでは、メディエーターを備えた 2 ノードクラスタのみがサポートされます。</p>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[よくある質問](https://docs.netapp.com/ja-jp/ontap-select/reference_faq.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-select/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/main/reference_faq.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-select/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/ontap-select/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">このページ</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Web サイトについてのフィードバックを<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">お寄せください</a>
+  <a href="https://docs.netapp.com/ja-jp/announcements/" class="n-footer__copyright">お知らせ</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/ontap-select/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/ontap-select/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/ontap-select/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/ontap-select/js/www-ntap.js'></script>
+    <script src='/ja-jp/ontap-select/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
