@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: task_adm_mediators.html 
+keywords: administer, administering, web, mediators 
+summary: 各 ONTAP Select 2 ノードクラスタはメディエーターサービスによって監視されます。このサービスは、ノードで共有する HA 機能の管理を支援します。 
+---
+= Deploy メディエーターサービスの管理
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+各 ONTAP Select 2 ノードクラスタはメディエーターサービスによって監視されます。このサービスは、ノードで共有する HA 機能の管理を支援します。
+
+
+
+== メディエーターサービスのステータスを表示しています
+
+ONTAP Select Deploy ユーティリティに対して定義された各 2 ノードクラスタについて、メディエーターサービスのステータスを表示できます。
+
+現在のステータス、 2 つの ONTAP Select ノード、 HA 制御情報が格納されている iSCSI ターゲットなど、各メディエーターの設定を表示できます。詳細な情報を表示するには、ページ上のオブジェクトにカーソルを合わせます。
+
+.手順
+. 管理者アカウントを使用して、 Deploy ユーティリティの Web ユーザインターフェイスにサインインします。
+. ページ上部の * 管理 * タブをクリックし、 * メディエーター * をクリックします。
+. 必要に応じて、 * Filter * をクリックし、メディエーターサービスによって監視される 2 ノードクラスタの表示をカスタマイズします。
+

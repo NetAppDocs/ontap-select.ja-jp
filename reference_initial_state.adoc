@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: reference_initial_state.html 
+keywords: install, installing, initial state, cluster initial state 
+summary: クラスタを導入し、環境に応じてクラスタを設定したら、クラスタの初期状態に注意する必要があります。 
+---
+= 導入後のクラスタの初期状態
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+クラスタを導入し、環境に応じてクラスタを設定したら、クラスタの初期状態に注意する必要があります。
+
+ONTAP Select クラスタには、作成後にいくつかの特性があります。
+
+
+
+===== LIF
+
+ユーザが指定する 2 種類の LIF が割り当てられます。
+
+* クラスタ管理（クラスタごとに 1 つ）
+* ノード管理（ノードごとに 1 つ）
+
+
+
+
+===== SVM
+
+2 つの管理 SVM がアクティブです。
+
+* デフォルト SVM
+* クラスタ SVM
+
+
+
+
+===== アグリゲート
+
+ルートアグリゲートが作成されます。
+
+
+
+===== の機能
+
+すべての機能のライセンスが付与され、使用可能です。SnapLock と FabricPool のどちらにも、個別のライセンスが必要です。
+
+
+NOTE: データ SVM は作成されません。また、マルチノードクラスタの内部ネットワークでは LIF が自動生成されます。
+
+.関連情報
+* link:reference_lic_ontap_features.html["ONTAP 機能はデフォルトで有効になっています"]
+

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_install.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, install, installing 
+summary: Deploy vCenter プラグインは、 ONTAP Select Deploy 管理ユーティリティにバンドルされています。ONTAP Select Deploy の Web ユーザインターフェイスを使用して、プラグインを vCenter Server にインストールして登録できます。 
+---
+= Deploy vCenter プラグインをインストールします
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Deploy vCenter プラグインは、 ONTAP Select Deploy 管理ユーティリティにバンドルされています。ONTAP Select Deploy の Web ユーザインターフェイスを使用して、プラグインを vCenter Server にインストールして登録できます。
+
+.作業を開始する前に
+* レビュー link:concept_vpi_manage_before.html["作業を開始する前に"]。
+* 次の権限で導入する vCenter アカウントを定義します。 sessions.validate.session 。
+* 次の権限を持つ vCenter アカウントのクレデンシャルが必要です。
++
+** 内線番号
++
+*** 拡張機能を登録します
+
+
+
+
+
+
+ここでは、 vCenter 管理サーバが Deploy に追加されていることを前提としています。vCenter Server が追加されていない場合は、を参照してください link:task_adm_security.html["管理サーバアカウントの追加"] を参照してください。
+
+.手順
+. 管理者アカウントを使用して、 Deploy ユーティリティの Web ユーザインターフェイスにサインインします。
+. ページ上部の * 管理 * タブをクリックし、左側のペインで * 管理サーバー * をクリックします。
+. ターゲットの管理サーバを選択し、をクリックします image:icon_kebab.gif["オプション（ Options ）"] [ プラグインとして登録 ] をクリックします。
+. vCenter のクレデンシャルを入力し、プラグインのバージョンを選択します。
+. [*Register] をクリックします。
+

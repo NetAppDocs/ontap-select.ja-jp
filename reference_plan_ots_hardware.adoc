@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_ots_hardware.html 
+keywords: plan, planning, vmware, hardware, hardware requirements 
+summary: VMware 環境に関連するハードウェア要件と計画の問題がいくつかあります。 
+---
+= VMware ハイパーバイザーとハードウェアに関する考慮事項
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware 環境に関連するハードウェア要件と計画の問題がいくつかあります。
+
+
+
+== ハイパーバイザーの要件
+
+ONTAP Select を実行するハイパーバイザーに関連する要件がいくつかあります。
+
+
+NOTE: 既知の制限事項や制限事項の追加に際しては、使用している ONTAP Select のバージョンの最新リリースノートを確認してください。
+
+
+
+==== VMware ライセンス
+
+ONTAP Select クラスタを導入するには、 ONTAP Select を実行するハイパーバイザーホストの有効な VMware vSphere ライセンスが必要です。導入に適したライセンスを使用してください。
+
+
+
+==== ソフトウェアの互換性
+
+ONTAP Select は次のハイパーバイザーに導入できます。
+
+* VMware ESXi 6.5 U2 （ビルド 8294253 以降）
+* VMware ESXi 6.7 GA （ビルド 8169922 以降）： 6.7 U1 、 U2 、 U3 を含みます
+* VMware ESXi 7.0 GA （ビルド 15849807 以降） - 7.0 U1 および U2 を含む
+
+
+
+NOTE: VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。
+
+
+
+==== VMware ESXi 6.5 U2 以降へのアップグレード
+
+現在 ONTAP Select が VMware ESXi 6.5 U1 に導入されている場合は、できるだけ早く ESXi 6.5 U2 以降にアップグレードしてください。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。
+
+
+
+==== VMware vCenter およびスタンドアロンの ESXi ホスト
+
+ESXi ハイパーバイザーホストが vCenter サーバで管理されている場合は、 vCenter のクレデンシャルを使用して、ホストを Deploy 管理ユーティリティに登録する必要があります。ESXi のクレデンシャルを使用してホストをスタンドアロンホストとして登録することはできません。
+
+
+
+== コアハードウェアの要件
+
+ONTAP Select を導入する物理ハイパーバイザーホストが、いくつかのハードウェア要件を満たしている必要があります。ハードウェアの最小要件を満たしていれば、ハイパーバイザーホストに対して任意のプラットフォームを選択できます。サポートされているハードウェアプラットフォームは、 Cisco 、 Dell 、 HP 、富士通、 Lenovo 、 と Supermicro です。
+
+
+NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。
+
+を参照してください https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool 、ウィンドウ = _blank"] を参照してください。
+
+
+
+==== 基本的なハードウェア要件
+
+ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。
+
+* プロセッサ
++
+** サーバー向けインテル Xeon プロセッサー（を参照 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["インテル Xeon プロセッサー、ウィンドウ = _ ブランク"] 詳細については、
+
+
+* イーサネットネットワークポート
++
+** 10GbE × 4 （推奨）
+** 10GbE × 2
+** 10GbE × 1
+** 1GbE × 4 （ 2 ノードの ROBO クラスタの場合のみ）
+** 1GbE × 2 （シングルノードクラスタの場合のみ）
+
+
+
+
+
+
+==== インスタンスタイプに基づいた追加のハードウェア要件
+
+ノードインスタンスのタイプに基づいて、ハードウェアに関する追加の要件がいくつかあります。
+
+を参照してください link:concept_lic_platforms.html["プラットフォームライセンスの内容を理解する"] を参照してください。
+
+小規模::
++
+--
+* CPU コア 6 個以上の物理コアを搭載し、 ONTAP Select 用に 4 個確保されています。
+* メモリは 24GB 以上で、 16GB は ONTAP Select 用にリザーブされています。
+* Standard 、 Premium 、または Premium XL のプラットフォームライセンスが必要です
+
+
+--
+中::
++
+--
+* 10 個以上の物理コアを搭載し、 8 個の ONTAP Select 用にリザーブされている。
+* 72 GB 以上のメモリと 64 GB の ONTAP Select 用に予約されています
+* Premium または Premium XL のプラットフォームライセンスが必要です
+
+
+--
+大規模::
++
+--
+* CPU コアは 18 個以上の物理コアを搭載し、 16 個は ONTAP Select 用に予約されています。
+* ONTAP Select 用に予約された 128GB で 136GB 以上のメモリ
+* Premium XL の必要なプラットフォームライセンスです
+
+
+--
+
+
+
+NOTE: プラットフォームライセンスに基づいて追加のディスクが必要になります。を参照してください link:reference_plan_ots_storage.html["ストレージと RAID"] を参照してください。

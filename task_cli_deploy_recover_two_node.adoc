@@ -1,0 +1,231 @@
+---
+sidebar: sidebar 
+permalink: task_cli_deploy_recover_two_node.html 
+keywords: administer, administering, cli, two node cluster, recover, recovering 
+summary: ONTAP Select Deploy ユーティリティに障害が発生した場合や、何らかの理由でユーティリティが使用できない場合は、 ONTAP Select のノードとクラスタを管理できなくなります。また、 Deploy に含まれるメディエーターサービスを使用できないため、すべての 2 ノードクラスタの HA 機能が失われます。リカバリ不能な障害が発生した場合は、 Deploy ユーティリティのインスタンスをリカバリして、管理と HA の機能をリストアする必要があります。 
+---
+= 2 ノードクラスタの Deploy ユーティリティをリカバリする
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select Deploy ユーティリティに障害が発生した場合や、何らかの理由でユーティリティが使用できない場合は、 ONTAP Select のノードとクラスタを管理できなくなります。また、 Deploy に含まれるメディエーターサービスを使用できないため、すべての 2 ノードクラスタの HA 機能が失われます。リカバリ不能な障害が発生した場合は、 Deploy ユーティリティのインスタンスをリカバリして、管理と HA の機能をリストアする必要があります。
+
+
+
+== 作業を開始する前に
+
+Deploy ユーティリティのインスタンスを確実にリカバリするには、そのための準備をしておく必要があります。
+
+
+
+===== 必要なスキルと情報
+
+いくつかの管理手順に関する詳しい知識と情報が必要です。
+
+
+
+===== Deploy 仮想マシンをインストールします
+
+ハイパーバイザー環境に ONTAP Select Deploy ユーティリティの新しいインスタンスをインストールできる必要があります。
+
+
+
+===== ONTAP コマンドラインインターフェイス
+
+ONTAP Select クラスタの ONTAP CLI にサインインして、シェルインターフェイスを使用する必要があります。
+
+
+
+===== Deploy ユーティリティ設定のバックアップの有無
+
+ONTAP Select の 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスの設定データがバックアップされているかどうかを確認する必要があります。作成したバックアップにはクラスタが含まれていない場合があります。
+
+
+
+===== Deploy 設定のバックアップのリストア
+
+使用するリカバリ用手順 に応じて、 Deploy の設定データのバックアップをリストアする必要があります。
+
+
+
+===== 元の Deploy 仮想マシンの IP アドレス
+
+障害が発生した元の Deploy ユーティリティの仮想マシンの IP アドレスを把握しておく必要があります。
+
+
+
+===== ストレージ容量単位のライセンス
+
+容量プールまたは容量階層のライセンスが使用されているかどうかを確認する必要があります。容量プールライセンスを使用する場合は、 Deploy インスタンスをリカバリまたはリストアしたあとに、各容量プールライセンスを再インストールする必要があります。
+
+
+
+===== 使用するリカバリ手順 の決定
+
+ONTAP Select Deploy ユーティリティのインスタンスをリカバリする際に使用する手順 を決定しておく必要があります。ONTAP Select 2 ノードクラスタを含む、障害が発生した元の Deploy ユーティリティの設定データをバックアップするかどうかを決定します。
+
+[cols="35,65"]
+|===
+| 2 ノードクラスタを含む Deploy のバックアップがあるか | 使用するリカバリ手順 
+
+
+| はい。 | 設定のバックアップを使用した Deploy ユーティリティのインスタンスのリストア 
+
+
+| いいえ | Deploy ユーティリティのインスタンスの再設定とリカバリ 
+|===
+
+
+== 設定のバックアップを使用した Deploy ユーティリティのインスタンスのリストア
+
+2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがある場合は、新しい Deploy 仮想マシンのインスタンスに設定データをリストアできます。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。
+
+2 ノードクラスタを含む、障害が発生した元の Deploy 仮想マシンの設定データのバックアップが必要です。2 ノードクラスタの ONTAP CLI にサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。
+
+リストアする設定のバックアップには 2 ノードクラスタが含まれているため、メディエーターの iSCSI ターゲットとメールボックスは、新しい Deploy ユーティリティの仮想マシンに再作成されます。
+
+.手順
+. ONTAP Select Deploy ユーティリティの新しいインスタンスを準備します。
++
+.. 新しい Deploy ユーティリティの仮想マシンをインストールします。
+.. Deploy の設定を以前のバックアップから新しい仮想マシンにリストアします。
++
+インストールとリストアの手順の詳細については、関連するタスクを参照してください。
+
+
+
+. ONTAP Select の 2 ノードクラスタの ONTAP コマンドラインインターフェイスにサインインします。
+. advanced 権限モードに切り替えます。
++
+「 set adv` 」
+
+. 新しい Deploy 仮想マシンの IP アドレスが元の Deploy 仮想マシンと異なる場合は、古いメディエーターの iSCSI ターゲットを削除し、新しいターゲットを追加する必要があります。
++
+....
+storage iscsi-initiator remove-target -node * -target-type mailbox
+
+storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+
+storage iscsi-initiator add-target -node <node2_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+....
++
+「 <IP_address> 」パラメータは、新しい Deploy 仮想マシンの IP アドレスです。
+
++
+これらのコマンドを使用すると、新しい Deploy ユーティリティの仮想マシン上のメールボックスディスクを ONTAP Select ノードで検出できます。
+
+. メディエーターディスクの名前を特定します。
++
+disk show -container-type mediator
+
+. メールボックスディスクを 2 つのノードに割り当てます。
++
+....
+disk assign -disk <mediator-disk1-name> -owner <node1-name>
+disk assign -disk <mediator-disk2-name> -owner <node2-name>
+....
+. ストレージフェイルオーバーが有効になっていることを確認します。
++
+「 storage failover show 」をクリックします
+
+
+
+容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。
+
+
+
+== Deploy ユーティリティのインスタンスの再設定とリカバリ
+
+2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがない場合は、新しい Deploy 仮想マシンにメディエーターの iSCSI ターゲットとメールボックスを設定する必要があります。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。
+
+新しい Deploy ユーティリティのインスタンスのメディエーターターゲットの名前が必要です。2 ノードクラスタの ONTAP CLI にサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。
+
+必要に応じて、設定のバックアップを新しい Deploy 仮想マシンにリストアできます。 2 ノードクラスタがバックアップに含まれていなくてもリストアは可能です。リストアで 2 ノードクラスタが再作成されることはないため、 Deploy の ONTAP Select オンラインドキュメントの Web ページを使用して、メディエーターの iSCSI ターゲットとメールボックスを新しい Deploy ユーティリティのインスタンスに手動で追加する必要があります。2 ノードクラスタにサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。
+
+
+NOTE: リカバリ手順 の目的は、 2 ノードクラスタを正常な状態にリストアして、通常の HA テイクオーバー処理とギブバック処理を実行できるようにすることです。
+
+.手順
+. ONTAP Select Deploy ユーティリティの新しいインスタンスを準備します。
++
+.. 新しい Deploy ユーティリティの仮想マシンをインストールします。
+.. 必要に応じて、 Deploy の設定を以前のバックアップから新しい仮想マシンにリストアします。
++
+以前のバックアップをリストアする場合、新しい Deploy インスタンスには 2 ノードクラスタが含まれません。インストールとリストアの手順の詳細については、関連情報のセクションを参照してください。
+
+
+
+. ONTAP Select の 2 ノードクラスタの ONTAP コマンドラインインターフェイスにサインインします。
+. advanced 権限モードに切り替えます。
++
+「 set adv` 」
+
+. メディエーターの iSCSI ターゲット名を取得します。
++
+「 storage iscsi-initiator show -target-type mailbox 」と入力します
+
+. 新しい Deploy ユーティリティの仮想マシンのオンラインドキュメント Web ページにアクセスし、 admin アカウントを使用してサインインします。
++
+http://<ip_address>/api/ui` にアクセスします
+
++
+Deploy 仮想マシンの IP アドレスを使用する必要があります。
+
+. [* mediator* ] 、 [* Get/medators] の順にクリックします。
+. [* 試してみてください !* ] をクリックすると、 Deploy によって管理されているメディエーターのリストが表示されます。
++
+目的のメディエーターインスタンスの ID をメモします。
+
+. [* Mediator* ] 、 [* POST] の順にクリックします。
+. mediator_id の値を指定します
+. [iSCSI_target] の横の [*Model] をクリックして ' 名前の値を入力します
++
+iqn 名前パラメータのターゲット名を使用します。
+
+. [* 試してみてください !* ] をクリックして、メディエーターの iSCSI ターゲットを作成します。
++
+要求が成功すると、 HTTP ステータスコード 200 が表示されます。
+
+. 新しい Deploy 仮想マシンの IP アドレスが元の Deploy 仮想マシンと異なる場合は、 ONTAP の CLI を使用して、古いメディエーターの iSCSI ターゲットを削除し、新しいターゲットを追加する必要があります。
++
+....
+storage iscsi-initiator remove-target -node * -target-type mailbox
+
+storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+
+storage iscsi-initiator add-target -node <node2_name> -label mediator-target-type mailbox -target-portal <ip_address> -target-name <target>
+....
++
+「 <IP_address> 」パラメータは、新しい Deploy 仮想マシンの IP アドレスです。
+
+
+
+これらのコマンドを使用すると、新しい Deploy ユーティリティの仮想マシン上のメールボックスディスクを ONTAP Select ノードで検出できます。
+
+. メディエーターディスクの名前を特定します。
++
+disk show -container-type mediator
+
+. メールボックスディスクを 2 つのノードに割り当てます。
++
+....
+disk assign -disk <mediator-disk1-name> -owner <node1-name>
+
+disk assign -disk <mediator-disk2-name> -owner <node2-name>
+....
+. ストレージフェイルオーバーが有効になっていることを確認します。
++
+「 storage failover show 」をクリックします
+
+
+
+容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。
+
+link:task_install_deploy.html["ONTAP Select Deploy をインストールしています"]
+
+

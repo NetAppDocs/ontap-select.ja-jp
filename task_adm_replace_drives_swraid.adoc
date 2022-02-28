@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task_adm_replace_drives_swraid.html 
+keywords: administer, administering, web, software raid, replace drive 
+summary: ソフトウェア RAID を使用してドライブに障害が発生した場合、 ONTAP Select はスペアドライブを使用し（使用可能な場合）、リビルドプロセスを自動的に開始します。これは、 FAS および AFF での ONTAP の動作と似ています。ただし、使用可能なスペアドライブがない場合は、 ONTAP Select ノードにスペアドライブを追加する必要があります。 
+---
+= SW RAID 使用時の障害が発生したドライブの交換
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ソフトウェア RAID を使用してドライブに障害が発生した場合、 ONTAP Select はスペアドライブを使用し（使用可能な場合）、リビルドプロセスを自動的に開始します。これは、 FAS および AFF での ONTAP の動作と似ています。ただし、使用可能なスペアドライブがない場合は、 ONTAP Select ノードにスペアドライブを追加する必要があります。
+
+
+NOTE: 障害が発生したドライブの取り外しと新しいドライブ（スペアとしてマークされている）の追加は、 ONTAP Deploy を使用して実行する必要があります。vSphere を使用した ONTAP Select VM へのドライブの接続はサポートされていません。
+
+
+
+== 障害ドライブを特定します
+
+ドライブで障害が発生した場合は、 Deploy ユーティリティの CLI を使用して障害が発生したディスクを特定します。
+
+.手順
+. 管理者アカウントを使用して、 Deploy ユーティリティの CLI にサインインします。
+. 障害が発生したディスクを特定します。
++
+[listing]
+----
+<cluster name>::> storage disk show -container-type broken
+Usable Disk Container Container
+Disk Size Shelf Bay Type Type Name Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
+----
+
+
+
+
+== 障害ドライブを取り外します
+
+障害が発生したドライブを特定したら、ディスクを取り外します。
+
+.手順
+. 管理者アカウントを使用して、 Deploy Web ユーザインターフェイスにサインインします。
+. [* Clusters] タブをクリックし、該当するクラスタを選択します。
++
+image:ST_22.jpg["ノードの詳細"]
+
+. [*+*] をクリックして、ストレージビューを展開します。
++
+image:ST_23.jpg["ノードストレージを編集します"]
+
+. 接続されているディスクに変更を加えるには、 * Edit * をクリックし、障害が発生したドライブのチェックを外します。
++
+image:ST_24.jpg["ストレージディスクの詳細"]
+
+. クラスタのクレデンシャルを入力し、 * Edit Storage * をクリックします。
++
+image:ST_25.jpg["ONTAP クレデンシャル"]
+
+. 操作を確定します。
++
+image:ST_26.jpg["警告"]
+
+
+
+
+
+== 新しいスペアドライブを追加します
+
+障害が発生したドライブを取り外したあと、スペアディスクを追加してください。
+
+.手順
+. 管理者アカウントを使用して、 Deploy Web ユーザインターフェイスにサインインします。
+. [* Clusters] タブをクリックし、該当するクラスタを選択します。
++
+image:ST_27.jpg["HA ペア"]
+
+. [*+*] をクリックして、ストレージビューを展開します。
++
+image:ST_28.jpg["ノードストレージを編集します"]
+
+. [ * 編集 ] をクリックし、新しいドライブが使用可能であることを確認して選択します。
++
+image:ST_29.jpg["ストレージディスクの詳細"]
+
+. クラスタのクレデンシャルを入力し、 * Edit Storage * をクリックします。
++
+image:ST_30.jpg["ストレージディスクの詳細"]
+
+. 操作を確定します。
++
+image:ST_31.jpg["ストレージディスクの詳細"]
+
+

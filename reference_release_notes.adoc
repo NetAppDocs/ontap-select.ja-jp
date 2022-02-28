@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: reference_release_notes.html 
+keywords:  
+summary:  
+---
+= ONTAP Select リリースノート
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select のリリースノートには、新機能、サポートされる設定、アップグレードに関する注意事項、既知の問題など、リリース固有の情報が記載されています。 解決済みの問題と既知の制限事項。
+
+
+NOTE: リリースノートにアクセスするには、ネットアップサポートサイトにサインインするアカウントが必要です。
+
+
+
+===== ONTAP Select の現在のバージョン
+
+にアクセスできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2879854["ONTAP Select 9.10.1 リリースノート"^] をクリックすると、現在のバージョンの詳細が表示されます。
+
+
+
+===== 以前のバージョンの ONTAP Select
+
+過去のバージョンの製品のリリースノートにアクセスする方法については、を参照してください https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 製品ライブラリ"^]。

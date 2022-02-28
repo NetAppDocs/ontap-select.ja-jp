@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_dep_vmware.html 
+keywords: plan, planning, ontap select deploy, vmware requirements 
+summary: VMware 環境に固有の要件と制限事項がいくつかあります。これらは、 VMware 環境に ONTAP Select Deploy ユーティリティをインストールする前に検討する必要があります。 
+---
+= VMware ハイパーバイザー環境です
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware 環境に固有の要件と制限事項がいくつかあります。これらは、 VMware 環境に ONTAP Select Deploy ユーティリティをインストールする前に検討する必要があります。
+
+
+
+== ESXi ホストサーバハードウェアの要件
+
+ESXi ハイパーバイザーホストがいくつかのリソースの最小要件を満たしている必要があります。ONTAP Select を導入するホストが次の基本的な要件を満たしていることを確認してください。
+
+* ESXi サーバ：
++
+** ハードウェアとソフトウェアは 64 ビットである必要があります
+** ONTAP Select ノードに対して定義されたものと同じ、サポート対象のバージョンを使用している必要があります
+
+
+* 仮想 CPU （ 2 ）
+* 仮想メモリ（ 4GB ）
+* ストレージ（ 40GB ）
+* DHCP が有効（静的 IP アドレスを割り当てることも可能）
+
+
+
+
+== ネットワーク接続
+
+ONTAP Select Deploy 仮想マシンのネットワークインターフェイスが設定されていること、および単一の管理 IP アドレスが割り当てられていることを確認してください。DHCP を使用すると、 IP アドレスを動的に割り当てることも、静的 IP アドレスを手動で設定することもできます。
+
+導入する決定に応じて、 Deploy VM が管理する vCenter サーバ、 ESXi ハイパーバイザーホスト、および ONTAP Select ノードに接続できる必要があります。必要なトラフィックを許可するようにファイアウォールを設定する必要があります。
+
+Deploy は、 VMware VIX API を使用して vCenter サーバおよび ESXi ホストと通信します。最初に、 TCP ポート 443 上で SSL 経由の SOAP を使用して接続を確立します。その後、ポート 902 で SSL を使用して接続が開かれます。さらに、 Deploy は ping コマンドを発行して、指定した IP アドレスに ESXi ホストがあることを確認します。
+
+Deploy は、次のプロトコルを使用して、 ONTAP Select ノードおよびクラスタ管理 IP アドレスと通信できる必要もあります。
+
+* ping コマンド（ ICMP ）
+* SSH （ポート 22 ）
+* SSL （ポート 443 ）
+
+
+
+
+== IP バージョン 4 のサポート
+
+ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポートします。IP バージョン 6 （ IPv6 ）はサポートされません。この制限は、次の点で ONTAP Select に影響します。
+
+* Deploy 仮想マシンの管理 LIF に IPv4 アドレスを割り当てる必要があります。
+* ONTAP LIF で IPv6 を使用するように設定された ONTAP Select ノードを Deploy で作成することはできません。
+
+
+
+
+== VMware vCenter の言語制限
+
+ONTAP Select Deploy を使用して、 ESXi で実行されるクラスタを Windows サーバ上の vCenter で作成する場合は、英語版を使用する必要があります。ONTAP Select Deploy は、英語以外のバージョンの Windows での vCenter をサポートしていません。

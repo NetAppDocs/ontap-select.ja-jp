@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: task_cli_clusters.html 
+keywords: administer, administering, cli, clusters 
+summary: ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。 
+---
+= ONTAP Select クラスタ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。
+
+
+
+== ONTAP Select クラスタを削除する
+
+コマンドラインインターフェイスを使用して、不要になった ONTAP Select クラスタを削除できます。
+
+クラスタをオフライン状態にする必要があります。
+
+.手順
+. 管理者アカウントを使用して、 Deploy 仮想マシンの CLI にサインインします。
+. クラスタ・ステータスを表示します。 cluster show -name clustername
+. クラスタがオフラインになっていない場合は、オフライン状態の「 cluster offline-name clustername 」に移動します
+. クラスタがオフライン状態になったことを確認したら ' クラスタを削除します cluster delete -name clustername
+

@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: task_cli_connectivity.html 
+keywords: administer, administering, cli, connectivity, network connectivity, network checker 
+summary: 内部クラスタネットワーク上にある 2 つ以上の ONTAP Select ノード間のネットワーク接続をテストできます。通常は、マルチノードクラスタの導入前にこのテストを実行して、原因 で処理が失敗する可能性のある問題を検出します。 
+---
+= ONTAP Select ノード間のネットワーク接続を確認する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+内部クラスタネットワーク上にある 2 つ以上の ONTAP Select ノード間のネットワーク接続をテストできます。通常は、マルチノードクラスタの導入前にこのテストを実行して、原因 で処理が失敗する可能性のある問題を検出します。
+
+テストに含まれるすべての ONTAP Select ノードを設定し、電源をオンにする必要があります。
+
+テストを開始するたびに、新しいプロセスがバックグラウンドで作成され、一意の実行識別子が割り当てられます。一度にアクティブにできるランは 1 つだけです。
+
+テストには、次の 2 つのモードがあります。
+
+* Quick このモードは、基本的な無停止テストを実行します。ping テストが、ネットワークの MTU サイズと vSwitch のテストとともに実行されます。
+* Extended このモードでは、すべての冗長ネットワークパスでより包括的なテストが実行されます。アクティブな ONTAP Select クラスタでこのテストを実行すると、クラスタのパフォーマンスに影響する可能性があります。
+
+
+
+NOTE: マルチノードクラスタを作成する前には、必ずクイックテストを実行することを推奨します。クイックテストが正常に完了したら、本番環境の要件に基づいて拡張テストを実行することもできます。
+
+.手順
+. 管理者アカウントを使用して、 Deploy ユーティリティの CLI にサインインします。
+. ネットワーク接続チェッカーの現在の実行を表示し、アクティブな実行がないことを確認します。
++
+「 network connectivity-check show 」を参照してください
+
+. ネットワーク接続チェッカーを起動し、コマンド出力の実行識別子を確認します。
++
+「 network connectivitycheck start-host-names hostnames hostnames -hosts-type vswitch _type-mode 」のように設定します
+
++
+例
+
++
+[listing]
+----
+network connectivity-check start -host-names 10.234.81.14
+10.234.81.15 -vswitch-type StandardVSwitch -mode quick
+----
+. 実行識別子に基づいて、ネットワーク接続チェッカーの進捗状況を監視します。
++
+「 network connectivity-check show-run-id run_ID 」
+
+
+
+通常、ネットワーク接続チェッカーは、 ONTAP 内部ポートグループに追加された一時ポートと IP アドレスを削除することによってクリーンアップされます。ただし、接続チェッカーが一時ポートの削除に失敗した場合は、 CLI コマンドを「 -mode cleanup 」オプションで再実行して、手動でクリーンアップ処理を実行する必要があります。ONTAP 内部ポートグループから一時ポートを削除しないと、 ONTAP Select 仮想マシンが正常に作成されないことがあります。

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+summary: ONTAP Select のドキュメントポータルへようこそ。 
+---
+= ONTAP Select のドキュメント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp ONTAP Select は、 VMware ESXi ハイパーバイザーを実行するさまざまなコモディティハードウェアサーバに導入可能な Software-Defined Storage アプライアンスです。柔軟性と拡張性に優れたプライベートクラウドインフラの構築に必要な即応性を提供します。
+
+
+
+== 新機能をご紹介します
+
+* link:reference_new_ots.html["ONTAP Select 9.10.1 の新機能"]
+
+
+
+NOTE: ONTAP Select 9.10.1 以降、 KVM ハイパーバイザーに新しいクラスタを導入することはできなくなりました。ただし、クラスタを以前のリリースから 9.10.1 にアップグレードしても、 Deploy ユーティリティを使用してクラスタを管理できます。
+
+
+
+== 製品ドキュメントをナビゲートする
+
+ONTAP Select 9.10.1 は VMware ESXi に導入できます。このサイトには、 VMware ESXi で実行されている ONTAP Select 9.10.1 、 9.6.1 、 9.8 、 9.7 のマニュアルと、ハイパーバイザーに依存しないドキュメント（ REST API など）が含まれています。
+
+ここでは、の以前のリリースでサポートされている KVM バージョンのリリースノートと製品のドキュメントを示します https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 製品ライブラリ"^]。
+
+
+
+== 詳細情報を入手して、ピアに接続してください
+
+* link:reference_additional_info.html["ヘルプを参照したり、詳細情報を参照したりするには"]
+

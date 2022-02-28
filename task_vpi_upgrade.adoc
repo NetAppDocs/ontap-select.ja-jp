@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_upgrade.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, upgrade, verify, remove 
+summary: ONTAP Select Deploy の Web ユーザインターフェイスを使用して、 vCenter Server から Deploy プラグインをアップグレードまたは削除できます。プラグインがインストールされたままであることを確認することもできます。 
+---
+= Deploy vCenter プラグインの確認と削除
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select Deploy の Web ユーザインターフェイスを使用して、 vCenter Server から Deploy プラグインをアップグレードまたは削除できます。プラグインがインストールされたままであることを確認することもできます。
+
+.作業を開始する前に
+* レビュー link:concept_vpi_manage_before.html["作業を開始する前に"]。
+* VMware vCenter プラグインをインストールして登録する必要があります。
+* vCenter 管理者アカウントには、次の vCenter 権限が必要です。
++
+** 内線番号
++
+*** 拡張機能を更新します
+*** 拡張機能を登録解除します
+
+
+
+
+
+
+.手順
+. 管理者アカウントを使用して、 Deploy ユーティリティにサインインします。
+. ページ上部の * 管理 * タブをクリックし、左側のペインで * 管理サーバー * をクリックします。
+. ターゲットの管理サーバを選択し、をクリックします image:icon_kebab.gif["オプション（ Options ）"] オプションで次の項目を選択します。
++
+.. * プラグインの確認 *
+.. * プラグインの登録解除 *
+
+
+. 必要に応じて、 vCenter クレデンシャルを入力します。
+
+
+プラグインを削除する場合、次のいずれかの手順を実行して vCenter Server からの削除を完了する必要があります。
+
+* vCenter Server をリブートします
+* vCenter Server からプラグインを手動で削除します
+

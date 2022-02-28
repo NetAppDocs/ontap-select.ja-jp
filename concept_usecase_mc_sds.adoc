@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept_usecase_mc_sds.html 
+keywords: ontap select, metrocluster software defined storage, mc sds storage 
+summary: ONTAP Select MetroCluster SDS は、強化された保護機能とコスト効率の高い実装を提供します。 
+---
+= MetroCluster ソフトウェア・デファインド・ストレージ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select MetroCluster SDS は、強化された保護機能とコスト効率の高い実装を提供します。
+
+2 ノードクラスタは、一定の最小要件が満たされている場合、 2 つの場所に拡張できます。このアーキテクチャは、ハードウェアベースの MetroCluster と（ハードウェア定義またはソフトウェア定義の）単一のデータセンタークラスタ間に適しています。ONTAP Select MetroCluster SDS の要件では、 Software-Defined Storage ソリューションの一般的な柔軟性に加え、 Software-Defined Storage ソリューションとハードウェアベースの MetroCluster SDS との違いが強調されています。独自のハードウェアは必要ありません。
+
+MetroCluster とは異なり、 ONTAP Select は既存のネットワークインフラを使用し、最大 5 ミリ秒 RTT のネットワークレイテンシをサポートします。最大ジッタは 5 ミリ秒で、合計 10 ミリ秒の最大レイテンシを実現します。レイテンシプロファイルの方が重要であるものの、最大距離を 10km 以下にすることも要件となっています。マーケットスペースでの分離要件では、実際の距離よりも物理的な分離の方が重要です。たとえば、別の建物に配置することが必要になる場合があります。別のケースでは、同じ建物内に別々の部屋を配置することもできます。実際の物理的な配置に関係なく、 MetroCluster SDS としての 2 ノードクラスタとは、各ノードで別々のアップリンクスイッチを使用することを意味します。
+
+2 ノード HA 構成では、フェイルオーバー中にアクティブノードを適切に識別し、ネットワークパーティション内で両方のノードが独立してアクティブのままになるスプリットブレインシナリオを回避するためにメディエーターが必要です。この処理は、以前にも提供されていた、通常の 2 ノード HA 構成と同じです。サイト障害時に適切な保護とフェイルオーバーを行うには、 2 つの HA ノードとは異なるサイトにメディエーターを配置する必要があります。メディエーターと各 ONTAP Select ノードの間で許容される最大レイテンシは 125 ミリ秒です。
+
+この解決策 を使用することで、企業のお客様は、コモディティハードウェア上で Software-Defined Storage 解決策 の柔軟性を確実に活用できます。データはエンタープライズクラスの RPO ゼロ解決策 で保護されているため、安心して導入できます。
+
+ONTAP Select MetroCluster SDS には、次のような利点があります。
+
+* MetroCluster SDS は、 ONTAP Select 向けに、別の側面（データセンターからデータセンターへ）から保護機能を提供します。お客様は、 Software-Defined Storage と ONTAP のあらゆるメリットを活用できるだけでなく、この追加の保護機能を活用できるようになりました。
+* MetroCluster SDS は、 RPO ゼロと自動フェイルオーバーにより、ビジネスクリティカルなデータ保護を実現します。データストレージとアプリケーションアクセスポイントの両方が、自動的に正常に稼働しているデータセンターまたはノードに切り替わります。このとき、 IT 担当者の関与は一切ありません。
+* MetroCluster SDS は対費用効果に優れています。既存のネットワークインフラを活用して HA ペア間の耐障害性を拡張できるため、ハードウェアを追加する必要がありません。また、同じクラスタ内で、アクティブ / アクティブのデータアクセスとデータセンターの冗長性を実現します。
+
+
+* MetroCluster SDS*
+
+image:MCSDS_01.jpg["DAS 上に構築されたプライベートクラウド"]
+
+ベストプラクティスやその他の要件については、セクションを参照してください link:concept_ha_config.html#two-node-ha-versus-multi-node-ha["2 ノード HA とマルチノード HA"] および 。

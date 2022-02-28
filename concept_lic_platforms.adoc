@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_platforms.html 
+keywords: license, licensing, platform license offerings, license offerings, standard, premium, premium xl 
+summary: ONTAP Select の大容量階層ライセンスまたは大容量プールライセンスは、 3 つのプラットフォーム容量レベルのいずれかで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。 
+---
+= プラットフォームライセンスの内容を理解する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select の大容量階層ライセンスまたは大容量プールライセンスは、 3 つのプラットフォーム容量レベルのいずれかで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。
+
+
+
+=== プラットフォームライセンス製品の機能
+
+特定のライセンス製品は、ハイパーバイザーホストの機能を次の 2 つの領域で定義および制限します。
+
+* インスタンスタイプ（ CPU 、メモリ）
+* その他の機能
+
+
+ライセンスサービスは、 Standard XL から Premium XL まで、機能の昇順で提供されます。一般的に、選択したライセンスオプションは、そのレベルおよび下位レベルすべての機能を付与します。たとえば、 Premium レベルは Premium と Standard の両方の機能を提供します。
+
+
+
+=== 標準
+
+標準の機能は次のとおりです。
+
+* スモールインスタンスタイプのみ
+* ハードディスクドライブ（ HDD ）のみ
+* ローカルハードウェア RAID コントローラのみ
+* vNAS
+
+
+
+
+=== Premium サービス
+
+Premium サービスには次の機能があります。
+
+* 小規模または中規模のインスタンスタイプ
+* ハードディスクドライブ（ HDD ）またはソリッドステートドライブ（ SSD ）
+* ローカルハードウェア RAID コントローラまたはソフトウェア RAID
+* vNAS
+* MetroCluster SDS
+
+
+
+
+=== Premium XL
+
+プレミアム XL は、次の機能を提供します。
+
+* 小規模、中規模、または大規模のインスタンスタイプ。
+* ハードディスクドライブ（ HDD ）またはソリッドステートドライブ（ SSD ）
+* ローカルハードウェア RAID コントローラまたはソフトウェア RAID 。
+* vNAS
+* MetroCluster SDS
+
+
+
+NOTE: 大規模なインスタンスタイプ（ Premium XL ライセンスを使用）は、 VMware ESXi でのみサポートされます。

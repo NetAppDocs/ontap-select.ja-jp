@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_access.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, access, accessing 
+summary: Deploy vCenter プラグインには、 vSphere Web Client からアクセスできます。 
+---
+= vSphere を使用した vCenter Plug-in へのアクセス
+
+
+[role="lead"]
+Deploy vCenter プラグインには、 vSphere Web Client からアクセスできます。
+
+vCenter プラグインをインストールする必要があります。また、 vSphere へのサインインに使用する vCenter アカウントには、次の権限が必要です。
+
+* ネットアップ
++
+** ONTAP Select 導入
++
+*** 管理者
+
+
+
+
+
+
+.手順
+. サインインしている場合は、 vSphere Web Client からサインアウトします。
+. vSphere Web Client を使用して vCenter にサインインし、 HTML5 を選択して SSL 証明書を受け入れます。
++
+サインアウトして再びサインインすると、 vCenter の構成情報が更新されます。
+
+. [* グローバルインベントリリスト * ] をクリックします。
+
+
+オプション * ONTAP Select クラスタ * および * ONTAP Select Deploy * は、左側のペインで使用できます。表示されない場合は、サインアウトしてから再度サインインしてください。

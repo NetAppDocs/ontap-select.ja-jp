@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_cp_compare_ct.html 
+keywords: license, licensing, capacity pools, capacity tiers, comparing 
+summary: 容量プールと容量階層のライセンスモデルには、いくつかの違いがあります。 
+---
+= 容量プールと容量階層ライセンスを比較する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+次の表に、 ONTAP Select でサポートされる 2 つの本番環境ライセンスモデルの比較を示します。
+
+[cols="20,40,40"]
+|===
+|  | 大容量階層 | 容量プール 
+
+
+| ライセンスのシリアル番号 | ネットアップが生成してノードに割り当てる 9 桁の数字 | ネットアップが生成して容量プールに割り当てる 9 桁の数字 
+
+
+| ライセンスロック | ONTAP Select ノードにロックされました | License Manager インスタンスにロックされています 
+
+
+| ライセンス期間 | 無期限（更新は不要） | 購入に基づく固定期間（更新が必要） 
+
+
+| データアグリゲートのリース期間 | 1 時間 ～ 7 日適用されません | ノードのシリアル番号 
+|===

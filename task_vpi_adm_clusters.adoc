@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_adm_clusters.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, administer, administering, clusters 
+summary: ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。 
+---
+= ONTAP Select クラスタ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。
+
+
+
+== ONTAP Select クラスタのオフライン状態とオンライン状態の切り替え
+
+クラスタを作成したら、必要に応じてクラスタのステータスをオフラインまたはオンラインに変更できます。
+
+.手順
+. [* グローバルインベントリリスト * （ Global Inventory Lists * ） ] ペインで [* ONTAP Select Clusters] をクリックします。
+. 使用可能な操作を表示するには、目的のクラスタを右クリックします。
+. 必要に応じて、 [ オフラインにする ] または [ オンラインにする ] をクリックし、 [ はい ] をクリックしてリクエストを確定します。
+
+
+
+
+== ONTAP Select クラスタを削除する
+
+不要になった ONTAP Select クラスタを削除できます。
+
+クラスタをオフライン状態にする必要があります。
+
+.手順
+. [* グローバルインベントリリスト * （ Global Inventory Lists * ） ] ペインで [* ONTAP Select Clusters] をクリックします。
+. 使用可能な操作を表示するには、目的のクラスタを右クリックします。
+. [ クラスタの削除 ] をクリックし、 [ はい ] をクリックして要求を確定します。
++
+削除オプションを使用できない場合は、クラスタがオフライン状態になっていません。
+
+

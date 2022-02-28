@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task_cli_signing_in.html 
+keywords: administer, administering, cli, deploy, sign in, signing in 
+summary: SSH を使用して Deploy 管理シェルにサインインする必要があります。サインインしたら、問題 CLI コマンドを使用して ONTAP Select クラスタを作成し、関連する管理手順を実行できます。 
+---
+= SSH を使用した Deploy へのサインイン
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SSH を使用して Deploy 管理シェルにサインインする必要があります。サインインしたら、問題 CLI コマンドを使用して ONTAP Select クラスタを作成し、関連する管理手順を実行できます。
+
+Deploy 管理者（ admin ）アカウントの現在のパスワードが必要です。初めてサインインし、 vCenter を使用して Deploy 仮想マシンをインストールする場合は、インストール時に設定したパスワードを使用してください。
+
+.手順
+. Deploy 仮想マシンの管理者アカウントと管理 IP アドレスを使用してサインインします。次に例を示します。
++
+ssh admin@<10.235.82.22>`
+
+. 初めてサインインしたときに、 vCenter で使用できるウィザードを使用して Deploy をインストールしなかった場合は、プロンプトが表示されたら次の設定情報を入力します。
++
+** 管理者アカウントの新しいパスワード（必須）
+** 会社名（必須）
+** プロキシ URL （オプション）
+
+
+. 「 * ？ * 」と入力し、 Enter キーを押すと、使用可能な管理シェルコマンドのリストが表示されます。
+

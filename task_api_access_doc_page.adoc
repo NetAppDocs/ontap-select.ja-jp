@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: task_api_access_doc_page.html 
+keywords: rest api, deploy rest api, rest, deploy documentation, access, accessing 
+summary: API ドキュメントを表示する場合や、 API 呼び出しを手動で問題 する場合は、 ONTAP Select Deploy のオンラインドキュメントページにアクセスする必要があります。 
+---
+= Deploy のドキュメントページにアクセスします
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+API ドキュメントを表示する場合や、 API 呼び出しを手動で問題 する場合は、 ONTAP Select Deploy のオンラインドキュメントページにアクセスする必要があります。
+
+次の情報が必要です。
+
+* ONTAP Select Deploy 仮想マシンの IP アドレスまたはドメイン名
+* 管理者のユーザ名とパスワード
+
+
+.手順
+. ブラウザに URL を入力し、 *Enter* キーを押します。
++
+https://<ip_address>/api/ui` にアクセスします
+
+. 管理者のユーザ名とパスワードを使用してサインインします。
+
+
+Deploy のドキュメントの Web ページが表示され、ページの下部にカテゴリ別に分類された呼び出しが表示されます。

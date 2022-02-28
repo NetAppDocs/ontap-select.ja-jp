@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_ots_mcc_sds.html 
+keywords: plan, planning, metrocluster, metrocluster sds 
+summary: ONTAP Select の導入を計画する際に考慮する必要がある MetroCluster SDS の要件がいくつかあります。 
+---
+= MetroCluster SDS の導入準備をしています
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+MetroCluster SDS は、 2 ノード ONTAP Select クラスタを作成する際の構成オプションです。Remote Office / Branch Office （ ROBO ；リモートオフィス / ブランチオフィス）環境と似ていますが、 2 つのノード間の距離は最大で 10 km までです強化された 2 ノード環境では、さらにユースケースシナリオが追加されています。MetroCluster SDS の導入準備の一環として、要件と制限事項を理解しておく必要があります。
+
+MetroCluster SDS を導入する前に、次の要件を満たしていることを確認する必要があります。
+
+
+
+===== ライセンス
+
+各ノードに Premium 以上の ONTAP Select ライセンスが必要です。
+
+
+
+===== ハイパーバイザープラットフォーム
+
+MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。ONTAP Select 9.10.1 以降では KVM はサポートされなくなりました。
+
+
+
+===== ネットワーク構成：
+
+参加サイト間にはレイヤ 2 接続が必要です。10GbE と 1GbE の両方がサポートされ、以下の構成が含まれます。
+
+* 10GbE × 1
+* 1GbE × 4
+
+
+
+NOTE: データ提供ポートとインターコネクトポートは、最初に同じスイッチに接続する必要があります。
+
+
+
+===== ノード間のレイテンシ
+
+2 つのノード間のネットワークは、 5 ミリ秒の平均レイテンシと 5 ミリ秒の周期ジッターをサポートしている必要があります。クラスタを導入する前に、に記載されている手順 を使用してネットワークをテストする必要があります link:concept_nw_concepts_chars.html["ネットワーキングの詳細"] セクション。
+
+ ONTAP Select Product Architecture and Best Practices technical report.
+
+
+===== メディエーターサービス
+
+すべての 2 ノード ONTAP Select クラスタと同様に、 Deploy 仮想マシンには独立したメディエーターサービスが用意されており、このサービスによってノードが監視され、障害の管理を支援します。MetroCluster SDS で利用可能な拡張距離により、ネットワークトポロジ内に 3 つの異なるサイトが作成されます。メディエーターとノードの間のリンクでのレイテンシは、ラウンドトリップ時間が 125 ミリ秒以下である必要があります。
+
+
+
+===== ストレージ
+
+直接接続型ストレージ（ DAS ）は、 HDD ディスクと SSD ディスクのどちらかを使用する構成でサポートされます。vNAS は、 VMware 環境での外付けストレージアレイや VSAN などもサポートされます。
+
+
+NOTE: MetroCluster SDS を導入する場合、分散トポロジまたは「拡張」トポロジで VSAN を使用することはできません。
+
+
+
+===== Deploy に割り当てられた静的 IP アドレス
+
+Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。この要件は、 1 つ以上の ONTAP Select 2 ノードクラスタを管理する環境 All Deploy インスタンスです。

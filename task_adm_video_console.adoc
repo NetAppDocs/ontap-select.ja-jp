@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: task_adm_video_console.html 
+keywords: administer, administering, web, video console 
+summary: ONTAP Select が実行されている ESXi 仮想マシンのビデオコンソールにアクセスできます。 
+---
+= ONTAP Select ビデオコンソールにアクセスする
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select が実行されている ESXi 仮想マシンのビデオコンソールにアクセスできます。
+
+問題 のトラブルシューティングを行う場合や、ネットアップサポートからの要請があった場合に、仮想マシンのコンソールにアクセスしなければならないことがあります。
+
+.手順
+. vSphere Client にアクセスしてサインインします。
+. 階層内の適切な場所に移動して、 ONTAP Select 仮想マシンを探します。
+. 仮想マシンを右クリックし、 * コンソールを開く * を選択します。
+

@@ -1,0 +1,406 @@
+---
+sidebar: sidebar 
+permalink: reference_api_workflow01.html 
+keywords: rest api, deploy rest api, rest, workflow, create cluster, curl, json 
+summary: vCenter で管理されている VMware ESXi ホストにシングルノードの ONTAP Select クラスタを導入できます。クラスタは、評価用ライセンスで作成されます。 
+---
+= ワークフロー 1 ： ESXi でのシングルノード評価クラスタの作成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+vCenter で管理されている VMware ESXi ホストにシングルノードの ONTAP Select クラスタを導入できます。クラスタは、評価用ライセンスで作成されます。
+
+クラスタの作成ワークフローは次の場合に異なります。
+
+* ESXi ホストが vCenter で管理されない（スタンドアロンホスト）
+* クラスタ内で複数のノードまたはホストが使用されている場合
+* クラスタは購入ライセンスを使用して本番環境に導入されます
+* VMware ESXi の代わりに KVM ハイパーバイザーを使用する（ ONTAP Select 9.10.1 以降では KVM はサポートされなくなりました）
+
+
+
+
+== 1. vCenter サーバのクレデンシャルを登録します
+
+vCenter サーバで管理されている ESXi ホストに導入する場合は、ホストを登録する前にクレデンシャルを追加する必要があります。その後、 Deploy 管理ユーティリティは、のクレデンシャルを使用して vCenter への認証を行います。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| 導入 | 投稿（ Post ） | /security/ クレデンシャル 
+|===
+カール::
+
+
+[source, curl]
+----
+curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step01 'https://10.21.191.150/api/security/credentials'
+----
+JSON 入力（ step01 ）::
+
+
+[source, json]
+----
+{
+  "hostname": "vcenter.company-demo.com",
+  "type": "vcenter",
+  "username": "misteradmin@vsphere.local",
+  "password": "mypassword"
+}
+----
+処理のタイプ:: 非同期
+出力::
++
+--
+* ロケーション応答ヘッダーのクレデンシャル ID
+* ジョブオブジェクト
+
+
+--
+
+
+
+
+== 2. ハイパーバイザーホストを登録します
+
+ONTAP Select ノードが含まれる仮想マシンを実行するハイパーバイザーホストを追加する必要があります。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | 投稿（ Post ） | /hosts 
+|===
+カール::
+
+
+[source, curl]
+----
+curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step02 'https://10.21.191.150/api/hosts'
+----
+JSON 入力（ step02 ）::
+
+
+[source, json]
+----
+{
+  "hosts": [
+    {
+      "hypervisor_type": "ESX",
+      "management_server": "vcenter.company-demo.com",
+      "name": "esx1.company-demo.com"
+    }
+  ]
+}
+----
+処理のタイプ:: 非同期
+出力::
++
+--
+* ロケーション応答ヘッダーのホスト ID
+* ジョブオブジェクト
+
+
+--
+
+
+
+
+== 3. クラスタを作成します
+
+ONTAP Select クラスタを作成すると、基本的なクラスタ設定が登録され、 Deploy によってノード名が自動的に生成されます。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | 投稿（ Post ） | /clusters 
+|===
+カール:: シングルノードクラスタの場合、クエリパラメータの node_count を 1 に設定する必要があります。
+
+
+[source, curl]
+----
+curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step03 'https://10.21.191.150/api/clusters? node_count=1'
+----
+JSON 入力（ step03 ）::
+
+
+[source, json]
+----
+{
+  "name": "my_cluster"
+}
+----
+処理のタイプ:: 同期
+出力::
++
+--
+* location 応答ヘッダーにクラスタ ID が含まれます
+
+
+--
+
+
+
+
+== 4. クラスタを構成します
+
+クラスタの設定の一環として指定する必要のある属性がいくつかあります。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | パッチ | / クラスタ / ｛ cluster_id ｝ 
+|===
+カール:: クラスタ ID を指定する必要があります。
+
+
+[source, curl]
+----
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step04 'https://10.21.191.150/api/clusters/CLUSTERID'
+----
+JSON 入力（ step04 ）::
+
+
+[source, json]
+----
+{
+  "dns_info": {
+    "domains": ["lab1.company-demo.com"],
+    "dns_ips": ["10.206.80.135", "10.206.80.136"]
+    },
+    "ontap_image_version": "9.5",
+    "gateway": "10.206.80.1",
+    "ip": "10.206.80.115",
+    "netmask": "255.255.255.192",
+    "ntp_servers": {"10.206.80.183"}
+}
+----
+処理のタイプ:: 同期
+出力:: なし
+
+
+
+
+== 5. ノード名を取得します
+
+Deploy 管理ユーティリティは、クラスタの作成時にノード ID と名前を自動的に生成します。ノードを設定する前に、割り当てられている ID を取得する必要があります。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | 取得 | / クラスタ / ｛ cluster_id ｝ / ノード 
+|===
+カール:: クラスタ ID を指定する必要があります。
+
+
+[source, curl]
+----
+curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
+----
+処理のタイプ:: 同期
+出力::
++
+--
+* Array は、それぞれ固有の ID と名前を持つ単一のノードを記述している
+
+
+--
+
+
+
+
+== 6. ノードを設定します
+
+ノードの基本設定を指定する必要があります。これは、ノードの設定に使用される最初の 3 つの API 呼び出しです。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | パス | / クラスタ / ｛ cluster_id ｝ / ノード / ｛ node-id ｝ 
+|===
+カール:: クラスタ ID とノード ID を指定する必要があります。
+
+
+[source, curl]
+----
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
+----
+JSON 入力（手順 06 ）:: ONTAP Select ノードを実行するホスト ID を指定する必要があります。
+
+
+[source, json]
+----
+{
+  "host": {
+    "id": "HOSTID"
+    },
+  "instance_type": "small",
+  "ip": "10.206.80.101",
+  "passthrough_disks": false
+}
+----
+処理のタイプ:: 同期
+出力:: なし
+
+
+
+
+== 7. ノードネットワークを取得します
+
+シングルノードクラスタ内のノードで使用されるデータネットワークと管理ネットワークを特定する必要があります。内部ネットワークはシングルノードクラスタでは使用されません。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | 取得 | / クラスタ / ｛ cluster_id ｝ / ノード / ｛ node-id ｝ / ネットワーク 
+|===
+カール:: クラスタ ID とノード ID を指定する必要があります。
+
+
+[source, curl]
+----
+curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
+----
+処理のタイプ:: 同期
+出力::
++
+--
+* 2 つのレコードの配列。各レコードは、一意の ID と目的を含め、ノードの単一のネットワークを表します
+
+
+--
+
+
+
+
+== 8. ノードのネットワークを設定します
+
+データネットワークと管理ネットワークを設定する必要があります。内部ネットワークはシングルノードクラスタでは使用されません。
+
+
+NOTE: 問題 次の API 呼び出しは、ネットワークごとに 2 回ずつ実行されます。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | パッチ | / クラスタ / ｛ cluster_id ｝ / ノード / ｛ node-id ｝ / ネットワーク / ｛ network_id ｝ 
+|===
+カール:: クラスタ ID 、ノード ID 、およびネットワーク ID を指定する必要があります。
+
+
+[source, curl]
+----
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
+----
+JSON 入力（ step08 ）:: ネットワークの名前を指定する必要があります。
+
+
+[source, json]
+----
+{
+  "name": "sDOT_Network"
+}
+----
+処理のタイプ:: 同期
+出力:: なし
+
+
+
+
+== 9. ノードストレージプールを構成します
+
+ノードを設定する最後の手順は、ストレージプールを接続することです。使用可能なストレージプールは、 vSphere Web Client を介して、または必要に応じて Deploy REST API を使用して確認できます。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | パッチ | / クラスタ / ｛ cluster_id ｝ / ノード / ｛ node-id ｝ / ネットワーク / ｛ network_id ｝ 
+|===
+カール:: クラスタ ID 、ノード ID 、およびネットワーク ID を指定する必要があります。
+
+
+[source, curl]
+----
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step09 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID'
+----
+JSON 入力（ step09 ）:: プールの容量は 2TB です。
+
+
+[source, json]
+----
+{
+  "pool_array": [
+    {
+      "name": "sDOT-01",
+      "capacity": 2147483648000
+    }
+  ]
+}
+----
+処理のタイプ:: 同期
+出力:: なし
+
+
+
+
+== 10. クラスタを導入します
+
+クラスタとノードの設定が完了したら、クラスタを導入できます。
+
+[cols="15,15,70"]
+|===
+| カテゴリ | HTTP 動詞 | パス 
+
+
+| クラスタ | 投稿（ Post ） | / クラスタ / ｛ cluster_id ｝ / 導入してください 
+|===
+カール:: クラスタ ID を指定する必要があります。
+
+
+[source, curl]
+----
+curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
+----
+JSON 入力（手順 10 ）:: ONTAP 管理者アカウントのパスワードを指定する必要があります。
+
+
+[source, json]
+----
+{
+  "ontap_credentials": {
+    "password": "mypassword"
+  }
+}
+----
+処理のタイプ:: 非同期
+出力::
++
+--
+* ジョブオブジェクト
+
+
+--
+

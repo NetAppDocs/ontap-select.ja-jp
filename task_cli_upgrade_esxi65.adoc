@@ -1,0 +1,225 @@
+---
+sidebar: sidebar 
+permalink: task_cli_upgrade_esxi65.html 
+keywords: administer, administering, cli, esxi, upgrade, esxi 6.5 
+summary: VMware ESXi で ONTAP Select を実行している場合は、 ESXi ソフトウェアを以前にサポートされていたバージョンから ESXi 6.5 または 6.7 にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。 
+---
+= VMware ESXi のバージョン 6.5 以降へのアップグレード
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware ESXi で ONTAP Select を実行している場合は、 ESXi ソフトウェアを以前にサポートされていたバージョンから ESXi 6.5 または 6.7 にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。
+
+
+
+== 作業を開始する前に
+
+ONTAP Select クラスタをホストするハイパーバイザーで ESXi ソフトウェアをアップグレードする前に、環境に適したアップグレード手順 を準備して選択する必要があります。
+
+
+CAUTION: VMware ESXi 6.5 にアップグレードする場合は、 ESXi U2 （ビルド 8294253 ）以降にアップグレードする必要があります。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。
+
+
+
+=== VMware ESXi のアップグレード方法を理解する
+
+ESXi ソフトウェアのアップグレードは、 VMware で説明され、サポートされているプロセスです。ハイパーバイザーのアップグレードプロセスは、 ONTAP Select を使用する場合の大規模なアップグレード手順 の一部です。詳細については、 VMware のドキュメント『 Upgrading ESXi Hosts 』を参照してください。
+
+
+
+=== アップグレード手順 を選択しています
+
+いくつかのアップグレード手順があります。次の基準に基づいて、該当する手順 を選択する必要があります。
+
+* ONTAP Select クラスタのサイズは、シングルノードクラスタとマルチノードクラスタのどちらでもサポートされます。
+* ONTAP Select Deploy アップグレードは、 Deploy ユーティリティを使用する場合と使用しない場合の両方で使用できます。
+
+
+
+TIP: Deploy 管理ユーティリティを使用するアップグレード手順 を選択する必要があります。
+
+Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンの ONTAP Select および Deploy 管理ユーティリティでは、 ESXi 6.5 へのアップグレードはサポートされていません。
+
+これらの旧バージョンを使用している場合にアップグレードを試行すると、 ONTAP Select 仮想マシンをブートできない状態のままにすることができます。この場合は、 Deploy を使用しないアップグレード手順 を選択する必要があります。詳細については、 * 1172198 * を参照してください。
+
+
+
+=== Deploy 管理ユーティリティをアップグレードする
+
+Deploy ユーティリティを使用して手順 のアップグレードを実行する前に、 Deploy インスタンスのアップグレードが必要になることがあります。通常は、最新バージョンの Deploy にアップグレードする必要があります。少なくとも、 Deploy 2.5 以降を使用する必要があります。Deploy ユーティリティで、使用する ONTAP Select のバージョンがサポートされている必要があります。詳細については、 ONTAP Select のリリースノートを参照してください。
+
+
+
+=== 手順 の更新が完了したら
+
+Deploy ユーティリティを使用するアップグレード手順 を選択する場合は、すべてのノードをアップグレードしたあとに、 Deploy を使用してクラスタの更新処理を実行する必要があります。詳細については、 Deploy クラスタ設定の更新を参照してください。
+
+
+
+== Deploy を使用したシングルノードクラスタのアップグレード
+
+Deploy 管理ユーティリティは、手順 の一部として使用して、 ONTAP Select シングルノードクラスタをホストする VMware ESXi ハイパーバイザーをアップグレードできます。
+
+Deploy バージョン 2.5 以降を使用する必要があります。
+
+.手順
+. 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
+. ノードをオフライン状態にします。
++
+例 : node stop --cluster-name<clustername> --node-name <nodename>
+
+. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
++
+詳細については、を参照してください。
+
+. ノードをオンライン状態に移行します。
++
+例 : node start --cluster-name<clustername> --node-name <nodename>
+
+. ノードが起動したら、クラスタが正常であることを確認します。
++
+例
+
++
+....
+ESX-1N::> cluster show
+Node Health Eligibility
+--------------------- ------- ------------
+sdot-d200-011d true true
+....
+
+
+Deploy 管理ユーティリティを使用してクラスタの更新処理を実行する必要があります。
+
+
+
+== Deploy を使用したマルチノードクラスタのアップグレード
+
+Deploy 管理ユーティリティは、手順 の一部として使用して、 ONTAP Select マルチノードクラスタをホストする VMware ESXi ハイパーバイザーをアップグレードできます。
+
+Deploy バージョン 2.5 以降を使用する必要があります。
+
+このアップグレード手順 は、クラスタ内のノードごとに 1 つずつ実行する必要があります。クラスタに 4 つ以上のノードがある場合は、各 HA ペアのノードを次の HA ペアに進む前に順番にアップグレードしてください。
+
+.手順
+. 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
+. ノードをオフライン状態にします。
++
+例 : node stop --cluster-name<clustername> --node-name <nodename>
+
+. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
++
+詳細については、「 VMware ESXi のアップグレードの準備」を参照してください。
+
+. ノードをオンライン状態に移行します。
++
+例 : node start --cluster-name<clustername> --node-name <nodename>
+
+. ノードが起動したら、ストレージフェイルオーバーが有効になっていてクラスタが正常に動作していることを確認します。
++
+例
+
++
+....
+ESX-2N_I2_N11N12::> storage failover show
+Takeover
+Node Partner Possible State Description
+-------------- -------------- -------- ---------------------------
+sdot-d200-011d sdot-d200-012d true Connected to sdot-d200-012d
+sdot-d200-012d sdot-d200-011d true Connected to sdot-d200-011d
+2 entries were displayed.
+ESX-2N_I2_N11N12::> cluster show
+Node Health Eligibility
+--------------------- ------- ------------
+sdot-d200-011d true true
+sdot-d200-012d true true
+2 entries were displayed.
+....
+
+
+アップグレード手順 は、 ONTAP Select クラスタで使用するホストごとに実行する必要があります。すべての ESXi ホストをアップグレードしたら、 Deploy 管理ユーティリティを使用してクラスタの更新処理を実行する必要があります。
+
+
+
+== Deploy なしでのシングルノードクラスタのアップグレード
+
+ONTAP Select シングルノードクラスタをホストしている VMware ESXi ハイパーバイザーは、 Deploy 管理ユーティリティを使用せずにアップグレードできます。
+
+.手順
+. ONTAP のコマンドラインインターフェイスにサインインしてノードを停止します。
+. VMware vSphere を使用して、 ONTAP Select 仮想マシンの電源がオフになっていることを確認します。
+. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
++
+詳細については、「 VMware ESXi のアップグレードの準備」を参照してください。
+
+. VMware vSphere を使用して vCenter にアクセスし、次の手順を実行します。
++
+.. ONTAP Select 仮想マシンにフロッピードライブを追加します。
+.. ONTAP Select 仮想マシンの電源をオンにします。
+.. 管理者アカウントで SSH を使用して ONTAP CLI にサインインします。
+
+
+. ノードが起動したら、クラスタが正常であることを確認します。
++
+例
+
+
+
+....
+ESX-1N::> cluster show
+Node Health Eligibility
+--------------------- ------- ------------
+sdot-d200-011d true true
+....
+Deploy 管理ユーティリティを使用してクラスタの更新処理を実行する必要があります。
+
+
+
+== Deploy なしでのマルチノードクラスタのアップグレード
+
+ONTAP Select マルチノードクラスタをホストする VMware ESXi ハイパーバイザーは、 Deploy 管理ユーティリティを使用せずにアップグレードできます。
+
+このアップグレード手順 は、クラスタ内のノードごとに 1 つずつ実行する必要があります。クラスタに 4 つ以上のノードがある場合は、各 HA ペアのノードを次の HA ペアに進む前に順番にアップグレードしてください。
+
+.手順
+. ONTAP のコマンドラインインターフェイスにサインインしてノードを停止します。
+. VMware vSphere を使用して、 ONTAP Select 仮想マシンの電源がオフになっていることを確認します。
+. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
++
+詳細については、を参照してください。
+
+. VMware vSphere を使用して vCenter にアクセスし、次の手順を実行します。
++
+.. ONTAP Select 仮想マシンにフロッピードライブを追加します。
+.. ONTAP Select 仮想マシンの電源をオンにします。
+.. 管理者アカウントで SSH を使用して ONTAP CLI にサインインします。
+
+
+. ノードが起動したら、ストレージフェイルオーバーが有効になっていてクラスタが正常に動作していることを確認します。
++
+例
+
++
+....
+ESX-2N_I2_N11N12::> storage failover show
+Takeover
+Node Partner Possible State Description
+-------------- -------------- -------- ---------------------------
+sdot-d200-011d sdot-d200-012d true Connected to sdot-d200-012d
+sdot-d200-012d sdot-d200-011d true Connected to sdot-d200-011d
+2 entries were displayed.
+ESX-2N_I2_N11N12::> cluster show
+Node Health Eligibility
+--------------------- ------- ------------
+sdot-d200-011d true true
+sdot-d200-012d true true
+2 entries were displayed.
+....
+
+
+アップグレード手順 は、 ONTAP Select クラスタで使用するホストごとに実行する必要があります。
