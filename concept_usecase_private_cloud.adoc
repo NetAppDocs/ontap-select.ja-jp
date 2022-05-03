@@ -6,6 +6,7 @@ summary: ONTAP Select は、組織内の 1 つ以上のプライベートクラ�
 ---
 = プライベートクラウドとデータセンター
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

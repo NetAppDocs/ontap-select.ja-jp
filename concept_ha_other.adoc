@@ -6,6 +6,7 @@ summary: HA ディスクハートビート、 HA メールボックス、 HA ハ
 ---
 = HA の詳細
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

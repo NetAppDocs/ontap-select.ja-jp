@@ -6,6 +6,7 @@ summary: 次のスクリプトを使用すると、 ONTAP Select クラスタ内
 ---
 = クラスタノードのサイズを変更するスクリプト
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

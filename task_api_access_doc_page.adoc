@@ -6,6 +6,7 @@ summary: API ドキュメントを表示する場合や、 API 呼び出しを�
 ---
 = Deploy のドキュメントページにアクセスします
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

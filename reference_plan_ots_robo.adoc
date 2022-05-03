@@ -6,6 +6,7 @@ summary: リモートオフィス / ブランチオフィス（ ROBO ）環境�
 ---
 = リモートオフィスおよびブランチオフィスへの導入
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

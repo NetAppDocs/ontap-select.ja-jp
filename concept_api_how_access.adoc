@@ -6,6 +6,7 @@ summary: REST Web サービスは柔軟性が高いため、 ONTAP Select Deploy
 ---
 = Deploy API へのアクセス方法
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

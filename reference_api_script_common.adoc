@@ -6,6 +6,7 @@ summary: すべての Python スクリプトは、 1 つのモジュールで共
 ---
 = 共通サポートモジュール
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

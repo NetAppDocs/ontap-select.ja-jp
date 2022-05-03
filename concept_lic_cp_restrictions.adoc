@@ -6,6 +6,7 @@ summary: 容量プールライセンスモデルを使用する場合の制限�
 ---
 = 容量プールのライセンスに関する導入の制限
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Deploy プラグインは、 vCenter Server と緊密に統合されて
 ---
 = プラグインと vCenter の統合を導入
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

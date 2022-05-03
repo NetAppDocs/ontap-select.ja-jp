@@ -6,6 +6,7 @@ summary: Deploy 管理ユーティリティを VMware 環境にインストー�
 ---
 = Deploy ユーティリティのインストールに必要な情報
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

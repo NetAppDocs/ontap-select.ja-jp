@@ -6,6 +6,7 @@ summary: ONTAP Select の導入を計画する際に考慮する必要がある�
 ---
 = ベストプラクティスのまとめ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

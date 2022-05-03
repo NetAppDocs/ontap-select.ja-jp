@@ -6,6 +6,7 @@ summary: ハードウェア RAID コントローラが使用可能な場合、 O
 ---
 = ローカル接続ストレージ向けのハードウェア RAID サービス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

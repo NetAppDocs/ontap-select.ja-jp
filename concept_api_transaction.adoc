@@ -6,6 +6,7 @@ summary: Deploy API 呼び出しはすべて、 Deploy 仮想マシンへの HTT
 ---
 = 要求と応答の API トランザクション
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

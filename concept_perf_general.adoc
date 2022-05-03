@@ -6,6 +6,7 @@ summary: パフォーマンスはハードウェア構成によって異なり�
 ---
 = パフォーマンスに関する一般的な考慮事項
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

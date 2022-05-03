@@ -6,6 +6,7 @@ summary: ONTAP Select クラスタを導入したら、 Deploy 管理ユーテ�
 ---
 = ONTAP Select クラスタノードのサイズ変更
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: RAID SyncMirror （ RSM ）、ミラーされたアグリゲート、�
 ---
 = HA RSM とミラーされたアグリゲート
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

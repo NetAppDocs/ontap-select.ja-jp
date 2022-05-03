@@ -6,6 +6,7 @@ summary: サンプルの Python スクリプトを実行する前に、環境を
 ---
 = Python を使用して API にアクセスする前に、次の手順を実行
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: ONTAP Deploy は、 ONTAP Select クラスタ内の各ノードにス�
 ---
 = ストレージ容量を増やしています
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

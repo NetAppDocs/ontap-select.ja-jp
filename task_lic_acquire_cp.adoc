@@ -6,6 +6,7 @@ summary: ONTAP Select ノードで使用される容量プールごとにライ�
 ---
 = 容量プールライセンスを取得しています
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

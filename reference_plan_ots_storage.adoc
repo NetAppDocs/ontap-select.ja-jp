@@ -6,6 +6,7 @@ summary: ONTAP Select ホストストレージに関連するいくつかの計�
 ---
 = ストレージと RAID に関する考慮事項
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

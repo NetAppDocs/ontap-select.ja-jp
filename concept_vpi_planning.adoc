@@ -6,6 +6,7 @@ summary: Deploy vCenter プラグインをインストールして使用する�
 ---
 = Deploy vCenter プラグインの使用を計画している
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

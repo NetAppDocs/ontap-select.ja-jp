@@ -6,6 +6,7 @@ summary: ONTAP Select 環境のセキュリティ保護の一環として実行�
 ---
 = セキュリティ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

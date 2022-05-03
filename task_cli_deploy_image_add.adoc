@@ -6,6 +6,7 @@ summary: ONTAP Select イメージを Deploy 管理ユーティリティのイ�
 ---
 = ONTAP Select イメージを Deploy に追加しています
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

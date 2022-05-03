@@ -6,6 +6,7 @@ summary: ONTAP Select に関するサポートや詳細情報を確認するに�
 ---
 = ヘルプを参照したり、詳細情報を参照したりするには
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

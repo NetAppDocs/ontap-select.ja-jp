@@ -6,6 +6,7 @@ summary: 2NIC 構成と 4NIC 構成の ONTAP Select vSwitch 構成とロード�
 ---
 = VMware vSphere vSwitch 構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

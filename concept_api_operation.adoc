@@ -6,6 +6,7 @@ summary: REST で共通のテクノロジとベストプラクティスは確立
 ---
 = 基本的な動作特性
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

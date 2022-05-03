@@ -6,6 +6,7 @@ summary: 容量プールのライセンスモデルは容量階層モデルと�
 ---
 = 運用の詳細
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

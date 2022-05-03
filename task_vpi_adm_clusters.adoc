@@ -6,6 +6,7 @@ summary: ONTAP Select クラスタを管理するために実行できる関連�
 ---
 = ONTAP Select クラスタ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

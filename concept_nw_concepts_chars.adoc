@@ -6,6 +6,7 @@ summary: まず、 ONTAP Select 環境に適用される一般的なネットワ
 ---
 = ネットワーク：一般的な概念と特徴
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

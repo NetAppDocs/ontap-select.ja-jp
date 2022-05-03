@@ -6,6 +6,7 @@ summary: ONTAP Select の管理の一環として実行できる、関連する�
 ---
 = 診断とサポート
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

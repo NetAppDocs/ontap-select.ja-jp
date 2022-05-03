@@ -6,6 +6,7 @@ summary: コマンドラインインターフェイスを使用して、 Deploy 
 ---
 = 新しい仮想マシンへの Deploy インスタンスの移行
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

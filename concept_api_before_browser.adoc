@@ -6,6 +6,7 @@ summary: Deploy のオンラインドキュメントページを使用する前�
 ---
 = ブラウザから API にアクセスする前に
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

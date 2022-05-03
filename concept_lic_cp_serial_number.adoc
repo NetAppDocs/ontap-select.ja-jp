@@ -6,6 +6,7 @@ summary: 容量階層のライセンスモデルでは、ノードに割り当�
 ---
 = ノードのシリアル番号
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

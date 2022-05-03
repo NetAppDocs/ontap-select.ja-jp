@@ -6,6 +6,7 @@ summary: すべての API 呼び出しの詳細が、 ONTAP Select Deploy のオ
 ---
 = API 呼び出しの概要と実行方法
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

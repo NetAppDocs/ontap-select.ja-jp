@@ -6,6 +6,7 @@ summary: HA を使用して 2 ノードクラスタを導入する場合は、�
 ---
 = HA 構成の ONTAP Select 2 ノードクラスタ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

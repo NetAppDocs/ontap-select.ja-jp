@@ -6,6 +6,7 @@ summary: 各 ONTAP Select 2 ノードクラスタはメディエーターサー�
 ---
 = Deploy メディエーターサービスの管理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

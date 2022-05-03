@@ -6,6 +6,7 @@ summary: ONTAP Select vNAS の使用に関連するいくつかの計画の問�
 ---
 = ONTAP Select vNAS の要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Deploy API 呼び出し、特にリソースの作成や変更を行う
 ---
 = ジョブオブジェクトを使用した非同期処理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

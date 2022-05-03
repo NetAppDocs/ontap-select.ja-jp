@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy の Web ユーザインターフェイスを使用�
 ---
 = Deploy vCenter プラグインの確認と削除
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

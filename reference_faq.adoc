@@ -6,6 +6,7 @@ summary: ONTAP Select に関するよくある質問とその回答をご確認�
 ---
 = よくある質問
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

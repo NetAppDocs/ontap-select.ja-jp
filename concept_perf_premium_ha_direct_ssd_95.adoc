@@ -6,6 +6,7 @@ summary: ONTAP Select 9.5 のパフォーマンス - 高品質の HA 直接接�
 ---
 = ONTAP Select 9.5 のパフォーマンス： Premium HA 直接接続 SSD ストレージ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

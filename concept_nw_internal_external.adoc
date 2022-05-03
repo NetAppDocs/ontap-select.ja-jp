@@ -6,6 +6,7 @@ summary: 内部および外部の ONTAP Select ネットワークの特性。
 ---
 = ONTAP Select の内部および外部ネットワーク
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

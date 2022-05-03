@@ -6,6 +6,7 @@ summary: ONTAP Select では、 FAS アレイや AFF アレイとほぼ同じ St
 ---
 = Storage Efficiency のサポート
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

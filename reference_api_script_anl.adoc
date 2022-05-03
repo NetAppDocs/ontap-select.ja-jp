@@ -6,6 +6,7 @@ summary: 次のスクリプトを使用して、 ONTAP Select ノードのライ
 ---
 = ノードライセンスを追加するスクリプト
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

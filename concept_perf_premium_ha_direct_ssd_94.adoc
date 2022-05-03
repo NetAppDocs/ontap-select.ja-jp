@@ -6,6 +6,7 @@ summary: ONTAP Select 9.4 パフォーマンスのパフォーマンス情報 - 
 ---
 = ONTAP Select 9.4 パフォーマンス： Premium HA 直接接続 SSD ストレージ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

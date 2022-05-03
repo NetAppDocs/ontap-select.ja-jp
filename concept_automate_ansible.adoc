@@ -6,6 +6,7 @@ summary: Ansible のロールを使用して、 ONTAP Select の導入を自動�
 ---
 = Ansible で ONTAP Select 環境を自動化
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

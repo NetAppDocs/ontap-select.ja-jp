@@ -6,6 +6,7 @@ summary: VMware 環境に固有の要件と制限事項がいくつかありま�
 ---
 = VMware ハイパーバイザー環境です
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

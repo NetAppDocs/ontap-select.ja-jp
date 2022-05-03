@@ -6,6 +6,7 @@ summary: Deploy vCenter プラグインは、 vSphere Web ユーザインター�
 ---
 = ONTAP Select クラスタの導入
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

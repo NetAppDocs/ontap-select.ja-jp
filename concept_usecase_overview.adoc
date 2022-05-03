@@ -6,6 +6,7 @@ summary: ONTAP Select は、ハイパーバイザーの仮想化を通じて提�
 ---
 = ビジネスニーズと使用シナリオ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

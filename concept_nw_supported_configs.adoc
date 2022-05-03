@@ -6,6 +6,7 @@ summary: 最適なハードウェアを選択し、パフォーマンスと耐�
 ---
 = サポートされるネットワーク構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

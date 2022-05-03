@@ -6,6 +6,7 @@ summary: ONTAP Select 9.6 パフォーマンスに関するパフォーマンス
 ---
 = ONTAP Select 9.6 パフォーマンス： Premium HA 直接接続 SSD ストレージ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

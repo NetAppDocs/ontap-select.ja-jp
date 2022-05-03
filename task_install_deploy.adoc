@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy 管理ユーティリティをインストールし
 ---
 = ONTAP Select Deploy をインストールしています
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

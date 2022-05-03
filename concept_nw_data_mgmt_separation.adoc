@@ -6,6 +6,7 @@ summary: データトラフィックと管理トラフィックを別々のレ�
 ---
 = データトラフィックと管理トラフィックの分離
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

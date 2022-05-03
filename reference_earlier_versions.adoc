@@ -6,6 +6,7 @@ summary: 最新バージョンを実行していない場合は、以前のリ�
 ---
 = 以前のバージョンの ONTAP Select ドキュメント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

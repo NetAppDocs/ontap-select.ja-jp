@@ -6,6 +6,7 @@ summary: Deploy vCenter プラグインは、 ONTAP Select Deploy および VMwa
 ---
 = プラグインアーキテクチャ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

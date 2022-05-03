@@ -6,6 +6,7 @@ summary: VMware では、 VMFS 5 から VMFS 6 へのインプレースアップ
 ---
 = Storage vMotion を使用した VMFS6 へのアップグレード
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

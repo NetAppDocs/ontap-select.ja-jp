@@ -6,6 +6,7 @@ summary: Deploy vCenter プラグインのサポートの一環として、使�
 ---
 = トラブルシューティング
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

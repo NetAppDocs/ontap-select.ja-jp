@@ -6,6 +6,7 @@ summary: サンプルの Python スクリプトを使用すると、いくつか
 ---
 = Python スクリプトについて
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

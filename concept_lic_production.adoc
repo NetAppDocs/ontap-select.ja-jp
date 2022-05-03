@@ -6,6 +6,7 @@ summary: ONTAP Select が組織に適していることを確認したら、本�
 ---
 = 本番環境用の購入ライセンス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

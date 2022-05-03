@@ -6,6 +6,7 @@ summary: 容量階層ライセンスを使用している場合は、 ONTAP Sele
 ---
 = 大容量階層ライセンスを取得しています
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

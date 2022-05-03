@@ -6,6 +6,7 @@ summary: ワークフロープロセスを確認して使用するための準�
 ---
 = API ワークフローを使用する前に
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

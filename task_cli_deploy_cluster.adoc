@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy 管理ユーティリティに付属のコマンド
 ---
 = CLI を使用した ONTAP Select クラスタの導入
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

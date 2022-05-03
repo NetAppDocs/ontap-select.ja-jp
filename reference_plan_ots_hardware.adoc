@@ -6,6 +6,7 @@ summary: VMware 環境に関連するハードウェア要件と計画の問題�
 ---
 = VMware ハイパーバイザーとハードウェアに関する考慮事項
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

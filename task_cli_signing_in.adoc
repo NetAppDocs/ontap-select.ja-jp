@@ -6,6 +6,7 @@ summary: SSH を使用して Deploy 管理シェルにサインインする必�
 ---
 = SSH を使用した Deploy へのサインイン
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

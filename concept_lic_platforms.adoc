@@ -6,6 +6,7 @@ summary: ONTAP Select の大容量階層ライセンスまたは大容量プー�
 ---
 = プラットフォームライセンスの内容を理解する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

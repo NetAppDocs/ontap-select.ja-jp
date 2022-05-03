@@ -6,6 +6,7 @@ summary: 既存のクラスタを削除する場合は、次の CLI スクリプ
 ---
 = クラスタを削除するスクリプト
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

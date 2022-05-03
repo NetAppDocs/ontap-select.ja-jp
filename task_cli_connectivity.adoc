@@ -6,6 +6,7 @@ summary: 内部クラスタネットワーク上にある 2 つ以上の ONTAP S
 ---
 = ONTAP Select ノード間のネットワーク接続を確認する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

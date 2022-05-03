@@ -6,6 +6,7 @@ summary: Remote Office / Branch Office （ ROBO ；リモートオフィス / �
 ---
 = リモートオフィス、ブランチオフィス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

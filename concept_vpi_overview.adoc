@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy 用の VMware vCenter プラグインは、 VMware 
 ---
 = Deploy vCenter プラグインの概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

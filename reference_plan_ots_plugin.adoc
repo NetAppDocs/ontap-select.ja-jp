@@ -6,6 +6,7 @@ summary: VMware 環境に ONTAP Select を導入する場合は、 Deploy 管理
 ---
 = VMware vCenter プラグイン
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

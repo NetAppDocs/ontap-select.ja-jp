@@ -6,6 +6,7 @@ summary: ソフトウェア RAID を使用してドライブに障害が発生�
 ---
 = SW RAID 使用時の障害が発生したドライブの交換
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

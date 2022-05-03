@@ -5,6 +5,7 @@ summary: ONTAP Select のドキュメントポータルへようこそ。
 ---
 = ONTAP Select のドキュメント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

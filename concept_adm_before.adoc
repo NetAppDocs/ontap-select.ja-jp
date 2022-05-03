@@ -6,6 +6,7 @@ summary: ONTAP Select クラスタを作成したあと、さまざまな管理�
 ---
 = ONTAP Select の管理を開始する前に
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

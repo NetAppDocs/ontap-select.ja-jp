@@ -6,6 +6,7 @@ summary: 不要になった ONTAP Select イメージは、 Deploy 管理ユー�
 ---
 = Deploy からの ONTAP Select イメージの削除
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

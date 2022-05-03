@@ -6,6 +6,7 @@ summary: 高可用性オプションを確認して、環境に最も適した H
 ---
 = ハイアベイラビリティ構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

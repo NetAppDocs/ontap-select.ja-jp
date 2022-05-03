@@ -6,6 +6,7 @@ summary: 仮想 NAS （ vNAS ）環境では、 VSAN 上の ONTAP Select クラ�
 ---
 = VSAN および外付けアレイの構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

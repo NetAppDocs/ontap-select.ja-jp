@@ -6,6 +6,7 @@ summary: Deploy 管理シェルには、 SSH を使用してアクセスでき�
 ---
 = 作業を開始する前に
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

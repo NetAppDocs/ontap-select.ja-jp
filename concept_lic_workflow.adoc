@@ -6,6 +6,7 @@ summary: ワークフローに従って、 ONTAP Select 環境用のライセン
 ---
 = ライセンス購入時のワークフロー
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

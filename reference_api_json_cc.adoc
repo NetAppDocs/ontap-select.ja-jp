@@ -6,6 +6,7 @@ summary: Python コードサンプルを使用して ONTAP Select クラスタ�
 ---
 = クラスタを作成するスクリプトの JSON
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

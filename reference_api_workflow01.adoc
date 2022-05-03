@@ -6,6 +6,7 @@ summary: vCenter で管理されている VMware ESXi ホストにシングル�
 ---
 = ワークフロー 1 ： ESXi でのシングルノード評価クラスタの作成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

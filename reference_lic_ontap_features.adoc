@@ -6,6 +6,7 @@ summary: ONTAP Select は、ハードウェア固有の依存関係を持つ機�
 ---
 = ONTAP 機能はデフォルトで有効になっています
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

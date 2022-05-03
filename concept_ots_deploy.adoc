@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy は、 ONTAP Select クラスタの導入と管理�
 ---
 = ONTAP Select 導入
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

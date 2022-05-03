@@ -6,6 +6,7 @@ summary: Representational State Transfer （ REST ）は、分散 Web アプリ�
 ---
 = 基盤としての REST Web サービス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

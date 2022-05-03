@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy ユーティリティに障害が発生した場合
 ---
 = 2 ノードクラスタの Deploy ユーティリティをリカバリする
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -227,5 +228,5 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。
 
 link:task_install_deploy.html["ONTAP Select Deploy をインストールしています"]
-
-
+link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["新しい仮想マシンへの Deploy の設定データのリストア"]
+link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["容量プールライセンスの再インストール"]

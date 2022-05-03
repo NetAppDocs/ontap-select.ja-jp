@@ -6,6 +6,7 @@ summary: VMware 環境への ONTAP Select クラスタの導入準備の一環�
 ---
 = ONTAP Select のインストールに必要な情報
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: ONTAP Select ノードを導入する各ハイパーバイザーホス�
 ---
 = ホストの設定と準備のチェックリスト
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: ONTAP Select クラスタの導入に使用できるワークフロー�
 ---
 = ONTAP Select のインストールと導入のワークフロー
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

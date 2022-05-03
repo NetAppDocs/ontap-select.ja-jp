@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy 管理ユーティリティのインストールを
 ---
 = ONTAP Select Deploy の一般的な要件と計画
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
