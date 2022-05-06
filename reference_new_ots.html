@@ -1423,7 +1423,7 @@
   });
 </script><div class="sidebar-nav-container">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/index.html">
-        ONTAP Select 9.10.1 のドキュメント
+        ONTAP Select のドキュメント
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_release_notes.html">
         リリースノート
       </a></li><li class="subfolders "><a href="#">
@@ -1826,7 +1826,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:26:22 +0000">05/03/2022</time>
+    <time datetime="2022-05-06 18:20:57 +0000">05/06/2022</time>
     
   
 
@@ -1841,21 +1841,24 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="vmware-esxiのサポートを強化">VMware ESXiのサポートを強化</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ONTAP Select 9.11.1では、VMware ESXi 7.0 U3Cがサポートされています。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="vmware-nsx-のサポート">VMware NSX のサポート</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP Select 9.10.1 は VMware NSX -T バージョン 3.1.2 に対応しています。OVA ファイルと ONTAP Select Deploy 管理ユーティリティを使用して導入された ONTAP Select シングルノードクラスタで NSX と T を使用しても、機能の問題や不具合は発生しません。ただし、 NSX と ONTAP Select マルチノードクラスタを併用する場合は、次の要件および制限事項に注意してください。</p>
+<p>ONTAP Select 9.10.1 は VMware NSX -T バージョン 3.1.2 に対応しています。OVA ファイルと ONTAP Select Deploy 管理ユーティリティを使用して導入された ONTAP Select シングルノードクラスタで NSX と T を使用しても、機能の問題や不具合は発生しません。</p>
+</div>
+<div class="paragraph">
+<p>ただし、ONTAP Select マルチノードクラスタでNSXとTを使用する場合は、ONTAP Select 9.11.1の次の要件および制限事項に注意してください。</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">クラスタ MTU</dt>
-<dd>
-<p>追加のオーバーヘッドを考慮してクラスタを導入する前に、クラスタの MTU サイズを 8800 に手動で調整する必要があります。VMware のガイダンスでは、 NSX を使用する場合に 200 バイトのバッファを使用できるようにする方法を説明しています</p>
-</dd>
-<dt class="hdlist1">ネットワーク 4x10Gb 構成</dt>
-<dd>
-<p>4 つの NIC が設定された VMware ESXi ホストに ONTAP Select を導入する場合、 Deploy ユーティリティから、 2 つの異なるポートグループに内部トラフィックを分割し、 2 つの異なるポートグループに外部トラフィックを分けるというベストプラクティスに従うように求められます。ただし、オーバーレイネットワークを使用する場合、この設定は機能しないため、推奨事項は無視してください。この場合は、内部ポートグループを 1 つと外部ポートグループを 1 つだけ使用してください。</p>
-</dd>
 <dt class="hdlist1">ネットワーク接続チェッカー</dt>
 <dd>
 <p>NSX ベースのネットワークに対して実行されると、 Deploy CLI で使用可能なネットワーク接続チェッカーが失敗します。</p>
@@ -1868,7 +1871,13 @@
 <h2 id="kvm-ハイパーバイザーのサポートが廃止されました">KVM ハイパーバイザーのサポートが廃止されました</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP Select 9.10.1 以降、 KVM ハイパーバイザーに新しいクラスタを導入することはできなくなりました。ただし、クラスタを以前のリリースから 9.10.1 にアップグレードしても、 Deploy ユーティリティを使用してクラスタを管理できます。</p>
+<p>KVMハイパーバイザーはサポートされなくなりました。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Select 9.10.1以降のリリースでは、新しいKVMベースのクラスタを作成したり、Deployユーティリティを使用してKVMベースのホストを追加したりすることができなくなりました。また、9.10.1は、既存のKVMクラスタとホストを含む、オンライン化などの管理機能をサポートする最後のリリースとなりました。</p>
+</div>
+<div class="paragraph">
+<p>その後、ONTAP Select 9.11.1以降のリリースでは、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。</p>
 </div>
 </div>
 </div>
