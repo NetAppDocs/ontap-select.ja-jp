@@ -28,7 +28,7 @@ MetroCluster SDS を導入する前に、次の要件を満たしていること
 
 ===== ハイパーバイザープラットフォーム
 
-MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。ONTAP Select 9.10.1 以降では KVM はサポートされなくなりました。
+MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。KVMはONTAP Select 9.10.1以降のリリースではサポートされなくなりました。
 
 
 

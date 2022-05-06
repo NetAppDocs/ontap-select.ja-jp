@@ -9,7 +9,7 @@ settings:
   langs: ja-jp,us-en,zh-cn,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: ONTAP Select 9.10.1 のドキュメント
+  - title: ONTAP Select のドキュメント
     url: "/index.html"
   - title: リリースノート
     url: "/reference_release_notes.html"

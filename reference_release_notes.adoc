@@ -23,7 +23,7 @@ NOTE: リリースノートにアクセスするには、ネットアップサ�
 
 ===== ONTAP Select の現在のバージョン
 
-にアクセスできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2879854["ONTAP Select 9.10.1 リリースノート"^] をクリックすると、現在のバージョンの詳細が表示されます。
+にアクセスできます https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 9.11.1リリースノート"^] をクリックすると、現在のバージョンの詳細が表示されます。
 
 
 

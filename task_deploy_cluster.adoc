@@ -77,7 +77,7 @@ NOTE: ページ上部のタブ（クラスタ、ハイパーバイザーホス�
 
 ONTAP Select Deploy の Web ユーザインターフェイスを使用して、シングルノードの ONTAP Select クラスタを導入できます。
 
-を参照してください link:http:task_deploy_cluster.html#before-you-begin["作業を開始する前に"] クラスタを導入するための準備。Deploy の管理をインストールして初期設定（パスワード、 AutoSupport 、 vCenter ）する必要があります。
+を参照してください link:task_deploy_cluster.html#before-you-begin["作業を開始する前に"] クラスタを導入するための準備。Deploy の管理をインストールして初期設定（パスワード、 AutoSupport 、 vCenter ）する必要があります。
 
 本番環境用に 1 つのノードで構成される ONTAP Select クラスタが作成されます。
 
