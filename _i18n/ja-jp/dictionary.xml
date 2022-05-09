@@ -3629,7 +3629,6 @@
   <block id="b21133b863e352c7e380ae8974198a75" category="list-text"><block ref="b21133b863e352c7e380ae8974198a75" category="inline-link-macro-rx"></block></block>
   <block id="d36f4205c301fa0311580c2426a17881" category="list-text">KVMハイパーバイザーは、VMware ESXiの代わりに使用されます（ONTAP Select 9.10.1以降で新しいクラスタを作成する際にKVMはサポートされなくなりました）。</block>
   <block id="91f528f33d4be79010000f66d8e7792c" category="inline-link">ONTAP Select 9.11.1リリースノート</block>
-  <block id="035f3963e6805da6ba00f69f4e5ea8fd" category="paragraph">にアクセスできます<block ref="7ed889202f2b282e8463fa03128c4ef2" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
   <block id="b25679a7bebb3b9795d3926792d8c9a9" category="paragraph">MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。KVMはONTAP Select 9.10.1以降のリリースではサポートされなくなりました。</block>
   <block id="0ec7f2d003cb42f9464107b0ad854843" category="admonition">ONTAP Select 9.10.1以降では、新しいONTAP Select クラスタの導入時にKVMハイパーバイザーがサポートされなくなりました。以前にサポートされていたリリースでも KVM を使用できます。</block>
   <block id="9230331b34c3673c82d4b22760bb266d" category="list-text">ハイパーバイザーESXiまたはKVMに導入できます（Deployリリースによって異なります）。ESXi に導入する際、ハイパーバイザーは vCenter で管理することも、スタンドアロンホストにすることもできます。</block>
@@ -3646,4 +3645,5 @@
   <block id="d0a2c35dd24f48a701484a2c0e0e4e2a" category="list-text">ESXとKVMでサポート（ONTAP Select 9.10.1より前）</block>
   <block id="089ce9e252a6b5d4200f327104cdd7f6" category="admonition">ONTAP Select 9.10.1以降では、新しいクラスタの導入時にKVMハイパーバイザーがサポートされなくなりました。以前にサポートされていたリリースでも KVM を使用できます。</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select のドキュメント</block>
+  <block id="0f4660890a6410bffddf8509d2c29d15" category="paragraph">にアクセスできます<block ref="192e9fbc4335e2d8900d363693ade117" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
 </blocks>
