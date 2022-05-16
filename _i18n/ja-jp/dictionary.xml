@@ -1373,7 +1373,6 @@
   <block id="3e7e570e683be353e09e19562e3196f3" category="paragraph">大まかには、このタスクは 3 つのパートで構成されます。Deploy インスタンスで使用するすべての容量プールライセンスを再生成してインストールする必要があります。新しい Deploy インスタンスにすべてのライセンスを再インストールしたら、必要に応じてシリアルシーケンス番号をリセットできます。最後に、 Deploy の IP アドレスが変更された場合は、容量プールライセンスを使用するすべての ONTAP Select ノードを更新する必要があります。</block>
   <block id="6d46c419c8dde2ad4ea4d5623e1b4350" category="list-text">ネットアップサポートに問い合わせて、元の Deploy インスタンスの容量プールライセンスのバインドを解除し、登録を解除しておきます。</block>
   <block id="dc94932a20b0a7c73d1e6aa60af35223" category="list-text">各容量プールライセンスの新しいライセンスファイルを取得してダウンロードします。</block>
-  <block id="345c5eb90afb9e2e8ee266e94ccbe0f1" category="paragraph">詳細については、「容量プールライセンスの取得」を参照してください。</block>
   <block id="8018479e33974a2b0f774cf42ec399e5" category="list-text">新しい Deploy インスタンスに容量プールライセンスをインストールします。</block>
   <block id="99683d4e14f8df30b153000825273e2d" category="list-text">[*Licenses*] をクリックし、 [* Capacity Pool*] をクリックします。</block>
   <block id="095bb96ffb3551a58960c96316107d76" category="list-text">[ * 追加 ] 、 [ * ライセンスのアップロード * ] の順にクリックして、ライセンスを選択してアップロードします。</block>
@@ -3646,4 +3645,5 @@
   <block id="089ce9e252a6b5d4200f327104cdd7f6" category="admonition">ONTAP Select 9.10.1以降では、新しいクラスタの導入時にKVMハイパーバイザーがサポートされなくなりました。以前にサポートされていたリリースでも KVM を使用できます。</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select のドキュメント</block>
   <block id="0f4660890a6410bffddf8509d2c29d15" category="paragraph">にアクセスできます<block ref="192e9fbc4335e2d8900d363693ade117" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
+  <block id="88d96915de77c1959098b364119959de" category="paragraph">を参照してください <block ref="20acef5038e91881d90c1f2f38d1998f" category="inline-link-macro-rx"></block> を参照してください。</block>
 </blocks>
