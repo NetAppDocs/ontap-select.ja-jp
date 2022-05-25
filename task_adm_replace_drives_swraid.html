@@ -1835,7 +1835,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:26:22 +0000">05/03/2022</time>
+    <time datetime="2022-05-25 16:09:36 +0000">05/25/2022</time>
     
   
 
@@ -1845,7 +1845,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>ソフトウェア RAID を使用してドライブに障害が発生した場合、 ONTAP Select はスペアドライブを使用し（使用可能な場合）、リビルドプロセスを自動的に開始します。これは、 FAS および AFF での ONTAP の動作と似ています。ただし、使用可能なスペアドライブがない場合は、 ONTAP Select ノードにスペアドライブを追加する必要があります。</p>
+<p>ソフトウェアRAIDを使用しているドライブで障害が発生した場合、ONTAP Select はスペアドライブがあればそれを割り当て、リビルドプロセスを自動的に開始します。これは、FAS およびAFF でのONTAP の動作と似ています。使用可能なスペアドライブがない場合は、ONTAP Select ノードにスペアドライブを追加する必要があります。</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1854,7 +1854,7 @@
 <img src="/us-en/ontap-select/images/note.svg" alt="注記">
 </td>
 <td class="content">
-障害が発生したドライブの取り外しと新しいドライブ（スペアとしてマークされている）の追加は、 ONTAP Deploy を使用して実行する必要があります。vSphere を使用した ONTAP Select VM へのドライブの接続はサポートされていません。
+障害が発生したドライブの取り外しと新しいドライブ（スペアとしてマークされている）の追加は、ONTAP Select Deployを使用して実行する必要があります。vSphere を使用した ONTAP Select VM へのドライブの接続はサポートされていません。
 </td>
 </tr>
 </table>
@@ -1865,16 +1865,16 @@
 <h2 id="障害ドライブを特定します">障害ドライブを特定します</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ドライブで障害が発生した場合は、 Deploy ユーティリティの CLI を使用して障害が発生したディスクを特定します。</p>
+<p>ドライブで障害が発生した場合は、ONTAP CLIを使用して障害ディスクを特定する必要があります。</p>
 </div>
 <div class="olist arabic">
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>管理者アカウントを使用して、 Deploy ユーティリティの CLI にサインインします。</p>
+<p>管理者アカウントを使用して、ONTAP CLIにサインインします。</p>
 </li>
 <li>
-<p>障害が発生したディスクを特定します。</p>
+<p>障害が発生したディスクドライブを特定します。</p>
 <div class="listingblock">
 <div class="content">
 <pre>&lt;cluster name&gt;::&gt; storage disk show -container-type broken
