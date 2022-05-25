@@ -24,7 +24,7 @@ ESXi で ONTAP Select クラスタを作成する前に、必要な準備作業�
 
 
 
-===== ONTAP Select ノードにストレージを接続するための準備をしています
+=== ONTAP Select ノードにストレージを接続するための準備をしています
 
 ローカルのハードウェア RAID コントローラを使用する場合は、システムデータ用およびルートアグリゲートとデータアグリゲート用に各ノードに少なくとも 1 つのストレージプールを作成する必要があります。ONTAP Select ノードの設定の一環として、ストレージプールを接続する必要があります。
 
@@ -32,13 +32,13 @@ ESXi で ONTAP Select クラスタを作成する前に、必要な準備作業�
 
 
 
-===== 使用可能な ONTAP Select バージョン
+=== 使用可能な ONTAP Select バージョン
 
 Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_adm_deploy_image_add.html["ONTAP Select イメージを Deploy に追加しています"] を参照してください。
 
 
 
-===== 本番環境向けに ONTAP Select のライセンスを付与する
+=== 本番環境向けに ONTAP Select のライセンスを付与する
 
 本番環境に ONTAP Select クラスタを導入する前に、ストレージ容量ライセンスを購入し、関連するライセンスファイルをダウンロードする必要があります。各ノードでストレージのライセンスを取得するには、 _capacity Tier_model を使用するか、 _capacity pools_model を使用して共有プールのライセンスを設定します。
 
@@ -238,16 +238,16 @@ node show -name test-cluster-01 -cluster-name test-cluster -detailed
 
 
 
-== ONTAP Select ノードにストレージを接続する
+== ONTAP Select ノードにストレージを接続しています
 
-ONTAP Select クラスタ内の各ノードで使用するストレージを設定する必要があります。各ノードには少なくとも 1 つのストレージプールが割り当てられている必要があります。
+ONTAP Select クラスタ内の各ノードで使用するストレージを設定する必要があります。すべてのノードには、必ず少なくとも1つのストレージプールを割り当てる必要があります。ソフトウェアRAIDを使用する場合は、各ノードに少なくとも1本のディスクドライブを割り当てる必要があります。
 
-VMware vSphere を使用してストレージプールを作成しておく必要があります。
+ストレージプールはVMware vSphereを使用して作成する必要があります。ソフトウェアRAIDを使用する場合は、使用可能なディスクドライブが少なくとも1本必要です。
 
-この手順 は、ローカルハードウェア RAID コントローラが使用されていることを前提としています。ONTAP Select クラスタ内の各ノードでストレージを設定する必要があります。
+ローカルハードウェアRAIDコントローラを使用する場合は、手順1~4を実行する必要があります。ソフトウェアRAIDを使用する場合は、手順1~6を実行する必要があります。
 
 .手順
-. 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
+. 管理者アカウントのクレデンシャルを使用して、SSHを使用してDeployユーティリティのCLIにサインインします。
 . ホストで使用可能なストレージプールを表示します。
 +
 host storage pool show -host-name <fqdn|ip>`
@@ -290,6 +290,30 @@ node storage pool show -cluster-name clustername -node-name の形式です
 [listing]
 ----
 node storage pool show -cluster-name test-cluster -node-name testcluster-01
+----
+. ソフトウェアRAIDを使用している場合は、使用可能なドライブを接続します。
++
+「node storage disk attach -node-name -cluster-name clustername -disk list_of drives」のように指定します
+
++
+例
+
++
+[listing]
+----
+node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000:66:00.0 0000:67:00.0 0000:68:00.0
+----
+. ソフトウェアRAIDを使用している場合は、ノードに接続されているディスクを表示します。
++
+node storage disk show -node-name nodename -cluster-name clustername
+
++
+例
+
++
+[listing]
+----
+node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 ----
 
 

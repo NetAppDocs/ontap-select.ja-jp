@@ -1064,10 +1064,6 @@
   <block id="f3c1a1c8717be55597746058712a8a41" category="paragraph">シングルノードクラスタを導入する場合は、内部ネットワークは必要なく、 -internal-network を削除する必要があります。</block>
   <block id="c2f2bd4587b8c71cf8e299f386400e66" category="list-text">ノードの設定を表示します。</block>
   <block id="733447df59e9b9f51345490bc3341e5d" category="paragraph">node show -name nodename -cluster-name clustername -detailed ’と入力します</block>
-  <block id="9a71b3cdddddadb8fe576b697592d9b1" category="section-title">ONTAP Select ノードにストレージを接続する</block>
-  <block id="d76b42af4750ab47db6807261ff568d9" category="paragraph">ONTAP Select クラスタ内の各ノードで使用するストレージを設定する必要があります。各ノードには少なくとも 1 つのストレージプールが割り当てられている必要があります。</block>
-  <block id="ae494932199568deba5542920a6c52e0" category="paragraph">VMware vSphere を使用してストレージプールを作成しておく必要があります。</block>
-  <block id="8cc64aa381816d6fe67efbffa850dced" category="paragraph">この手順 は、ローカルハードウェア RAID コントローラが使用されていることを前提としています。ONTAP Select クラスタ内の各ノードでストレージを設定する必要があります。</block>
   <block id="d07e64799eaa81c2e7811d55f1faaaf1" category="list-text">ホストで使用可能なストレージプールを表示します。</block>
   <block id="9646f070282208e61d267e28e7ef6bb1" category="paragraph">host storage pool show -host-name &lt;fqdn|ip&gt;`</block>
   <block id="3457f038144b809169e1a74a423ab6b6" category="paragraph">VMware vSphere から使用可能なストレージプールを取得することもできます。</block>
@@ -1894,10 +1890,6 @@
   <block id="67550f4cdbfd87619a6b9d0a3b78729e" category="paragraph"><block ref="67550f4cdbfd87619a6b9d0a3b78729e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="aa93950c1aed200eaa527c1dac76c135" category="inline-link-macro">2 ノード HA とマルチノード HA</block>
   <block id="2873f708ad14d01a4941aae540a49300" category="paragraph">ベストプラクティスやその他の要件については、セクションを参照してください <block ref="b5a87e2c6cb220b53b8486e8e1bc1eac" category="inline-link-macro-rx"></block> および <block ref="3a9138e6cecc138f508a809e03f2cd7a" category="inline-link-macro-rx"></block>。</block>
-  <block id="672f48d2ec82ec522a85cf3df49eb607" category="summary">ONTAP Select は、ハードウェア固有の依存関係を持つ機能を除き、ほとんどの ONTAP 機能を完全にサポートします。</block>
-  <block id="24c73c70fff103725b0dc81f21473d67" category="paragraph">ONTAP Select では、クラスタの導入時に、ノードごとにいくつかの機能のライセンスが自動的に設定されます。</block>
-  <block id="4c174b0c4d6417356173383c959c14a8" category="section-title">搭載されている機能</block>
-  <block id="f7cc5fa2aa671dbb06fcdd7df278e0e6" category="paragraph">デフォルトでは、次の機能が含まれ、ライセンスが付与されます。</block>
   <block id="c6546b53840ec8245dd4d4d70fcdbc26" category="list-text">CIFS</block>
   <block id="e4e1c13bb0b14f6cb7608cbecea948ef" category="list-text">iSCSI</block>
   <block id="794cb725c5631ad99b5b7c000307f0df" category="list-text">SnapMirror</block>
@@ -1908,8 +1900,6 @@
   <block id="37f51edec96ed159381e4d3d076a8787" category="list-text">重複排除機能と圧縮機能</block>
   <block id="1effda8a28add2fb64ed5a7d4d67deae" category="list-text">ONTAP のマルチテナンシー機能</block>
   <block id="f8f58e06b7004f2c9a02a8875d2bd10d" category="list-text">NetApp Volume Encryption （規制対象外の国のみ）</block>
-  <block id="dee52e4036e8b3203de4ad54ebf51957" category="section-title">別途ライセンスが必要な機能</block>
-  <block id="fe1bc1414ac4d3ff24ab13de6ded84ae" category="paragraph">その他の機能については、次のライセンスを別途取得する必要があります。</block>
   <block id="8fe0c9f8f23d1eb8317ecbfc3412e145" category="list-text">SnapLock エンタープライズ</block>
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="cd4d0565c73e994a0df5b7c0a072acc6" category="list-text">Data Availability Service の略</block>
@@ -3337,10 +3327,7 @@
   <block id="fb1dff3ec52367cdb90456fabf48600c" category="paragraph">「 service-control -- start-vsphere-client 」と入力します</block>
   <block id="acd7d62c9b810f0d5861712e738fb732" category="summary">ソフトウェア RAID を使用してドライブに障害が発生した場合、 ONTAP Select はスペアドライブを使用し（使用可能な場合）、リビルドプロセスを自動的に開始します。これは、 FAS および AFF での ONTAP の動作と似ています。ただし、使用可能なスペアドライブがない場合は、 ONTAP Select ノードにスペアドライブを追加する必要があります。</block>
   <block id="aeb7169d045185953deed3c0de3865f8" category="doc">SW RAID 使用時の障害が発生したドライブの交換</block>
-  <block id="22e35b7624c291099f06269e559eb73a" category="admonition">障害が発生したドライブの取り外しと新しいドライブ（スペアとしてマークされている）の追加は、 ONTAP Deploy を使用して実行する必要があります。vSphere を使用した ONTAP Select VM へのドライブの接続はサポートされていません。</block>
   <block id="d790a7cfad60ef9c4cf133fdbf5d8644" category="section-title">障害ドライブを特定します</block>
-  <block id="c6451675a58dba4a0d99c6ccf691cb92" category="paragraph">ドライブで障害が発生した場合は、 Deploy ユーティリティの CLI を使用して障害が発生したディスクを特定します。</block>
-  <block id="a9f7dbddb14939c805024201a3e1b090" category="list-text">障害が発生したディスクを特定します。</block>
   <block id="307bdb5a979a863911e3c77799901dec" category="section-title">障害ドライブを取り外します</block>
   <block id="0ab4ad97846d3de95e1f2d091028d9ed" category="paragraph">障害が発生したドライブを特定したら、ディスクを取り外します。</block>
   <block id="eecedba88893e3e14bfd8006f68186d1" category="list-text">管理者アカウントを使用して、 Deploy Web ユーザインターフェイスにサインインします。</block>
@@ -3646,4 +3633,25 @@
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select のドキュメント</block>
   <block id="0f4660890a6410bffddf8509d2c29d15" category="paragraph">にアクセスできます<block ref="192e9fbc4335e2d8900d363693ade117" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
   <block id="88d96915de77c1959098b364119959de" category="paragraph">を参照してください <block ref="20acef5038e91881d90c1f2f38d1998f" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="d0730ff14b2f6fb53d9e49978a76660e" category="summary">ONTAP Select は、ほとんどのONTAP 機能を完全にサポートしています。ONTAP の機能の多くには、クラスタの導入時に各ノードで自動的にライセンスが付与されます。ただし、一部の機能には個別のライセンスが必要です。</block>
+  <block id="0deac5caf37785bb3c3ce0d80f8d8d18" category="admonition">ハードウェア固有の依存関係を持つONTAP 機能は、一般にONTAP Select ではサポートされていません。</block>
+  <block id="8132b1f57834df621ea1aedaa548729e" category="section-title">ONTAP の機能はデフォルトで自動的に有効になります</block>
+  <block id="d4370df695508d400d73750728248ebe" category="paragraph">ONTAP Select には次の機能が含まれており、デフォルトでライセンスが付与されています。</block>
+  <block id="1716834171e243de0f898a67621b6624" category="list-text">ONTAP S3</block>
+  <block id="a56a12489213d10b531398efee448f95" category="section-title">個別にライセンスされるONTAP の機能</block>
+  <block id="585f4a038bba40a29999437c007446e9" category="paragraph">ONTAP 機能がデフォルトで有効になっていない場合は、次のライセンスを別途取得する必要があります。</block>
+  <block id="6dec3523c85f378f79fcf83c82e21868" category="paragraph">ソフトウェアRAIDを使用しているドライブで障害が発生した場合、ONTAP Select はスペアドライブがあればそれを割り当て、リビルドプロセスを自動的に開始します。これは、FAS およびAFF でのONTAP の動作と似ています。使用可能なスペアドライブがない場合は、ONTAP Select ノードにスペアドライブを追加する必要があります。</block>
+  <block id="483b2bdf1e13fa583e93f86544ae9ee4" category="admonition">障害が発生したドライブの取り外しと新しいドライブ（スペアとしてマークされている）の追加は、ONTAP Select Deployを使用して実行する必要があります。vSphere を使用した ONTAP Select VM へのドライブの接続はサポートされていません。</block>
+  <block id="04985546e9771cbfe818d7c08949cb4e" category="paragraph">ドライブで障害が発生した場合は、ONTAP CLIを使用して障害ディスクを特定する必要があります。</block>
+  <block id="76b45a86afe9ddfec423de5caad088a5" category="list-text">管理者アカウントを使用して、ONTAP CLIにサインインします。</block>
+  <block id="56f32587956bc806f4ffe1823a1a1872" category="list-text">障害が発生したディスクドライブを特定します。</block>
+  <block id="562e70611d61b3bdd5fa02c1473d7fb3" category="section-title">ONTAP Select ノードにストレージを接続しています</block>
+  <block id="866ece73832a5308b812e48e59ba8a4f" category="paragraph">ONTAP Select クラスタ内の各ノードで使用するストレージを設定する必要があります。すべてのノードには、必ず少なくとも1つのストレージプールを割り当てる必要があります。ソフトウェアRAIDを使用する場合は、各ノードに少なくとも1本のディスクドライブを割り当てる必要があります。</block>
+  <block id="f31242a3b10d57ca87f84e612994d57c" category="paragraph">ストレージプールはVMware vSphereを使用して作成する必要があります。ソフトウェアRAIDを使用する場合は、使用可能なディスクドライブが少なくとも1本必要です。</block>
+  <block id="2976fb0a07ffd25ea274d2cc9bc187be" category="paragraph">ローカルハードウェアRAIDコントローラを使用する場合は、手順1~4を実行する必要があります。ソフトウェアRAIDを使用する場合は、手順1~6を実行する必要があります。</block>
+  <block id="cc6982c020bc97509cfd68e72db0524e" category="list-text">管理者アカウントのクレデンシャルを使用して、SSHを使用してDeployユーティリティのCLIにサインインします。</block>
+  <block id="1d0fd2b207143cd0cbfe1f1eca67206a" category="list-text">ソフトウェアRAIDを使用している場合は、使用可能なドライブを接続します。</block>
+  <block id="477b4fc07bc021818bf99ca0a2f9a370" category="paragraph">「node storage disk attach -node-name -cluster-name clustername -disk list_of drives」のように指定します</block>
+  <block id="10d4b2d6f8c74f79bcce5324cfbda150" category="list-text">ソフトウェアRAIDを使用している場合は、ノードに接続されているディスクを表示します。</block>
+  <block id="f1efe358bd22df5ef0bdf73fc9e8d10b" category="paragraph">node storage disk show -node-name nodename -cluster-name clustername</block>
 </blocks>
