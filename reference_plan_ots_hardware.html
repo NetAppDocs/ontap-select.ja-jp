@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">日本語</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">日本語</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/ontap-select/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-select/reference_plan_ots_hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-select/reference_plan_ots_hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-select/reference_plan_ots_hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-select/reference_plan_ots_hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-select/reference_plan_ots_hardware.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_hardware.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-select/reference_plan_ots_hardware.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-select/reference_plan_ots_hardware.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-select/reference_plan_ots_hardware.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1430,7 +1422,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/index.html">
         ONTAP Select のドキュメント
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-select/reference_release_notes.html">
@@ -1835,7 +1827,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-06 18:20:57 +0000">05/06/2022</time>
+    <time datetime="2022-06-15 18:45:12 +0000">06/15/2022</time>
     
   
 
@@ -1944,10 +1936,9 @@ ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CP
 <div class="paragraph">
 <p>ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>プロセッサ</p>
+<div class="paragraph">
+<p>サポートされている\'83\'7dイクロプロセッサは、次のとおりです。</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -1955,31 +1946,38 @@ ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CP
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>イーサネットネットワークポート</p>
-<div class="ulist">
-<ul>
-<li>
-<p>10GbE × 4 （推奨）</p>
-</li>
-<li>
-<p>10GbE × 2</p>
-</li>
-<li>
-<p>10GbE × 1</p>
-</li>
-<li>
-<p>1GbE × 4 （ 2 ノードの ROBO クラスタの場合のみ）</p>
-</li>
-<li>
-<p>1GbE × 2 （シングルノードクラスタの場合のみ）</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>クラスタのサイズに基づいて、サポートされるイーサネット構成がいくつかあります。</p>
 </div>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 35%;">
+<col style="width: 35%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">クラスタサイズ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最小要件</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">推奨事項</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">シングルノードクラスタ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1GbE×2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GbE × 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2ノードクラスタまたはMetroCluster SDS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1GbE×4または10GbE×1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GbE × 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 / 6 / 8ノードクラスタ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GbE × 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GbE×4、または25/40GbE×2</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="インスタンスタイプに基づいた追加のハードウェア要件">インスタンスタイプに基づいた追加のハードウェア要件</h4>
@@ -2214,4 +2212,5 @@ ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CP
     </script>
     <script src='/ja-jp/ontap-select/js/www-ntap.js'></script>
     <script src='/ja-jp/ontap-select/js/tabbed-blocks.js'></script>
+    <script src='/ja-jp/ontap-select/js/sidebar.js'></script>
   </body></html>
