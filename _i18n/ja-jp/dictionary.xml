@@ -713,7 +713,6 @@
   <block id="6ec2a86943d66b46f70e5d87ac537fd4" category="paragraph">ソフトウェア RAID の要件には、次のものがあります。</block>
   <block id="daa9446dd725dfc008580c725c26e90b" category="list-text">サポートされる物理ディスクのサイズ： 200GB~32TB</block>
   <block id="94615c9042eb14ee228868c999ca7b3b" category="list-text">DAS 構成でのみサポートされます</block>
-  <block id="103ab2c767b1be091ad46e82ec44d53c" category="list-text">SSD でのみサポートされます</block>
   <block id="aba50a4db4f2d357e877595c641130a5" category="list-text">Premium または Premium XL ONTAP Select ライセンスが必要です</block>
   <block id="6bc864440af96dd0ce3cfac81f642cc2" category="list-text">ハードウェア RAID コントローラがないか無効になっているか、 SAS HBA モードで動作している必要があります</block>
   <block id="f249bf8d9e4b8c7b417b66fb9c6c3c90" category="list-text">システムディスクのコアダンプ、ブート / NVRAM 、メディエーターなどに、専用の LUN に基づく LVM ストレージプールまたはデータストアを使用する必要があります。</block>
@@ -1248,15 +1247,6 @@
   <block id="68a547a08a3ebb293924c580b641ce65" category="paragraph">* ネットワークの最小構成と推奨構成 *</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
   <block id="523bd57fcc837e7be7bc3b0cd4b52afa" category="cell">最小要件</block>
-  <block id="5259ae4afb5996ff48788b2fa720114c" category="cell">推奨事項</block>
-  <block id="27a08f8dae649f80b5adc97cf7ed216e" category="cell">シングルノードクラスタ</block>
-  <block id="c427a9a2fab6b24f6b7ff4100579a75c" category="cell">2 × 1Gb</block>
-  <block id="bb81903d791182b6c510f5328e456c82" category="cell">10Gb × 2</block>
-  <block id="37fcdf053dd0dacaa320af1b91afcf77" category="cell">2 ノードクラスタ /MetroCluster SDS</block>
-  <block id="d65313238bf052bcd4da75255bc1229a" category="cell">1Gb × 4 または 10Gb × 1</block>
-  <block id="cb3b967446da7c765f29874d3af83439" category="cell">4 / 6 / 8 ノードクラスタ</block>
-  <block id="b3923a8eb8f81681199fa22056cdedc2" category="cell">10Gb × 4 または 25 / 40GB × 2</block>
-  <block id="cc781d9852a683d49b415b4724ced3f1" category="paragraph">* 複数の物理スイッチを使用するネットワーク構成 * 十分なハードウェアが使用可能な場合は、物理スイッチの障害からの保護を強化するため、次の図に示すマルチスイッチ構成を推奨します。</block>
   <block id="976b2628d60825feb0397b7cb29e1ab5" category="inline-image-macro">複数の物理スイッチを使用するネットワーク構成</block>
   <block id="d08307744845f9100511e47ff88bc61a" category="paragraph"><block ref="d08307744845f9100511e47ff88bc61a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bb3e372088c34ecc97b747d050480dd5" category="summary">Deploy vCenter プラグインのインストールと管理には、いくつかの作業が必要です。</block>
@@ -2848,14 +2838,9 @@
   <block id="e974ba73413c61605294fbea7a63f880" category="paragraph">を参照してください<block ref="6989237bb21ab12eea7660d1d2c0793b" category="inline-link-rx"></block> を参照してください。</block>
   <block id="6ef6e53858c70e7e79a98bf86eb89b40" category="section-title">基本的なハードウェア要件</block>
   <block id="6e789a662664596fd2f867b83af8955a" category="paragraph">ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。</block>
-  <block id="e22b6495595f2c4ad67a830d1be05c6e" category="list-text">プロセッサ</block>
   <block id="7a4cc24a8547103995174a22d62c6415" category="inline-link-macro">インテル Xeon プロセッサー、ウィンドウ = _ ブランク</block>
   <block id="fc86323f8bb43524824dfedf72c12f20" category="list-text">サーバー向けインテル Xeon プロセッサー（を参照 <block ref="b4ae18ee7ddc8509f21de2805d7b78c6" category="inline-link-macro-rx"></block> 詳細については、</block>
-  <block id="1d6cab2018d0973fc42f97393441359e" category="list-text">イーサネットネットワークポート</block>
-  <block id="f165a91cf573cd6d747aacd35dfe0df9" category="list-text">10GbE × 4 （推奨）</block>
   <block id="7538c6fd2c1f96ec16f31ff621c5090f" category="list-text">10GbE × 2</block>
-  <block id="48eb25fbf1bf64862fe4e24ffa80f025" category="list-text">1GbE × 4 （ 2 ノードの ROBO クラスタの場合のみ）</block>
-  <block id="b40ce30b0ea7008987849cf8b3de219c" category="list-text">1GbE × 2 （シングルノードクラスタの場合のみ）</block>
   <block id="d55a9ba430190ded23c2d10278bfb65d" category="section-title">インスタンスタイプに基づいた追加のハードウェア要件</block>
   <block id="bfc8cbb02384bbb523227067dcadb07e" category="paragraph">ノードインスタンスのタイプに基づいて、ハードウェアに関する追加の要件がいくつかあります。</block>
   <block id="7e64fd00098cc9d082a7cbbea21dc2a5" category="inline-link-macro">プラットフォームライセンスの内容を理解する</block>
@@ -3654,4 +3639,16 @@
   <block id="477b4fc07bc021818bf99ca0a2f9a370" category="paragraph">「node storage disk attach -node-name -cluster-name clustername -disk list_of drives」のように指定します</block>
   <block id="10d4b2d6f8c74f79bcce5324cfbda150" category="list-text">ソフトウェアRAIDを使用している場合は、ノードに接続されているディスクを表示します。</block>
   <block id="f1efe358bd22df5ef0bdf73fc9e8d10b" category="paragraph">node storage disk show -node-name nodename -cluster-name clustername</block>
+  <block id="1a4f0dd8a8bf6109c981c282ef6e87c9" category="paragraph">サポートされている\'83\'7dイクロプロセッサは、次のとおりです。</block>
+  <block id="9adc1cc3490cf88dcf6538833825d06d" category="paragraph">クラスタのサイズに基づいて、サポートされるイーサネット構成がいくつかあります。</block>
+  <block id="28f29271814291e43be7deaba751046b" category="cell">クラスタサイズ</block>
+  <block id="c76e3867213cff8946148c6510af0736" category="cell">推奨事項</block>
+  <block id="b57920e2838d0b8c1570a84513bd3391" category="cell">シングルノードクラスタ</block>
+  <block id="84b6dad36f332d459c3cbbff61102611" category="cell">1GbE×2</block>
+  <block id="76d2b682f134359232d4f4b954c5e1a3" category="cell">2ノードクラスタまたはMetroCluster SDS</block>
+  <block id="0ea5b2cd33e45a6a2df81dcad2a5045d" category="cell">1GbE×4または10GbE×1</block>
+  <block id="f2f0116ae4525605fa023e57cc038a7e" category="cell">4 / 6 / 8ノードクラスタ</block>
+  <block id="aabad23ff55f6490dcedde7b5fc7b430" category="cell">10GbE×4、または25/40GbE×2</block>
+  <block id="e329a903fac418f23c3deeab45b989ff" category="paragraph">十分なハードウェアを使用できる場合は、次の図に示すマルチスイッチ構成を推奨します。これは、物理スイッチの障害からの保護を強化するためです。</block>
+  <block id="cf3d9f4201951d721713f10886d41ddb" category="list-text">SSDまたはNVMeでサポートされます</block>
 </blocks>

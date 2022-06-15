@@ -74,22 +74,28 @@ NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づ
 
 ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。
 
-* プロセッサ
-+
-** サーバー向けインテル Xeon プロセッサー（を参照 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["インテル Xeon プロセッサー、ウィンドウ = _ ブランク"] 詳細については、
+サポートされている\'83\'7dイクロプロセッサは、次のとおりです。
+
+* サーバー向けインテル Xeon プロセッサー（を参照 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["インテル Xeon プロセッサー、ウィンドウ = _ ブランク"] 詳細については、
 
 
-* イーサネットネットワークポート
-+
-** 10GbE × 4 （推奨）
-** 10GbE × 2
-** 10GbE × 1
-** 1GbE × 4 （ 2 ノードの ROBO クラスタの場合のみ）
-** 1GbE × 2 （シングルノードクラスタの場合のみ）
+クラスタのサイズに基づいて、サポートされるイーサネット構成がいくつかあります。
+
+[cols="30,35,35"]
+|===
 
 
+| クラスタサイズ | 最小要件 | 推奨事項 
 
 
+| シングルノードクラスタ | 1GbE×2 | 10GbE × 2 
+
+
+| 2ノードクラスタまたはMetroCluster SDS | 1GbE×4または10GbE×1 | 10GbE × 2 
+
+
+| 4 / 6 / 8ノードクラスタ | 10GbE × 2 | 10GbE×4、または25/40GbE×2 
+|===
 
 
 ==== インスタンスタイプに基づいた追加のハードウェア要件
