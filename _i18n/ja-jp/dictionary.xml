@@ -706,7 +706,6 @@
   <block id="e5f0aa18f251bcf3fa0e3a7d649aefb9" category="section-title">ESX 上の ONTAP Select には vCenter が必要ですか。</block>
   <block id="b4d2427e0e7f2bd7b89ea60f5ad063d9" category="paragraph">ESX ホストのライセンスが適切な場合は、 ESX ホストを vCenter Server で管理する必要はありません。ただし、ホストが vCenter サーバで管理されている場合は、その vCenter Server を使用するように ONTAP Deploy を設定する必要があります。つまり、 ESX ホストが vCenter Server によってアクティブに管理されている場合、 ONTAP Deploy で ESX ホストをスタンドアロンとして設定することはできません。ONTAP Deploy VM は、 vMotion または VMware の HA イベントが原因で、 vCenter に依存して ESXi ホスト間のすべての ONTAP Select VM 移行を追跡します。</block>
   <block id="3690bfca39d229721656be52d6e38df1" category="section-title">ソフトウェア RAID とは</block>
-  <block id="45a5b2791e77165a65a09eb1c8ab39be" category="paragraph">ONTAP Select では、 RAID コントローラを使用しないサーバを使用できます。ソフトウェア RAID でサポートされるのは SSD のみです。それ以外のドライブタイプ（ NVMe を含む）はサポートされません。ONTAP Select ブートディスクおよびコアディスクは、引き続き仮想化されたパーティション（ストレージプールまたはデータストア）内に配置する必要があります。ONTAP Select は、 RD2 （ルート / データ / データパーティショニング）を使用して SSD をパーティショニングします。したがって、 ONTAP Select ルートパーティションは、データアグリゲートに使用される物理スピンドルと同じ上にあります。ただし、ルートアグリゲートおよびブートディスクとコア仮想ディスクは容量ライセンスには含まれません。</block>
   <block id="e9004de7dd880f639c21be0197d03eb6" category="paragraph">AFF / FAS で使用できるすべての RAID 方式を ONTAP Select でも使用できます。これには、 RAID 4 、 RAID DP 、および RAID-TEC が含まれます。SSD の最小数は、選択した RAID 構成のタイプによって異なります。ベストプラクティスとして、少なくとも 1 つのスペアが必要です。スペアディスクとパリティディスクは容量ライセンスには含まれません。</block>
   <block id="4e0891be88802b935c566dc6245269b2" category="section-title">ソフトウェア RAID とハードウェア RAID 構成の違いは何ですか。</block>
   <block id="22e0f3c76aa3f16b504047703ee442db" category="paragraph">ソフトウェア RAID は、 ONTAP ソフトウェアスタックのレイヤです。ソフトウェア RAID では、物理ドライブが ONTAP Select VM 内でパーティショニングされ、 raw ディスクとして使用できるため、管理性が向上します。一方、ハードウェア RAID では、通常は 1 つの大きな LUN を使用でき、その LUN を ONTAP Select で使用して VMDISK を作成できます。ソフトウェア RAID はオプションとして使用でき、ハードウェア RAID の代わりに使用できます。</block>
@@ -2749,17 +2748,11 @@
   <block id="c94bc3200f704807c4c41ce4c2e2b2d8" category="paragraph">アップグレード手順 は、 ONTAP Select クラスタで使用するホストごとに実行する必要があります。</block>
   <block id="7807c1892c85ba4af2d3c779c7823c25" category="summary">容量プールライセンスモデルを使用する場合の制限事項を次に示します。</block>
   <block id="12a600320f268cb8d694ea9ca7d2f40b" category="doc">容量プールのライセンスに関する導入の制限</block>
-  <block id="06be3d2851694a8ac21502e41f3e4305" category="section-title">クラスタごとに統一されたライセンスモデル</block>
   <block id="3e786bde6715be4e14e3475dd6ed4cce" category="paragraph">1 つの ONTAP Select クラスタ内のすべてのノードで、同じライセンスモデル、つまり容量階層または容量プールを使用する必要があります。1 つのクラスタ内で複数のノードのライセンスタイプを混在させることはできません。</block>
-  <block id="4b0e422dcf415e37a99fb9240372b2e7" category="section-title">クラスタ内のすべてのノードが同じ License Manager インスタンスを使用します</block>
   <block id="1698dae6a4f7df9ce924018053e98157" category="paragraph">ONTAP Select クラスタ内の容量プールライセンスを持つすべてのノードは、同じ License Manager インスタンスを使用する必要があります。各 Deploy インスタンスには 1 つの License Manager インスタンスが存在するため、この制限は、クラスタ内のすべてのノードを同じ Deploy インスタンスで管理する必要があるという既存の要件を再定義したものです。</block>
-  <block id="02adb22963ca335394cfa32d81eb77c1" category="section-title">ノードごとに 1 つの容量プール</block>
   <block id="44f8a5fada3e18e6f15ff271b3edc087" category="paragraph">各ノードは、 1 つの容量プールからのみストレージをリースできます。1 つのノードで複数のプールを使用することはできません。</block>
-  <block id="b738a2037fc94e2290be56df30341770" category="section-title">HA ペアのノードに同じプール</block>
   <block id="9f9dee89e91dda6c0bed11a752b85182" category="paragraph">単一の HA ペアの両方のノードは、同じ容量プールからストレージをリースする必要があります。ただし、同じクラスタ内の異なる HA ペアは、同じ License Manager で管理されている異なるプールからストレージをリースできます。</block>
-  <block id="affb254e2447d7a107f972ff759efbb0" category="section-title">ストレージライセンスの期間</block>
   <block id="ae060de04aca5e325886869d3119eab9" category="paragraph">ネットアップからストレージライセンスを取得するときは、ライセンス期間を選択する必要があります。たとえば、ライセンスは 1 年間有効です。</block>
-  <block id="231c03420ee8b0ab0994fb02ab1e1c01" category="section-title">データアグリゲートのリース期間</block>
   <block id="3684db008f18e1ffdeda56bf51708696" category="paragraph">ONTAP Select ノードがデータアグリゲートのストレージリースを要求すると、 License Manager は容量プールの設定に基づいて、特定の期間のリースを提供します。各プールのリース期間は、 1 時間から 7 日の間で設定できます。デフォルトのリース期間は 24 時間です。</block>
   <block id="987ded954f3b3c95296c03ab6b45ec09" category="paragraph">容量プールのライセンスを使用する場合は、 Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。</block>
   <block id="3de1ca7c5efc91bb5c6c3fe1667e7f17" category="summary">ONTAP Select ノードで使用される容量プールごとにライセンスファイルを取得する必要があります。ライセンスファイルでは、プールのストレージ容量と有効期限が定義されます。このライセンスは、ネットアップが割り当てた一意のライセンスシリアル番号と、 Deploy インスタンスに関連付けられたライセンスロック ID を組み合わせて、 License Manager にロックされます。</block>
@@ -2916,7 +2909,6 @@
   <block id="9dd37a863a3425f3f1c4f538142509e4" category="admonition">コマンドラインインターフェイスを使用して ONTAP Select を管理することもできます。詳細については、「 CLI_ の使用」を参照してください。</block>
   <block id="c4d963c19242b00c1072fff4f0eea04d" category="section-title">追加の ONTAP 設定を実行しています</block>
   <block id="0fb174aac34fc88ecff0007976e876b6" category="paragraph">ONTAP Select クラスタを導入したら、ハードウェアベースの ONTAP システムの場合と同様にクラスタを設定および管理できます。たとえば、 OnCommand システムマネージャまたは ONTAP CLI を使用して、 ONTAP Select クラスタを設定できます。</block>
-  <block id="f2d299d92bba14c1b1251b504639222c" category="section-title">ネットアップクライアントソフトウェア</block>
   <block id="da70b9ce263d0deac21a9bdc090db697" category="paragraph">サポート対象である次のネットアップクライアントソフトウェアを使用して ONTAP Select に接続できます。</block>
   <block id="d9c98a8b6e04d84858048370d4a88105" category="list-text">OnCommand システムマネージャ</block>
   <block id="9504a3fa6a28404c323a25da156b03a2" category="list-text">OnCommand Unified Manager の略</block>
@@ -2928,12 +2920,10 @@
   <block id="189d1cb951ac55dbbc9b4e50417cce4a" category="paragraph">クライアントソフトウェアのサポート対象のバージョンを特定するには、 _NetApp Interoperability Matrix Tool _ を参照してください。クライアントソフトウェアが ONTAP 9 をサポートしている場合は、同じバージョンが ONTAP Select でもサポートされます。</block>
   <block id="b3e69561c86e401b4332c1e91fa71151" category="admonition">SnapCenter と対応するプラグインを使用するには、サーバベースのライセンスが必要です。SnapCenter プラグインのストレージシステム単位のライセンスは、現在 ONTAP Select ではサポートされていません。</block>
   <block id="aef13422544b986f17fc92f060a8874e" category="paragraph">リストに含まれていないその他のネットアップクライアントソフトウェアは、 ONTAP Select ではサポートされていません。</block>
-  <block id="91aa06ef59aa905f170919b05e594df9" category="section-title">使用可能な設定オプション</block>
   <block id="8959cdd9b2a6cd26717de49f0b4bbbb0" category="paragraph">クラスタの設定時にはいくつかのオプションを使用できます。次に例を示します。</block>
   <block id="620e81c66c131f0b1e414614fed0e418" category="list-text">ネットワーク設定を作成します</block>
   <block id="cea548261425f3d897f63b97e936d640" category="list-text">アグリゲートのレイアウト</block>
   <block id="fbe12f72d0ac5802617b4f23c55e5e59" category="list-text">データ Storage Virtual Machine （ SVM ）の作成</block>
-  <block id="42cac712a9acf93c75659c9fa981f95f" category="section-title">ストレージ容量を含む購入ライセンス</block>
   <block id="c644c0897d8dc8d07dc010b0a5d1b341" category="paragraph">ONTAP Select クラスタの導入の一環として、ストレージ容量を含むライセンスファイルをインストールしない場合は、購入ライセンスを使用して実行するクラスタの猶予期間が終了する前に、ライセンスファイルを入手してインストールする必要があります。</block>
   <block id="92d7efa0a9c4eca7052897e58341d0b6" category="paragraph">Deploy 管理ユーティリティで作成されたデータスペアディスクは、使用可能なデータストアスペース（ Pool0 および Pool1 など）から各 ONTAP Select ノードに作成されます。マルチノードクラスタにデータの高可用性を実装するには、これらのスペアを使用してミラーされたアグリゲートを作成する必要があります。</block>
   <block id="167b2e8c89f5ceb184efcaf133c27779" category="paragraph">コマンドラインインターフェイスを使用して、 Deploy 仮想マシンの管理者アカウントのパスワードを必要に応じて変更できます。</block>
@@ -3007,7 +2997,6 @@
   <block id="fc33e5682a7d6ccc0d64dac217fb6d25" category="summary">最新バージョンを実行していない場合は、以前のリリースの ONTAP Select に関するドキュメントを参照できます。</block>
   <block id="245ffbb9d9e1af7e4e1bfde85cc60e07" category="doc">以前のバージョンの ONTAP Select ドキュメント</block>
   <block id="8a088d567fa6e887a32f49c59fcc4049" category="paragraph">最新バージョンを実行していない場合は、以前のリリースの ONTAP Select に関するドキュメントを参照できます。以前のサポート対象リリースで KVM ハイパーバイザーを使用する場合に必要なドキュメントにアクセスすることもできます。</block>
-  <block id="8981745d05aab5e343666492d376dd4c" category="section-title">ONTAP Select 9.6 以前</block>
   <block id="fa748407272b92f3705a6294bcb1b272" category="summary">HA を使用して 2 ノードクラスタを導入する場合は、他のクラスタノード構成と同じ計画と構成を使用します。ただし、 2 ノードクラスタを作成する場合に注意しなければならない相違点がいくつかあります。</block>
   <block id="53a40851af0b9784d82acc5102b9a119" category="doc">HA 構成の ONTAP Select 2 ノードクラスタ</block>
   <block id="60311a7026f3d48f88b9518fc315cec6" category="section-title">ターゲットとなる環境</block>
@@ -3651,4 +3640,8 @@
   <block id="aabad23ff55f6490dcedde7b5fc7b430" category="cell">10GbE×4、または25/40GbE×2</block>
   <block id="e329a903fac418f23c3deeab45b989ff" category="paragraph">十分なハードウェアを使用できる場合は、次の図に示すマルチスイッチ構成を推奨します。これは、物理スイッチの障害からの保護を強化するためです。</block>
   <block id="cf3d9f4201951d721713f10886d41ddb" category="list-text">SSDまたはNVMeでサポートされます</block>
+  <block id="962977c7a55570a3e19ef88b744147a7" category="paragraph">プラットフォームライセンスには3種類あります。</block>
+  <block id="20f809b70a876834d72604dfbfe98104" category="section-title">ONTAP Select 9.5以前</block>
+  <block id="9b80340c4530b90196798dcf94e75bd0" category="list-text"><block ref="c067844a81e7c795b1a0cf80bc733e0a" category="inline-link-rx"></block></block>
+  <block id="ce069f22ea6686ee5804f79668ad2604" category="paragraph">ONTAP Select では、ハードウェアRAIDコントローラなしでサーバを使用できます。この場合、RAID機能はソフトウェアで実装されます。ソフトウェアRAIDを使用する場合は、SSDとNVMeの両方のドライブがサポートされます。ONTAP Select ブートディスクおよびコアディスクは、引き続き仮想化されたパーティション（ストレージプールまたはデータストア）内に配置する必要があります。ONTAP Select は、 RD2 （ルート / データ / データパーティショニング）を使用して SSD をパーティショニングします。したがって、 ONTAP Select ルートパーティションは、データアグリゲートに使用される物理スピンドルと同じ上にあります。ただし、ルートアグリゲートおよびブートディスクとコア仮想ディスクは容量ライセンスには含まれません。</block>
 </blocks>
