@@ -36,7 +36,7 @@ Deploy vCenter プラグインをインストールしたあと、「グロー�
 
 
 
-==== ONTAP Select クラスタ
+=== ONTAP Select クラスタ
 
 ONTAP Select クラスタオプションは、標準の Deploy Web ユーザインターフェイスの * クラスタ * タブとほぼ同じです。次の表に、このストレージシステムに搭載されている機能を示します。
 
@@ -73,7 +73,7 @@ ONTAP Select クラスタオプションは、標準の Deploy Web ユーザイ�
 |===
 
 
-==== ONTAP Select 導入
+=== ONTAP Select 導入
 
 ONTAP Select Deploy オプションは、標準の Deploy Web ユーザインターフェイスの「 * Hypervisor Hosts * 」タブと「 * Administration * 」タブに相当します。次の表で説明するように、ページ上部の 3 つのタブを使用して機能を実行できます。
 
@@ -98,18 +98,18 @@ vSphere 経由で vCenter プラグインに付属する機能は、標準の De
 
 
 
-==== vCenter プラグインの管理
+=== vCenter プラグインの管理
 
 vCenter プラグインを使用して vCenter プラグインをインストール、更新、削除、または確認することはできません。これらの管理タスクは、ネイティブの Deploy ユーザインターフェイスを使用して実行する必要があります。
 
 
 
-==== vCenter クレデンシャルの管理
+=== vCenter クレデンシャルの管理
 
 vCenter プラグインをインストールする前に、標準の Deploy ユーザインターフェイスを使用して、 Deploy に必要な vCenter クレデンシャルを追加する必要があります。
 
 
 
-==== ONTAP Select クラスタは、同じ vCenter サーバで制御されている必要があります
+=== ONTAP Select クラスタは、同じ vCenter サーバで制御されている必要があります
 
 ONTAP Select クラスタの導入とサポートは、プラグインがインストールされている単一の vCenter サーバでのみ実行できます。このプラグインを使用して、スタンドアロンの ESXi または KVM ホストで実行されている他の vCenter サーバまたはクラスタで管理されている ONTAP Select クラスタにアクセスすることはできません。

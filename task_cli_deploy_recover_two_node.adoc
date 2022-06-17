@@ -22,51 +22,19 @@ ONTAP Select Deploy ユーティリティに障害が発生した場合や、何
 
 Deploy ユーティリティのインスタンスを確実にリカバリするには、そのための準備をしておく必要があります。
 
-
-
-===== 必要なスキルと情報
-
 いくつかの管理手順に関する詳しい知識と情報が必要です。
-
-
-
-===== Deploy 仮想マシンをインストールします
 
 ハイパーバイザー環境に ONTAP Select Deploy ユーティリティの新しいインスタンスをインストールできる必要があります。
 
-
-
-===== ONTAP コマンドラインインターフェイス
-
 ONTAP Select クラスタの ONTAP CLI にサインインして、シェルインターフェイスを使用する必要があります。
-
-
-
-===== Deploy ユーティリティ設定のバックアップの有無
 
 ONTAP Select の 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスの設定データがバックアップされているかどうかを確認する必要があります。作成したバックアップにはクラスタが含まれていない場合があります。
 
-
-
-===== Deploy 設定のバックアップのリストア
-
 使用するリカバリ用手順 に応じて、 Deploy の設定データのバックアップをリストアする必要があります。
-
-
-
-===== 元の Deploy 仮想マシンの IP アドレス
 
 障害が発生した元の Deploy ユーティリティの仮想マシンの IP アドレスを把握しておく必要があります。
 
-
-
-===== ストレージ容量単位のライセンス
-
 容量プールまたは容量階層のライセンスが使用されているかどうかを確認する必要があります。容量プールライセンスを使用する場合は、 Deploy インスタンスをリカバリまたはリストアしたあとに、各容量プールライセンスを再インストールする必要があります。
-
-
-
-===== 使用するリカバリ手順 の決定
 
 ONTAP Select Deploy ユーティリティのインスタンスをリカバリする際に使用する手順 を決定しておく必要があります。ONTAP Select 2 ノードクラスタを含む、障害が発生した元の Deploy ユーティリティの設定データをバックアップするかどうかを決定します。
 
@@ -227,6 +195,8 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。
 
-link:task_install_deploy.html["ONTAP Select Deploy をインストールしています"]
-link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["新しい仮想マシンへの Deploy の設定データのリストア"]
-link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["容量プールライセンスの再インストール"]
+.関連情報
+* link:task_install_deploy.html["ONTAP Select Deploy をインストールしています"]
+* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["新しい仮想マシンへの Deploy の設定データのリストア"]
+* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["容量プールライセンスの再インストール"]
+

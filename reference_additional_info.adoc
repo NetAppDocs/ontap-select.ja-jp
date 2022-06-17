@@ -18,7 +18,7 @@ ONTAP Select に関するサポートや詳細情報を確認するには、他�
 
 
 
-=== ONTAP Select 製品のリソース
+== ONTAP Select 製品のリソース
 
 次の製品ページには、さまざまな ONTAP Select リソースへのリンクが記載されています。
 
@@ -28,7 +28,7 @@ ONTAP Select に関するサポートや詳細情報を確認するには、他�
 
 
 
-=== ONTAP 9 のリソース
+== ONTAP 9 のリソース
 
 * https://docs.netapp.com/us-en/ontap/["ONTAP 9 のドキュメント"^]
 +
@@ -42,7 +42,7 @@ ONTAP 9 の CLI コマンドに関するドキュメントを提供します。
 
 
 
-=== ブログ
+== ブログ
 
 ONTAP Select の様々な側面をカバーする blog の記事のコレクションがある。
 
@@ -51,7 +51,7 @@ ONTAP Select の様々な側面をカバーする blog の記事のコレクシ�
 
 
 
-=== コミュニティ
+== コミュニティ
 
 他のユーザに質問をしたり、ネットアップの ONTAP Select コミュニティに投稿したりすることができます。
 
@@ -60,7 +60,7 @@ ONTAP Select の様々な側面をカバーする blog の記事のコレクシ�
 
 
 
-=== NetApp Interoperability Matrix Tool で確認できます
+== NetApp Interoperability Matrix Tool で確認できます
 
 Interoperability Matrix Tool には、詳細な構成と製品サポート情報が記載されています。
 
