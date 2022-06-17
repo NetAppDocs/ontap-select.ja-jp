@@ -1827,7 +1827,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:26:22 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 19:37:40 +0000">06/17/2022</time>
     
   
 
@@ -1847,50 +1847,27 @@
 <div class="paragraph">
 <p>Deploy ユーティリティのインスタンスを確実にリカバリするには、そのための準備をしておく必要があります。</p>
 </div>
-<div class="sect4">
-<h5 id="必要なスキルと情報">必要なスキルと情報</h5>
 <div class="paragraph">
 <p>いくつかの管理手順に関する詳しい知識と情報が必要です。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="deploy-仮想マシンをインストールします">Deploy 仮想マシンをインストールします</h5>
 <div class="paragraph">
 <p>ハイパーバイザー環境に ONTAP Select Deploy ユーティリティの新しいインスタンスをインストールできる必要があります。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ontap-コマンドラインインターフェイス">ONTAP コマンドラインインターフェイス</h5>
 <div class="paragraph">
 <p>ONTAP Select クラスタの ONTAP CLI にサインインして、シェルインターフェイスを使用する必要があります。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="deploy-ユーティリティ設定のバックアップの有無">Deploy ユーティリティ設定のバックアップの有無</h5>
 <div class="paragraph">
 <p>ONTAP Select の 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスの設定データがバックアップされているかどうかを確認する必要があります。作成したバックアップにはクラスタが含まれていない場合があります。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="deploy-設定のバックアップのリストア">Deploy 設定のバックアップのリストア</h5>
 <div class="paragraph">
 <p>使用するリカバリ用手順 に応じて、 Deploy の設定データのバックアップをリストアする必要があります。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="元の-deploy-仮想マシンの-ip-アドレス">元の Deploy 仮想マシンの IP アドレス</h5>
 <div class="paragraph">
 <p>障害が発生した元の Deploy ユーティリティの仮想マシンの IP アドレスを把握しておく必要があります。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ストレージ容量単位のライセンス">ストレージ容量単位のライセンス</h5>
 <div class="paragraph">
 <p>容量プールまたは容量階層のライセンスが使用されているかどうかを確認する必要があります。容量プールライセンスを使用する場合は、 Deploy インスタンスをリカバリまたはリストアしたあとに、各容量プールライセンスを再インストールする必要があります。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="使用するリカバリ手順-の決定">使用するリカバリ手順 の決定</h5>
 <div class="paragraph">
 <p>ONTAP Select Deploy ユーティリティのインスタンスをリカバリする際に使用する手順 を決定しておく必要があります。ONTAP Select 2 ノードクラスタを含む、障害が発生した元の Deploy ユーティリティの設定データをバックアップするかどうかを決定します。</p>
 </div>
@@ -1916,7 +1893,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -2148,10 +2124,19 @@ disk assign -disk &lt;mediator-disk2-name&gt; -owner &lt;node2-name&gt;</pre>
 <div class="paragraph">
 <p>容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。</p>
 </div>
-<div class="paragraph">
-<p><a href="task_install_deploy.html">"ONTAP Select Deploy をインストールしています"</a><br>
-<a href="task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine">"新しい仮想マシンへの Deploy の設定データのリストア"</a><br>
-<a href="task_adm_licenses.html#reinstalling-a-capacity-pool-license">"容量プールライセンスの再インストール"</a></p>
+<div class="ulist">
+<div class="title">関連情報</div>
+<ul>
+<li>
+<p><a href="task_install_deploy.html">"ONTAP Select Deploy をインストールしています"</a></p>
+</li>
+<li>
+<p><a href="task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine">"新しい仮想マシンへの Deploy の設定データのリストア"</a></p>
+</li>
+<li>
+<p><a href="task_adm_licenses.html#reinstalling-a-capacity-pool-license">"容量プールライセンスの再インストール"</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>

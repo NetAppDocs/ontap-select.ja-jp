@@ -1827,37 +1827,25 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-06 18:20:57 +0000">05/06/2022</time>
+    <time datetime="2022-06-17 19:37:40 +0000">06/17/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>MetroCluster SDS は、 2 ノード ONTAP Select クラスタを作成する際の構成オプションです。Remote Office / Branch Office （ ROBO ；リモートオフィス / ブランチオフィス）環境と似ていますが、 2 つのノード間の距離は最大で 10 km までです強化された 2 ノード環境では、さらにユースケースシナリオが追加されています。MetroCluster SDS の導入準備の一環として、要件と制限事項を理解しておく必要があります。</p>
 </div>
 <div class="paragraph">
 <p>MetroCluster SDS を導入する前に、次の要件を満たしていることを確認する必要があります。</p>
 </div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="ライセンス">ライセンス</h5>
 <div class="paragraph">
 <p>各ノードに Premium 以上の ONTAP Select ライセンスが必要です。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ハイパーバイザープラットフォーム">ハイパーバイザープラットフォーム</h5>
 <div class="paragraph">
 <p>MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。KVMはONTAP Select 9.10.1以降のリリースではサポートされなくなりました。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ネットワーク構成">ネットワーク構成：</h5>
 <div class="paragraph">
 <p>参加サイト間にはレイヤ 2 接続が必要です。10GbE と 1GbE の両方がサポートされ、以下の構成が含まれます。</p>
 </div>
@@ -1883,26 +1871,12 @@
 </tr>
 </table>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ノード間のレイテンシ">ノード間のレイテンシ</h5>
 <div class="paragraph">
 <p>2 つのノード間のネットワークは、 5 ミリ秒の平均レイテンシと 5 ミリ秒の周期ジッターをサポートしている必要があります。クラスタを導入する前に、に記載されている手順 を使用してネットワークをテストする必要があります <a href="concept_nw_concepts_chars.html">"ネットワーキングの詳細"</a> セクション。</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>ONTAP Select Product Architecture and Best Practices technical report.</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="メディエーターサービス">メディエーターサービス</h5>
 <div class="paragraph">
 <p>すべての 2 ノード ONTAP Select クラスタと同様に、 Deploy 仮想マシンには独立したメディエーターサービスが用意されており、このサービスによってノードが監視され、障害の管理を支援します。MetroCluster SDS で利用可能な拡張距離により、ネットワークトポロジ内に 3 つの異なるサイトが作成されます。メディエーターとノードの間のリンクでのレイテンシは、ラウンドトリップ時間が 125 ミリ秒以下である必要があります。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ストレージ">ストレージ</h5>
 <div class="paragraph">
 <p>直接接続型ストレージ（ DAS ）は、 HDD ディスクと SSD ディスクのどちらかを使用する構成でサポートされます。vNAS は、 VMware 環境での外付けストレージアレイや VSAN などもサポートされます。</p>
 </div>
@@ -1918,12 +1892,8 @@ MetroCluster SDS を導入する場合、分散トポロジまたは「拡張」
 </tr>
 </table>
 </div>
-</div>
-<div class="sect4">
-<h5 id="deploy-に割り当てられた静的-ip-アドレス">Deploy に割り当てられた静的 IP アドレス</h5>
 <div class="paragraph">
 <p>Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。この要件は、 1 つ以上の ONTAP Select 2 ノードクラスタを管理する環境 All Deploy インスタンスです。</p>
-</div>
 </div>
 
     </article>

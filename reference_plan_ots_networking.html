@@ -1827,7 +1827,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:26:22 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 19:37:40 +0000">06/17/2022</time>
     
   
 
@@ -1841,8 +1841,9 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="仮想スイッチのオプション">仮想スイッチのオプション</h4>
+<div class="sect1">
+<h2 id="仮想スイッチのオプション">仮想スイッチのオプション</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>各 ONTAP Select ホストで、外部ネットワークと内部ネットワーク（マルチノードクラスタの場合のみ）をサポートするように仮想スイッチを設定する必要があります。マルチノードクラスタの導入の一環として、内部クラスタネットワーク上のネットワーク接続をテストしてください。</p>
 </div>
@@ -1859,8 +1860,10 @@
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="vmxnet3-へのアップグレード">VMXNET3 へのアップグレード</h4>
+</div>
+<div class="sect1">
+<h2 id="vmxnet3-へのアップグレード">VMXNET3 へのアップグレード</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Deploy 2.10 を使用した ONTAP Select 9.5 以降では、 VMware ESXi での新しいクラスタの導入に付属するデフォルトのネットワークドライバとして VMXNET3 が用意されています。既存の ONTAP Select ノードをバージョン 9.5 以降にアップグレードした場合、ドライバは自動的にアップグレードされません。</p>
 </div>
@@ -1877,8 +1880,10 @@
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="クラスタ-mtu">クラスタ MTU</h4>
+</div>
+<div class="sect1">
+<h2 id="クラスタ-mtu">クラスタ MTU</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>マルチノードクラスタの ONTAP Select ノードの接続には、別の内部ネットワークが使用されます。通常、このネットワークの MTU サイズは 9000 です。ただし、 ONTAP Select ノードを接続するネットワークの MTU サイズが大きすぎる場合もあります。小さいフレームに対応するために、内部ネットワーク上の ONTAP Select で使用される MTU サイズは 7500~9000 バイトの範囲で指定できます。</p>
 </div>
@@ -1911,8 +1916,10 @@
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="標準-vswitch-搭載の-2nic-ホスト">標準 vSwitch 搭載の 2NIC ホスト</h4>
+</div>
+<div class="sect1">
+<h2 id="標準-vswitch-搭載の-2nic-ホスト">標準 vSwitch 搭載の 2NIC ホスト</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>2NIC 構成で ONTAP Select のパフォーマンスを向上させるには、 2 つのポートグループを使用して内部と外部のネットワークトラフィックを分離する必要があります。この推奨構成では、次のような特定の構成が環境 に推奨</p>
 </div>
@@ -1932,13 +1939,8 @@
 <div class="paragraph">
 <p>この環境では、次のように 2 つのポートグループを使用してトラフィックを設定する必要があります。</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ポートグループ 1</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">ポートグループ 1</div>
 <ul>
 <li>
 <p>内部ネットワーク（クラスタ、 RSM 、 HA-IC トラフィック）</p>
@@ -1951,14 +1953,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">ポートグループ 2</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">ポートグループ 2</div>
 <ul>
 <li>
 <p>外部ネットワーク（データトラフィックと管理トラフィック）</p>
@@ -1971,17 +1967,14 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <div class="paragraph">
-<p>2NIC 環境の詳細については、 _Deep Dive セクションを参照してください。</p>
+<p>を参照してください <a href="concept_nw_concepts_chars.html">"ネットワーキングの詳細"</a> 2NICの導入の詳細については、セクションを参照してください。</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="標準-vswitch-搭載の-4nic-ホスト">標準 vSwitch 搭載の 4NIC ホスト</h4>
+</div>
+<div class="sect1">
+<h2 id="標準-vswitch-搭載の-4nic-ホスト">標準 vSwitch 搭載の 4NIC ホスト</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>4 つの NIC 構成で ONTAP Select のパフォーマンスを向上させるには、 4 つのポートグループを使用して内部と外部のネットワークトラフィックを分離する必要があります。この推奨構成では、次のような特定の構成が環境 に推奨</p>
 </div>
@@ -2001,13 +1994,8 @@
 <div class="paragraph">
 <p>この環境では、次のように 4 つのポートグループを使用してトラフィックを設定する必要があります。</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ポートグループ 1</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">ポートグループ 1</div>
 <ul>
 <li>
 <p>内部ネットワーク（クラスタ、 RSM トラフィック）</p>
@@ -2020,14 +2008,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">ポートグループ 2</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">ポートグループ 2</div>
 <ul>
 <li>
 <p>内部ネットワーク（クラスタ、 HA-IC トラフィック）</p>
@@ -2040,14 +2022,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">ポートグループ 3</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">ポートグループ 3</div>
 <ul>
 <li>
 <p>外部ネットワーク（データトラフィックと管理トラフィック）</p>
@@ -2060,14 +2036,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">ポートグループ 4</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">ポートグループ 4</div>
 <ul>
 <li>
 <p>外部ネットワーク（データトラフィック）</p>
@@ -2080,27 +2050,20 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <div class="paragraph">
-<p>4 NIC 環境の詳細については、 _Deep Dive セクションを参照してください。</p>
+<p>を参照してください <a href="concept_nw_concepts_chars.html">"ネットワーキングの詳細"</a> 4 NICの導入の詳細については、セクションを参照してください。</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="ネットワークトラフィックの要件">ネットワークトラフィックの要件</h4>
+</div>
+<div class="sect1">
+<h2 id="ネットワークトラフィックの要件">ネットワークトラフィックの要件</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>ONTAP Select 環境のさまざまな参加者間でネットワークトラフィックが流れるように、ファイアウォールが適切に設定されていることを確認する必要があります。</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">参加者</dt>
-<dd>
+<div class="paragraph">
 <p>ONTAP Select 環境の一部としてネットワークトラフィックを交換する複数の参加者またはエンティティがあります。これらの情報が導入され、ネットワークトラフィック要件の要約概要 で使用されます。</p>
-<div class="openblock">
-<div class="content">
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -2123,14 +2086,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">ネットワークトラフィック要件の要約</dt>
-<dd>
+<div class="paragraph">
 <p>次の表に、 ONTAP Select 環境のネットワークトラフィック要件を示します。</p>
-</dd>
-</dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2188,6 +2145,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 
     </article>

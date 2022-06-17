@@ -1827,15 +1827,13 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:26:22 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 19:37:40 +0000">06/17/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>ONTAP Select では、 FAS アレイや AFF アレイとほぼ同じ Storage Efficiency オプションが提供されます。</p>
 </div>
@@ -1911,13 +1909,6 @@ Cross Volume Background Deduplication:  true</pre>
 </div>
 <div class="paragraph">
 <p>次の表に、 ONTAP Select のバージョンとメディアタイプ別に、使用可能な Storage Efficiency オプション、デフォルトで有効、またはデフォルトで無効だが推奨されている Storage Efficiency オプションをまとめます。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ONTAP Select Storage Efficiency 構成 *</p>
-</li>
-</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2032,21 +2023,21 @@ Cross Volume Background Deduplication:  true</pre>
 <div class="paragraph">
 <p>[s小 ] <mark><sup>1</sup> ONTAP Select 9.4 を DAS SSD で使用すると（ Premium ライセンスが必要）、アグリゲートレベルのバックグラウンドクロスボリュームスキャナを使用して、アグリゲート内の既存データを重複排除できます。この 1 回限りの操作は、 9.4 よりも前に作成されたボリュームに対して手動で実行します。 #[s小 ]</mark><sup>2</sup>ONTAP Select 9.3 DAS SSD 上では（ Premium ライセンスが必要）、アグリゲートレベルのバックグラウンド重複排除がサポートされます。ただし、この機能はアグリゲートの作成後に有効にする必要があります。 <mark>[s小 ]</mark><sup>3</sup>3^ONTAP Select 9.5 デフォルトで、 Storage Efficiency ポリシーはサポートさSingle Instance Data Logging （ SIDL ）の詳細については、 vNAS のセクションを参照してください。 #[size] #<sup>4</sup>ONTAP Select 9.6 では、新しいライセンス（ Premium XL ）と新しい VM サイズ（大規模）がサポートされます。ただし、大規模な VM は、ソフトウェア RAID を使用する DAS 構成でのみサポートされます。現行リリースの大規模な ONTAP Select VM では、ハードウェア RAID と vNAS 構成はサポートされていません。 #</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="das-ssd-構成のアップグレード動作に関する注意事項">DAS SSD 構成のアップグレード動作に関する注意事項</h4>
 <div class="paragraph">
 <p>ONTAP Select 9.5 以降にアップグレードした後は 'system node upgrade-revert show コマンドでアップグレードが完了したことが示されるまで待ってから ' 既存のボリュームのストレージ効率の値を確認します</p>
 </div>
 <div class="paragraph">
 <p>ONTAP Select 9.5 以降にアップグレードしたシステムでは、既存のアグリゲートまたは新たに作成したアグリゲートに作成された新しいボリュームは、新規の導入時に作成されたボリュームと同じ動作を行います。ONTAP Select コードのアップグレードを実行する既存のボリュームには、新たに作成したボリュームとほとんど同じ Storage Efficiency ポリシーが適用されますが、いくつかのバリエーションがあります。</p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">シナリオ 1</dt>
+<dd>
+<p>アップグレード前に、ボリュームのStorage Efficiencyポリシーが有効になっていない場合：</p>
+<div class="openblock">
+<div class="content">
 <div class="ulist">
 <ul>
-<li>
-<p>シナリオ 1 * アップグレード前にボリュームでストレージ効率化ポリシーが有効になっていない場合：</p>
-</li>
 <li>
 <p>「 space guarantee = volume 」のボリュームでは、インラインデータコンパクション、アグリゲートインライン重複排除、およびアグリゲートバックグラウンド重複排除は有効になりません。これらのオプションは、アップグレード後に有効にできます。</p>
 </li>
@@ -2056,9 +2047,18 @@ Cross Volume Background Deduplication:  true</pre>
 <li>
 <p>既存のボリュームの Storage Efficiency ポリシーは、アップグレード後に auto に設定されます。</p>
 </li>
-<li>
-<p>シナリオ 2 * アップグレード前に、ボリュームの Storage Efficiency がすでに有効になっている場合：</p>
-</li>
+</ul>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">シナリオ 2</dt>
+<dd>
+<p>アップグレード前に、ボリュームのStorage Efficiencyがすでに有効になっている場合：</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
 <li>
 <p>アップグレード後に 'space guarantee = volume が指定されたボリュームに違いはありません</p>
 </li>
@@ -2074,11 +2074,12 @@ Cross Volume Background Deduplication:  true</pre>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="das-hdd-構成のアップグレード動作に関する注意事項">DAS HDD 構成のアップグレード動作に関する注意事項</h4>
+</div>
+</dd>
+</dl>
+</div>
 <div class="paragraph">
 <p>アップグレード前に有効にした Storage Efficiency 機能は、 ONTAP Select 9.5 以降へのアップグレード後も保持されます。アップグレード前に Storage Efficiency が有効になっていなかった場合は、アップグレード後も Storage Efficiency は有効になりません。</p>
-</div>
 </div>
 
     </article>
