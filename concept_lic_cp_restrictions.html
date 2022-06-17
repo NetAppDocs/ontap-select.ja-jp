@@ -1827,61 +1827,36 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:26:22 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 11:35:36 +0000">06/17/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>容量プールライセンスモデルを使用する場合の制限事項を次に示します。</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="クラスタごとに統一されたライセンスモデル">クラスタごとに統一されたライセンスモデル</h3>
 <div class="paragraph">
 <p>1 つの ONTAP Select クラスタ内のすべてのノードで、同じライセンスモデル、つまり容量階層または容量プールを使用する必要があります。1 つのクラスタ内で複数のノードのライセンスタイプを混在させることはできません。</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="クラスタ内のすべてのノードが同じ-license-manager-インスタンスを使用します">クラスタ内のすべてのノードが同じ License Manager インスタンスを使用します</h3>
 <div class="paragraph">
 <p>ONTAP Select クラスタ内の容量プールライセンスを持つすべてのノードは、同じ License Manager インスタンスを使用する必要があります。各 Deploy インスタンスには 1 つの License Manager インスタンスが存在するため、この制限は、クラスタ内のすべてのノードを同じ Deploy インスタンスで管理する必要があるという既存の要件を再定義したものです。</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="ノードごとに-1-つの容量プール">ノードごとに 1 つの容量プール</h3>
 <div class="paragraph">
 <p>各ノードは、 1 つの容量プールからのみストレージをリースできます。1 つのノードで複数のプールを使用することはできません。</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="ha-ペアのノードに同じプール">HA ペアのノードに同じプール</h3>
 <div class="paragraph">
 <p>単一の HA ペアの両方のノードは、同じ容量プールからストレージをリースする必要があります。ただし、同じクラスタ内の異なる HA ペアは、同じ License Manager で管理されている異なるプールからストレージをリースできます。</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="ストレージライセンスの期間">ストレージライセンスの期間</h3>
 <div class="paragraph">
 <p>ネットアップからストレージライセンスを取得するときは、ライセンス期間を選択する必要があります。たとえば、ライセンスは 1 年間有効です。</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="データアグリゲートのリース期間">データアグリゲートのリース期間</h3>
 <div class="paragraph">
 <p>ONTAP Select ノードがデータアグリゲートのストレージリースを要求すると、 License Manager は容量プールの設定に基づいて、特定の期間のリースを提供します。各プールのリース期間は、 1 時間から 7 日の間で設定できます。デフォルトのリース期間は 24 時間です。</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="deploy-に割り当てられた静的-ip-アドレス">Deploy に割り当てられた静的 IP アドレス</h3>
 <div class="paragraph">
 <p>容量プールのライセンスを使用する場合は、 Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。</p>
-</div>
 </div>
 
     </article>

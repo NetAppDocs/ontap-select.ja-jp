@@ -1827,7 +1827,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:26:22 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 11:35:36 +0000">06/17/2022</time>
     
   
 
@@ -1841,14 +1841,17 @@
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="ハイパーバイザーホストと-ontap-select-ノードです">ハイパーバイザーホストと ONTAP Select ノードです</h5>
+<div class="sect1">
+<h2 id="ハイパーバイザーホストと-ontap-select-ノードです">ハイパーバイザーホストと ONTAP Select ノードです</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>a_hypervisor host_ は、 ONTAP Select 仮想マシンをホストするコアハードウェアプラットフォームです。ONTAP Select 仮想マシンを導入してハイパーバイザーホストでアクティブにすると、その仮想マシンは _ ONTAP Select node_name とみなされます。Deploy REST API のバージョン 3 では、ホストオブジェクトとノードオブジェクトは別々になります。これにより、 1 つ以上の ONTAP Select ノードを同じハイパーバイザーホストで実行できる 1 対多の関係が実現します。</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="オブジェクト-id">オブジェクト ID</h5>
+</div>
+<div class="sect1">
+<h2 id="オブジェクト-id">オブジェクト ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>各リソースインスタンスまたはオブジェクトには、作成時に一意の識別子が割り当てられます。これらの識別子は、 ONTAP Select Deploy の特定のインスタンス内でグローバルに一意です。新しいオブジェクトインスタンスを作成する API 呼び出しを発行すると、関連付けられた ID 値が HTTP 応答の「 location 」ヘッダーの呼び出し元に返されます。リソースインスタンスを以降の呼び出しで参照する際には、この識別子を抽出して使用できます。</p>
 </div>
@@ -1865,14 +1868,18 @@
 </table>
 </div>
 </div>
-<div class="sect4">
-<h5 id="要求-id">要求 ID</h5>
+</div>
+<div class="sect1">
+<h2 id="要求-id">要求 ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>成功したすべての API 要求には、一意の識別子が割り当てられます。識別子は、関連する HTTP 応答の「 request-id 」ヘッダーで返されます。要求 ID を使用すると、単一の API 要求と応答のトランザクションのアクティビティをまとめて参照できます。たとえば、要求 ID に基づいて、トランザクションのすべてのイベントメッセージを取得できます</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="同期呼び出しと非同期呼び出し">同期呼び出しと非同期呼び出し</h5>
+</div>
+<div class="sect1">
+<h2 id="同期呼び出しと非同期呼び出し">同期呼び出しと非同期呼び出し</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>サーバがクライアントから受信した HTTP 要求を実行する主な方法は 2 つあります。</p>
 </div>
@@ -1887,8 +1894,10 @@
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="長時間のジョブが完了したことを確認する">長時間のジョブが完了したことを確認する</h5>
+</div>
+<div class="sect1">
+<h2 id="長時間のジョブが完了したことを確認する">長時間のジョブが完了したことを確認する</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>通常、完了までに時間がかかる操作は、サーバでバックグラウンドタスクを使用して非同期に処理されます。Deploy REST API では、タスクを追跡し、現在の状態などの情報を提供するジョブオブジェクトによってすべてのバックグラウンドタスクがアンカーで設定されます。一意の識別子を含むジョブオブジェクトは、バックグラウンドタスクが作成されたあとの HTTP 応答で返されます。</p>
 </div>
@@ -1909,8 +1918,10 @@
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="セキュリティ">セキュリティ</h5>
+</div>
+<div class="sect1">
+<h2 id="セキュリティ">セキュリティ</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Deploy API では、次のセキュリティテクノロジを使用します。</p>
 </div>
@@ -1923,6 +1934,7 @@
 <p>HTTP 認証：すべての API トランザクションにベーシック認証が使用されます。base64 文字列のユーザ名とパスワードを含む HTTP ヘッダーがすべての要求に追加されます。</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
