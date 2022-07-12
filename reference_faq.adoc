@@ -25,9 +25,9 @@ NOTE: ONTAP Select 9.10.1以降では、新しいクラスタの作成時にKVM�
 
 一般的な質問と回答がいくつかあります。
 
-ONTAP Deploy は、 ONTAP Select クラスタの作成に使用するユーティリティです。現時点では、本番環境クラスタの作成に使用できるのは ONTAP Deploy のみです。また、 ONTAP Deploy を使用して評価用の Select クラスタを作成し、クライアントが本番環境の実際の手順をテストして文書化できるようにすることもできます。また、 ONTAP Deploy は、評価時に消費されるスペースに十分な容量を持つ適切な大容量階層ライセンスを使用して、評価用クラスタを本番環境のクラスタに変換することもできます。
+ONTAP Select Deployは、ONTAP Select クラスタの作成に使用するユーティリティです。現時点では、本番環境クラスタの作成に使用できるのはONTAP Select Deployのみです。また、ONTAP Select Deployを使用して評価用のSelectクラスタを作成し、クライアントが本番環境の実際の手順をテストして文書化できるようにすることもできます。また、ONTAP Select Deployは、評価時に消費されるスペースに十分な容量を持つ適切な大容量階層ライセンスを使用して、評価用クラスタを本番環境のクラスタに変換することもできます。
 
-ONTAP Deploy は、 ONTAP Select のイメージが格納された仮想マシンです。クラスタのインストール時に、 ONTAP Deploy はいくつかのチェックを実施して、 ONTAP Select の最小要件が満たされていることを確認します。ONTAP Deploy VM と Select クラスタは別々にアップグレードできます。
+ONTAP Select Deployは、ONTAP Select のイメージが格納された仮想マシンです。クラスタのインストール時に、ONTAP Select Deployはいくつかのチェックを実施して、ONTAP Select の最小要件が満たされていることを確認します。ONTAP Select Deploy VMとSelectクラスタは別々にアップグレードできます。
 
 FAS の ONTAP と同様に、 Perfstat ユーティリティを使用してパフォーマンスデータを収集する必要があります。コマンドの例を次に示します。
 
@@ -35,7 +35,7 @@ FAS の ONTAP と同様に、 Perfstat ユーティリティを使用してパ�
 ----
 perfstat8 –i N,m -t <sample time in minutes> --verbose --nodes=<filer IP> --diag-passwd=abcxyz --mode="cluster-mode" > <name of output file>
 ----
-.ONTAP Deploy の Swagger API ページにアクセスする方法を教えてください。
+.ONTAP Select DeployのSwagger APIページにアクセスする方法を教えてください。
 [listing]
 ----
 http://<Deploy-IP-Address/api/ui
@@ -53,7 +53,7 @@ NOTE: API v3 リリースは、以前のバージョンの API と後方互換�
 
 ライセンス、インストール、アップグレード、および復元に関するいくつかの質問と回答があります。
 
-はい。ONTAP Deploy ユーティリティは、 ONTAP Select クラスタとは別にアップグレードできます。同様に、 Select クラスタも ONTAP Deploy ユーティリティとは別にアップグレードできます。
+はい。ONTAP Select Deployユーティリティは、ONTAP Select クラスタとは別にアップグレードできます。同様に、SelectクラスタもONTAP Select Deployユーティリティとは別にアップグレードできます。
 
 はい。 Select クラスタのアップグレード手順 は FAS クラスタのアップグレードと同じですが、 ONTAP Select アップグレードバイナリは FAS のアップグレードバイナリの ONTAP とは別のダウンロードです。
 
@@ -66,7 +66,7 @@ NOTE: API v3 リリースは、以前のバージョンの API と後方互換�
 
 はい。
 
-ONTAP Deploy は、 GUI 、 CLI 、または REST API から実行できるクラスタ更新処理を使用して、次の ONTAP Select クラスタプロパティへの変更を認識します。
+ONTAP Select Deployは、GUI、CLI、またはREST APIから実行できるクラスタ更新処理を使用して、次のONTAP Select クラスタプロパティへの変更を認識します。
 
 * ネットワークの設定（ IP アドレス、 DNS 、 NTP 、ネットマスク、ゲートウェイ）
 * ONTAP Select クラスタ、ノード名、およびバージョン
@@ -79,9 +79,9 @@ ONTAP Deploy は、 GUI 、 CLI 、または REST API から実行できるク�
 
 
 
-NOTE: ONTAP Deploy VM の IP アドレスの変更はサポートされていません。
+NOTE: ONTAP Select Deploy VMのIPアドレスの変更はサポートされていません。
 
-ONTAP Deploy 2.6 にアップグレードすると、導入済みだが元の構成からは変更されていない ONTAP Select クラスタに対して、これらの変更をサポートできるようになります。つまり、上記の ONTAP Select クラスタプロパティが System Manager または vCenter を使用して変更された場合、 ONTAP Deploy 2.6 にアップグレードしても、これらの不整合は修正されません。ONTAP Deploy によって一意のメタデータが各 ONTAP Select VM に追加されるようにするには、 ONTAP Select プロパティの変更を最初にロールバックする必要があります。
+ONTAP Select Deploy 2.6にアップグレードすると、導入済みだが元の構成からは変更されていないONTAP Select クラスタに対して、これらの変更をサポートできるようになります。つまり、上記のONTAP Select クラスタプロパティがSystem ManagerまたはvCenterを使用して変更された場合、ONTAP Select Deploy 2.6にアップグレードしても、これらの不整合は修正されません。ONTAP Select Deployによって一意のメタデータが各ONTAP Select VMに追加されるようにするには、ONTAP Select プロパティの変更を最初にロールバックする必要があります。
 
 
 
@@ -89,9 +89,9 @@ ONTAP Deploy 2.6 にアップグレードすると、導入済みだが元の構
 
 ストレージに関するいくつかの質問と回答があります。
 
-はい。ONTAP Deploy は KVM または ESX にインストールできます。両方のインストール環境で、どちらのハイパーバイザーにも ONTAP Select クラスタを作成できます。
+はい。ONTAP Select DeployはKVMまたはESXにインストールできます。両方のインストール環境で、どちらのハイパーバイザーにもONTAP Select クラスタを作成できます。
 
-ESX ホストのライセンスが適切な場合は、 ESX ホストを vCenter Server で管理する必要はありません。ただし、ホストが vCenter サーバで管理されている場合は、その vCenter Server を使用するように ONTAP Deploy を設定する必要があります。つまり、 ESX ホストが vCenter Server によってアクティブに管理されている場合、 ONTAP Deploy で ESX ホストをスタンドアロンとして設定することはできません。ONTAP Deploy VM は、 vMotion または VMware の HA イベントが原因で、 vCenter に依存して ESXi ホスト間のすべての ONTAP Select VM 移行を追跡します。
+ESX ホストのライセンスが適切な場合は、 ESX ホストを vCenter Server で管理する必要はありません。ただし、ホストがvCenterサーバで管理されている場合は、そのvCenter Serverを使用するようにONTAP Select Deployを設定する必要があります。つまり、ESXホストがvCenter Serverによってアクティブに管理されている場合、ONTAP Select DeployでESXホストをスタンドアロンとして設定することはできません。ONTAP Select Deploy VMは、vMotionまたはVMwareのHAイベントが原因で、vCenterに依存してESXiホスト間のすべてのONTAP Select VM移行を追跡します。
 
 ONTAP Select では、ハードウェアRAIDコントローラなしでサーバを使用できます。この場合、RAID機能はソフトウェアで実装されます。ソフトウェアRAIDを使用する場合は、SSDとNVMeの両方のドライブがサポートされます。ONTAP Select ブートディスクおよびコアディスクは、引き続き仮想化されたパーティション（ストレージプールまたはデータストア）内に配置する必要があります。ONTAP Select は、 RD2 （ルート / データ / データパーティショニング）を使用して SSD をパーティショニングします。したがって、 ONTAP Select ルートパーティションは、データアグリゲートに使用される物理スピンドルと同じ上にあります。ただし、ルートアグリゲートおよびブートディスクとコア仮想ディスクは容量ライセンスには含まれません。
 
@@ -122,21 +122,21 @@ VSAN を含むすべての構成で、 ONTAP Select ノードあたり 400TB の
 
 サポートされる最大サイズを超えるデータストアにインストールする場合は、製品のセットアップ時に容量の上限を使用する必要があります。
 
-ONTAP Deploy には、 ONTAP Select ノードでの容量拡張処理をサポートするストレージ追加ワークフローが含まれています。管理下でストレージを拡張するには、同じデータストアのスペースを使用するか（使用可能なスペースが残っている場合）、別のデータストアのスペースを追加します。ローカルデータストアとリモートデータストアを同じアグリゲートに混在させることはできません。
+ONTAP Select Deployには、ONTAP Select ノードでの容量拡張処理をサポートするストレージ追加ワークフローが含まれています。管理下でストレージを拡張するには、同じデータストアのスペースを使用するか（使用可能なスペースが残っている場合）、別のデータストアのスペースを追加します。ローカルデータストアとリモートデータストアを同じアグリゲートに混在させることはできません。
 
 ストレージの追加はソフトウェア RAID もサポートします。ただし、ソフトウェア RAID の場合は、 ONTAP Select VM に物理ドライブを追加する必要があります。この場合のストレージ追加は、 FAS または AFF アレイの管理と似ています。ソフトウェア RAID を使用して ONTAP Select ノードにストレージを追加する場合は、 RAID グループのサイズとドライブサイズを考慮する必要があります。
 
-ONTAP Deploy および ONTAP Select for ESX では、 VSAN または外付けアレイタイプのデータストアをストレージプールに使用する ONTAP Select シングルノードクラスタの構成をサポートしています。
+ONTAP Select DeployおよびONTAP Select for ESXでは、VSANまたは外付けアレイタイプのデータストアをストレージプールに使用するONTAP Select シングルノードクラスタの構成をサポートしています。
 
-ONTAP Deploy および ONTAP Select for KVM では、外部アレイで共有論理ストレージプールタイプを使用する ONTAP Select シングルノードクラスタの設定がサポートされます。ストレージプールのベースには iSCSI と FC / FCoE があります。それ以外のタイプのストレージプールはサポートされません。
+ONTAP Select DeployおよびONTAP Select for KVMでは、外部アレイで共有論理ストレージプールタイプを使用するONTAP Select シングルノードクラスタの設定がサポートされます。ストレージプールのベースには iSCSI と FC / FCoE があります。それ以外のタイプのストレージプールはサポートされません。
 
 共有ストレージ上のマルチノード HA クラスタがサポートされます。
 
 外付けストレージ（マルチノード VNAS ）を使用するマルチノードクラスタは、 ESX と KVM の両方でサポートされます。同じクラスタ内にハイパーバイザーを混在させることはサポートされていません。共有ストレージ上の HA アーキテクチャは、 HA ペア内の各ノードにパートナーデータのミラーコピーがあることを意味します。ただし、マルチノードクラスタを使用すると、 ONTAP HA または KVM Live Motion を使用するシングルノードクラスタに比べて、のノンストップオペレーションのメリットが得られます。
 
-ONTAP Deploy は同じホスト上の複数の ONTAP Select VM のサポートを追加しますが、クラスタの作成時にこれらのインスタンスを同じ ONTAP Select クラスタに含めることはできません。ESX 環境については、 VMware HA が同じ ONTAP Select クラスタから 1 つの ESX ホストに複数の ONTAP Select VM を移行しないように、 VM の非アフィニティルールを作成することを推奨します。さらに、 ONTAP Deploy は、管理（ユーザが開始） vMotion または ONTAP Select VM のライブマイグレーションが検出された場合、 2 つの ONTAP Select ノードが同じ物理ホストで終了するなどのネットアップのベストプラクティスに違反したとみなされます。 ONTAP Deploy は、 Deploy の GUI およびログにアラートを送信します。ONTAP Deploy が ONTAP Select VM の場所を認識する唯一の方法は、クラスタ更新処理によってです。これは、 ONTAP Deploy 管理者が手動で実行する必要がある処理です。プロアクティブな監視を可能にする ONTAP Deploy には機能がなく、 Deploy の GUI またはログにのみアラートが表示されます。つまり、このアラートを集中型の監視インフラストラクチャに転送することはできません。
+ONTAP Select Deployは同じホスト上の複数のONTAP Select VMのサポートを追加しますが、クラスタの作成時にこれらのインスタンスを同じONTAP Select クラスタに含めることはできません。ESX 環境については、 VMware HA が同じ ONTAP Select クラスタから 1 つの ESX ホストに複数の ONTAP Select VM を移行しないように、 VM の非アフィニティルールを作成することを推奨します。さらに、ONTAP Select Deployは、管理（ユーザが開始）vMotionまたはONTAP Select VMのライブマイグレーションが検出された場合、2つのONTAP Select ノードが同じ物理ホストで終了するなどのネットアップのベストプラクティスに違反したとみなされます。 ONTAP Select Deployは、DeployのGUIおよびログにアラートを送信します。ONTAP Select DeployがONTAP Select VMの場所を認識する唯一の方法は、クラスタ更新処理によってです。これは、ONTAP Select Deploy管理者が手動で実行する必要がある処理です。プロアクティブな監視を可能にするONTAP Select Deployには機能がなく、DeployのGUIまたはログにのみアラートが表示されます。つまり、このアラートを集中型の監視インフラストラクチャに転送することはできません。
 
-NSX と V の VXLAN ポートグループがサポートされます。マルチノード HA （ ONTAP MetroCluster SDS を含む）の場合は、 VXLAN のオーバーヘッドに対応するために、内部ネットワーク MTU を（ 9000 ではなく） 7500 ～ 8900 の範囲で設定する必要があります。内部ネットワーク MTU は、クラスタの導入時に ONTAP Deploy で設定できます。
+NSX と V の VXLAN ポートグループがサポートされます。マルチノード HA （ ONTAP MetroCluster SDS を含む）の場合は、 VXLAN のオーバーヘッドに対応するために、内部ネットワーク MTU を（ 9000 ではなく） 7500 ～ 8900 の範囲で設定する必要があります。内部ネットワークMTUは、クラスタの導入時にONTAP Select Deployで設定できます。
 
 外部アレイストレージプールで実行される ONTAP Select VM は、 virsh ライブマイグレーションをサポートします。
 
@@ -156,28 +156,28 @@ CLVM および Pacemaker （ PC ）コンポーネントは、ライブマイグ
 
 VMware vCenterに関するいくつかの質問と回答があります。
 
-ONTAP Deploy は、 VMware VIX API を使用して vCenter や ESX ホストと通信します。VMware のドキュメントでは、 vCenter Server または ESX ホストへの初期接続には、 TCP ポート 443 上の HTTPS/SOAP を使用します。これは、 TLS / SSL を介したセキュア HTTP のポートです。次に、 ESX ホストへの接続が TCP ポート 902 のソケットで開かれます。この接続を経由するデータは SSL で暗号化されます。また、 ONTAP Deploy は ping コマンドを発行して、指定した IP アドレスで応答する ESX ホストがあることを確認します。
+ONTAP Select Deployは、VMware VIX APIを使用してvCenterやESXホストと通信します。VMware のドキュメントでは、 vCenter Server または ESX ホストへの初期接続には、 TCP ポート 443 上の HTTPS/SOAP を使用します。これは、 TLS / SSL を介したセキュア HTTP のポートです。次に、 ESX ホストへの接続が TCP ポート 902 のソケットで開かれます。この接続を経由するデータは SSL で暗号化されます。また、ONTAP Select Deployはpingコマンドを発行して、指定したIPアドレスで応答するESXホストがあることを確認します。
 
-ONTAP Deploy は、次のように ONTAP Select ノードおよびクラスタ管理 IP アドレスと通信できる必要もあります。
+ONTAP Select Deployは、次のようにONTAP Select ノードおよびクラスタ管理IPアドレスと通信できる必要もあります。
 
 * Ping
 * SSH （ポート 22 ）
 * SSL （ポート 443 ）
 
 
-2 ノードクラスタの場合、 ONTAP Deploy はクラスタのメールボックスをホストします。各 ONTAP Select ノードは、 iSCSI （ポート 3260 ）を使用して ONTAP Deploy にアクセスできる必要があります。
+2ノードクラスタの場合、ONTAP Select Deployはクラスタのメールボックスをホストします。各ONTAP Select ノードは、iSCSI（ポート3260）を使用してONTAP Select Deployにアクセスできる必要があります。
 
 マルチノードクラスタの場合、内部ネットワークを完全に開く必要があります（ NAT やファイアウォールは使用しない）。
 
 必要な vCenter 権限の一覧については、以下を参照してください。 link:reference_plan_ots_vcenter.html["VMware vCenter サーバ"]。
 
-vCenter Server の ONTAP Deploy 機能を ONTAP Deploy プラグインと統合することができます。このプラグインは、 ONTAP Deploy に代わるものではありません。代わりに、 ONTAP Deploy はバックグラウンドで動作します。 vCenter 管理者は、 ONTAP Deploy のほとんどの機能をプラグインで呼び出すことができます。一部の ONTAP Deploy 処理は CLI でのみ実行できます。
+vCenter ServerのONTAP Select Deploy機能をONTAP Select Deployプラグインと統合することができます。このプラグインは、ONTAP Select Deployに代わるものではありません。代わりに、ONTAP Select Deployはバックグラウンドで動作します。vCenter管理者は、ONTAP Select Deployのほとんどの機能をプラグインで呼び出すことができます。一部のONTAP Select Deploy処理はCLIでのみ実行できます。
 
-特定の vCenter サーバにプラグインを登録できる ONTAP Deploy VM は 1 台だけです。
+特定のvCenterサーバにプラグインを登録できるONTAP Select Deploy VMは1台だけです。
 
 vCenter の管理者および IT ジェネラリストは、 vCenter HTML5 GUI を使用して ONTAP Select クラスタを作成できます。Flash vCenter GUI はサポートされていません。
 
-また、 ONTAP Deploy が vCenter RBAC を認証に使用できるようにします。ONTAP Deploy プラグインを使用するための vCenter 権限が付与されたユーザには、そのユーザの vCenter アカウントが ONTAP Deploy 管理ユーザにマッピングされている。ONTAP Deploy はすべての処理のユーザ ID をログに記録し、次のファイルを基本的な監査ログとして使用できます。
+また、ONTAP Select DeployがvCenter RBACを認証に使用できるようにします。ONTAP Select Deployプラグインを使用するためのvCenter権限が付与されたユーザには、そのユーザのvCenterアカウントがONTAP Select Deploy管理ユーザにマッピングされている。ONTAP Select Deployはすべての処理のユーザIDをログに記録し、次のファイルを基本的な監査ログとして使用できます。
 
 [listing]
 ----
@@ -189,7 +189,7 @@ nginx_access.log
 
 HAペアとクラスタに関するいくつかの質問と回答があります。
 
-ONTAP Deploy VM が主にクラスタの作成に使用される 4 ノード、 6 ノード、および 8 ノードクラスタとは異なり、 2 ノードクラスタは、 HA クォーラム用に ONTAP Deploy VM を継続的に利用します。ONTAP Deploy VM が使用できない場合、フェイルオーバーサービスは無効になります。
+ONTAP Select Deploy VMが主にクラスタの作成に使用される4ノード、6ノード、および8ノードクラスタとは異なり、2ノードクラスタは、HAクォーラム用にONTAP Select Deploy VMを継続的に利用します。ONTAP Select Deploy VMが使用できない場合、フェイルオーバーサービスは無効になります。
 
 MetroCluster SDS は、ネットアップの MetroCluster ビジネス継続性ソリューションのカテゴリに分類される、低コストの同期レプリケーションオプションです。FAS ハイブリッドフラッシュ、 AFF 、クラウド向け NetApp Private Storage 、および NetApp FlexArray ® テクノロジで利用できる NetApp MetroCluster とは異なり、 ONTAP Select でのみ利用できます。
 
@@ -211,15 +211,15 @@ ONTAP MetroCluster SDS は、あらゆるタイプのストレージ構成（ DA
 
 要件は次のとおりです。
 
-* 3 つのデータセンター（ ONTAP Deploy メディエーター用に 1 つ、ノードごとに 1 つ）。
+* 3つのデータセンター（ONTAP Select Deployメディエーター用に1つ、ノードごとに1つ）。
 * 5 ミリ秒 RTT と 5 ミリ秒ジッタ。 ONTAP Select ノード間の最大合計 10 ミリ秒と最大物理距離 10 ミリ秒です。
-* ONTAP Deploy メディエーターと各 ONTAP Select ノードの間で 125 ミリ秒 RTT 、最小帯域幅 5Mbps
+* ONTAP Select Deployメディエーターと各ONTAP Select ノードの間で125ミリ秒RTT、最小帯域幅5Mbps
 * Premium または Premium XL ライセンス。
 
 
 VSAN データストアまたは外付けアレイデータストア（ vNAS 環境）上で実行される ONTAP Select VM は、 vMotion 、 DRS 、 VMware HA 機能をサポートします。
 
-Storage vMotion は、シングルノードおよびマルチノードの ONTAP Select クラスタと ONTAP Deploy VM を含むすべての構成でサポートされます。Storage vMotion を使用して、 ONTAP Select または ONTAP Deploy VM を異なる VMFS バージョン（ VMFS 5 から VMFS 6 など）間で移行できますが、このユースケースに限定されません。Storage vMotion 処理を開始する前に VM をシャットダウンすることを推奨します。ONTAP Deploy は、 Storage vMotion 処理の完了後に次の処理を問題 する必要があります。
+Storage vMotionは、シングルノードおよびマルチノードのONTAP Select クラスタとONTAP Select Deploy VMを含むすべての構成でサポートされます。Storage vMotionを使用して、ONTAP Select またはONTAP Select Deploy VMを異なるVMFSバージョン（VMFS 5からVMFS 6など）間で移行できますが、このユースケースに限定されません。Storage vMotion 処理を開始する前に VM をシャットダウンすることを推奨します。ONTAP Select Deployは、Storage vMotion処理の完了後に次の処理を問題 する必要があります。
 
 [listing]
 ----
@@ -237,14 +237,14 @@ HA トラフィックを別の物理インフラに分離することで、 Sele
 
 メディエーターサービスに関するいくつかの質問と回答があります。
 
-2 ノードクラスタでは、 ONTAP Deploy VM で HA クォーラムが継続的に利用されます。2 ノードの HA クォーラムネゴシエーションに参加する ONTAP Deploy VM には、メディエーター VM というラベルが付けられます。
+2ノードクラスタでは、ONTAP Select Deploy VMでHAクォーラムが継続的に利用されます。2ノードのHAクォーラムネゴシエーションに参加するONTAP Select Deploy VMには、メディエーターVMというラベルが付けられます。
 
-はい。2 ノード HA ペアのメディエーターとして機能する ONTAP Deploy は、 500ms RTT の WAN レイテンシをサポートします。最小帯域幅は 5Mbps です。
+はい。2ノードHAペアのメディエーターとして機能するONTAP Select Deployは、500ms RTTのWANレイテンシをサポートします。最小帯域幅は5Mbpsです。
 
-メディエータートラフィックは iSCSI で、 ONTAP Select ノードの管理 IP アドレスから始まり、 ONTAP Deploy の IP アドレスで終端します。2 ノードクラスタを使用している場合、 ONTAP Select ノード管理 IP アドレスに IPv6 を使用することはできません。
+メディエータートラフィックはiSCSIで、ONTAP Select ノードの管理IPアドレスから始まり、ONTAP Select DeployのIPアドレスで終端します。2 ノードクラスタを使用している場合、 ONTAP Select ノード管理 IP アドレスに IPv6 を使用することはできません。
 
-はい。各 ONTAP Deploy VM は、最大 100 個の 2 ノード ONTAP Select クラスタの共通のメディエーターサービスとして機能できます。
+はい。各ONTAP Select Deploy VMは、最大100個の2ノードONTAP Select クラスタの共通のメディエーターサービスとして機能できます。
 
-はい。別の ONTAP Deploy VM を使用してメディエーターサービスをホストすることができます。
+はい。別のONTAP Select Deploy VMを使用してメディエーターサービスをホストすることができます。
 
 ストレッチ HA 導入モデルでは、メディエーターを備えた 2 ノードクラスタのみがサポートされます。
