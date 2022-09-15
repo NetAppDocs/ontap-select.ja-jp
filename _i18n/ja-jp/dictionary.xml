@@ -687,8 +687,6 @@
   <block id="f249bf8d9e4b8c7b417b66fb9c6c3c90" category="list-text">システムディスクのコアダンプ、ブート / NVRAM 、メディエーターなどに、専用の LUN に基づく LVM ストレージプールまたはデータストアを使用する必要があります。</block>
   <block id="98188cc87f947a659e62ebdc6dab134c" category="paragraph">KVM にインストールするときは、単一のボンドと単一のブリッジを使用する必要があります。物理ポートが 2 つまたは 4 つあるホストでは、すべてのポートを同じボンドに含める必要があります。</block>
   <block id="56bf9f6724c0961bfe3efdd9a5936afd" category="paragraph">ハードウェア RAID コントローラを使用する場合、 ONTAP Select は、基盤となるサーバの問題をほとんど認識しません。ベストプラクティスに従ってサーバを設定する場合は、ある程度の冗長性が必要です。ドライブ障害に備えて RAID 5/6 を使用することを推奨します。ソフトウェア RAID 構成の場合、 ONTAP はディスク障害に関するアラートを発行し、スペアドライブがある場合は、ドライブのリビルドを開始します。</block>
-  <block id="908a6644c79f2bc9e82d8777e36f7cd0" category="inline-link-macro">ネットワーク構成のベストプラクティス</block>
-  <block id="a0543dd1ad93ec7f733c7d2af9d3c7fd" category="paragraph">ネットワークレイヤでの単一点障害を回避するために、 2 つ以上の物理 NIC を使用する必要があります。ネットアップでは、データポートグループ、管理ポートグループには NIC チーミングとボンディングを設定し、チームまたはボンドに 2 つ以上のアップリンクを使用することを推奨します。このような構成により、アップリンクに障害が発生した場合に、仮想スイッチは、障害が発生したアップリンクから NIC チーム内の正常なアップリンクにトラフィックを移動します。推奨されるネットワーク構成の詳細については、を参照してください <block ref="839f4923aa784429d01d1b8b212d4b5c" category="inline-link-macro-rx"></block>。</block>
   <block id="a2f6b74c2700adf79d2359dceccee7cf" category="paragraph">2 ノードクラスタまたは 4 ノードクラスタの場合、それ以外のエラーはすべて ONTAP HA で処理されます。ハイパーバイザーサーバを交換する必要があり、 ONTAP Select クラスタを新しいサーバで構成する必要がある場合は、ネットアップテクニカルサポートにお問い合わせください。</block>
   <block id="5328a869dd2ed37e5be32f4f227e54d6" category="paragraph">VSAN を含むすべての構成で、 ONTAP Select ノードあたり 400TB のストレージがサポートされます。</block>
   <block id="4906d0b814c398d1e0b3d033c584f66b" category="paragraph">サポートされる最大サイズを超えるデータストアにインストールする場合は、製品のセットアップ時に容量の上限を使用する必要があります。</block>
@@ -3568,4 +3566,6 @@
   <block id="28abf93f8fe8302ba488797b5f941425" category="paragraph">メディエータートラフィックはiSCSIで、ONTAP Select ノードの管理IPアドレスから始まり、ONTAP Select DeployのIPアドレスで終端します。2 ノードクラスタを使用している場合、 ONTAP Select ノード管理 IP アドレスに IPv6 を使用することはできません。</block>
   <block id="b39698e69e296e70cec153c53b590841" category="paragraph">はい。各ONTAP Select Deploy VMは、最大100個の2ノードONTAP Select クラスタの共通のメディエーターサービスとして機能できます。</block>
   <block id="9fb59ca6cf972183dcb06f8acae8ff15" category="paragraph">はい。別のONTAP Select Deploy VMを使用してメディエーターサービスをホストすることができます。</block>
+  <block id="4eccac51b0adbf20af102f091873b54b" category="inline-link-macro">ベストプラクティスのまとめ：ネットワーク</block>
+  <block id="8a820df1b1697eba16442acc38af08cd" category="paragraph">ネットワークレイヤでの単一点障害を回避するために、 2 つ以上の物理 NIC を使用する必要があります。ネットアップでは、データポートグループ、管理ポートグループには NIC チーミングとボンディングを設定し、チームまたはボンドに 2 つ以上のアップリンクを使用することを推奨します。このような構成により、アップリンクに障害が発生した場合に、仮想スイッチは、障害が発生したアップリンクから NIC チーム内の正常なアップリンクにトラフィックを移動します。推奨されるネットワーク構成の詳細については、を参照してください <block ref="705c0997f8d64d5d2f3905a67e67034f" category="inline-link-macro-rx"></block>。</block>
 </blocks>
