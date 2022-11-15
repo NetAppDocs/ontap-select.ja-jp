@@ -2,9 +2,10 @@
 sidebar: sidebar 
 permalink: reference_new_ots.html 
 keywords: new features 
-summary: 現在のリリースの ONTAP Select には、いくつかの新機能と変更された機能があります。 
+// summary: The current release includes several new features and improvements specific to ONTAP Select. 
+summary: 現在のリリースには、ONTAP Select 固有の新機能や機能強化は含まれていません。 
 ---
-= ONTAP Select 9.10.1 の新機能
+= このリリースの新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,31 +15,10 @@ summary: 現在のリリースの ONTAP Select には、いくつかの新機能
 
 
 [role="lead"]
-現在のリリースの ONTAP Select には、いくつかの新機能と変更された機能があります。
+現在のリリースには、ONTAP Select 固有の新機能や機能強化は含まれていません。
 
 
 
-== VMware ESXiのサポートを強化
+== ONTAP リリースノート
 
-ONTAP Select 9.11.1では、VMware ESXi 7.0 U3Cがサポートされています。
-
-
-
-== VMware NSX のサポート
-
-ONTAP Select 9.10.1 は VMware NSX -T バージョン 3.1.2 に対応しています。OVA ファイルと ONTAP Select Deploy 管理ユーティリティを使用して導入された ONTAP Select シングルノードクラスタで NSX と T を使用しても、機能の問題や不具合は発生しません。
-
-ただし、ONTAP Select マルチノードクラスタでNSXとTを使用する場合は、ONTAP Select 9.11.1の次の要件および制限事項に注意してください。
-
-ネットワーク接続チェッカー:: NSX ベースのネットワークに対して実行されると、 Deploy CLI で使用可能なネットワーク接続チェッカーが失敗します。
-
-
-
-
-== KVM ハイパーバイザーのサポートが廃止されました
-
-KVMハイパーバイザーはサポートされなくなりました。
-
-ONTAP Select 9.10.1以降のリリースでは、新しいKVMベースのクラスタを作成したり、Deployユーティリティを使用してKVMベースのホストを追加したりすることができなくなりました。また、9.10.1は、既存のKVMクラスタとホストを含む、オンライン化などの管理機能をサポートする最後のリリースとなりました。
-
-その後、ONTAP Select 9.11.1以降のリリースでは、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
+ONTAP Select は、現在のコアONTAP 製品のリリースで開発されたほとんどの新規開発機能からメリットを得ています。を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP リリースノート"^] ONTAP 9の各リリースの新機能と改善点については、を参照してください。
