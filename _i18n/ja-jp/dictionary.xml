@@ -1936,7 +1936,6 @@
   <block id="aca2fd87d8012efa91dbc6e6c912d7e7" category="summary">ONTAP Select では、 FAS アレイや AFF アレイとほぼ同じ Storage Efficiency オプションが提供されます。</block>
   <block id="6b3850335452abbd46e2f81ea011d686" category="doc">Storage Efficiency のサポート</block>
   <block id="1f111941ef490bbd54082392c8d7d5bb" category="paragraph">オールフラッシュ VSAN または汎用フラッシュアレイを使用する ONTAP Select 仮想 NAS （ vNAS ）環境は、 SSD 以外の DAS ストレージを使用する ONTAP Select のベストプラクティスに従う必要があります。</block>
-  <block id="969781b66db59786314019d03efd76a2" category="paragraph">SSD ドライブ搭載の DAS ストレージと Premium ライセンスがあれば、 AFF に似たパーソナリティが新規インストールで自動的に有効になります。</block>
   <block id="49932c189a1a728df81d679633c219ad" category="paragraph">AFF に似たパーソナリティがある場合、次のインライン SE 機能がインストール時に自動的に有効になります。</block>
   <block id="f50eca1bbe0727a0ae492a37d9a67341" category="list-text">インラインゼロパターン検出</block>
   <block id="bdf3d88111488b006ff78f64841f7388" category="list-text">ボリュームインライン重複排除</block>
@@ -1946,19 +1945,10 @@
   <block id="181a300bfda94fa49239b8a84b279718" category="list-text">アグリゲートインライン重複排除</block>
   <block id="88a926c88a9b371d22327f343c745ee5" category="list-text">アグリゲートバックグラウンド重複排除</block>
   <block id="1054ae451e201d93ff68b5fbde92dded" category="paragraph">ONTAP Select でデフォルトのすべての Storage Efficiency ポリシーが有効になっていることを確認するには、新しく作成したボリュームで次のコマンドを実行します。</block>
-  <block id="bfd3f6691384baf34cdf17419cb0e78c" category="admonition">9.4 から ONTAP Select をアップグレードする場合は、 Premium ライセンスを持つ DAS SSD ストレージに ONTAP Select 9.4 をインストールする必要があります。また、 ONTAP Deploy を使用したクラスタの初回インストール時に、 Storage Efficiency を有効にする * チェックボックスをオンにする必要があります。以前の条件が満たされていない場合に AFF に似たパーソナリティのポスト ONTAP アップグレードを有効にするには、ブート引数を手動で作成し、ノードをリブートする必要があります。詳細については、テクニカルサポートにお問い合わせください。</block>
-  <block id="3bc7377fef3090d09722c97053d94bb8" category="paragraph">次の表に、 ONTAP Select のバージョンとメディアタイプ別に、使用可能な Storage Efficiency オプション、デフォルトで有効、またはデフォルトで無効だが推奨されている Storage Efficiency オプションをまとめます。</block>
-  <block id="3a06677d57bafe5f93316fd203140cec" category="cell">ONTAP Select の機能</block>
-  <block id="4ddd372db4137397986851a36755d62b" category="cell">9.0/9.5 Premium または Premium XL^4^ （ DAS SSD ）</block>
-  <block id="99bd414e50c66dbb85a360543a8724df" category="cell">9.4^1 ^^^^9.3^2^Premium （ DAS SSD ）</block>
-  <block id="4075cc803e896778b25727ceeb07e4a7" category="cell">9.0/9.5/9.4^1 ^/9.3^2^ すべてのライセンス（ DAS HDD ）</block>
-  <block id="984fe899b528b40d37d811cdfc614800" category="cell">9.6 すべてのライセンス（ vNAS ）</block>
-  <block id="31174df2fdbdd2be052e12c615c7307f" category="cell">9.5/9.4^1 ^/9.3^2^ Premium または Standard （ VNAS ） ^3^</block>
   <block id="d0a10dc848c7f164cb7f367fc2ea6eca" category="cell">インラインゼロ検出</block>
   <block id="7aae22088072740b827e9f671e64d38c" category="cell">○（デフォルト）</block>
   <block id="97206f3375e25c7ad628adbd0ede2481" category="cell">○：ボリューム単位でユーザが有効化</block>
   <block id="aa7f77e663b832d5b0e544c5511e680c" category="cell">サポート対象外</block>
-  <block id="649f2af3727e1d3e6b8443c426591936" category="cell">○（推奨、ユーザがボリューム単位で有効化</block>
   <block id="2d25c72c1b18e562f6654fff8e11711e" category="cell">使用できません</block>
   <block id="8c2a1d946295997fcc7ffd5ff081383e" category="cell">32K のインライン圧縮（二次圧縮）</block>
   <block id="0ee764ea898e833d7247cd7c2bff2bb6" category="cell">○：ボリューム単位でユーザが有効化</block>
@@ -1968,12 +1958,7 @@
   <block id="6535e9c5f49b7cb87395689e840b7921" category="cell">圧縮スキャナ</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">はい。</block>
   <block id="c63eff507592c9cb40454ec64c57e654" category="cell">コンパクションスキャナ</block>
-  <block id="e723e4513197f2aa8ae3faf74f9b455b" category="cell">○（推奨）：スペースギャランティが none の状態でボリューム単位でユーザが有効化</block>
   <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">該当なし</block>
-  <block id="b155b6b4f561bbefa57bcbe381aa7293" category="cell">○（推奨）</block>
-  <block id="f3bd89de8243a3f6af6ddfd8f57c51d2" category="paragraph">[s小 ] #^1^ ONTAP Select 9.4 を DAS SSD で使用すると（ Premium ライセンスが必要）、アグリゲートレベルのバックグラウンドクロスボリュームスキャナを使用して、アグリゲート内の既存データを重複排除できます。この 1 回限りの操作は、 9.4 よりも前に作成されたボリュームに対して手動で実行します。 #[s小 ]#^2^ONTAP Select 9.3 DAS SSD 上では（ Premium ライセンスが必要）、アグリゲートレベルのバックグラウンド重複排除がサポートされます。ただし、この機能はアグリゲートの作成後に有効にする必要があります。 #[s小 ]#^3^3^ONTAP Select 9.5 デフォルトで、 Storage Efficiency ポリシーはサポートさSingle Instance Data Logging （ SIDL ）の詳細については、 vNAS のセクションを参照してください。 #[size] #^4^ONTAP Select 9.6 では、新しいライセンス（ Premium XL ）と新しい VM サイズ（大規模）がサポートされます。ただし、大規模な VM は、ソフトウェア RAID を使用する DAS 構成でのみサポートされます。現行リリースの大規模な ONTAP Select VM では、ハードウェア RAID と vNAS 構成はサポートされていません。 #</block>
-  <block id="2bb65eec7b863bd298a37f91f01bc93b" category="paragraph">ONTAP Select 9.5 以降にアップグレードした後は 'system node upgrade-revert show コマンドでアップグレードが完了したことが示されるまで待ってから ' 既存のボリュームのストレージ効率の値を確認します</block>
-  <block id="deed1cb925849f0f3e45d21a73322805" category="paragraph">ONTAP Select 9.5 以降にアップグレードしたシステムでは、既存のアグリゲートまたは新たに作成したアグリゲートに作成された新しいボリュームは、新規の導入時に作成されたボリュームと同じ動作を行います。ONTAP Select コードのアップグレードを実行する既存のボリュームには、新たに作成したボリュームとほとんど同じ Storage Efficiency ポリシーが適用されますが、いくつかのバリエーションがあります。</block>
   <block id="29a9d0505777c34dba7f61853452be5d" category="list-text">「 space guarantee = volume 」のボリュームでは、インラインデータコンパクション、アグリゲートインライン重複排除、およびアグリゲートバックグラウンド重複排除は有効になりません。これらのオプションは、アップグレード後に有効にできます。</block>
   <block id="35fbb1bb20290d891a137d1fcbd0e239" category="list-text">'space guarantee =none' のボリュームでは ' バックグラウンド圧縮が有効になっていませんこのオプションは、アップグレード後に有効にできます。</block>
   <block id="1dee9382dee8939942474aa4d9a34277" category="list-text">既存のボリュームの Storage Efficiency ポリシーは、アップグレード後に auto に設定されます。</block>
@@ -1981,7 +1966,6 @@
   <block id="ef178eb460204113beba1cbd28432807" category="list-text">'space guarantee =none' のボリュームでは、アグリゲートバックグラウンド重複排除がオンになっています。</block>
   <block id="3779f0db6c726f0073ea96bd58344c7c" category="list-text">「 storage policy inline-only 」が指定されたボリュームのポリシーは auto に設定されています。</block>
   <block id="f32e9c7c29189d660541b511be781cbb" category="list-text">ユーザ定義のストレージ効率化ポリシーが設定されたボリュームは、「スペースギャランティ = none 」が設定されたボリュームを除き、ポリシーに変更はありません。このボリュームでは、アグリゲートバックグラウンド重複排除が有効になっています</block>
-  <block id="d0b68a1323470e4c9310c26b4ee1c585" category="paragraph">アップグレード前に有効にした Storage Efficiency 機能は、 ONTAP Select 9.5 以降へのアップグレード後も保持されます。アップグレード前に Storage Efficiency が有効になっていなかった場合は、アップグレード後も Storage Efficiency は有効になりません。</block>
   <block id="827fe6014df4dcd93529a1c8e73f3c37" category="summary">Deploy のオンラインドキュメントページを使用する前に、いくつかの点に注意する必要があります。</block>
   <block id="150a67adb932e1a6edc3581e48ffcd17" category="doc">ブラウザから API にアクセスする前に</block>
   <block id="9fd0cd7fbfcb835011bb94274ec501c7" category="section-title">導入計画</block>
@@ -3559,4 +3543,17 @@
   <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">このリリースの新機能</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="section-title">ONTAP リリースノート</block>
   <block id="ee7c32e022645197b08ad79344b7cea5" category="paragraph">ONTAP Select は、現在のコアONTAP 製品のリリースで開発されたほとんどの新規開発機能からメリットを得ています。を参照してください<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> ONTAP 9の各リリースの新機能と改善点については、を参照してください。</block>
+  <block id="abdc6cb968cabcf935a49935cb3457a8" category="paragraph">オールフラッシュVSANまたは汎用フラッシュアレイを使用するONTAP Select 仮想NAS（vNAS）環境は、SSD以外の直接接続ストレージ（DAS）を使用するONTAP Select のベストプラクティスに従う必要があります。</block>
+  <block id="56d7a71de46feea406be8535cec9562b" category="paragraph">SSDドライブ搭載のDASストレージとプレミアムライセンスがあれば、新しいインストールでAFFに似たパーソナリティが自動的に有効になります。</block>
+  <block id="c9f8761a361c6711a9ed57ab4856d50e" category="admonition">9.6以降からONTAP Select をアップグレードする場合は、Premiumライセンスを持つDAS SSDストレージにONTAP Select をインストールする必要があります。また、ONTAP Deployを使用したクラスタの初回インストール時に、Storage Efficiencyを有効にする*チェックボックスをオンにする必要があります。以前の条件が満たされていない場合に AFF に似たパーソナリティのポスト ONTAP アップグレードを有効にするには、ブート引数を手動で作成し、ノードをリブートする必要があります。詳細については、テクニカルサポートにお問い合わせください。</block>
+  <block id="351b67a1c9ed30f55beb4efb9008c75e" category="inline-link">TR-4517</block>
+  <block id="57d9bfd04afc415045de434b6511e231" category="paragraph">次の表に、メディアタイプとソフトウェアライセンスに応じた、使用可能なStorage Efficiencyオプション、デフォルトで有効、またはデフォルトで無効だが推奨されているStorage Efficiencyオプションを示します。次の表に、環境 ONTAP Select 9.6以降のリリースの情報を示します。以前のリリースについては、の「ONTAP Select Storage Efficiencyのサポート」セクションを参照してください<block ref="cb5f99da02919ecb4f37316e8fd1134a" category="inline-link-rx"></block>。</block>
+  <block id="01ff2713f71d1a077e5cd9476bafae04" category="cell">ONTAP Select の機能</block>
+  <block id="1454e3c114972f47f44938bc14cf6784" category="cell">DAS SSD（プレミアムまたはプレミアムXL ^1 ^）</block>
+  <block id="8aede28fe0ef40efaea43ec1bbfb9a33" category="cell">DAS HDD（すべてのライセンス）</block>
+  <block id="c7f594218b673d842d21f54f543fb19c" category="cell">vNAS（すべてのライセンス）</block>
+  <block id="d670b307adcbd20c75b779bb62ae10bc" category="paragraph">[size]#^1ONTAP Select 9.6では、新しいライセンス（Premium XL）と新しいVMサイズ（大規模）がサポートされます。ただし、大規模な VM は、ソフトウェア RAID を使用する DAS 構成でのみサポートされます。ハードウェアRAIDとvNAS構成は、9.6リリースの大規模なONTAP Select VMではサポートされません。#</block>
+  <block id="2b306d5ec9ffced1b4c962a0d5f78acb" category="paragraph">ONTAP Select 9.6以降にアップグレードしたら、しばらく待ちます<block ref="65c6cabf39cf5a036e1dff5fc1483802" prefix=" " category="inline-code"></block> 既存のボリュームのStorage Efficiencyの値を確認する前に、アップグレードが完了したことを示すコマンド。</block>
+  <block id="7c36dc7bcc9976cf87d97958fae57918" category="paragraph">ONTAP Select 9.6以降にアップグレードされたシステムでは、既存のアグリゲートまたは新たに作成されたアグリゲートに作成された新しいボリュームの動作は、新規の環境で作成されたボリュームと同じです。ONTAP Select コードのアップグレードを実行する既存のボリュームには、新たに作成したボリュームとほとんど同じ Storage Efficiency ポリシーが適用されますが、いくつかのバリエーションがあります。</block>
+  <block id="7e5c11f3396281e6016d7007a1a0a45c" category="paragraph">アップグレード前に有効にしたStorage Efficiency機能は、ONTAP Select 9.6以降にアップグレードしたあとも保持されます。アップグレード前に Storage Efficiency が有効になっていなかった場合は、アップグレード後も Storage Efficiency は有効になりません。</block>
 </blocks>
