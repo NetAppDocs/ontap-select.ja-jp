@@ -20,6 +20,7 @@ ONTAP Select 仮想マシンの場合、 Storage vMotion はシングルノー�
 
 image:ST_10.jpg["移動"]
 
+.作業を開始する前に
 新しいホストが ONTAP Select ノードをサポートできることを確認します。たとえば、元のホストで RAID コントローラと DAS ストレージを使用している場合は、新しいホストでも同様の構成を使用する必要があります。
 
 
@@ -45,4 +46,5 @@ image:ST_11.jpg["設定を編集します"]
 . Deploy ユーティリティのデータベースをバックアップします。
 
 
+.完了後
 Storage vMotion 操作が完了したら、 Deploy ユーティリティを使用して「 cluster refresh 」操作を実行する必要があります。「 cluster refresh 」では、 ONTAP Deploy データベースが ONTAP Select ノードの新しい場所で更新されます。

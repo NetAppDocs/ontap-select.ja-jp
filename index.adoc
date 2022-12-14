@@ -17,7 +17,7 @@ NetApp ONTAP Select は、 VMware ESXi ハイパーバイザーを実行する�
 
 
 
-== 新機能をご紹介します
+== 最新情報をご確認ください
 
 * link:reference_new_ots.html["このリリースの新機能"]
 

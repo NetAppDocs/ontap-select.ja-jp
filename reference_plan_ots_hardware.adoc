@@ -74,11 +74,13 @@ NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づ
 
 ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。
 
+.プロセッサ
 サポートされている\'83\'7dイクロプロセッサは、次のとおりです。
 
 * サーバー向けインテル Xeon プロセッサー（を参照 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["インテル Xeon プロセッサー、ウィンドウ = _ ブランク"] 詳細については、
 
 
+.イーサネット構成
 クラスタのサイズに基づいて、サポートされるイーサネット構成がいくつかあります。
 
 [cols="30,35,35"]

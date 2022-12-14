@@ -48,6 +48,7 @@ com.netapp.selectdeploy`
 . 拡張子の名前を入力し、 *InvokeMethod* をクリックします。
 
 
+.結果
 拡張子のリストからプラグインが削除されます。
 
 
@@ -56,6 +57,7 @@ com.netapp.selectdeploy`
 
 vCenter サーバで vSphere UI ディレクトリを調べて、 Deploy プラグインが見つかった場合は削除します。
 
+.作業を開始する前に
 vCenter Server での root アカウントのパスワードが必要です。vSphere MOB を使用してプラグインを削除する必要があります。
 
 .手順
@@ -86,6 +88,7 @@ rm -rf com.netapp.selectdeploy-1.0.0`
 
 
 
+.完了後
 Deploy プラグインが再起動して使用可能になるまでに数分かかることがあります。
 
 
@@ -94,6 +97,7 @@ Deploy プラグインが再起動して使用可能になるまでに数分か�
 
 vCenter Server の vSphere Client ディレクトリを調べて、見つかった場合は Deploy プラグインを削除します。Deploy プラグインは Flash を使用しませんが、プラグインの削除手順 の一部としてこのディレクトリを検証することを推奨します。
 
+.作業を開始する前に
 vCenter Server での root アカウントのパスワードが必要です。vSphere MOB を使用してプラグインを削除し、 vSphere UI ディレクトリからプラグインを削除する必要があります。
 
 .手順
@@ -124,4 +128,5 @@ rm -rf com.netapp.selectdeploy-1.0.0`
 
 
 
+.完了後
 Deploy プラグインが再起動して使用可能になるまでに数分かかることがあります。

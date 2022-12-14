@@ -21,8 +21,10 @@ ROBO 環境への ONTAP Select の導入時に使用できる設定は主に 2 �
 
 NOTE: ONTAP Select の導入時には、任意の VMware vSphere ライセンスを使用できます。
 
+.ONTAP HA 構成の ONTAP Select 2 ノードクラスタ
 ONTAP Select の 2 ノードクラスタは、 1 つの HA ペアで構成されており、 ROBO 環境に最適です。
 
+.VMware をサポートする ONTAP Select シングルノードクラスタ
 ONTAP Select シングルノードクラスタを ROBO 環境に導入できます。シングルノードには標準の HA 機能はありませんが、クラスタを導入する場合は、次のいずれかの方法でストレージを保護できます。
 
 * VMware HA を使用して外部の共有ストレージを導入

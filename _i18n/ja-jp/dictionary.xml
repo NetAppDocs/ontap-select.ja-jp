@@ -1297,7 +1297,6 @@
   <block id="ae6ece3040d8e73c3c76bc342db2a5b5" category="summary">ONTAP Select のドキュメントポータルへようこそ。</block>
   <block id="7436b418bed093768e360d32105591d2" category="doc">ONTAP Select のドキュメント</block>
   <block id="8a7497698e274b257189171d812c4134" category="paragraph">NetApp ONTAP Select は、 VMware ESXi ハイパーバイザーを実行するさまざまなコモディティハードウェアサーバに導入可能な Software-Defined Storage アプライアンスです。柔軟性と拡張性に優れたプライベートクラウドインフラの構築に必要な即応性を提供します。</block>
-  <block id="1fde0727b387439572ade83eecff4f68" category="section-title">新機能をご紹介します</block>
   <block id="93c13bfba0d6bca47835d55338a89bcb" category="section-title">製品ドキュメントをナビゲートする</block>
   <block id="fa0fa8503380df9df5c58ad57a531ff5" category="inline-link">ONTAP Select 製品ライブラリ</block>
   <block id="f24c86f59b1831aca015361d668be674" category="paragraph">ここでは、の以前のリリースでサポートされている KVM バージョンのリリースノートと製品のドキュメントを示します<block ref="39a2274ac9dcd1e1802780008f8c7665" category="inline-link-rx"></block>。</block>
@@ -3556,4 +3555,99 @@
   <block id="7c36dc7bcc9976cf87d97958fae57918" category="paragraph">ONTAP Select 9.6以降にアップグレードされたシステムでは、既存のアグリゲートまたは新たに作成されたアグリゲートに作成された新しいボリュームの動作は、新規の環境で作成されたボリュームと同じです。ONTAP Select コードのアップグレードを実行する既存のボリュームには、新たに作成したボリュームとほとんど同じ Storage Efficiency ポリシーが適用されますが、いくつかのバリエーションがあります。</block>
   <block id="7e5c11f3396281e6016d7007a1a0a45c" category="paragraph">アップグレード前に有効にしたStorage Efficiency機能は、ONTAP Select 9.6以降にアップグレードしたあとも保持されます。アップグレード前に Storage Efficiency が有効になっていなかった場合は、アップグレード後も Storage Efficiency は有効になりません。</block>
   <block id="6d7b1bef7e9e53ab5f633ac04956a24b" category="list-text"><block ref="6d7b1bef7e9e53ab5f633ac04956a24b" category="inline-link-rx"></block></block>
+  <block id="201d6cf1ba171c49bcdcb0766d20f3f9" category="paragraph-title">必要なスキルと情報</block>
+  <block id="7322a68bf06479e293387c20bf0f3e8e" category="paragraph-title">Deploy 仮想マシンをインストールします</block>
+  <block id="816d0d92458bc1f7a68303a845228dde" category="paragraph-title">ONTAP コマンドラインインターフェイス</block>
+  <block id="fe8a09bfef8f50e4e72bec1b0f9c18db" category="paragraph-title">Deploy ユーティリティ設定のバックアップの有無</block>
+  <block id="8fbcf0a0690f2df2d9b37ca23e0733f5" category="paragraph-title">Deploy 設定のバックアップのリストア</block>
+  <block id="d929d228dc7d6e05fe2b30f1a5826c49" category="paragraph-title">元の Deploy 仮想マシンの IP アドレス</block>
+  <block id="b957b13a65ee2e9c4a639a76b0b7cce7" category="paragraph-title">ストレージ容量単位のライセンス</block>
+  <block id="ed67f205040bfaf568fb57e318f22a15" category="paragraph-title">使用するリカバリ手順 の決定</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">このタスクについて</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
+  <block id="801333bc71ada3c7b40aa384a24d7978" category="paragraph-title">ネットワークの最小構成と推奨構成</block>
+  <block id="7e9f6a3ecc2e8ef83d7c15d09d7343f7" category="paragraph-title">ONTAP HA 構成の ONTAP Select 2 ノードクラスタ</block>
+  <block id="918565c2d0e9439ff8f11d84c548453a" category="paragraph-title">VMware をサポートする ONTAP Select シングルノードクラスタ</block>
+  <block id="e22b6495595f2c4ad67a830d1be05c6e" category="paragraph-title">プロセッサ</block>
+  <block id="aca8e861c6f30fe2d42d0310a387312b" category="paragraph-title">イーサネット構成</block>
+  <block id="bfa10f7c5e846fdab9228aa316c04549" category="paragraph-title">LIF</block>
+  <block id="642223473862db290604321fe2ebe763" category="paragraph-title">SVM</block>
+  <block id="d5350d8759b1ec84607e47908809058e" category="paragraph-title">アグリゲート</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="paragraph-title">の機能</block>
+  <block id="60311a7026f3d48f88b9518fc315cec6" category="paragraph-title">ターゲットとなる環境</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="paragraph-title">ライセンス</block>
+  <block id="dff5ebd3a9adcb736da925d0da3936b9" category="paragraph-title">クラスタとメディエーターサービスの場所</block>
+  <block id="c56f96d077c10fb4c4d1ce83cf5edfaa" category="paragraph-title">Deploy に割り当てられた静的 IP アドレス</block>
+  <block id="8b85794e07760e9397de8eb59192abb9" category="paragraph-title">ONTAP Select のStorage Efficiency設定</block>
+  <block id="47228ec57373d626b6ba8033642aa844" category="paragraph-title">DAS SSD 構成のアップグレード動作に関する注意事項</block>
+  <block id="2ebe501f9076f748c335cf335b5e07aa" category="paragraph-title">DAS HDD 構成のアップグレード動作に関する注意事項</block>
+  <block id="06be3d2851694a8ac21502e41f3e4305" category="paragraph-title">クラスタごとに統一されたライセンスモデル</block>
+  <block id="4b0e422dcf415e37a99fb9240372b2e7" category="paragraph-title">クラスタ内のすべてのノードが同じ License Manager インスタンスを使用します</block>
+  <block id="02adb22963ca335394cfa32d81eb77c1" category="paragraph-title">ノードごとに 1 つの容量プール</block>
+  <block id="b738a2037fc94e2290be56df30341770" category="paragraph-title">HA ペアのノードに同じプール</block>
+  <block id="affb254e2447d7a107f972ff759efbb0" category="paragraph-title">ストレージライセンスの期間</block>
+  <block id="231c03420ee8b0ab0994fb02ab1e1c01" category="paragraph-title">データアグリゲートのリース期間</block>
+  <block id="492e5546e60705134bff8d7f80511a8d" category="section-title">最新情報をご確認ください</block>
+  <block id="510a8cb711495bfdd04c792d2fc4b0fe" category="paragraph-title">参加者</block>
+  <block id="4bf581a821f13c0335aed161abdd6607" category="paragraph-title">ネットワークトラフィック要件の要約</block>
+  <block id="711926301465cde3461f5fc265229189" category="paragraph-title">ONTAP Select DeployとONTAP Select の違いは何ですか。</block>
+  <block id="2cafb84adddb7f33d640fbedf4b9e1ed" category="paragraph-title">ONTAP Select でパフォーマンス問題 のトラブルシューティングを行うにはどうすればよいですか。</block>
+  <block id="2a07e658b19b1a46502dcaa156304d77" category="paragraph-title">ONTAP Select VM は、 VMware またはその他のサードパーティのスナップショットを使用してバックアップできますか。</block>
+  <block id="9b837fd67d580207d87f58b37e1fefed" category="paragraph-title">この FAQ に記載されていない質問について、どこで明確にしていますか。</block>
+  <block id="676e5b6258c8aedd468f71142c59be64" category="paragraph-title">ONTAP Select とONTAP Select Deployは別 々 にアップグレードできますか。</block>
+  <block id="ab7351a7aeb835a8c5a54bc22957dc89" category="paragraph-title">FAS クラスタと同じ手順 を使用して ONTAP Select をアップグレードできますか。</block>
+  <block id="a16c0a0ef72a1eb743acb4bc099a7f63" category="paragraph-title">FAS クラスタと同じ手順 を使用して ONTAP Select をリバートできますか。</block>
+  <block id="6c934076f6916c570e1e192badaff0f6" category="paragraph-title">ONTAP MetroCluster SDS には、 Premium ライセンス以上が必要ですか？</block>
+  <block id="d2ff884cc30a8e5431e7b9a592afafd4" category="paragraph-title">ONTAP Select DeployおよびONTAP Select クラスタとノードの管理のIPアドレスをインストール後に変更することはできますか。</block>
+  <block id="635eb068c84d97fe678e1459fc684023" category="paragraph-title">1つのONTAP Select DeployインスタンスでESXとKVMの両方にクラスタを作成できますか。</block>
+  <block id="e5f0aa18f251bcf3fa0e3a7d649aefb9" category="paragraph-title">ESX 上の ONTAP Select には vCenter が必要ですか。</block>
+  <block id="3690bfca39d229721656be52d6e38df1" category="paragraph-title">ソフトウェア RAID とは</block>
+  <block id="4e0891be88802b935c566dc6245269b2" category="paragraph-title">ソフトウェア RAID とハードウェア RAID 構成の違いは何ですか。</block>
+  <block id="d0093f68bddcefc4d27db886e2488615" category="paragraph-title">ONTAP Select for KVM では複数の NIC ボンドをサポートしていますか。</block>
+  <block id="baf467f7c147f366ee1e95629aa35ddb" category="paragraph-title">ハイパーバイザーホスト内の障害が発生した物理ディスクまたは NIC について、 ONTAP Select で報告またはアラートを生成する方法を教えてください。ONTAP Select はハイパーバイザーからこの情報を取得しますか、それともハイパーバイザーレベルで監視を設定する必要がありますか？</block>
+  <block id="c7b611d510bc619ec380a5444620746f" category="paragraph-title">ONTAP Select でサポートされるデータストアの最大サイズはいくつですか。</block>
+  <block id="4bb81c896f6353933a5f144d4f155bba" category="paragraph-title">ONTAP Select ノードの容量はどのようにして拡張できますか。</block>
+  <block id="5e9f8d0ad5095acd00ef1ca82d1d0612" category="paragraph-title">ONTAP Select は、 VSAN または外付けアレイタイプのデータストアをサポートしますか。</block>
+  <block id="e9939028b5812a609cc9ffa930082fba" category="paragraph-title">ONTAP Select は、 VSAN または一部の HCI スタックを含むその他の共有外付けストレージ上のマルチノードクラスタをサポートしていますか。</block>
+  <block id="8f45fcba53179b19aa4b7255218edbff" category="paragraph-title">ONTAP Select は、 VMware の NSX VXLAN をサポートしていますか。</block>
+  <block id="2b759707434dfe6525eb57ceb25c887f" category="paragraph-title">ONTAP Select は KVM のライブマイグレーションをサポートしていますか。</block>
+  <block id="ce777469b9f51fcc7f290822407d49c8" category="paragraph-title">VSAN AF に ONTAP Select Premium が必要ですか。</block>
+  <block id="8835ca2abfedf3bf3f774e0cbc020504" category="paragraph-title">サポートされている VSAN FTT / FTM 設定はどれか？</block>
+  <block id="f13bfc8565d5515f3a1d879c5ecc3e18" category="paragraph-title">複数の ONTAP Select ノードが異なる Select クラスタに属している場合、それらのノードを同じホストで実行することはできますか。</block>
+  <block id="0599d62f7e6320d42cfbeebf39e88a84" category="paragraph-title">1 つの 10GE ポートを搭載したホストで ONTAP Select を実行できますか。また、 ESX と KVM の両方に使用できますか。</block>
+  <block id="935a7d198067fd5cc94997a307675cd6" category="paragraph-title">KVM でライブマイグレーションを実行するには、どのような追加プロセスを実行する必要がありますか。</block>
+  <block id="217b7fb2555068ab584db913a7aea017" category="paragraph-title">ONTAP Select DeployはどのようにしてvCenterと通信し、どのファイアウォールポートを開く必要がありますか？</block>
+  <block id="60789e3f721edfada82e8544b0181a42" category="paragraph-title">ONTAP Select DeployでONTAP Select クラスタを作成するために必要なvCenterの権限はどれですか？</block>
+  <block id="cb5e1276bf07a1471cf95cbe7e0aacac" category="paragraph-title">vCenter Deploy プラグインとは何ですか。</block>
+  <block id="27239a2d535b7aad4fede1afbfc975ce" category="paragraph-title">プラグインを1台のvCenter Serverに登録できるONTAP Select Deploy VMの数はいくつですか。</block>
+  <block id="214da09e3e95b0ef18f3b1348583230d" category="paragraph-title">ONTAP Select Deploy vCenterプラグインのメリットは何ですか。</block>
+  <block id="b622687ba14734f3e63b4781b7e16324" category="paragraph-title">4 ノード、 6 ノード、または 8 ノードのクラスタと 2 ノードの ONTAP Select クラスタの違いは何ですか。</block>
+  <block id="22d02cab0c9108f9f86736e68a4be2de" category="paragraph-title">MetroCluster SDS とは</block>
+  <block id="5c13f1d93ecc5cc8fc37b87a8fedb3b7" category="paragraph-title">MetroCluster SDS と NetApp MetroCluster の違いは何ですか。</block>
+  <block id="1092371194caad84c750464b682a97f5" category="paragraph-title">2 ノード ONTAP Select クラスタと 2 ノード ONTAP MetroCluster SDS の違いは何ですか。</block>
+  <block id="8cfa2d102770158dc8e70d7e66b373c1" category="paragraph-title">ONTAP MetroCluster SDS にはローカルストレージ（ DAS ）が必要ですか。</block>
+  <block id="f631c65fafafcb98d092145300c095ee" category="paragraph-title">ONTAP MetroCluster SDS はソフトウェア RAID をサポートしていますか。</block>
+  <block id="d36cfdb5417305fbac63c342a62834bb" category="paragraph-title">ONTAP MetroCluster SDS は、 SSD と回転式メディアの両方をサポートしていますか。</block>
+  <block id="8b331b2a82b49d9dafa0973ccc6ec8bf" category="paragraph-title">ONTAP MetroCluster SDS では、 4 ノード以上のクラスタサイズはサポートされますか。</block>
+  <block id="2643662b1523cd419f3e1a430c3d5ca5" category="paragraph-title">ONTAP MetroCluster SDS の要件は何ですか。</block>
+  <block id="17a218f1a33ec9a62075f6e806d197be" category="paragraph-title">ONTAP Select は vMotion または VMware HA をサポートしていますか。</block>
+  <block id="32c62abec281fb2b058ef0af1f973abc" category="paragraph-title">ONTAP Select は Storage vMotion をサポートしていますか。</block>
+  <block id="d89c5456578e0bb5466c0194a63dbf13" category="paragraph-title">ONTAP Select ノード間の HA トラフィックは、異なる vSwitch 、または分離された物理ポート、あるいは ESX ホスト間のポイントツーポイント IP ケーブルを使用して実行できますか。</block>
+  <block id="02134a14eda4b0c0557ac5e897c7ad16" category="paragraph-title">メディエーターサービスとは何ですか？</block>
+  <block id="4d400d9f529e89c20ecab9cde4405a26" category="paragraph-title">メディエーターサービスはリモートで実行できますか。</block>
+  <block id="5c3d06658ad9d8eaedefa625da8a9c54" category="paragraph-title">メディエーターサービスで使用されるプロトコル</block>
+  <block id="dbeee071e162d66777e5e130dcd67249" category="paragraph-title">1 つのメディエーターサービスを複数の 2 ノード HA クラスタに使用できますか。</block>
+  <block id="ecf49f01e42124f2d85776c522feaa41" category="paragraph-title">導入後にメディエーターサービスの場所を変更することはできますか。</block>
+  <block id="40910d9d6a3231bdd6eae7aec77b73aa" category="paragraph-title">ONTAP Select では、メディエーターを使用するかどうかに関係なく、拡張されたクラスタをサポートしていますか。</block>
+  <block id="bd609b0252eeccc3bcce74e0c9234a88" category="paragraph-title">ONTAP Select クラスタごとにユーティリティの 1 つのインスタンス</block>
+  <block id="6c7ded8cf41b50f61e1af82df9af57eb" category="paragraph-title">複数の ONTAP Select クラスタにユーティリティの 1 つのインスタンスを使用する</block>
+  <block id="dfe55bfdf78bf686c853c934cacca8aa" category="paragraph-title">クレデンシャルのタイプ</block>
+  <block id="f2d299d92bba14c1b1251b504639222c" category="paragraph-title">ネットアップクライアントソフトウェア</block>
+  <block id="91aa06ef59aa905f170919b05e594df9" category="paragraph-title">使用可能な設定オプション</block>
+  <block id="42cac712a9acf93c75659c9fa981f95f" category="paragraph-title">ストレージ容量を含む購入ライセンス</block>
+  <block id="58af1c2597d085d648724676529071f9" category="paragraph-title">ハイパーバイザープラットフォーム</block>
+  <block id="ef85c9b02f4296b633e43a4931df8c2f" category="paragraph-title">ノード間のレイテンシ</block>
+  <block id="9c62f110f4b589aa5470f4d43f3a8d6a" category="paragraph-title">ONTAP Select の現在のバージョン</block>
+  <block id="72c6c134de9cf5ac97e05f3ab4e187b8" category="paragraph-title">以前のバージョンの ONTAP Select</block>
+  <block id="f331fac6e9cf90cf6a3bc3b228554302" category="paragraph-title">このタスクについて</block>
 </blocks>

@@ -22,6 +22,7 @@ ONTAP Select Deploy 管理ユーティリティをインストールし、ユー
 
 ONTAP Select パッケージは、ネットアップサポートサイトからダウンロードできます。
 
+.このタスクについて
 ONTAP Select Deploy 管理ユーティリティは、 Open Virtualization Format （ OVF ）標準に基づく仮想マシンとしてパッケージされています。単一の圧縮ファイルには 'ova' というサフィックスが付いています
 
 .手順
@@ -40,6 +41,7 @@ ONTAP Select Deploy 管理ユーティリティは、 Open Virtualization Format
 
 OVF 仮想マシンイメージを使用して、 ONTAP Select Deploy 仮想マシンをインストールおよび起動する必要があります。インストールプロセスの一環として、 DHCP または静的 IP 設定を使用するようにネットワークインターフェイスを設定する必要があります。
 
+.作業を開始する前に
 ONTAP Select Deploy 仮想マシンを導入するための準備を行う必要があります。
 
 * VMware クライアント統合プラグインのインストールまたは同様の設定を必要に応じて実行し、 OVF 機能を有効にします
@@ -56,6 +58,7 @@ ONTAP Select Deploy 仮想マシンを導入するための準備を行う必要
 * DNS 検索ドメイン
 
 
+.このタスクについて
 vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、 Deploy 仮想マシンのコンソールを使用してネットワークを設定してください。
 
 .手順
@@ -111,4 +114,5 @@ https://<ip_address>/` にアクセスします
 
 
 
+.関連情報
 link:task_cli_signing_in.html["SSH を使用した Deploy へのサインイン"]

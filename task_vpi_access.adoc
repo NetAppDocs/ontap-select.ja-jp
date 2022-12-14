@@ -11,6 +11,7 @@ summary: Deploy vCenter プラグインには、 vSphere Web Client からアク
 [role="lead"]
 Deploy vCenter プラグインには、 vSphere Web Client からアクセスできます。
 
+.作業を開始する前に
 vCenter プラグインをインストールする必要があります。また、 vSphere へのサインインに使用する vCenter アカウントには、次の権限が必要です。
 
 * ネットアップ
@@ -33,4 +34,5 @@ vCenter プラグインをインストールする必要があります。また
 . [* グローバルインベントリリスト * ] をクリックします。
 
 
+.結果
 オプション * ONTAP Select クラスタ * および * ONTAP Select Deploy * は、左側のペインで使用できます。表示されない場合は、サインアウトしてから再度サインインしてください。

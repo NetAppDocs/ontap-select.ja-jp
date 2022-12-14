@@ -102,4 +102,5 @@ NOTE: ONTAP Select イメージは、 Deploy のインスタンスに含まれ�
 ONTAP Select クラスタの導入後の管理:: ONTAP Select クラスタを導入したら、ハードウェアベースの ONTAP クラスタの場合と同様にクラスタを設定できます。たとえば、 System Manager または標準の ONTAP コマンドラインインターフェイスを使用して、 ONTAP Select クラスタを設定できます。
 
 
+.関連情報
 link:task_cli_deploy_image_add.html["ONTAP Select イメージを Deploy に追加しています"]

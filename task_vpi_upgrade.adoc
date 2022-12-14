@@ -43,6 +43,7 @@ ONTAP Select Deploy の Web ユーザインターフェイスを使用して、 
 . 必要に応じて、 vCenter クレデンシャルを入力します。
 
 
+.完了後
 プラグインを削除する場合、次のいずれかの手順を実行して vCenter Server からの削除を完了する必要があります。
 
 * vCenter Server をリブートします

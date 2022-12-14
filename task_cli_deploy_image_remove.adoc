@@ -19,6 +19,7 @@ summary: 不要になった ONTAP Select イメージは、 Deploy 管理ユー�
 
 CAUTION: クラスタで使用中の ONTAP Select イメージを削除しないでください。
 
+.このタスクについて
 クラスタで現在使用されていない、または将来のクラスタ導入で使用する予定の古い ONTAP Select イメージを削除できます。
 
 .手順
