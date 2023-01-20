@@ -184,15 +184,7 @@ sidebar:
       - title: その他のハイアベイラビリティ機能
         url: "/concept_ha_other.html"
     - title: パフォーマンス
-      entries:
-      - title: 一般的な考慮事項
-        url: "/concept_perf_general.html"
-      - title: 9.4 Premium HA 直接接続 SSD ストレージ
-        url: "/concept_perf_premium_ha_direct_ssd_94.html"
-      - title: 9.5 Premium HA 直接接続 SSD ストレージ
-        url: "/concept_perf_premium_ha_direct_ssd_95.html"
-      - title: 9.6 Premium HA 直接接続 SSD ストレージ
-        url: "/concept_perf_premium_ha_direct_ssd_96.html"
+      url: "/concept_perf_general.html"
   - title: vCenter と統合
     entries:
     - title: はじめに

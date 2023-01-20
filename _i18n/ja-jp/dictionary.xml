@@ -1,109 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="f601b21fb8e0d97eaf4f9b6866a264f6" category="summary">ONTAP Select 9.6 パフォーマンスに関するパフォーマンス情報 - HA 直接接続型のプレミアム SSD ストレージ。</block>
-  <block id="40bfcfb823eef6d953345bec6901d94b" category="doc">ONTAP Select 9.6 パフォーマンス： Premium HA 直接接続 SSD ストレージ</block>
-  <block id="2d1e1ff5065ae8a1f3c889ed2101b09c" category="paragraph">リファレンスプラットフォームのパフォーマンス情報。</block>
-  <block id="e4491605377fcc65eaedf127cb13bb15" category="section-title">リファレンス・プラットフォーム</block>
-  <block id="e4a309f15020053335305c42e7ab8866" category="paragraph">ONTAP Select 9.6 （ Premium XL ）ハードウェア（ノードあたり）</block>
-  <block id="bb0064a43bb00378129d1ac5e83e43bf" category="list-text">Fujitsu PRIMERGY RX2540 M4 ：</block>
-  <block id="9dbfeafb0252249e9084dd194033f966" category="list-text">Intel （ R ） Xeon （ R ） Gold 6142b CPU 、 2.6GHz</block>
-  <block id="1412e1f8c4d7128be7fcb48c7ef515ec" category="list-text">物理コア × 32 （ 16 × 2 ソケット）、論理コア × 64</block>
-  <block id="2907b386b6969a2dd1b7d5b358e4ef78" category="list-text">256 GB の RAM</block>
-  <block id="f47dfc5af3acf2b805371be41d3a8fb8" category="list-text">ホストあたりのドライブ数： 960GB SSD × 24</block>
-  <block id="54b588a0a73b1fd4e80bea0b52b66a5c" category="list-text">ESX 6.5U1</block>
-  <block id="2526f2963a36a530588c55a6e858c9ea" category="paragraph">クライアントハードウェア</block>
-  <block id="d70f3d88adda420e79658dc52e515383" category="list-text">NFSv3 IBM 3550m4 クライアント × 5</block>
-  <block id="8b9a96e40ebcda35ce12190b41789b64" category="paragraph">設定情報</block>
-  <block id="644583ef81af3657d263540fe36659df" category="list-text">SW RAID 1 × 9 + 2 RAID-DP （ 11 ドライブ）</block>
-  <block id="42eab3ef64ce236896a31222c04ddcb1" category="list-text">22+1 RAID-5 （ ONTAP では RAID-0 ） / RAID キャッシュ NVRAM</block>
-  <block id="417cf38711a7b90410407706cc8becb3" category="list-text">Storage Efficiency 機能（圧縮、重複排除、 Snapshot コピー、 SnapMirror など）は使用しない</block>
-  <block id="d906eb9f16fe5d1f0efd1b7177d61563" category="paragraph">次の表に、ソフトウェア RAID とハードウェア RAID を使用している ONTAP Select Premium ノードの HA ペアで、読み取り / 書き込みワークロードに対して測定されたスループットを示します。パフォーマンスの測定には、 SIO 負荷生成ツールが使用されました。</block>
-  <block id="98e524c388d1dc4bc579ff68a03fac92" category="paragraph">* ソフトウェア RAID とハードウェア RAID を搭載した DAS （ SSD ）上のシングルノード（ 4 ノードの中規模インスタンスの一部）の ONTAP Select 9.5 クラスタでのパフォーマンス結果 *</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">説明</block>
-  <block id="f85fbc2afc4c94e602061bdba197fe30" category="cell">シーケンシャルリードの 64KiB</block>
-  <block id="b744fd78ba8f25a68adbe10e05a26b83" category="cell">シーケンシャルライト 64KiB</block>
-  <block id="1a6235b566ae1675e7cad6ac984c685e" category="cell">ランダムリード 8KiB</block>
-  <block id="5b12bccfe0f07270acf93f4031d373f1" category="cell">ランダムライト 8KiB</block>
-  <block id="e78425925b16cdbe3107734a56031c80" category="cell">ランダム WR / RD （ 50 / 50 ） 8KiB</block>
-  <block id="590488d177e2d68396e9e404f0787197" category="cell">ONTAP 9.6 DAS （ SSD ）ソフトウェア RAID を使用して大規模インスタンスを選択します</block>
-  <block id="2007f3de4fd76c0e193542767d4effc7" category="cell">2171 MiBps</block>
-  <block id="886d5bb2e31ec3b29b47bde33f33ab35" category="cell">559 MiBps</block>
-  <block id="04b957821e0e9aaeddab7defcb730f2f" category="cell">954 MiBps</block>
-  <block id="33f3d2c18291e3e31d92f624e5d6fc94" category="cell">394 MiBps</block>
-  <block id="e68ffca78bd9ae750e095401b76ab77b" category="cell">564 MiBps</block>
-  <block id="895f2f67b79ae99fa3fe27377f9e4cd0" category="cell">DAS （ SSD ）ソフトウェア RAID を使用した ONTAP 9.6 Select 中規模インスタンス</block>
-  <block id="90c72b2cc73b17ddc733acde371321d3" category="cell">2090 MiBps</block>
-  <block id="53db68f311ff8fbb9f8fef66f62313e5" category="cell">592 MiBps</block>
-  <block id="7bbb1b1c0cf0b7b3631b2c01d6ddcaf3" category="cell">677 MiBps</block>
-  <block id="51a0447c2e07541855854e57a4fd6609" category="cell">335 MiBps</block>
-  <block id="276f86f46c58000ab83f7a81f3e1ac40" category="cell">441 3MiBps</block>
-  <block id="97ed077967fa6e5c5b243597455454ad" category="cell">DAS （ SSD ）ハードウェア RAID を使用した ONTAP 9.6 Select 中規模インスタンス</block>
-  <block id="6974008be6157ab7da440e5a88cd72d1" category="cell">2038 MiBps</block>
-  <block id="cb52eb73b63cc7f2910e3bfb2b2d354a" category="cell">520 MiBps</block>
-  <block id="9d7e909c3efb2e3288aa3ec2c6d24f71" category="cell">578 MiBps</block>
-  <block id="cdbbaf4862a8ab2f6b371a9be781a4cb" category="cell">325 MiBps</block>
-  <block id="a65e3663e8513b684e6d94125f4e11f5" category="cell">399 MiBps</block>
-  <block id="44607c8f3709be606339fc490a5b45c3" category="section-title">64K のシーケンシャルリード</block>
-  <block id="2babe53026309ed1bc4d26626dbaf9b3" category="paragraph">詳細：</block>
-  <block id="1c565cb1ef40fca7276174f53620ea60" category="list-text">SIO ダイレクト I/O が有効です</block>
-  <block id="47957b19a7354408ab1556b6c86baf29" category="list-text">2 ノード</block>
-  <block id="dc6520d5a009ec5f940d658ec28adabd" category="list-text">ノードあたりのデータ NIC × 2</block>
-  <block id="4bcdc16a8f6fec0919f4bfd39504533f" category="list-text">ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 8TB のソフトウェア RAID ）</block>
-  <block id="1eec63dddc28c105e19e99a28e53426c" category="list-text">SIO プロセス数 =64 、プロセスあたりのスレッド数 =1</block>
-  <block id="217f0d39a6dd36c24aa44ac1d6a1978f" category="list-text">ノードあたりのボリューム数は 32</block>
-  <block id="df5b44ae62b5b5de9a6c68ef74b8631f" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 12 、 000MB です</block>
-  <block id="6a054d687d8afaf7ec67dbc99b543066" category="section-title">64K のシーケンシャルライト</block>
-  <block id="f0d309eaf86b429045988bce455aacb3" category="list-text">ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 4TB のソフトウェア RAID ）</block>
-  <block id="af5bc1c073864156b93943dba0eb0a17" category="list-text">SIO プロセス数 =128 、プロセスあたりのスレッド数 =1</block>
-  <block id="5347890bfa18e54f63569bc0327414f2" category="list-text">ノードあたりのボリューム数 =32 （ハードウェア RAID ）、 16 （ソフトウェア RAID ）</block>
-  <block id="64e33af903cb7246c7d6049d95b81855" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 30720MB です</block>
-  <block id="f6285a044a1b4d88a9e7fb351cf9e8c1" category="section-title">8K ランダムリード</block>
-  <block id="5432662d6c3f66b86011e5482fd1b013" category="list-text">SIO プロセス数 =64 、プロセスあたりのスレッド数 =8</block>
-  <block id="5e891e0901bd4eb1cada8b221b715ae8" category="list-text">ノードあたりのボリューム数 =32</block>
-  <block id="4af562d52353844c11ed213dc9654510" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 12228MB です</block>
-  <block id="c85b30614082693f9ffcec7ecb79fb0a" category="section-title">8K のランダムライト</block>
-  <block id="c19f2ae8c94be0ce03b44a63782498a1" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 8192MB です</block>
-  <block id="c177226dbb26cef0a4f5eff0b87d5d44" category="section-title">8K ランダム書き込み 50% 読み取り</block>
-  <block id="5e9d95d213033fcb57aae50adca56cb0" category="list-text">プロセスあたりの SIO プロセス数 =64</block>
   <block id="1bef0a056722dac4fff8d9e4eb9229d3" category="summary">次のスクリプトを使用して、スクリプト内で定義されたパラメータと JSON 入力ファイルに基づいてクラスタを作成できます。</block>
   <block id="e16c906ba61aeeafbcb69e14b4357d15" category="doc">クラスタを作成するスクリプト</block>
-  <block id="1844b667aa3a3552724d4b6f25fdfee0" category="summary">ONTAP Select 9.4 パフォーマンスのパフォーマンス情報 - HA 直接接続型のプレミアム SSD ストレージ</block>
-  <block id="7e6ffef2d9e4630a693d27eee2bf092b" category="doc">ONTAP Select 9.4 パフォーマンス： Premium HA 直接接続 SSD ストレージ</block>
-  <block id="62226f401a888e5c673bd197232488a4" category="paragraph">高品質の HA 直接接続 SSD ストレージを搭載した ONTAP Select 9.4 のパフォーマンス。</block>
-  <block id="7145f73f47761ef03a9ac7fa743946ba" category="paragraph">ONTAP Select 9.4 （ Premium ）ハードウェア（ノードあたり）：</block>
-  <block id="080b55c282b18aff6acbb9b8307e45d7" category="list-text">Cisco UCS C240 M4S2 ：</block>
-  <block id="c2d47e9bc55facf5b445ed65b937324d" category="list-text">Intel Xeon CPU E5-2697 （ 2.60GHz</block>
-  <block id="4fb1dad16b1d444620c31d069252b122" category="list-text">ソケット × 2 、各ソケットに CPU × 14</block>
-  <block id="067be87059aca76ce27d2d89d383b1fe" category="list-text">論理 CPU × 56 （ HT 対応）</block>
-  <block id="3b63a934f24699a3abc944472864815f" category="list-text">256GB RAM</block>
-  <block id="433abae658dcc70d5d3761c8600f7b1f" category="list-text">VMware ESXi 6.5 の場合</block>
-  <block id="a47c0000c2a8c08808a324895ee9f307" category="list-text">ホストあたりのドライブ数： X371A NetApp 960GB SSD × 24</block>
-  <block id="89b13670b1db743f4d85d8e8f4088bcf" category="paragraph">クライアントハードウェア：</block>
-  <block id="2dfe3c2982e9fc1ac8adf6ce6b36e54c" category="list-text">NFSv3 IBM 3550m4 クライアント × 4</block>
-  <block id="2eb19baafd2ac3bf96bb137917d946fa" category="paragraph">設定情報：</block>
-  <block id="a40f55e0a537eb3307ad8510ba1e6e1b" category="list-text">クライアントと Select クラスタ間のデータパスに 1 、 500MTU</block>
-  <block id="8b72248fc750c60f5a43e996ad821fe0" category="paragraph">次の表に、 ONTAP Select Premium ノードの HA ペアで、読み取り / 書き込みワークロードに対して測定されたスループットを示します。パフォーマンスの測定には、 SIO 負荷生成ツールが使用されました。</block>
-  <block id="b6b524966f971cc1b38cf6c4eded4605" category="paragraph">* DAS （ SSD ）上のシングルノード（ 4 ノードの中規模インスタンスの一部）の ONTAP Select 9.4 クラスタでのパフォーマンス結果 *</block>
-  <block id="cfde5abdec2f5607a3796be635ad47c8" category="cell">ONTAP 9.4 DAS （ SSD ）を使用した中規模インスタンスの選択</block>
-  <block id="1f194e7c72c8d7d14fa3c4f8961be5d9" category="cell">1045MBps 16 、 712 IOPS</block>
-  <block id="28e25559b3ba528fccbc794a3d5acf26" category="cell">4016 IOPS</block>
-  <block id="cd1bc5669f6e4b437606af5e53a8b1fa" category="cell">492MBps 62 、 912 IOPS</block>
-  <block id="ece20723782dfa056ec3b55e3b24c37e" category="cell">141MBps 18 、 048 IOPS</block>
-  <block id="d75d181c83215266d40487856fd42da7" category="cell">218MBps 27 、 840 IOPS</block>
-  <block id="a3aa868c13903be73360a0ca2b15dfec" category="list-text">データ NIC × 2</block>
-  <block id="c877600127e0c10559aaef3fa6f8b340" category="list-text">データアグリゲート × 1 （ 2TB ）</block>
-  <block id="49bbe54cd8eaab8f69a8a97fa376d801" category="list-text">ボリューム × 64 、 SIO プロセス × 64 、スレッド × 64</block>
-  <block id="4a0db462fd57fced8d7681b289ec4560" category="list-text">ノードあたりのボリューム数 =32 （合計 64 ）</block>
-  <block id="de2926cc8dca4ae82290fb564b1e727a" category="list-text">ボリュームあたりの SIO プロセス数 × 1 、ファイルあたりの SIO スレッド数 × 1</block>
-  <block id="1ac3559913b9b5236f11c6f5102ad2ef" category="list-text">ボリュームあたりのファイル数 × 1 、各ファイルのサイズは 12 、 000MB です</block>
-  <block id="be480d1f91e2cdc691aa5d12fca920bc" category="list-text">データアグリゲート × 1 （ 2TB ）：</block>
-  <block id="09316e2030ac2a586bdc8b34957a3f11" category="list-text">ボリューム × 64 、 SIO プロセス × 128 、スレッド × 128</block>
-  <block id="5c976de35e9bfb7d8dfdc6bc36e9f30b" category="list-text">ボリュームあたりの SIO プロセス数 × 2 、ファイルあたりの SIO スレッド数 × 1</block>
-  <block id="e5f9abaaeb90091b0581ce38df4c2c3b" category="list-text">ボリュームあたりのファイル数 × 2 、各ファイルのサイズは 30720MB です</block>
-  <block id="f2c1316c9ccf02c81ebe9af467c06324" category="list-text">ボリュームあたりの SIO プロセス数 × 1 、ファイルあたりの SIO スレッド数 × 8</block>
-  <block id="e8a52598182d56969b5ab1ca3f51824c" category="list-text">ボリュームあたりのファイル数 × 1 、各ファイルのサイズは 12228MB です</block>
-  <block id="e5b92c2ae9138f1aed4a50d59474e5b4" category="list-text">ボリュームあたりのファイル数 × 1 、各ファイルのサイズは 8192MB です</block>
-  <block id="8199bd94478b387253fc671d5de902af" category="list-text">ボリュームあたりの SIO プロセス数 × 1 、ファイルあたりの SIO スレッド数 × 20</block>
   <block id="32ddafc35da243c0e169cfbcc318e4a2" category="summary">API ドキュメントを表示する場合や、 API 呼び出しを手動で問題 する場合は、 ONTAP Select Deploy のオンラインドキュメントページにアクセスする必要があります。</block>
   <block id="ee7f595722514d489b804241b0118bf9" category="doc">Deploy のドキュメントページにアクセスします</block>
   <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">次の情報が必要です。</block>
@@ -247,15 +146,11 @@
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">関連情報</block>
   <block id="680e9e82137091017ba19fdaa5193e04" category="list-text"><block ref="680e9e82137091017ba19fdaa5193e04" category="inline-link-macro-rx"></block></block>
   <block id="8b60e6d501896a426a20e22fc6479aec" category="summary">パフォーマンスはハードウェア構成によって異なります。</block>
-  <block id="803abb3d8fba33b629c90a24fc1585f8" category="doc">パフォーマンスに関する一般的な考慮事項</block>
-  <block id="e4169e437dafc2dac3f256dc83393811" category="paragraph">ここに記載する数値は ONTAP Select クラスタのおおまかなパフォーマンスを示しており、このパフォーマンスが保証されるわけではありません。</block>
-  <block id="8db2c1339766522ddbe10fc18f14fda4" category="paragraph">ONTAP Select クラスタのパフォーマンスは、基盤のハードウェアの特性と設定によって大きく変わる可能性があります。実際、特定の ONTAP Select インスタンスのパフォーマンスにおける最大の要因となるのは、具体的なハードウェア構成です。次に、特定の ONTAP Select インスタンスのパフォーマンスに影響する要因をいくつか示します。</block>
   <block id="5def88536d2a69b4424953a923e823a2" category="list-text">* コア周波数 * 。一般には、高い周波数を使用することを推奨します。</block>
   <block id="1f4e4fadae7f6d95c4d2c58cfac9416f" category="list-text">* シングルソケットとマルチソケット * 。ONTAP Select はマルチソケット機能を使用しませんが、マルチソケット構成を支えるためのハイパーバイザーのオーバーヘッドが、全体のパフォーマンスに対する一定の偏差の原因となります。</block>
   <block id="3e6023e5f07c1e79e542af89201e0b4a" category="list-text">* RAID カード構成および関連するハイパーバイザドライバ * 。ハイパーバイザーが提供するデフォルトのドライバを、ハードウェアベンダーのドライバに置き換えることが必要になる場合があります。</block>
   <block id="71408d9f3d3515fa8a651b1604736a6f" category="list-text">* RAID グループ内のドライブのタイプと数 * 。</block>
   <block id="f28d3f9b022a76395cd98dbce7787e03" category="list-text">* ハイパーバイザーのバージョンとパッチレベル * 。</block>
-  <block id="d98c26215b600e916c38a438cd921e98" category="paragraph">このセクションでは、特定の機能の影響を強調するために、同一のテストベッドでテストを実行した場合にのみパフォーマンス比較を行います。一般的には、ハードウェア環境を文書化し、そのプラットフォームで可能な限り最高のパフォーマンス構成を実行します。</block>
   <block id="9356992dec47ad3cff6c85c52b7d7e61" category="summary">ハードウェア RAID コントローラが使用可能な場合、 ONTAP Select は、書き込みパフォーマンスの向上と物理ドライブの障害に対する保護の両方を実現するために、 RAID サービスをハードウェアコントローラに移動できます。このため、 ONTAP Select クラスタ内のすべてのノードに対する RAID 保護は、 ONTAP ソフトウェア RAID ではなく、ローカルに接続された RAID コントローラによって実装されます。</block>
   <block id="dbadd117fcffc5e2fbcbb08c9edd1a14" category="doc">ローカル接続ストレージ向けのハードウェア RAID サービス</block>
   <block id="2414b45e14afeaaa0816f032bf126e4d" category="admonition">物理 RAID コントローラが基盤のドライブの RAID ストライピングを提供しているため、 ONTAP Select データアグリゲートは RAID 0 を使用するように設定されています。その他の RAID レベルはサポートされません。</block>
@@ -1907,30 +1802,6 @@
   <block id="c264be0843833c0497e73f18533d675d" category="list-text">長時間のポーリング要求でジョブの現在の状態を取得します</block>
   <block id="0347794109580ef0b93925c162a6a1de" category="list-text">ジョブが非終了状態（待機中、実行中）の場合は、もう一度ループを実行します。</block>
   <block id="6caaacff3c8abae5d9b2e02a5e4d0829" category="list-text">ジョブが終了状態（ success または failure ）になったら停止します。</block>
-  <block id="6d42c54012b863cd6eedcc3d403ad0c6" category="summary">ONTAP Select 9.5 のパフォーマンス - 高品質の HA 直接接続 SSD ストレージ。</block>
-  <block id="ff0e3825fd4663837f971a7ba681159f" category="doc">ONTAP Select 9.5 のパフォーマンス： Premium HA 直接接続 SSD ストレージ</block>
-  <block id="c9b1fc9101d9afb87bc8e65e52b3cdaf" category="paragraph">高品質の HA 直接接続 SSD ストレージを使用した ONTAP Select 9.5 のパフォーマンス。</block>
-  <block id="d8ae9b53271ef4ae7e463671d9edd15f" category="paragraph">ONTAP Select 9.5 （ Premium ）ハードウェア（ノードあたり）：</block>
-  <block id="da8d0349a5f6486d92d1203e4c900b69" category="list-text">Cisco UCS C240 M4SX ：</block>
-  <block id="66b56969cc3581bdd13812374d117941" category="list-text">Intel Xeon CPU E5-2620 （ 2.1GHz</block>
-  <block id="79f2a0232b06d44ab405491d76e73a16" category="list-text">ソケット × 2 、各ソケットに CPU × 16</block>
-  <block id="88f6a554563c7a608913d59040ebaf62" category="list-text">128GB の RAM</block>
-  <block id="1762c54cddae477ffccf703524615078" category="list-text">ホストあたりのドライブ数： 900GB SSD × 24</block>
-  <block id="b488012d536d61994101d21973ccb5fc" category="cell">DAS （ SSD ）ハードウェア RAID を使用した ONTAP 9.5 Select 中規模インスタンス</block>
-  <block id="f3478912bb07f7ec7c8444a5e316e819" category="cell">1 、 714 MiBps</block>
-  <block id="95017f29234ec8b67e7f06611466891b" category="cell">412MiBps</block>
-  <block id="48c28f3a705b0584dbfb937f1e189873" category="cell">391MiBps</block>
-  <block id="9dcedfb9f11c04fb8a4aaa046d530c89" category="cell">1251MiBps</block>
-  <block id="772f559bb1cae1f865b3a396cf692ddc" category="cell">309MiBps</block>
-  <block id="c91e356267219d84f0202e2d0dfbffb2" category="cell">DAS （ SSD ）ソフトウェア RAID を使用した ONTAP 9.5 Select 中規模インスタンス</block>
-  <block id="aad82c942b780f118f2cb44de2a917b2" category="cell">1,674MiBps</block>
-  <block id="c17a615d3925b4ae5b453126b17c321f" category="cell">360MiBps</block>
-  <block id="db456de05f2855d308ef49d553c921f7" category="cell">451MiBps</block>
-  <block id="6f874ec8b8b77dc7dd8d2a094888d1e3" category="cell">223MiBps</block>
-  <block id="2de50a1b7b5776ec223eb8252b6d9597" category="cell">293MiBps</block>
-  <block id="114ff4f2711841720a4f7186e6a15a6a" category="list-text">プロセスあたりのファイル数 =1 、各ファイルのサイズは 12228MB です</block>
-  <block id="1180f790e23bf2a48f8bf9f2b5e2a5d4" category="list-text">プロセスあたりのファイル数 =1 、各ファイルのサイズは 8192MB です</block>
-  <block id="e919c753c1379472f37d0b73be4c0c35" category="list-text">SIO プロセス数 =64 、プロセスあたりのスレッド数 =20</block>
   <block id="aca2fd87d8012efa91dbc6e6c912d7e7" category="summary">ONTAP Select では、 FAS アレイや AFF アレイとほぼ同じ Storage Efficiency オプションが提供されます。</block>
   <block id="6b3850335452abbd46e2f81ea011d686" category="doc">Storage Efficiency のサポート</block>
   <block id="1f111941ef490bbd54082392c8d7d5bb" category="paragraph">オールフラッシュ VSAN または汎用フラッシュアレイを使用する ONTAP Select 仮想 NAS （ vNAS ）環境は、 SSD 以外の DAS ストレージを使用する ONTAP Select のベストプラクティスに従う必要があります。</block>
@@ -3377,10 +3248,6 @@
   <block id="7590e9173880f1e9732bf635a6fdd451" category="sidebar">同期レプリケーションとミラーアグリゲート</block>
   <block id="4ad4ca6d00f55818bc64af3e5a3ec6fb" category="sidebar">その他のハイアベイラビリティ機能</block>
   <block id="9446a98ad14416153cc4d45ab8b531bf" category="sidebar">パフォーマンス</block>
-  <block id="3516c8ba7b35045de92853ce609c11f7" category="sidebar">一般的な考慮事項</block>
-  <block id="51816119234063b73e5a0a75806755ce" category="sidebar">9.4 Premium HA 直接接続 SSD ストレージ</block>
-  <block id="1bbc5edfb65abbd74567c968131d62b8" category="sidebar">9.5 Premium HA 直接接続 SSD ストレージ</block>
-  <block id="121abb38eefc2bbdbd5ecfe650e612c1" category="sidebar">9.6 Premium HA 直接接続 SSD ストレージ</block>
   <block id="cb59b87e00d11222bfd9159d0d23836f" category="sidebar">はじめに</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概要</block>
   <block id="2d242bb36ec91b32005f9296ff03a912" category="sidebar">アーキテクチャ</block>
@@ -3650,4 +3517,6 @@
   <block id="9c62f110f4b589aa5470f4d43f3a8d6a" category="paragraph-title">ONTAP Select の現在のバージョン</block>
   <block id="72c6c134de9cf5ac97e05f3ab4e187b8" category="paragraph-title">以前のバージョンの ONTAP Select</block>
   <block id="f331fac6e9cf90cf6a3bc3b228554302" category="paragraph-title">このタスクについて</block>
+  <block id="d6f9f41f5e5cb8dcf5b3ce01b74d17e5" category="paragraph">ONTAP Select クラスタのパフォーマンスは、基盤のハードウェアの特性と設定によって大きく変わる可能性があります。特定のONTAP Select インスタンスのパフォーマンスにおける最大の要因となるのは、特定のハードウェア構成です。次に、特定の ONTAP Select インスタンスのパフォーマンスに影響する要因をいくつか示します。</block>
+  <block id="589ecc96b319d521b89948044a66b27b" category="paragraph">ONTAP Select 9.4、9.5、および9.6のパフォーマンステストの詳細については、のONTAP Select Performance_Sectionを参照してください<block ref="cb5f99da02919ecb4f37316e8fd1134a" category="inline-link-rx"></block>。</block>
 </blocks>
