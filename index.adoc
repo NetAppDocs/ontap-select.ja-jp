@@ -22,9 +22,13 @@ NetApp ONTAP Select は、 VMware ESXi ハイパーバイザーを実行する�
 * link:reference_new_ots.html["このリリースの新機能"]
 
 
+[NOTE]
+====
+* ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。
+* ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
 
-NOTE: ONTAP Select 9.10.1 以降、 KVM ハイパーバイザーに新しいクラスタを導入することはできなくなりました。ONTAP Select 9.11.1以降のリリースでは、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
 
+====
 
 
 == 製品ドキュメントをナビゲートする

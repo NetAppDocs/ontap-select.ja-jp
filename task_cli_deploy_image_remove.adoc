@@ -43,7 +43,7 @@ ls -LH /opt/NetApp/images
 +
 例 rm -r /opt/NetApp/images/DataONTAPv-9.3RC1 -vidconsole-esx.ova
 
-. ONTAP Select 9.10.1 より前のリリースを使用する場合は、 KVM イメージを削除することもできます。
+. ONTAP Select 9.10.1より前のリリースを使用する場合は、KVMイメージを必要に応じて削除します。
 +
 例 rm -r /opt/NetApp/images/DataONTAPv -9.3RC1 -serialconsole-kvm.raw.tar
 

@@ -1497,7 +1497,6 @@
   <block id="bac8e85676787adaae3dcc2dd52d64fa" category="paragraph">ls -LH /opt/NetApp/images</block>
   <block id="cda33a034ba882bacd58315a77cc81b3" category="list-text">必要に応じて、 ESXi イメージを削除します。</block>
   <block id="19b0df5ac5e7fed3b93ef14a626c1330" category="paragraph">例 rm -r /opt/NetApp/images/DataONTAPv-9.3RC1 -vidconsole-esx.ova</block>
-  <block id="144e136136c9b5e30873de1afe8813d2" category="list-text">ONTAP Select 9.10.1 より前のリリースを使用する場合は、 KVM イメージを削除することもできます。</block>
   <block id="acbb93a8e2ab3c3f0b3c4adb7b2094ff" category="paragraph">例 rm -r /opt/NetApp/images/DataONTAPv -9.3RC1 -serialconsole-kvm.raw.tar</block>
   <block id="cf3870a4ea8df9ca19bca44e9ddb94ff" category="summary">ONTAP Select Deploy 管理ユーティリティのインストールを計画する際に考慮する必要のある一般的な要件がいくつかあります。</block>
   <block id="dbc858bba588a84f31510f7236fc9029" category="doc">ONTAP Select Deploy の一般的な要件と計画</block>
@@ -3289,14 +3288,9 @@
   <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="sidebar">詳細はこちらをご覧ください</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">以前のバージョン</block>
   <block id="33b6370e1de46bd324564163dfaf48a9" category="list-text">VMware ESXi 7.0 GA（ビルド15849807以降）：7.0 U1、U2、U3Cを含む</block>
-  <block id="d36f4205c301fa0311580c2426a17881" category="list-text">KVMハイパーバイザーは、VMware ESXiの代わりに使用されます（ONTAP Select 9.10.1以降で新しいクラスタを作成する際にKVMはサポートされなくなりました）。</block>
-  <block id="b25679a7bebb3b9795d3926792d8c9a9" category="paragraph">MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。KVMはONTAP Select 9.10.1以降のリリースではサポートされなくなりました。</block>
-  <block id="0ec7f2d003cb42f9464107b0ad854843" category="admonition">ONTAP Select 9.10.1以降では、新しいONTAP Select クラスタの導入時にKVMハイパーバイザーがサポートされなくなりました。以前にサポートされていたリリースでも KVM を使用できます。</block>
   <block id="9230331b34c3673c82d4b22760bb266d" category="list-text">ハイパーバイザーESXiまたはKVMに導入できます（Deployリリースによって異なります）。ESXi に導入する際、ハイパーバイザーは vCenter で管理することも、スタンドアロンホストにすることもできます。</block>
-  <block id="4a2f121824a056475165660b79eefb58" category="admonition">ONTAP Select 9.10.1以降では、新しいクラスタの作成時にKVMハイパーバイザーがサポートされなくなりました。以下の例は、 KVM をサポートする以前のリリースに該当します。</block>
   <block id="5f3026f83f6c32eec05d90d578a5e7ea" category="paragraph">を参照してください <block ref="6dd97e1bd4c3fafba8bd8a1033c5617c" category="inline-link-macro-rx"></block> クラスタを導入するための準備。Deploy の管理をインストールして初期設定（パスワード、 AutoSupport 、 vCenter ）する必要があります。</block>
   <block id="d0a2c35dd24f48a701484a2c0e0e4e2a" category="list-text">ESXとKVMでサポート（ONTAP Select 9.10.1より前）</block>
-  <block id="089ce9e252a6b5d4200f327104cdd7f6" category="admonition">ONTAP Select 9.10.1以降では、新しいクラスタの導入時にKVMハイパーバイザーがサポートされなくなりました。以前にサポートされていたリリースでも KVM を使用できます。</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select のドキュメント</block>
   <block id="88d96915de77c1959098b364119959de" category="paragraph">を参照してください <block ref="20acef5038e91881d90c1f2f38d1998f" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="d0730ff14b2f6fb53d9e49978a76660e" category="summary">ONTAP Select は、ほとんどのONTAP 機能を完全にサポートしています。ONTAP の機能の多くには、クラスタの導入時に各ノードで自動的にライセンスが付与されます。ただし、一部の機能には個別のライセンスが必要です。</block>
@@ -3397,17 +3391,13 @@
   <block id="8a820df1b1697eba16442acc38af08cd" category="paragraph">ネットワークレイヤでの単一点障害を回避するために、 2 つ以上の物理 NIC を使用する必要があります。ネットアップでは、データポートグループ、管理ポートグループには NIC チーミングとボンディングを設定し、チームまたはボンドに 2 つ以上のアップリンクを使用することを推奨します。このような構成により、アップリンクに障害が発生した場合に、仮想スイッチは、障害が発生したアップリンクから NIC チーム内の正常なアップリンクにトラフィックを移動します。推奨されるネットワーク構成の詳細については、を参照してください <block ref="705c0997f8d64d5d2f3905a67e67034f" category="inline-link-macro-rx"></block>。</block>
   <block id="bc8028393dfe2dad42a885ee42952937" category="inline-link-macro">このリリースの新機能</block>
   <block id="81f4b69f6b074a0894dc780d0c5fe22f" category="list-text"><block ref="81f4b69f6b074a0894dc780d0c5fe22f" category="inline-link-macro-rx"></block></block>
-  <block id="2648230546014b2ae69624070a44ec60" category="admonition">ONTAP Select 9.10.1 以降、 KVM ハイパーバイザーに新しいクラスタを導入することはできなくなりました。ONTAP Select 9.11.1以降のリリースでは、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。</block>
   <block id="14f3d38ecd199a3a7efaea74103df87f" category="paragraph">ONTAP Select 9.12.1は、VMware ESXiに導入できます。このサイトには、VMware ESXiで実行されているONTAP Select 9.12.1、9.11.1、9.10.1、9.9.6.1、9.8、および9.7およびハイパーバイザーに依存しないドキュメント（REST APIなど）が含まれています。</block>
   <block id="b3a281a86bd3818b168900985a901d99" category="inline-link-macro">ONTAP Select 9.12.1の注意事項</block>
   <block id="ee6f7d910b278ad714ca5e935fc4ef34" category="list-text"><block ref="ee6f7d910b278ad714ca5e935fc4ef34" category="inline-link-macro-rx"></block></block>
   <block id="f35dd9a9dbe889bc05b23cec8774b252" category="inline-link">ONTAP Select 9.12.1リリースノート</block>
   <block id="b3075927414c52e4bd4c7e822453d175" category="paragraph">にアクセスできます<block ref="3ec17b33e7ccb0ff402fc289d09bfa2b" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
-  <block id="252f0e043f3f30bf9b9641c26a9f3d25" category="admonition">ONTAP Select 9.10.1 以降、 KVM ハイパーバイザーに新しいクラスタを導入することはできなくなりました。ONTAP Select 9.11.1以降のリリースでは、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。KVMに関する質問は、KVMをサポートする以前のリリースにのみ該当します。</block>
   <block id="81884c993fa720d5bc8ac8f0f7c6dbda" category="summary">現在のリリースには、ONTAP Select 固有の新機能や機能強化は含まれていません。</block>
   <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">このリリースの新機能</block>
-  <block id="626a7cbe056796bcb1c158b143866230" category="section-title">ONTAP リリースノート</block>
-  <block id="ee7c32e022645197b08ad79344b7cea5" category="paragraph">ONTAP Select は、現在のコアONTAP 製品のリリースで開発されたほとんどの新規開発機能からメリットを得ています。を参照してください<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> ONTAP 9の各リリースの新機能と改善点については、を参照してください。</block>
   <block id="abdc6cb968cabcf935a49935cb3457a8" category="paragraph">オールフラッシュVSANまたは汎用フラッシュアレイを使用するONTAP Select 仮想NAS（vNAS）環境は、SSD以外の直接接続ストレージ（DAS）を使用するONTAP Select のベストプラクティスに従う必要があります。</block>
   <block id="56d7a71de46feea406be8535cec9562b" category="paragraph">SSDドライブ搭載のDASストレージとプレミアムライセンスがあれば、新しいインストールでAFFに似たパーソナリティが自動的に有効になります。</block>
   <block id="c9f8761a361c6711a9ed57ab4856d50e" category="admonition">9.6以降からONTAP Select をアップグレードする場合は、Premiumライセンスを持つDAS SSDストレージにONTAP Select をインストールする必要があります。また、ONTAP Deployを使用したクラスタの初回インストール時に、Storage Efficiencyを有効にする*チェックボックスをオンにする必要があります。以前の条件が満たされていない場合に AFF に似たパーソナリティのポスト ONTAP アップグレードを有効にするには、ブート引数を手動で作成し、ノードをリブートする必要があります。詳細については、テクニカルサポートにお問い合わせください。</block>
@@ -3519,4 +3509,46 @@
   <block id="f331fac6e9cf90cf6a3bc3b228554302" category="paragraph-title">このタスクについて</block>
   <block id="d6f9f41f5e5cb8dcf5b3ce01b74d17e5" category="paragraph">ONTAP Select クラスタのパフォーマンスは、基盤のハードウェアの特性と設定によって大きく変わる可能性があります。特定のONTAP Select インスタンスのパフォーマンスにおける最大の要因となるのは、特定のハードウェア構成です。次に、特定の ONTAP Select インスタンスのパフォーマンスに影響する要因をいくつか示します。</block>
   <block id="589ecc96b319d521b89948044a66b27b" category="paragraph">ONTAP Select 9.4、9.5、および9.6のパフォーマンステストの詳細については、のONTAP Select Performance_Sectionを参照してください<block ref="cb5f99da02919ecb4f37316e8fd1134a" category="inline-link-rx"></block>。</block>
+  <block id="3a7c41ad2e6168ef513e210afc4be8f6" category="admonition">ONTAP Select 9.10.1以降では、新しいクラスタの導入時のKVMハイパーバイザーのサポートが廃止されました。以前にサポートされていたリリースでも KVM を使用できます。</block>
+  <block id="507f8233cb2eb908786a8439f415fee2" category="list-text">ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。</block>
+  <block id="93ffd34ce676a00f4a126c465fc48130" category="list-text">ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。</block>
+  <block id="1af8cafe7ba409845ae1075c9a509547" category="paragraph">ネットアップでは、ONTAP Select を定期的に更新して、新機能と拡張機能を提供しています</block>
+  <block id="77e5d3b8719596b41c77222a6711e69b" category="section-title">ONTAP Select 9.12.1</block>
+  <block id="05dd50ebf48db80deadf4c9a847c2ce4" category="paragraph">ONTAP Select 9.12.1は、現在のコアONTAP 製品のリリースに新しく開発されたほとんどの機能を活用しています。ONTAP Select 固有の新機能や機能強化は含まれていません。</block>
+  <block id="7802fb8cc2dd2205ca511b49141235e0" category="section-title">ONTAP Select 9.11.1</block>
+  <block id="719b97afa778e32343849808db915b66" category="paragraph">ONTAP Select 9.11.1では、いくつかの新機能と機能拡張が追加されています</block>
+  <block id="aacb1ad8ec74092a13074108a4e20c02" category="list-text">VMware ESXiのサポートを強化</block>
+  <block id="aa46a81eb495f6cb92e19c98c6d7383a" category="list-text">ONTAP Select 9.11.1では、VMware ESXi 7.0 U3Cがサポートされています。</block>
+  <block id="5986999240906508e3084d84dd2552d8" category="list-text">VMware NSX のサポート</block>
+  <block id="1092b73fb287a831beb00918cbde5b6b" category="list-text">ONTAP Select 9.10.1以降のリリースは、VMware NSX -Tバージョン3.1.2に対応しています。OVAファイルとONTAP Select Deploy管理ユーティリティを使用して導入されたONTAP Select シングルノードクラスタでNSXとTを使用しても、機能の問題や不具合は発生しません。ただし、ONTAP Select マルチノードクラスタでNSXとTを使用する場合は、ONTAP Select 9.11.1で次の制限事項に注意する必要があります。</block>
+  <block id="97ba2ef50ca50de240503a53bf0d9347" category="list-text">ネットワーク接続チェッカー</block>
+  <block id="9272e0dade1877b24e5ef4ad453f2c08" category="paragraph">NSX ベースのネットワークに対して実行されると、 Deploy CLI で使用可能なネットワーク接続チェッカーが失敗します。</block>
+  <block id="51e3f7647537ef4a51cd74ad4edcb9c6" category="list-text">KVM ハイパーバイザーのサポートが廃止されました</block>
+  <block id="d2cc16162b6d3a24dc4a4501cf469cb0" category="inline-link">販売終了通知</block>
+  <block id="5370055608d6cbcb7f0776601a776aed" category="paragraph">ネットアップでは、ONTAP Select for KVMからONTAP Select for ESXiを含む他のONTAP プラットフォームへの完全なデータ移行を計画し、実行することを強く推奨します。詳細については、を参照してください<block ref="e7f4803e65543a8054dff75dc9e1166a" category="inline-link-rx"></block></block>
+  <block id="bdcccc9d04bbc9b8540a1fbdebef3b93" category="section-title">ONTAP Select 9.10.1</block>
+  <block id="d7e7eb95caecb5dfc702a5f7d3cb0071" category="paragraph">ONTAP Select 9.10.1には、いくつかの新機能と機能強化が含まれています。</block>
+  <block id="4774053cb57a95a02a834cf823224b16" category="list-text">ONTAP Select 9.10.1 は VMware NSX -T バージョン 3.1.2 に対応しています。OVAファイルとONTAP Select Deploy管理ユーティリティを使用して導入されたONTAP Select シングルノードクラスタでNSXとTを使用しても、機能の問題や不具合は発生しません。ただし、 NSX と ONTAP Select マルチノードクラスタを併用する場合は、次の要件および制限事項に注意してください。</block>
+  <block id="ad136d3e5fb5acdd03500618ef8e1a95" category="paragraph">追加のオーバーヘッドを考慮してクラスタを導入する前に、クラスタの MTU サイズを 8800 に手動で調整する必要があります。VMware のガイダンスでは、 NSX を使用する場合に 200 バイトのバッファを使用できるようにする方法を説明しています</block>
+  <block id="be4edc608044981ff1193ab01e2a80a8" category="list-text">ネットワーク 4x10Gb 構成</block>
+  <block id="e3f9b3ee4bd0f7a9715c1acd839cb82b" category="paragraph">4 つの NIC が設定された VMware ESXi ホストに ONTAP Select を導入する場合、 Deploy ユーティリティから、 2 つの異なるポートグループに内部トラフィックを分割し、 2 つの異なるポートグループに外部トラフィックを分けるというベストプラクティスに従うように求められます。ただし、オーバーレイネットワークを使用する場合、この設定は機能しないため、推奨事項は無視してください。この場合は、内部ポートグループを 1 つと外部ポートグループを 1 つだけ使用してください。</block>
+  <block id="2380ad5ce6796e080b2fcb896e8b4d72" category="list-text">ONTAP Select 9.10.1 以降、 KVM ハイパーバイザーに新しいクラスタを導入することはできなくなりました。ただし、クラスタを以前のリリースから 9.10.1 にアップグレードしても、 Deploy ユーティリティを使用してクラスタを管理できます。</block>
+  <block id="5321c0bf4db2c41a876a8455e4fd3037" category="section-title">ONTAP Select 9.9.1</block>
+  <block id="2dc4c31981db6194573548002505f01d" category="paragraph">ONTAP Select 9.9.1では、いくつかの新機能と機能拡張が実装されています</block>
+  <block id="c92580bf4d34ad8667b38f18db6e63e5" category="list-text">プロセッサー・ファミリーのサポート</block>
+  <block id="49cffca69c2495abd2b6646948ffc778" category="list-text">ONTAP Select 9.9.2.1以降では、ONTAP Select でサポートされるのは、インテルXeon Sandy Bridge以降のCPUモデルのみです。</block>
+  <block id="5f4c6121d4f63aaa5d6daebc2a2effee" category="list-text">VMware ESXiのサポートを更新</block>
+  <block id="94f6b8f3b96f83ead9cf8f1fff27c5ba" category="list-text">VMware ESXiのサポートは、ONTAP Select 9.9..1で強化されました。次のリリースがサポートされるようになりました。</block>
+  <block id="2a75a4bfd68197cf6684d89c95157677" category="list-text">ESXi 7.0 U2</block>
+  <block id="aa3bb437d4c9050ad360819d6231b58e" category="list-text">ESXi 7.0 U1</block>
+  <block id="c4537e24714e3ee09d3a03a894db75f4" category="section-title">ONTAP Select 9.8</block>
+  <block id="00ba796063aa024015a8e3a32ba25b3d" category="paragraph">ONTAP Select 9.8には、いくつかの新機能と変更された機能が含まれています。</block>
+  <block id="db16d4c1e494c28301de7f652ab007e8" category="list-text">高速インターフェイス</block>
+  <block id="a15ac8498d522b4bdcfac7e79ef2e02f" category="list-text">高速インターフェイス機能は、25G（25GbE）と40G（40GbE）の両方にオプションを提供することで、ネットワーク接続を強化します。この速度を高速で使用する場合のパフォーマンスを最大限に高めるには、ONTAP Select のドキュメントに従ってポートマッピング設定のベストプラクティスに従う必要があります。</block>
+  <block id="420170376a4067e246c6c8ab8f967e8c" category="list-text">ONTAP Select 9.8については、VMware ESXiのサポートに関して2つの変更があります。</block>
+  <block id="9f4c0a8e21510ca1633a5494406686bc" category="list-text">ESXi 7.0がサポートされる（GAビルド15849807以降）</block>
+  <block id="75907379a71ad8ffa5e06073ace36e0d" category="list-text">ESXi 6.0はサポートされなくなりました</block>
+  <block id="34e4360ab412f7aa9e3c95f9f9415b6f" category="list-text">KVMハイパーバイザーは、VMware ESXiの代わりに使用されます</block>
+  <block id="cb8338f0bc7e868c1dca9f89ef69705a" category="paragraph">MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。</block>
+  <block id="e5a37d3922c90b1192e2c159354c1e1d" category="list-text">ONTAP Select 9.10.1より前のリリースを使用する場合は、KVMイメージを必要に応じて削除します。</block>
 </blocks>
