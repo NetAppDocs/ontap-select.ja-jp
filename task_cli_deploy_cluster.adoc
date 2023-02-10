@@ -81,7 +81,7 @@ exit
 
 
 
-== ESXi ハイパーバイザーホストの追加
+== ESXiハイパーバイザーホストの追加
 
 ONTAP Select ノードを実行する各ハイパーバイザーホストを登録する必要があります。この一部として、 Deploy 管理ユーティリティは、ホストを管理する vCenter Server への認証、または ESXi スタンドアロンホストへの直接の認証を行います。
 
@@ -104,7 +104,8 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 . ホストを登録します。
 +
 ** vCenter で管理されていないスタンドアロンホストを登録します。ホスト登録名 <fqdn|ip> ハイパーバイザータイプ esx-username esx_userName'
-** vCenter が管理するホストを登録します。ホスト登録名 <fqdn|ip> ハイパーバイザータイプ esx-mgmt -server <fqdn|ip>`
+** vCenterで管理されているホストを登録します。
+`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
 +
 例
 

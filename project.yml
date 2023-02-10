@@ -13,7 +13,11 @@ sidebar:
   - title: ONTAP Select のドキュメント
     url: "/index.html"
   - title: リリースノート
-    url: "/reference_release_notes.html"
+    entries:
+    - title: ONTAP Select リリースノート
+      url: "/reference_release_notes.html"
+    - title: 新機能
+      url: "/reference_new_ots.html"
   - title: 概念
     entries:
     - title: 製品の概要
@@ -294,6 +298,8 @@ sidebar:
       entries:
       - title: ESXi を 6.5 以降にアップグレードしています
         url: "/task_cli_upgrade_esxi65.html"
+      - title: ホスト管理サーバを変更する
+        url: "/reference_host_modify_command.html"
     - title: Deploy ユーティリティ
       entries:
       - title: Deploy インスタンスをアップグレードする

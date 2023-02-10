@@ -828,7 +828,6 @@
   <block id="433e51a365a7b38eca70ff3fb9842f4f" category="paragraph">プロンプトが表示されたら、管理者アカウントのパスワードを入力します。</block>
   <block id="8321447cfcedfbf85f936b6d5ffebfe0" category="list-text">システムのライセンスを表示して、ライセンスが正しく追加されたことを確認します。</block>
   <block id="8822a9cc146d06e4ec77936054fb11ca" category="paragraph">「 license show 」を参照してください</block>
-  <block id="ba93b2a719cfe3e8015ab3ec2eaf4774" category="section-title">ESXi ハイパーバイザーホストの追加</block>
   <block id="73f4469376ea1f5c82d6b88b4dd08c80" category="paragraph">ONTAP Select ノードを実行する各ハイパーバイザーホストを登録する必要があります。この一部として、 Deploy 管理ユーティリティは、ホストを管理する vCenter Server への認証、または ESXi スタンドアロンホストへの直接の認証を行います。</block>
   <block id="dd18331505610da0aa987b27dd5c8b25" category="paragraph">vCenter で管理されているホストを登録する前に、 vCenter Server 用の管理サーバアカウントを追加する必要があります。ホストが vCenter で管理されていない場合は、ホストを登録する際にホストのクレデンシャルを指定できます。この手順 を使用して各ホストを追加します。</block>
   <block id="c1f1fdaeb1fc7d288d9969efdd963bcc" category="list-text">管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。</block>
@@ -836,7 +835,6 @@
   <block id="12c193f5dcc3f99c7a295445ebc9b455" category="paragraph">credential add -hostname &lt;fqdn|ip&gt; -type vcenter -username vcenter _username `</block>
   <block id="c61720431284d81fa9e02425c5f95ab6" category="list-text">ホストを登録します。</block>
   <block id="05a199c9e0f61506eaad93a8dc60682f" category="list-text">vCenter で管理されていないスタンドアロンホストを登録します。ホスト登録名 &lt;fqdn|ip&gt; ハイパーバイザータイプ esx-username esx_userName'</block>
-  <block id="1c33a374a227666dbe5c62e17c001cc4" category="list-text">vCenter が管理するホストを登録します。ホスト登録名 &lt;fqdn|ip&gt; ハイパーバイザータイプ esx-mgmt -server &lt;fqdn|ip&gt;`</block>
   <block id="72d7c672225aae34bedacaaa9e067e1b" category="list-text">ホストの状態を表示し、認証済みであることを確認します。</block>
   <block id="86cc5166af9ee54f72113259fac2f069" category="paragraph">host show -name &lt;fqdn|ip&gt; -detailed ’</block>
   <block id="9654fb56bf1aee9815d9cad239ed20e6" category="section-title">ONTAP Select クラスタを作成および設定する</block>
@@ -3551,4 +3549,26 @@
   <block id="34e4360ab412f7aa9e3c95f9f9415b6f" category="list-text">KVMハイパーバイザーは、VMware ESXiの代わりに使用されます</block>
   <block id="cb8338f0bc7e868c1dca9f89ef69705a" category="paragraph">MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポートに応じて、同じ VMware ESXi ハイパーバイザーと KVM ハイパーバイザーに導入できます。</block>
   <block id="e5a37d3922c90b1192e2c159354c1e1d" category="list-text">ONTAP Select 9.10.1より前のリリースを使用する場合は、KVMイメージを必要に応じて削除します。</block>
+  <block id="7ece09332cee8602060ca18c20ce13f2" category="section-title">ESXiハイパーバイザーホストの追加</block>
+  <block id="7e2fe14c99e2697025b2031aedd0ec68" category="list-text">vCenterで管理されているホストを登録します。<block ref="06cf66b5547f9422d5a9c37b6cfb3aca" prefix=" " category="inline-code"></block></block>
+  <block id="18d733133eb14f6d577f2d278fac37a1" category="summary">このONTAP Select Deployインスタンスでホスト管理サーバを変更するには、host modifyコマンドを使用します。</block>
+  <block id="35f41fa38694b23a0654a4a8c0dd359b" category="doc">ホスト管理サーバを変更する</block>
+  <block id="88f06314571793a45376bea0a67c1684" category="paragraph">を使用できます<block ref="efefae9f89e157498d052edf2886fd00" prefix=" " category="inline-code"></block> コマンドを使用して、このONTAP Select Deployインスタンスでホスト管理サーバを変更します。</block>
+  <block id="92e9d6227d5534e7afc27a11179c808e" category="section-title">構文</block>
+  <block id="6297f303e9e12ebecef22ddbadda2695" category="paragraph"><block ref="2a5899524cd06699eb3f22670e5b5f7a" prefix="" category="inline-code"></block></block>
+  <block id="15f4c82d7b2b43e31c30dd018b800c56" category="section-title">必須パラメータ</block>
+  <block id="83f499a540b1323009c200d6f8cc9396" category="cell">パラメータ</block>
+  <block id="5a0c5f11bba8b50361398fca38743e26" category="paragraph"><block ref="d1e29f4e7c05a0d14116dced0271a083" prefix="" category="inline-code"></block></block>
+  <block id="8e6d2b7bb122ef90ab4d9499b2c875ea" category="paragraph">変更するホストのIPアドレスまたはFQDN。</block>
+  <block id="666b70d55b751021bd6bceab3555d74b" category="paragraph"><block ref="57fb45691ba5713dde99aa386c9de5c5" prefix="" category="inline-code"></block></block>
+  <block id="f265ef7fd6211a9a63635d95bcbe841d" category="paragraph">ホストに設定するホスト管理サーバのIPアドレスまたはFQDN。ホストから管理サーバの設定を解除するには、（ハイフン）を指定してください。を使用してこのホストを登録する前に、この管理サーバのクレデンシャルを追加する必要があります <block ref="c779ef963465b6edf0cdf8be183d8b9e" prefix=" " category="inline-code"></block> コマンドを実行します</block>
+  <block id="e3beee990a3abfcc54a09f5727e1ee11" category="section-title">オプションのパラメータ</block>
+  <block id="ca6c068d9b2bab12276a5adb2fa8b1c4" category="paragraph"><block ref="f599cc506e0eddc851eb7ebdb18a6143" prefix="" category="inline-code"></block></block>
+  <block id="d04f7b66a82acbcd30236e90b34f191b" category="paragraph">ヘルプメッセージを表示します。</block>
+  <block id="51409356309172bc38605699145c5125" category="paragraph"><block ref="c3e8e825367e7f94475a891a9d781ce5" prefix="" category="inline-code"></block></block>
+  <block id="90cbb6ff863c3db71ceae9fe55f8e66f" category="paragraph">このパラメータは、長時間実行するコマンドの動作を制御します。設定すると、コマンドがフォアグラウンドで実行され、処理に関連するイベントメッセージが発生したときに表示されます。</block>
+  <block id="830e3840fa2bc88cc12b99cba76ee4d3" category="paragraph"><block ref="82aa9c15f1551f89eb92d3d4b0470f4c" prefix="" category="inline-code"></block></block>
+  <block id="6766f7a2e53a40ab3efd050bec084512" category="paragraph">このホストにアクセスできるユーザ名。これは、ホストが管理サーバ（つまりvCenterで管理されるESXホスト）で管理されていない場合にのみ必要です。</block>
+  <block id="7259cd6e0f46eebf9079f25f465a8c63" category="list-text">自律型ランサムウェア防御（ARP）</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
 </blocks>
