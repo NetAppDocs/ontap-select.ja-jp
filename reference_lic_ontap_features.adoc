@@ -32,7 +32,6 @@ ONTAP Select には次の機能が含まれており、デフォルトでライ�
 * SnapVault
 * FlexClone
 * SnapRestore
-* NetApp Volume Encryption の略
 * 重複排除機能と圧縮機能
 * ONTAP のマルチテナンシー機能
 * ONTAP S3
