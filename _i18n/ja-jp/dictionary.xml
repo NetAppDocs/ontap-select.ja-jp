@@ -1677,7 +1677,6 @@
   <block id="5bc075cee240a70af54270621d93765c" category="list-text">SnapVault</block>
   <block id="a701f5d044348085ee4f97fef6636845" category="list-text">FlexClone</block>
   <block id="82ef718f4ebe0c276814ee3d51e33361" category="list-text">SnapRestore</block>
-  <block id="c4b8c29f448328e82ce27062b5fd9c28" category="list-text">NetApp Volume Encryption の略</block>
   <block id="37f51edec96ed159381e4d3d076a8787" category="list-text">重複排除機能と圧縮機能</block>
   <block id="1effda8a28add2fb64ed5a7d4d67deae" category="list-text">ONTAP のマルチテナンシー機能</block>
   <block id="f8f58e06b7004f2c9a02a8875d2bd10d" category="list-text">NetApp Volume Encryption （規制対象外の国のみ）</block>
@@ -1891,7 +1890,6 @@
   <block id="eda37297768fb66316ec0c97afd29213" category="paragraph">各ホストに 2 つの 10Gb ポートが含まれている場合は、次のように vSwitch を設定する必要があります。</block>
   <block id="a86f2765e738940e7dd8fdf6da677fd5" category="list-text">vSwitch を設定し、両方のポートを vSwitch に割り当てます。2 つのポートを使用して NIC チームを作成します。</block>
   <block id="bfb9321c8431589faff7f47c47138df7" category="list-text">ロードバランシングポリシーを「 Route based on the originating virtual port ID 」に設定します。</block>
-  <block id="4392037ca9aa84394b086d1268c59a3b" category="list-text">両方のアダプタを「 active 」としてマークします。</block>
   <block id="0cc1ebaa405436d568cee576cc2d2503" category="inline-image-macro">vSwitch のプロパティ</block>
   <block id="fee017d680804978d6f31a0149d3356f" category="list-text">「フェールバック」設定を「はい」に設定します。<block ref="f2456bc45004bdf347023d01536a2379" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0bd1bd6c1c4f8c07bba0ee34ba53b4b3" category="list-text">ジャンボフレーム（ 9000MTU ）を使用するように vSwitch を設定します。</block>
@@ -3571,4 +3569,5 @@
   <block id="6766f7a2e53a40ab3efd050bec084512" category="paragraph">このホストにアクセスできるユーザ名。これは、ホストが管理サーバ（つまりvCenterで管理されるESXホスト）で管理されていない場合にのみ必要です。</block>
   <block id="7259cd6e0f46eebf9079f25f465a8c63" category="list-text">自律型ランサムウェア防御（ARP）</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
+  <block id="8042c73ffcc0e5ec0c31ae3e4d7b414e" category="list-text">両方のアダプタを「active」としてマークするか、一方のアダプタを「active」としてマークし、もう一方を「standby」としてマークします。</block>
 </blocks>

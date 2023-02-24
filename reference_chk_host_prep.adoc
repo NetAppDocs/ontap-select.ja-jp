@@ -98,7 +98,7 @@ vSwitch は、内部ネットワークと外部ネットワークの接続のサ
 
 * vSwitch を設定し、両方のポートを vSwitch に割り当てます。2 つのポートを使用して NIC チームを作成します。
 * ロードバランシングポリシーを「 Route based on the originating virtual port ID 」に設定します。
-* 両方のアダプタを「 active 」としてマークします。
+* 両方のアダプタを「active」としてマークするか、一方のアダプタを「active」としてマークし、もう一方を「standby」としてマークします。
 * 「フェールバック」設定を「はい」に設定します。image:CHK_04.jpg["vSwitch のプロパティ"]
 * ジャンボフレーム（ 9000MTU ）を使用するように vSwitch を設定します。
 * 内部トラフィック（ ONTAP 内部）用に vSwitch 上のポートグループを設定します。
