@@ -813,7 +813,6 @@
   <block id="c423fd05ac4075cd52ed8e9ec9961c3f" category="paragraph">ソフトウェア RAID を使用する場合は、システムデータ用のストレージプールを作成し、 SSD ドライブがルートアグリゲートおよびデータアグリゲートに使用可能であることを確認する必要があります。ONTAP Select ノードの設定の一環として、ストレージプールとディスクを接続する必要があります。</block>
   <block id="d5ba525828b35ea241ddabb08b074ffd" category="section-title">使用可能な ONTAP Select バージョン</block>
   <block id="aa66e32480de432747a10957bdaa05fd" category="inline-link-macro">ONTAP Select イメージを Deploy に追加しています</block>
-  <block id="f04ce539f861b20e999ae9ca7a1a5963" category="paragraph">Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください <block ref="78d33d23ddbc660baa867877fc233dd4" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="700dafd7ca1606f2a30973a096a3f27f" category="section-title">本番環境向けに ONTAP Select のライセンスを付与する</block>
   <block id="9526942f4f0cae81c16b2f122cce2a1e" category="paragraph">本番環境に ONTAP Select クラスタを導入する前に、ストレージ容量ライセンスを購入し、関連するライセンスファイルをダウンロードする必要があります。各ノードでストレージのライセンスを取得するには、 _capacity Tier_model を使用するか、 _capacity pools_model を使用して共有プールのライセンスを設定します。</block>
   <block id="9b419acef9660c05b08074757cfef581" category="section-title">ライセンスファイルのアップロードと登録</block>
@@ -3641,4 +3640,5 @@
   <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">ONTAP Select 9.6のパフォーマンス</block>
   <block id="31ecb65d48d53f60c89a54adee2acf00" category="section-title">期限切れの容量プールライセンスの管理</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">通常、ライセンスの有効期限が切れても何も起こりません。ただし、ノードは期限切れのライセンスに関連付けられているため、別のライセンスをインストールすることはできません。ライセンスを更新するまでは、リブート処理やフェイルオーバー処理など、アグリゲートがオフラインになるような処理を行う必要があります。推奨される対処方法は、ライセンスの更新を迅速に行うことです。</block>
+  <block id="15ab075109f8f2254777d15c63f96650" category="paragraph">Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください <block ref="b1d42ed6470398387d373e3f35d8d69e" category="inline-link-macro-rx"></block> を参照してください。</block>
 </blocks>

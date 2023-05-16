@@ -25,4 +25,4 @@ ONTAP Select クラスタのパフォーマンスは、基盤のハードウェ�
 * * ハイパーバイザーのバージョンとパッチレベル * 。
 
 
-ONTAP Select 9.4、9.5、および9.6のパフォーマンステストの詳細については、のONTAP Select Performance_Sectionを参照してください https://www.netapp.com/media/10662-tr4517.pdf["TR-4517"^]。
+ONTAP Select 9.4、9.5、および9.6のパフォーマンステストの詳細については、のONTAP Select Performance_Sectionを参照してください https://["TR-4517"^]。

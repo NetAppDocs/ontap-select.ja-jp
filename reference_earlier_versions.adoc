@@ -17,5 +17,5 @@ summary: 最新バージョンを実行していない場合は、以前のリ�
 最新バージョンを実行していない場合は、以前のリリースの ONTAP Select に関するドキュメントを参照できます。以前のサポート対象リリースで KVM ハイパーバイザーを使用する場合に必要なドキュメントにアクセスすることもできます。
 
 .ONTAP Select 9.5以前
-* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293&archive=true["ONTAP Select 製品ライブラリ"^]
+* https://["ONTAP Select 製品ライブラリ"^]
 

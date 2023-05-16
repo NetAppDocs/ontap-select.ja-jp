@@ -66,7 +66,7 @@ ONTAP Select を導入する物理ハイパーバイザーホストが、いく�
 
 NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。
 
-を参照してください https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool 、ウィンドウ = _blank"] を参照してください。
+を参照してください https://["NetApp Interoperability Matrix Tool 、ウィンドウ = _blank"] を参照してください。
 
 
 

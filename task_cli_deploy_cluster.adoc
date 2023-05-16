@@ -34,7 +34,7 @@ ESXi で ONTAP Select クラスタを作成する前に、必要な準備作業�
 
 === 使用可能な ONTAP Select バージョン
 
-Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_adm_deploy_image_add.html["ONTAP Select イメージを Deploy に追加しています"] を参照してください。
+Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_cli_deploy_image_add.html["ONTAP Select イメージを Deploy に追加しています"] を参照してください。
 
 
 
