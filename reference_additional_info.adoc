@@ -22,19 +22,19 @@ ONTAP Select に関するサポートや詳細情報を確認するには、他�
 
 次の製品ページには、さまざまな ONTAP Select リソースへのリンクが記載されています。
 
-* https://["NetApp ONTAP Select の関連リソース"^]
-* https://["NetApp ONTAP Select の製品紹介ページ"^]
+* https://www.netapp.com/data-management/ontap-select/documentation["NetApp ONTAP Select の関連リソース"^]
+* https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx["NetApp ONTAP Select の製品紹介ページ"^]
 
 
 
 
 == ONTAP 9 のリソース
 
-* https://["ONTAP 9 のドキュメント"^]
+* https://docs.netapp.com/us-en/ontap/["ONTAP 9 のドキュメント"^]
 +
 ONTAP 9 のドキュメントを提供します（ CLI コマンドを除く）。
 
-* https://["ONTAP 9 ドキュメンテーション・センター"^]
+* https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 ドキュメンテーション・センター"^]
 +
 ONTAP 9 の CLI コマンドに関するドキュメントを提供します。
 
@@ -46,7 +46,7 @@ ONTAP 9 の CLI コマンドに関するドキュメントを提供します。
 
 ONTAP Select の様々な側面をカバーする blog の記事のコレクションがある。
 
-* https://["ONTAP Select に関するネットアップのブログ"^]
+* https://blog.netapp.com/tag/ontap-select/["ONTAP Select に関するネットアップのブログ"^]
 
 
 
@@ -55,7 +55,7 @@ ONTAP Select の様々な側面をカバーする blog の記事のコレクシ�
 
 他のユーザに質問をしたり、ネットアップの ONTAP Select コミュニティに投稿したりすることができます。
 
-* http://["ネットアップコミュニティ： ONTAP Select"^]
+* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select["ネットアップコミュニティ： ONTAP Select"^]
 
 
 
@@ -64,5 +64,5 @@ ONTAP Select の様々な側面をカバーする blog の記事のコレクシ�
 
 Interoperability Matrix Tool には、詳細な構成と製品サポート情報が記載されています。
 
-* https://["NetApp IMT"^]
+* https://mysupport.netapp.com/matrix/["NetApp IMT"^]
 

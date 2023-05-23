@@ -27,17 +27,17 @@ CAUTION: Deploy 管理ユーティリティを使用して、既存の ONTAP Sel
 
 . ネットアップサポートサイトのダウンロードページに移動します。
 +
-https://["ネットアップサポートのダウンロードページ"^]
+https://mysupport.netapp.com/site/downloads["ネットアップサポートのダウンロードページ"^]
 
 . ONTAP Select Node Upgrade* をクリックします。
 . 必要に応じて、すべてのプロンプトに対応した適切なアップグレードイメージを選択してダウンロードします。
 . ONTAP Select ノードをアップグレードする前に、追加情報 リリースノートおよび必要な手順を確認してください。使用しているバージョンの ONTAP Select のリリースノートは、製品ライブラリのページからアクセスできます。
 +
-https://["ONTAP Select 製品ライブラリ"^]
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 製品ライブラリ"^]
 
 . ONTAP Select アップグレードファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。
 +
-https://["ONTAP 9 のドキュメント"^]
+https://docs.netapp.com/us-en/ontap/["ONTAP 9 のドキュメント"^]
 
 
 

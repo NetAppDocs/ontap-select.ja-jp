@@ -47,7 +47,7 @@ perfstat8 –i N,m -t <sample time in minutes> --verbose --nodes=<filer IP> --di
 http://<Deploy-IP-Address/api/ui
 ----
 
-NOTE: API v3 リリースは、以前のバージョンの API と後方互換性がありません。新しい API ガイドはにあります https://["Field Portal"]。
+NOTE: API v3 リリースは、以前のバージョンの API と後方互換性がありません。新しい API ガイドはにあります https://library.netapp.com/ecm/ecm_download_file/ECMLP2845694["Field Portal"]。
 
 .ONTAP Select VM は、 VMware またはその他のサードパーティのスナップショットを使用してバックアップできますか。
 いいえONTAP Select VM は、 VMware ベースの Snapshot から除外される独立した永続的ドライブを使用します。ONTAP Select のバックアップ方法としてサポートされているのは、 SnapMirror 、 SnapVault 、または SVM DR （該当する場合）のみです。
