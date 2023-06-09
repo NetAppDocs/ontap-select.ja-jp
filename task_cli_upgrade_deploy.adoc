@@ -23,6 +23,9 @@ summary: コマンドラインインターフェイスを使用して、既存�
 アップグレード中には、 Deploy を使用して他のタスクを実行しないでください。Deploy ユーティリティのアップグレードに関する情報と制限事項については、最新のリリースノートを参照してください。
 
 
+NOTE: ONTAP Select Deploy管理ユーティリティのインスタンスがインストールされている場合は、現在のリリースへのアップグレードを検討してください。ONTAP SelectノードとONTAP Select Deployコンポーネントは個別にアップグレードされます。を参照してください link:concept_adm_upgrading_nodes.html["ONTAP Select ノードをアップグレードします"^] を参照してください。
+
+
 
 == アップグレードパッケージをダウンロードします
 
@@ -54,15 +57,13 @@ link:https://mysupport.netapp.com["ネットアップサポート"^]
 このタスクは、ファイルを Deploy 仮想マシンにアップロードする方法の 1 つです。ご使用の環境に適したその他のオプションがある場合もあります。
 
 .手順
-. ローカルワークステーション上のコマンドシェルで、 sftp ユーティリティを使用して、イメージファイルを Deploy 仮想マシンにアップロードします。
+. ローカルワークステーション上のコマンドシェルで、scpユーティリティを使用してイメージファイルをDeploy仮想マシンにアップロードします。
 +
 例
 
 +
 ....
-sftp admin@10.234.81.101 (provide password when prompted)
-put ONTAPdeploy2.12_upgrade.tar.gz
-exit
+scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
 ....
 
 
@@ -89,8 +90,7 @@ Deploy ユーティリティの仮想マシンでアップグレードファイ�
 
 +
 ....
-deploy upgrade -package-path /home/admin/
-ONTAPdeploy2.12_upgrade.tar.gz
+deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 ....
 
 

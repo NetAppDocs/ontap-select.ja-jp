@@ -1265,7 +1265,6 @@
   <block id="e1592123d1df946558bd9bf257720d21" category="paragraph">アップグレードパッケージを取得したら、ファイルを Deploy 仮想マシンにアップロードする必要があります。</block>
   <block id="d5d592c7eaf2cef1bd79103f367e703c" category="paragraph">アップグレードファイルをローカルワークステーションで使用できるようにしておく必要があります。また、管理者ユーザアカウントのパスワードが必要です。</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">このタスクは、ファイルを Deploy 仮想マシンにアップロードする方法の 1 つです。ご使用の環境に適したその他のオプションがある場合もあります。</block>
-  <block id="fc867a2c06f0b493d05e8508b022600e" category="list-text">ローカルワークステーション上のコマンドシェルで、 sftp ユーティリティを使用して、イメージファイルを Deploy 仮想マシンにアップロードします。</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">アップグレードファイルは、 admin ユーザのホームディレクトリに格納されます。</block>
   <block id="cff2646f28c605bf4435cf5b8260a4e7" category="section-title">アップグレードパッケージを適用しています</block>
   <block id="baa4f96e18f8e9fced4eec3f5a81a23a" category="paragraph">アップグレードファイルが Deploy 仮想マシンにアップロードされたら、アップグレードを適用できます。</block>
@@ -3641,4 +3640,6 @@
   <block id="31ecb65d48d53f60c89a54adee2acf00" category="section-title">期限切れの容量プールライセンスの管理</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">通常、ライセンスの有効期限が切れても何も起こりません。ただし、ノードは期限切れのライセンスに関連付けられているため、別のライセンスをインストールすることはできません。ライセンスを更新するまでは、リブート処理やフェイルオーバー処理など、アグリゲートがオフラインになるような処理を行う必要があります。推奨される対処方法は、ライセンスの更新を迅速に行うことです。</block>
   <block id="15ab075109f8f2254777d15c63f96650" category="paragraph">Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください <block ref="b1d42ed6470398387d373e3f35d8d69e" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="f39da9a3a7ab30031d6c4133fff101c1" category="admonition">ONTAP Select Deploy管理ユーティリティのインスタンスがインストールされている場合は、現在のリリースへのアップグレードを検討してください。ONTAP SelectノードとONTAP Select Deployコンポーネントは個別にアップグレードされます。を参照してください <block ref="4c9e70831def8fb341e5d69652f04dcf" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="92cbe224b663d28b8dd457992abcd653" category="list-text">ローカルワークステーション上のコマンドシェルで、scpユーティリティを使用してイメージファイルをDeploy仮想マシンにアップロードします。</block>
 </blocks>
