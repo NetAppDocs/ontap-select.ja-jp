@@ -18,6 +18,9 @@ summary: クラスタを導入し、環境に応じてクラスタを設定し�
 
 ONTAP Select クラスタには、作成後にいくつかの特性があります。
 
+
+NOTE: ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、技術情報の記事を参照してください link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/OTS_Deploy_cluster_refresh_fails_with_error%3A_ONTAPSelectSysCLIVersionFailed_zapi_returned_bad_status_0%3A_None["OTS Deployクラスタの更新がエラーで失敗する"^]。
+
 .LIF
 ユーザが指定する 2 種類の LIF が割り当てられます。
 

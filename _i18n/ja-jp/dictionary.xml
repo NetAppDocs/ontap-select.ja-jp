@@ -2508,7 +2508,6 @@
   <block id="3d76d8ade4be6a0fa76347dff9a10a88" category="paragraph">'deploy backup restore-path/home/admin-filename deploy_20180601162151.tar.gz</block>
   <block id="9f8405ace72665fee032686e586d5366" category="summary">ONTAP Select クラスタを導入したら、 Deploy 管理ユーティリティを使用してノードのハイパーバイザーインスタンスタイプをアップグレードできます。</block>
   <block id="a81401e9911e6ba18e35f42e304aeafc" category="doc">ONTAP Select クラスタノードのサイズ変更</block>
-  <block id="da8c60eda9de027a78518654141ef28e" category="admonition">容量階層のライセンスモデルを使用している場合にのみ、クラスタノードのサイズ変更処理を実行できます。容量プールライセンスが設定されている ONTAP Select ノードのサイズを変更することはできません。</block>
   <block id="c491351d31e9a04b74d8cf6b5f75e570" category="paragraph">クラスタはオンライン状態である必要があります。</block>
   <block id="090def24fea0489fb8d3e01bab4bd447" category="paragraph">このタスクでは、 Deploy の Web ユーザインターフェイスの使用方法について説明します。Deploy CLI を使用して、インスタンスのサイズを変更することもできます。どのインターフェイスを使用するかに関係なく、サイズ変更処理に要する時間はいくつかの要因によって大きく異なり、完了までに長い時間がかかることがあります。サイズを変更できるのは、ノードのサイズを大きくする場合だけです。</block>
   <block id="0a34214ca44126aa0cdfec7af4a58c66" category="list-text">ページ上部の * Cluster * タブをクリックし、リストから目的のクラスタを選択します。</block>
@@ -3646,4 +3645,7 @@
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">改ざん防止Snapshotコピー</block>
   <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">SVM 移行</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">VMware HCX</block>
+  <block id="c87ac723a8ad54443fb95ff969ba10fa" category="admonition">容量階層ライセンスモデルと容量プールライセンスモデルを使用する場合は、クラスタノードのサイズ変更処理を実行できます。</block>
+  <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS Deployクラスタの更新がエラーで失敗する</block>
+  <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、技術情報の記事を参照してください <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>。</block>
 </blocks>
