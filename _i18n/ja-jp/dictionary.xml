@@ -2298,7 +2298,6 @@
   <block id="c79b5e481b72a791067309bf6341357a" category="section-title">バックアップを導入</block>
   <block id="f30bc4e85b9bb354d7f8cfeba876a8ba" category="paragraph">Deploy の設定データは、クラスタの作成後も含めて定期的にバックアップすることを推奨します。バックアップにはメディエーターの設定データが含まれるため、 2 ノードクラスタではバックアップが特に重要です。</block>
   <block id="af57810cccc926c446851c6408c6667b" category="paragraph">クラスタを作成または導入したら、 ONTAP Select Deploy の設定データをバックアップする必要があります。</block>
-  <block id="f28ccc9cc7fa1367f54e4ae8e3176c31" category="paragraph">プライマリアグリゲートの最新の（ RPO ゼロの）コピーを提供するためには、ミラーされたアグリゲートが必要ですが、プライマリアグリゲートの空きスペースが不足しないように注意してください。プライマリアグリゲートのスペースが不足すると、ストレージギブバックのベースラインとして使用される共通の 原因 ONTAP Snapshot ™コピーを削除する可能性があります。これは、クライアントの書き込みに対応するための設計どおりの動作です。ただし、フェイルバック時に共通の Snapshot コピーがないと、 ONTAP Select ノードがミラーアグリゲートから完全なベースラインを作成しなければなりません。シェアードナッシング環境では、この処理にかなりの時間がかかることがあります。アグリゲートのスペース使用率が 85% を超えないように監視することを推奨します。</block>
   <block id="9dc41c2a99c45941a7b6c4298a4ba9a5" category="section-title">NIC のアグリゲーション、チーミング、およびフェイルオーバー</block>
   <block id="27294906efe978d2e7d613739082d7c5" category="paragraph">ONTAP Select では、 2 ノードクラスタ用に 1 つの 10Gb リンクがサポートされます。ただし、 ONTAP Select クラスタの内部ネットワークと外部ネットワークの両方で、 NIC アグリゲーションまたは NIC チーミングを使用してハードウェアの冗長性を確保することを推奨します。</block>
   <block id="d29b03a7fc61c6e1f42a47018afc8bcb" category="paragraph">NIC に複数の ASIC （特定用途向け集積回路）が搭載されている場合は、内部ネットワークと外部ネットワークに対して NIC チーミングによってネットワークの構成要素を構築する際に、各 ASIC から 1 つずつネットワークポートを選択します。</block>
@@ -2659,7 +2658,6 @@
   <block id="568e700bfd84bf09ea449e03f0b63ec2" category="paragraph">2 ノードのアクティブ / アクティブ HA クラスタをより長い距離に伸長し、各ノードを異なるデータセンターに配置することが可能です。2 ノードクラスタと 2 ノードストレッチクラスタ（別名 MetroCluster SDS ）の唯一の違いは、ノード間のネットワーク接続距離です。</block>
   <block id="576271d358b861b1da59de8d0b9547e8" category="paragraph">2 ノードクラスタとは、同じデータセンター内にある 2 つのノードが 300m 以内の範囲に配置されているクラスタです。一般に、両方のノードには、同じネットワークスイッチまたは一連の Interswitch Link （ ISL ；スイッチ間リンク）ネットワークスイッチへのアップリンクがあります。</block>
   <block id="4e83e8addeafe73c3acbe68952183177" category="paragraph">2 ノード MetroCluster SDS とは、別の部屋、別の建物、別のデータセンターなど、物理的に 300m 以上離れたノードを持つクラスタです。さらに、各ノードのアップリンク接続は、別々のネットワークスイッチに接続されます。MetroCluster SDS には専用ハードウェアは必要ありません。ただし、環境はレイテンシの要件（ RTT の最大 5 ミリ秒とジッタの 5 ミリ秒の合計 10 ミリ秒）と物理距離の要件（最大 10km ）に準拠している必要があります。</block>
-  <block id="04392e82fbee6fd91224b767c3bcd4ae" category="paragraph">MetroCluster SDS はプレミアム機能であり、 Premium ライセンスが必要です。Premium ライセンスは、中小規模の VM のほか、 HDD および SSD メディアの作成をサポートします。</block>
   <block id="526a514c4ab4ec984314911904c226e7" category="admonition">MetroCluster SDS は、ローカル接続ストレージ（ DAS ）と共有ストレージ（ vNAS ）の両方でサポートされます。通常、 vNAS 構成では、 ONTAP Select VM と共有ストレージとの間のネットワークが原因で、本来のレイテンシが大きくなります。MetroCluster SDS 構成では、共有ストレージのレイテンシを含め、ノード間で最大 10 ミリ秒のレイテンシを実現する必要があります。つまり、これらの構成では共有ストレージのレイテンシを無視できないため、 Select VM 間のレイテンシを測定するだけでは不十分です。</block>
   <block id="d1bf7b4cf1d6b51999a759865fb8c66b" category="summary">ONTAP Select Deploy は、 ONTAP Select クラスタの導入と管理に使用する管理ユーティリティです。</block>
   <block id="b6943de2133c238e306c67b38531d08a" category="paragraph">ONTAP Select Deploy は、 ONTAP Select クラスタの導入と管理に使用する管理ユーティリティです。Deploy は Linux 仮想マシンとしてパッケージ化されており、 ONTAP Select クラスタを作成する前にインストールする必要があります。</block>
@@ -3648,4 +3646,7 @@
   <block id="c87ac723a8ad54443fb95ff969ba10fa" category="admonition">容量階層ライセンスモデルと容量プールライセンスモデルを使用する場合は、クラスタノードのサイズ変更処理を実行できます。</block>
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS Deployクラスタの更新がエラーで失敗する</block>
   <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、技術情報の記事を参照してください <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>。</block>
+  <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">プライマリアグリゲートの最新の（ RPO ゼロの）コピーを提供するためには、ミラーされたアグリゲートが必要ですが、プライマリアグリゲートの空きスペースが不足しないように注意してください。プライマリアグリゲートのスペースが不足すると、原因 ONTAPによってストレージギブバックのベースラインとして使用される共通のSnapshotコピーが削除される可能性があります。これは、クライアントの書き込みに対応するための設計どおりの動作です。ただし、フェイルバック時に共通の Snapshot コピーがないと、 ONTAP Select ノードがミラーアグリゲートから完全なベースラインを作成しなければなりません。シェアードナッシング環境では、この処理にかなりの時間がかかることがあります。</block>
+  <block id="2d27e76da02804de2afe9d209e5cbb1c" category="admonition">ストレージのパフォーマンスと可用性を最適化するために、ミラーアグリゲートでは少なくとも20%の空きスペースを確保することを推奨します。ミラーされていないアグリゲートでは10%が推奨されますが、追加の10%のスペースはファイルシステムで増分変更に対応するために使用できます。増分変更を行うと、ONTAPのcopy-on-write Snapshotベースのアーキテクチャにより、ミラーされたアグリゲートのスペース使用率が向上します。これらのベストプラクティスに従わないと、パフォーマンスに悪影響を及ぼす可能性があります。</block>
+  <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">MetroCluster SDSはプレミアム機能であり、プレミアムライセンスまたはプレミアムXLライセンスが必要です。Premium ライセンスは、中小規模の VM のほか、 HDD および SSD メディアの作成をサポートします。Premium XLライセンスではNVMeドライブの作成もサポートされます。</block>
 </blocks>
