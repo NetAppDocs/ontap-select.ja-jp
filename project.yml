@@ -175,7 +175,7 @@ sidebar:
         url: "/concept_nw_internal_external.html"
       - title: サポートされている構成
         url: "/concept_nw_supported_configs.html"
-      - title: VMware vSphere vSwitch の設定
+      - title: VMware vSphere vSwitchの設定
         url: "/concept_nw_vsphere_vswitch_config.html"
       - title: 物理スイッチの構成
         url: "/concept_nw_physical_switch_config.html"

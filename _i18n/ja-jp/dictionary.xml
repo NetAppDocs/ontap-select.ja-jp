@@ -1037,7 +1037,6 @@
   <block id="4f1b3cd9fba2e292ff3f1a184f8331f0" category="paragraph">容量プールのライセンスモデルの詳細については、 _Capacity pools licensing model_ を参照してください。</block>
   <block id="ef063895a1ede73693b222ec3a2f0a63" category="summary">最適なハードウェアを選択し、パフォーマンスと耐障害性を最適化するようにネットワークを設定します。</block>
   <block id="2e9a99934aaba2c5ae48b142fa347861" category="doc">サポートされるネットワーク構成</block>
-  <block id="3ad46bc4202506ae104cdd08943bdf18" category="paragraph">サーバベンダーは、お客様にさまざまなニーズがあり、選択の自由が重要であることを理解しています。そのため、物理サーバを購入する際には、ネットワーク接続を決定する際に使用できるオプションが多数あります。ほとんどのコモディティシステムでは NIC についてさまざまな選択肢が用意されており、速度とスループットの多様な組み合わせの中から、シングルポートとマルチポートのオプションを選択できます。ONTAP Select 9.8 以降では、 VMware ESX で 25Gb/s および 40Gb/s NIC アダプタがサポートされます。</block>
   <block id="1ff04d941ae1b8262465779276105e05" category="paragraph">ONTAP Select VM のパフォーマンスは基盤のハードウェアの特性に直接左右されるため、高速の NIC を選択して VM へのスループットを高めると、クラスタのパフォーマンスと全体的なユーザエクスペリエンスが向上します。4 つの 10Gb NIC または 2 つの高速 NIC （ 25/40Gb/ 秒）を使用すると、ハイパフォーマンスなネットワークレイアウトを実現できます。他にも、サポートされる構成がいくつかあります。2 ノードクラスタの場合は、 4 × 1Gb ポートまたは 1 × 10Gb ポートがサポートされます。シングルノードクラスタの場合は、 2 × 1Gb ポートがサポートされます。</block>
   <block id="68a547a08a3ebb293924c580b641ce65" category="paragraph">* ネットワークの最小構成と推奨構成 *</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
@@ -2138,7 +2137,6 @@
   <block id="6aade83f8151a6756008a80c389bef65" category="cell">1 時間 ～ 7 日適用されません</block>
   <block id="a051cb6fe36d0d57186040136f51ded4" category="cell">ノードのシリアル番号</block>
   <block id="0f4f157087aaf0bd28aa76133fd9d2c3" category="summary">2NIC 構成と 4NIC 構成の ONTAP Select vSwitch 構成とロードバランシングポリシー。</block>
-  <block id="492e974e8b190853245906ac4824304e" category="doc">VMware vSphere vSwitch 構成</block>
   <block id="96600f2ed0fb970e508d5209faa2adc5" category="paragraph">ONTAP Select では、標準 vSwitch 構成と分散 vSwitch 構成の両方を使用できます。分散 vSwitch は、リンクアグリゲーションの構成要素（ LACP ）をサポートします。リンクアグリゲーションは、複数の物理アダプタ間の帯域幅を集約するために使用される共通のネットワーク構造です。LACP はベンダーに依存しない標準プロトコルです。ネットワークエンドポイントのオープンプロトコルとして、物理ネットワークポートのグループを 1 つの論理チャネルにまとめるために使用します。ONTAP Select は、リンクアグリゲーショングループ（ LAG ）として設定されたポートグループと連携できます。ただし、 LAG 設定を回避するために、個々の物理ポートを単純なアップリンク（トランク）ポートとして使用することを推奨します。このような場合、標準 vSwitch と分散 vSwitch のベストプラクティスは同じです。</block>
   <block id="10e7ad3863cdd2b48f9a7524784cedee" category="paragraph">このセクションでは、 2NIC 構成と 4NIC 構成で使用する必要がある vSwitch 構成とロードバランシングポリシーについて説明します。</block>
   <block id="da05a02ceee0169095d6250face3e1a6" category="paragraph">ONTAP Select で使用するポートグループを設定する際には、次のベストプラクティスに従う必要があります。ポートグループレベルでのロードバランシングポリシーは、「 Route Based on Originating Virtual Port ID 」です。VMware では、 ESXi ホストに接続されたスイッチポートで STP を Portfast に設定することを推奨しています。</block>
@@ -3230,7 +3228,6 @@
   <block id="029512cdc2b1f0fa16e4fc28ea554124" category="sidebar">シングルノード構成とマルチノード構成</block>
   <block id="bab8e5962588e40db65a36db5d916d05" category="sidebar">内部ネットワークと外部ネットワーク</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="sidebar">サポートされている構成</block>
-  <block id="5bb5c0519a3ead3dfe6030831305e46c" category="sidebar">VMware vSphere vSwitch の設定</block>
   <block id="52b9048ce13dbc3e7feb51e89c16b2e3" category="sidebar">データと管理の分離</block>
   <block id="fb3d59ef8abb86b2989e3e7dcc13a94e" category="sidebar">高可用性アーキテクチャ</block>
   <block id="2ae32cce8d9e1bdcb0478c5f14d4be9c" category="sidebar">HA の設定</block>
@@ -3649,4 +3646,7 @@
   <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">プライマリアグリゲートの最新の（ RPO ゼロの）コピーを提供するためには、ミラーされたアグリゲートが必要ですが、プライマリアグリゲートの空きスペースが不足しないように注意してください。プライマリアグリゲートのスペースが不足すると、原因 ONTAPによってストレージギブバックのベースラインとして使用される共通のSnapshotコピーが削除される可能性があります。これは、クライアントの書き込みに対応するための設計どおりの動作です。ただし、フェイルバック時に共通の Snapshot コピーがないと、 ONTAP Select ノードがミラーアグリゲートから完全なベースラインを作成しなければなりません。シェアードナッシング環境では、この処理にかなりの時間がかかることがあります。</block>
   <block id="2d27e76da02804de2afe9d209e5cbb1c" category="admonition">ストレージのパフォーマンスと可用性を最適化するために、ミラーアグリゲートでは少なくとも20%の空きスペースを確保することを推奨します。ミラーされていないアグリゲートでは10%が推奨されますが、追加の10%のスペースはファイルシステムで増分変更に対応するために使用できます。増分変更を行うと、ONTAPのcopy-on-write Snapshotベースのアーキテクチャにより、ミラーされたアグリゲートのスペース使用率が向上します。これらのベストプラクティスに従わないと、パフォーマンスに悪影響を及ぼす可能性があります。</block>
   <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">MetroCluster SDSはプレミアム機能であり、プレミアムライセンスまたはプレミアムXLライセンスが必要です。Premium ライセンスは、中小規模の VM のほか、 HDD および SSD メディアの作成をサポートします。Premium XLライセンスではNVMeドライブの作成もサポートされます。</block>
+  <block id="95e5f2861efdf3db12f1838f4cf18a88" category="doc">VMware vSphere vSwitchの設定</block>
+  <block id="ced1d13b7a0a78acdbaf6a002e0e0063" category="paragraph">サーバベンダーは、お客様にさまざまなニーズがあり、選択の自由が重要であることを理解しています。そのため、物理サーバを購入する際には、ネットワーク接続を決定する際に使用できるオプションが多数あります。ほとんどのコモディティシステムでは NIC についてさまざまな選択肢が用意されており、速度とスループットの多様な組み合わせの中から、シングルポートとマルチポートのオプションを選択できます。ONTAP Select 9.8以降では、VMware ESXで25Gb/秒および40Gb/秒のNICアダプタがサポートされます。</block>
+  <block id="0bbe8377b151cc2455792bb1798d4907" category="sidebar">VMware vSphere vSwitchの設定</block>
 </blocks>
