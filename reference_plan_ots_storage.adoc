@@ -17,6 +17,9 @@ summary: ONTAP Select ホストストレージに関連するいくつかの計�
 ONTAP Select ホストストレージに関連するいくつかの計画の問題について考慮する必要があります。
 
 
+NOTE: 外部ストレージのサポート情報については、を参照してください。 link:reference_plan_ots_vnas.html["ONTAP Select vNAS の要件"]。
+
+
 
 == ハードウェア RAID コントローラの要件
 
@@ -60,12 +63,7 @@ VMware ESXi ハイパーバイザーに ONTAP Select クラスタを導入する
 
 VMware ESXi にソフトウェア RAID を導入する場合の環境は、次のコア要件を満たす必要があります。
 
-* VMware ESXi バージョン：
-+
-** ESXi 6.5 U2 （ビルド 8294253 ）以降
-** ESXi 6.7 GA （ビルド 8169922 ）以降
-
-
+* VMware ESXi 7.0 GA（ビルド15843807）以降
 * ONTAP Select 9.5 以降
 * ONTAP Select Deploy 2.10 以降
 * 新しい ONTAP Select クラスタのみ
