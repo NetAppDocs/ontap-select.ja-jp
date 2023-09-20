@@ -33,7 +33,7 @@ NetApp ONTAP Select は、 VMware ESXi ハイパーバイザーを実行する�
 
 == 製品ドキュメントをナビゲートする
 
-ONTAP Select 9.12.1は、VMware ESXiに導入できます。このサイトには、VMware ESXiで実行されているONTAP Select 9.12.1、9.11.1、9.10.1、9.9.6.1、9.8、および9.7およびハイパーバイザーに依存しないドキュメント（REST APIなど）が含まれています。
+ONTAP Select 9.13.1はVMware ESXiに導入できます。このサイトには、ONTAP Select 9.13.1、9.12.1、9.11.1、9.10.1、9.9.1、 9.8、9.7、およびハイパーバイザーに依存しないドキュメント（REST APIなど）をVMware ESXiで実行
 
 ここでは、の以前のリリースでサポートされている KVM バージョンのリリースノートと製品のドキュメントを示します https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 製品ライブラリ"^]。
 

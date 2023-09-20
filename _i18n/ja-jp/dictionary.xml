@@ -896,7 +896,6 @@
   <block id="193036e83646828d4e1cd41104fdee82" category="paragraph">Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。この要件は、 1 つ以上の ONTAP Select 2 ノードクラスタを管理する環境 All Deploy インスタンスです。</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select Deploy 管理ユーティリティをインストールし、ユーティリティを使用して ONTAP Select クラスタを作成する必要があります。</block>
   <block id="28589a308ce2b6e2829dacabdabf7294" category="doc">ONTAP Select Deploy をインストールしています</block>
-  <block id="9451ede3dcf8c6274c0874b432242b1d" category="section-title">仮想マシンイメージをダウンロードします</block>
   <block id="4457cc766e233dbf5bfec7006eded349" category="paragraph">ONTAP Select パッケージは、ネットアップサポートサイトからダウンロードできます。</block>
   <block id="428ed2a3ebb9fd9f1d5b11240dec37f3" category="paragraph">ONTAP Select Deploy 管理ユーティリティは、 Open Virtualization Format （ OVF ）標準に基づく仮想マシンとしてパッケージされています。単一の圧縮ファイルには 'ova' というサフィックスが付いています</block>
   <block id="97cb0dfea21cc934eab612152be86e44" category="list-text">Web ブラウザからネットアップサポートサイトにアクセスし、「 * Support Quick Links * 」をクリックします。</block>
@@ -906,7 +905,6 @@
   <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">パッケージのリリースを選択します。</block>
   <block id="9bf3ac5f4cb6341117598df735958bdf" category="list-text">エンドユーザライセンス契約（ EULA ）を確認し、「 * 同意して続行」をクリックします。</block>
   <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">適切なパッケージを選択してダウンロードし、必要に応じてすべてのプロンプトに応答します。</block>
-  <block id="4ce7c1d0ecac9ee18490989135de7a8f" category="section-title">仮想マシンを導入します</block>
   <block id="24d390150f97fa124ebe58c6f7ce9bb7" category="paragraph">OVF 仮想マシンイメージを使用して、 ONTAP Select Deploy 仮想マシンをインストールおよび起動する必要があります。インストールプロセスの一環として、 DHCP または静的 IP 設定を使用するようにネットワークインターフェイスを設定する必要があります。</block>
   <block id="efcc2f6be3ed35ac69f6663f683772f3" category="paragraph">ONTAP Select Deploy 仮想マシンを導入するための準備を行う必要があります。</block>
   <block id="780f7110b279a0cc42242a48431ab5bd" category="list-text">VMware クライアント統合プラグインのインストールまたは同様の設定を必要に応じて実行し、 OVF 機能を有効にします</block>
@@ -933,7 +931,6 @@
   <block id="c5d6ff59e8e5595e5fc323f4237b333c" category="paragraph">DHCP を使用してネットワーク情報を設定しますか？[n] ：</block>
   <block id="4c2427d11d6824d2270f4f66eaa29805" category="list-text">静的 IP 設定を定義するには *n* を、 DHCP を使用するには y を入力して *Enter* キーを押します。</block>
   <block id="79a72de3f5191386741777dd0441f591" category="list-text">静的な設定を選択した場合は、必要に応じてすべてのネットワーク設定情報を指定します。</block>
-  <block id="9a51bd26983db2f29b85944ae1a3fd6e" category="section-title">Deploy の Web インターフェイスへのサインイン</block>
   <block id="887ee30caedf2bee91979565f5ddf01e" category="paragraph">Web ユーザインターフェイスにサインインして、 Deploy ユーティリティが使用可能であることを確認し、初期設定を実行する必要があります。</block>
   <block id="32be4d152f2326423c990dde583d8768" category="list-text">ブラウザで IP アドレスまたはドメイン名を使用して、 Deploy ユーティリティにアクセスします。</block>
   <block id="cc0e719d3ebda123b94502d26d56a7eb" category="paragraph">https://&lt;ip_address&gt;/` にアクセスします</block>
@@ -2397,8 +2394,6 @@
   <block id="413237c8cac3c7cf3437693d9962b1fb" category="paragraph">これはサービス指向のプライベートクラウドモデルです。HA バージョンの ONTAP Select を使用することで、高コストの FAS アレイと変わらない ONTAP エクスペリエンスを実現できます。アプリケーション VM は別の物理インフラにホストされており、 ONTAP Select VM がストレージサーバリソースを独占的に使用します。</block>
   <block id="fb6f9f37085215c30bff064542d11394" category="paragraph">* DAS 上に構築されたプライベート・クラウド *</block>
   <block id="df4928efb348e7abebffb938d05f9853" category="paragraph"><block ref="df4928efb348e7abebffb938d05f9853" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="132bf791073c4b17c13357c14b6562bf" category="summary">VMware ESXi で ONTAP Select を実行している場合は、 ESXi ソフトウェアを以前にサポートされていたバージョンから ESXi 6.5 または 6.7 にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。</block>
-  <block id="d2283a8b3afa21d3f713bd9cda08fb85" category="doc">VMware ESXi のバージョン 6.5 以降へのアップグレード</block>
   <block id="ce78f638c1329fc432323298fd5ab053" category="paragraph">ONTAP Select クラスタをホストするハイパーバイザーで ESXi ソフトウェアをアップグレードする前に、環境に適したアップグレード手順 を準備して選択する必要があります。</block>
   <block id="a74a74cc9eac206cd17b389aebee1edf" category="admonition">VMware ESXi 6.5 にアップグレードする場合は、 ESXi U2 （ビルド 8294253 ）以降にアップグレードする必要があります。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。</block>
   <block id="c4e95f89325739a12066fe59a8c74035" category="section-title">VMware ESXi のアップグレード方法を理解する</block>
@@ -2408,7 +2403,6 @@
   <block id="d98bf1b619a94ca49b2cf4e249269541" category="list-text">ONTAP Select クラスタのサイズは、シングルノードクラスタとマルチノードクラスタのどちらでもサポートされます。</block>
   <block id="c9a714bea6de08f5989eee603a121dae" category="list-text">ONTAP Select Deploy アップグレードは、 Deploy ユーティリティを使用する場合と使用しない場合の両方で使用できます。</block>
   <block id="649ae0572dea5b8bc6208820d18b8e73" category="admonition">Deploy 管理ユーティリティを使用するアップグレード手順 を選択する必要があります。</block>
-  <block id="cbd6ddbbce02203098e22e613d37b57b" category="paragraph">Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンの ONTAP Select および Deploy 管理ユーティリティでは、 ESXi 6.5 へのアップグレードはサポートされていません。</block>
   <block id="d24e4d209595dd00d983cbed66cc28da" category="paragraph">これらの旧バージョンを使用している場合にアップグレードを試行すると、 ONTAP Select 仮想マシンをブートできない状態のままにすることができます。この場合は、 Deploy を使用しないアップグレード手順 を選択する必要があります。詳細については、 * 1172198 * を参照してください。</block>
   <block id="4331a924031e9c4e425fc81ec923f3c4" category="section-title">Deploy 管理ユーティリティをアップグレードする</block>
   <block id="f037c33af478257218bc64b1facea5ab" category="paragraph">Deploy ユーティリティを使用して手順 のアップグレードを実行する前に、 Deploy インスタンスのアップグレードが必要になることがあります。通常は、最新バージョンの Deploy にアップグレードする必要があります。少なくとも、 Deploy 2.5 以降を使用する必要があります。Deploy ユーティリティで、使用する ONTAP Select のバージョンがサポートされている必要があります。詳細については、 ONTAP Select のリリースノートを参照してください。</block>
@@ -2419,7 +2413,6 @@
   <block id="b150b43a1c50821ffa6faf08aa2b2fec" category="paragraph">Deploy バージョン 2.5 以降を使用する必要があります。</block>
   <block id="681dd84e331133125fc528e3066ea4b7" category="list-text">ノードをオフライン状態にします。</block>
   <block id="3a5d7f86dd219466ffbcb0e2f8ffd034" category="paragraph">例 : node stop --cluster-name&lt;clustername&gt; --node-name &lt;nodename&gt;</block>
-  <block id="92e4e00b84d8a746bc85b6d5962866e2" category="list-text">VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。</block>
   <block id="577326be3a2834459d5d211f052684dd" category="paragraph">詳細については、を参照してください。</block>
   <block id="d1c1e91e03c71fa9882b17583973d0c4" category="list-text">ノードをオンライン状態に移行します。</block>
   <block id="fb373c881fd0931abd6943e8bcf86440" category="paragraph">例 : node start --cluster-name&lt;clustername&gt; --node-name &lt;nodename&gt;</block>
@@ -2512,8 +2505,6 @@
   <block id="880e4da9bcc9725e517c69e219a63339" category="paragraph">ONTAP Select クラスタを導入するには、 ONTAP Select を実行するハイパーバイザーホストの有効な VMware vSphere ライセンスが必要です。導入に適したライセンスを使用してください。</block>
   <block id="da132c60d8df0a4756d0a1e64618decf" category="section-title">ソフトウェアの互換性</block>
   <block id="f2df12ffd4f2520acaaeab11317642da" category="paragraph">ONTAP Select は次のハイパーバイザーに導入できます。</block>
-  <block id="cb09cc9a7c5645adef2952e42c8113a4" category="list-text">VMware ESXi 6.5 U2 （ビルド 8294253 以降）</block>
-  <block id="6d49558f2efead8b9c52640d24baa9c6" category="list-text">VMware ESXi 6.7 GA （ビルド 8169922 以降）： 6.7 U1 、 U2 、 U3 を含みます</block>
   <block id="3522298772b42c1feed00428b1765cfd" category="admonition">VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。</block>
   <block id="b4d68fa6f7a2f05a7861fc01bd7d54df" category="section-title">VMware ESXi 6.5 U2 以降へのアップグレード</block>
   <block id="10e25613e6e661d9225b8b8847992335" category="paragraph">現在 ONTAP Select が VMware ESXi 6.5 U1 に導入されている場合は、できるだけ早く ESXi 6.5 U2 以降にアップグレードしてください。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。</block>
@@ -3369,11 +3360,8 @@
   <block id="8a820df1b1697eba16442acc38af08cd" category="paragraph">ネットワークレイヤでの単一点障害を回避するために、 2 つ以上の物理 NIC を使用する必要があります。ネットアップでは、データポートグループ、管理ポートグループには NIC チーミングとボンディングを設定し、チームまたはボンドに 2 つ以上のアップリンクを使用することを推奨します。このような構成により、アップリンクに障害が発生した場合に、仮想スイッチは、障害が発生したアップリンクから NIC チーム内の正常なアップリンクにトラフィックを移動します。推奨されるネットワーク構成の詳細については、を参照してください <block ref="705c0997f8d64d5d2f3905a67e67034f" category="inline-link-macro-rx"></block>。</block>
   <block id="bc8028393dfe2dad42a885ee42952937" category="inline-link-macro">このリリースの新機能</block>
   <block id="81f4b69f6b074a0894dc780d0c5fe22f" category="list-text"><block ref="81f4b69f6b074a0894dc780d0c5fe22f" category="inline-link-macro-rx"></block></block>
-  <block id="14f3d38ecd199a3a7efaea74103df87f" category="paragraph">ONTAP Select 9.12.1は、VMware ESXiに導入できます。このサイトには、VMware ESXiで実行されているONTAP Select 9.12.1、9.11.1、9.10.1、9.9.6.1、9.8、および9.7およびハイパーバイザーに依存しないドキュメント（REST APIなど）が含まれています。</block>
   <block id="b3a281a86bd3818b168900985a901d99" category="inline-link-macro">ONTAP Select 9.12.1の注意事項</block>
   <block id="ee6f7d910b278ad714ca5e935fc4ef34" category="list-text"><block ref="ee6f7d910b278ad714ca5e935fc4ef34" category="inline-link-macro-rx"></block></block>
-  <block id="f35dd9a9dbe889bc05b23cec8774b252" category="inline-link">ONTAP Select 9.12.1リリースノート</block>
-  <block id="b3075927414c52e4bd4c7e822453d175" category="paragraph">にアクセスできます<block ref="3ec17b33e7ccb0ff402fc289d09bfa2b" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
   <block id="81884c993fa720d5bc8ac8f0f7c6dbda" category="summary">現在のリリースには、ONTAP Select 固有の新機能や機能強化は含まれていません。</block>
   <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">このリリースの新機能</block>
   <block id="abdc6cb968cabcf935a49935cb3457a8" category="paragraph">オールフラッシュVSANまたは汎用フラッシュアレイを使用するONTAP Select 仮想NAS（vNAS）環境は、SSD以外の直接接続ストレージ（DAS）を使用するONTAP Select のベストプラクティスに従う必要があります。</block>
@@ -3663,4 +3651,153 @@
   <block id="d92261c550ee327019eb3a3ca7a78e30" category="paragraph">ONTAP Select AutoSupport機能が設定されていることを確認し、ONTAP Select Deployの設定データをバックアップする必要があります。</block>
   <block id="7284a07b58626766b72ec946cfd845c9" category="admonition">外部ストレージのサポート情報については、を参照してください。 <block ref="e339e9377e7bf65a8e1fae3dee4b8697" category="inline-link-macro-rx"></block>。</block>
   <block id="8542ad0a9f97f96320929367de2b74cc" category="list-text">VMware ESXi 7.0 GA（ビルド15843807）以降</block>
+  <block id="8930a560533f598bac6dd3f7f9bfedb6" category="summary">両方のノードをハイアベイラビリティ（HA）ペアとして構成して、既存のシングルノードクラスタを2ノードクラスタに拡張します。</block>
+  <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="doc">クラスタを拡張</block>
+  <block id="9ee92687843ac50c08d2dcb3c75ec679" category="paragraph">ONTAP 9.13.1以降では、両方のノードをハイアベイラビリティ（HA）ペアとして構成することで、既存のシングルノードクラスタを2ノードクラスタに拡張できます。2ノードのHAクラスタに拡張すると高可用性が確保されるため、ノード停止によるクラスタのデータ提供機能への影響を防ぐことができます。</block>
+  <block id="2e8a327b283fd50b16d1b5295d65b015" category="paragraph">手順は自動化され、ONTAP Select DeployからCLIまたはWebインターフェイスを使用して開始されます。これは、システム停止を伴う手順です。</block>
+  <block id="0c76347c001891562a0f24f80b85e516" category="paragraph-title">クラスタ拡張の前提条件</block>
+  <block id="e0fd129ed78300784653b377b8198dbb" category="paragraph">クラスタの拡張手順を開始する前に、次の前提条件を満たしていることを確認します。</block>
+  <block id="44a3770a41ceabe41ad75ce81596fa56" category="list-text">既存のノードの電源をオンにします。</block>
+  <block id="1f82de86080fe46e8a75ac3507754123" category="list-text">既存のノードでクラスタの更新が完了しました。</block>
+  <block id="ecf4c2fcb52cc03a7c2d7b050f653f18" category="list-text">既存のノードと新しいノードのESXホストの構成は同じです。</block>
+  <block id="e493ed3a4bfea3ebf118f361ad92ba47" category="list-text">既存のノードと新しいノードのESXホスト間でネットワーク接続チェッカーを実行しておきます。</block>
+  <block id="eb0f08fae2c41a7793a912980295a2e5" category="list-text">ONTAP Select Deployクラスタの拡張手順を使用するには、評価用ライセンス（90日間）と本番環境（大容量階層または容量プール）ライセンスが必要です。次のライセンス要件を満たしていることを確認します。</block>
+  <block id="d994644aa0b2bc896cb4e64956675a0d" category="list-text">新しいノードに必要な大容量階層または容量プールのライセンスが必要です。</block>
+  <block id="f704690c246db554ef6568a89bdff702" category="admonition">容量プールライセンスの場合は、既存のプールの未使用容量を使用できます。必要に応じて、ライセンスをアップグレードして容量を拡張できます。</block>
+  <block id="305a476aa1b8f3372c65ac3346486cf2" category="list-text">両方のノードに容量プールライセンスがある場合は、同じ容量プールに属しています。</block>
+  <block id="62ab77cacb864affe5ac1c6e259a142c" category="list-text">両方のノードに同じライセンスタイプを適用しました。</block>
+  <block id="cd43d984bcc3a4f711cfa1af282b7455" category="paragraph">2ノードクラスタの各ノード（既存および新規）のライセンス要件は、シングルノードクラスタの2倍です。</block>
+  <block id="1b6b2c9a82282029d8cd12086bc16748" category="list-text">シングルノードクラスタの場合は、データアグリゲートに対してフルライセンスを使用できます。たとえば、1TBライセンスのシングルノードでは、1TBのデータアグリゲートをホストできます。</block>
+  <block id="4fe400ca1b94c1aadc6481c02d68ee64" category="list-text">2ノードクラスタの場合、ライセンス容量の半分は各ノードのデータアグリゲートに使用され、残りの半分は対応するパートナーノードのデータアグリゲートのミラーディスクに使用されます。たとえば、2TBライセンスのホストを持つ2つのノードにそれぞれ1TBのデータアグリゲートがあり、合計2TBのデータアグリゲートとして使用可能な容量が提供され、2TBがアグリゲートのミラーディスクをホストするとします。</block>
+  <block id="11f428ea307b5e86300719c1b6dc8fea" category="paragraph">ライセンスの詳細については、を参照してください。 <block ref="9575ba7bfcdc84cc585701a17575801c" category="inline-link-macro-rx"></block> セクション。</block>
+  <block id="92ae53adefd2bce2616eabbc31ca99d6" category="list-text">ノードに接続されているデータストアが次の条件を満たしている。</block>
+  <block id="ecfe3a20b4af8b63e0f7fd2223373048" category="list-text">既存のノード上のデータストアは、同じタイプ（VMware Virtual Machine File System（VMFS）-5、VMFS-6、NFSなど）である必要があります。</block>
+  <block id="e8534479a8ab3e9f651571dccdd016b9" category="list-text">新しいノードに接続するデータストアのタイプは、既存のノードのデフォルトのデータストアと同じである必要があります。</block>
+  <block id="d41741a2b7d1a4249520e3eedfa415d3" category="list-text">既存のノードのデータストアには、ノードの使用済みスペース以上の空きスペースが必要です。</block>
+  <block id="9d430f9d9bdca636bf2bd34d0ca10048" category="list-text">新しいノードに接続されたデータストアの空きスペースが、既存のノードの占有スペースの合計の2倍である必要があります。</block>
+  <block id="f509b7af47ddc6f61e01296750db0a94" category="list-text">両方のONTAP Selectノードが同じインスタンスタイプです。</block>
+  <block id="630e5660de352108f57840f67c4ce73b" category="paragraph-title">ハードウェアとソフトウェアの要件</block>
+  <block id="1deab229dd7288feb521151130a73e51" category="paragraph">新規および既存のノードは、ハードウェアおよびソフトウェアに関するいくつかの要件を満たしている必要があります。</block>
+  <block id="ab12d295318edecf8e697f5aa1e28b04" category="list-text">既存のシングルノードクラスタでONTAP 9.13.1以降が実行されている。</block>
+  <block id="571bab1b8c172b818850c083f2b7d219" category="list-text">既存のノードと新しいノードのESXホストが次の条件を満たしている。</block>
+  <block id="b16daec5e991a4bdaff00495ee637ff3" category="list-text">vCenter Server 7.0 Update 3以降をサポートしています。また、NetAppではvCenter Server 7.0以降を推奨しています。</block>
+  <block id="135e04137c0f3fc2a13414acc2f294fc" category="list-text">クラスタ間接続用の内部ネットワークがあります。</block>
+  <block id="3007f0b4c8fb013252aaf0d42faf5b5a" category="list-text">既存のノードと新しいノードはハードウェアRAIDタイプです。</block>
+  <block id="b1f291eee188a7c63f37b91bcf001a94" category="list-text">小規模インスタンスタイプの場合、ノードには16GB以上のRAMと4つのCPUが搭載されます。大規模なインスタンスタイプの場合、ノードには最大128GBのRAMと16個のCPUがあります。</block>
+  <block id="8237ba6c0c380781f49dc22af5f26bcf" category="paragraph-title">クラスタの拡張に関する制限事項</block>
+  <block id="b5355429781ee9ef7d73aa9f8fe3d3b3" category="paragraph">ONTAP Selectクラスタの拡張に関する次の制限事項に注意してください。</block>
+  <block id="3f3b17881e2b6e6eadaf34fd18c031cc" category="list-text">手順では、シングルノードクラスタから2ノードクラスタへの拡張のみがサポートされます。</block>
+  <block id="cb33ce1462fe7e5b557f6db4425ece2e" category="list-text">データストアの合計容量は64TBに制限されています。データストレージ容量は32TBで、残りの32TBはデータミラーリング用の追加スペースです。</block>
+  <block id="afa22359d4f3cf79284a0728560e7264" category="list-text">クラスタの拡張は、ハードウェアRAIDノードおよびクラスタタイプでのみサポートされます。ソフトウェアRAIDタイプとハードウェアRAIDタイプの混在への拡張はサポートされていません。</block>
+  <block id="27025ea85d4bc0d28bef7e51e8da61f3" category="inline-image-macro">シングルノードから2ノードクラスタへの拡張図</block>
+  <block id="3a42ded421b7b7328d29348b4f404e36" category="paragraph">次の図は、拡張前のシングルノード構成と拡張後の2ノードHAペア構成を示しています。
+<block ref="6e6de549f8b72b049bce1f29ebacc7fc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="287742be1329b1bd7bf7d7fb169b2fa6" category="paragraph-title">クラスタ拡張手順の開始</block>
+  <block id="e3321a5f63313219081d62cede2f8ca2" category="paragraph">ONTAP Select Deployを開始してクラスタ拡張手順を実行するには、CLIから次のコマンドを実行します。</block>
+  <block id="e0f45ff72f2d7d91d9e112f7c7b7e686" category="list-text"><block ref="f0489c17dde991a8954f812ebbe2a6c0" prefix="" category="inline-code"></block></block>
+  <block id="31792351955ddd5711877797e67e90e6" category="list-text"><block ref="66866e8e2f0d236b0f23317b92e3498d" prefix="" category="inline-code"></block></block>
+  <block id="c2187f782201a45ff7b8db0effd6da3e" category="list-text"><block ref="091de9b7e3eb6abf6d66ba8e5e98d03f" prefix="" category="inline-code"></block></block>
+  <block id="8ae8ceb1e3c34f71654ecd45e3edd18b" category="list-text"><block ref="1e50fe28b3ba1196bf5c7e0d1f4aa881" prefix="" category="inline-code"></block></block>
+  <block id="cc85e5e33f89d779593267f90f3de591" category="list-text"><block ref="2437f2194443c2e0de2deac482449798" prefix="" category="inline-code"></block></block>
+  <block id="492625061ab08d886a40d6113d7d5261" category="paragraph">プロンプトが表示されたら、ONTAP管理者パスワードを入力します。</block>
+  <block id="dd4c12bfc49beb3edaea04166917c887" category="paragraph">ONTAP Select 9.13.1はVMware ESXiに導入できます。このサイトには、ONTAP Select 9.13.1、9.12.1、9.11.1、9.10.1、9.9.1、 9.8、9.7、およびハイパーバイザーに依存しないドキュメント（REST APIなど）をVMware ESXiで実行</block>
+  <block id="015a51a212cad15ae88ab6926256ef36" category="inline-link-macro">ONTAP Select 9.13.1に関する注意事項</block>
+  <block id="e9deea859bf1ecf9513d6b6ff2f0d72b" category="list-text"><block ref="e9deea859bf1ecf9513d6b6ff2f0d72b" category="inline-link-macro-rx"></block></block>
+  <block id="d1c880d2d3422bfbdd2ae687b1d78a6f" category="list-text">NVMe over TCP</block>
+  <block id="5062d6ea23d4fd55ee88803b528d99a6" category="inline-link">ONTAP Select 9.13.1リリースノート</block>
+  <block id="4bd7854eb0f9c44ba581e8e66001d6a2" category="paragraph">にアクセスできます<block ref="a3fdd86b36a3532f43f007788a7d3f9e" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
+  <block id="64a49455734301778985c42afcafa1b5" category="list-text">VMware ESXi 8.0 GA（ビルド20513097）</block>
+  <block id="9702dfddce9ca846a20b21815bd5bf71" category="list-text">VMware ESXi 8.0 U1（ビルド21495797）</block>
+  <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">Interoperability Matrix Tool （ IMT ）</block>
+  <block id="2dbfa835ab3a0bf6c79ee95b561f1daf" category="admonition">ESXi 6.5 GAおよびESXi 6.7 GAが販売終了に近づいています。これらのバージョンのONTAP Selectクラスタを使用している場合は、<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block>。</block>
+  <block id="be89bf0bd68c0f721ab7e25e408b6fa7" category="summary">VMware ESXiでONTAP Selectを実行している場合は、ESXiソフトウェアを以前のサポート対象バージョンからESXi 7.0以降にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。</block>
+  <block id="945bbea596cf9bf88be28497537ef993" category="doc">VMware ESXiのバージョン7.0以降へのアップグレード</block>
+  <block id="817a2297c74a908c3261968059682b32" category="paragraph">Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンのONTAP SelectおよびDeploy管理ユーティリティでは、ESXi 7.0へのアップグレードはサポートされていません。</block>
+  <block id="f87065c0eaa86d23a9d0bc62defec91b" category="list-text">VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。</block>
+  <block id="1e2be71e8b4858c0b3e832cba35731d1" category="section-title">ONTAP Select 9.13.1</block>
+  <block id="cdbcb12eafeb6cc1f6a058e9c52a7f8d" category="paragraph">ONTAP Select 9.13.1には、いくつかの新機能と改善点が含まれています。</block>
+  <block id="85c9296df6a3c9630ed684b4af8847a8" category="list-text">クラスタの拡張</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">詳細はこちら。</block>
+  <block id="406ccb0f77a29335e34c2bfe9553fc82" category="list-text">ONTAP Select 9.13.1では、クラスタの拡張が導入されています。これにより、ノードの停止がクラスタでデータを提供する機能に及ぼす影響から高可用性（HA）保護を実現できます。ONTAP Select 9.13.1以降では、両方のノードをHAペアとして構成することで、シングルノードクラスタを2ノードクラスタに拡張できます。手順は自動化され、ONTAP Select DeployからCLIまたはWebインターフェイスを使用して開始されます。この手順を実行するには、ハードウェアとソフトウェアの特定の要件を満たす必要があります。 <block ref="42332fd9348b1caa61a2a7319c6d2c9d" category="inline-link-macro-rx"></block>。</block>
+  <block id="58c277c116ff23ffb9879debb95b4968" category="list-text">NVMe over TCPのサポート</block>
+  <block id="db5f5d6e1e5a3e29724ce78258556ff1" category="list-text">ONTAP Select 9.13.1にアップグレードする場合は、NVMe over TCPをサポートする新しいライセンスが必要です。このライセンスは、バージョン9.13.1からONTAP Selectを初めて導入するときに自動的に含まれます。</block>
+  <block id="4d8daf3f51ebf7fefb4dfcf900e9b79d" category="list-text">ONTAP 9.13.1以降では、VMware ESXi 8.0 GA（ビルド20513097）がハードウェアバージョン4以降でサポートされます。</block>
+  <block id="da691cb71c1f879ed7bf93a9a845601a" category="section-title">仮想マシンイメージのダウンロード</block>
+  <block id="8435c401e57e043b0c57edfb0a00c774" category="section-title">ONTAP Select Deploy OVAシグネチャの確認</block>
+  <block id="ab07c13a31893a6c9ee2547e7b9df643" category="paragraph">インストールパッケージをインストールする前に、ONTAP Selectオープン仮想化アプライアンス（OVA）の署名を確認する必要があります。</block>
+  <block id="cfa6562e428e1a648631dac061567897" category="paragraph">システムが次の要件を満たしていることを確認します。</block>
+  <block id="80c9c2739b6086de81c8ec7262f87af8" category="list-text">OpenSSLバージョン1.0.2～3.0（基本検証用）</block>
+  <block id="03018e3ee63fad9b70308ee5184022f9" category="list-text">Online Certificate Status Protocol（OCSP）検証用のパブリックインターネットアクセス</block>
+  <block id="940949e444a7d7ca33644736f8b10bcd" category="list-text">NetApp Support Siteの製品ダウンロードページから次のファイルを入手します。</block>
+  <block id="0b27918290ff5323bea1e3b78a9cf04e" category="cell">ファイル。</block>
+  <block id="249111a1c7f415853c625e0755631d11" category="cell"><block ref="008c7b6d630fe84ef2d584c45f088cb2" prefix="" category="inline-code"></block></block>
+  <block id="e4069d9d0927b15ac9a4b5a57f151285" category="cell">署名の検証に使用する公開鍵。</block>
+  <block id="efe8e2ee824be146dc129d30269a5102" category="cell"><block ref="0c30c017e47f5d9daacaa689d14755a1" prefix="" category="inline-code"></block></block>
+  <block id="a7a0ef9e615ab0d55916e8c44b6b02d8" category="cell">Public Certification Authority（CA;パブリック認証局）の信頼チェーン。</block>
+  <block id="b30eb909f1cf7890af614e0a372ebe69" category="cell"><block ref="44d439b98474c4bea1ce90f963d0ce9b" prefix="" category="inline-code"></block></block>
+  <block id="11e28814e8daa6ab60f29e9365e29951" category="cell">キーの生成に使用する証明書。</block>
+  <block id="e2ce763ce4c328af6852dedbd857137a" category="cell"><block ref="1699fe41f4360ef312a48730cf26d035" prefix="" category="inline-code"></block></block>
+  <block id="7c8af6e0bab843ab8817d688f7e31835" category="cell">ONTAP Select 9.13.1用の製品インストール実行ファイル。</block>
+  <block id="4e4e408ba11d90a1648acdc6230e66d0" category="cell"><block ref="20db26963ac3dc0b119aa4c781855701" prefix="" category="inline-code"></block></block>
+  <block id="51efe37fbdc37f9d0c55c657a430d296" category="cell">SHA-256アルゴリズムはハッシュ化され、Remote Support Agent（RSA）によって<block ref="b6ad60ee94a07b2ba8c24c883ec70503" prefix=" " category="inline-code"></block> インストーラのキーと署名。</block>
+  <block id="1f463ad70f232a0c4114c51cb2a44a5a" category="list-text">を確認します<block ref="20db26963ac3dc0b119aa4c781855701" prefix=" " category="inline-code"></block> ファイルで関連する証明書と検証コマンドが使用されています。</block>
+  <block id="134cfba28fd247854afe7ce4d31767ad" category="list-text">次のコマンドを使用して署名を確認します。</block>
+  <block id="0ba1987cb555e519f115071e917656fc" category="section-title">仮想マシンの導入</block>
+  <block id="25775c61c3281e6d412f48371102d8b3" category="section-title">DeployのWebインターフェイスへのサインイン</block>
+  <block id="db05ec33127afb72e99fdef2dd7e222b" category="section-title">MFAの設定</block>
+  <block id="aef6d7448e31d21fcd5e57734fa1fb88" category="paragraph">ONTAP Select 9.13.1以降では、ONTAP Select Deploy管理者アカウントで多要素認証（MFA）がサポートされます。</block>
+  <block id="b43e5dc621bb5f7a6746a0bf53636924" category="inline-link-macro">ONTAP Select YubiKey Personal Identity Verification（PIV）またはFast Identity Online（FIDO2）認証を使用したCLI MFAログインの導入</block>
+  <block id="f82ace39832c70c06efc78eb1947b6f4" category="list-text"><block ref="f82ace39832c70c06efc78eb1947b6f4" category="inline-link-macro-rx"></block></block>
+  <block id="cebd67670761a5da244bef9609848dcb" category="list-text"><block ref="c4c2e789fdec94b8ef39088bdc0b1cb6" category="inline-xref-macro-rx"></block></block>
+  <block id="4ca5ee356d097d93144cfeb2518d619a" category="section-title">ONTAP Select YubiKey PIVまたはFIDO2認証を使用したCLI MFAログインの導入</block>
+  <block id="b3725c8fd10aa9a2adf70ad57738023c" category="section-title">ユビキーPIV</block>
+  <block id="a6fe75fc63ca141194b414c175d2cc5f" category="inline-link-macro">TR-4647：『Multifactor authentication in ONTAP』</block>
+  <block id="4bf14d500591d8e73d655aed56c2f144" category="paragraph">の手順に従って、YubiKey PINを設定し、Remote Support Agent（RSA）またはElliptic Curve Digital Signature Algorithm（ECDSA）の秘密鍵と証明書を生成またはインポートします。 <block ref="a5f594d2a3d4fe1cd7c633ac516cda13" category="inline-link-macro-rx"></block>。</block>
+  <block id="b3e210c6ecd68c2d26827f1c14c340c0" category="list-text">Windowsの場合：テクニカル・レポートの「* YubiKey PIV Client configuration for Windows *」セクション</block>
+  <block id="e9b47ad7b72a1ecb0b5d30a048aa46d6" category="list-text">MacOSの場合：テクニカルレポートの「* YubiKey PIVクライアントのMAC OSおよびLinux *用設定」セクション。</block>
+  <block id="54d0308327747160e6c6b7dc700227c1" category="section-title">FIDO2</block>
+  <block id="2019415b8fc23071e4232f343c0ab895" category="paragraph">YubiKey FIDO2認証を選択する場合は、YubiKey Managerを使用してYubiKey FIDO2 PINを設定し、PuTTY-CAC（Common Access Card）（Windows）またはssh-keygen（MacOS）を使用してFIDO2キーを生成します。この手順については、テクニカルレポートを参照してください。 <block ref="a5f594d2a3d4fe1cd7c633ac516cda13" category="inline-link-macro-rx"></block>。</block>
+  <block id="0cb9161b88a09a798735ff874cb58681" category="list-text">Windowsの場合：テクニカル・レポートの「* YubiKey FIDO2クライアント構成（Windows *用）」セクション。</block>
+  <block id="d83115ad366c14a6a480c0d85bed6f85" category="list-text">MacOSの場合：テクニカルレポートの「* YubiKey FIDO2クライアントのMac OSおよびLinux *向け設定」セクション。</block>
+  <block id="10dc6aa5a383cdc8860db4e3b0f8bf60" category="section-title">YubiKey PIVまたはFIDO2公開鍵の取得</block>
+  <block id="889467bdd100f2f2c376dc3477eb6cd3" category="paragraph">公開鍵の取得は、WindowsクライアントとMacOSクライアントのどちらであるか、およびPIVとFIDO2のどちらを使用しているかによって異なります。</block>
+  <block id="950ec0214988f2cee4280a4a29075cf3" category="list-title">Windows の場合：</block>
+  <block id="8d6a89420d27c2eec893fe29cccfc617" category="list-text">TR-4647の16ページの「Windows PuTTY-CAC SSHクライアントでYubiKey PIV認証を設定する」セクションの説明に従って、SSH→証明書の*クリップボードにコピー*機能を使用してPIV公開鍵をエクスポートします。</block>
+  <block id="d56a5bd77b47be09a794ac2118102335" category="list-text">TR-4647の30ページの「Windows PuTTY-CAC SSHクライアントをYubiKey FIDO2認証用に設定する」セクションの説明に従って、SSH→証明書の*クリップボードにコピー*機能を使用してFIDO2公開鍵をエクスポートします。</block>
+  <block id="d8932a31f1a3ea027d5c1af6b38df831" category="list-title">MacOSの場合：</block>
+  <block id="e489cc8b368bd3ee132f3803c8151d4a" category="list-text">PIV公開鍵は、<block ref="fdad7cf0556ad767cd0b40ca8200a4a1" prefix=" " category="inline-code"></block> コマンドについては、TR-4647の24ページの*「Mac OSまたはLinux SSHクライアントでYubiKey PIV認証を設定する」を参照してください。</block>
+  <block id="92275395881e3dde58a2721ffc2f016c" category="list-text">FIDO2公開鍵は、<block ref="c580db344c164b01bb07a17bfda85db7" prefix=" " category="inline-code"></block> ファイルまたは<block ref="87c80ab3cf592031066461837cfc5ea4" prefix=" " category="inline-code"></block> ECDSAとEDD519のどちらを使用しているかによって異なります。詳細については、TR-4647の39ページの「MAC OSまたはLinux SSHクライアントでYubiKey FIDO2認証を設定する」を参照してください。</block>
+  <block id="7554e364dbafdbff96a16b6e1958aa51" category="section-title">ONTAP Select Deployでの公開鍵の設定</block>
+  <block id="463ec45e1f25f14c852f797accb188ef" category="paragraph">SSHは、管理者アカウントが公開鍵認証方式に使用します。認証方式が標準のSSH公開鍵認証であるか、YubiKey PIVまたはFIDO2認証であるかに関係なく、使用されるコマンドは同じです。</block>
+  <block id="d6dd48f51d84aeddf71fc065e33b2eb3" category="paragraph">ハードウェアベースのSSH MFAの場合、ONTAP Select Deployで設定される公開鍵に加えて、次の認証要素があります。</block>
+  <block id="f7fd97c62eac2db373c94fcbbf9ad996" category="list-text">PIVまたはFIDO2ピン</block>
+  <block id="7c4de63e6b87ea14ce9f7e28c8bae2d1" category="list-text">YubiKeyハードウェアデバイスの所有。FIDO2の場合、認証プロセス中にYubiKeyに物理的に触れることで確認されます。</block>
+  <block id="2f749bc08afa54d64b543ebedbb07a59" category="paragraph">YubiKey用に設定されたPIVまたはFIDO2公開鍵を設定します。ONTAP Select Deploy CLIコマンド<block ref="4e8003b3e13aedbdbae0e2cefcc81e9d" prefix=" " category="inline-code"></block> はPIVまたはFIDO2で同じで、公開鍵文字列が異なります。</block>
+  <block id="d77ec4c5ee8d59f72f1f6b297e7d0b7f" category="paragraph">公開鍵は次の場所から取得します。</block>
+  <block id="ea0f6462129cba41747fd16a699fbdb0" category="list-text">PuTTY-CAC for PIVおよびFIDO2（Windows）の*クリップボードにコピー*機能</block>
+  <block id="59bcf48a535c070308e348ff0eb6072c" category="list-text">を使用したSSH互換形式での公開鍵のエクスポート<block ref="fdad7cf0556ad767cd0b40ca8200a4a1" prefix=" " category="inline-code"></block> PIVのコマンド</block>
+  <block id="f91f5438c03c536c36ab8c75be650eed" category="list-text">次の場所にある公開鍵ファイル：<block ref="e27450519cf8f26be0ac320bff396bb9" prefix=" " category="inline-code"></block> FIDO2用ファイル（MacOS）</block>
+  <block id="3a7b749a5de6a8e432d510f4c11146e8" category="list-text">生成されたキーを<block ref="25e9c3d606cf0c8c542629e62d39cd96" prefix=" " category="inline-code"></block> ファイル。</block>
+  <block id="52be2639af408dc18bf18bc365ca5b1c" category="list-text">を使用して、生成されたキーをONTAP Select Deployに追加します。<block ref="79efd197d8563de439f329489f64a255" prefix=" " category="inline-code"></block> コマンドを実行します</block>
+  <block id="425b3bbc04135a05a75dfa8f1f1690ca" category="list-text">を使用してMFA認証を有効にする<block ref="29ac8cfa360949bc886c34f99f56ce7b" prefix=" " category="inline-code"></block> コマンドを実行します</block>
+  <block id="38b6e3ddfe3da156ee999db029f405ab" category="section-title">SSH経由のYubiKey PIV認証を使用したONTAP Select Deployへのログイン</block>
+  <block id="786024c8427e697db51d5ba099540cdd" category="paragraph">SSH経由のYubiKey PIV認証を使用してONTAP Select Deployにログインできます。</block>
+  <block id="872240e5c7be9f19081516cf86692a1c" category="list-text">YubiKeyトークン、SSHクライアント、およびONTAP Select Deployを設定したら、SSH経由でMFA YubiKey PIV認証を使用できます。</block>
+  <block id="537f7afd03be7b15c5c054ee8d444af6" category="list-text">ONTAP Select Deployにログインします。Windows PuTTY-CAC SSHクライアントを使用している場合は、YubiKey PINの入力を求めるダイアログが表示されます。</block>
+  <block id="5f2a207c324401bbadd72cb5d7a24609" category="list-text">YubiKeyを接続してデバイスからログインします。</block>
+  <block id="587b796170a9abac4701cd8aa1bb38cb" category="listing-title">出力例</block>
+  <block id="8c4bb7f7c610b4adc9048e26d1b16545" category="section-title">ONTAP Select ssh-keygenを使用したCLI MFAログインの導入</block>
+  <block id="8b2b97b78c39d5d348e1374ff3fd45ba" category="paragraph">。<block ref="5356c138de038f32891acc3ddf8f3ed6" prefix=" " category="inline-code"></block> コマンドは、SSHの新しい認証キーペアを作成するためのツールです。キーペアは、ログインの自動化、シングルサインオン、およびホストの認証に使用されます。</block>
+  <block id="6d70341637494536c584f85439a39827" category="paragraph">。<block ref="5356c138de038f32891acc3ddf8f3ed6" prefix=" " category="inline-code"></block> コマンドは、認証キーに対して複数の公開鍵アルゴリズムをサポートしています。</block>
+  <block id="fdd2ff2892e86d8ca17b98a7c2b215b9" category="list-text">アルゴリズムは、<block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix=" " category="inline-code"></block> オプション</block>
+  <block id="bca99f13a64f5c3bdc8afc6a3c9f9ff8" category="list-text">キーサイズは、<block ref="15e4235e578d96be98a6c3f8a346a52c" prefix=" " category="inline-code"></block> オプション</block>
+  <block id="67bd5b443b9ddac4a285cad236c61734" category="list-text">MFAを有効にしたら、ONTAP Select Deployシステムにログインします。次の例のような出力が表示されます。</block>
+  <block id="3dc7c42d1ccbe1be0c8a490a015c6fbd" category="section-title">MFAから単一要素認証への移行</block>
+  <block id="4a2e337dbdc20546fc566f3eccc5e32c" category="paragraph">Deploy管理者アカウントのMFAは、次の方法で無効にできます。</block>
+  <block id="d52c27f8bd38a7ef569052e521256588" category="list-text">Secure Shell（SSH）を使用して管理者としてDeploy CLIにログインできる場合は、次のコマンドを実行してMFAを無効にします。<block ref="2348285222a19e68a4a4aa4df3c90622" prefix=" " category="inline-code"></block> Deploy CLIからコマンドを入力します。</block>
+  <block id="7cfa19a89f1daea3828b198bcfc36e59" category="list-text">SSHを使用してDeploy CLIに管理者としてログインできない場合は、次の手順を実行します。</block>
+  <block id="842bce6b18705a10804c5c82d94ba294" category="list-text">vCenterまたはvSphereからDeploy仮想マシン（VM）のビデオコンソールに接続します。</block>
+  <block id="094a1a8c17c096d2758f951380aa7b77" category="list-text">管理者アカウントを使用してDeploy CLIにログインします。</block>
+  <block id="ec2c1e6f88e6b7ce28d7e80767289832" category="list-text">を実行します<block ref="2348285222a19e68a4a4aa4df3c90622" prefix=" " category="inline-code"></block> コマンドを実行します</block>
+  <block id="4963c2f56ac00df8be35eec047756e7b" category="list-text">管理者は、次のコマンドを使用して公開鍵を削除できます。<block ref="6edcef67fdbd494b424b5b6fe6ff3c33" prefix=" " category="inline-code"></block></block>
 </blocks>

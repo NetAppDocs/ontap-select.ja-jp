@@ -25,6 +25,7 @@ NOTE: ハードウェア固有の依存関係を持つONTAP 機能は、一般�
 
 ONTAP Select には次の機能が含まれており、デフォルトでライセンスが付与されています。
 
+* NVMe over TCP
 * NFS
 * CIFS
 * iSCSI

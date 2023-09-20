@@ -195,6 +195,8 @@ sidebar:
         url: "/concept_perf_general.html"
       - title: ONTAP Select 9.6のパフォーマンス
         url: "/concept_perf_premium_ha_direct_ssd_96.html"
+    - title: クラスタを拡張
+      url: "/concept_cluster_expansion.html"
   - title: vCenter と統合
     entries:
     - title: はじめに

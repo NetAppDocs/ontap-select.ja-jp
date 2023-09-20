@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_cli_upgrade_esxi65.html 
 keywords: administer, administering, cli, esxi, upgrade, esxi 6.5 
-summary: VMware ESXi で ONTAP Select を実行している場合は、 ESXi ソフトウェアを以前にサポートされていたバージョンから ESXi 6.5 または 6.7 にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。 
+summary: VMware ESXiでONTAP Selectを実行している場合は、ESXiソフトウェアを以前のサポート対象バージョンからESXi 7.0以降にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。 
 ---
-= VMware ESXi のバージョン 6.5 以降へのアップグレード
+= VMware ESXiのバージョン7.0以降へのアップグレード
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: VMware ESXi で ONTAP Select を実行している場合は、 ESXi ソ
 
 
 [role="lead"]
-VMware ESXi で ONTAP Select を実行している場合は、 ESXi ソフトウェアを以前にサポートされていたバージョンから ESXi 6.5 または 6.7 にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。
+VMware ESXiでONTAP Selectを実行している場合は、ESXiソフトウェアを以前のサポート対象バージョンからESXi 7.0以降にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。
 
 
 
@@ -44,7 +44,7 @@ ESXi ソフトウェアのアップグレードは、 VMware で説明され、�
 
 TIP: Deploy 管理ユーティリティを使用するアップグレード手順 を選択する必要があります。
 
-Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンの ONTAP Select および Deploy 管理ユーティリティでは、 ESXi 6.5 へのアップグレードはサポートされていません。
+Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンのONTAP SelectおよびDeploy管理ユーティリティでは、ESXi 7.0へのアップグレードはサポートされていません。
 
 これらの旧バージョンを使用している場合にアップグレードを試行すると、 ONTAP Select 仮想マシンをブートできない状態のままにすることができます。この場合は、 Deploy を使用しないアップグレード手順 を選択する必要があります。詳細については、 * 1172198 * を参照してください。
 
@@ -75,7 +75,7 @@ Deploy バージョン 2.5 以降を使用する必要があります。
 +
 例 : node stop --cluster-name<clustername> --node-name <nodename>
 
-. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
+. VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。
 +
 詳細については、を参照してください。
 
@@ -117,7 +117,7 @@ Deploy バージョン 2.5 以降を使用する必要があります。
 +
 例 : node stop --cluster-name<clustername> --node-name <nodename>
 
-. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
+. VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。
 +
 詳細については、「 VMware ESXi のアップグレードの準備」を参照してください。
 
@@ -159,7 +159,7 @@ ONTAP Select シングルノードクラスタをホストしている VMware ES
 .手順
 . ONTAP のコマンドラインインターフェイスにサインインしてノードを停止します。
 . VMware vSphere を使用して、 ONTAP Select 仮想マシンの電源がオフになっていることを確認します。
-. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
+. VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。
 +
 詳細については、「 VMware ESXi のアップグレードの準備」を参照してください。
 
@@ -197,7 +197,7 @@ ONTAP Select マルチノードクラスタをホストする VMware ESXi ハイ
 .手順
 . ONTAP のコマンドラインインターフェイスにサインインしてノードを停止します。
 . VMware vSphere を使用して、 ONTAP Select 仮想マシンの電源がオフになっていることを確認します。
-. VMware の手順 を使用して、 ONTAP Select が実行されているハイパーバイザーホストを ESXi 6.5 または 6.7 にアップグレードします。
+. VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。
 +
 詳細については、を参照してください。
 

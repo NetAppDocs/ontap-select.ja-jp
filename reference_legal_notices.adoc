@@ -50,5 +50,6 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 Notice ファイルは、ネットアップソフトウェアで使用しているサードパーティの著作権とライセンスに関する情報を提供します。
 
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2885796["ONTAP Select 9.13.1に関する注意事項"^]
 * link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2884813["ONTAP Select 9.12.1の注意事項"^]
 

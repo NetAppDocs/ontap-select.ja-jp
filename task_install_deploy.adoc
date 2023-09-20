@@ -18,7 +18,7 @@ ONTAP Select Deploy 管理ユーティリティをインストールし、ユー
 
 
 
-== 仮想マシンイメージをダウンロードします
+== 仮想マシンイメージのダウンロード
 
 ONTAP Select パッケージは、ネットアップサポートサイトからダウンロードできます。
 
@@ -37,7 +37,51 @@ ONTAP Select Deploy 管理ユーティリティは、 Open Virtualization Format
 
 
 
-== 仮想マシンを導入します
+== ONTAP Select Deploy OVAシグネチャの確認
+
+インストールパッケージをインストールする前に、ONTAP Selectオープン仮想化アプライアンス（OVA）の署名を確認する必要があります。
+
+.作業を開始する前に
+システムが次の要件を満たしていることを確認します。
+
+* OpenSSLバージョン1.0.2～3.0（基本検証用）
+* Online Certificate Status Protocol（OCSP）検証用のパブリックインターネットアクセス
+
+
+.手順
+. NetApp Support Siteの製品ダウンロードページから次のファイルを入手します。
++
+[cols="2*"]
+|===
+| ファイル。 | 説明 
+
+
+| `ONTAP-Select-Deploy-Production.pub` | 署名の検証に使用する公開鍵。 
+
+
+| `csc-prod-chain-ONTAP-Select-Deploy.pem` | Public Certification Authority（CA;パブリック認証局）の信頼チェーン。 
+
+
+| `csc-prod-ONTAP-Select-Deploy.pem` | キーの生成に使用する証明書。 
+
+
+| `ONTAPdeploy.ova` | ONTAP Select 9.13.1用の製品インストール実行ファイル。 
+
+
+| `ONTAPdeploy.ova.sig` | SHA-256アルゴリズムはハッシュ化され、Remote Support Agent（RSA）によって `csc-prod` インストーラのキーと署名。 
+|===
+. を確認します `ONTAPdeploy.ova.sig` ファイルで関連する証明書と検証コマンドが使用されています。
+. 次のコマンドを使用して署名を確認します。
++
+[listing]
+----
+openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
+----
+
+
+
+
+== 仮想マシンの導入
 
 OVF 仮想マシンイメージを使用して、 ONTAP Select Deploy 仮想マシンをインストールおよび起動する必要があります。インストールプロセスの一環として、 DHCP または静的 IP 設定を使用するようにネットワークインターフェイスを設定する必要があります。
 
@@ -94,7 +138,7 @@ DHCP を使用してネットワーク情報を設定しますか？[n] ：
 
 
 
-== Deploy の Web インターフェイスへのサインイン
+== DeployのWebインターフェイスへのサインイン
 
 Web ユーザインターフェイスにサインインして、 Deploy ユーティリティが使用可能であることを確認し、初期設定を実行する必要があります。
 

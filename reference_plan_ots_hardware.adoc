@@ -37,13 +37,16 @@ ONTAP Select クラスタを導入するには、 ONTAP Select を実行する�
 
 ONTAP Select は次のハイパーバイザーに導入できます。
 
-* VMware ESXi 6.5 U2 （ビルド 8294253 以降）
-* VMware ESXi 6.7 GA （ビルド 8169922 以降）： 6.7 U1 、 U2 、 U3 を含みます
 * VMware ESXi 7.0 GA（ビルド15849807以降）：7.0 U1、U2、U3Cを含む
+* VMware ESXi 8.0 GA（ビルド20513097）
+* VMware ESXi 8.0 U1（ビルド21495797）
 
 
 
 NOTE: VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。
+
+
+NOTE: ESXi 6.5 GAおよびESXi 6.7 GAが販売終了に近づいています。これらのバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^]。
 
 
 
