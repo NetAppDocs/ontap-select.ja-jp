@@ -4,7 +4,7 @@ permalink: concept_stor_capacity_inc.html
 keywords: ontap select, deploy, increase storage 
 summary: ONTAP Deploy は、 ONTAP Select クラスタ内の各ノードにストレージを追加し、ライセンスを付与するために使用できます。 
 ---
-= ストレージ容量を増やしています
+= ストレージ容量の拡張
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -54,7 +54,7 @@ image:ST_07.jpg["容量の配分：ノード 1 に対する 2 つのストレー
 
 
 
-== ソフトウェア RAID を使用した ONTAP Select の容量の拡張
+== ソフトウェアRAIDを使用したONTAP Selectの容量の拡張
 
 ストレージ追加ウィザードを使用すると、ソフトウェア RAID を使用して、 ONTAP Select ノードの管理下にある容量を増やすことができます。このウィザードでは、使用可能な DAS SDD ドライブのみが表示され、 ONTAP Select VM に RDM としてマッピングできます。
 

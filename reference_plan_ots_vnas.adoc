@@ -22,7 +22,8 @@ ONTAP Select vNAS は、 ONTAP Select データストアを、 ONTAP Select 仮�
 
 ONTAP Select vNAS 解決策 は、サイズの異なる ONTAP Select クラスタで使用できます。
 
-ハードウェア、ソフトウェア、機能の要件を含む、関連するすべてのストレージコンポーネントは、に記載されている要件に従う必要がありますlink:https://mysupport.netapp.com/matrix/["VMware Compatibility Guide 』を参照してください"]。また、 ONTAP Select は、 iSCSI 、 NAS （ NFSv3 ）、ファイバチャネル、 Fibre Channel over Ethernet など、 _ VMware ストレージ /SAN 互換ガイド _ に記載されているすべての外付けストレージアレイをサポートします。外付けアレイのサポートは、 ONTAP Select がサポートする ESXi のバージョンによって制限されます。詳細については、 NetApp Interoperability Matrix Tool も参照してください。
+ハードウェア、ソフトウェア、機能の要件を含む、関連するすべてのストレージコンポーネントは、に記載されている要件に従う必要があります
+link:https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^]。さらに、ONTAP Selectは、iSCSI、NAS（NFSv3）、ファイバチャネル、Fibre Channel over Ethernetなど、VMware Storage/SAN Compatibilityのドキュメントに記載されているすべての外付けストレージアレイをサポートしています。外付けアレイのサポートは、 ONTAP Select がサポートする ESXi のバージョンによって制限されます。
 
 ONTAP Select vNAS を使用してクラスタを導入する場合は、 VMware の次の機能がサポートされます。
 

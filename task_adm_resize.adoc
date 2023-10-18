@@ -4,7 +4,7 @@ permalink: task_adm_resize.html
 keywords: administer, administering, web, resizing nodes, resizing 
 summary: ONTAP Select クラスタを導入したら、 Deploy 管理ユーティリティを使用してノードのハイパーバイザーインスタンスタイプをアップグレードできます。 
 ---
-= ONTAP Select クラスタノードのサイズ変更
+= ONTAP Selectクラスタノードのサイズを変更する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

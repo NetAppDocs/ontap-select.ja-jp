@@ -4,7 +4,7 @@ permalink: concept_adm_upgrading_nodes.html
 keywords: administer, administering, web, upgrading nodes 
 summary: ONTAP Select クラスタを導入したら、 ONTAP ソフトウェアの標準のアップグレード手順 を使用して、各ノードの ONTAP イメージを必要に応じてアップグレードできます。 
 ---
-= ONTAP Select ノードをアップグレードします
+= ONTAP Selectノードをアップグレードする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -31,28 +31,27 @@ https://mysupport.netapp.com/site/downloads["ネットアップサポートの�
 
 . ONTAP Select Node Upgrade* をクリックします。
 . 必要に応じて、すべてのプロンプトに対応した適切なアップグレードイメージを選択してダウンロードします。
-. ONTAP Select ノードをアップグレードする前に、追加情報 リリースノートおよび必要な手順を確認してください。使用しているバージョンの ONTAP Select のリリースノートは、製品ライブラリのページからアクセスできます。
 +
-https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 製品ライブラリ"^]
+ONTAP Select ノードをアップグレードする前に、追加情報 リリースノートおよび必要な手順を確認してください。
 
 . ONTAP Select アップグレードファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。
 +
-https://docs.netapp.com/us-en/ontap/["ONTAP 9 のドキュメント"^]
+link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPのアップグレードの概要"^]
 
 
 
 
 
-== ONTAP Select ノードをリバートする
+== ONTAP Selectノードのリバート
 
-最初にインストールされているバージョンより前のバージョンに ONTAP Select ノードをリバートすることはできません。例：
+ONTAP Selectノードを最初にインストールされていたバージョンよりも前のバージョンにリバートすることはできません。例：
 
-ONTAP Select 9.4 が最初にインストールされている:: ノードをバージョン 9.5 にアップグレードしてから、必要に応じてバージョン 9.4 にリバートできます。
-ONTAP Select 9.5 が最初にインストールされています:: このバージョンは元々インストールされていたバージョンより前のバージョンであるため、バージョン 9.4 に戻すことはできません。
-
-
+ONTAP Select 9.7が最初にインストールされている場合:: 必要に応じて、ノードをバージョン9.8にアップグレードしてからバージョン9.7にリバートできます。
+ONTAP Select 9.8が最初にインストールされている場合:: バージョン9.7にリバートすることはできません。このバージョンは、最初にインストールされたバージョンよりも前のバージョンであるためです。
 
 
-== VMXNET3 ネットワークドライバを使用する
 
-Deploy 2.10 を使用した ONTAP Select 9.5 以降では、 VMware ESXi での新しいクラスタの導入に付属するデフォルトのネットワークドライバとして VMXNET3 が用意されています。既存の ONTAP Select ノードをバージョン 9.5 にアップグレードした場合、ネットワークドライバは自動的にアップグレードされません。VMXNET3 に手動でアップグレードする必要があります。アップグレードについてサポートが必要な場合は、ネットアップサポートにお問い合わせください。
+
+== VMXNET3ネットワークドライバの使用
+
+VMXNET3は、VMware ESXiへの新しいクラスタの導入に含まれているデフォルトのネットワークドライバです。ONTAP Select 9.4以前を実行している既存のONTAP Selectノードをアップグレードしても、ネットワークドライバは自動的にアップグレードされません。VMXNET3 に手動でアップグレードする必要があります。アップグレードについてサポートが必要な場合は、ネットアップサポートにお問い合わせください。

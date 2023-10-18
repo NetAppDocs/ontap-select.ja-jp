@@ -167,7 +167,7 @@ image:ST_02.jpg["ESXi クラスタ"]
 外付けストレージアレイ上の VMFS データストアを作成できます。このストレージにアクセスする場合は、いくつかの異なるネットワークプロトコルを使用できます。次の図は、 iSCSI プロトコルを使用してアクセスする、外付けストレージアレイ上の VMFS データストアを示しています。
 
 
-NOTE: ONTAP Select は、『 VMware ストレージ /SAN 互換性ガイド』に記載されている、 iSCSI 、ファイバチャネル、および Fibre Channel over Ethernet を含むすべての外付けストレージアレイをサポートします。
+NOTE: ONTAP Selectは、iSCSI、ファイバチャネル、Fibre Channel over Ethernetなど、VMware Storage/SAN Compatibilityドキュメントに記載されているすべての外付けストレージアレイをサポートしています。
 
 image:ST_03.jpg["ESXi ハイパーバイザーホスト"]
 

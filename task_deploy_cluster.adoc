@@ -4,7 +4,7 @@ permalink: task_deploy_cluster.html
 keywords: install, installing, deploy ontap select cluster, create cluster 
 summary: ONTAP Select Deploy 管理ユーティリティに付属の Web ユーザインターフェイスを使用して、シングルノードまたはマルチノードの ONTAP Select クラスタを導入できます。 
 ---
-= ONTAP Select クラスタの導入
+= ONTAP Select クラスタを導入する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ ONTAP Select Deploy 管理ユーティリティに付属の Web ユーザイン�
 Deploy ユーティリティの Web インターフェイスを使用して ONTAP Select クラスタを作成する場合は、特定の手順が表示されます。具体的なプロセスは、シングルノードクラスタとマルチノードクラスタのどちらを導入するかによって異なります。
 
 
-TIP: Deploy ユーティリティの CLI を使用して ONTAP Select クラスタを導入することもできます。
+TIP: また可能です link:https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_cluster.html["DeployユーティリティのCLIを使用したONTAP Selectクラスタの導入"]。
 
 
 
@@ -49,8 +49,8 @@ TIP: Deploy ユーティリティの CLI を使用して ONTAP Select クラス�
 
 --
 ライセンスファイル:: クラスタを本番環境に導入する場合は、ライセンスモデルに基づいてストレージライセンスファイルを取得する必要があります。
-インストールとアカウントのクレデンシャルを導入:: Deploy 管理ユーティリティをインストールして初期設定を実行する必要があります。を参照してください link:task_install_deploy.html["ONTAP Select Deploy をインストールしています"] を参照してください。インストールプロセスで設定した Deploy 管理者アカウントのパスワードが必要です。
-以前の ONTAP Select ノードイメージをインストールしています:: デフォルトでは、 Deploy 管理ユーティリティには、リリース時点の ONTAP Select の最新バージョンが含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、 ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_cli_deploy_image_add.html["ONTAP Select イメージを Deploy に追加しています"] を参照してください。
+インストールとアカウントのクレデンシャルを導入:: Deploy 管理ユーティリティをインストールして初期設定を実行する必要があります。を参照してください link:task_install_deploy.html["ONTAP Select Deploy をインストールする"] を参照してください。インストールプロセスで設定した Deploy 管理者アカウントのパスワードが必要です。
+以前の ONTAP Select ノードイメージをインストールしています:: デフォルトでは、 Deploy 管理ユーティリティには、リリース時点の ONTAP Select の最新バージョンが含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、 ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_cli_deploy_image_add.html["導入するONTAP Selectイメージの追加"] を参照してください。
 起動ページを開始しています:: 最初のページ * 「 ONTAP Select Deploy の使用」では、クラスタを作成する複数の手順が紹介されています。次の 5 つの主要な手順があります。
 +
 --
@@ -73,7 +73,7 @@ NOTE: ページ上部のタブ（クラスタ、ハイパーバイザーホス�
 
 
 
-== シングルノードクラスタまたはマルチノードクラスタの作成
+== シングルノードクラスタまたはマルチノードクラスタを作成する
 
 ONTAP Select DeployのWebユーザインターフェイスを使用して、シングルノードまたはマルチノードのONTAP Selectクラスタを導入できます。
 

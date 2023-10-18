@@ -4,7 +4,7 @@ permalink: task_adm_replace_drives_swraid.html
 keywords: administer, administering, web, software raid, replace drive 
 summary: ソフトウェア RAID を使用してドライブに障害が発生した場合、 ONTAP Select はスペアドライブを使用し（使用可能な場合）、リビルドプロセスを自動的に開始します。これは、 FAS および AFF での ONTAP の動作と似ています。ただし、使用可能なスペアドライブがない場合は、 ONTAP Select ノードにスペアドライブを追加する必要があります。 
 ---
-= SW RAID 使用時の障害が発生したドライブの交換
+= SW RAID使用時の障害ドライブの交換
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

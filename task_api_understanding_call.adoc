@@ -4,7 +4,7 @@ permalink: task_api_understanding_call.html
 keywords: rest api, deploy rest api, rest, understanding, executing 
 summary: すべての API 呼び出しの詳細が、 ONTAP Select Deploy のオンラインドキュメント Web ページに共通の形式で文書化されて表示されます。1 つの API 呼び出しについて理解すれば、他の API 呼び出しの詳細も同様に表示して解釈できるようになります。 
 ---
-= API 呼び出しの概要と実行方法
+= API呼び出しの理解と実行
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

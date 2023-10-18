@@ -16,14 +16,10 @@ summary: ONTAP Select クラスタを作成したあと、さまざまな管理�
 [role="lead"]
 ONTAP Select クラスタを作成したあと、さまざまな管理タスクを実行して導入をサポートできます。注意が必要な一般的な考慮事項がいくつかあります。
 
-
-
-== 作業を開始する前に
-
 通常、 Deploy の Web インターフェイスを使用して実行できる手順は、 3 つのカテゴリのいずれかに分類されます。
 
 .ONTAP Select クラスタを導入する
-シングルノードクラスタまたはマルチノードクラスタを導入できます。を参照してください link:task_deploy_cluster.html["ONTAP Select クラスタの導入"] を参照してください。
+シングルノードクラスタまたはマルチノードクラスタを導入できます。を参照してください link:task_deploy_cluster.html["ONTAP Select クラスタを導入する"] を参照してください。
 
 .既存の ONTAP Select クラスタを含む手順 を実行します
 管理手順は、 _Security_And _Clusters_といった さまざまなカテゴリに分類されています。
@@ -33,32 +29,31 @@ Deploy に固有の手順がいくつかあります（管理者のパスワー�
 
 
 
-== ONTAP Select の管理
+== ONTAP Selectの管理
 
-ONTAP Select のサポートの一環として、さまざまな管理手順が用意されています。また、 Deploy 管理ユーティリティに固有の手順があります。これらの手順のうち、最も重要なものを以下に示します。通常は、 Deploy の Web ユーザインターフェイスを使用します。管理プロセスは、 1 つのステップバイステップタスクまたは複数のタスクのシーケンスで構成できます。
-
-
-NOTE: コマンドラインインターフェイスを使用して ONTAP Select を管理することもできます。詳細については、「 CLI_ の使用」を参照してください。
+ONTAP Select のサポートの一環として、さまざまな管理手順が用意されています。また、 Deploy 管理ユーティリティに固有の手順があります。これらの手順のうち、最も重要なものを以下に示します。通常は、 Deploy の Web ユーザインターフェイスを使用します。
 
 
+NOTE: また可能です link:https://docs.netapp.com/us-en/ontap-select/task_cli_signing_in.html["コマンドラインインターフェイスを使用する"] ONTAP Selectを管理します。
 
-== 追加の ONTAP 設定を実行しています
 
-ONTAP Select クラスタを導入したら、ハードウェアベースの ONTAP システムの場合と同様にクラスタを設定および管理できます。たとえば、 OnCommand システムマネージャまたは ONTAP CLI を使用して、 ONTAP Select クラスタを設定できます。
+
+== ONTAPの追加設定の実行
+
+ONTAP Select クラスタを導入したら、ハードウェアベースの ONTAP システムの場合と同様にクラスタを設定および管理できます。たとえば、ONTAPシステムマネージャまたはONTAP CLIを使用してONTAP Selectクラスタを設定できます。
 
 .ネットアップクライアントソフトウェア
 サポート対象である次のネットアップクライアントソフトウェアを使用して ONTAP Select に接続できます。
 
-* OnCommand システムマネージャ
-* OnCommand Unified Manager の略
-* OnCommand パフォーマンスマネージャ
+* ONTAP システムマネージャ
+* Active IQ Unified Manager
 * OnCommand Insight
 * OnCommand Workflow Automation のサポートを利用できます
 * SnapCenter
 * Virtual Storage Console for VMware vSphere
 
 
-クライアントソフトウェアのサポート対象のバージョンを特定するには、 _NetApp Interoperability Matrix Tool _ を参照してください。クライアントソフトウェアが ONTAP 9 をサポートしている場合は、同じバージョンが ONTAP Select でもサポートされます。
+サポートされているクライアントソフトウェアのバージョンを確認するには、 link:https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^]。クライアントソフトウェアが ONTAP 9 をサポートしている場合は、同じバージョンが ONTAP Select でもサポートされます。
 
 
 NOTE: SnapCenter と対応するプラグインを使用するには、サーバベースのライセンスが必要です。SnapCenter プラグインのストレージシステム単位のライセンスは、現在 ONTAP Select ではサポートされていません。
@@ -70,7 +65,7 @@ NOTE: SnapCenter と対応するプラグインを使用するには、サーバ
 
 * ネットワーク設定を作成します
 * アグリゲートのレイアウト
-* データ Storage Virtual Machine （ SVM ）の作成
+* データStorage VM（SVM）の作成
 
 
 .ストレージ容量を含む購入ライセンス

@@ -45,7 +45,7 @@ ONTAP Select には次の機能が含まれており、デフォルトでライ�
 
 ONTAP 機能がデフォルトで有効になっていない場合は、次のライセンスを別途取得する必要があります。
 
-* SnapLock エンタープライズ
+* SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）
 * FabricPool
 * Data Availability Service の略
 * FlexCache （コストゼロ）

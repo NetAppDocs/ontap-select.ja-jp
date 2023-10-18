@@ -60,7 +60,7 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 ----
 
 
-== vNAS 使用時の ONTAP Select ノードの併置
+== vNAS使用時のONTAP Selectノードの配置
 
 ONTAP Select は、共有ストレージ上のマルチノード ONTAP Select クラスタをサポートします。ONTAP Deploy では、複数の ONTAP Select ノードが同じクラスタに属していないかぎり、同じ ESX ホストに複数の ESX ノードを設定できます。この構成は、 vNAS 環境（共有データストア）でのみ有効です。DAS ストレージを使用している場合、ホストごとに複数の ONTAP Select インスタンスを使用することはできません。これらのインスタンスが同じハードウェア RAID コントローラで競合するためです。
 

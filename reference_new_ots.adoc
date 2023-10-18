@@ -17,6 +17,13 @@ summary: 現在のリリースには、ONTAP Select 固有の新機能や機能�
 [role="lead"]
 ネットアップでは、ONTAP Select を定期的に更新して、新機能と拡張機能を提供しています
 
+[NOTE]
+====
+* ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。
+* ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
+
+
+====
 
 
 == ONTAP Select 9.13.1
@@ -96,7 +103,7 @@ KVM ハイパーバイザーのサポートが廃止されました:: ONTAP Sele
 
 ONTAP Select 9.9.1では、いくつかの新機能と機能拡張が実装されています
 
-プロセッサー・ファミリーのサポート:: ONTAP Select 9.9.2.1以降では、ONTAP Select でサポートされるのは、インテルXeon Sandy Bridge以降のCPUモデルのみです。
+プロセッサー・ファミリーのサポート:: ONTAP Select 9.9.1以降では、インテルXeon Sandy Bridge以降のCPUモデルのみがONTAP Selectでサポートされます。
 VMware ESXiのサポートを更新:: VMware ESXiのサポートは、ONTAP Select 9.9..1で強化されました。次のリリースがサポートされるようになりました。
 +
 --

@@ -4,7 +4,7 @@ permalink: task_cli_deploy_image_add.html
 keywords: administer, administering, cli, deploy, ontap select image, add 
 summary: ONTAP Select イメージを Deploy 管理ユーティリティのインスタンスに追加できます。イメージをインストールしたら、 ONTAP Select クラスタを導入する際にそのイメージを使用できます。 
 ---
-= ONTAP Select イメージを Deploy に追加しています
+= 導入するONTAP Selectイメージの追加
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,7 +35,7 @@ NOTE: ONTAP Select イメージは、 Deploy ユーティリティのインス�
 
 
 
-== インストールイメージをダウンロードしています
+== インストールイメージのダウンロード
 
 ONTAP Select イメージを Deploy ユーティリティのインスタンスに追加するプロセスを開始するには、ネットアップサポートサイトからインストールイメージをダウンロードする必要があります。ONTAP Select インストールイメージは、単一の圧縮ファイルとしてフォーマットされています。
 
@@ -52,7 +52,7 @@ ONTAP Select イメージを Deploy ユーティリティのインスタンス�
 
 
 
-== Deploy へのインストールイメージのアップロード
+== Deployへのインストールイメージのアップロード
 
 ONTAP Select インストールイメージを取得したら、ファイルを Deploy 仮想マシンにアップロードする必要があります。
 
@@ -87,7 +87,7 @@ exit
 
 
 
-== インストールイメージを追加しています
+== インストールイメージの追加
 
 新しいクラスタの導入時に使用できるように、 ONTAP Select インストールイメージを Deploy images ディレクトリに追加できます。
 
@@ -108,7 +108,7 @@ Deploy ユーティリティの仮想マシンでインストールイメージ�
 
 
 
-== 使用可能なインストールイメージを表示します
+== 使用可能なインストールイメージを表示する
 
 新しいクラスタの導入時に使用できる ONTAP Select イメージを表示できます。
 

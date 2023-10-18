@@ -18,7 +18,7 @@ ONTAP Select クラスタを管理するために実行できる関連タスク�
 
 
 
-== ONTAP Select クラスタを削除する
+== ONTAP Selectクラスタを削除する
 
 コマンドラインインターフェイスを使用して、不要になった ONTAP Select クラスタを削除できます。
 

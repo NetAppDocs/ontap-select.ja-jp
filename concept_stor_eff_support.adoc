@@ -57,7 +57,7 @@ Cross Volume Background Deduplication:  true
 NOTE: 9.6以降からONTAP Select をアップグレードする場合は、Premiumライセンスを持つDAS SSDストレージにONTAP Select をインストールする必要があります。また、ONTAP Deployを使用したクラスタの初回インストール時に、Storage Efficiencyを有効にする*チェックボックスをオンにする必要があります。以前の条件が満たされていない場合に AFF に似たパーソナリティのポスト ONTAP アップグレードを有効にするには、ブート引数を手動で作成し、ノードをリブートする必要があります。詳細については、テクニカルサポートにお問い合わせください。
 
 .ONTAP Select のStorage Efficiency設定
-次の表に、メディアタイプとソフトウェアライセンスに応じた、使用可能なStorage Efficiencyオプション、デフォルトで有効、またはデフォルトで無効だが推奨されているStorage Efficiencyオプションを示します。次の表に、環境 ONTAP Select 9.6以降のリリースの情報を示します。以前のリリースについては、の「ONTAP Select Storage Efficiencyのサポート」セクションを参照してください https://www.netapp.com/media/10662-tr4517.pdf["TR-4517"^]。
+次の表に、メディアタイプとソフトウェアライセンスに応じた、使用可能なStorage Efficiencyオプション、デフォルトで有効、またはデフォルトで無効だが推奨されているStorage Efficiencyオプションを示します。
 
 [cols="4"]
 |===
@@ -123,6 +123,3 @@ ONTAP Select 9.6以降にアップグレードされたシステムでは、既�
 
 --
 
-
-.DAS HDD 構成のアップグレード動作に関する注意事項
-アップグレード前に有効にしたStorage Efficiency機能は、ONTAP Select 9.6以降にアップグレードしたあとも保持されます。アップグレード前に Storage Efficiency が有効になっていなかった場合は、アップグレード後も Storage Efficiency は有効になりません。

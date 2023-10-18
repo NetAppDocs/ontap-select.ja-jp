@@ -4,7 +4,7 @@ permalink: concept_api_understanding_scripts.html
 keywords: rest api, deploy rest api, rest, python, python scripts, understanding 
 summary: サンプルの Python スクリプトを使用すると、いくつかの異なるタスクを実行できます。スクリプトをライブ Deploy インスタンスで使用する前に、それらのスクリプトについて理解しておく必要があります。 
 ---
-= Python スクリプトについて
+= Pythonスクリプトを理解する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -30,7 +30,7 @@ summary: サンプルの Python スクリプトを使用すると、いくつか
 
 
 
-== クラスタを作成
+== クラスタを作成します
 
 スクリプト cluster.py を使用して、 ONTAP Select クラスタを作成できます。JSON 入力ファイルの CLI パラメータと内容に基づいて、次のようにスクリプトを導入環境に変更できます。
 
@@ -56,7 +56,7 @@ summary: サンプルの Python スクリプトを使用すると、いくつか
 
 
 
-== ノードライセンスを追加する
+== ノードライセンスを追加
 
 本番環境クラスタの導入を選択した場合は、 script_add_license.py__ を使用して各ノードのライセンスを追加する必要があります。ライセンスはクラスタの導入前または導入後に追加できます。
 
@@ -71,7 +71,7 @@ summary: サンプルの Python スクリプトを使用すると、いくつか
 
 
 
-== クラスタを削除する
+== クラスタを削除します
 
 既存の ONTAP Select クラスタは、 script_delete_cluster.py _ を使用して削除できます。
 

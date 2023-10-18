@@ -4,7 +4,7 @@ permalink: task_install_deploy.html
 keywords: install, installing, ontap select deploy, deploy administration utility, deploy utility 
 summary: ONTAP Select Deploy 管理ユーティリティをインストールし、ユーティリティを使用して ONTAP Select クラスタを作成する必要があります。 
 ---
-= ONTAP Select Deploy をインストールしています
+= ONTAP Select Deploy をインストールする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -65,7 +65,7 @@ ONTAP Select Deploy 管理ユーティリティは、 Open Virtualization Format
 | `csc-prod-ONTAP-Select-Deploy.pem` | キーの生成に使用する証明書。 
 
 
-| `ONTAPdeploy.ova` | ONTAP Select 9.13.1用の製品インストール実行ファイル。 
+| `ONTAPdeploy.ova` | ONTAP Select用の製品インストール実行可能ファイル。 
 
 
 | `ONTAPdeploy.ova.sig` | SHA-256アルゴリズムはハッシュ化され、Remote Support Agent（RSA）によって `csc-prod` インストーラのキーと署名。 
@@ -159,4 +159,4 @@ https://<ip_address>/` にアクセスします
 
 
 .関連情報
-link:task_cli_signing_in.html["SSH を使用した Deploy へのサインイン"]
+link:task_cli_signing_in.html["SSHを使用したDeployへのサインイン"]

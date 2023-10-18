@@ -4,7 +4,7 @@ permalink: task_cli_deploy_cluster.html
 keywords: administer, administering, cli, create cluster, deploy cluster 
 summary: ONTAP Select Deploy 管理ユーティリティに付属のコマンドラインインターフェイスを使用して、シングルノードまたはマルチノードの ONTAP Select クラスタを作成できます。 
 ---
-= CLI を使用した ONTAP Select クラスタの導入
+= CLIを使用したONTAP Selectクラスタの導入
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ ESXi で ONTAP Select クラスタを作成する前に、必要な準備作業�
 
 
 
-=== ONTAP Select ノードにストレージを接続するための準備をしています
+=== ONTAP Selectノードにストレージを接続する準備
 
 ローカルのハードウェア RAID コントローラを使用する場合は、システムデータ用およびルートアグリゲートとデータアグリゲート用に各ノードに少なくとも 1 つのストレージプールを作成する必要があります。ONTAP Select ノードの設定の一環として、ストレージプールを接続する必要があります。
 
@@ -34,11 +34,11 @@ ESXi で ONTAP Select クラスタを作成する前に、必要な準備作業�
 
 === 使用可能な ONTAP Select バージョン
 
-Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_cli_deploy_image_add.html["ONTAP Select イメージを Deploy に追加しています"] を参照してください。
+Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_cli_deploy_image_add.html["導入するONTAP Selectイメージの追加"] を参照してください。
 
 
 
-=== 本番環境向けに ONTAP Select のライセンスを付与する
+=== 本番環境用のライセンスONTAP Select
 
 本番環境に ONTAP Select クラスタを導入する前に、ストレージ容量ライセンスを購入し、関連するライセンスファイルをダウンロードする必要があります。各ノードでストレージのライセンスを取得するには、 _capacity Tier_model を使用するか、 _capacity pools_model を使用して共有プールのライセンスを設定します。
 
@@ -173,7 +173,7 @@ cluster show -name clustername -detailed
 
 
 
-== ONTAP Select ノードを設定する
+== ONTAP Selectノードの設定
 
 ONTAP Select クラスタ内の各ノードを設定する必要があります。
 
@@ -245,7 +245,7 @@ node show -name test-cluster-01 -cluster-name test-cluster -detailed
 
 
 
-== ONTAP Select ノードにストレージを接続しています
+== ONTAP Selectノードにストレージを接続
 
 ONTAP Select クラスタ内の各ノードで使用するストレージを設定する必要があります。すべてのノードには、必ず少なくとも1つのストレージプールを割り当てる必要があります。ソフトウェアRAIDを使用する場合は、各ノードに少なくとも1本のディスクドライブを割り当てる必要があります。
 
@@ -328,7 +328,7 @@ node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 
 
 
-== ONTAP Select クラスタの導入
+== ONTAP Select クラスタを導入する
 
 クラスタとノードを設定したら、クラスタを導入できます。
 

@@ -32,7 +32,7 @@ ONTAP Select クラスタは、 VMware 上で 1 つ以上のノードのセッ�
 
 
 
-== プラグインを使用したクラスタの VMware リソースの表示
+== プラグインを使用したクラスタのVMwareリソースの表示
 
 ONTAP Select クラスタに割り当てられている VMware リソースは、 Deploy プラグインを使用して表示できます。
 
@@ -46,7 +46,7 @@ ONTAP Select クラスタに割り当てられている VMware リソースは�
 
 
 
-== ESXi 仮想マシンを介した ONTAP Select クラスタの表示
+== ESXi仮想マシンを介したONTAP Selectクラスタの表示
 
 ONTAP Select 仮想マシンにアクセスすると、クラスタおよび関連するクラスタリソースを表示できます。
 
@@ -60,7 +60,7 @@ ONTAP Select 仮想マシンにアクセスすると、クラスタおよび関�
 
 
 
-== ESXi ホストにシングルノードクラスタを作成する
+== ESXiホストでのシングルノードクラスタの作成
 
 vSphere インターフェイスから ESXi ハイパーバイザーホストを選択し、 ONTAP Select シングルノードクラスタを導入できます。
 
@@ -68,5 +68,5 @@ vSphere インターフェイスから ESXi ハイパーバイザーホストを
 . ブラウザを使用して、 vSphere HTML5 経由で vCenter Server にサインインします。
 . 上部の * メニュー * をクリックし、 * ホストとクラスタ * をクリックします。
 . 左側で目的のハイパーバイザーホストを右クリックし、 * ONTAP Select * を選択して、 * New ONTAP Select * をクリックします。
-. の手順に従って、導入プロセスを完了します link:task_deploy_cluster.html["ONTAP Select クラスタの導入"]。
+. の手順に従って、導入プロセスを完了します link:task_deploy_cluster.html["ONTAP Select クラスタを導入する"]。
 

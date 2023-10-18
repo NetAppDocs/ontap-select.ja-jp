@@ -4,7 +4,7 @@ permalink: task_cli_migrate_deploy.html
 keywords: administer, administering, cli, deploy, deploy instance, migrate 
 summary: コマンドラインインターフェイスを使用して、 Deploy 管理ユーティリティの既存のインスタンスを新しい仮想マシンに移行できます。 
 ---
-= 新しい仮想マシンへの Deploy インスタンスの移行
+= 新しい仮想マシンへのDeployインスタンスの移行
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: コマンドラインインターフェイスを使用して、 Deploy 
 
 
 
-== Deploy の設定データのバックアップ
+== Deployの設定データをバックアップする
 
 仮想マシンの移行の一環として、 Deploy の設定データのバックアップを作成する必要があります。また、 ONTAP Select クラスタを導入したあとにバックアップを作成する必要があります。データは単一の暗号化ファイルに保存され、ローカルワークステーションにダウンロードできます。
 
@@ -53,7 +53,7 @@ Deploy はバックアップ処理中に他のタスクを実行しないでく�
 
 
 
-== Deploy 仮想マシンの新しいインスタンスをインストールします
+== Deploy仮想マシンの新しいインスタンスをインストールする
 
 Deploy 仮想マシンの新しいインスタンスを作成する必要があります。このインスタンスは、元の仮想マシンの設定データを使用して更新できます。
 
@@ -74,11 +74,11 @@ VMware 環境で ONTAP Select Deploy 仮想マシンのダウンロードと導�
 
 
 .関連情報
-link:task_install_deploy.html["ONTAP Select Deploy をインストールしています"]
+link:task_install_deploy.html["ONTAP Select Deploy をインストールする"]
 
 
 
-== 新しい仮想マシンへの Deploy の設定データのリストア
+== 新しい仮想マシンへのDeployの設定データのリストア
 
 元の Deploy ユーティリティの仮想マシンの設定データを新しい仮想マシンにリストアする必要があります。データは、ローカルワークステーションからアップロードする必要のある 1 つのファイルに格納されます。
 

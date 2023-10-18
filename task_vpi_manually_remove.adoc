@@ -30,7 +30,7 @@ vCenter Server から Deploy プラグインを手動で削除できます。
 
 
 
-== VMware MOB を使用したプラグインの削除
+== VMware MOBを使用してプラグインを削除する
 
 MOB は、 VMware vCenter サーバ上のオブジェクトの表示と管理を可能にする VMware アプリケーションです。MOB を使用して Deploy vCenter プラグインを削除できます。
 
@@ -53,7 +53,7 @@ com.netapp.selectdeploy`
 
 
 
-== vSphere UI フォルダからプラグインを削除しています
+== vSphere UIフォルダからプラグインを削除する
 
 vCenter サーバで vSphere UI ディレクトリを調べて、 Deploy プラグインが見つかった場合は削除します。
 
@@ -93,7 +93,7 @@ Deploy プラグインが再起動して使用可能になるまでに数分か�
 
 
 
-== vSphere Client フォルダからプラグインを削除します
+== vSphere Clientフォルダからプラグインを削除する
 
 vCenter Server の vSphere Client ディレクトリを調べて、見つかった場合は Deploy プラグインを削除します。Deploy プラグインは Flash を使用しませんが、プラグインの削除手順 の一部としてこのディレクトリを検証することを推奨します。
 

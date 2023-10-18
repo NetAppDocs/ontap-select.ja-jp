@@ -50,7 +50,7 @@ NOTE: ESXi 6.5 GAおよびESXi 6.7 GAが販売終了に近づいています。�
 
 
 
-=== VMware ESXi 6.5 U2 以降へのアップグレード
+=== VMware ESXi 6.5 U2以降にアップグレードする
 
 現在 ONTAP Select が VMware ESXi 6.5 U1 に導入されている場合は、できるだけ早く ESXi 6.5 U2 以降にアップグレードしてください。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。
 
@@ -90,7 +90,7 @@ NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づ
 |===
 
 
-| クラスタサイズ | 最小要件 | 推奨事項 
+| クラスタサイズ | 最小要件 | スイシヨウヨウケン 
 
 
 | シングルノードクラスタ | 1GbE×2 | 10GbE × 2 
@@ -107,7 +107,7 @@ NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づ
 
 ノードインスタンスのタイプに基づいて、ハードウェアに関する追加の要件がいくつかあります。
 
-を参照してください link:concept_lic_platforms.html["プラットフォームライセンスの内容を理解する"] を参照してください。
+を参照してください link:concept_lic_platforms.html["プラットフォームのライセンス製品を理解する"] を参照してください。
 
 .小規模
 * CPU コア 6 個以上の物理コアを搭載し、 ONTAP Select 用に 4 個確保されています。

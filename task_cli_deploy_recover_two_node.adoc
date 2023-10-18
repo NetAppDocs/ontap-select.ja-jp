@@ -4,7 +4,7 @@ permalink: task_cli_deploy_recover_two_node.html
 keywords: administer, administering, cli, two node cluster, recover, recovering 
 summary: ONTAP Select Deploy ユーティリティに障害が発生した場合や、何らかの理由でユーティリティが使用できない場合は、 ONTAP Select のノードとクラスタを管理できなくなります。また、 Deploy に含まれるメディエーターサービスを使用できないため、すべての 2 ノードクラスタの HA 機能が失われます。リカバリ不能な障害が発生した場合は、 Deploy ユーティリティのインスタンスをリカバリして、管理と HA の機能をリストアする必要があります。 
 ---
-= 2 ノードクラスタの Deploy ユーティリティをリカバリする
+= 2ノードクラスタのDeployユーティリティをリカバリする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -51,14 +51,14 @@ ONTAP Select Deploy ユーティリティのインスタンスをリカバリす
 | 2 ノードクラスタを含む Deploy のバックアップがあるか | 使用するリカバリ手順 
 
 
-| はい。 | 設定のバックアップを使用した Deploy ユーティリティのインスタンスのリストア 
+| はい。 | 設定のバックアップを使用したDeployユーティリティのインスタンスのリストア 
 
 
-| いいえ | Deploy ユーティリティのインスタンスの再設定とリカバリ 
+| いいえ | Deployユーティリティのインスタンスを再設定してリカバリする 
 |===
 
 
-== 設定のバックアップを使用した Deploy ユーティリティのインスタンスのリストア
+== 設定のバックアップを使用したDeployユーティリティのインスタンスのリストア
 
 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがある場合は、新しい Deploy 仮想マシンのインスタンスに設定データをリストアできます。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。
 
@@ -119,7 +119,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 
 
-== Deploy ユーティリティのインスタンスの再設定とリカバリ
+== Deployユーティリティのインスタンスを再設定してリカバリする
 
 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがない場合は、新しい Deploy 仮想マシンにメディエーターの iSCSI ターゲットとメールボックスを設定する必要があります。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。
 
@@ -210,7 +210,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。
 
 .関連情報
-* link:task_install_deploy.html["ONTAP Select Deploy をインストールしています"]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["新しい仮想マシンへの Deploy の設定データのリストア"]
+* link:task_install_deploy.html["ONTAP Select Deploy をインストールする"]
+* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["新しい仮想マシンへのDeployの設定データのリストア"]
 * link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["容量プールライセンスの再インストール"]
 

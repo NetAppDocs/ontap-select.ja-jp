@@ -45,7 +45,7 @@ ONTAP Select クラスタは、 1 ノード、 2 ノード、 4 ノード、 6 �
 Deploy 管理ユーティリティは、個別の Linux 仮想マシンとしてパッケージ化されてインストールされます。本番環境に ONTAP Select クラスタを導入するには、ユーティリティを使用する必要があります。最新バージョンの ONTAP Select ノードイメージが Deploy ユーティリティにバンドルされています。
 
 
-NOTE: ONTAP Select 9.7 以降では、 Deploy 管理ユーティリティに個別のバージョン番号が割り当てられなくなりました。Deploy のバージョン番号は、関連する ONTAP Select リリースと同じです。ただし、特定の ONTAP Select リリース内の Deploy ユーティリティの更新ごとに、固有のビルド番号が割り当てられます。
+NOTE: Deploy管理ユーティリティには別のバージョン番号が割り当てられていません。Deploy のバージョン番号は、関連する ONTAP Select リリースと同じです。ただし、特定の ONTAP Select リリース内の Deploy ユーティリティの更新ごとに、固有のビルド番号が割り当てられます。
 
 
 
@@ -57,7 +57,7 @@ image:ots_architecture.png["は、 Deploy 管理ユーティリティで作成�
 
 
 
-== ONTAP Select と ONTAP 9 の比較
+== ONTAP SelectとONTAP 9の比較
 
 ハードウェアベースの ONTAP と ONTAP Select は、どちらもエンタープライズクラスのストレージソリューションを提供します。ただし、設計と実装方法が異なるため、対応するビジネス要件や利用シナリオもそれぞれ異なります。ONTAP Select の導入を計画する前に、プラットフォーム間の主な違いを理解しておく必要があります。
 
