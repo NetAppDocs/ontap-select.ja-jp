@@ -1164,11 +1164,8 @@
   <block id="a0352e441ba04fb28d070a715c9d2ff2" category="paragraph">アップグレード中には、 Deploy を使用して他のタスクを実行しないでください。Deploy ユーティリティのアップグレードに関する情報と制限事項については、最新のリリースノートを参照してください。</block>
   <block id="eb75a7c0dc84d14c47a84e436b8082cc" category="paragraph">アップグレードプロセスを開始するには、ネットアップサポートサイトから適切な Deploy 仮想マシンアップグレードファイルをダウンロードする必要があります。アップグレードパッケージは単一の圧縮ファイル形式です。</block>
   <block id="67a5c1dd24ee56878ca59f7cbb4a6602" category="list-text">Web ブラウザからネットアップサポートサイトにアクセスし、「 * Support Quick Links * 」をクリックします。</block>
-  <block id="bccf3e76ee48d8e82f2ceba72b62d7af" category="list-text">下にスクロールし、 * ONTAP Select Deploy アップグレード * をクリックします。</block>
   <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">アップグレードパッケージの目的のリリースを選択します。</block>
   <block id="def8f653fff47640d3bcce40244c6331" category="list-text">適切なパッケージを選択してダウンロードし、環境に応じてすべてのプロンプトに応答します。</block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">ネットアップサポート</block>
-  <block id="256b9e5b7f511be2eea8558649199f73" category="paragraph"><block ref="256b9e5b7f511be2eea8558649199f73" category="inline-link-macro-rx"></block></block>
   <block id="e1592123d1df946558bd9bf257720d21" category="paragraph">アップグレードパッケージを取得したら、ファイルを Deploy 仮想マシンにアップロードする必要があります。</block>
   <block id="d5d592c7eaf2cef1bd79103f367e703c" category="paragraph">アップグレードファイルをローカルワークステーションで使用できるようにしておく必要があります。また、管理者ユーザアカウントのパスワードが必要です。</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">このタスクは、ファイルを Deploy 仮想マシンにアップロードする方法の 1 つです。ご使用の環境に適したその他のオプションがある場合もあります。</block>
@@ -1177,7 +1174,6 @@
   <block id="dbb14ca7f13323519486701e4b502763" category="paragraph">Deploy ユーティリティの仮想マシンでアップグレードファイルを配置したディレクトリを把握しておく必要があります。また、アップグレードの実行中には、 Deploy を使用して他のタスクを実行しないでください。</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">適切なディレクトリパスとファイル名を使用してアップグレードを実行します。</block>
   <block id="f5fb71abd32be9bc904db11637b6b903" category="paragraph">「 deploy upgrade-package-path filepath 」と入力します</block>
-  <block id="150fc0d33877571bc7e496a88e0dcdb5" category="paragraph">アップグレード手順 が完了すると、 Deploy 仮想マシン設定のバックアップを作成するよう求められます。また、新しく作成した Deploy ページを表示するには、ブラウザキャッシュをクリアする必要があります。</block>
   <block id="e5338fa1dff19c951b23cd8d57a1bb1d" category="summary">SSH を使用して Deploy 管理シェルにサインインする必要があります。サインインしたら、問題 CLI コマンドを使用して ONTAP Select クラスタを作成し、関連する管理手順を実行できます。</block>
   <block id="1e1c82929b36e8b866f932a031b19c58" category="paragraph">Deploy 管理者（ admin ）アカウントの現在のパスワードが必要です。初めてサインインし、 vCenter を使用して Deploy 仮想マシンをインストールする場合は、インストール時に設定したパスワードを使用してください。</block>
   <block id="ccb606fde10157eafe6d1e665b68829a" category="list-text">Deploy 仮想マシンの管理者アカウントと管理 IP アドレスを使用してサインインします。次に例を示します。</block>
@@ -1580,7 +1576,6 @@
   <block id="eea1cec828c419810e082867558ec301" category="list-text">ONTAP Select Node Upgrade* をクリックします。</block>
   <block id="a864f71b844955db4e27746202712f1b" category="list-text">必要に応じて、すべてのプロンプトに対応した適切なアップグレードイメージを選択してダウンロードします。</block>
   <block id="f1dfdf3ad3b4debf7b9ee14f56bcdf31" category="paragraph"><block ref="f1dfdf3ad3b4debf7b9ee14f56bcdf31" category="inline-link-rx"></block></block>
-  <block id="202772c1f92d500b0765ed04693d11e5" category="list-text">ONTAP Select アップグレードファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。</block>
   <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link">ONTAP 9 のドキュメント</block>
   <block id="07c8a5b8b80ed7661d95b9bce5bd8b54" category="summary">REST で共通のテクノロジとベストプラクティスは確立されますが、各 API の詳細は設計内容に応じて異なる場合があります。API を使用する前に、 ONTAP Select Deploy API の詳細と運用上の特性を把握しておく必要があります。</block>
   <block id="f9423483f907b342ce1d6b2a5646580f" category="doc">基本的な動作特性</block>
@@ -3526,7 +3521,6 @@
   <block id="f300769ad7ade3ee1597c88f58750b97" category="doc">ONTAP Selectノードをアップグレードする</block>
   <block id="2e17a67d810d937603511ac8eb9044c5" category="paragraph">ONTAP Select ノードをアップグレードする前に、追加情報 リリースノートおよび必要な手順を確認してください。</block>
   <block id="2a883d1fe3d932e9f2fc25c99deaa4b9" category="inline-link-macro">ONTAPのアップグレードの概要</block>
-  <block id="c6747590f95713e2f203d616751eb4ea" category="paragraph"><block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block></block>
   <block id="46928a27773a23230df6e5bda4c3aeb9" category="section-title">ONTAP Selectノードのリバート</block>
   <block id="140182c4500e816e4313b2abddef452d" category="paragraph">ONTAP Selectノードを最初にインストールされていたバージョンよりも前のバージョンにリバートすることはできません。例：</block>
   <block id="f02e36d55b7d949e1003748824aa7ec6" category="list-text">ONTAP Select 9.7が最初にインストールされている場合</block>
@@ -3708,4 +3702,10 @@
   <block id="ba0ae169498601730046cfffe2523387" category="sidebar">API呼び出しについて理解する</block>
   <block id="20f67f07ed859b317730c48838666bb5" category="sidebar">ワークフロー1クラスタを作成する</block>
   <block id="d95d85ec027f0d5da378060fe690a4ec" category="sidebar">スクリプトを理解する</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp Support Site</block>
+  <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">にアクセスします <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Webブラウザを使用して、[ダウンロード]メニューから*[ダウンロード]*を選択します。</block>
+  <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">下にスクロールして* ONTAP Select展開アップグレード*を選択します。</block>
+  <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">エンドユーザライセンス契約（EULA）を確認し、*同意して続行*を選択します。</block>
+  <block id="3b21e87e0ddc0bee4fd0ebb1cd063173" category="paragraph">手順のアップグレードが完了する前に、Deploy仮想マシン設定のバックアップを作成するように求められます。また、新しく作成されたDeployページを表示できるように、ブラウザキャッシュをクリアする必要があります。</block>
+  <block id="cb09c1543f3641ccb98ebd45cc63490d" category="list-text">ONTAP Select アップグレードファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。を参照してください <block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block> を参照してください手順。</block>
 </blocks>
