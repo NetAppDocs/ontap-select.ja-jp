@@ -18,9 +18,7 @@ ONTAP Select に関するよくある質問とその回答を確認できます�
 
 [NOTE]
 ====
-* ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。
-* ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
-
+ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでのONTAP Select 9.10.1では、KVMハイパーバイザーへの新しいクラスタの導入がサポートされなくなり、ONTAP Select 9.11.1では、オフラインへの切り替えや削除を除く既存のKVMクラスタとホストの管理がサポートされなくなりました。
 
 ====
 
@@ -118,7 +116,11 @@ AFF / FAS で使用できるすべての RAID 方式を ONTAP Select でも使�
 
 ソフトウェア RAID の要件には、次のものがあります。
 
-* ESXとKVMでサポート（ONTAP Select 9.10.1より前）
+* ESXトKVMテサホオト
++
+** ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでは、ONTAP Select 9.10.1でKVMハイパーバイザーのサポートが廃止されていました。
+
+
 * サポートされる物理ディスクのサイズ： 200GB~32TB
 * DAS 構成でのみサポートされます
 * SSDまたはNVMeでサポートされます
@@ -203,21 +205,6 @@ ONTAP Select Deployは、次のようにONTAP Select ノードおよびクラス
 .ONTAP Select DeployでONTAP Select クラスタを作成するために必要なvCenterの権限はどれですか？
 必要な vCenter 権限の一覧については、以下を参照してください。 link:reference_plan_ots_vcenter.html["VMware vCenter サーバ"]。
 
-.vCenter Deploy プラグインとは何ですか。
-vCenter ServerのONTAP Select Deploy機能をONTAP Select Deployプラグインと統合することができます。このプラグインは、ONTAP Select Deployに代わるものではありません。代わりに、ONTAP Select Deployはバックグラウンドで動作します。vCenter管理者は、ONTAP Select Deployのほとんどの機能をプラグインで呼び出すことができます。一部のONTAP Select Deploy処理はCLIでのみ実行できます。
-
-.プラグインを1台のvCenter Serverに登録できるONTAP Select Deploy VMの数はいくつですか。
-特定のvCenterサーバにプラグインを登録できるONTAP Select Deploy VMは1台だけです。
-
-.ONTAP Select Deploy vCenterプラグインのメリットは何ですか。
-vCenter の管理者および IT ジェネラリストは、 vCenter HTML5 GUI を使用して ONTAP Select クラスタを作成できます。Flash vCenter GUI はサポートされていません。
-
-また、ONTAP Select DeployがvCenter RBACを認証に使用できるようにします。ONTAP Select Deployプラグインを使用するためのvCenter権限が付与されたユーザには、そのユーザのvCenterアカウントがONTAP Select Deploy管理ユーザにマッピングされている。ONTAP Select Deployはすべての処理のユーザIDをログに記録し、次のファイルを基本的な監査ログとして使用できます。
-
-[listing]
-----
-nginx_access.log
-----
 
 
 == HA およびクラスタ

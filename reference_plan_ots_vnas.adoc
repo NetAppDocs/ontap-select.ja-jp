@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference_plan_ots_vnas.html 
-keywords: plan, planning, vnas 
-summary: ONTAP Select vNAS の使用に関連するいくつかの計画の問題について考慮する必要があります。 
+keywords: plan, planning, vnas, vmware esxi, 
+summary: VMware ESXiの使用に関連するいくつかの計画の問題について考慮する必要があります。 
 ---
-= ONTAP Select vNAS の要件
+= VMwareESXiノヨウケン
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: ONTAP Select vNAS の使用に関連するいくつかの計画の問�
 
 
 [role="lead"]
-ONTAP Select vNAS は、 ONTAP Select データストアを、 ONTAP Select 仮想マシンを実行するハイパーバイザーホストの外部に配置するための解決策 です。これらのリモートデータストアには、 VMware vSAN または汎用の外付けストレージアレイを使用してアクセスできます。
+ONTAP Select vNASは、ONTAP Select仮想マシンを実行するESXiハイパーバイザーホストの外部にONTAP Selectデータストアを配置できる解決策です。これらのリモートデータストアには、VMware vSANまたは汎用の外付けストレージアレイを使用してアクセスできます。
 
 
 

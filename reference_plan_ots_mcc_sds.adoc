@@ -16,7 +16,7 @@ summary: ONTAP Select の導入を計画する際に考慮する必要がある 
 [role="lead"]
 MetroCluster SDS は、 2 ノード ONTAP Select クラスタを作成する際の構成オプションです。Remote Office / Branch Office （ ROBO ；リモートオフィス / ブランチオフィス）環境と似ていますが、 2 つのノード間の距離は最大で 10 km までです強化された 2 ノード環境では、さらにユースケースシナリオが追加されています。MetroCluster SDS の導入準備の一環として、要件と制限事項を理解しておく必要があります。
 
-MetroCluster SDS を導入する前に、次の要件を満たしていることを確認する必要があります。
+MetroCluster SDSを導入する前に、次の要件を満たしていることを確認してください。
 
 .ライセンス
 各ノードに Premium 以上の ONTAP Select ライセンスが必要です。
@@ -26,9 +26,7 @@ MetroCluster SDS は、 ROBO 環境内の 2 ノードクラスタでのサポー
 
 [NOTE]
 ====
-* ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。
-* ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
-
+ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでのONTAP Select 9.10.1では、KVMハイパーバイザーへの新しいクラスタの導入がサポートされなくなり、ONTAP Select 9.11.1では、オフラインへの切り替えや削除を除く既存のKVMクラスタとホストの管理がサポートされなくなりました。
 
 ====
 .ネットワーク構成：

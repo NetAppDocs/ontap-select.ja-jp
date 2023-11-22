@@ -17,6 +17,7 @@ summary: ONTAP Select の調査と導入の計画を開始するにあたって�
 ONTAP Select の調査と導入の計画を開始するにあたって、まず用語や主な概念を理解しておくと役立ちます。
 
 ONTAP Select 導入:: ONTAP Select Deploy は、 ONTAP Select クラスタの導入に使用する管理ユーティリティです。Deploy ユーティリティは、専用の Linux 仮想マシンで実行されます。Deploy ユーティリティには、 Web ユーザインターフェイス、 CLI 管理シェル、および REST API を使用してアクセスできます。
+カーネルベースの仮想マシン:: Kernel-Based Virtual Machine（KVM）はLinuxカーネルの仮想化機能で、ハイパーバイザープラットフォームとして機能できます。さまざまなゲストオペレーティングシステムがサポートされています。
 ハイパーバイザーホストと ONTAP Select ノードです:: a_hypervisor host_ は、 ONTAP Select 仮想マシンをホストするコアハードウェアプラットフォームです。ハイパーバイザーホストに導入されてアクティブになった ONTAP Select 仮想マシンは、 _ ONTAP Select Node_. とみなされます。
 ONTAP Select クラスタ:: 作成する ONTAP Select cluster_は 、 1 ノード、 2 ノード、 4 ノード、 6 ノード、または 8 ノードで構成できます。マルチノードクラスタには、必ず 1 つ以上の HA ペアが含まれます。たとえば、 4 ノードクラスタは 2 つの HA ペアで構成されます。シングルノードクラスタには HA 機能はありません。
 ハイパーバイザーホスト環境の準備:: Deploy 管理ユーティリティを使用して ONTAP Select クラスタを導入する前に、ストレージ環境とネットワーク環境を含む、 ONTAP Select を実行するハイパーバイザーホストを準備する必要があります。このホストの事前設定は、現在の要件と制限事項に基づいて、 ONTAP Select 製品の外部で実行されます。
@@ -59,7 +60,7 @@ ONTAP Select vNAS:: ONTAP Select vNAS 解決策 を使用すると、 ONTAP Sele
 
 どちらの場合も、 ONTAP Select クラスタの作成前または既存のノードのストレージ容量の拡張前に、外付けストレージを設定する必要があります。
 
-ノードを再ホストしています:: ONTAP Select vNAS 解決策 （ VMware vSAN または汎用の外付けストレージアレイ）を介して利用可能な外付けストレージを使用するクラスタを導入すると、 ONTAP Select ノードをホストする ESXi 仮想マシンを、次の VMware の機能を利用して移動できます。
+ESXi VMでのノードのリホスト:: ONTAP Select vNAS 解決策 （ VMware vSAN または汎用の外付けストレージアレイ）を介して利用可能な外付けストレージを使用するクラスタを導入すると、 ONTAP Select ノードをホストする ESXi 仮想マシンを、次の VMware の機能を利用して移動できます。
 +
 --
 * vMotion
@@ -77,6 +78,7 @@ ONTAP Select Deploy ユーティリティは、クラスタで実行される次
 
 
 --
+KVM用Open vSwitch:: Open vSwitch（OVS）は、複数のネットワークプロトコルをサポートする仮想スイッチのソフトウェア実装です。OVSはオープンソースであり、Apache License 2.0に従って利用可能である。
 メディエーターサービス:: ONTAP Select Deploy ユーティリティには、アクティブな 2 ノードクラスタ内のノードに接続するメディエーターサービスが含まれています。このサービスは各 HA ペアを監視し、障害の管理を支援します。
 
 

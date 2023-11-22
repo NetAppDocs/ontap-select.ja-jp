@@ -23,7 +23,7 @@ ONTAP Select Deploy 管理ユーティリティをインストールし、ユー
 ONTAP Select パッケージは、ネットアップサポートサイトからダウンロードできます。
 
 .このタスクについて
-ONTAP Select Deploy 管理ユーティリティは、 Open Virtualization Format （ OVF ）標準に基づく仮想マシンとしてパッケージされています。単一の圧縮ファイルには 'ova' というサフィックスが付いています
+ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルのサフィックス `ova`。
 
 .手順
 . Web ブラウザからネットアップサポートサイトにアクセスし、「 * Support Quick Links * 」をクリックします。
@@ -83,18 +83,18 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 
 == 仮想マシンの導入
 
-OVF 仮想マシンイメージを使用して、 ONTAP Select Deploy 仮想マシンをインストールおよび起動する必要があります。インストールプロセスの一環として、 DHCP または静的 IP 設定を使用するようにネットワークインターフェイスを設定する必要があります。
+OVF VMイメージを使用して、ONTAP Select Deploy VMをインストールして起動する必要があります。インストールプロセスの一環として、DHCPまたは静的IP設定を使用するようにネットワークインターフェイスを設定します。
 
 .作業を開始する前に
-ONTAP Select Deploy 仮想マシンを導入するための準備を行う必要があります。
+ESXiハイパーバイザーの場合は、ONTAP Select Deploy VMの導入を準備する必要があります。
 
 * VMware クライアント統合プラグインのインストールまたは同様の設定を必要に応じて実行し、 OVF 機能を有効にします
-* IP アドレスを Deploy 仮想マシンに動的に割り当てる場合は、 VMware 環境で DHCP を有効にします
+* Deploy VMにIPアドレスを動的に割り当てる場合は、VMware環境でDHCPを有効にします。
 
 
-仮想マシンの作成時に使用する設定情報を確認しておく必要があります。これには、仮想マシンの名前、外部ネットワーク、ホスト名などが含まれます。静的なネットワーク設定を定義する場合は、次の追加情報 が必要です。
+ESXiハイパーバイザーとKVMハイパーバイザーの場合は、VMの作成時に使用する設定情報（VMの名前、外部ネットワーク、ホスト名など）が必要です。静的なネットワーク設定を定義する場合は、次の追加情報 が必要です。
 
-* Deploy 仮想マシンの IP アドレス
+* Deploy VMのIPアドレス
 * ネットマスク
 * ゲートウェイ（ルータ）の IP アドレス
 * プライマリ DNS サーバの IP アドレス
@@ -103,17 +103,23 @@ ONTAP Select Deploy 仮想マシンを導入するための準備を行う必要
 
 
 .このタスクについて
-vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、 Deploy 仮想マシンのコンソールを使用してネットワークを設定してください。
+vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、Deploy VMのコンソールを使用してネットワークを設定できます。
 
 .手順
+実行する手順は、ESXiハイパーバイザーとKVMハイパーバイザーのどちらを使用しているかによって異なります。
+
+[role="tabbed-block"]
+====
+.ESXi
+--
 . vSphere Client にアクセスしてサインインします。
 . 階層内の適切な場所に移動し、 [Deploy OVF Template* （ OVF テンプレートの展開） ] を選択します。
 . OVA ファイルを選択し、 Deploy OVF Template ウィザードを実行して、環境に適したオプションを選択します。
 +
 管理者アカウントのパスワードを定義する必要があります。Deploy ユーティリティへのサインインの際に、このパスワードを指定する必要があります。
 
-. 仮想マシンの導入後、新しい仮想マシンを選択し、導入ウィザードでの入力に基づいて仮想マシンの電源がオンになっていない場合はオンにします。
-. 必要に応じて、仮想マシンコンソールを使用して Deploy ネットワークを設定できます。
+. 導入ウィザードで入力した内容に基づいて、VMの導入後に新しいVMを選択して電源をオンにします（まだオンになっていない場合）。
+. 必要に応じて、VMコンソールを使用してDeployネットワークを設定できます。
 +
 .. コンソール * タブをクリックして ESXi ホストのセットアップ・シェルにアクセスし、電源投入プロセスを監視します。
 .. 次のプロンプトが表示されるまで待ちます。
@@ -130,12 +136,65 @@ admin ユーザのパスワードを指定します。
 +
 DHCP を使用してネットワーク情報を設定しますか？[n] ：
 
-.. 静的 IP 設定を定義するには *n* を、 DHCP を使用するには y を入力して *Enter* キーを押します。
+.. 静的IP設定を定義する場合は「n *」、DHCPを使用する場合は「* y *」と入力し、* Enter *を選択します。
 .. 静的な設定を選択した場合は、必要に応じてすべてのネットワーク設定情報を指定します。
 
 
 
 
+--
+.KVM の略
+--
+. LinuxサーバでCLIにサインインします。
++
+[listing]
+----
+ssh root@<ip_address>
+----
+. 新しいディレクトリを作成し、raw VMイメージを展開します。
++
+[listing]
+----
+mkdir /home/select_deploy25
+cd /home/select_deploy25
+mv /root/<file_name> .
+tar -xzvf <file_name>
+----
+. Deploy管理ユーティリティを実行するKVM VMを作成して起動します。
++
+[listing]
+----
+virt-install --name=select-deploy --vcpus=2 --ram=4096 --os-variant=debian10 --controller=scsi,model=virtio-scsi --disk path=/home/deploy/ONTAPdeploy.raw,device=disk,bus=scsi,format=raw --network "type=bridge,source=ontap-br,model=virtio,virtualport_type=openvswitch" --console=pty --import --noautoconsole
+----
+. 必要に応じて、VMコンソールを使用してDeployネットワークを設定できます。
++
+.. VMコンソールに接続します。
++
+[listing]
+----
+virsh console <vm_name>
+----
+.. 次のプロンプトが表示されるまで待ちます。
++
+[listing]
+----
+Host name :
+----
+.. ホスト名を入力し、* Enter *を選択します。
+.. 次のプロンプトが表示されるまで待ちます。
++
+[listing]
+----
+Use DHCP to set networking information? [n]:
+----
+.. 静的IP設定を定義する場合は「n *」、DHCPを使用する場合は「* y *」と入力し、* Enter *を選択します。
+.. 静的な設定を選択した場合は、必要に応じてすべてのネットワーク設定情報を指定します。
+
+
+
+
+--
+====
 
 
 == DeployのWebインターフェイスへのサインイン

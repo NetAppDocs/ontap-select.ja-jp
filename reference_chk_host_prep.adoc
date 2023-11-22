@@ -25,6 +25,266 @@ NOTE: ONTAP Select Deploy 管理ユーティリティでは、ハイパーバイ
 
 ハイパーバイザーホストを準備する必要があります。
 
+
+
+== KVMハイパーバイザー
+
+.Linuxサーバの準備
+ONTAP Selectノードを導入する各Linux KVMサーバを準備する必要があります。また、ONTAP Select Deploy管理ユーティリティを導入するサーバを準備する必要があります。
+
+.Red Hat Enterprise Linux をインストールします
+ISOイメージを使用してRed Hat Enterprise Linux（RHEL）オペレーティングシステムをインストールする必要があります。インストール時に、次のようにシステムを設定する必要があります。
+
+* セキュリティポリシーとして[Default]を選択します。
+* [Virtualized Host]ソフトウェアの選択
+* デスティネーションは、ONTAP Selectで使用されるRAID LUNではなく、ローカルブートディスクにする必要があります。
+* システムのブート後にホスト管理インターフェイスが稼働していることを確認する
+
+
+
+NOTE: /etc/sysconfig/network-scriptsで正しいネットワーク構成ファイルを編集し、 `ifup` コマンドを実行します
+
+.ONTAP Selectに必要な追加パッケージのインストール
+ONTAP Selectでは、追加のソフトウェアパッケージがいくつか必要です。パッケージの正確なリストは、使用しているLinuxのバージョンによって異なります。最初の手順として、yumリポジトリがサーバーで使用可能であることを確認します。使用できない場合は、 `wget your_repository_location` コマンドを実行します
+
+
+NOTE: Linuxサーバのインストール時にソフトウェアを選択するために仮想ホストを選択した場合は、必要なパッケージの一部がすでにインストールされている可能性があります。ソースコードからopenvswitchパッケージをインストールする必要がある場合があります。詳細については、 link:https://docs.openvswitch.org/en/latest/intro/install/general/["Open vSwitchのドキュメント"^]。
+
+ For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^].
+.RHEL 7.7に必要な追加パッケージ
+RHEL 7.6と同じパッケージセットをインストールします。
+
+.RHEL 7.6に必要な追加パッケージ
+RHEL 7.6またはCentOS 7.6を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれます。
+
+* qemu-KVM（1.5.3-160）
++
+
+NOTE: ソフトウェアRAIDを使用する場合は、バージョン2.9.0を使用する必要があります。
+
+* libvirt（4.5.0-10）
+* openvswitch（2.7.3）
+* virt-install（1.5.0-1）
+* lshw (B.02.18-12)
+* lsscsi（0.27-6）
+* lsof（4.87-6）
+
+
+KVM（外部ストレージ）でvNASを使用していて、仮想マシンをホスト間で移行する場合は、次の追加パッケージと依存関係をインストールする必要があります。
+
+* フェンス-エージェント-すべて（4.2.1-11）
+* LVM2 -クラスタ（2.02.180-8）
+* ペースメーカー（1.1.19-8）
+* PCS（0.9.165-6）
+
+
+.RHEL 7.5に必要な追加パッケージ
+RHEL 7.5またはCentOS 7.5を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれます。
+
+* qemu-KVM（1.5.3-141）
++
+
+NOTE: ソフトウェアRAIDを使用する場合は、バージョン2.9.0を使用する必要があります。
+
+* libvirt（3.9.0）
+* openvswitch（2.7.3）
+* virt-install（1.4.1-7）
+* lshw (B.02.18-12)
+* lsscsi（0.27-6）
+* lsof（4.87-5）
+
+
+KVM（外部ストレージ）でvNASを使用していて、仮想マシンをホスト間で移行する場合は、次の追加パッケージと依存関係をインストールする必要があります。
+
+* フェンスエージェント-すべて（4.0.11-86）
+* LVM2 -クラスタ（2.02.177-4）
+* ペースメーカー（1.1.18-11）
+* PCS（0.9.16205）
+
+
+.RHEL 7.4に必要な追加パッケージ
+RHEL 7.4またはCentOS 7.4を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれています。
+
+* qemu-KVM（1.5.3-141）
++
+
+NOTE: ソフトウェアRAIDを使用する場合は、バージョン2.9.0を使用する必要があります。
+
+* libvirt（3.2.0-14）
+* openvswitch（2.7.3）
+* virt-install（1.4.1-7）
+* lshw（B.02.18-7）
+* lsscsi（0.27-6）
+* lsof（4.87-4）
+
+
+KVM（外部ストレージ）でvNASを使用していて、仮想マシンをホスト間で移行する場合は、次の追加パッケージと依存関係をインストールする必要があります。
+
+* フェンス-エージェント-すべて（4.0.11-66）
+* LVM2 -クラスタ（2.02.171-8）
+* ペースメーカー（1.1.16-12）
+* PCS（0.9.158-6）
+
+
+.ストレージプールの設定
+ONTAP Selectストレージプールは、基盤となる物理ストレージを抽象化する論理データコンテナです。ONTAP Selectが導入されているKVMホストでストレージプールを管理する必要があります。
+
+
+
+=== ストレージプールを作成します
+
+各ONTAP Selectノードで少なくとも1つのストレージプールを作成する必要があります。ローカルハードウェアRAIDの代わりにソフトウェアRAIDを使用する場合は、ストレージディスクがルートアグリゲートとデータアグリゲートのノードに接続されます。この場合も、システムデータ用のストレージプールを作成する必要があります。
+
+.作業を開始する前に
+ONTAP Selectが導入されているホストでLinux CLIにサインインできることを確認します。
+
+.このタスクについて
+ONTAP Select Deploy管理ユーティリティでは、ストレージプールのターゲットの場所を/dev/<pool_name>と想定します。<pool_name>はホスト上の一意のプール名です。
+
+
+NOTE: LUNの全容量は、ストレージプールの作成時に割り当てられます。
+
+.手順
+. Linuxホスト上のローカルデバイスを表示し、ストレージプールを格納するLUNを選択します。
++
+[listing]
+----
+lsblk
+----
++
+適切なLUNは、ストレージ容量が最も大きいデバイスである可能性があります。
+
+. デバイス上のストレージプールを定義します。
++
+[listing]
+----
+virsh pool-define-as <pool_name> logical --source-dev <device_name> --target=/dev/<pool_name>
+----
++
+例：
+
++
+[listing]
+----
+virsh pool-define-as select_pool logical --source-dev /dev/sdb --target=/dev/select_pool
+----
+. ストレージプールを構築します。
++
+[listing]
+----
+virsh pool-build <pool_name>
+----
+. ストレージプールを開始します。
++
+[listing]
+----
+virsh pool-start <pool_name>
+----
+. システムのブート時に自動的に開始されるようにストレージプールを設定します。
++
+[listing]
+----
+virsh pool-autostart <pool_name>
+----
+. ストレージプールが作成されたことを確認します。
++
+[listing]
+----
+virsh pool-list
+----
+
+
+
+
+=== ストレージプールを削除する
+
+不要になったストレージプールを削除できます。
+
+.作業を開始する前に
+ONTAP Selectが導入されているLinux CLIにサインインできることを確認します。
+
+.このタスクについて
+ONTAP Select Deploy管理ユーティリティでは、ストレージプールのターゲットの場所を次のように指定する必要があります。 `/dev/<pool_name>`、ここで `<pool_name>` は、ホスト上の一意のプール名です。
+
+.手順
+. ストレージプールが定義されていることを確認します。
++
+[listing]
+----
+virsh pool-list
+----
+. ストレージプールを削除します。
++
+[listing]
+----
+virsh pool-destroy <pool_name>
+----
+. 非アクティブなストレージプールの設定の定義を解除します。
++
+[listing]
+----
+virsh pool-undefine <pool_nanme>
+----
+. ストレージプールがホストから削除されたことを確認します。
++
+[listing]
+----
+virsh pool-list
+----
+. ストレージプールのボリュームグループのすべての論理ボリュームが削除されていることを確認します。
++
+.. 論理ボリュームを表示します。
++
+[listing]
+----
+lvs
+----
+.. プールに論理ボリュームが存在する場合は、削除します。
++
+[listing]
+----
+lvremove <logical_volume_name>
+----
+
+
+. ボリュームグループが削除されたことを確認します。
++
+.. ボリュームグループを表示します。
++
+[listing]
+----
+vgs
+----
+.. プールのボリュームグループが存在する場合は、削除します。
++
+[listing]
+----
+vgremove <volume_group_name>
+----
+
+
+. 物理ボリュームが削除されたことを確認します。
++
+.. 物理ボリュームを表示します。
++
+[listing]
+----
+pvs
+----
+.. プールの物理ボリュームが存在する場合は、削除します。
++
+[listing]
+----
+pvremove <physical_volume_name>
+----
+
+
+
+
+
+
+== ESXiハイパーバイザー
+
 各ホストには次の項目を設定する必要があります。
 
 * サポート対象のプリインストールされたハイパーバイザー
@@ -83,6 +343,95 @@ image:CHK_02.jpg["2 つのネットワークを使用する 4 ノードクラス
 次の図は、 4 ノードクラスタ内の単一の ONTAP Select 仮想マシン用の一般的なネットワーク構成を示しています。ネットワークは 2 つあります。 ONTAP 内部と ONTAP 外部です。
 
 image:CHK_03.jpg["4 ノードクラスタ内のシングルノード"]
+
+
+
+== KVMホスト
+
+
+
+=== KVMホストでのOpen vSwitchの設定
+
+Open vSwitchを使用して、各ONTAP SelectノードにSoftware-Definedスイッチを設定する必要があります。
+
+.作業を開始する前に
+ネットワークマネージャが無効になっていて、ネイティブのLinuxネットワークサービスが有効になっていることを確認します。
+
+.このタスクについて
+ONTAP Selectには2つの独立したネットワークが必要です。どちらもポートボンディングを利用してネットワークのHA機能を提供します。
+
+.手順
+. ホストでOpen vSwitchがアクティブであることを確認します。
++
+.. Open vSwitchが実行されているかどうかを確認します。
++
+[listing]
+----
+systemctl status openvswitch
+----
+.. Open vSwitchが実行されていない場合は起動します。
++
+[listing]
+----
+systemctl start openvswitch
+----
+
+
+. Open vSwitchの設定を表示します。
++
+[listing]
+----
+ovs-vsctl show
+----
++
+ホストでOpen vSwitchが設定されていない場合、設定は空になります。
+
+. 新しいvSwitchインスタンスを追加します。
++
+[listing]
+----
+ovs-vsctl add-br <bridge_name>
+----
++
+例：
+
++
+[listing]
+----
+ovs-vsctl add-br ontap-br
+----
+. ネットワークインターフェイスを停止します。
++
+[listing]
+----
+ifdown <interface_1>
+ifdown <interface_2>
+----
+. LACPを使用してリンクを結合します。
++
+[listing]
+----
+ovs-vsctl add-bond <internal_network> bond-br <interface_1> <interface_2> bond_mode=balance-slb lacp=active other_config:lacp-time=fast
+For example:
+ovs-vsctl add-bond ontap-internal bond-br enp18s0 enp19s0 bond_mode=balance-slb lacp=active other_config:lacp-time=fast
+----
+
+
+
+NOTE: ボンドを設定する必要があるのは、インターフェイスが複数ある場合だけです。
+
+. ネットワークインターフェイスを有効にします。
++
+[listing]
+----
+ifup <interface_1>
+ifup <interface_2>
+----
+
+
+
+
+== ESXiホスト
 
 
 

@@ -49,8 +49,12 @@ sidebar:
         url: "/reference_plan_ots_hardware.html"
       - title: ストレージと RAID
         url: "/reference_plan_ots_storage.html"
-      - title: ONTAP Select vNAS
-        url: "/reference_plan_ots_vnas.html"
+      - title: ガイブストレージノヨウケン
+        entries:
+        - title: VMware ESXi
+          url: "/reference_plan_ots_vnas.html"
+        - title: KVM の略
+          url: "/reference_plan_ots_kvm.html"
       - title: ネットワーキング
         url: "/reference_plan_ots_networking.html"
       - title: 2 ノードクラスタ
@@ -59,10 +63,8 @@ sidebar:
         url: "/reference_plan_ots_robo.html"
       - title: MetroCluster SDS
         url: "/reference_plan_ots_mcc_sds.html"
-      - title: VMware vCenter
+      - title: ESXi上のVMware vCenter
         url: "/reference_plan_ots_vcenter.html"
-      - title: VMware vCenter プラグイン
-        url: "/reference_plan_ots_plugin.html"
     - title: ONTAP Select 導入
       entries:
       - title: 一般的な要件
@@ -195,44 +197,6 @@ sidebar:
         url: "/concept_perf_general.html"
       - title: ONTAP Select 9.6のパフォーマンス
         url: "/concept_perf_premium_ha_direct_ssd_96.html"
-  - title: vCenter と統合
-    entries:
-    - title: はじめに
-      entries:
-      - title: 概要
-        url: "/concept_vpi_overview.html"
-      - title: アーキテクチャ
-        url: "/concept_vpi_architecture.html"
-      - title: 計画
-        url: "/concept_vpi_planning.html"
-    - title: プラグインを管理します
-      entries:
-      - title: 作業を開始する前に
-        url: "/concept_vpi_manage_before.html"
-      - title: をインストールします
-        url: "/task_vpi_install.html"
-      - title: にアクセスします
-        url: "/task_vpi_access.html"
-      - title: をアップグレードして削除します
-        url: "/task_vpi_upgrade.html"
-    - title: プラグインを手動で削除します
-      url: "/task_vpi_manually_remove.html"
-    - title: クラスタを導入
-      url: "/task_vpi_deploy_cluster.html"
-    - title: vCenter との統合
-      url: "/concept_vpi_vcenter_integration.html"
-    - title: 管理
-      entries:
-      - title: 診断とサポート
-        url: "/task_vpi_adm_support.html"
-      - title: ネットワーキング
-        url: "/task_vpi_adm_network.html"
-      - title: クラスタ
-        url: "/task_vpi_adm_clusters.html"
-      - title: ライセンス
-        url: "/task_vpi_adm_licenses.html"
-    - title: トラブルシューティングを行う
-      url: "/reference_vpi_troubleshooting.html"
   - title: REST による自動化
     entries:
     - title: 概念

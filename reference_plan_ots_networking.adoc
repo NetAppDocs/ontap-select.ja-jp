@@ -27,7 +27,7 @@ NOTE: ハイパーバイザーホストで vSwitch を設定する方法と、�
 
 
 
-== VMXNET3へのアップグレード
+== VMXNET3へのアップグレード（ESXiのみ）
 
 Deploy 2.10 を使用した ONTAP Select 9.5 以降では、 VMware ESXi での新しいクラスタの導入に付属するデフォルトのネットワークドライバとして VMXNET3 が用意されています。古いONTAP Selectノードをバージョン9.5以降にアップグレードしても、ドライバは自動的にアップグレードされません。
 
@@ -49,7 +49,7 @@ NOTE: ネットワークの設計に基づいて、必要に応じてクラス�
 
 
 
-== 標準 vSwitch 搭載の 2NIC ホスト
+== 標準vSwitchを使用する2NICホスト（ESXiのみ）
 
 2NIC 構成で ONTAP Select のパフォーマンスを向上させるには、 2 つのポートグループを使用して内部と外部のネットワークトラフィックを分離する必要があります。この推奨構成では、次のような特定の構成が環境 に推奨
 
@@ -76,7 +76,7 @@ NOTE: ネットワークの設計に基づいて、必要に応じてクラス�
 
 
 
-== 標準 vSwitch 搭載の 4NIC ホスト
+== 標準vSwitchを使用する4 NICホスト（ESXiのみ）
 
 4 つの NIC 構成で ONTAP Select のパフォーマンスを向上させるには、 4 つのポートグループを使用して内部と外部のネットワークトラフィックを分離する必要があります。この推奨構成では、次のような特定の構成が環境 に推奨
 
@@ -123,8 +123,10 @@ ONTAP Select 環境のさまざまな参加者間でネットワークトラフ�
 ONTAP Select 環境の一部としてネットワークトラフィックを交換する複数の参加者またはエンティティがあります。これらの情報が導入され、ネットワークトラフィック要件の要約概要 で使用されます。
 
 * Deploy ONTAP Select 管理ユーティリティを導入する
-* vSphere / ESXi ホスト。クラスタ環境でのホストの管理方法に応じて、 vSphere サーバまたは ESXi ホストのどちらかを使用します
-* ハイパーバイザーサーバの ESXi ハイパーバイザーホスト
+* vSphere（ESXiのみ）
+vSphereサーバまたはESXiホスト（クラスタ環境でのホストの管理方法に応じて）
+* ハイパーバイザーサーバ
+ESXiハイパーバイザーホストまたはLinux KVMホスト
 * OTS ノード： ONTAP Select ノード
 * OTS クラスタ ONTAP Select クラスタです
 * Admin WS ローカル管理ワークステーション
@@ -133,31 +135,34 @@ ONTAP Select 環境の一部としてネットワークトラフィックを交�
 .ネットワークトラフィック要件の要約
 次の表に、 ONTAP Select 環境のネットワークトラフィック要件を示します。
 
-[cols="20,45,35"]
+[cols="20,20,35,25"]
 |===
-| プロトコル / ポート | 方向（ Direction ） | 説明 
+| プロトコル / ポート | ESXi / KVM | 方向（ Direction ） | 説明 
 
 
-| TLS （ 443 ） | vCenter Server （管理対象）または ESXi （管理対象外）に導入 | VMware VIX API 
+| TLS （ 443 ） | ESXi | vCenterサーバ（管理対象）またはESXi（管理対象または管理対象外）に導入 | VMware VIX API 
 
 
-| 902 | vCenter Server （管理対象）または ESXi （管理対象外）に導入 | VMware VIX API 
+| 902 | ESXi | vCenter Server （管理対象）または ESXi （管理対象外）に導入 | VMware VIX API 
 
 
-| ICMP | ハイパーバイザーサーバに導入します | Ping 
+| ICMP | ESXiまたはKVM | ハイパーバイザーサーバに導入します | Ping 
 
 
-| ICMP | 各 OTS ノードに展開します | Ping 
+| ICMP | ESXiまたはKVM | 各 OTS ノードに展開します | Ping 
 
 
-| SSH （ 22 ） | 管理 WS を各 OTS ノードに割り当てます | 管理 
+| SSH （ 22 ） | ESXiまたはKVM | 管理 WS を各 OTS ノードに割り当てます | 管理 
 
 
-| TLS （ 443 ） | OTS ノードおよびクラスタに展開します | ONTAP にアクセスします 
+| SSH （ 22 ） | KVM の略 | ハイパーバイザーサーバノードに導入 | アクセスハイパーバイザーサーバ 
 
 
-| TLS （ 443 ） | 展開する各 OTS ノード | Deploy にアクセスします 
+| TLS （ 443 ） | ESXiまたはKVM | OTS ノードおよびクラスタに展開します | ONTAP にアクセスします 
 
 
-| iSCSI （ 3260 ） | 展開する各 OTS ノード | メディエーター / メールボックスディスク 
+| TLS （ 443 ） | ESXiまたはKVM | 展開する各 OTS ノード | Access Deploy（容量プールライセンス） 
+
+
+| iSCSI （ 3260 ） | ESXiまたはKVM | 展開する各 OTS ノード | メディエーター / メールボックスディスク 
 |===

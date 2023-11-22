@@ -20,7 +20,7 @@ ONTAP Select Deploy 管理ユーティリティに付属のコマンドライン
 
 == 作業を開始する前に
 
-ESXi で ONTAP Select クラスタを作成する前に、必要な準備作業を理解しておく必要があります。
+ハイパーバイザーでONTAP Selectクラスタを作成する前に、必要な準備について理解しておく必要があります。
 
 
 
@@ -57,7 +57,7 @@ admin ユーザアカウントのパスワードが必要です。
 .手順
 . ローカルワークステーション上のコマンドシェルで、 sftp ユーティリティを使用して、ライセンスファイルを Deploy 仮想マシンにアップロードします。
 +
-例
+出力例
 
 +
 ....
@@ -81,9 +81,58 @@ exit
 
 
 
-== ESXiハイパーバイザーホストの追加
+== ハイパーバイザーホストの追加
 
-ONTAP Select ノードを実行する各ハイパーバイザーホストを登録する必要があります。この一部として、 Deploy 管理ユーティリティは、ホストを管理する vCenter Server への認証、または ESXi スタンドアロンホストへの直接の認証を行います。
+ONTAP Select ノードを実行する各ハイパーバイザーホストを登録する必要があります。
+
+[role="tabbed-block"]
+====
+.KVM の略
+--
+ONTAP Selectノードを実行するハイパーバイザーホストを登録する必要があります。この一環として、Deploy管理ユーティリティはKVMホストに対して認証します。
+
+.このタスクについて
+複数のハイパーバイザーホストが必要な場合は、この手順を使用して各ホストを追加します。
+
+.手順
+. 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
+. ホストを登録します。
++
+[source, asciidoc]
+----
+`host register -name <FQDN|IP> -hypervisor-type KVM -username KVM_USERNAME`
+----
++
+出力例
+
++
+[listing]
+----
+host register -name 10.234.81.14 -hypervisor-type KVM -username root
+----
++
+プロンプトが表示されたら、ホストアカウントのパスワードを入力します。
+
+. ホストの状態を表示し、認証されていることを確認します。
++
+[source, asciidoc]
+----
+host show -name <FQDN|IP> -detailed
+----
++
+出力例
+
++
+[listing]
+----
+host show -name 10.234.81.14 -detailed
+----
+
+
+--
+.ESXi
+--
+この一部として、 Deploy 管理ユーティリティは、ホストを管理する vCenter Server への認証、または ESXi スタンドアロンホストへの直接の認証を行います。
 
 .このタスクについて
 vCenter で管理されているホストを登録する前に、 vCenter Server 用の管理サーバアカウントを追加する必要があります。ホストが vCenter で管理されていない場合は、ホストを登録する際にホストのクレデンシャルを指定できます。この手順 を使用して各ホストを追加します。
@@ -95,7 +144,7 @@ vCenter で管理されているホストを登録する前に、 vCenter Server
 credential add -hostname <fqdn|ip> -type vcenter -username vcenter _username `
 
 +
-例
+出力例
 
 +
 ....
@@ -107,7 +156,7 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 ** vCenterで管理されているホストを登録します。
 `host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
 +
-例
+出力例
 
 +
 ....
@@ -120,7 +169,7 @@ host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.com
 host show -name <fqdn|ip> -detailed ’
 
 +
-例
+出力例
 
 +
 ....
@@ -128,6 +177,8 @@ host show -name 10.234.81.14 -detailed
 ....
 
 
+--
+====
 
 
 == ONTAP Select クラスタを作成および設定する
@@ -147,7 +198,7 @@ ONTAP Select クラスタを作成すると、 Deploy ユーティリティは�
 cluster create -name clustername -node-count nodes を指定します
 
 +
-例
+出力例
 
 +
 ....
@@ -158,7 +209,7 @@ cluster create -name test-cluster -node-count 1
 cluster modify -name clustername -mgmt ip ip_address -netmask netmask gateway ip_address -dns-servers <fqdn|ip>_list -dns-domains domain_list
 
 +
-例
+出力例
 
 +
 ....
@@ -191,7 +242,7 @@ ONTAP Select クラスタ内の各ノードを設定する必要があります�
 
 . ノードを選択し、基本設定を実行します。「 node modify -name nodename -cluster-name clustername -host-name <fqdn|ip> -license-serial -number -instance -type type -passthrough-disks false 」
 +
-例
+出力例
 
 +
 ....
@@ -209,7 +260,7 @@ ONTAP Select ノードには大容量階層ライセンスが使用されます�
 host network show -host-name <fqdn|ip> -detailed ’
 
 +
-例
+出力例
 
 +
 ....
@@ -223,7 +274,7 @@ node modify -name nodename -cluster-name clustername -mgmt -ip ip-management-net
 シングルノードクラスタを導入する場合は、内部ネットワークは必要なく、 -internal-network を削除する必要があります。
 
 +
-例
+出力例
 
 +
 ....
@@ -235,7 +286,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.
 node show -name nodename -cluster-name clustername -detailed ’と入力します
 
 +
-例
+出力例
 
 +
 ....
@@ -262,7 +313,7 @@ ONTAP Select クラスタ内の各ノードで使用するストレージを設�
 host storage pool show -host-name <fqdn|ip>`
 
 +
-例
+出力例
 
 +
 [listing]
@@ -280,7 +331,7 @@ VMware vSphere から使用可能なストレージプールを取得するこ�
 capacity-limit パラメータを指定した場合は、 GB または TB の値を指定します。
 
 +
-例
+出力例
 
 +
 [listing]
@@ -293,7 +344,7 @@ node-name test-cluster-01 -capacity-limit 500GB
 node storage pool show -cluster-name clustername -node-name の形式です
 
 +
-例
+出力例
 
 +
 [listing]
@@ -305,7 +356,7 @@ node storage pool show -cluster-name test-cluster -node-name testcluster-01
 「node storage disk attach -node-name -cluster-name clustername -disk list_of drives」のように指定します
 
 +
-例
+出力例
 
 +
 [listing]
@@ -317,7 +368,7 @@ node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000
 node storage disk show -node-name nodename -cluster-name clustername
 
 +
-例
+出力例
 
 +
 [listing]
@@ -342,7 +393,7 @@ node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 「 cluster deploy -name clustername 」と入力します
 
 +
-例
+出力例
 
 +
 [listing]
