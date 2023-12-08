@@ -31,6 +31,7 @@ ONTAP Select には次の機能が含まれており、デフォルトでライ�
 * iSCSI
 * SnapMirror
 * SnapVault
+* FlexCache
 * FlexClone
 * SnapRestore
 * 重複排除機能と圧縮機能
