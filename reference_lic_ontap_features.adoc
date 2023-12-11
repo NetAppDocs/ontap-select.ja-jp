@@ -25,19 +25,20 @@ NOTE: ハードウェア固有の依存関係を持つONTAP 機能は、一般�
 
 ONTAP Select には次の機能が含まれており、デフォルトでライセンスが付与されています。
 
-* NVMe over TCP
-* NFS
 * CIFS
-* iSCSI
-* SnapMirror
-* SnapVault
+* 重複排除機能と圧縮機能
 * FlexCache
 * FlexClone
-* SnapRestore
-* 重複排除機能と圧縮機能
+* iSCSI
+* NDMP
+* NetApp Volume Encryption （規制対象外の国のみ）
+* NFS
+* NVMe over TCP
 * ONTAP のマルチテナンシー機能
 * ONTAP S3
-* NetApp Volume Encryption （規制対象外の国のみ）
+* SnapMirror
+* SnapRestore
+* SnapVault
 
 
 
@@ -46,12 +47,12 @@ ONTAP Select には次の機能が含まれており、デフォルトでライ�
 
 ONTAP 機能がデフォルトで有効になっていない場合は、次のライセンスを別途取得する必要があります。
 
-* SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）
-* FabricPool
 * Data Availability Service の略
+* FabricPool
 * FlexCache （コストゼロ）
-* SyncMirror （コストゼロ）
 * MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）
+* SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）
+* SyncMirror （コストゼロ）
 
 
 
