@@ -160,3 +160,9 @@ ONTAP Select 評価用クラスタをアップグレードして、 Deploy 管�
 == 期限切れの容量プールライセンスを管理します。
 
 通常、ライセンスの有効期限が切れても何も起こりません。ただし、ノードは期限切れのライセンスに関連付けられているため、別のライセンスをインストールすることはできません。ライセンスを更新するまでは、リブート処理やフェイルオーバー処理など、アグリゲートがオフラインになるような処理を行う必要があります。推奨される対処方法は、ライセンスの更新を迅速に行うことです。
+
+
+
+== アドオンライセンスを管理します。
+
+ONTAP Select製品の場合、アドオンライセンスはONTAP内で直接適用され、ONTAP Select Deployでは管理されません。を参照してください link:https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["ライセンスの管理の概要（クラスタ管理者のみ）"^] および link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html["ライセンスキーを追加して新しい機能を有効にします"^] を参照してください。
