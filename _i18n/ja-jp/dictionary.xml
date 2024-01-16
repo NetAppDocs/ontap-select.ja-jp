@@ -3641,4 +3641,5 @@ storage aggregate show-spare-disks</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">ライセンスの管理の概要（クラスタ管理者のみ）</block>
   <block id="a9a72d6af23763d014760a444a6e414b" category="inline-link-macro">ライセンスキーを追加して新しい機能を有効にします</block>
   <block id="9737e258b60b8a3df4f9108391ab5366" category="paragraph">ONTAP Select製品の場合、アドオンライセンスはONTAP内で直接適用され、ONTAP Select Deployでは管理されません。を参照してください <block ref="ce1ae1f692dcc386afa95c6f51ac8788" category="inline-link-macro-rx"></block> および <block ref="63870a99c743eac4250d67a3b291ca39" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="b5150f2681f3eb5a5b6aab4cbdadad34" category="paragraph">仮想NAS（vNAS）環境では、仮想SAN（VSAN）上のONTAP Selectクラスタ、一部のHCI製品、外付けアレイタイプのデータストアがサポートされます。これらの構成の基盤となるインフラは、データストアの耐障害性を提供します。</block>
 </blocks>
