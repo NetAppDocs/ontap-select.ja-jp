@@ -130,10 +130,6 @@ ONTAP Select DeployのWebユーザインターフェイスを使用して、シ�
 +
 ページは一定の間隔で自動的に更新されます。
 
-+
-
-TIP: クラスタの作成処理が開始されても完了しない場合は、定義したONTAP管理パスワードが登録されていない可能性があります。この場合、 admin アカウントの password_changeme123_ を使用して、 ONTAP Select クラスタの管理インターフェイスにアクセスできます。
-
 
 
 --
@@ -180,13 +176,19 @@ TIP: クラスタの作成処理が開始されても完了しない場合は、
 +
 ページは一定の間隔で自動的に更新されます。
 
-+
-
-TIP: クラスタの作成処理が開始されても完了しない場合は、定義したONTAP管理パスワードが登録されていない可能性があります。この場合、 admin アカウントの password_changeme123_ を使用して、 ONTAP Select クラスタの管理インターフェイスにアクセスできます。
-
 
 
 --
 ====
 .完了後
 ONTAP Select AutoSupport機能が設定されていることを確認し、ONTAP Select Deployの設定データをバックアップする必要があります。
+
+[TIP]
+====
+クラスタの作成処理が開始されても完了しない場合は、定義したONTAP管理パスワードが適用されないことがあります。この場合、次のCLIコマンドを使用して、ONTAP Selectクラスタの一時的な管理パスワードを確認できます。
+
+[listing]
+----
+(ONTAPdeploy) !/opt/netapp/tools/get_cluster_temp_credentials --cluster-name my_cluster
+----
+====
