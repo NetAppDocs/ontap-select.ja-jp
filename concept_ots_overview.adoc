@@ -99,7 +99,6 @@ ONTAP Select クラスタ内の各ノードには、 ONTAP のいくつかの機
 * SVM 移行
 * Storage VMディザスタリカバリ（SVM DR）
 * SnapLock コンプライアンス
-* 改ざん防止Snapshotコピー
 * VMware HCX
 
 

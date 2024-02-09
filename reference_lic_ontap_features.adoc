@@ -49,9 +49,12 @@ ONTAP 機能がデフォルトで有効になっていない場合は、次の�
 
 * Data Availability Service の略
 * FabricPool
-* FlexCache （コストゼロ）
 * MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）
 * SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）
++
+** 改ざん防止Snapshotコピー
+
+
 * SyncMirror （コストゼロ）
 
 
