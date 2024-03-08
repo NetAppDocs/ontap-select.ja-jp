@@ -1318,7 +1318,6 @@
   <block id="f8f58e06b7004f2c9a02a8875d2bd10d" category="list-text">NetApp Volume Encryption （規制対象外の国のみ）</block>
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="cd4d0565c73e994a0df5b7c0a072acc6" category="list-text">Data Availability Service の略</block>
-  <block id="fe22023b7eac61fb7114a4a9abd199bc" category="list-text">FlexCache （コストゼロ）</block>
   <block id="53b398e6d63ff4fbc7624b7d3737c3ea" category="list-text">SyncMirror （コストゼロ）</block>
   <block id="eab10597f9ef50e8058170729878869e" category="list-text">MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）</block>
   <block id="b3575342fc6b994ce81d8810bb513442" category="admonition">StorageGRID Webscale を使用するときに FabricPool ライセンスは必要ありません。</block>
@@ -3642,4 +3641,19 @@ storage aggregate show-spare-disks</block>
   <block id="9737e258b60b8a3df4f9108391ab5366" category="paragraph">ONTAP Select製品の場合、アドオンライセンスはONTAP内で直接適用され、ONTAP Select Deployでは管理されません。を参照してください <block ref="ce1ae1f692dcc386afa95c6f51ac8788" category="inline-link-macro-rx"></block> および <block ref="63870a99c743eac4250d67a3b291ca39" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="b5150f2681f3eb5a5b6aab4cbdadad34" category="paragraph">仮想NAS（vNAS）環境では、仮想SAN（VSAN）上のONTAP Selectクラスタ、一部のHCI製品、外付けアレイタイプのデータストアがサポートされます。これらの構成の基盤となるインフラは、データストアの耐障害性を提供します。</block>
   <block id="106b2acee8931f9a5618948233ee3f9a" category="paragraph">クラスタの作成処理が開始されても完了しない場合は、定義したONTAP管理パスワードが適用されないことがあります。この場合、次のCLIコマンドを使用して、ONTAP Selectクラスタの一時的な管理パスワードを確認できます。</block>
+  <block id="728dae8c09c02d31a488c58d0abbc713" category="paragraph-title">DeployはどのようにしてONTAP Selectライセンスが更新されたことを検出しますか。</block>
+  <block id="1c404f221fc19754e03aac9abdf229e0" category="paragraph">方法はすべてのライセンスで同じですが、詳細は容量階層と容量プールのどちらのライセンスかによって異なります。</block>
+  <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link-macro">NetApp Support Site</block>
+  <block id="7eb90e44cd52166d38ee412a0232d948" category="list-text">ONTAP Select Deployは、NetAppから更新されたライセンスファイルを購入することで、ライセンスとサポート契約が更新されたかどうかを検出します。ライセンスファイル（.nlf）には容量、開始日、終了日が含まれており、 <block ref="49b4f755ae136a93a19c82bfba9113cf" category="inline-link-macro-rx"></block>をクリックし、Deployサーバで更新します。</block>
+  <block id="df893ad066dabfa13efd91221b3bccff" category="admonition">NLFをDeployサーバにロードするには、* Add *および* Update *機能を使用します。*追加*サーバに新しいライセンスを追加し、*更新*は、容量、ノードライセンス（Standard、Premium、Premium XL）、サポートの開始日と終了日（大容量階層ライセンス）、サブスクリプションの開始日と終了日（容量プールライセンス）などの情報で既存のファイルを更新します。</block>
+  <block id="d39f37cf3f2791c375e1df22336bc0c1" category="admonition">ライセンスファイルは変更しないでください。これにより、セキュリティキーが無効になり、ライセンスが無効になります。</block>
+  <block id="8f5801f55c8818fb8546dec02aa0cb36" category="list-text">大容量階層ライセンス*は、ONTAP Selectノードのシリアル番号に関連付けられたノード単位の永続的ライセンスです。別のサポート契約で販売されます。ライセンスは永続的ですが、ONTAP SelectのアップグレードにアクセスしてNetAppテクニカルサポートの支援を受けるには、サポート契約を更新する必要があります。容量やノードサイズなどのライセンスパラメータを変更するには、現在のサポート契約も必要です。</block>
+  <block id="477c7238569246f69cc9ae8f8ecc6b57" category="paragraph">大容量階層ライセンスの更新、パラメータの変更、サポート契約の更新を購入するには、発注にノードのシリアル番号が必要です。大容量階層ノードのシリアル番号は9桁で、先頭は「32」です。</block>
+  <block id="ea9589592b98533b70a296a006630c8b" category="paragraph">購入が完了し、ライセンスファイルが生成されると、* Update *機能を使用してDeployサーバにアップロードされます。</block>
+  <block id="6e6f36110dec05c8c4b7d9473e704fee" category="list-text">容量プールライセンス*は、特定の容量プールとノードサイズ（Standard、Premium、Premium XL）を使用して1つ以上のクラスタを導入する権利を付与するサブスクリプションです。サブスクリプションには、指定された期間のライセンスとサポートを使用する権利が含まれます。ライセンスを使用する権利とサポート契約には、開始日と終了日が指定されています。</block>
+  <block id="920b036cff328a6924c0fbdd7ab08f4d" category="paragraph-title">Deployは、ノードがライセンスまたはサポート契約を更新したかどうかをどのように検出しますか。</block>
+  <block id="c3975d39937733b863b8e078a435a60a" category="paragraph">更新されたライセンスファイルの購入、生成、アップロードは、Deployが更新されたライセンスとサポート契約を検出する方法です。</block>
+  <block id="79416550309ddcac023464218d55a23d" category="paragraph">大容量階層のサポート契約の終了日が過ぎてもノードは稼働し続けることはできますが、ONTAPの更新をダウンロードしてインストールすることはできません。また、最初にサポート契約を最新の状態にしないかぎり、NetAppのテクニカルサポートにお問い合わせください。</block>
+  <block id="9b9568babf180c232b393ba5f95ff4c3" category="paragraph">容量プールのサブスクリプションが期限切れになると、最初に警告が表示されますが、30日後にシステムをシャットダウンすると、更新されたサブスクリプションがDeployサーバにインストールされるまでリブートされません。</block>
+  <block id="666ca9627e87a2f5ba354cdf9f1b35dd" category="paragraph">ONTAP Selectとライセンスの更新の詳細については、『 <block ref="7219e755fcbad1744f8ee5b6bd1c51b6" category="inline-link-macro-rx"></block>。</block>
 </blocks>
