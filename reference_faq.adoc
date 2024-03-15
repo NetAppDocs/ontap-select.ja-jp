@@ -76,7 +76,7 @@ NOTE: API v3 リリースは、以前のバージョンの API と後方互換�
 .ONTAP MetroCluster SDS には、 Premium ライセンス以上が必要ですか？
 はい。
 
-.ONTAP Select DeployおよびONTAP Select クラスタとノードの管理のIPアドレスをインストール後に変更することはできますか。
+.ONTAP Selectクラスタのネットワーク設定はインストール後に変更できますか。
 ONTAP Select Deployは、GUI、CLI、またはREST APIから実行できるクラスタ更新処理を使用して、次のONTAP Select クラスタプロパティへの変更を認識します。
 
 * ネットワークの設定（ IP アドレス、 DNS 、 NTP 、ネットマスク、ゲートウェイ）
@@ -89,10 +89,10 @@ ONTAP Select Deployは、GUI、CLI、またはREST APIから実行できるク�
 * ホストのネットワーク名とストレージプール名が変更された
 
 
-
-NOTE: ONTAP Select Deploy VMのIPアドレスの変更はサポートされていません。
-
 ONTAP Select Deploy 2.6にアップグレードすると、導入済みだが元の構成からは変更されていないONTAP Select クラスタに対して、これらの変更をサポートできるようになります。つまり、上記のONTAP Select クラスタプロパティがSystem ManagerまたはvCenterを使用して変更された場合、ONTAP Select Deploy 2.6にアップグレードしても、これらの不整合は修正されません。ONTAP Select Deployによって一意のメタデータが各ONTAP Select VMに追加されるようにするには、ONTAP Select プロパティの変更を最初にロールバックする必要があります。
+
+.ONTAP Select Deployのネットワーク設定はインストール後に変更できますか。
+Deployインスタンスを環境で実行したあとにそのインスタンスのネットワークの詳細を変更することはできません。詳細については、を参照してください link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance["技術情報アーティクル「Modifying DNS configuration of ONTAP Deploy instance」"^]。
 
 .DeployはどのようにしてONTAP Selectライセンスが更新されたことを検出しますか。
 方法はすべてのライセンスで同じですが、詳細は容量階層と容量プールのどちらのライセンスかによって異なります。

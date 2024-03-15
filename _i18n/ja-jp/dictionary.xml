@@ -2718,7 +2718,6 @@
   <block id="aae4f232f5ffb9e9721fd019ba8b1efe" category="listing-title">ONTAP Select DeployのSwagger APIページにアクセスする方法を教えてください。</block>
   <block id="40a60db1cb196f556dfa7fc31b0fc0de" category="paragraph">はい。ONTAP Select Deployユーティリティは、ONTAP Select クラスタとは別にアップグレードできます。同様に、SelectクラスタもONTAP Select Deployユーティリティとは別にアップグレードできます。</block>
   <block id="59515ed968b51f31e5dba26d6fd648ce" category="paragraph">ONTAP Select Deployは、GUI、CLI、またはREST APIから実行できるクラスタ更新処理を使用して、次のONTAP Select クラスタプロパティへの変更を認識します。</block>
-  <block id="0505613d75e769b75ece38e7cd9acbeb" category="admonition">ONTAP Select Deploy VMのIPアドレスの変更はサポートされていません。</block>
   <block id="1c1b6371821b57c0181e5ac9c60110dd" category="paragraph">ONTAP Select Deploy 2.6にアップグレードすると、導入済みだが元の構成からは変更されていないONTAP Select クラスタに対して、これらの変更をサポートできるようになります。つまり、上記のONTAP Select クラスタプロパティがSystem ManagerまたはvCenterを使用して変更された場合、ONTAP Select Deploy 2.6にアップグレードしても、これらの不整合は修正されません。ONTAP Select Deployによって一意のメタデータが各ONTAP Select VMに追加されるようにするには、ONTAP Select プロパティの変更を最初にロールバックする必要があります。</block>
   <block id="19e3b046872155951a88cbd2e790b7e6" category="paragraph">はい。ONTAP Select DeployはKVMまたはESXにインストールできます。両方のインストール環境で、どちらのハイパーバイザーにもONTAP Select クラスタを作成できます。</block>
   <block id="5a1db0789444e54a1e8a26c422380d57" category="paragraph">ESX ホストのライセンスが適切な場合は、 ESX ホストを vCenter Server で管理する必要はありません。ただし、ホストがvCenterサーバで管理されている場合は、そのvCenter Serverを使用するようにONTAP Select Deployを設定する必要があります。つまり、ESXホストがvCenter Serverによってアクティブに管理されている場合、ONTAP Select DeployでESXホストをスタンドアロンとして設定することはできません。ONTAP Select Deploy VMは、vMotionまたはVMwareのHAイベントが原因で、vCenterに依存してESXiホスト間のすべてのONTAP Select VM移行を追跡します。</block>
@@ -2794,7 +2793,6 @@
   <block id="ab7351a7aeb835a8c5a54bc22957dc89" category="paragraph-title">FAS クラスタと同じ手順 を使用して ONTAP Select をアップグレードできますか。</block>
   <block id="a16c0a0ef72a1eb743acb4bc099a7f63" category="paragraph-title">FAS クラスタと同じ手順 を使用して ONTAP Select をリバートできますか。</block>
   <block id="6c934076f6916c570e1e192badaff0f6" category="paragraph-title">ONTAP MetroCluster SDS には、 Premium ライセンス以上が必要ですか？</block>
-  <block id="d2ff884cc30a8e5431e7b9a592afafd4" category="paragraph-title">ONTAP Select DeployおよびONTAP Select クラスタとノードの管理のIPアドレスをインストール後に変更することはできますか。</block>
   <block id="635eb068c84d97fe678e1459fc684023" category="paragraph-title">1つのONTAP Select DeployインスタンスでESXとKVMの両方にクラスタを作成できますか。</block>
   <block id="e5f0aa18f251bcf3fa0e3a7d649aefb9" category="paragraph-title">ESX 上の ONTAP Select には vCenter が必要ですか。</block>
   <block id="3690bfca39d229721656be52d6e38df1" category="paragraph-title">ソフトウェア RAID とは</block>
@@ -3656,4 +3654,8 @@ storage aggregate show-spare-disks</block>
   <block id="79416550309ddcac023464218d55a23d" category="paragraph">大容量階層のサポート契約の終了日が過ぎてもノードは稼働し続けることはできますが、ONTAPの更新をダウンロードしてインストールすることはできません。また、最初にサポート契約を最新の状態にしないかぎり、NetAppのテクニカルサポートにお問い合わせください。</block>
   <block id="9b9568babf180c232b393ba5f95ff4c3" category="paragraph">容量プールのサブスクリプションが期限切れになると、最初に警告が表示されますが、30日後にシステムをシャットダウンすると、更新されたサブスクリプションがDeployサーバにインストールされるまでリブートされません。</block>
   <block id="666ca9627e87a2f5ba354cdf9f1b35dd" category="paragraph">ONTAP Selectとライセンスの更新の詳細については、『 <block ref="7219e755fcbad1744f8ee5b6bd1c51b6" category="inline-link-macro-rx"></block>。</block>
+  <block id="e9bea8d0b42d385115a0325044f2d402" category="paragraph-title">ONTAP Selectクラスタのネットワーク設定はインストール後に変更できますか。</block>
+  <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">ONTAP Select Deployのネットワーク設定はインストール後に変更できますか。</block>
+  <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">技術情報アーティクル「Modifying DNS configuration of ONTAP Deploy instance」</block>
+  <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">Deployインスタンスを環境で実行したあとにそのインスタンスのネットワークの詳細を変更することはできません。詳細については、を参照してください <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>。</block>
 </blocks>
