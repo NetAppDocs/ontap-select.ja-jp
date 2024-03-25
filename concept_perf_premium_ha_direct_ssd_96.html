@@ -1,0 +1,3408 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>パフォーマンス：Premium HA直接接続型SSDストレージ</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="パフォーマンス：Premium HA直接接続型SSDストレージ" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+	<meta property="og:description" content="ONTAP Select 9.6 パフォーマンスに関するパフォーマンス情報 - HA 直接接続型のプレミアム SSD ストレージ。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/ontap-select/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="ONTAP Select 9.6 パフォーマンスに関するパフォーマンス情報 - HA 直接接続型のプレミアム SSD ストレージ。">
+  <meta name="keywords" content=" ontap select, performance"><!-- Icons -->
+  <link rel="icon" href="/ja-jp/ontap-select/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/ontap-select/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/ontap-select/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/ontap-select/js/na-search.js'></script><script src='/ja-jp/ontap-select/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/ja-jp/ontap-select/js/custom-dropdown.js'></script>
+  <script src='/ja-jp/ontap-select/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/ontap-select/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/ontap-select/js/jszip.min.js'></script><script src='/ja-jp/ontap-select/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/ja-jp/ontap-select/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/ja/">
+                <image id="ie-header-logo" src="/ja-jp/ontap-select/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/ja/support-and-training/documentation/">ドキュメント</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/ja-jp/ontap-select/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">日本語</span>
+                    <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/ontap-select/concept_perf_premium_ha_direct_ssd_96.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/ja-jp/ontap-select/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">すべてのNetApp</span>
+                    <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/ja/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">サポート</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb-ja.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">ナレッジ ベース</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">トレーニング</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/ja-jp/ontap-select/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/ja-jp/ontap-select/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">すべてのドキュメント</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/ja-jp/ontap-select/">-->
+      ONTAP Select
+    <!--</a>-->
+  </div>
+</div>
+
+            
+<div id="ie-selectors"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title=" 9.14.1">
+    <label>バージョン</label>
+    <span translate="no" class="notranslate">9.14.1</span>
+    <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown version invisible" />
+    <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup version" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.14.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-select-9131/concept_perf_premium_ha_direct_ssd_96.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.13.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-select-9121/concept_perf_premium_ha_direct_ssd_96.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-select-9111/concept_perf_premium_ha_direct_ssd_96.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.11.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-select-9101/concept_perf_premium_ha_direct_ssd_96.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.10.1</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div></div>
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/ja-jp/ontap-select/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/ja-jp/ontap-select/search.html" 
+        data-type="widget"
+        data-placeholder="ドキュメントを検索"
+        data-no-results-found="{query}に一致する結果は見つかりませんでした"
+        data-did-you-mean="{suggestion}で検索しています。"
+        data-no-results-found-did-you-mean="{query}に一致する結果は見つかりませんでした。{suggestion}で検索しますか？"
+        data-results-found="{hitCount}件の結果が見つかりました"
+        data-error-message="エラーが発生しました。もう一度お試しください。"
+        data-error-reset="検索をリセット"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 9.14.1のドキュメント"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/ontap-select/index.html">
+        ONTAP Select 9.14.1のドキュメント
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リリースノート"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> リリースノート</div>-->
+         リリースノート
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select リリースノート"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_release_notes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/reference_release_notes.html">
+        ONTAP Select リリースノート
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新機能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_new_ots.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/reference_new_ots.html">
+        新機能
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概念"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 概念</div>-->
+         概念
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="製品の概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_ots_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/concept_ots_overview.html">
+        製品の概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 導入"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_ots_deploy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/concept_ots_deploy.html">
+        ONTAP Select 導入
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ビジネスユースケース"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ビジネスユースケース</div>-->
+         ビジネスユースケース
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ビジネスニーズと使用シナリオ"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_usecase_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_usecase_overview.html">
+        ビジネスニーズと使用シナリオ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リモートオフィス、ブランチオフィス"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_usecase_robo.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_usecase_robo.html">
+        リモートオフィス、ブランチオフィス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="プライベートクラウドとデータセンター"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_usecase_private_cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_usecase_private_cloud.html">
+        プライベートクラウドとデータセンター
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MetroCluster SDS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_usecase_mc_sds.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_usecase_mc_sds.html">
+        MetroCluster SDS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="用語集"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_terminology.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/concept_terminology.html">
+        用語集
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="計画"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 計画</div>-->
+         計画
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="導入のワークフロー"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_workflow_deploy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/concept_workflow_deploy.html">
+        導入のワークフロー
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select の場合"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP Select の場合</div>-->
+         ONTAP Select の場合
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="一般的な要件"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_general.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_general.html">
+        一般的な要件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ハイパーバイザーとハードウェア"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_hardware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_hardware.html">
+        ハイパーバイザーとハードウェア
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージと RAID"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_storage.html">
+        ストレージと RAID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ガイブストレージノヨウケン"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ガイブストレージノヨウケン</div>-->
+         ガイブストレージノヨウケン
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware ESXi"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_vnas.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-select/reference_plan_ots_vnas.html">
+        VMware ESXi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="KVM の略"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_kvm.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-select/reference_plan_ots_kvm.html">
+        KVM の略
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ネットワーキング"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_networking.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_networking.html">
+        ネットワーキング
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="2 ノードクラスタ"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_two_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_two_node.html">
+        2 ノードクラスタ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リモートオフィス、ブランチオフィス"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_robo.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_robo.html">
+        リモートオフィス、ブランチオフィス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MetroCluster SDS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_mcc_sds.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_mcc_sds.html">
+        MetroCluster SDS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi上のVMware vCenter"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_ots_vcenter.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_ots_vcenter.html">
+        ESXi上のVMware vCenter
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 導入"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP Select 導入</div>-->
+         ONTAP Select 導入
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="一般的な要件"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_dep_general.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_dep_general.html">
+        一般的な要件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware 環境"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_dep_vmware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_plan_dep_vmware.html">
+        VMware 環境
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ベストプラクティス"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_plan_best_practices.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/reference_plan_best_practices.html">
+        ベストプラクティス
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用許諾"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 使用許諾</div>-->
+         使用許諾
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="オプション（ Options ）"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> オプション（ Options ）</div>-->
+         オプション（ Options ）
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="評価用ライセンス"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_evaluation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_evaluation.html">
+        評価用ライセンス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="本番環境用ライセンス"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_production.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_production.html">
+        本番環境用ライセンス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="プラットフォームライセンスの提供"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_platforms.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_platforms.html">
+        プラットフォームライセンスの提供
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="容量プールのライセンスモデル"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 容量プールのライセンスモデル</div>-->
+         容量プールのライセンスモデル
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="運用の詳細"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_cp_operation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_cp_operation.html">
+        運用の詳細
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ノードのシリアル番号"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_cp_serial_number.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_cp_serial_number.html">
+        ノードのシリアル番号
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="制限事項"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_cp_restrictions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_cp_restrictions.html">
+        制限事項
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="容量プールと大容量階層の比較"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_cp_compare_ct.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_cp_compare_ct.html">
+        容量プールと大容量階層の比較
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="利点のまとめ"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_cp_benefits.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_cp_benefits.html">
+        利点のまとめ
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="購入"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 購入</div>-->
+         購入
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ライセンス関連のワークフロー"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_lic_workflow.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_lic_workflow.html">
+        ライセンス関連のワークフロー
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="大容量階層"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_lic_acquire_ct.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_lic_acquire_ct.html">
+        大容量階層
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="容量プール"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_lic_acquire_cp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_lic_acquire_cp.html">
+        容量プール
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP の機能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_lic_ontap_features.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/reference_lic_ontap_features.html">
+        ONTAP の機能
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="をインストールします"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> をインストールします</div>-->
+         をインストールします
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="インストール前のチェックリスト"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> インストール前のチェックリスト</div>-->
+         インストール前のチェックリスト
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ホスト準備チェックリスト"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_chk_host_prep.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_chk_host_prep.html">
+        ホスト準備チェックリスト
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy ユーティリティの必要な情報"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_chk_deploy_req_info.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_chk_deploy_req_info.html">
+        Deploy ユーティリティの必要な情報
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select に必要な情報"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_chk_select_req_info.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_chk_select_req_info.html">
+        ONTAP Select に必要な情報
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NVMe ホストの設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_chk_nvme_configure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_chk_nvme_configure.html">
+        NVMe ホストの設定
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select Deploy をインストールする"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_install_deploy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_install_deploy.html">
+        ONTAP Select Deploy をインストールする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタを導入"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_deploy_cluster.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_deploy_cluster.html">
+        クラスタを導入
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタの初期状態"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_initial_state.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/reference_initial_state.html">
+        クラスタの初期状態
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 管理</div>-->
+         管理
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="作業を開始する前に"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_adm_before.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/concept_adm_before.html">
+        作業を開始する前に
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ノードをアップグレードする"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_adm_upgrading_nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/concept_adm_upgrading_nodes.html">
+        ノードをアップグレードする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="診断とサポート"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_support.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_adm_support.html">
+        診断とサポート
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="セキュリティ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_security.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_adm_security.html">
+        セキュリティ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ネットワーク接続"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_connectivity.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_adm_connectivity.html">
+        ネットワーク接続
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="メディエーター"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_mediators.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_adm_mediators.html">
+        メディエーター
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_clusters.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_adm_clusters.html">
+        クラスタ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ノードとホスト"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ノードとホスト</div>-->
+         ノードとホスト
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VM ビデオコンソール"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_video_console.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_adm_video_console.html">
+        VM ビデオコンソール
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタノードのサイズを変更する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_resize.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_adm_resize.html">
+        クラスタノードのサイズを変更する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="障害が発生したSW RAIDドライブの交換"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_replace_drives_swraid.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_adm_replace_drives_swraid.html">
+        障害が発生したSW RAIDドライブの交換
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMFS6へのアップグレード"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_upgrade_vmfs6.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_adm_upgrade_vmfs6.html">
+        VMFS6へのアップグレード
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ライセンス"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_adm_licenses.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_adm_licenses.html">
+        ライセンス
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="詳細"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 詳細</div>-->
+         詳細
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージ"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ストレージ</div>-->
+         ストレージ
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="一般的な概念と特徴"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_stor_concepts_chars.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_stor_concepts_chars.html">
+        一般的な概念と特徴
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ローカル接続ストレージ向けのハードウェア RAID サービス"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_stor_hwraid_local.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_stor_hwraid_local.html">
+        ローカル接続ストレージ向けのハードウェア RAID サービス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ローカル接続ストレージ向けのソフトウェア RAID サービス"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_stor_swraid_local.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_stor_swraid_local.html">
+        ローカル接続ストレージ向けのソフトウェア RAID サービス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSAN および外付けアレイの構成"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_stor_vsan_external.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_stor_vsan_external.html">
+        VSAN および外付けアレイの構成
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージ容量の拡張"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_stor_capacity_inc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_stor_capacity_inc.html">
+        ストレージ容量の拡張
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage Efficiency のサポート"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_stor_eff_support.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_stor_eff_support.html">
+        Storage Efficiency のサポート
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ネットワーキング"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ネットワーキング</div>-->
+         ネットワーキング
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="一般的な概念と特徴"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_nw_concepts_chars.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_nw_concepts_chars.html">
+        一般的な概念と特徴
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="シングルノード構成とマルチノード構成"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_nw_single_multi_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_nw_single_multi_node.html">
+        シングルノード構成とマルチノード構成
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="内部ネットワークと外部ネットワーク"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_nw_internal_external.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_nw_internal_external.html">
+        内部ネットワークと外部ネットワーク
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="サポートされている構成"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_nw_supported_configs.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_nw_supported_configs.html">
+        サポートされている構成
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere vSwitchの設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_nw_vsphere_vswitch_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_nw_vsphere_vswitch_config.html">
+        VMware vSphere vSwitchの設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="物理スイッチの構成"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_nw_physical_switch_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_nw_physical_switch_config.html">
+        物理スイッチの構成
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データと管理の分離"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_nw_data_mgmt_separation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_nw_data_mgmt_separation.html">
+        データと管理の分離
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="高可用性アーキテクチャ"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 高可用性アーキテクチャ</div>-->
+         高可用性アーキテクチャ
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HA の設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_ha_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_ha_config.html">
+        HA の設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="同期レプリケーションとミラーアグリゲート"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_ha_mirroring.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_ha_mirroring.html">
+        同期レプリケーションとミラーアグリゲート
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="その他のハイアベイラビリティ機能"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_ha_other.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_ha_other.html">
+        その他のハイアベイラビリティ機能
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="パフォーマンス"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> パフォーマンス</div>-->
+         パフォーマンス
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="パフォーマンスの概要"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_perf_general.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_perf_general.html">
+        パフォーマンスの概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 9.6のパフォーマンス"
+      data-li-level="3#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html">
+        ONTAP Select 9.6のパフォーマンス
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST による自動化"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> REST による自動化</div>-->
+         REST による自動化
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概念"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 概念</div>-->
+         概念
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST Web サービス"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_rest.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_rest.html">
+        REST Web サービス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy API にアクセスします"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_how_access.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_how_access.html">
+        Deploy API にアクセスします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API のバージョン管理を導入"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_versions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_versions.html">
+        API のバージョン管理を導入
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="基本操作"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_operation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_operation.html">
+        基本操作
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リクエストおよびレスポンストランザクション"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_transaction.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_transaction.html">
+        リクエストおよびレスポンストランザクション
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="非同期処理"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_async_proc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_async_proc.html">
+        非同期処理
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ブラウザを使用してにアクセスします"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ブラウザを使用してにアクセスします</div>-->
+         ブラウザを使用してにアクセスします
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="作業を開始する前に"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_before_browser.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_before_browser.html">
+        作業を開始する前に
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ドキュメントページにアクセスします"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_api_access_doc_page.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_api_access_doc_page.html">
+        ドキュメントページにアクセスします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API呼び出しについて理解する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_api_understanding_call.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_api_understanding_call.html">
+        API呼び出しについて理解する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ワークフロープロセス"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ワークフロープロセス</div>-->
+         ワークフロープロセス
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="作業を開始する前に"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_before_workflows.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_before_workflows.html">
+        作業を開始する前に
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ワークフロー1クラスタを作成する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_api_workflow01.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_api_workflow01.html">
+        ワークフロー1クラスタを作成する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Python を使用してアクセスします"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Python を使用してアクセスします</div>-->
+         Python を使用してアクセスします
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="作業を開始する前に"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_before_python.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_before_python.html">
+        作業を開始する前に
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="スクリプトを理解する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_api_understanding_scripts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/concept_api_understanding_scripts.html">
+        スクリプトを理解する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Python コードサンプル"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Python コードサンプル</div>-->
+         Python コードサンプル
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタを作成します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_api_script_cc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_api_script_cc.html">
+        クラスタを作成します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="JSON を使用してクラスタを作成します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_api_json_cc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_api_json_cc.html">
+        JSON を使用してクラスタを作成します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ノードライセンスを追加"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_api_script_anl.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_api_script_anl.html">
+        ノードライセンスを追加
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタを削除します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_api_script_dc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_api_script_dc.html">
+        クラスタを削除します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="共通サポートモジュール"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_api_script_common.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_api_script_common.html">
+        共通サポートモジュール
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタノードのサイズを変更"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_api_script_resize.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_api_script_resize.html">
+        クラスタノードのサイズを変更
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ansible で自動化"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/concept_automate_ansible.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/ontap-select/concept_automate_ansible.html">
+        Ansible で自動化
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CLI を使用します"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> CLI を使用します</div>-->
+         CLI を使用します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SSH を使用してサインインします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_signing_in.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_cli_signing_in.html">
+        SSH を使用してサインインします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタを導入"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_deploy_cluster.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_cli_deploy_cluster.html">
+        クラスタを導入
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="セキュリティ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_security.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_cli_security.html">
+        セキュリティ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ネットワーク接続"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_connectivity.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_cli_connectivity.html">
+        ネットワーク接続
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラスタ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_clusters.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-select/task_cli_clusters.html">
+        クラスタ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ノードとホスト"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ノードとホスト</div>-->
+         ノードとホスト
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi を 6.5 以降にアップグレードしています"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_upgrade_esxi65.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_cli_upgrade_esxi65.html">
+        ESXi を 6.5 以降にアップグレードしています
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ホスト管理サーバを変更する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_host_modify_command.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/reference_host_modify_command.html">
+        ホスト管理サーバを変更する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy ユーティリティ"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Deploy ユーティリティ</div>-->
+         Deploy ユーティリティ
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy インスタンスをアップグレードする"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_upgrade_deploy.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_cli_upgrade_deploy.html">
+        Deploy インスタンスをアップグレードする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy インスタンスを移行する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_migrate_deploy.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_cli_migrate_deploy.html">
+        Deploy インスタンスを移行する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select イメージを追加します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_deploy_image_add.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_cli_deploy_image_add.html">
+        ONTAP Select イメージを追加します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select イメージを削除します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_deploy_image_remove.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_cli_deploy_image_remove.html">
+        ONTAP Select イメージを削除します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="2 ノードクラスタの Deploy をリカバリします"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/task_cli_deploy_recover_two_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-select/task_cli_deploy_recover_two_node.html">
+        2 ノードクラスタの Deploy をリカバリします
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="よく寄せられる質問"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/reference_faq.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/ontap-select/reference_faq.html">
+        よく寄せられる質問
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法的通知"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/ontap-select/legal-notices.html">
+        法的通知
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/ja-jp/ontap-select"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/ja-jp/ontap-select"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/ja-jp/ontap-select/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">パフォーマンス：Premium HA直接接続型SSDストレージ</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-03-06 09:04:46 +0000">03/06/2023</time>
+        
+    
+    
+        <span>共同作成者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/ja-jp/ontap-select/images/discuss-sm.svg" alt="" class="github-icon" />変更を提案</span>
+        <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/ontap-select.ja-jp/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/ja-jp/ontap-select/concept_perf_premium_ha_direct_ssd_96.html&page-title=パフォーマンス：Premium HA直接接続型SSDストレージ" class="page-nav-contribute-link" role="button">ドキュメントの変更をリクエスト</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/main/concept_perf_premium_ha_direct_ssd_96.adoc" class="page-nav-contribute-link" role="button">このページを編集</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >フィードバックを送るには</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/ja-jp/ontap-select/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/ja-jp/ontap-select/pdfs/fullsite-sidebar/ONTAP_Select_のドキュメント.pdf" >
+                    <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>このドキュメント ページのPDF</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/リリースノート.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            リリースノート
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ビジネスユースケース.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ビジネスユースケース
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/計画.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            計画
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ONTAP_Select_の場合.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP Select の場合
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ガイブストレージノヨウケン.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ガイブストレージノヨウケン
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ONTAP_Select_導入.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP Select 導入
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/使用許諾.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            使用許諾
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/オプション__Options__.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            オプション（ Options ）
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/容量プールのライセンスモデル.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            容量プールのライセンスモデル
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/購入.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            購入
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            をインストールします
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/インストール前のチェックリスト.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            インストール前のチェックリスト
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/管理.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            管理
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ノードとホスト.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ノードとホスト
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/詳細.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            詳細
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ストレージ.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ストレージ
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ネットワーキング.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ネットワーキング
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/高可用性アーキテクチャ.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            高可用性アーキテクチャ
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/パフォーマンス.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            パフォーマンス
+          </a>
+          
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/REST_による自動化.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            REST による自動化
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ブラウザを使用してにアクセスします.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ブラウザを使用してにアクセスします
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ワークフロープロセス.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ワークフロープロセス
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/Python_を使用してアクセスします.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Python を使用してアクセスします
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/Python_コードサンプル.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Python コードサンプル
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/CLI_を使用します.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            CLI を使用します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/ノードとホスト.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ノードとホスト
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-select/pdfs/sidebar/Deploy_ユーティリティ.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Deploy ユーティリティ
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/ja-jp/ontap-select/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>PDF版ドキュメントのセット<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>リファレンスプラットフォームのパフォーマンス情報。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="リファレンスプラットフォーム">リファレンス・プラットフォーム</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ONTAP Select （Premium XL）ハードウェア（ノードあたり）</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fujitsu PRIMERGY RX2540 M4 ：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Intel （ R ） Xeon （ R ） Gold 6142b CPU 、 2.6GHz</p>
+</li>
+<li>
+<p>物理コア × 32 （ 16 × 2 ソケット）、論理コア × 64</p>
+</li>
+<li>
+<p>256 GB の RAM</p>
+</li>
+<li>
+<p>ホストあたりのドライブ数： 960GB SSD × 24</p>
+</li>
+<li>
+<p>ESX 6.5U1</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>クライアントハードウェア</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NFSv3 IBM 3550m4 クライアント × 5</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>設定情報</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SW RAID 1 × 9 + 2 RAID-DP （ 11 ドライブ）</p>
+</li>
+<li>
+<p>22+1 RAID-5 （ ONTAP では RAID-0 ） / RAID キャッシュ NVRAM</p>
+</li>
+<li>
+<p>Storage Efficiency 機能（圧縮、重複排除、 Snapshot コピー、 SnapMirror など）は使用しない</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>次の表に、ソフトウェアRAIDとハードウェアRAIDの両方を使用したONTAP Select ノードのハイアベイラビリティ（HA）ペアで、読み取り/書き込みワークロードに対して測定されたスループットを示します。パフォーマンスの測定には、 SIO 負荷生成ツールが使用されました。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="メモ">
+</td>
+<td class="content">
+これらのパフォーマンス値はONTAP Select 9.6に基づいています。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>ソフトウェアRAIDおよびハードウェアRAIDを使用した、直接接続型ストレージ（DAS）SSD上のシングルノード（4ノードの中規模インスタンスの一部）ONTAP Select クラスタのパフォーマンス結果</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">説明</th>
+<th class="tableblock halign-left valign-top">シーケンシャルリードの 64KiB</th>
+<th class="tableblock halign-left valign-top">シーケンシャルライト 64KiB</th>
+<th class="tableblock halign-left valign-top">ランダムリード 8KiB</th>
+<th class="tableblock halign-left valign-top">ランダムライト 8KiB</th>
+<th class="tableblock halign-left valign-top">ランダム WR / RD （ 50 / 50 ） 8KiB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAS（SSD）ソフトウェアRAIDを使用したONTAP Select 大規模インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2171 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">559 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">954 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">394 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">564 MiBps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAS（SSD）ソフトウェアRAIDを使用したONTAP Select 中規模インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2090 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">592 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">677 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">335 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">441 3MiBps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAS（SSD）ハードウェアRAIDを使用したONTAP Select 中規模インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2038 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">520 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">578 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">325 MiBps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">399 MiBps</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="64k-のシーケンシャルリード">64K のシーケンシャルリード</h3>
+<div class="paragraph">
+<p>詳細：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SIO ダイレクト I/O が有効です</p>
+</li>
+<li>
+<p>2 ノード</p>
+</li>
+<li>
+<p>ノードあたりのデータ NIC × 2</p>
+</li>
+<li>
+<p>ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 8TB のソフトウェア RAID ）</p>
+</li>
+<li>
+<p>SIO プロセス数 =64 、プロセスあたりのスレッド数 =1</p>
+</li>
+<li>
+<p>ノードあたりのボリューム数は 32</p>
+</li>
+<li>
+<p>プロセスあたりのファイル数 × 1 、各ファイルのサイズは 12 、 000MB です</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="64k-のシーケンシャルライト">64K のシーケンシャルライト</h3>
+<div class="paragraph">
+<p>詳細：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SIO ダイレクト I/O が有効です</p>
+</li>
+<li>
+<p>2 ノード</p>
+</li>
+<li>
+<p>ノードごとにデータネットワークインターフェイスカード（NIC）×2</p>
+</li>
+<li>
+<p>ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 4TB のソフトウェア RAID ）</p>
+</li>
+<li>
+<p>SIO プロセス数 =128 、プロセスあたりのスレッド数 =1</p>
+</li>
+<li>
+<p>ノードあたりのボリューム数：32（ハードウェアRAID）、16（ソフトウェアRAID）</p>
+</li>
+<li>
+<p>プロセスあたりのファイル数 × 1 、各ファイルのサイズは 30720MB です</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="8k-ランダムリード">8K ランダムリード</h3>
+<div class="paragraph">
+<p>詳細：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SIO ダイレクト I/O が有効です</p>
+</li>
+<li>
+<p>2 ノード</p>
+</li>
+<li>
+<p>ノードあたり2つのデータNIC</p>
+</li>
+<li>
+<p>ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 4TB のソフトウェア RAID ）</p>
+</li>
+<li>
+<p>SIO プロセス数 =64 、プロセスあたりのスレッド数 =8</p>
+</li>
+<li>
+<p>ノードあたりのボリューム数：32</p>
+</li>
+<li>
+<p>プロセスあたりのファイル数 × 1 、各ファイルのサイズは 12228MB です</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="8k-のランダムライト">8K のランダムライト</h3>
+<div class="paragraph">
+<p>詳細：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SIO ダイレクト I/O が有効です</p>
+</li>
+<li>
+<p>2 ノード</p>
+</li>
+<li>
+<p>ノードあたり2つのデータNIC</p>
+</li>
+<li>
+<p>ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 4TB のソフトウェア RAID ）</p>
+</li>
+<li>
+<p>SIO プロセス数 =64 、プロセスあたりのスレッド数 =8</p>
+</li>
+<li>
+<p>ノードあたりのボリューム数：32</p>
+</li>
+<li>
+<p>プロセスあたりのファイル数 × 1 、各ファイルのサイズは 8192MB です</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="8k-ランダム書き込み-50-読み取り">8K ランダム書き込み 50% 読み取り</h3>
+<div class="paragraph">
+<p>詳細：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SIO ダイレクト I/O が有効です</p>
+</li>
+<li>
+<p>2 ノード</p>
+</li>
+<li>
+<p>ノードあたり2つのデータNIC</p>
+</li>
+<li>
+<p>ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 4TB のソフトウェア RAID ）</p>
+</li>
+<li>
+<p>プロセスあたりの SIO プロセス数 =64</p>
+</li>
+<li>
+<p>ノードあたりのボリューム数：32</p>
+</li>
+<li>
+<p>プロセスあたりのファイル数 × 1 、各ファイルのサイズは 12228MB です</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/ja-jp/ontap-select/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/ja-jp/ontap-select/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">このページ</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">ご利用規約</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">プライバシー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">クッキー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">クッキーの設定</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">このページに関するフィードバックをお寄せください</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/ontap-select/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/ontap-select/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/ontap-select/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/ontap-select/js/ie-tabbed-blocks.js'></script>
+    <script src='/ja-jp/ontap-select/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
