@@ -97,7 +97,6 @@ ONTAP Select クラスタ内の各ノードには、 ONTAP のいくつかの機
 * ONTAP ポートのプロパティ速度、二重モード、フロー制御などの ONTAP ポートのプロパティの変更はサポートされていません。
 * サービスプロセッサ
 * SVM 移行
-* Storage VMディザスタリカバリ（SVM DR）
 * SnapLock コンプライアンス
 * VMware HCX
 

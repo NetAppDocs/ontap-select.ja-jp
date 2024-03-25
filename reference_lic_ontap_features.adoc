@@ -39,6 +39,11 @@ ONTAP Select には次の機能が含まれており、デフォルトでライ�
 * SnapMirror
 * SnapRestore
 * SnapVault
+* Storage VMディザスタリカバリ（SVM DR）
++
+
+NOTE: ONTAP Select 9.12.1以降では、最大16個の関係を持つソースとしてSVM DRがサポートされるようになりました。SVM DRのサポートは、ソースONTAPのバージョン+2の使用（9.12.1~9.14.1など）に限定されます。
+
 
 
 

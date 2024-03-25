@@ -3658,4 +3658,5 @@ storage aggregate show-spare-disks</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">ONTAP Select Deployのネットワーク設定はインストール後に変更できますか。</block>
   <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">技術情報アーティクル「Modifying DNS configuration of ONTAP Deploy instance」</block>
   <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">Deployインスタンスを環境で実行したあとにそのインスタンスのネットワークの詳細を変更することはできません。詳細については、を参照してください <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>。</block>
+  <block id="8e59a8dddb8fd9611be1f2b3aca8c4fa" category="admonition">ONTAP Select 9.12.1以降では、最大16個の関係を持つソースとしてSVM DRがサポートされるようになりました。SVM DRのサポートは、ソースONTAPのバージョン+2の使用（9.12.1~9.14.1など）に限定されます。</block>
 </blocks>
