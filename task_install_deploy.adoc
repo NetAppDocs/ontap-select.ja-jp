@@ -23,15 +23,15 @@ ONTAP Select Deploy 管理ユーティリティをインストールし、ユー
 ONTAP Select パッケージは、ネットアップサポートサイトからダウンロードできます。
 
 .このタスクについて
-ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルのサフィックス `ova`。
+ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルのサフィックス `ova`。VMは、ONTAP SelectノードのDeployサーバとインストールイメージを提供します。
 
 .手順
-. Web ブラウザからネットアップサポートサイトにアクセスし、「 * Support Quick Links * 」をクリックします。
-. [* Top Tasks] の下の [* Download Software* ] をクリックし、サインインします。
-. [ * 製品の検索 * ] をクリックします。
-. 下にスクロールし、 * ONTAP Select * をクリックします。
+. にアクセスします link:https://mysupport.netapp.com/site/["NetApp Support Site"^] Webブラウザを使用してサインインします。
+. メニューから* Downloads *を選択し、ドロップダウンメニューから* Downloads *を選択します。
+. [Downloads]ページの[All Products A-Z]で、文字「* O *」を選択します。
+. 下にスクロールして* ONTAP Select *を選択します。
 . パッケージのリリースを選択します。
-. エンドユーザライセンス契約（ EULA ）を確認し、「 * 同意して続行」をクリックします。
+. エンドユーザライセンス契約（EULA）を確認し、*同意して続行*を選択します。
 . 適切なパッケージを選択してダウンロードし、必要に応じてすべてのプロンプトに応答します。
 
 
@@ -207,7 +207,7 @@ Web ユーザインターフェイスにサインインして、 Deploy ユー�
 https://<ip_address>/` にアクセスします
 
 . 管理者（ admin ）アカウント名とパスワードを入力し、サインインします。
-. [* ONTAP Select へようこそ * （ Welcome to * ） ] ポップアップウィンドウが表示された場合は、前提条件を確認し、 [OK] をクリックして続行します。
+. * Welcome to ONTAP Select *ポップアップウィンドウが表示されたら、前提条件を確認し、* OK *を選択して続行します。
 . 初めてサインインしたときに、 vCenter で使用できるウィザードを使用して Deploy をインストールしなかった場合は、プロンプトが表示されたら次の設定情報を入力します。
 +
 ** 管理者アカウントの新しいパスワード（必須）
