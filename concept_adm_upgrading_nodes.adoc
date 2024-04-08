@@ -34,7 +34,7 @@ https://mysupport.netapp.com/site/downloads["ネットアップサポートの�
 +
 ONTAP Select ノードをアップグレードする前に、追加情報 リリースノートおよび必要な手順を確認してください。
 
-. ONTAP Select アップグレードファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。サポートされているアップグレードパスなどのONTAPアップグレード手順の詳細については、を参照してください。 link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPのアップグレードの概要"^]。
+. ONTAP Select アップグレードファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。サポートされているアップグレードパスについては、を参照してください。 link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html["サポートされるONTAPのアップグレードパス"^]。
 
 
 
@@ -52,3 +52,7 @@ ONTAP Select 9.8が最初にインストールされている場合:: バージ�
 == VMXNET3ネットワークドライバの使用
 
 VMXNET3は、VMware ESXiへの新しいクラスタの導入に含まれているデフォルトのネットワークドライバです。ONTAP Select 9.4以前を実行している既存のONTAP Selectノードをアップグレードしても、ネットワークドライバは自動的にアップグレードされません。VMXNET3 に手動でアップグレードする必要があります。アップグレードについてサポートが必要な場合は、ネットアップサポートにお問い合わせください。
+
+.関連情報
+* link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPのアップグレードの概要"^]
+
