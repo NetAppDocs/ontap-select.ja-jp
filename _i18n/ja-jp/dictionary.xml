@@ -3669,4 +3669,5 @@ storage aggregate show-spare-disks</block>
   <block id="2dbcb54e47dfd070743afb26077cdc91" category="list-text">Deploy 9.14.1P2よりも前のバージョンのONTAP Select Deploy 9.14.1を実行している場合は、できるだけ早くONTAP Select Deploy 9.14.1P2にアップグレードする必要があります。詳細については、を参照してください <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>。</block>
   <block id="2183c79114d56889f4a8854299f703a5" category="list-text">2024年4月以降、ONTAP Select Deploy 9.13.1はNetApp Support Siteで利用できなくなりました。ONTAP Select Deploy 9.13.1を実行している場合は、できるだけ早くONTAP Select Deploy 9.14.1P2にアップグレードする必要があります。詳細については、を参照してください <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>。</block>
   <block id="6e1144fb904fc4097d1a90d7908b66cc" category="paragraph">2024年4月以降、ONTAP Select Deploy 9.12.1はNetApp Support Siteで利用できなくなりました。ONTAP Select Deploy 9.12.1を実行している場合は、できるだけ早くONTAP Select Deploy 9.14.1P2にアップグレードする必要があります。詳細については、を参照してください <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>。</block>
+  <block id="0eac7bd25176d9e38db43b4181062abe" category="list-text">マルチテナントキーマネージャ（MTKM）</block>
 </blocks>
