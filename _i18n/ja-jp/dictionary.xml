@@ -3664,67 +3664,10 @@ storage aggregate show-spare-disks</block>
   <block id="2183c79114d56889f4a8854299f703a5" category="list-text">2024年4月以降、ONTAP Select Deploy 9.13.1はNetApp Support Siteで利用できなくなりました。ONTAP Select Deploy 9.13.1を実行している場合は、できるだけ早くONTAP Select Deploy 9.14.1P2にアップグレードする必要があります。詳細については、を参照してください <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>。</block>
   <block id="6e1144fb904fc4097d1a90d7908b66cc" category="paragraph">2024年4月以降、ONTAP Select Deploy 9.12.1はNetApp Support Siteで利用できなくなりました。ONTAP Select Deploy 9.12.1を実行している場合は、できるだけ早くONTAP Select Deploy 9.14.1P2にアップグレードする必要があります。詳細については、を参照してください <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>。</block>
   <block id="0eac7bd25176d9e38db43b4181062abe" category="list-text">マルチテナントキーマネージャ（MTKM）</block>
-  <block id="efacb1c7bc46252da0083e1f56cf260c" category="summary">NetApp ONTAP Selectは、VMware ESXiまたはKernel-Based Virtual Machine（KVM）ハイパーバイザーを実行するさまざまなコモディティハードウェアサーバに導入できるSoftware-Defined Storageアプライアンスです。柔軟性と拡張性に優れたプライベートクラウドインフラの構築に必要な即応性を提供します。このサイトには、ONTAP Select 9.15.1のドキュメントが含まれています。</block>
-  <block id="5dd0f07d9d4788b8a915f8ef9a65981c" category="inline-link-macro">ONTAP Select 9.15.1に関する注意事項</block>
-  <block id="4518f9d648d5f38c3a8b2bb401d25c94" category="list-text"><block ref="4518f9d648d5f38c3a8b2bb401d25c94" category="inline-link-macro-rx"></block></block>
-  <block id="3c5bdd4a077d520c4b4870fb15f37d1b" category="summary">現在のリリースには、ONTAP Selectに固有のいくつかの新機能や改善点が含まれています。</block>
-  <block id="f80570d561d36d2a6f83d903ac92764d" category="section-title">ONTAP Select 9.15.1</block>
-  <block id="dd543e83687ed3c39447157a0f0e1822" category="paragraph">ONTAP Select 9.15.1には、いくつかの新機能と改善点が含まれています。</block>
-  <block id="ff49a1a2875b63e18d60b0284fd713bf" category="list-text">クラスタの拡張と縮小のサポート</block>
-  <block id="e84b565f766d2b63406ea62dbdd12c66" category="list-text">ONTAP Select 9.15.1以降では、クラスタの拡張と縮小がサポートされます。</block>
-  <block id="d535a23dc4caf42819a2764f917df8d4" category="list-text">6ノオトクラスタカラ8ノオトクラスタヘノクラスタノカクチヨウ</block>
-  <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">詳細はこちら。</block>
-  <block id="46784c9ba69d72d62e5ff719f2e75e3f" category="paragraph">クラスタ拡張機能を使用して、クラスタサイズを6ノードクラスタから8ノードクラスタに拡張できます。 <block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>。</block>
-  <block id="5638b273dc7505c1415d93d081293984" category="list-text">8ノードから6ノードへのクラスタの縮小</block>
-  <block id="3fa352640216b35ee8eded7e2c07ca96" category="paragraph">クラスタ収縮機能を使用して、クラスタサイズを8ノードクラスタから6ノードクラスタに縮小できます。 <block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>。</block>
-  <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">クラスタの拡張と縮小はESXクラスタのみでサポートされます。</block>
-  <block id="e967860b1a40b9dcdb66b252a950a240" category="inline-link">ONTAP Select 9.15.1リリースノート</block>
-  <block id="5eb820f5a922021204972230d9d4d93d" category="paragraph">にアクセスできます<block ref="a879f440894cff34b3d87053560dcd34" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
-  <block id="e35a91dc5473bf4a53204a2bd1366d7e" category="summary">ONTAP Select 9.15.1以降では、既存のクラスタのサイズを6ノードから8ノードに拡張し、クラスタサイズを8ノードから6ノードに縮小できます。</block>
-  <block id="c5f80e69da9019e045ae59cca1c9ae22" category="doc">クラスタを拡張または縮小する</block>
-  <block id="d6746c8c49fd9df73bbb168197689da8" category="paragraph">ONTAP Select 9.15.1以降では、既存のクラスタのサイズを6ノードから8ノードに拡張し、クラスタサイズを8ノードから6ノードに縮小できます。他のクラスタの拡張や縮小のシナリオはサポートされません。</block>
-  <block id="f6ad6d358dd65a1da361069309b57e39" category="paragraph">手順は、ONTAP Select DeployからCLI、API、またはWebインターフェイスを使用して開始します。</block>
-  <block id="412c286ae37ff7a40b56dd84c3bf196c" category="section-title">ハードウェアとストレージの要件</block>
-  <block id="c9dd95ac8795512f2d676118ba8def1a" category="paragraph">クラスタの拡張と縮小の機能には、次のような制限があります。</block>
-  <block id="03a645906298706d76817495f4d8708a" category="list-text">サポートされるのは、ESXハイパーバイザーホスト上に作成されたクラスタに限られます。ONTAP Select 9.15.1と互換性があるESXのバージョンは次のとおりです。</block>
-  <block id="ec65581eeb2dfa95316cf6a00d2ff593" category="list-text">ESXi 8.0U2</block>
-  <block id="43629b681eab8f23e6624067ec8d1fde" category="list-text">ESXi 8.0U1</block>
-  <block id="200d1894c9fd6ae53ee1224b58c879d1" category="list-text">ESXi 8.0GA</block>
-  <block id="83796d186e6e678e53d65b677d9068ca" category="list-text">ESXi 7.0U3</block>
-  <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
-  <block id="2b2045e987020e440e1d72497530fdf6" category="list-text">6ノードクラスタから8ノードクラスタへの拡張のみ可能です。</block>
-  <block id="39503511d67e0af8ddd6049c24f164f7" category="list-text">8ノードクラスタから6ノードクラスタにのみ収縮できます。</block>
-  <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">クラスタを拡張</block>
-  <block id="c117993f1e48f58c366f6fe0873d958b" category="paragraph">クラスタ拡張機能を使用して、既存のクラスタのサイズを6ノードから8ノードのクラスタに拡張できます。</block>
-  <block id="679ac2592315c6e7c7320336fcda4a9c" category="paragraph">クラスタの拡張手順に備えて、新しいESXホストがインベントリに追加され、新しいノードの詳細が割り当てられます。クラスタの拡張プロセスを開始する前に、選択した内部ネットワークがネットワークの事前確認で検証されます。</block>
-  <block id="7c96df80e019ac7201d76d07cb2c8c3b" category="inline-link-macro">ネットワーク接続チェッカー</block>
-  <block id="4ae4de42a8fcf95f1eb770acae4690f2" category="list-text">マルチノードクラスタを導入する場合は、 <block ref="db3262d1c88b720b4d17a260091e6a75" category="inline-link-macro-rx"></block>。</block>
-  <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">新しいノードのライセンスの詳細を確認します。</block>
-  <block id="70be200347cc17e3939c72792fe71b15" category="list-text">ページ上部の*[クラスタ]*タブを選択し、リストから目的のクラスタを選択します。</block>
-  <block id="83d473b2e8f1c324b60e13d720cac51a" category="list-text">クラスタの詳細ページで、ページの右側にある歯車アイコンを選択し、*[クラスタの拡張]*を選択します。</block>
-  <block id="a2679fd7f07d0e73429d2f594d234f4c" category="list-text">[HA Pair 4*]セクションに移動します。</block>
-  <block id="a178d91d9200ff6349b3f22118c06cb0" category="list-text">4つ目のHAペアについて、次のようなハイアベイラビリティ（HA）ペア構成の詳細を選択します。</block>
-  <block id="1e4f0991fe8c17eeb30a08a567b6faeb" category="list-text">インスタンスタイプ</block>
-  <block id="a6e676c0f85b36df0562598d228a5630" category="list-text">ノード名</block>
-  <block id="c9a8d463f626f4f28398b6c8c018fae3" category="list-text">カンレンフハイパーバイザーホスト</block>
-  <block id="60593325d9120c3997c8f9627df1070c" category="list-text">ノードのIPアドレス</block>
-  <block id="2e52445fb8b7773f56a2d476ede7614d" category="list-text">ネットワーク構成</block>
-  <block id="3efe5ea2c836d42be34a86ff14766d09" category="list-text">ストレージ構成（RAIDタイプとストレージプール）</block>
-  <block id="b0ef8babe86043b130158076a23be483" category="list-text">[HAペアの保存]*を選択して、構成の詳細を保存します。</block>
-  <block id="0feca9c8f9ca7540a5f57c1669c20751" category="list-text">ONTAPクレデンシャルを入力し、*[クラスタの拡張]*を選択します。</block>
-  <block id="740ba937a1a632ef3c9794b633eb57cb" category="list-text">[次へ]*を選択し、*[実行]*を選択してネットワークの事前確認を実行します。</block>
-  <block id="9f3d040cc965516d902623e208c24eb4" category="paragraph">ネットワークの事前チェックでは、ONTAPクラスタトラフィック用に選択した内部ネットワークが正常に機能しているかどうかを検証します。</block>
-  <block id="9e517b46e538766946d13c3518579521" category="list-text">[クラスタの拡張]*を選択してクラスタの拡張プロセスを開始し、ダイアログボックスで*[OK]*を選択します。</block>
-  <block id="04f49a59719188dc7613a53014ff9739" category="paragraph">クラスタが拡張されるまでに最大45分かかることがあります。</block>
-  <block id="50462e303bd71a5adbc649dc1f1778a5" category="list-text">複数の手順で構成されるクラスタ拡張プロセスを監視して、クラスタが正常に拡張されたことを確認します。</block>
-  <block id="4f98a584f43949379b32f8cd6c99f91d" category="list-text">処理の進捗状況の定期的な更新については、*[イベント]*タブを参照してください。ページは一定の間隔で自動的に更新されます。</block>
-  <block id="e6df350174b5d12142460122061720b4" category="paragraph">クラスタを拡張したら、ONTAP Select Deployの設定データをバックアップする必要があります。</block>
-  <block id="5a9eb2ea7b273c031f127ee246370399" category="section-title">クラスタを契約する</block>
-  <block id="c724f8ae06aec94fe391a5c014d22227" category="paragraph">クラスタ収縮機能を使用して、既存のクラスタのサイズを8ノードから6ノードのクラスタに縮小できます。</block>
-  <block id="a1350246f96d12c2861aa0111c1d5369" category="paragraph">手順の実行中にクラスタを縮小する準備として、必要に応じてクラスタ内のノードのHAペアが選択されます。</block>
-  <block id="e1f3084dd5c5d44b681a43aa203f948d" category="list-text">クラスタの詳細ページで、ページの右側にある歯車アイコンを選択し、*[Contract Cluster]*を選択します。</block>
-  <block id="ea8ea8523f4b42addd79a435f0b6ff5c" category="list-text">削除するHAペアのHAペア構成の詳細を選択してONTAPクレデンシャルを指定し、*[Contract Cluster]*を選択します。</block>
-  <block id="012deed4bd1d789fa86812367047fe25" category="paragraph">クラスタが契約されるまでに最大30分かかることがあります。</block>
-  <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">マルチステップのクラスタ収縮プロセスを監視して、クラスタが正常に収縮したことを確認します。</block>
-  <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">ONTAP Select 9.15.1のドキュメント</block>
+  <block id="f8304478cfdeb2db287b6dcf0b36f3a8" category="summary">NetApp ONTAP Selectは、VMware ESXiまたはKernel-Based Virtual Machine（KVM）ハイパーバイザーを実行するさまざまなコモディティハードウェアサーバに導入できるSoftware-Defined Storageアプライアンスです。柔軟性と拡張性に優れたプライベートクラウドインフラの構築に必要な即応性を提供します。このサイトには、ONTAP Select 9.14.1のドキュメントが含まれています。</block>
+  <block id="88757d212ba8ba228f561f0c84ea9ce0" category="inline-link-macro">ONTAP Select 9.14.1に関する注意事項</block>
+  <block id="4de89e4b29dede514156a29be985557a" category="list-text"><block ref="4de89e4b29dede514156a29be985557a" category="inline-link-macro-rx"></block></block>
+  <block id="81884c993fa720d5bc8ac8f0f7c6dbda" category="summary">現在のリリースには、ONTAP Select 固有の新機能や機能強化は含まれていません。</block>
+  <block id="a19e9631749680eaf31525fdfd4b3709" category="paragraph">にアクセスできます<block ref="5cd4635ecbaa8e4a8308312c4e05dac2" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
+  <block id="314c09ddbe5ce5a2ebc071a5ba939ef6" category="sidebar">ONTAP Select 9.14.1のドキュメント</block>
 </blocks>
