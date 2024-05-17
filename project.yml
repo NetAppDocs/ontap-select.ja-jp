@@ -9,20 +9,20 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: 9.14.1
+  - version-number: 9.15.1
     url: "/ontap-select"
+  - version-number: 9.14.1
+    url: "/ontap-select-9141"
   - version-number: 9.13.1
     url: "/ontap-select-9131"
   - version-number: 9.12.1
     url: "/ontap-select-9121"
   - version-number: 9.11.1
     url: "/ontap-select-9111"
-  - version-number: 9.10.1
-    url: "/ontap-select-9101"
   langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: ONTAP Select 9.14.1のドキュメント
+  - title: ONTAP Select 9.15.1のドキュメント
     url: "/index.html"
   - title: リリースノート
     entries:
@@ -149,7 +149,11 @@ sidebar:
     - title: メディエーター
       url: "/task_adm_mediators.html"
     - title: クラスタ
-      url: "/task_adm_clusters.html"
+      entries:
+      - title: ONTAP Select クラスタ
+        url: "/task_adm_clusters.html"
+      - title: クラスタを拡張または縮小する
+        url: "/task_cluster_expansion_contraction.html"
     - title: ノードとホスト
       entries:
       - title: VM ビデオコンソール
