@@ -3647,7 +3647,6 @@ storage aggregate show-spare-disks</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">ONTAP Select Deployのネットワーク設定はインストール後に変更できますか。</block>
   <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">技術情報アーティクル「Modifying DNS configuration of ONTAP Deploy instance」</block>
   <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">Deployインスタンスを環境で実行したあとにそのインスタンスのネットワークの詳細を変更することはできません。詳細については、を参照してください <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>。</block>
-  <block id="8e59a8dddb8fd9611be1f2b3aca8c4fa" category="admonition">ONTAP Select 9.12.1以降では、最大16個の関係を持つソースとしてSVM DRがサポートされるようになりました。SVM DRのサポートは、ソースONTAPのバージョン+2の使用（9.12.1~9.14.1など）に限定されます。</block>
   <block id="53e646b7dd5ddb95bd47f8626f05f330" category="paragraph">ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルのサフィックス<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>。VMは、ONTAP SelectノードのDeployサーバとインストールイメージを提供します。</block>
   <block id="a8b083480f6b19e605e4aaa8bd3425f1" category="list-text">にアクセスします <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Webブラウザを使用してサインインします。</block>
   <block id="cc97556611cf17d7a90f16087052f93b" category="list-text">メニューから* Downloads *を選択し、ドロップダウンメニューから* Downloads *を選択します。</block>
@@ -3727,4 +3726,5 @@ storage aggregate show-spare-disks</block>
   <block id="012deed4bd1d789fa86812367047fe25" category="paragraph">クラスタが契約されるまでに最大30分かかることがあります。</block>
   <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">マルチステップのクラスタ収縮プロセスを監視して、クラスタが正常に収縮したことを確認します。</block>
   <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">ONTAP Select 9.15.1のドキュメント</block>
+  <block id="f99bb666310fb365b4d0029c161a384b" category="admonition">ONTAP Select 9.12.1以降では、ソースとデスティネーションの両方としてSVM DRがサポートされるようになりました。関係の最大数は16です。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。</block>
 </blocks>
