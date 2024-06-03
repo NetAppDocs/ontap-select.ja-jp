@@ -2562,8 +2562,6 @@
   <block id="db88ef4d05292b05026992fe3ca193af" category="paragraph">ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポートします。IP バージョン 6 （ IPv6 ）はサポートされません。この制限は、次の点で ONTAP Select に影響します。</block>
   <block id="a808fd43c31372cb5ef7ac1ac9224c52" category="list-text">Deploy 仮想マシンの管理 LIF に IPv4 アドレスを割り当てる必要があります。</block>
   <block id="b3a288a6973caafe5e4ff191758f8b98" category="list-text">ONTAP LIF で IPv6 を使用するように設定された ONTAP Select ノードを Deploy で作成することはできません。</block>
-  <block id="8d0030231ca098991021200ebed892e9" category="section-title">VMware vCenter の言語制限</block>
-  <block id="f3723501df4dfade0c26ca5e04290d9e" category="paragraph">ONTAP Select Deploy を使用して、 ESXi で実行されるクラスタを Windows サーバ上の vCenter で作成する場合は、英語版を使用する必要があります。ONTAP Select Deploy は、英語以外のバージョンの Windows での vCenter をサポートしていません。</block>
   <block id="8249cf77b8d8e1a887c3064234f33f64" category="summary">ONTAP Select の大容量階層ライセンスまたは大容量プールライセンスは、 3 つのプラットフォーム容量レベルのいずれかで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。</block>
   <block id="d8ab7c9c78c21b4a22cdfba499be0102" category="section-title">プラットフォームライセンス製品の機能</block>
   <block id="bf2bf32468663aa60c17572fd96be228" category="paragraph">特定のライセンス製品は、ハイパーバイザーホストの機能を次の 2 つの領域で定義および制限します。</block>
@@ -3727,4 +3725,5 @@ storage aggregate show-spare-disks</block>
   <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">マルチステップのクラスタ収縮プロセスを監視して、クラスタが正常に収縮したことを確認します。</block>
   <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">ONTAP Select 9.15.1のドキュメント</block>
   <block id="f99bb666310fb365b4d0029c161a384b" category="admonition">ONTAP Select 9.12.1以降では、ソースとデスティネーションの両方としてSVM DRがサポートされるようになりました。関係の最大数は16です。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。</block>
+  <block id="55c2a90a9fb6113abeb7e76c6cb0bfb0" category="admonition">ONTAP Selectは最大4つのVMNICをサポートします。</block>
 </blocks>
