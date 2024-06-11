@@ -2039,7 +2039,6 @@
   <block id="da132c60d8df0a4756d0a1e64618decf" category="section-title">ソフトウェアの互換性</block>
   <block id="f2df12ffd4f2520acaaeab11317642da" category="paragraph">ONTAP Select は次のハイパーバイザーに導入できます。</block>
   <block id="3522298772b42c1feed00428b1765cfd" category="admonition">VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。</block>
-  <block id="10e25613e6e661d9225b8b8847992335" category="paragraph">現在 ONTAP Select が VMware ESXi 6.5 U1 に導入されている場合は、できるだけ早く ESXi 6.5 U2 以降にアップグレードしてください。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。</block>
   <block id="5c4eab167cc470fbe0f1b2e9a2449486" category="section-title">VMware vCenter およびスタンドアロンの ESXi ホスト</block>
   <block id="d8492e635eeb04bc232082f13805e768" category="paragraph">ESXi ハイパーバイザーホストが vCenter サーバで管理されている場合は、 vCenter のクレデンシャルを使用して、ホストを Deploy 管理ユーティリティに登録する必要があります。ESXi のクレデンシャルを使用してホストをスタンドアロンホストとして登録することはできません。</block>
   <block id="d200a289a8ebcab27fa991f9d753e39c" category="section-title">コアハードウェアの要件</block>
@@ -3003,7 +3002,6 @@
   <block id="64a49455734301778985c42afcafa1b5" category="list-text">VMware ESXi 8.0 GA（ビルド20513097）</block>
   <block id="9702dfddce9ca846a20b21815bd5bf71" category="list-text">VMware ESXi 8.0 U1（ビルド21495797）</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">Interoperability Matrix Tool （ IMT ）</block>
-  <block id="2dbfa835ab3a0bf6c79ee95b561f1daf" category="admonition">ESXi 6.5 GAおよびESXi 6.7 GAが販売終了に近づいています。これらのバージョンのONTAP Selectクラスタを使用している場合は、<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block>。</block>
   <block id="be89bf0bd68c0f721ab7e25e408b6fa7" category="summary">VMware ESXiでONTAP Selectを実行している場合は、ESXiソフトウェアを以前のサポート対象バージョンからESXi 7.0以降にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。</block>
   <block id="817a2297c74a908c3261968059682b32" category="paragraph">Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンのONTAP SelectおよびDeploy管理ユーティリティでは、ESXi 7.0へのアップグレードはサポートされていません。</block>
   <block id="f87065c0eaa86d23a9d0bc62defec91b" category="list-text">VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。</block>
@@ -3202,7 +3200,6 @@
   <block id="37ff470528fb108e5783094291a4fa39" category="section-title">ライセンスファイルのアップロードと登録</block>
   <block id="6a1aef20627259c0bc151f0c191b9cb8" category="section-title">ONTAP Selectノードの設定</block>
   <block id="feabcebe39f17dad32257d11d0077c91" category="section-title">ONTAP Selectノードにストレージを接続</block>
-  <block id="ce21532ed687995262d3680b0a7b3ce2" category="section-title">VMware ESXi 6.5 U2以降にアップグレードする</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最小要件</block>
   <block id="145a82122e23908d50818a5950c27509" category="cell">スイシヨウヨウケン</block>
   <block id="a5ce4a1eb8334399b5ae78ecb675d015" category="paragraph">を参照してください <block ref="cc66674a6eca098ccdd0161214bd6b9f" category="inline-link-macro-rx"></block> を参照してください。</block>
@@ -3726,4 +3723,5 @@ storage aggregate show-spare-disks</block>
   <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">ONTAP Select 9.15.1のドキュメント</block>
   <block id="f99bb666310fb365b4d0029c161a384b" category="admonition">ONTAP Select 9.12.1以降では、ソースとデスティネーションの両方としてSVM DRがサポートされるようになりました。関係の最大数は16です。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。</block>
   <block id="55c2a90a9fb6113abeb7e76c6cb0bfb0" category="admonition">ONTAP Selectは最大4つのVMNICをサポートします。</block>
+  <block id="28986937787872c11df39e20ca126e8d" category="admonition">ESXi 6.5 GAおよびESXi 6.7 GAが販売終了ステータスに達しました。これらのバージョンのONTAP Selectクラスタを使用している場合は、<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block>。</block>
 </blocks>

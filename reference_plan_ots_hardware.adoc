@@ -48,13 +48,7 @@ ONTAP Select は次のハイパーバイザーに導入できます。
 NOTE: VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。
 
 
-NOTE: ESXi 6.5 GAおよびESXi 6.7 GAが販売終了に近づいています。これらのバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^]。
-
-
-
-=== VMware ESXi 6.5 U2以降にアップグレードする
-
-現在 ONTAP Select が VMware ESXi 6.5 U1 に導入されている場合は、できるだけ早く ESXi 6.5 U2 以降にアップグレードしてください。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。
+NOTE: ESXi 6.5 GAおよびESXi 6.7 GAが販売終了ステータスに達しました。これらのバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^]。
 
 
 
