@@ -35,7 +35,6 @@ ONTAP Select には次の機能が含まれており、デフォルトでライ�
 * NFS
 * NVMe over TCP
 * ONTAP のマルチテナンシー機能
-* ONTAP S3
 * SnapMirror
 * SnapRestore
 * SnapVault
@@ -55,6 +54,7 @@ ONTAP 機能がデフォルトで有効になっていない場合は、次の�
 * Data Availability Service の略
 * FabricPool
 * MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）
+* ONTAP S3（コストゼロ）
 * SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）
 +
 ** 改ざん防止Snapshotコピー
@@ -68,4 +68,5 @@ NOTE: StorageGRID Webscale を使用するときに FabricPool ライセンス�
 
 .関連情報
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select と ONTAP 9 の比較"]
+* link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP のマスターライセンスキー"^]
 

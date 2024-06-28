@@ -2654,7 +2654,6 @@
   <block id="0deac5caf37785bb3c3ce0d80f8d8d18" category="admonition">ハードウェア固有の依存関係を持つONTAP 機能は、一般にONTAP Select ではサポートされていません。</block>
   <block id="8132b1f57834df621ea1aedaa548729e" category="section-title">ONTAP の機能はデフォルトで自動的に有効になります</block>
   <block id="d4370df695508d400d73750728248ebe" category="paragraph">ONTAP Select には次の機能が含まれており、デフォルトでライセンスが付与されています。</block>
-  <block id="1716834171e243de0f898a67621b6624" category="list-text">ONTAP S3</block>
   <block id="a56a12489213d10b531398efee448f95" category="section-title">個別にライセンスされるONTAP の機能</block>
   <block id="585f4a038bba40a29999437c007446e9" category="paragraph">ONTAP 機能がデフォルトで有効になっていない場合は、次のライセンスを別途取得する必要があります。</block>
   <block id="6dec3523c85f378f79fcf83c82e21868" category="paragraph">ソフトウェアRAIDを使用しているドライブで障害が発生した場合、ONTAP Select はスペアドライブがあればそれを割り当て、リビルドプロセスを自動的に開始します。これは、FAS およびAFF でのONTAP の動作と似ています。使用可能なスペアドライブがない場合は、ONTAP Select ノードにスペアドライブを追加する必要があります。</block>
@@ -3724,4 +3723,7 @@ storage aggregate show-spare-disks</block>
   <block id="f99bb666310fb365b4d0029c161a384b" category="admonition">ONTAP Select 9.12.1以降では、ソースとデスティネーションの両方としてSVM DRがサポートされるようになりました。関係の最大数は16です。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。</block>
   <block id="55c2a90a9fb6113abeb7e76c6cb0bfb0" category="admonition">ONTAP Selectは最大4つのVMNICをサポートします。</block>
   <block id="28986937787872c11df39e20ca126e8d" category="admonition">ESXi 6.5 GAおよびESXi 6.7 GAが販売終了ステータスに達しました。これらのバージョンのONTAP Selectクラスタを使用している場合は、<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block>。</block>
+  <block id="e1a514cdffca7e72189bc1b4d2b14cb1" category="list-text">ONTAP S3（コストゼロ）</block>
+  <block id="ffa1963f0d0a25dfc04554dbe791a3b1" category="inline-link-macro">NetApp ONTAP のマスターライセンスキー</block>
+  <block id="16f9dd2af311dfdedd3814899d379c54" category="list-text"><block ref="16f9dd2af311dfdedd3814899d379c54" category="inline-link-macro-rx"></block></block>
 </blocks>
