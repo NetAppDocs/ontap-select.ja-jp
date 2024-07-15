@@ -23,6 +23,7 @@ summary: 現在のリリースには、ONTAP Selectに固有のいくつかの�
 
 ONTAP Select 9.15.1には、いくつかの新機能と改善点が含まれています。
 
+KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.15.1以降では、Kernel-Based Virtual Machine（KVM）ハイパーバイザーがRed Hat Enterprise Linux（RHEL）9.4およびRocky Linux 9.4でサポートされます。
 クラスタの拡張と縮小のサポート:: ONTAP Select 9.15.1以降では、クラスタの拡張と縮小がサポートされます。
 +
 --
