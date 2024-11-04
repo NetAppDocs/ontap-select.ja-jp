@@ -3730,4 +3730,6 @@ storage aggregate show-spare-disks</block>
   <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
   <block id="78fb396e8c541b492002e6b94963fe83" category="list-text">ONTAP Select 9.14.1には、VMware ESXi 8.0.2のサポートが含まれています。</block>
   <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">VMware.13.1以降では、ONTAP 9 8.0.1 GA（ビルド20513097）がハードウェアバージョン4以降でサポートされます。</block>
+  <block id="066308395ea593f82277b09bef1304dc" category="list-text">元のDeploy仮想マシンイメージを保存します。</block>
+  <block id="f3d42eb73da0b3db6a0beb04d2f78c68" category="admonition">Deployの設定データを元の仮想マシンから新しい仮想マシンにリストアする場合は、この手順の後半の工程で元のDeploy仮想マシンイメージが必要です。</block>
 </blocks>
