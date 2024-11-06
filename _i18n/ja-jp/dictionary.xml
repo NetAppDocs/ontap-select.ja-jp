@@ -3353,7 +3353,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="b2e7abe45d5aa586a8f3507497cdd9f9" category="paragraph-title">Linuxサーバの準備</block>
   <block id="b09f29f89d723a464604296e2e5e07ac" category="paragraph">ONTAP Selectノードを導入する各Linux KVMサーバを準備する必要があります。また、ONTAP Select Deploy管理ユーティリティを導入するサーバを準備する必要があります。</block>
   <block id="fc8913280cdc00a30c367fb6cad82a5a" category="paragraph-title">Red Hat Enterprise Linux をインストールします</block>
-  <block id="68a91f25005786321a1f8d6a1ee48471" category="paragraph">ISOイメージを使用してRed Hat Enterprise Linux（RHEL）オペレーティングシステムをインストールする必要があります。インストール時に、次のようにシステムを設定する必要があります。</block>
   <block id="4adf8d273405d567b3c04578e7587fcc" category="list-text">セキュリティポリシーとして[Default]を選択します。</block>
   <block id="b7ed0ef33f8535f13a2a8c61b522db5c" category="list-text">[Virtualized Host]ソフトウェアの選択</block>
   <block id="beb8bb5c30618e7ed13d13dae4f958bd" category="list-text">デスティネーションは、ONTAP Selectで使用されるRAID LUNではなく、ローカルブートディスクにする必要があります。</block>
@@ -3363,42 +3362,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="3738f55ea208199f5c75954580847670" category="paragraph">ONTAP Selectでは、追加のソフトウェアパッケージがいくつか必要です。パッケージの正確なリストは、使用しているLinuxのバージョンによって異なります。最初の手順として、yumリポジトリがサーバーで使用可能であることを確認します。使用できない場合は、<block ref="a52a983e58d14432379ef732f02ff1ab" prefix=" " category="inline-code"></block> コマンドを実行します</block>
   <block id="99965beffa3302f13c927db3818d3722" category="inline-link-macro">Open vSwitchのドキュメント</block>
   <block id="ef81ea587a9f08c529a68f4615638a9f" category="admonition">Linuxサーバのインストール時にソフトウェアを選択するために仮想ホストを選択した場合は、必要なパッケージの一部がすでにインストールされている可能性があります。ソースコードからopenvswitchパッケージをインストールする必要がある場合があります。詳細については、 <block ref="7514235d0c1cb4fbed4568e20a4d9277" category="inline-link-macro-rx"></block>。</block>
-  <block id="e8d8655fb6a53b117137b3c4c8b513d6" category="paragraph-title">RHEL 7.7に必要な追加パッケージ</block>
-  <block id="38b05d80cfdb17c384b49b78c5779d34" category="paragraph">RHEL 7.6と同じパッケージセットをインストールします。</block>
-  <block id="4504762947692447bf5d6197d7415a2b" category="paragraph-title">RHEL 7.6に必要な追加パッケージ</block>
-  <block id="c5ddd03bd8afc1a01dfb929571f7984c" category="paragraph">RHEL 7.6またはCentOS 7.6を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれます。</block>
-  <block id="b3768f3042522f2ebefd687b011ef35b" category="list-text">qemu-KVM（1.5.3-160）</block>
-  <block id="73c94f60276006addfcc246cf5694dea" category="admonition">ソフトウェアRAIDを使用する場合は、バージョン2.9.0を使用する必要があります。</block>
-  <block id="e7b6819ebab33d41294f76cb2ef12d89" category="list-text">libvirt（4.5.0-10）</block>
-  <block id="63d4dd1094ecc476b13197bf5bcf9d74" category="list-text">openvswitch（2.7.3）</block>
-  <block id="81bacf976bcfb2e05b1bab56d153fd53" category="list-text">virt-install（1.5.0-1）</block>
-  <block id="0af0fc62f7cd9d3b202c4fe9d734ac15" category="list-text">lshw (B.02.18-12)</block>
-  <block id="ce2f31b80fee4a220bf108c0c1c7b4c0" category="list-text">lsscsi（0.27-6）</block>
-  <block id="a72b667fcf6c87b1d9261d7fbfda5c21" category="list-text">lsof（4.87-6）</block>
-  <block id="f2836af2ae094b6178aa55d38db1db83" category="paragraph">KVM（外部ストレージ）でvNASを使用していて、仮想マシンをホスト間で移行する場合は、次の追加パッケージと依存関係をインストールする必要があります。</block>
-  <block id="e161209405816766b464900b7eaf4594" category="list-text">フェンス-エージェント-すべて（4.2.1-11）</block>
-  <block id="b4bc73e8ba342f5dd4c958e1597646c9" category="list-text">LVM2 -クラスタ（2.02.180-8）</block>
-  <block id="af9008e8791f6754f7139995dffa092d" category="list-text">ペースメーカー（1.1.19-8）</block>
-  <block id="1d3d8cff8b4d8c56161a24798b46d75e" category="list-text">PCS（0.9.165-6）</block>
-  <block id="47bf2901e81b84a3461fe6f88dc0822b" category="paragraph-title">RHEL 7.5に必要な追加パッケージ</block>
-  <block id="5e35a367894ad4778ad935a913f20591" category="paragraph">RHEL 7.5またはCentOS 7.5を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれます。</block>
-  <block id="962b918f7188b59dd7dda40036ccb244" category="list-text">qemu-KVM（1.5.3-141）</block>
-  <block id="0829cbb8c3f5e3775b8b9b6ff12edba2" category="list-text">libvirt（3.9.0）</block>
-  <block id="828fda93ae5609ae900a74b74a329a1f" category="list-text">virt-install（1.4.1-7）</block>
-  <block id="9a85f336951f60862065a2c99a506331" category="list-text">lsof（4.87-5）</block>
-  <block id="22520cb839fcc2ea175d9468908457de" category="list-text">フェンスエージェント-すべて（4.0.11-86）</block>
-  <block id="eaaf2c3924b5ae9f38e2888c82fffeca" category="list-text">LVM2 -クラスタ（2.02.177-4）</block>
-  <block id="63a608b8dcb6a5cbb6bc554603885f0f" category="list-text">ペースメーカー（1.1.18-11）</block>
-  <block id="94d2030906db727ace138dc978ae4250" category="list-text">PCS（0.9.16205）</block>
-  <block id="a81ff201ea5e179ccb62ed746bf9bd3a" category="paragraph-title">RHEL 7.4に必要な追加パッケージ</block>
-  <block id="953b5a8d418e7a7571a24efdaaeffd73" category="paragraph">RHEL 7.4またはCentOS 7.4を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれています。</block>
-  <block id="83d959bc76f3b861a116f9eea1c7a2a7" category="list-text">libvirt（3.2.0-14）</block>
-  <block id="fac13a6d19ac85eceeda764e5abcb6f8" category="list-text">lshw（B.02.18-7）</block>
-  <block id="847db2741d4d60a1941f2a32402e6128" category="list-text">lsof（4.87-4）</block>
-  <block id="6eefc4ad705acae02bbc63fb026239ff" category="list-text">フェンス-エージェント-すべて（4.0.11-66）</block>
-  <block id="e8cf539445d5c650ec492b96a3986d22" category="list-text">LVM2 -クラスタ（2.02.171-8）</block>
-  <block id="808a7f32a60e4e781435682f980ff36a" category="list-text">ペースメーカー（1.1.16-12）</block>
-  <block id="cb2885fb02858a21c6adb63dcfb19659" category="list-text">PCS（0.9.158-6）</block>
   <block id="3fec9570e277fe5ca33bf5e5dc7cf266" category="paragraph-title">ストレージプールの設定</block>
   <block id="4a1a2ddde34541bd47c25ab818424838" category="paragraph">ONTAP Selectストレージプールは、基盤となる物理ストレージを抽象化する論理データコンテナです。ONTAP Selectが導入されているKVMホストでストレージプールを管理する必要があります。</block>
   <block id="694bb5d3641d16eb91812f8515d06f39" category="section-title">ストレージプールを作成します</block>
@@ -3732,4 +3695,7 @@ storage aggregate show-spare-disks</block>
   <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">VMware.13.1以降では、ONTAP 9 8.0.1 GA（ビルド20513097）がハードウェアバージョン4以降でサポートされます。</block>
   <block id="066308395ea593f82277b09bef1304dc" category="list-text">元のDeploy仮想マシンイメージを保存します。</block>
   <block id="f3d42eb73da0b3db6a0beb04d2f78c68" category="admonition">Deployの設定データを元の仮想マシンから新しい仮想マシンにリストアする場合は、この手順の後半の工程で元のDeploy仮想マシンイメージが必要です。</block>
+  <block id="be0d4e27d8840d1c72235cf50443fb8d" category="inline-link-macro">ハイパーバイザーのソフトウェア互換性情報</block>
+  <block id="49ea5cb7c3815d4c59fc6dcf8eca3da7" category="paragraph">ISOイメージを使用してRed Hat Enterprise Linux（RHEL）オペレーティングシステムをインストールする必要があります。サポートされているRHELのバージョンの一覧については、を参照してください<block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>。インストール時に、次のようにシステムを設定する必要があります。</block>
+  <block id="97864053a66a3401d6a681c00bd2e4e3" category="paragraph">必要なパッケージおよびその他の設定要件の詳細については、を参照してください<block ref="8929420574d68b861547fa3bcafe0ff2" category="inline-link-macro-rx"></block>。</block>
 </blocks>

@@ -33,7 +33,7 @@ NOTE: ONTAP Select Deploy 管理ユーティリティでは、ハイパーバイ
 ONTAP Selectノードを導入する各Linux KVMサーバを準備する必要があります。また、ONTAP Select Deploy管理ユーティリティを導入するサーバを準備する必要があります。
 
 .Red Hat Enterprise Linux をインストールします
-ISOイメージを使用してRed Hat Enterprise Linux（RHEL）オペレーティングシステムをインストールする必要があります。インストール時に、次のようにシステムを設定する必要があります。
+ISOイメージを使用してRed Hat Enterprise Linux（RHEL）オペレーティングシステムをインストールする必要があります。サポートされているRHELのバージョンの一覧については、を参照してくださいlink:reference_plan_ots_hardware.html#software-compatibility["ハイパーバイザーのソフトウェア互換性情報"]。インストール時に、次のようにシステムを設定する必要があります。
 
 * セキュリティポリシーとして[Default]を選択します。
 * [Virtualized Host]ソフトウェアの選択
@@ -50,81 +50,7 @@ ONTAP Selectでは、追加のソフトウェアパッケージがいくつか�
 
 NOTE: Linuxサーバのインストール時にソフトウェアを選択するために仮想ホストを選択した場合は、必要なパッケージの一部がすでにインストールされている可能性があります。ソースコードからopenvswitchパッケージをインストールする必要がある場合があります。詳細については、 link:https://docs.openvswitch.org/en/latest/intro/install/general/["Open vSwitchのドキュメント"^]。
 
- For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^].
-.RHEL 7.7に必要な追加パッケージ
-RHEL 7.6と同じパッケージセットをインストールします。
-
-.RHEL 7.6に必要な追加パッケージ
-RHEL 7.6またはCentOS 7.6を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれます。
-
-* qemu-KVM（1.5.3-160）
-+
-
-NOTE: ソフトウェアRAIDを使用する場合は、バージョン2.9.0を使用する必要があります。
-
-* libvirt（4.5.0-10）
-* openvswitch（2.7.3）
-* virt-install（1.5.0-1）
-* lshw (B.02.18-12)
-* lsscsi（0.27-6）
-* lsof（4.87-6）
-
-
-KVM（外部ストレージ）でvNASを使用していて、仮想マシンをホスト間で移行する場合は、次の追加パッケージと依存関係をインストールする必要があります。
-
-* フェンス-エージェント-すべて（4.2.1-11）
-* LVM2 -クラスタ（2.02.180-8）
-* ペースメーカー（1.1.19-8）
-* PCS（0.9.165-6）
-
-
-.RHEL 7.5に必要な追加パッケージ
-RHEL 7.5またはCentOS 7.5を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれます。
-
-* qemu-KVM（1.5.3-141）
-+
-
-NOTE: ソフトウェアRAIDを使用する場合は、バージョン2.9.0を使用する必要があります。
-
-* libvirt（3.9.0）
-* openvswitch（2.7.3）
-* virt-install（1.4.1-7）
-* lshw (B.02.18-12)
-* lsscsi（0.27-6）
-* lsof（4.87-5）
-
-
-KVM（外部ストレージ）でvNASを使用していて、仮想マシンをホスト間で移行する場合は、次の追加パッケージと依存関係をインストールする必要があります。
-
-* フェンスエージェント-すべて（4.0.11-86）
-* LVM2 -クラスタ（2.02.177-4）
-* ペースメーカー（1.1.18-11）
-* PCS（0.9.16205）
-
-
-.RHEL 7.4に必要な追加パッケージ
-RHEL 7.4またはCentOS 7.4を使用している場合は、次のパッケージと依存関係がインストールされていることを確認します。いずれの場合も、パッケージ名とバージョンが含まれています。
-
-* qemu-KVM（1.5.3-141）
-+
-
-NOTE: ソフトウェアRAIDを使用する場合は、バージョン2.9.0を使用する必要があります。
-
-* libvirt（3.2.0-14）
-* openvswitch（2.7.3）
-* virt-install（1.4.1-7）
-* lshw（B.02.18-7）
-* lsscsi（0.27-6）
-* lsof（4.87-4）
-
-
-KVM（外部ストレージ）でvNASを使用していて、仮想マシンをホスト間で移行する場合は、次の追加パッケージと依存関係をインストールする必要があります。
-
-* フェンス-エージェント-すべて（4.0.11-66）
-* LVM2 -クラスタ（2.02.171-8）
-* ペースメーカー（1.1.16-12）
-* PCS（0.9.158-6）
-
+必要なパッケージおよびその他の設定要件の詳細については、を参照してくださいlink:https://imt.netapp.com/matrix/#welcome["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 .ストレージプールの設定
 ONTAP Selectストレージプールは、基盤となる物理ストレージを抽象化する論理データコンテナです。ONTAP Selectが導入されているKVMホストでストレージプールを管理する必要があります。
