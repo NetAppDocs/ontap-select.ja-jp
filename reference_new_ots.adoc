@@ -29,11 +29,11 @@ KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.15.1以降�
 --
 * 6ノオトクラスタカラ8ノオトクラスタヘノクラスタノカクチヨウ
 +
-クラスタ拡張機能を使用して、クラスタサイズを6ノードクラスタから8ノードクラスタに拡張できます。 link:task_cluster_expansion_contraction.html#expand-the-cluster["詳細はこちら。"]。
+クラスタ拡張機能を使用して、クラスタサイズを6ノードクラスタから8ノードクラスタに拡張できます。1ノード、2ノード、または4ノードのクラスタから6ノードまたは8ノードのクラスタへのクラスタの拡張は、現在サポートされていません。link:task_cluster_expansion_contraction.html#expand-the-cluster["詳細はこちら。"]です。
 
 * 8ノードから6ノードへのクラスタの縮小
 +
-クラスタ収縮機能を使用して、クラスタサイズを8ノードクラスタから6ノードクラスタに縮小できます。 link:task_cluster_expansion_contraction.html#contract-the-cluster["詳細はこちら。"]。
+クラスタ収縮機能を使用して、クラスタサイズを8ノードクラスタから6ノードクラスタに縮小できます。6ノードまたは8ノードのクラスタから1ノード、2ノード、または4ノードのクラスタへのクラスタ収縮は現在サポートされていません。link:task_cluster_expansion_contraction.html#contract-the-cluster["詳細はこちら。"]です。
 
 
 

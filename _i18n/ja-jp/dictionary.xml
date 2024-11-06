@@ -3627,9 +3627,7 @@ storage aggregate show-spare-disks</block>
   <block id="e84b565f766d2b63406ea62dbdd12c66" category="list-text">ONTAP Select 9.15.1以降では、クラスタの拡張と縮小がサポートされます。</block>
   <block id="d535a23dc4caf42819a2764f917df8d4" category="list-text">6ノオトクラスタカラ8ノオトクラスタヘノクラスタノカクチヨウ</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">詳細はこちら。</block>
-  <block id="46784c9ba69d72d62e5ff719f2e75e3f" category="paragraph">クラスタ拡張機能を使用して、クラスタサイズを6ノードクラスタから8ノードクラスタに拡張できます。 <block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>。</block>
   <block id="5638b273dc7505c1415d93d081293984" category="list-text">8ノードから6ノードへのクラスタの縮小</block>
-  <block id="3fa352640216b35ee8eded7e2c07ca96" category="paragraph">クラスタ収縮機能を使用して、クラスタサイズを8ノードクラスタから6ノードクラスタに縮小できます。 <block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>。</block>
   <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">クラスタの拡張と縮小はESXクラスタのみでサポートされます。</block>
   <block id="e967860b1a40b9dcdb66b252a950a240" category="inline-link">ONTAP Select 9.15.1リリースノート</block>
   <block id="5eb820f5a922021204972230d9d4d93d" category="paragraph">にアクセスできます<block ref="a879f440894cff34b3d87053560dcd34" category="inline-link-rx"></block> をクリックすると、現在のバージョンの詳細が表示されます。</block>
@@ -3637,7 +3635,6 @@ storage aggregate show-spare-disks</block>
   <block id="c5f80e69da9019e045ae59cca1c9ae22" category="doc">クラスタを拡張または縮小する</block>
   <block id="d6746c8c49fd9df73bbb168197689da8" category="paragraph">ONTAP Select 9.15.1以降では、既存のクラスタのサイズを6ノードから8ノードに拡張し、クラスタサイズを8ノードから6ノードに縮小できます。他のクラスタの拡張や縮小のシナリオはサポートされません。</block>
   <block id="f6ad6d358dd65a1da361069309b57e39" category="paragraph">手順は、ONTAP Select DeployからCLI、API、またはWebインターフェイスを使用して開始します。</block>
-  <block id="412c286ae37ff7a40b56dd84c3bf196c" category="section-title">ハードウェアとストレージの要件</block>
   <block id="c9dd95ac8795512f2d676118ba8def1a" category="paragraph">クラスタの拡張と縮小の機能には、次のような制限があります。</block>
   <block id="03a645906298706d76817495f4d8708a" category="list-text">サポートされるのは、ESXハイパーバイザーホスト上に作成されたクラスタに限られます。ONTAP Select 9.15.1と互換性があるESXのバージョンは次のとおりです。</block>
   <block id="ec65581eeb2dfa95316cf6a00d2ff593" category="list-text">ESXi 8.0U2</block>
@@ -3645,8 +3642,6 @@ storage aggregate show-spare-disks</block>
   <block id="200d1894c9fd6ae53ee1224b58c879d1" category="list-text">ESXi 8.0GA</block>
   <block id="83796d186e6e678e53d65b677d9068ca" category="list-text">ESXi 7.0U3</block>
   <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
-  <block id="2b2045e987020e440e1d72497530fdf6" category="list-text">6ノードクラスタから8ノードクラスタへの拡張のみ可能です。</block>
-  <block id="39503511d67e0af8ddd6049c24f164f7" category="list-text">8ノードクラスタから6ノードクラスタにのみ収縮できます。</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">クラスタを拡張</block>
   <block id="c117993f1e48f58c366f6fe0873d958b" category="paragraph">クラスタ拡張機能を使用して、既存のクラスタのサイズを6ノードから8ノードのクラスタに拡張できます。</block>
   <block id="679ac2592315c6e7c7320336fcda4a9c" category="paragraph">クラスタの拡張手順に備えて、新しいESXホストがインベントリに追加され、新しいノードの詳細が割り当てられます。クラスタの拡張プロセスを開始する前に、選択した内部ネットワークがネットワークの事前確認で検証されます。</block>
@@ -3698,4 +3693,10 @@ storage aggregate show-spare-disks</block>
   <block id="be0d4e27d8840d1c72235cf50443fb8d" category="inline-link-macro">ハイパーバイザーのソフトウェア互換性情報</block>
   <block id="49ea5cb7c3815d4c59fc6dcf8eca3da7" category="paragraph">ISOイメージを使用してRed Hat Enterprise Linux（RHEL）オペレーティングシステムをインストールする必要があります。サポートされているRHELのバージョンの一覧については、を参照してください<block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>。インストール時に、次のようにシステムを設定する必要があります。</block>
   <block id="97864053a66a3401d6a681c00bd2e4e3" category="paragraph">必要なパッケージおよびその他の設定要件の詳細については、を参照してください<block ref="8929420574d68b861547fa3bcafe0ff2" category="inline-link-macro-rx"></block>。</block>
+  <block id="d62b4235cf2a29152b9bcb3eb1df59d8" category="paragraph">クラスタ拡張機能を使用して、クラスタサイズを6ノードクラスタから8ノードクラスタに拡張できます。1ノード、2ノード、または4ノードのクラスタから6ノードまたは8ノードのクラスタへのクラスタの拡張は、現在サポートされていません。<block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>です。</block>
+  <block id="185acadc91fc3b4d6d7a0f9ab8464c51" category="paragraph">クラスタ収縮機能を使用して、クラスタサイズを8ノードクラスタから6ノードクラスタに縮小できます。6ノードまたは8ノードのクラスタから1ノード、2ノード、または4ノードのクラスタへのクラスタ収縮は現在サポートされていません。<block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>です。</block>
+  <block id="065e8e686a5cc9c043bea6a2b47a6dbc" category="section-title">ハードウェアとストレージに関する考慮事項</block>
+  <block id="04b2d3e0b04793e1eab99a7ce4905944" category="paragraph">次のクラスタの拡張と縮小は、現在サポートされていません。</block>
+  <block id="246664f02679d184f0608a4d7824502b" category="list-text">1ノード、2ノード、または4ノードのクラスタから6ノードまたは8ノードのクラスタへの拡張</block>
+  <block id="226d8636aca6bd1bdcac58203b8ddcd2" category="list-text">6ノードまたは8ノードクラスタから1ノード、2ノード、または4ノードクラスタへの収縮。</block>
 </blocks>
