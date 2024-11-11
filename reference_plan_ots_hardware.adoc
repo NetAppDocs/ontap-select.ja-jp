@@ -4,7 +4,7 @@ permalink: reference_plan_ots_hardware.html
 keywords: plan, planning, vmware, hardware, hardware requirements 
 summary: VMware 環境に関連するハードウェア要件と計画の問題がいくつかあります。 
 ---
-= VMware ハイパーバイザーとハードウェアに関する考慮事項
+= ONTAP SelectのVMwareハイパーバイザーとハードウェアに関する考慮事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -42,6 +42,8 @@ ONTAP Select は次のハイパーバイザーに導入できます。
 * VMware ESXi 7.0 GA（ビルド15849807以降）：7.0 U1、U2、U3Cを含む
 * VMware ESXi 8.0 GA（ビルド20513097）
 * VMware ESXi 8.0 U1（ビルド21495797）
+* VMware ESXi 8.0 U2
+* VMware ESXi 8.0 U3
 
 
 

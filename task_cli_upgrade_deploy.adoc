@@ -4,7 +4,7 @@ permalink: task_cli_upgrade_deploy.html
 keywords: administer, administering, cli, deploy, upgrade deploy 
 summary: コマンドラインインターフェイスを使用して、既存の Deploy ユーティリティの仮想マシンをインプレースアップグレードできます。 
 ---
-= Deploy インスタンスをアップグレードする
+= ONTAP Select Deployインスタンスのアップグレード
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

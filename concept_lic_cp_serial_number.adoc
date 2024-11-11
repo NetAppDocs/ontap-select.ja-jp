@@ -4,7 +4,7 @@ permalink: concept_lic_cp_serial_number.html
 keywords: license, licensing, capacity pools, node serial numbers 
 summary: 容量階層のライセンスモデルでは、ノードに割り当てられているライセンスのシリアル番号と 9 桁のノードシリアル番号が同じです。ただし、容量プールのライセンスモデルを使用するノードに割り当てられるシリアル番号の形式は異なります。 
 ---
-= ノードのシリアル番号
+= ONTAP Select容量プールライセンスモデルのノードシリアル番号
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

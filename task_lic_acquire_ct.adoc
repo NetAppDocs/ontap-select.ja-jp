@@ -4,7 +4,7 @@ permalink: task_lic_acquire_ct.html
 keywords: license, licensing, acquire, capacity tiers 
 summary: 容量階層ライセンスを使用している場合は、 ONTAP Select ノードごとにライセンスファイルを取得する必要があります。ライセンスファイルではノードのストレージ容量を定義します。このファイルは、ネットアップが割り当てた一意の 9 桁のシリアル番号を使用してノードにロックされます。 
 ---
-= 大容量階層ライセンスを取得しています
+= ONTAP Selectの大容量階層ライセンスを取得する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

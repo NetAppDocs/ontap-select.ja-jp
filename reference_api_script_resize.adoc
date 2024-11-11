@@ -4,7 +4,7 @@ permalink: reference_api_script_resize.html
 keywords: rest api, deploy rest api, rest, python script, resize nodes 
 summary: 次のスクリプトを使用すると、 ONTAP Select クラスタ内のノードのサイズを変更できます。 
 ---
-= クラスタノードのサイズを変更するスクリプト
+= ONTAP Selectクラスタノードのサイズを変更するスクリプト
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

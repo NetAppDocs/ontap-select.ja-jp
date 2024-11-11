@@ -4,7 +4,7 @@ permalink: concept_usecase_robo.html
 keywords: ontap select, ROBO, remote office/branch office 
 summary: Remote Office / Branch Office （ ROBO ；リモートオフィス / ブランチオフィス）環境に ONTAP Select を導入すると、一元管理と制御を維持しながら小規模オフィスをサポートできます。 
 ---
-= リモートオフィス、ブランチオフィス
+= リモートオフィスやブランチオフィスでONTAP Selectを使用
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

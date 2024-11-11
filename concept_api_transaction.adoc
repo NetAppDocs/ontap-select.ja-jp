@@ -4,7 +4,7 @@ permalink: concept_api_transaction.html
 keywords: rest api, deploy rest api, rest, transaction, request, response, headers, input, output 
 summary: Deploy API 呼び出しはすべて、 Deploy 仮想マシンへの HTTP 要求として実行され、クライアントへの関連する応答が生成されます。この要求と応答のペアで API トランザクションが構成されます。Deploy API を使用する前に、要求の制御に使用できる入力変数と応答出力の内容を理解しておく必要があります。 
 ---
-= 要求と応答の API トランザクション
+= ONTAP Selectの要求と応答のAPIトランザクション
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

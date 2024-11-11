@@ -4,7 +4,7 @@ permalink: reference_host_modify_command.html
 keywords: host modify, command, syntax, host management server 
 summary: このONTAP Select Deployインスタンスでホスト管理サーバを変更するには、host modifyコマンドを使用します。 
 ---
-= ホスト管理サーバを変更する
+= ONTAP Select Deployのホスト管理サーバを変更する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

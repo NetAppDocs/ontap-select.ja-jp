@@ -85,18 +85,37 @@ ONTAP Select クラスタ内の各ノードには、 ONTAP のいくつかの機
 
 一部の ONTAP 機能は ONTAP Select ではサポートされません。ほとんどの場合、これらの機能には仮想化された ONTAP Select 環境で使用できない特殊なハードウェアが必要です。
 
-* 自律型ランサムウェア防御（ARP）
+* Autonomous Ransomware Protection（ARP）の自動更新
++
+
+NOTE: ONTAP Select 9.16.1以降では、ARPの手動更新がサポートされ、ARP機能ライセンスはNetAppライセンスファイル（NLF）に含まれています。
+
 * クラスタ IP スペース
++
 クラスタIPspaceに対する変更（ポート、仮想LAN（VLAN）、リンクアグリゲーショングループの追加や削除など）はサポートされていません。
-* ESXi 8.0 U3
-* Fibre Channel Fibre Channel と Fibre Channel over Ethernet はサポートされていません。
-* ヘルスモニタは、ハードウェアベースの ONTAP 環境で使用される従来のヘルスモニタは、基盤となるハードウェアコンポーネントに固有です。ONTAP Select で使用される仮想環境が原因で、ヘルスモニタはアクティブになりません。
+
+* ファイバチャネル
++
+Fibre ChannelおよびFibre Channel over Ethernetはサポートされていません。
+
+* ヘルスモニタ
++
+ハードウェアベースのONTAP環境で使用される従来の健常性監視は、基盤となるハードウェアコンポーネントに固有です。ONTAP Select で使用される仮想環境が原因で、ヘルスモニタはアクティブになりません。
+
 * インターフェイスグループ
++
 インターフェイスグループはサポートされません。
+
 * マルチテナントキーマネージャ（MTKM）
-* NIC オフロードのサポート ONTAP Select で使用される仮想環境が原因で、 NIC オフロードファシリティはサポートされません。
+* NICオフロードのサポート
++
+ONTAP Selectで使用される仮想環境のため、NICオフロード機能はサポートされません。
+
 * ネットアップストレージ暗号化ドライブ
-* ONTAP ポートのプロパティ速度、二重モード、フロー制御などの ONTAP ポートのプロパティの変更はサポートされていません。
+* ONTAPポートのプロパティ
++
+速度、二重、フロー制御などのONTAPポートのプロパティの変更はサポートされていません。
+
 * サービスプロセッサ
 * SVM 移行
 * SnapLock コンプライアンス
@@ -104,5 +123,4 @@ ONTAP Select クラスタ内の各ノードには、 ONTAP のいくつかの機
 
 
 .関連情報
-* link:reference_lic_ontap_features.html["ONTAP 機能はデフォルトで有効になっています"]
-
+link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["ONTAP 機能はデフォルトで有効になっています"]

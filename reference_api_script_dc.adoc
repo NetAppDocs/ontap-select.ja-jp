@@ -4,7 +4,7 @@ permalink: reference_api_script_dc.html
 keywords: rest api, deploy rest api, rest, python script, delete cluster 
 summary: 既存のクラスタを削除する場合は、次の CLI スクリプトを使用できます。 
 ---
-= クラスタを削除するスクリプト
+= ONTAP Selectクラスタを削除するスクリプト
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

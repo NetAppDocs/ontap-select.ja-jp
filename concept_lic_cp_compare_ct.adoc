@@ -4,7 +4,7 @@ permalink: concept_lic_cp_compare_ct.html
 keywords: license, licensing, capacity pools, capacity tiers, comparing 
 summary: 容量プールと容量階層のライセンスモデルには、いくつかの違いがあります。 
 ---
-= 容量プールと容量階層ライセンスを比較する
+= ONTAP Select容量プールと容量階層のライセンスの比較
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

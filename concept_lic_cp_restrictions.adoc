@@ -4,7 +4,7 @@ permalink: concept_lic_cp_restrictions.html
 keywords: license, licensing, capacity pools, restrictions 
 summary: 容量プールライセンスモデルを使用する場合の制限事項を次に示します。 
 ---
-= 容量プールのライセンスに関する導入の制限
+= ONTAP Select容量プールのライセンスに関する導入の制限事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

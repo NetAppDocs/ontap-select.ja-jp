@@ -4,7 +4,7 @@ permalink: concept_api_before_workflows.html
 keywords: rest api, deploy rest api, rest, workflows, before you begin 
 summary: ワークフロープロセスを確認して使用するための準備をしておく必要があります。 
 ---
-= API ワークフローを使用する前に
+= ONTAP Select Deploy APIワークフローを使用する前に
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

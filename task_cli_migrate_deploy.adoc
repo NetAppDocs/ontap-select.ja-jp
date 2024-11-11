@@ -4,7 +4,7 @@ permalink: task_cli_migrate_deploy.html
 keywords: administer, administering, cli, deploy, deploy instance, migrate 
 summary: コマンドラインインターフェイスを使用して、 Deploy 管理ユーティリティの既存のインスタンスを新しい仮想マシンに移行できます。 
 ---
-= 新しい仮想マシンへのDeployインスタンスの移行
+= ONTAP Select Deployインスタンスを新しい仮想マシンに移行する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

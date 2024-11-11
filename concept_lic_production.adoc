@@ -4,7 +4,7 @@ permalink: concept_lic_production.html
 keywords: license, licensing, production, purchased, standard, premium, premium xl 
 summary: ONTAP Select が組織に適していることを確認したら、本番環境の導入に必要なライセンスを購入できます。各環境の容量階層または容量プールのライセンスモデルとストレージ容量を選択する必要があります。 
 ---
-= 本番環境用の購入ライセンス
+= 本番環境用のONTAP Select購入ライセンス
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task_adm_support.html
 keywords: administer, administering, web, diagnostics, support 
 summary: ONTAP Select の管理の一環として実行できる、関連する診断タスクとサポートタスクがいくつかあります。 
 ---
-= 診断とサポート
+= ONTAP Selectの診断とサポート
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

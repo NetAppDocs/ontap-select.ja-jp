@@ -4,7 +4,7 @@ permalink: reference_chk_host_prep.html
 keywords: ontap select, pre-installation checklist, host preparation 
 summary: ONTAP Select ノードを導入する各ハイパーバイザーホストを準備します。ホストの準備の一環として、導入環境を慎重に評価し、ホストが適切に設定されていること、および ONTAP Select クラスタの導入準備ができていることを確認してください。 
 ---
-= ホストの設定と準備のチェックリスト
+= ONTAP Selectホストの設定と準備のチェックリスト
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

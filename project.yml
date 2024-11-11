@@ -9,20 +9,20 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: 9.15.1
+  - version-number: 9.16.1
     url: "/ontap-select"
+  - version-number: 9.15.1
+    url: "/ontap-select-9151"
   - version-number: 9.14.1
     url: "/ontap-select-9141"
   - version-number: 9.13.1
     url: "/ontap-select-9131"
   - version-number: 9.12.1
     url: "/ontap-select-9121"
-  - version-number: 9.11.1
-    url: "/ontap-select-9111"
   langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: ONTAP Select 9.15.1のドキュメント
+  - title: ONTAP Select 9.16.1のドキュメント
     url: "/index.html"
   - title: リリースノート
     entries:
@@ -32,7 +32,7 @@ sidebar:
       url: "/reference_new_ots.html"
   - title: 概念
     entries:
-    - title: 製品の概要
+    - title: ONTAP Select の概要
       url: "/concept_ots_overview.html"
     - title: ONTAP Select 導入
       url: "/concept_ots_deploy.html"
@@ -142,11 +142,11 @@ sidebar:
       url: "/concept_adm_upgrading_nodes.html"
     - title: 診断とサポート
       url: "/task_adm_support.html"
-    - title: セキュリティ
+    - title: Secure ONTAP Select
       url: "/task_adm_security.html"
-    - title: ネットワーク接続
+    - title: ネットワーク接続の確認
       url: "/task_adm_connectivity.html"
-    - title: メディエーター
+    - title: メディエーターサービスの管理
       url: "/task_adm_mediators.html"
     - title: クラスタ
       entries:
@@ -156,11 +156,11 @@ sidebar:
         url: "/task_cluster_expansion_contraction.html"
     - title: ノードとホスト
       entries:
-      - title: VM ビデオコンソール
+      - title: VMビデオコンソールへのアクセス
         url: "/task_adm_video_console.html"
       - title: クラスタノードのサイズを変更する
         url: "/task_adm_resize.html"
-      - title: 障害が発生したSW RAIDドライブの交換
+      - title: 障害が発生したソフトウェアRAIDドライブの交換
         url: "/task_adm_replace_drives_swraid.html"
       - title: VMFS6へのアップグレード
         url: "/task_adm_upgrade_vmfs6.html"
@@ -278,7 +278,7 @@ sidebar:
       url: "/task_cli_clusters.html"
     - title: ノードとホスト
       entries:
-      - title: ESXi を 6.5 以降にアップグレードしています
+      - title: ESXiを6.5以降にアップグレード
         url: "/task_cli_upgrade_esxi65.html"
       - title: ホスト管理サーバを変更する
         url: "/reference_host_modify_command.html"

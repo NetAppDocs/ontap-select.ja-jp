@@ -4,7 +4,7 @@ permalink: reference_plan_ots_vcenter.html
 keywords: plan, planning, vmware vcenter, vcenter server, vcenter 
 summary: VMware vCenter に関連するいくつかの計画要件を考慮する必要があります。 
 ---
-= ESXi上のVMware vCenterサーバ
+= ESXi上のONTAP Select VMware vCenterサーバ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

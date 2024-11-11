@@ -4,7 +4,7 @@ permalink: concept_lic_platforms.html
 keywords: license, licensing, platform license offerings, license offerings, standard, premium, premium xl 
 summary: ONTAP Select の大容量階層ライセンスまたは大容量プールライセンスは、 3 つのプラットフォーム容量レベルのいずれかで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。 
 ---
-= プラットフォームのライセンス製品を理解する
+= ONTAP Selectのプラットフォームライセンス製品を理解する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task_adm_upgrade_vmfs6.html
 keywords: administer, administering, web, storage vmotion, upgrade vmfs6 
 summary: VMware では、 VMFS 5 から VMFS 6 へのインプレースアップグレードはサポートされていません。Storage vMotion を使用して、既存の ONTAP Select ノードの VMFS 5 データストアから VMFS 6 データストアに移行できます。 
 ---
-= Storage vMotionを使用したVMFS6へのアップグレード
+= Storage vMotionを使用したONTAP SelectノードのVMFS6へのアップグレード
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: reference_api_json_cc.html
 keywords: rest api, deploy rest api, rest, python script, json, create cluster 
 summary: Python コードサンプルを使用して ONTAP Select クラスタを作成または削除する場合は、スクリプトへの入力として JSON ファイルを指定する必要があります。導入計画に基づいて、適切な JSON サンプルをコピーして変更できます。 
 ---
-= クラスタを作成するスクリプトの JSON
+= ONTAP Selectクラスタを作成するスクリプトのJSON
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

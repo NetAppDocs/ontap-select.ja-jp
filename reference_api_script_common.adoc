@@ -4,7 +4,7 @@ permalink: reference_api_script_common.html
 keywords: rest api, deploy rest api, rest, python script, common module 
 summary: すべての Python スクリプトは、 1 つのモジュールで共通の Python クラスを使用します。 
 ---
-= 共通サポートモジュール
+= 共通サポートONTAP Select Pythonモジュール
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

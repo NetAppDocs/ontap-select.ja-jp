@@ -4,7 +4,7 @@ permalink: concept_lic_cp_operation.html
 keywords: license, licensing, capacity pools, operation details 
 summary: 容量プールのライセンスモデルは容量階層モデルと異なります。ストレージ容量は個々のノードに専用で割り当てるのではなく、プールに割り当てられて複数のノードで共有されます。容量プールモデルをサポートするために、追加のコンポーネントとプロセスが作成されています。 
 ---
-= 運用の詳細
+= ONTAP Select容量プールライセンスモデルの処理の詳細
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

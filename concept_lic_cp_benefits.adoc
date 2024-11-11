@@ -4,7 +4,7 @@ permalink: concept_lic_cp_benefits.html
 keywords: license, licensing, capacity pools, benefits 
 summary: 容量階層のライセンスモデルではなく容量プールのライセンスモデルを使用すると、いくつかのメリットがあります。 
 ---
-= 利点のまとめ
+= ONTAP Select容量プールライセンスのメリットの概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

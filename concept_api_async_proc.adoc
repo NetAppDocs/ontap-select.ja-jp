@@ -4,7 +4,7 @@ permalink: concept_api_async_proc.html
 keywords: rest api, deploy rest api, rest, asynchronous processing, job object 
 summary: Deploy API 呼び出し、特にリソースの作成や変更を行う呼び出しは、他の呼び出しよりも完了に時間がかかることがあります。ONTAP Select Deploy は、これらの長時間実行される要求を非同期で処理します。 
 ---
-= ジョブオブジェクトを使用した非同期処理
+= ONTAP Selectのジョブオブジェクトを使用した非同期処理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

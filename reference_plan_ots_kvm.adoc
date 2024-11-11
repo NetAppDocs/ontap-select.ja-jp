@@ -4,7 +4,7 @@ permalink: reference_plan_ots_kvm.html
 keywords: plan, planning, vnas, kvm 
 summary: KVMハイパーバイザーの使用に関連するいくつかの計画の問題について考慮する必要があります。 
 ---
-= KVMの要件
+= ONTAP Select KVMの要件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

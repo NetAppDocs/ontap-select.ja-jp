@@ -4,7 +4,7 @@ permalink: concept_terminology.html
 keywords: terminology, key concepts, concepts 
 summary: ONTAP Select の調査と導入の計画を開始するにあたって、まず用語や主な概念を理解しておくと役立ちます。 
 ---
-= 用語と主要な概念
+= ONTAP Selectの用語と主要概念
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -95,6 +95,9 @@ vNAS のデフォルト構成では、 Single Instance Data Logging （ SIDL ）
 --
 クラスタの更新:: クラスタの作成後、 ONTAP またはハイパーバイザー管理ツールを使用して、 Deploy ユーティリティ以外でクラスタまたは仮想マシンの設定を変更できます。また、構成を変更する仮想マシンを移行することもできます。この変更が行われた場合、 Deploy ユーティリティは自動的には更新されず、クラスタの状態と同期していない可能性があります。クラスタの更新機能を使用して、 Deploy 構成データベースを更新できます。クラスタの更新は、 Deploy の Web ユーザインターフェイス、 CLI 管理シェル、 REST API を使用して実行できます。
 ソフトウェア RAID:: DAS （直接接続型ストレージ）を使用する場合、 RAID 機能は従来、ローカルのハードウェア RAID コントローラを通じて提供されていました。ONTAP Select ノードが RAID 機能を提供する _software raid_ を使用するようにノードを設定することもできます。ソフトウェア RAID を使用する場合、ハードウェア RAID コントローラは不要になります。
+
+
+[[ontap-select-image-install]]
 ONTAP Select イメージのインストール:: ONTAP Select Deploy 2.8 以降では、 Deploy 管理ユーティリティに含まれる ONTAP Select のバージョンは 1 つだけです。含まれているバージョンは、リリース時に最新のバージョンです。ONTAP Select イメージのインストール機能を使用すると、以前のバージョンの ONTAP Select を Deploy ユーティリティのインスタンスに追加できます。このユーティリティは、 ONTAP Select クラスタの導入時に使用できます。を参照してください link:task_cli_deploy_image_add.html["詳細については、 ONTAP Select イメージを追加してください"]。
 
 

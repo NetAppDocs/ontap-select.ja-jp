@@ -5,7 +5,7 @@ keywords: new features
 // summary: The current release includes several new features and improvements specific to ONTAP Select. 
 summary: 現在のリリースには、ONTAP Selectに固有のいくつかの新機能や改善点が含まれています。 
 ---
-= このリリースの新機能
+= ONTAP Selectの新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,7 +15,23 @@ summary: 現在のリリースには、ONTAP Selectに固有のいくつかの�
 
 
 [role="lead"]
-ネットアップでは、ONTAP Select を定期的に更新して、新機能と拡張機能を提供しています
+サポート対象バージョンのONTAP Selectの新機能と機能拡張について説明します。
+
+
+
+== ONTAP Select 9.16.1
+
+ONTAP Select 9.16.1には、いくつかの新機能と改善点が含まれています。
+
+NetAppライセンスファイルのサポートの更新:: ONTAP Select 9.16.1以降では、NetAppライセンスファイル（NLF）のサポートが更新されています。新しいNLF形式には、ARP、ONTAP S3、およびS3 SnapMirror機能のライセンスが含まれています。link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["詳細はこちら。"]です。
++
+--
+新しいONTAP Select 9.16.1 Deployでは、新しいNLF形式が自動的に適用されます。既存のONTAP Select Deployを9.16.1にアップグレードすると、新しいNLF形式は適用されません。ARP、ONTAP S3、およびS3 SnapMirror機能のライセンスを取得するには、アップグレード後に更新されたNLFをダウンロードする必要があります。ONTAP Select 9.15.1以前にリバートする場合は、アップグレード前に使用していた機能ライセンスを再インストールする必要があります。
+
+--
+自律型ランサムウェア対策のサポート:: ONTAP Select 9.16.1では、自律型ランサムウェア対策（ARP）がサポートされるようになりました。ONTAP Select 9.16.1はARPの手動更新のみをサポートし、自動更新はサポートされません。ARP機能ライセンスは、ONTAP Select 9.16.1のNLFに含まれています。link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["詳細はこちら。"]です。
+VMware ESXiのサポートを強化:: ONTAP Select 9.16.1では、VMware ESXi 8.0 U3がサポートされています。
+
 
 
 

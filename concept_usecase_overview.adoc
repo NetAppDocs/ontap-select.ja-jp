@@ -4,7 +4,7 @@ permalink: concept_usecase_overview.html
 keywords: ontap select, business use case overview, deployment, storage, development and testing 
 summary: ONTAP Select は、ハイパーバイザーの仮想化を通じて提供される特有の柔軟性に基づき、さまざまなタイプのアプリケーションに適しています。 
 ---
-= ビジネスニーズと使用シナリオ
+= ONTAP Selectのビジネスニーズと使用シナリオ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

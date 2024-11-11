@@ -4,7 +4,7 @@ permalink: concept_api_rest.html
 keywords: rest api, deploy rest api, rest, architecture, resources, state, uri, http, json 
 summary: Representational State Transfer （ REST ）は、分散 Web アプリケーションの作成に使用される形式です。Web サービス API の設計においては、サーバベースのリソースを公開してその状態を管理するための一連のテクノロジとベストプラクティスが確立されます。主流のプロトコルと標準が使用されており、 ONTAP Select クラスタの導入と管理のための柔軟な基盤が提供されます。 
 ---
-= 基盤としての REST Web サービス
+= ONTAP Selectクラスタの導入と管理のためのREST Webサービスの基盤
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

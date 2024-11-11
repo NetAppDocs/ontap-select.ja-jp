@@ -4,7 +4,7 @@ permalink: reference_lic_ontap_features.html
 keywords: license, licensing, ontap features, default ontap features 
 summary: ONTAP Select は、ほとんどのONTAP 機能を完全にサポートしています。ONTAP の機能の多くには、クラスタの導入時に各ノードで自動的にライセンスが付与されます。ただし、一部の機能には個別のライセンスが必要です。 
 ---
-= ONTAP の機能
+= ONTAP SelectでのONTAP機能のサポート
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,8 +23,9 @@ NOTE: ハードウェア固有の依存関係を持つONTAP 機能は、一般�
 
 == ONTAP の機能はデフォルトで自動的に有効になります
 
-ONTAP Select には次の機能が含まれており、デフォルトでライセンスが付与されています。
+ONTAP Selectでは、次のONTAP機能がサポートされており、デフォルトでライセンスが付与されています。
 
+* Autonomous Ransomware Protection（ARP）（手動更新）
 * CIFS
 * 重複排除機能と圧縮機能
 * FlexCache
@@ -35,13 +36,15 @@ ONTAP Select には次の機能が含まれており、デフォルトでライ�
 * NFS
 * NVMe over TCP
 * ONTAP のマルチテナンシー機能
+* ONTAP S3
 * SnapMirror
+* S3 SnapMirror
 * SnapRestore
 * SnapVault
 * Storage VMディザスタリカバリ（SVM DR）
 +
 
-NOTE: ONTAP Select 9.12.1以降では、ソースとデスティネーションの両方としてSVM DRがサポートされるようになりました。関係の最大数は16です。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。
+NOTE: ONTAP Selectでは、ソースとデスティネーションの両方としてSVM DRがサポートされ、最大16の関係が確立されます。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。
 
 
 
@@ -51,20 +54,17 @@ NOTE: ONTAP Select 9.12.1以降では、ソースとデスティネーション�
 
 ONTAP 機能がデフォルトで有効になっていない場合は、次のライセンスを別途取得する必要があります。
 
-* Data Availability Service の略
 * FabricPool
 * MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）
-* ONTAP S3（コストゼロ）
 * SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）
 +
 ** 改ざん防止Snapshotコピー
 
 
-* SyncMirror （コストゼロ）
 
 
 
-NOTE: StorageGRID Webscale を使用するときに FabricPool ライセンスは必要ありません。
+NOTE: StorageGRIDを使用する場合は、FabricPoolライセンスは必要ありません。
 
 .関連情報
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select と ONTAP 9 の比較"]

@@ -4,7 +4,7 @@ permalink: task_cli_signing_in.html
 keywords: administer, administering, cli, deploy, sign in, signing in 
 summary: SSH を使用して Deploy 管理シェルにサインインする必要があります。サインインしたら、問題 CLI コマンドを使用して ONTAP Select クラスタを作成し、関連する管理手順を実行できます。 
 ---
-= SSHを使用したDeployへのサインイン
+= SSHを使用したONTAP Select Deployへのサインイン
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

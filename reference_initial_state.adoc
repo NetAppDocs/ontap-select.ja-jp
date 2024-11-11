@@ -4,7 +4,7 @@ permalink: reference_initial_state.html
 keywords: install, installing, initial state, cluster initial state 
 summary: クラスタを導入し、環境に応じてクラスタを設定したら、クラスタの初期状態に注意する必要があります。 
 ---
-= 導入後のクラスタの初期状態
+= 導入後のONTAP Selectクラスタの初期状態
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

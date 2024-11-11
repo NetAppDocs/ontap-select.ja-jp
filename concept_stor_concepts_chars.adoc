@@ -4,7 +4,7 @@ permalink: concept_stor_concepts_chars.html
 keywords: ontap select, storage concepts 
 summary: 特定のストレージコンポーネントについて確認する前に、 ONTAP Select 環境に適用されるストレージの一般的な概念について説明します。 
 ---
-= ストレージ：一般的な概念と特徴
+= ONTAP Selectストレージ：一般的な概念と特徴
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: reference_plan_ots_general.html
 keywords: plan, planning, general requirements 
 summary: ONTAP Select の導入を計画する際に考慮する必要のある一般的な要件がいくつかあります。 
 ---
-= 一般的な要件と計画に関する考慮事項
+= ONTAP Selectの要件と計画に関する考慮事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

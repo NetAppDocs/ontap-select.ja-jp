@@ -4,7 +4,7 @@ permalink: concept_stor_eff_support.html
 keywords: ontap select, storage efficiency support 
 summary: ONTAP Select では、 FAS アレイや AFF アレイとほぼ同じ Storage Efficiency オプションが提供されます。 
 ---
-= Storage Efficiency のサポート
+= ONTAP Select Storage Efficiencyのサポート
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

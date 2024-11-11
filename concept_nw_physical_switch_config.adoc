@@ -4,7 +4,7 @@ permalink: concept_nw_physical_switch_config.html
 keywords: ontap select, upstream physical switch configuration 
 summary: シングルスイッチおよびマルチスイッチの環境に基づくアップストリームの物理スイッチ構成の詳細。 
 ---
-= 物理スイッチの構成
+= ONTAP Select物理スイッチの構成
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

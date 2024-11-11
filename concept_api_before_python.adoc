@@ -4,7 +4,7 @@ permalink: concept_api_before_python.html
 keywords: rest api, deploy rest api, rest, python, before you begin 
 summary: サンプルの Python スクリプトを実行する前に、環境を準備する必要があります。 
 ---
-= Python を使用して API にアクセスする前に、次の手順を実行
+= Pythonを使用してONTAP Select Deploy APIにアクセスする前に
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

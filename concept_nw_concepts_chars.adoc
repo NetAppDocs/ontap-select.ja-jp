@@ -4,7 +4,7 @@ permalink: concept_nw_concepts_chars.html
 keywords: ontap select, networking concepts, cluster characteristics 
 summary: まず、 ONTAP Select 環境に適用される一般的なネットワークの概念を理解します。次に、シングルノードクラスタとマルチノードクラスタに対応する特徴とオプションを確認します。 
 ---
-= ネットワーク：一般的な概念と特徴
+= ONTAP Selectネットワークの概念と特徴
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

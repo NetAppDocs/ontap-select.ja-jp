@@ -4,7 +4,7 @@ permalink: task_lic_acquire_cp.html
 keywords: license, licensing, acquire, capacity pools 
 summary: ONTAP Select ノードで使用される容量プールごとにライセンスファイルを取得する必要があります。ライセンスファイルでは、プールのストレージ容量と有効期限が定義されます。このライセンスは、ネットアップが割り当てた一意のライセンスシリアル番号と、 Deploy インスタンスに関連付けられたライセンスロック ID を組み合わせて、 License Manager にロックされます。 
 ---
-= 容量プールライセンスを取得する
+= ONTAP Select容量プールライセンスを取得する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

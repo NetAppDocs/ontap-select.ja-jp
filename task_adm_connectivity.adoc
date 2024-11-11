@@ -4,7 +4,7 @@ permalink: task_adm_connectivity.html
 keywords: administer, administering, web, connectivity, network connectivity, network checker 
 summary: 内部クラスタネットワーク上にある 2 つ以上の ONTAP Select ノード間のネットワーク接続をテストできます。通常は、マルチノードクラスタの導入前にこのテストを実行して、原因 で処理が失敗する可能性のある問題を検出します。 
 ---
-= ONTAP Select ノード間の接続を確認します
+= ONTAP Selectノード間の接続を確認する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

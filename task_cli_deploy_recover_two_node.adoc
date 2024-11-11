@@ -4,7 +4,7 @@ permalink: task_cli_deploy_recover_two_node.html
 keywords: administer, administering, cli, two node cluster, recover, recovering 
 summary: ONTAP Select Deploy ユーティリティに障害が発生した場合や、何らかの理由でユーティリティが使用できない場合は、 ONTAP Select のノードとクラスタを管理できなくなります。また、 Deploy に含まれるメディエーターサービスを使用できないため、すべての 2 ノードクラスタの HA 機能が失われます。リカバリ不能な障害が発生した場合は、 Deploy ユーティリティのインスタンスをリカバリして、管理と HA の機能をリストアする必要があります。 
 ---
-= 2ノードクラスタのDeployユーティリティをリカバリする
+= 2ノードクラスタのONTAP Select Deployユーティリティをリカバリする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

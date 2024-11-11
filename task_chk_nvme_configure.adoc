@@ -4,7 +4,7 @@ permalink: task_chk_nvme_configure.html
 keywords: ontap select, nvme storage, host preparation 
 summary: ソフトウェア RAID で NVMe ドライブを使用する場合は、ドライブを認識するようにホストを設定する必要があります。 
 ---
-= NVMe ドライブを使用するためのホストの設定
+= NVMeドライブを使用するようにONTAP Selectホストを設定する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

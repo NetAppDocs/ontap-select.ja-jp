@@ -4,7 +4,7 @@ permalink: concept_stor_hwraid_local.html
 keywords: ontap select, hardware raid, performance boost, protection 
 summary: ハードウェア RAID コントローラが使用可能な場合、 ONTAP Select は、書き込みパフォーマンスの向上と物理ドライブの障害に対する保護の両方を実現するために、 RAID サービスをハードウェアコントローラに移動できます。このため、 ONTAP Select クラスタ内のすべてのノードに対する RAID 保護は、 ONTAP ソフトウェア RAID ではなく、ローカルに接続された RAID コントローラによって実装されます。 
 ---
-= ローカル接続ストレージ向けのハードウェア RAID サービス
+= ONTAP Selectローカル接続ストレージ用のハードウェアRAIDサービス
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,6 +24,9 @@ NOTE: 物理 RAID コントローラが基盤のドライブの RAID ストラ�
 == ローカル接続ストレージ用の RAID コントローラ構成
 
 ONTAP Select にバッキングストレージを提供するローカル接続ディスクは、すべて RAID コントローラの背後に設置する必要があります。ほとんどのコモディティサーバには、価格の異なる複数の RAID コントローラが用意されており、その機能レベルもそれぞれに異なります。コントローラに設定された一定の最小要件を満たしていれば、これらのオプションをできるだけ多くサポートすることが意図されています。
+
+
+NOTE: ハードウェアRAID構成を使用しているONTAP Select VMから仮想ディスクの接続を解除することはできません。ディスクの接続解除は、ソフトウェアRAID構成を使用しているONTAP Select VMでのみサポートされます。詳細については、を参照してください link:task_adm_replace_drives_swraid.html["ONTAP SelectソフトウェアRAID構成で障害が発生したドライブの交換"] 。
 
 ONTAP Select ディスクを管理する RAID コントローラは、次の要件を満たしている必要があります。
 

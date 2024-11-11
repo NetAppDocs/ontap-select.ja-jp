@@ -4,7 +4,7 @@ permalink: task_adm_security.html
 keywords: administer, administering, web, security 
 summary: ONTAP Select 環境のセキュリティ保護の一環として実行できる関連タスクがいくつかあります。 
 ---
-= セキュリティ
+= ONTAP Select環境のセキュリティを確保
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

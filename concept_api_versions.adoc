@@ -4,7 +4,7 @@ permalink: concept_api_versions.html
 keywords: rest api, deploy rest api, rest, version, versioning 
 summary: ONTAP Select Deploy に付属の REST API には、バージョン番号が割り当てられます。API のバージョン番号は、 Deploy のリリース番号とは関係ありません。Deploy のリリースに含まれている API のバージョンと、 API の使用にどのような影響があるかを確認しておく必要があります。 
 ---
-= API のバージョン管理を導入
+= ONTAP Select Deploy APIのバージョン管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: concept_api_before_browser.html
 keywords: rest api, deploy rest api, rest, access browser, before you begin 
 summary: Deploy のオンラインドキュメントページを使用する前に、いくつかの点に注意する必要があります。 
 ---
-= ブラウザから API にアクセスする前に
+= ブラウザを使用してONTAP Select Deploy APIにアクセスする前に
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

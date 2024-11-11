@@ -4,7 +4,7 @@ permalink: reference_plan_best_practices.html
 keywords: plan, planning, best practices, recommendations 
 summary: ONTAP Select の導入を計画する際に考慮する必要があるベストプラクティスがあります。 
 ---
-= ベストプラクティスのまとめ
+= ONTAP Select導入のベストプラクティスの概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

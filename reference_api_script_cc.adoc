@@ -4,7 +4,7 @@ permalink: reference_api_script_cc.html
 keywords: rest api, deploy rest api, rest, python script, create cluster 
 summary: 次のスクリプトを使用して、スクリプト内で定義されたパラメータと JSON 入力ファイルに基づいてクラスタを作成できます。 
 ---
-= クラスタを作成するスクリプト
+= ONTAP Selectクラスタを作成するスクリプト
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

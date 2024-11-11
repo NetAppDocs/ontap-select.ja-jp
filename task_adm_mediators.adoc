@@ -4,7 +4,7 @@ permalink: task_adm_mediators.html
 keywords: administer, administering, web, mediators 
 summary: 各 ONTAP Select 2 ノードクラスタはメディエーターサービスによって監視されます。このサービスは、ノードで共有する HA 機能の管理を支援します。 
 ---
-= Deploy メディエーターサービスの管理
+= ONTAP Select Deployメディエーターサービスの管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

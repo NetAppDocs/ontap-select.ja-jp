@@ -4,7 +4,7 @@ permalink: concept_perf_general.html
 keywords: ontap select, performance 
 summary: パフォーマンスはハードウェア構成によって異なります。 
 ---
-= パフォーマンス
+= ONTAP Selectのパフォーマンスの概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

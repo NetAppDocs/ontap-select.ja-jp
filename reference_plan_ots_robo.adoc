@@ -4,7 +4,7 @@ permalink: reference_plan_ots_robo.html
 keywords: plan, planning, remote and branch office, robo 
 summary: リモートオフィス / ブランチオフィス（ ROBO ）環境に ONTAP Select を導入できます。ROBO 環境の計画の一環として、目標を達成するための設定を選択する必要があります。 
 ---
-= リモートオフィスおよびブランチオフィスへの導入
+= ONTAP Selectのリモートオフィスとブランチオフィスへの導入
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

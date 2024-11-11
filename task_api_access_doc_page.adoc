@@ -4,7 +4,7 @@ permalink: task_api_access_doc_page.html
 keywords: rest api, deploy rest api, rest, deploy documentation, access, accessing 
 summary: API ドキュメントを表示する場合や、 API 呼び出しを手動で問題 する場合は、 ONTAP Select Deploy のオンラインドキュメントページにアクセスする必要があります。 
 ---
-= Deployのドキュメントページへのアクセス
+= ONTAP Select Deployのドキュメントページへのアクセス
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

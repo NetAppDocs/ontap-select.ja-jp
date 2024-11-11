@@ -4,7 +4,7 @@ permalink: concept_stor_vsan_external.html
 keywords: ontap select, vsan and external array configurations, vnas architecture 
 summary: 仮想 NAS （ vNAS ）環境では、 VSAN 上の ONTAP Select クラスタ、一部の HCI 製品、 NetApp HCI テクノロジ、および外付けアレイタイプのデータストアがサポートされます。これらの構成の基盤となるインフラは、データストアの耐障害性を提供します。 
 ---
-= VSAN および外付けアレイの構成
+= ONTAP Select vSANと外付けアレイの構成
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

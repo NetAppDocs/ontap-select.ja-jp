@@ -4,7 +4,7 @@ permalink: concept_ha_config.html
 keywords: ontap select, high availability configurations, two-node ha, multi-node ha, mc sds 
 summary: 高可用性オプションを確認して、環境に最も適した HA 構成を選択してください。 
 ---
-= ハイアベイラビリティ構成
+= ONTAP Selectハイアベイラビリティコウセイ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

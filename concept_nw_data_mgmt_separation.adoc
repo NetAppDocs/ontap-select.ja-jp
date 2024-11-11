@@ -4,7 +4,7 @@ permalink: concept_nw_data_mgmt_separation.html
 keywords: ontap select, traffic separation 
 summary: データトラフィックと管理トラフィックを別々のレイヤ 2 ネットワークに分離します。 
 ---
-= データトラフィックと管理トラフィックの分離
+= ONTAP Selectのデータトラフィックと管理トラフィックの分離
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

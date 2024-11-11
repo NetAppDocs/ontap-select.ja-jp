@@ -4,7 +4,7 @@ permalink: reference_plan_dep_vmware.html
 keywords: plan, planning, ontap select deploy, vmware requirements 
 summary: VMware 環境に固有の要件と制限事項がいくつかあります。これらは、 VMware 環境に ONTAP Select Deploy ユーティリティをインストールする前に検討する必要があります。 
 ---
-= ハイパーバイザーホストに関する考慮事項
+= ONTAP Select Deployハイパーバイザーホストに関する考慮事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

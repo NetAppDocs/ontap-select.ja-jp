@@ -4,7 +4,7 @@ permalink: concept_usecase_private_cloud.html
 keywords: ontap select, private cloud 
 summary: ONTAP Select は、組織内の 1 つ以上のプライベートクラウドのサポートに最適です。一般的なユースケースとしては、コモディティサーバ上に構築されたプライベートクラウドにストレージサービスを提供するケースがあります。 
 ---
-= プライベートクラウドとデータセンター
+= ONTAP Selectによるプライベートクラウドとデータセンターのサポート
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

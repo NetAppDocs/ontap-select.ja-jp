@@ -4,7 +4,7 @@ permalink: reference_chk_deploy_req_info.html
 keywords: ontap select, deploy, pre-installation, vmware 
 summary: Deploy 管理ユーティリティを VMware 環境にインストールする前に、基本的な要件を確認し、導入を成功させるための準備をしておきます。 
 ---
-= Deploy ユーティリティのインストールに必要な情報
+= ONTAP Select Deployユーティリティのインストールに必要な情報
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

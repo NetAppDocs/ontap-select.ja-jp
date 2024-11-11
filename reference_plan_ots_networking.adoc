@@ -4,7 +4,7 @@ permalink: reference_plan_ots_networking.html
 keywords: plan, planning, networking, network, drivers, vmxnet3, cluster mtu, firewall 
 summary: ONTAP Select を導入する前に、ハイパーバイザーのネットワークを正しく設定する必要があります。 
 ---
-= ネットワークに関する考慮事項
+= ONTAP Selectネットワークに関する考慮事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
