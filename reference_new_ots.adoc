@@ -68,7 +68,7 @@ ONTAP Select 9.14.1には、いくつかの新機能と改善点が含まれて�
 KVMハイパーバイザーのサポート:: ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでのONTAP Select 9.10.1では、KVMハイパーバイザーへの新しいクラスタの導入がサポートされなくなり、ONTAP Select 9.11.1では、オフラインへの切り替えや削除を除く既存のKVMクラスタとホストの管理がサポートされなくなりました。
 VMware vCenterプラグインの導入のサポート終了:: ONTAP Select 9.14.1以降では、Deploy VMware vCenterプラグインはサポートされなくなりました。
 ONTAP Select Deployサポートの更新:: Deploy 9.14.1P2よりも前のバージョンのONTAP Select Deploy 9.14.1を実行している場合は、できるだけ早くONTAP Select Deploy 9.14.1P2にアップグレードする必要があります。詳細については、を参照してください link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["ONTAP Select 9.14.1リリースノート"^]。
-VMware ESXiのサポートを強化:: ONTAP Select 9.14.1には、VMware ESXi 8.0.2のサポートが含まれています。
+VMware ESXiのサポートを強化:: ONTAP Select 9.14.1では、VMware ESXi 8.0 U2がサポートされています。
 
 
 
