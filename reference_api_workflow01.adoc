@@ -22,14 +22,6 @@ vCenter で管理されている VMware ESXi ホストにシングルノード�
 * クラスタ内で複数のノードまたはホストが使用されている場合
 * クラスタは購入ライセンスを使用して本番環境に導入されます
 * KVMハイパーバイザーは、VMware ESXiの代わりに使用されます
-+
-[NOTE]
-====
-** ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。
-** ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
-
-
-====
 
 
 
@@ -413,3 +405,6 @@ JSON 入力（手順 10 ）:: ONTAP 管理者アカウントのパスワード�
 
 --
 
+
+.関連情報
+link:task_quick_start_for_ovf_template_deployments.html["OVFテンプレート導入のためのONTAP Selectクイックスタートガイド"]

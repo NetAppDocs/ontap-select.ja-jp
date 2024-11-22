@@ -218,4 +218,6 @@ https://<ip_address>/` にアクセスします
 
 
 .関連情報
-link:task_cli_signing_in.html["SSHを使用したDeployへのサインイン"]
+* link:task_cli_signing_in.html["SSHを使用したDeployへのサインイン"]
+* link:task_quick_start_for_ovf_template_deployments.html["OVFテンプレート導入のためのONTAP Selectクイックスタートガイド"]
+

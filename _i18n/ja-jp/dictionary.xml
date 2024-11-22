@@ -2010,7 +2010,6 @@
   <block id="667aa4140034cc454b837db2fc24ce3d" category="inline-link">NetApp Interoperability Matrix Tool 、ウィンドウ = _blank</block>
   <block id="e974ba73413c61605294fbea7a63f880" category="paragraph">を参照してください<block ref="6989237bb21ab12eea7660d1d2c0793b" category="inline-link-rx"></block> を参照してください。</block>
   <block id="6ef6e53858c70e7e79a98bf86eb89b40" category="section-title">基本的なハードウェア要件</block>
-  <block id="6e789a662664596fd2f867b83af8955a" category="paragraph">ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。</block>
   <block id="7a4cc24a8547103995174a22d62c6415" category="inline-link-macro">インテル Xeon プロセッサー、ウィンドウ = _ ブランク</block>
   <block id="fc86323f8bb43524824dfedf72c12f20" category="list-text">サーバー向けインテル Xeon プロセッサー（を参照 <block ref="b4ae18ee7ddc8509f21de2805d7b78c6" category="inline-link-macro-rx"></block> 詳細については、</block>
   <block id="7538c6fd2c1f96ec16f31ff621c5090f" category="list-text">10GbE × 2</block>
@@ -3167,7 +3166,6 @@
   <block id="250f6d868aabeaced76663cb583769da" category="sidebar">クラスタの管理</block>
   <block id="6a66d4f800a8576eee650d6dd676dd9d" category="sidebar">REST APIの使用</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">リソースの追加</block>
-  <block id="2cf665df8bcce3d8608ac2923c3934b2" category="sidebar">ONTAP Selectのリソースページ</block>
   <block id="5c7750df890d8a1ae46102a5c56d163d" category="sidebar">ONTAP Selectブログ</block>
   <block id="bafb5d4f7ed06fcf88f3e77fadecc81b" category="sidebar">ONTAP Selectコミュニティ</block>
   <block id="dd3d71b5f68ad8da8831a0b5ea514e35" category="sidebar">Interoperability Matrix</block>
@@ -3754,4 +3752,41 @@ storage aggregate show-spare-disks</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8.0 U1</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8.0GA</block>
   <block id="8d224631a5a87c64caecc71fee6fb612" category="list-text">ESXi 7.0 U3</block>
+  <block id="2541fca0ad59c8199b8bb08b5020de58" category="inline-link-macro">OVFテンプレート導入のためのONTAP Selectクイックスタートガイド</block>
+  <block id="eccbbc66ee95decf0d7c0595d219c92b" category="paragraph"><block ref="eccbbc66ee95decf0d7c0595d219c92b" category="inline-link-macro-rx"></block></block>
+  <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。</block>
+  <block id="f699f7e9ed69e5269a69fd9ec385c1ad" category="admonition">Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポートされていません。</block>
+  <block id="676477cfcc6ef4db97bbb95e9c75b57e" category="summary">VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP Selectクラスタの90日間の評価用インスタンスを迅速に導入できます。</block>
+  <block id="08aeb5678ae03a8db1f16233a4a16070" category="paragraph">クイックスタートガイドを使用してOpen Virtualization Format（OVF）テンプレートを導入すると、VMware ESXiでOVFテンプレートを使用してシングルノードONTAP Selectクラスタの90日間の評価インスタンスをすばやく導入できます。</block>
+  <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">NetAppからシリアル番号やストレージ容量のライセンスを取得する必要はありません。</block>
+  <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">購入したライセンスと同じ量のストレージをユーザデータに割り当てることができます。</block>
+  <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">ノードを評価用ライセンスから購入ライセンスにアップグレードすることはできません。</block>
+  <block id="de68e769353f85803d50af3ad5192201" category="list-text">OVFテンプレートの導入にはvCenterアカウントのみを使用できます。ESXiホストに直接インストールすることは現在サポートされていません。</block>
+  <block id="3becac3f3a46d46f0df7e4df7b69a359" category="list-text">OVFテンプレート（OVAファイルに含まれる）は、vSphereスタンドアロンクライアントまたはvSphere Web Client（ESXi 6.5以降の唯一のオプション）を使用してインストールする必要があります。ONTAP Select Deploy管理ユーティリティを使用しない。</block>
+  <block id="324b9a453c1c067658adca4be37dbae0" category="section-title">ONTAP Selectクラスタホストを準備</block>
+  <block id="1ec19b1e234462f154c2312b865baa14" category="paragraph">次の要件に従って、ONTAP Selectクラスタを導入するESXiホストを準備します。プラットフォームの説明は、VMFS-5またはVMFS-6ファイルシステムを使用してフォーマットされたローカルの直接接続型ストレージ（DAS）を使用した標準または小規模のインスタンスタイプ構成に基づいています。</block>
+  <block id="7564075dd4184b322f666087a8172ae7" category="inline-image-macro">ESXiホストを準備するための要件</block>
+  <block id="40500d60ce10678b5afdd4398f493978" category="paragraph"><block ref="40500d60ce10678b5afdd4398f493978" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9d35c0cb060ab36e25ffd3d93795556" category="inline-link-macro">ONTAP Selectインストールマニュアル</block>
+  <block id="295c8d07537fb1be04c147371b26ece5" category="paragraph">ホスト構成オプションの詳細については、を参照してください<block ref="cd27c348e940a3727b6807628855d8fd" category="inline-link-macro-rx"></block>。</block>
+  <block id="246320dc101bf0e3be5986b0320159e6" category="section-title">OVFテンプレートを使用してシングルノードONTAP Selectクラスタを導入</block>
+  <block id="a50cac13360eacf7961596b190047155" category="paragraph">サポートされている64ビットESXiホストサーバで、次の手順を実行します。</block>
+  <block id="e7c78d04f4c3c4a7d36c59b9d2c2b9f7" category="list-text">NetApp評価製品プログラムページに移動し、* ONTAP Select *を選択して、ONTAP Select OVFテンプレートをローカルワークステーションにダウンロードします。</block>
+  <block id="04b1e5dd71a31edd4beba2e075fb1a5e" category="list-text">管理用Privilegesのアカウントを使用して、VMware vSphere Web Clientにサインインします。</block>
+  <block id="b8d4fc60e9ceb80bf2fc078ddfdc693c" category="list-text">次のいずれかのオプションを使用してホストを選択します。</block>
+  <block id="a636f64e8e0f0ff7c201bcbe4197a1a8" category="list-text">[ * ファイル * （ File ） ] &gt; [* OVF テンプレートの展開（ Deploy OVF Template ） ] を選択</block>
+  <block id="96a3af93a31aa2d6987b7e0083ab462b" category="list-text">[Datacenter]*を選択します。次に、右クリックして*[Deploy OVF Template]*を選択します。</block>
+  <block id="e0ccc728234a1a6f0227f25e6efde9d4" category="list-text">ローカルワークステーションでONTAP SelectソースOVAファイルを選択し、*[Next]*を選択します。</block>
+  <block id="ea9ba5785c2b1398a34baf7fc0a68c67" category="list-text">OVFテンプレートの詳細を確認し、* Next *を選択します。</block>
+  <block id="9caf4332c798060a1cebc6b53f315bb7" category="list-text">EULAの詳細を確認し、*[Accept]*を選択します。次に、* Next *を選択します。</block>
+  <block id="be18e91c73f7a7d7a9ae5462079f0ac7" category="list-text">新しい仮想マシンの名前を入力し、*[Next]*を選択します。</block>
+  <block id="87d6a5bfde901ee6044d4f9ec142b4d6" category="list-text">使用可能なデータストアが複数ある場合は、データストアを選択して*[次へ]*を選択します。</block>
+  <block id="44260bcf8bb9526a48d3725d7dccac06" category="list-text">[Thick Provision Lazy Zeroed]*を選択し、*[Next]*を選択します。</block>
+  <block id="d4de99256df06c0619573e5d37a5352d" category="list-text">データネットワークと管理ネットワークを選択し、*[次へ]*を選択します。</block>
+  <block id="34fcbce1c7afc6b294a2a56ad5419543" category="list-text">[プロパティ]*ページで、必要な値をすべて指定し、*[次へ]*を選択します。</block>
+  <block id="dfe2716b8d1ea246f6e1aa9804752d1e" category="list-text">導入の詳細を確認し、*[導入後に電源をオンにする]*を選択します。</block>
+  <block id="c56b5c777d1fbf5b3503afddde839f20" category="list-text">[完了]*を選択して導入プロセスを開始します。</block>
+  <block id="66723f6678d3dd5c1bae3c6838416d52" category="list-text">ONTAP Selectクラスタの導入が完了したら、System ManagerまたはCLIインターフェイスを使用してクラスタを設定できます。ディスクは、標準のONTAP * disk assign *処理を使用して割り当てる必要があります。</block>
+  <block id="7c51cb770ac84a1429ed1cfe6c686aed" category="paragraph"><block ref="7c51cb770ac84a1429ed1cfe6c686aed" category="inline-link-macro-rx"></block></block>
+  <block id="fa0d249cd337d58b40ea3c7cc54de247" category="sidebar">OVFテンプレート導入のクイックスタート</block>
 </blocks>

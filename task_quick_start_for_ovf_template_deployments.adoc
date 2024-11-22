@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: task_quick_start_for_ovf_template_deployments.html 
+keywords: ontap select, ovf, template, deployment, evaluation, license 
+summary: VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP Selectクラスタの90日間の評価用インスタンスを迅速に導入できます。 
+---
+= OVFテンプレート導入のためのONTAP Selectクイックスタートガイド
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+クイックスタートガイドを使用してOpen Virtualization Format（OVF）テンプレートを導入すると、VMware ESXiでOVFテンプレートを使用してシングルノードONTAP Selectクラスタの90日間の評価インスタンスをすばやく導入できます。
+
+.このタスクについて
+* NetAppからシリアル番号やストレージ容量のライセンスを取得する必要はありません。
+* 購入したライセンスと同じ量のストレージをユーザデータに割り当てることができます。
+* ノードを評価用ライセンスから購入ライセンスにアップグレードすることはできません。
+* OVFテンプレートの導入にはvCenterアカウントのみを使用できます。ESXiホストに直接インストールすることは現在サポートされていません。
+* OVFテンプレート（OVAファイルに含まれる）は、vSphereスタンドアロンクライアントまたはvSphere Web Client（ESXi 6.5以降の唯一のオプション）を使用してインストールする必要があります。ONTAP Select Deploy管理ユーティリティを使用しない。
+
+
+
+
+== ONTAP Selectクラスタホストを準備
+
+次の要件に従って、ONTAP Selectクラスタを導入するESXiホストを準備します。プラットフォームの説明は、VMFS-5またはVMFS-6ファイルシステムを使用してフォーマットされたローカルの直接接続型ストレージ（DAS）を使用した標準または小規模のインスタンスタイプ構成に基づいています。
+
+image:prepare_ESXi_host_requirements.png["ESXiホストを準備するための要件"]
+
+ホスト構成オプションの詳細については、を参照してくださいlink:reference_chk_host_prep.html["ONTAP Selectインストールマニュアル"]。
+
+
+
+== OVFテンプレートを使用してシングルノードONTAP Selectクラスタを導入
+
+サポートされている64ビットESXiホストサーバで、次の手順を実行します。
+
+.手順
+. NetApp評価製品プログラムページに移動し、* ONTAP Select *を選択して、ONTAP Select OVFテンプレートをローカルワークステーションにダウンロードします。
+. 管理用Privilegesのアカウントを使用して、VMware vSphere Web Clientにサインインします。
+. 次のいずれかのオプションを使用してホストを選択します。
++
+** [ * ファイル * （ File ） ] > [* OVF テンプレートの展開（ Deploy OVF Template ） ] を選択
+** [Datacenter]*を選択します。次に、右クリックして*[Deploy OVF Template]*を選択します。
+
+
+. ローカルワークステーションでONTAP SelectソースOVAファイルを選択し、*[Next]*を選択します。
+. OVFテンプレートの詳細を確認し、* Next *を選択します。
+. EULAの詳細を確認し、*[Accept]*を選択します。次に、* Next *を選択します。
+. 新しい仮想マシンの名前を入力し、*[Next]*を選択します。
+. 使用可能なデータストアが複数ある場合は、データストアを選択して*[次へ]*を選択します。
+. [Thick Provision Lazy Zeroed]*を選択し、*[Next]*を選択します。
+. データネットワークと管理ネットワークを選択し、*[次へ]*を選択します。
+. [プロパティ]*ページで、必要な値をすべて指定し、*[次へ]*を選択します。
+. 導入の詳細を確認し、*[導入後に電源をオンにする]*を選択します。
+. [完了]*を選択して導入プロセスを開始します。
+. ONTAP Selectクラスタの導入が完了したら、System ManagerまたはCLIインターフェイスを使用してクラスタを設定できます。ディスクは、標準のONTAP * disk assign *処理を使用して割り当てる必要があります。
+
+
+.関連情報
+link:http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]

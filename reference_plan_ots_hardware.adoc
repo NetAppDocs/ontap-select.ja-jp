@@ -81,6 +81,9 @@ NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づ
 * サーバー向けインテル Xeon プロセッサー（を参照 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["インテル Xeon プロセッサー、ウィンドウ = _ ブランク"] 詳細については、
 
 
+
+NOTE: Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポートされていません。
+
 .イーサネット構成
 クラスタのサイズに基づいて、サポートされるイーサネット構成がいくつかあります。
 

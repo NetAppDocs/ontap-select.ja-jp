@@ -19,7 +19,7 @@ settings:
     url: "/ontap-select-9131"
   - version-number: 9.12.1
     url: "/ontap-select-9121"
-  langs: ja-jp,us-en,de-de,es-es,fr-fr,it-it,pt-br,ko-kr,zh-cn,zh-tw
+  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
   - title: ONTAP Select 9.16.1のドキュメント
@@ -294,6 +294,8 @@ sidebar:
         url: "/task_cli_deploy_image_remove.html"
       - title: 2 ノードクラスタの Deploy をリカバリします
         url: "/task_cli_deploy_recover_two_node.html"
+  - title: OVFテンプレート導入のクイックスタート
+    url: "/task_quick_start_for_ovf_template_deployments.html"
   - title: よく寄せられる質問
     url: "/reference_faq.html"
   - title: 法的通知

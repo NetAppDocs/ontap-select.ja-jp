@@ -167,13 +167,6 @@ Python コードサンプルを使用して ONTAP Select クラスタを作成�
 
 == KVM 上のシングルノードクラスタ
 
-[NOTE]
-====
-* ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。
-* ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。
-
-
-====
 [source, json]
 ----
 {
