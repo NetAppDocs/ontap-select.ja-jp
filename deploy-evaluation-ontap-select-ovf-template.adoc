@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task_quick_start_for_ovf_template_deployments.html 
-keywords: ontap select, ovf, template, deployment, evaluation, license 
+permalink: deploy-evaluation-ontap-select-ovf-template.html 
+keywords: ontap, select, ovf, template, deployment, evaluation, license 
 summary: VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP Selectクラスタの90日間の評価用インスタンスを迅速に導入できます。 
 ---
-= OVFテンプレート導入のためのONTAP Selectクイックスタートガイド
+= ONTAP Selectクラスタの90日間の評価用インスタンスを導入
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: VMware ESXiでOVFテンプレートを使用して、シングルノー
 
 
 [role="lead"]
-クイックスタートガイドを使用してOpen Virtualization Format（OVF）テンプレートを導入すると、VMware ESXiでOVFテンプレートを使用してシングルノードONTAP Selectクラスタの90日間の評価インスタンスをすばやく導入できます。
+VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP Selectクラスタの90日間の評価用インスタンスを迅速に導入できます。
 
 .このタスクについて
 * NetAppからシリアル番号やストレージ容量のライセンスを取得する必要はありません。

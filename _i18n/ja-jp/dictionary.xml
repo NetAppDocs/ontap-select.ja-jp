@@ -3752,12 +3752,9 @@ storage aggregate show-spare-disks</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8.0 U1</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8.0GA</block>
   <block id="8d224631a5a87c64caecc71fee6fb612" category="list-text">ESXi 7.0 U3</block>
-  <block id="2541fca0ad59c8199b8bb08b5020de58" category="inline-link-macro">OVFテンプレート導入のためのONTAP Selectクイックスタートガイド</block>
-  <block id="eccbbc66ee95decf0d7c0595d219c92b" category="paragraph"><block ref="eccbbc66ee95decf0d7c0595d219c92b" category="inline-link-macro-rx"></block></block>
   <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。</block>
   <block id="f699f7e9ed69e5269a69fd9ec385c1ad" category="admonition">Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポートされていません。</block>
   <block id="676477cfcc6ef4db97bbb95e9c75b57e" category="summary">VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP Selectクラスタの90日間の評価用インスタンスを迅速に導入できます。</block>
-  <block id="08aeb5678ae03a8db1f16233a4a16070" category="paragraph">クイックスタートガイドを使用してOpen Virtualization Format（OVF）テンプレートを導入すると、VMware ESXiでOVFテンプレートを使用してシングルノードONTAP Selectクラスタの90日間の評価インスタンスをすばやく導入できます。</block>
   <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">NetAppからシリアル番号やストレージ容量のライセンスを取得する必要はありません。</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">購入したライセンスと同じ量のストレージをユーザデータに割り当てることができます。</block>
   <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">ノードを評価用ライセンスから購入ライセンスにアップグレードすることはできません。</block>
@@ -3788,5 +3785,7 @@ storage aggregate show-spare-disks</block>
   <block id="c56b5c777d1fbf5b3503afddde839f20" category="list-text">[完了]*を選択して導入プロセスを開始します。</block>
   <block id="66723f6678d3dd5c1bae3c6838416d52" category="list-text">ONTAP Selectクラスタの導入が完了したら、System ManagerまたはCLIインターフェイスを使用してクラスタを設定できます。ディスクは、標準のONTAP * disk assign *処理を使用して割り当てる必要があります。</block>
   <block id="7c51cb770ac84a1429ed1cfe6c686aed" category="paragraph"><block ref="7c51cb770ac84a1429ed1cfe6c686aed" category="inline-link-macro-rx"></block></block>
-  <block id="fa0d249cd337d58b40ea3c7cc54de247" category="sidebar">OVFテンプレート導入のクイックスタート</block>
+  <block id="8ca84893979a849d9d51eac372cc15a9" category="inline-link-macro">ONTAP Selectクラスタの90日間の評価用インスタンスを導入</block>
+  <block id="cb5e9657db1221bb8eb7f5be5287d604" category="paragraph"><block ref="cb5e9657db1221bb8eb7f5be5287d604" category="inline-link-macro-rx"></block></block>
+  <block id="ac951fbceb082ef32560a291949a4015" category="sidebar">クラスタの90日間の評価用インスタンスを導入</block>
 </blocks>

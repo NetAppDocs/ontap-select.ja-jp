@@ -407,4 +407,4 @@ JSON 入力（手順 10 ）:: ONTAP 管理者アカウントのパスワード�
 
 
 .関連情報
-link:task_quick_start_for_ovf_template_deployments.html["OVFテンプレート導入のためのONTAP Selectクイックスタートガイド"]
+link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Selectクラスタの90日間の評価用インスタンスを導入"]
