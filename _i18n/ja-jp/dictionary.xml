@@ -1034,11 +1034,7 @@
   <block id="7df2592d21ee2d7b12cfa029e519d7b9" category="list-text">ONTAP Select のバージョン</block>
   <block id="07c910df832eed07eccb9da18112e34b" category="list-text">ホストの準備</block>
   <block id="37d0d8277e2cec2cf18d723f103fbca0" category="list-text">ONTAP Select ノードを実行するハイパーバイザーホストを準備し、ライセンスモデルに基づいて必要なストレージライセンスファイルを用意する必要があります。準備要件を表示するには：</block>
-  <block id="c93ac09febb4264dc3b4e28bc4aa22ba" category="list-text">Deploy の Web ユーザインターフェイスにサインインします。</block>
   <block id="9c3a59d6f34c8cd48494cf65ab055e67" category="inline-image-macro">疑問符</block>
-  <block id="34d1b92a9bea981532796b3947d5c933" category="list-text">をクリックします <block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block> をクリックします。</block>
-  <block id="557b212863af34dee6642f1dd8feef4c" category="list-text">[ 前提条件 ] をクリックします。</block>
-  <block id="a08bb19599dcb78fd73e7aa3b405980f" category="list-text">下にスクロールして要件を確認し、 * OK * をクリックします。</block>
   <block id="d5b05ba2463ff6cca0078e72e50f28e7" category="list-text">ライセンスファイル</block>
   <block id="85341d624e9b0303539956bd22bfd4d4" category="list-text">クラスタを本番環境に導入する場合は、ライセンスモデルに基づいてストレージライセンスファイルを取得する必要があります。</block>
   <block id="f0d5638b299d1abdeea7e3509c4a29b5" category="list-text">インストールとアカウントのクレデンシャルを導入</block>
@@ -1049,31 +1045,18 @@
   <block id="f1783cedf199ea90c1cf0ff538262716" category="list-text">クラスタを作成します</block>
   <block id="7b8833fb04a6b84fadcfe679b52ce68b" category="list-text">ネットワークの事前確認</block>
   <block id="caed535f5a1e318fff54ea6d8139100c" category="list-text">クラスタを導入</block>
-  <block id="4a27c1e90fe3acd696c1f0934ce7e3b5" category="admonition">ページ上部のタブ（クラスタ、ハイパーバイザーホスト、管理）をクリックすると、同じ手順を別々に実行できます。</block>
   <block id="9dae84e581f54bbd3529b1a828393655" category="list-text">ネットワークチェッカー</block>
   <block id="18889d3b7d7412c773430265b3f7a703" category="list-text">マルチノードクラスタを導入する場合は、ネットワークチェッカーに関する詳しい知識が必要です。</block>
   <block id="4680945aec88d9bcced06d39ec485a67" category="list-text">クラスタを導入したあと</block>
   <block id="55e9b658bcd6b4ca65de5ed9557f68db" category="list-text">管理者アカウント（ admin ）を使用して、 Web インターフェイス経由で Deploy ユーティリティにサインインします。</block>
-  <block id="f419e9f320490f02ec41e0cead19dc2a" category="list-text">「 ONTAP Select へようこそ」ポップアップウィンドウが表示された場合は、設定の前提条件を満たしていることを確認し、「 * OK * 」をクリックします。</block>
-  <block id="ba7cc5d6bb74cdd0aaa5fe5a9bc4b4d3" category="list-text">[Getting Started * cluster launch （ * はじめに * クラスタの起動） ] ページが表示されない場合は、をクリックします <block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block> ページの上部で、 [ はじめに ] をクリックします。</block>
-  <block id="5d0652261e3e13ff5041f1c875d60d9c" category="list-text">[* はじめに（ Getting Started * ） ] ページで、 [* アップロード（ * Upload ） ] をクリックしてローカルワークステーションからライセンスを選択し、 [ 開く（ * Open ） ] をクリックしてライセンスをアップロードします。</block>
-  <block id="3f4187941dcc4a52259a3955f138c314" category="list-text">[*Refresh] をクリックし、ライセンスが追加されたことを確認します。</block>
-  <block id="f11dc7320c4209cdff4f85de946666bf" category="list-text">[ 次へ * ] をクリックしてハイパーバイザー・ホストを追加し、 [ * 追加 ] をクリックします。</block>
-  <block id="180a2ecafc5641b9bb33d5a6fe6ba41d" category="list-text">[*Refresh] をクリックし、ホストの [*Type*] の値が [*ESX*] であることを確認します。</block>
   <block id="4693647f83597e4a631ffdc39034b06d" category="paragraph">指定したアカウントクレデンシャルは、 Deploy のクレデンシャルデータベースに追加されます。</block>
-  <block id="b46a9a6d9c38c08d97979def3d4a6e23" category="list-text">[Next] をクリックして、クラスタ作成プロセスを開始します。</block>
-  <block id="a291fbe570213bb24c1d06ffc86d2dc0" category="list-text">「 * クラスタの詳細 * 」セクションで、クラスタについて説明する必要なすべての情報を指定し、「 * 完了 * 」をクリックします。</block>
   <block id="0f602d7fe375d87b4dfff619bb7a3b50" category="list-text">ノードのセットアップ * で、ノード管理 IP アドレスを指定してノードのライセンスを選択します。必要に応じて新しいライセンスをアップロードできます。ノード名は必要に応じて変更することもできます。</block>
   <block id="a57c05031d6102136a8bfe300ea61093" category="list-text">ハイパーバイザー * と * ネットワーク * の構成を提供します。</block>
   <block id="f1928401d0f38929a4645cc2dbff7269" category="paragraph">仮想マシンのサイズと使用可能な機能セットを定義する 3 つのノード構成があります。これらのインスタンスタイプは、 Standard 、 Premium 、および Premium XL の購入ライセンスでそれぞれサポートされています。ノードに対して選択するライセンスは、インスタンスタイプと一致するか、それよりも大きくする必要があります。</block>
   <block id="77bd5556fc873a5f14bb16bd6159b24f" category="paragraph">ハイパーバイザーホストおよび管理ネットワークとデータネットワークを選択します。</block>
-  <block id="3118e59890d54fc6e861b3ed19f01dd1" category="list-text">* ストレージ * の構成を入力し、 * 完了 * をクリックします。</block>
   <block id="1a61adfd179794f0468e7cc27a3731c5" category="paragraph">プラットフォームライセンスレベルとホスト構成に基づいてドライブを選択できます。</block>
   <block id="83b2958f895c780b1ce04a69f29fa14f" category="list-text">クラスタの設定を確認します。</block>
   <block id="7dce122004969d56ae2e0245cb754d35" category="inline-image-macro">編集</block>
-  <block id="fc27442e8051c88f8a185d91ced22a20" category="paragraph">をクリックすると、設定を変更できます <block ref="cd4fada87571e8da586532fce60b382a" category="inline-image-macro-rx" type="image"></block> をクリックします。</block>
-  <block id="674ac8fe871dc102602a9bf96882a339" category="list-text">[ 次へ ] をクリックし、 ONTAP 管理者パスワードを入力します。</block>
-  <block id="6e4ee895001e74a8e30d8d23a8ef73a4" category="list-text">クラスタ作成 * をクリックしてクラスタ作成プロセスを開始し、ポップアップ・ウィンドウで * OK * をクリックします。</block>
   <block id="aa28e7538205e834e26c77f5630f8893" category="list-text">クラスタ作成の複数ステップからなるプロセスを監視し、クラスタが正常に作成されたことを確認する。</block>
   <block id="037cb8cf634438a48c4a376dd2eaecea" category="paragraph">ページは一定の間隔で自動的に更新されます。</block>
   <block id="bd5ae2e61e1784e8eadc165e6029ecf8" category="summary">ONTAP Select 環境のセキュリティ保護の一環として実行できる関連タスクがいくつかあります。</block>
@@ -2082,7 +2065,6 @@
   <block id="620e81c66c131f0b1e414614fed0e418" category="list-text">ネットワーク設定を作成します</block>
   <block id="cea548261425f3d897f63b97e936d640" category="list-text">アグリゲートのレイアウト</block>
   <block id="c644c0897d8dc8d07dc010b0a5d1b341" category="paragraph">ONTAP Select クラスタの導入の一環として、ストレージ容量を含むライセンスファイルをインストールしない場合は、購入ライセンスを使用して実行するクラスタの猶予期間が終了する前に、ライセンスファイルを入手してインストールする必要があります。</block>
-  <block id="92d7efa0a9c4eca7052897e58341d0b6" category="paragraph">Deploy 管理ユーティリティで作成されたデータスペアディスクは、使用可能なデータストアスペース（ Pool0 および Pool1 など）から各 ONTAP Select ノードに作成されます。マルチノードクラスタにデータの高可用性を実装するには、これらのスペアを使用してミラーされたアグリゲートを作成する必要があります。</block>
   <block id="167b2e8c89f5ceb184efcaf133c27779" category="paragraph">コマンドラインインターフェイスを使用して、 Deploy 仮想マシンの管理者アカウントのパスワードを必要に応じて変更できます。</block>
   <block id="6946015929ad4f656738c88a1535f3e0" category="list-text">管理者アカウントを使用して、 Deploy ユーティリティの CLI にサインインします。</block>
   <block id="79f41a0e0ccd4b8ecf18041e9a81199d" category="list-text">パスワードを変更します :'password modify</block>
@@ -2914,24 +2896,16 @@
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS Deployクラスタの更新がエラーで失敗する</block>
   <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、技術情報の記事を参照してください <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>。</block>
   <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">プライマリアグリゲートの最新の（ RPO ゼロの）コピーを提供するためには、ミラーされたアグリゲートが必要ですが、プライマリアグリゲートの空きスペースが不足しないように注意してください。プライマリアグリゲートのスペースが不足すると、原因 ONTAPによってストレージギブバックのベースラインとして使用される共通のSnapshotコピーが削除される可能性があります。これは、クライアントの書き込みに対応するための設計どおりの動作です。ただし、フェイルバック時に共通の Snapshot コピーがないと、 ONTAP Select ノードがミラーアグリゲートから完全なベースラインを作成しなければなりません。シェアードナッシング環境では、この処理にかなりの時間がかかることがあります。</block>
-  <block id="2d27e76da02804de2afe9d209e5cbb1c" category="admonition">ストレージのパフォーマンスと可用性を最適化するために、ミラーアグリゲートでは少なくとも20%の空きスペースを確保することを推奨します。ミラーされていないアグリゲートでは10%が推奨されますが、追加の10%のスペースはファイルシステムで増分変更に対応するために使用できます。増分変更を行うと、ONTAPのcopy-on-write Snapshotベースのアーキテクチャにより、ミラーされたアグリゲートのスペース使用率が向上します。これらのベストプラクティスに従わないと、パフォーマンスに悪影響を及ぼす可能性があります。</block>
   <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">MetroCluster SDSはプレミアム機能であり、プレミアムライセンスまたはプレミアムXLライセンスが必要です。Premium ライセンスは、中小規模の VM のほか、 HDD および SSD メディアの作成をサポートします。Premium XLライセンスではNVMeドライブの作成もサポートされます。</block>
   <block id="0bbe8377b151cc2455792bb1798d4907" category="sidebar">VMware vSphere vSwitchの設定</block>
   <block id="8562cdbdbba76b21c630f16efd9cf0cd" category="list-text">インベントリへのホストの追加</block>
   <block id="dd2d1f8e815a8070f320c0a14ed24f71" category="paragraph">ONTAP Select DeployのWebユーザインターフェイスを使用して、シングルノードまたはマルチノードのONTAP Selectクラスタを導入できます。</block>
   <block id="5287736167b026a88e404d8ebf5a4615" category="paragraph">を参照してください <block ref="6dd97e1bd4c3fafba8bd8a1033c5617c" category="inline-link-macro-rx"></block> クラスタを導入するための準備。Deployの管理がインストールされ、初期設定（パスワード、AutoSupport、vCenter）されている必要があります。</block>
   <block id="3c67dfd58666f1caf15b0490aaa8b0fc" category="paragraph">本番環境用に、1つ以上のノードで構成されるONTAP Selectクラスタが作成されます。</block>
-  <block id="688b22352a3e9f8c2d13a096f7e721fb" category="paragraph">実行する手順は、シングルノードクラスタとマルチノードクラスタのどちらを作成するかによって異なります。</block>
   <block id="c29c0fa60d66b44a13904899d8712c68" category="open-title">マルチノードクラスタ</block>
-  <block id="1c9615c8466b4b5438d388b4200a58b4" category="list-text">* Welcome to ONTAP Select *ポップアップウィンドウが表示されたら、設定の前提条件を満たしていることを確認し、* OK *をクリックします。</block>
-  <block id="736cb4ef7019568859d8e044e044c906" category="list-text">[* はじめに（ Getting Started * ） ] ページで、 [* アップロード（ * Upload ） ] をクリックしてローカルワークステーションからライセンスを選択し、 [ 開く（ * Open ） ] をクリックしてライセンスをアップロードします。を繰り返して2つ目のライセンスを追加します。</block>
-  <block id="663e3ab8cb2a9c950e625cc8e58cc007" category="list-text">[リフレッシュ]*をクリックし、ライセンスが追加されたことを確認します。</block>
-  <block id="390100b77c52acdfcd83e4a92be2c51f" category="list-text">[次へ]*をクリックして2つのハイパーバイザーホストを追加し、*[追加]*をクリックします。</block>
-  <block id="6c5e52865ab96c25cdda81fff9412d0f" category="list-text">[クラスタの詳細]*セクションで、*[クラスタサイズ]*として* 2ノードクラスタ*を選択し、クラスタについて説明する必要な情報をすべて指定して、*[完了]*をクリックします。</block>
   <block id="87f7f104547967da3e1d18965e33ecbe" category="list-text">[ノードのセットアップ]*で、ノード管理IPアドレスを指定し、各ノードのライセンスを選択します。必要に応じて新しいライセンスをアップロードできます。必要に応じてノード名を変更することもできます。</block>
   <block id="c2ec94d47c341f2cb886dfa96e0ac4bb" category="paragraph">仮想マシンのサイズと使用可能な機能セットを定義する 3 つのノード構成があります。これらのインスタンスタイプは、 Standard 、 Premium 、および Premium XL の購入ライセンスでそれぞれサポートされています。ノードに対して選択するライセンスは、インスタンスタイプと一致するか、それを超えている必要があります。</block>
   <block id="5bcde1d421c75145a52950096b7fb58f" category="paragraph">ハイパーバイザーホストと、管理ネットワーク、データネットワーク、内部ネットワークを選択します。</block>
-  <block id="48c8bfc451162cecf207d3586032c355" category="list-text">[次へ]*をクリックし、*[実行]*をクリックしてネットワークの事前確認を実行します。ONTAPクラスタトラフィック用に選択した内部ネットワークが正常に機能しているかどうかが検証されます。</block>
   <block id="5ca1e08722935cc52d1e20fcea7b5428" category="paragraph">クラスタが作成されるまでに最大45分かかることがあります。</block>
   <block id="8e8ec233d7d8b1670dc404b61b73a0b1" category="list-text">複数の手順でクラスタ作成プロセスを監視して、クラスタが正常に作成されたことを確認します。</block>
   <block id="d92261c550ee327019eb3a3ca7a78e30" category="paragraph">ONTAP Select AutoSupport機能が設定されていることを確認し、ONTAP Select Deployの設定データをバックアップする必要があります。</block>
@@ -3788,4 +3762,32 @@ storage aggregate show-spare-disks</block>
   <block id="8ca84893979a849d9d51eac372cc15a9" category="inline-link-macro">ONTAP Selectクラスタの90日間の評価用インスタンスを導入</block>
   <block id="cb5e9657db1221bb8eb7f5be5287d604" category="paragraph"><block ref="cb5e9657db1221bb8eb7f5be5287d604" category="inline-link-macro-rx"></block></block>
   <block id="ac951fbceb082ef32560a291949a4015" category="sidebar">クラスタの90日間の評価用インスタンスを導入</block>
+  <block id="ad152885aafb9bc53df5849eb7ca2f93" category="paragraph">Deploy管理ユーティリティは、使用可能なデータストアスペース（Pool0やPool1など）から各ONTAP Selectノードにデータスペアディスクを作成します。マルチノードクラスタにデータの高可用性を実装するには、これらのスペアを使用してミラーされたアグリゲートを作成する必要があります。</block>
+  <block id="8e5126a524085c2d504ecc6a9ee619cb" category="admonition">ハイアベイラビリティテイクオーバーは、データアグリゲートがミラーアグリゲートとして設定されている場合にのみサポートされます。</block>
+  <block id="5da001c2cdc95a4311e28cf37673f6ba" category="admonition">NetAppでは、ストレージのパフォーマンスと可用性を最適化するために、ミラーアグリゲート用に少なくとも20%の空きスペースを確保することを推奨しています。ミラーされていないアグリゲートの場合は10%が推奨されますが、ファイルシステムでは追加の10%のスペースを使用して増分変更を吸収することもできます。増分変更を行うと、ONTAPのcopy-on-write Snapshotベースのアーキテクチャにより、ミラーされたアグリゲートのスペース使用率が向上します。これらのベストプラクティスに従わないと、パフォーマンスに悪影響を及ぼす可能性があります。ハイアベイラビリティテイクオーバーは、データアグリゲートがミラーアグリゲートとして設定されている場合にのみサポートされます。</block>
+  <block id="40164cee4e237bb78398a5485589b913" category="list-text">Deploy Web UIにサインインします。</block>
+  <block id="a46f1a6ef7f27e34e2b1ade44c188257" category="list-text">ページ上部のを選択します<block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="fe8dec8b217b332b88e66ecdf5472b01" category="list-text">[Prerequisites]*を選択します。</block>
+  <block id="3929bbc1e55fa3a638006eb8e6566b4d" category="list-text">下にスクロールして要件を確認し、* OK *を選択します。</block>
+  <block id="1339b9f22cb64ff9975ba4df2d3c543b" category="admonition">ページ上部のタブ（[Clusters]、[Hypervisor Hosts]、[Administration]）を選択すると、同じ手順を個別に実行できます。</block>
+  <block id="f79319ec1d7b82161a58de3096cafdd0" category="paragraph">実行する手順は、シングルノードクラスタとマルチノードクラスタのどちらを作成するかによって異なります。マルチノードクラスタには、2ノード、4ノード、6ノード、または8ノードを含めることができます。</block>
+  <block id="555e1ae22bd894e4a9fe23fc5bb1ca5e" category="list-text">* Welcome to ONTAP Select *ポップアップウィンドウが表示されたら、設定の前提条件を満たしていることを確認し、* OK *を選択します。</block>
+  <block id="1ade53760ce0b2b9ced3db48b79b4e51" category="list-text">クラスタ起動ページ*[はじめに]*が表示されない場合は、ページ上部のを選択し<block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block>、*[はじめに]*を選択します。</block>
+  <block id="820d1873bef6998cbee232163b828a57" category="list-text">[はじめに]ページで、*[アップロード]*を選択し、ローカルワークステーションからライセンスを選択して*[開く]*を選択してライセンスをアップロードします。</block>
+  <block id="68488b2b0b0bac78cf8e946ef52da267" category="list-text">[リフレッシュ]*を選択し、ライセンスが追加されたことを確認します。</block>
+  <block id="3d549ad86001c792e0804733ec4c2957" category="list-text">[次へ]*を選択してハイパーバイザーホストを追加し、*[追加]*を選択します。</block>
+  <block id="d44b6331867f2132b1d71fa39b6807b4" category="list-text">[リフレッシュ]*を選択し、ホストの*[タイプ]*の値が* ESX *であることを確認します。</block>
+  <block id="c62cb76848266877f290be96b3ff294e" category="list-text">[次へ]*を選択して、クラスタの作成プロセスを開始します。</block>
+  <block id="6c7b66882eb92b081bda7b0b837ecadc" category="list-text">[クラスタの詳細]*セクションで、クラスタについて説明する必要な情報をすべて指定し、*[完了]*を選択します。</block>
+  <block id="e1c524d61c650626841b4dcb765c3916" category="list-text">[ストレージ]*設定を指定し、*[完了]*を選択します。</block>
+  <block id="aaa33d34d1d725c0a59b5dc1da1a9741" category="paragraph">構成を変更するには、該当するセクションでを選択し<block ref="cd4fada87571e8da586532fce60b382a" category="inline-image-macro-rx" type="image"></block>ます。</block>
+  <block id="83cce49c4543a6bd5a93689ecad56e5e" category="list-text">[次へ]*を選択し、ONTAP管理者パスワードを入力します。</block>
+  <block id="d66205342799ff313cc08b6f66303456" category="list-text">[クラスタの作成]*を選択してクラスタの作成プロセスを開始し、ポップアップウィンドウで*[OK]*を選択します。</block>
+  <block id="9108f18e4fb1ca838b140d2c60144a07" category="list-text">* Welcome to ONTAP Select *ポップアップウィンドウが表示されたら、設定の前提条件を満たしていることを確認し、* OK *を選択します。</block>
+  <block id="875185b48917f696df4ff8fa2783728c" category="list-text">[はじめに]ページで、*[アップロード]*を選択し、ローカルワークステーションからライセンスを選択し、*[開く]*を選択してライセンスをアップロードします。同じ手順を繰り返して、ライセンスを追加します。</block>
+  <block id="7b22f8bd9968f64a1c7b9264a85c020c" category="list-text">[リフレッシュ]*を選択し、ライセンスが追加されたことを確認します。</block>
+  <block id="7c5fd8d9b8b6482272535e13665a25a8" category="list-text">[次へ]*を選択してすべてのハイパーバイザーホストを追加し、*[追加]*を選択します。</block>
+  <block id="944a1b1080e2860bd56c15282a8e476e" category="list-text">[クラスタの詳細]*セクションで、目的の*[クラスタサイズ]*を選択し、クラスタについて説明する必要な情報をすべて入力して、*[完了]*を選択します。</block>
+  <block id="8b5ceafca01d3a14f09a0d742cbb2cfb" category="list-text">[次へ]*を選択し、*[実行]*を選択してネットワークの事前確認を実行します。ONTAPクラスタトラフィック用に選択した内部ネットワークが正常に機能しているかどうかが検証されます。</block>
+  <block id="2735f745a89477a2abc1f435e606bde3" category="list-text">[クラスタの作成]*を選択してクラスタの作成プロセスを開始し、ポップアップウィンドウで*[OK]*を選択します。</block>
 </blocks>
