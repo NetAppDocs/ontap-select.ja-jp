@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: legal-notices.html 
-keywords:  
-summary:  
+keywords: copyrights, notices, trademarks, patents, privacy 
+summary: 著作権に関する声明、商標、特許などにアクセスできます。 
 ---
 = 法的通知
 :hardbreaks:
@@ -48,7 +48,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 == オープンソース
 
-NOTICEファイルには、NetAppソフトウェアで使用されているサードパーティの著作権およびライセンスに関する情報が記載されています。
+通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
 
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3330674["ONTAP Select 9.16.1に関する注意事項"^]
-
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3330674["ONTAP Select 9.16.1に関する注意事項"^]

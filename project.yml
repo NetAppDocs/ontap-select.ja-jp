@@ -262,8 +262,6 @@ sidebar:
         url: "/reference_api_script_common.html"
       - title: クラスタノードのサイズを変更
         url: "/reference_api_script_resize.html"
-  - title: Ansible で自動化
-    url: "/concept_automate_ansible.html"
   - title: CLI を使用します
     entries:
     - title: SSH を使用してサインインします
