@@ -134,7 +134,6 @@
   <block id="04ad7df80604af0ba0f4b5923ab1f2ae" category="list-text">本番環境に導入する ONTAP Select クラスタごとに、容量階層または容量プールのライセンスモデルを選択する必要があります。詳細については、「 _License__ 」セクションを参照してください。</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">関連情報</block>
   <block id="680e9e82137091017ba19fdaa5193e04" category="list-text"><block ref="680e9e82137091017ba19fdaa5193e04" category="inline-link-macro-rx"></block></block>
-  <block id="8b60e6d501896a426a20e22fc6479aec" category="summary">パフォーマンスはハードウェア構成によって異なります。</block>
   <block id="5def88536d2a69b4424953a923e823a2" category="list-text">* コア周波数 * 。一般には、高い周波数を使用することを推奨します。</block>
   <block id="1f4e4fadae7f6d95c4d2c58cfac9416f" category="list-text">* シングルソケットとマルチソケット * 。ONTAP Select はマルチソケット機能を使用しませんが、マルチソケット構成を支えるためのハイパーバイザーのオーバーヘッドが、全体のパフォーマンスに対する一定の偏差の原因となります。</block>
   <block id="3e6023e5f07c1e79e542af89201e0b4a" category="list-text">* RAID カード構成および関連するハイパーバイザドライバ * 。ハイパーバイザーが提供するデフォルトのドライバを、ハードウェアベンダーのドライバに置き換えることが必要になる場合があります。</block>
@@ -1428,14 +1427,11 @@
   <block id="8b3398557c7fb55b263bf52bece82b68" category="doc">評価用ライセンス</block>
   <block id="e009f07bc1785009a3ceb83036990929" category="section-title">ライセンスの特性</block>
   <block id="11731b987dc6227f75478145446eec49" category="paragraph">ONTAP Select 評価用ライセンスには次のような特徴があります。</block>
-  <block id="1a722f6211174d2c13dea99241228cdd" category="list-text">ストレージ容量を含む本番環境ライセンスは必要ありません</block>
   <block id="da43be3a437b4b11176af278d2bf65e4" category="list-text">ノードのシリアル番号は 20 桁で、 ONTAP Select Deploy によって自動的に生成されます</block>
-  <block id="d81334460101f9ea4e0446684836ab2c" category="paragraph">（ネットアップから直接取得することはありません）。</block>
   <block id="b8c2c21a1451d44d469c74b3bc603f96" category="list-text">ライセンスが提供する評価期間は、最大 90 日です</block>
   <block id="ad49b216aa656d515b04dd8c523873dd" category="list-text">各ノードによって割り当てられる最大ストレージ容量は、本番環境ライセンスと同じです</block>
   <block id="238908176e0b205e68cd2d9e0c4972e5" category="paragraph">ONTAP Select 評価用クラスタは、本番環境ライセンスを使用するようにアップグレードできます。次の制限事項に注意してください。</block>
   <block id="60c8e16d600bd89fdcfca7dd31b63260" category="list-text">ライセンスのアップグレードを実行するには、 Deploy 管理ユーティリティを使用する必要があります</block>
-  <block id="1e2f74556f8f29bf17e0d81fdf7f56ab" category="list-text">大容量階層ライセンスは使用できますが、容量プールのライセンスはサポートされていません</block>
   <block id="040571bf34446f7204162544612cd237" category="list-text">各ノードには、クラスタサイズに基づいて、本番環境ライセンスに必要な最小要件を満たす十分なストレージを割り当てる必要があります</block>
   <block id="b00fa0d79083a8d6eae4f833835c1cda" category="doc">ONTAP Select vNAS の要件</block>
   <block id="aa5960e278cc090ee09a54daeb69b04f" category="section-title">基本的な要件と制限事項</block>
@@ -1989,7 +1985,6 @@
   <block id="440776946e3349ff3266a8cf25bef605" category="section-title">ONTAP Select Deploy 管理ユーティリティ</block>
   <block id="deeb67d546017625d12dfbcf3d817a5c" category="paragraph">Deploy 管理ユーティリティは、個別の Linux 仮想マシンとしてパッケージ化されてインストールされます。本番環境に ONTAP Select クラスタを導入するには、ユーティリティを使用する必要があります。最新バージョンの ONTAP Select ノードイメージが Deploy ユーティリティにバンドルされています。</block>
   <block id="d69f8aaae124c9269620ba7ca5678c34" category="section-title">一般的な導入の図</block>
-  <block id="60d804a6b011555fd729bcd0c5e206da" category="paragraph">次の図は、 ONTAP Select Deploy 管理ユーティリティを使用して 4 ノード ONTAP Select クラスタを導入およびサポートしている状態を示しています。Deploy ユーティリティと ONTAP Select ノードは、専用のハイパーバイザーホスト上で個別の仮想マシンとして実行されます。</block>
   <block id="3163bfc32e34eb9c2f84e4c7a1535111" category="inline-image-macro">は、 Deploy 管理ユーティリティで作成された ONTAP Select 4 ノードクラスタを示しています。</block>
   <block id="3e69161d02590dc69114626444a3d815" category="paragraph"><block ref="3e69161d02590dc69114626444a3d815" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f6d0a856320802e878fb73629ca6582d" category="paragraph">ハードウェアベースの ONTAP と ONTAP Select は、どちらもエンタープライズクラスのストレージソリューションを提供します。ただし、設計と実装方法が異なるため、対応するビジネス要件や利用シナリオもそれぞれ異なります。ONTAP Select の導入を計画する前に、プラットフォーム間の主な違いを理解しておく必要があります。</block>
@@ -3290,7 +3285,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="d98fb3ce51b49ee9b9e8ea2645524f08" category="list-text">Deploy VMのIPアドレス</block>
   <block id="30e58d6b4fce06c690ff3897ae040f55" category="paragraph">vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、Deploy VMのコンソールを使用してネットワークを設定できます。</block>
   <block id="922bafb0938c68773e29242e2675f0b9" category="paragraph">実行する手順は、ESXiハイパーバイザーとKVMハイパーバイザーのどちらを使用しているかによって異なります。</block>
-  <block id="41c929e54fb793fb7a784130ebd7c7b1" category="list-text">導入ウィザードで入力した内容に基づいて、VMの導入後に新しいVMを選択して電源をオンにします（まだオンになっていない場合）。</block>
   <block id="1c2f49da17d54e224e8288edcb35fd8b" category="list-text">必要に応じて、VMコンソールを使用してDeployネットワークを設定できます。</block>
   <block id="e24d94772b7fb552cdad8786d3972fe1" category="list-text">静的IP設定を定義する場合は「n *」、DHCPを使用する場合は「* y *」と入力し、* Enter *を選択します。</block>
   <block id="64c8e1a4f8f739423fd7163b603a4b32" category="list-text">LinuxサーバでCLIにサインインします。</block>
@@ -3561,7 +3555,6 @@ storage aggregate show-spare-disks</block>
   <block id="38a6a854a485660aa1ba2f3d554e2bfe" category="paragraph">評価用クラスタを導入してサポートする場合は、いくつかの考慮事項があります。</block>
   <block id="9ccdbbc209e0eddfaf9f0b5a4154a78d" category="list-text">クラスタは評価目的でのみ使用できます。本番環境では、評価用ライセンスのあるクラスタを使用しないでください。</block>
   <block id="b559f8a2bbcf90e70f60847fb3cce85f" category="list-text">各ホストを設定するときは、ONTAP Select Deploy管理ユーティリティを次のように使用する必要があります。</block>
-  <block id="1b2bebf50d8caf7cae03b0a936752188" category="list-text">シリアル番号を指定しない</block>
   <block id="f5010a0b3197d474a3b4618b60c0fd03" category="list-text">評価用ライセンスを使用するように構成</block>
   <block id="21f27b191f1f034aa81e5f786bf9829c" category="doc">ONTAP Selectのプラットフォームライセンス製品を理解する</block>
   <block id="1b1ede8baae6a15d3ba60611103509a4" category="doc">本番環境用のONTAP Select購入ライセンス</block>
@@ -3609,7 +3602,6 @@ storage aggregate show-spare-disks</block>
   <block id="de0887504497c1f3eb64ac5f23488612" category="doc">ONTAP Selectクラスタを作成するスクリプトのJSON</block>
   <block id="79ebef96ee386ef1a7dba01d303ce759" category="doc">ONTAP Selectノードライセンスを追加するスクリプト</block>
   <block id="be1f2ab308d7f936426d71ac4b257096" category="doc">ONTAP Selectクラスタを作成するスクリプト</block>
-  <block id="41cfd9e48a1b6c66998391efe14f06f2" category="doc">共通サポートONTAP Select Pythonモジュール</block>
   <block id="d066221405020e2f85c198e0b44e228b" category="doc">ONTAP Selectクラスタを削除するスクリプト</block>
   <block id="3a029b8899590dc6c31883e4d8b049d0" category="doc">ONTAP Selectクラスタノードのサイズを変更するスクリプト</block>
   <block id="f2b54f29c4af2bc66f70b4a5a52b0e2b" category="doc">ワークフロー1：ESXiでのONTAP Selectシングルノード評価クラスタの作成</block>
@@ -3761,4 +3753,22 @@ storage aggregate show-spare-disks</block>
   <block id="e0d52f0658828de62020550252885d55" category="admonition">データSVMは、ONTAP Selectクラスタ環境では作成されません。導入後にクラスタ管理者が作成する必要があります。詳細については、を参照してください<block ref="35df8afad8b7a7c75a74b08ae370be2a" category="inline-link-rx"></block>。</block>
   <block id="c472d49cae1aabcbf09d7e5fe0e34c87" category="inline-link-macro">クラスタに含まれるSVMのタイプ</block>
   <block id="2e6bba9624b33764642b52b2cab65274" category="list-text"><block ref="2e6bba9624b33764642b52b2cab65274" category="inline-link-macro-rx"></block></block>
+  <block id="c19cab121a967e7d4e145437fee16c02" category="doc">ONTAP Select環境用の評価ライセンス</block>
+  <block id="3ad47d20affd564b7db18fcaa67fb9ca" category="paragraph">ONTAP Select Deploy管理ユーティリティをダウンロードするには、次のものが必要です。</block>
+  <block id="f2fd759d6c3aedc384b758263e96be4b" category="inline-link">ユーザ登録</block>
+  <block id="ee071d378f5b3ec57e4eda0d66300334" category="list-text">NetAppサポートサイトの登録アカウント。アカウントをお持ちでない場合は、を参照してください<block ref="b0f5d39de7f85d20bb3da6a76b3c4368" category="inline-link-rx"></block>。</block>
+  <block id="4c38e9c9635f62bc0c98a4fc0dbf6f04" category="inline-link">エンドユーザライセンス契約に同意します。</block>
+  <block id="bcb0a8f0933f79963f8da791712307a2" category="list-text">評価用ライセンスがあるONTAP Select環境の場合は、に移動し<block ref="b36a96015925128ab0074fda8004c795" category="inline-link-rx"></block>ます。</block>
+  <block id="76be33f6608866426ecccffc5acd6be8" category="list-text">シリアル番号を指定しない</block>
+  <block id="2fcd5d5ae3d245e3d2870429d2c9381d" category="list-text">ストレージ容量を含む本番環境ライセンスは不要</block>
+  <block id="695af2710450ef107be1555e59f22b01" category="paragraph">（NetAppから直接取得するわけではありません）</block>
+  <block id="0fa0a315c1605e80221e4ae40cfaac60" category="list-text">大容量階層ライセンスは使用できますが、容量プールライセンスはサポートされません。</block>
+  <block id="d480e694d74a85a8bf679cab5063c9f1" category="paragraph">次の図は、4ノードONTAP Selectクラスタの導入とサポートに使用されているNetApp ONTAP Select Deploy管理ユーティリティを示しています。Deploy ユーティリティと ONTAP Select ノードは、専用のハイパーバイザーホスト上で個別の仮想マシンとして実行されます。</block>
+  <block id="54d1b8efd5a74820db5617b48f538671" category="summary">ONTAP Selectクラスタのパフォーマンスは、ハードウェア構成によって異なります。</block>
+  <block id="123521c98d5a32b10ae4a2d5e59ed719" category="doc">ONTAP Selectの共通サポートPythonモジュール</block>
+  <block id="b7a30ea4f45797fa98b43f64e7be11b9" category="doc">ONTAP Selectライセンスを管理します。</block>
+  <block id="bf55dfa0f53f23704c47337781c41d3d" category="inline-link">NetAppサポートサイトの登録アカウントが必要です</block>
+  <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>です。</block>
+  <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">VMの導入が完了したら、新しいVMを選択します。導入ウィザードへの入力内容に基づいて電源がオンになっていない場合は、手動でオンにします。</block>
+  <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">初めてのサインインで、vCenterのウィザードを使用してDeployをインストールしなかった場合は、プロンプトが表示されたら次の設定情報を入力します。</block>
 </blocks>

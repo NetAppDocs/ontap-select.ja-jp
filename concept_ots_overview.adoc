@@ -51,7 +51,7 @@ NOTE: Deploy管理ユーティリティには別のバージョン番号が割�
 
 == 一般的な導入の図
 
-次の図は、 ONTAP Select Deploy 管理ユーティリティを使用して 4 ノード ONTAP Select クラスタを導入およびサポートしている状態を示しています。Deploy ユーティリティと ONTAP Select ノードは、専用のハイパーバイザーホスト上で個別の仮想マシンとして実行されます。
+次の図は、4ノードONTAP Selectクラスタの導入とサポートに使用されているNetApp ONTAP Select Deploy管理ユーティリティを示しています。Deploy ユーティリティと ONTAP Select ノードは、専用のハイパーバイザーホスト上で個別の仮想マシンとして実行されます。
 
 image:ots_architecture.png["は、 Deploy 管理ユーティリティで作成された ONTAP Select 4 ノードクラスタを示しています。"]
 

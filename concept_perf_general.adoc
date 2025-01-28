@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_perf_general.html 
 keywords: ontap select, performance 
-summary: パフォーマンスはハードウェア構成によって異なります。 
+summary: ONTAP Selectクラスタのパフォーマンスは、ハードウェア構成によって異なります。 
 ---
 = ONTAP Selectのパフォーマンスの概要
 :hardbreaks:
@@ -14,8 +14,6 @@ summary: パフォーマンスはハードウェア構成によって異なり�
 
 
 [role="lead"]
-パフォーマンスはハードウェア構成によって異なります。
-
 ONTAP Select クラスタのパフォーマンスは、基盤のハードウェアの特性と設定によって大きく変わる可能性があります。特定のONTAP Select インスタンスのパフォーマンスにおける最大の要因となるのは、特定のハードウェア構成です。次に、特定の ONTAP Select インスタンスのパフォーマンスに影響する要因をいくつか示します。
 
 * * コア周波数 * 。一般には、高い周波数を使用することを推奨します。
