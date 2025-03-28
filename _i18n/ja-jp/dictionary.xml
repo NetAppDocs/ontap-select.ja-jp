@@ -854,19 +854,12 @@
   <block id="4d072981d0459a6e8dddc5e65d85a19d" category="paragraph">ONTAP Select の大容量階層ライセンスを必要に応じて追加、編集、削除できます。</block>
   <block id="d1da5ae38aafefba216edae24c73845b" category="list-text">管理者アカウントを使用して、 Web インターフェイスから Deploy ユーティリティにサインインします。</block>
   <block id="8466d9c8baffa8020cd2061f9cb4929e" category="list-text">ページ上部の * 管理 * タブをクリックします。</block>
-  <block id="27de07fc9b7f932f0181131e79ec3569" category="list-text">ライセンス * をクリックし、 * 容量階層 * をクリックします。</block>
-  <block id="c1a597c101487100214a5f749a6f3e48" category="list-text">必要に応じて、 * Filter * をクリックし、表示するライセンスを制限します。</block>
-  <block id="6ee0553d617caf0c18d95b731d38d14f" category="list-text">新しいライセンスを追加するには、ページ上部の * 追加 * をクリックし、 * ライセンスのアップロード * をクリックして、ローカルワークステーションからライセンスファイルを選択します。</block>
   <block id="2a1af40a05dbd3e59e7040a6aba474e2" category="paragraph">必要に応じて、 ONTAP Select 容量プールライセンスを追加、編集、削除できます。</block>
-  <block id="7be3eed19afb6e3f04dc4fe18d053f2c" category="list-text">[*Licenses*] をクリックし、 [* Capacity Pools] をクリックします。</block>
-  <block id="8e2791365de62e59e56b5d6fcdd0f3e2" category="list-text">新しいライセンスを追加したり、既存のライセンスを更新したりするには、ページの上部にある「 * 追加」をクリックしてから、「 * ライセンスのアップロード * 」をクリックし、ローカルワークステーションからライセンスファイルを選択します。</block>
   <block id="d26363bf70cc27dd1ba8f09739b8f116" category="list-text">容量プールのリストを表示するには、次の手順を実行します。</block>
-  <block id="b14052b3af7caf15ec0beb76766be24f" category="list-text">「 * 概要 * 」をクリックします。</block>
   <block id="e034cc23606a54a163075931f70dbbab" category="list-text">プールを選択して展開すると、プールからストレージをリースしているクラスタとノードが表示されます。</block>
   <block id="8797856e9d86b8ee20026b14229ca29a" category="list-text">ライセンスの現在のステータスを [*License Information*] で確認します。</block>
   <block id="21b26341db1dfa394a993c5d152ccf13" category="list-text">リース期限の下でプールに対して発行されたリースの期間を変更できます。</block>
   <block id="a0d12512fae580ca38325fe122b9f447" category="list-text">クラスタのリストを表示するには、次の手順を実行します。</block>
-  <block id="8ab91110ae01f9e5c2c34364ebb2da32" category="list-text">[ * 詳細 * ] をクリックします。</block>
   <block id="31881fb30a812ef998d7f2111d7bcc44" category="list-text">クラスタを選択して展開し、ストレージ利用率を確認します。</block>
   <block id="844c5fe8a900e62416848502a4af7fdf" category="paragraph">すべてのアクティブな容量プールライセンスは、 Deploy 管理ユーティリティのインスタンスに含まれる特定の License Manager インスタンスにロックされます。容量プールライセンスを使用している場合に Deploy インスタンスをリストアまたはリカバリすると、元のライセンスは無効になります。新しい容量ライセンスファイルを生成し、そのライセンスを新しい Deploy インスタンスにインストールする必要があります。</block>
   <block id="be0411c455172a2eece4547673c61675" category="list-text">元の Deploy インスタンスで使用されている容量プールのライセンスをすべて確認します。</block>
@@ -877,8 +870,6 @@
   <block id="6d46c419c8dde2ad4ea4d5623e1b4350" category="list-text">ネットアップサポートに問い合わせて、元の Deploy インスタンスの容量プールライセンスのバインドを解除し、登録を解除しておきます。</block>
   <block id="dc94932a20b0a7c73d1e6aa60af35223" category="list-text">各容量プールライセンスの新しいライセンスファイルを取得してダウンロードします。</block>
   <block id="8018479e33974a2b0f774cf42ec399e5" category="list-text">新しい Deploy インスタンスに容量プールライセンスをインストールします。</block>
-  <block id="99683d4e14f8df30b153000825273e2d" category="list-text">[*Licenses*] をクリックし、 [* Capacity Pool*] をクリックします。</block>
-  <block id="095bb96ffb3551a58960c96316107d76" category="list-text">[ * 追加 ] 、 [ * ライセンスのアップロード * ] の順にクリックして、ライセンスを選択してアップロードします。</block>
   <block id="e05566aa3784020545c76d92dcb376ab" category="list-text">バックアップをリストアせずに新しい Deploy インスタンスを作成した場合、または最新ではないバックアップを使用した場合は、シリアルシーケンス番号を更新する必要があります。</block>
   <block id="1c4bd3e7e2bc88b1415fade6249d5a46" category="list-text">管理者アカウントを使用して、 Deploy ユーティリティのコマンドラインインターフェイスにサインインします。</block>
   <block id="1de9bd334d99fc24b79e751ee32ab23c" category="list-text">元の Deploy インスタンスで最後に作成されたノードのシリアル番号を表示します。</block>
@@ -899,11 +890,7 @@
   <block id="bc882e7be43ec2480a6be229d77c8eaf" category="list-text">各ノードには、本番環境ライセンスに最低限必要な容量をサポートするための十分なストレージを割り当てる必要があります。</block>
   <block id="b94a9bad5ae121ac9e7cd292197b59e1" category="list-text">評価用クラスタのノードごとに大容量階層ライセンスが必要です。</block>
   <block id="f5d5a8d93d0ff3b80b514c776adc3d06" category="paragraph">シングルノードクラスタのクラスタライセンスを変更する場合は、システムが停止します。ただし、マルチノードクラスタの場合は、変換プロセスで各ノードが一度に 1 つずつリブートされてライセンスが適用されるため、これは該当しません。</block>
-  <block id="2bb59383631b39d52464741628ce0ca4" category="list-text">ページ上部の * クラスタ * タブをクリックし、目的のクラスタを選択します。</block>
-  <block id="2b92ba791b5d35e9921e9be06d12553c" category="list-text">クラスタの詳細ページの上部で、 * ここをクリック * をクリックしてクラスタライセンスを変更します。</block>
-  <block id="3ec0b37e2f174766469a343ec8265983" category="paragraph">また、 [ クラスタの詳細 * ] セクションで評価ライセンスの横にある [ * 変更 * ] をクリックすることもできます。</block>
   <block id="5a3b7bb229a1d7655341b191f93fef35" category="list-text">ノードごとに使用可能な本番環境ライセンスを選択するか、必要に応じて追加のライセンスをアップロードします。</block>
-  <block id="36d90e9baa4dfd0dda8eeaac2623f12c" category="list-text">ONTAP クレデンシャルを入力し、 * Modify * をクリックします。</block>
   <block id="7d7d0d771e408e152fe9f59aa783a245" category="paragraph">クラスタのライセンスのアップグレードには数分かかることがあります。ページを離れる前、または他の変更を行う前に、プロセスを完了させてください。</block>
   <block id="58c19e610497280d55686885113b1e5a" category="paragraph">評価用環境で各ノードに割り当てられていた 20 桁のノードシリアル番号は、アップグレードに使用する本番用ライセンスの 9 桁のシリアル番号に置き換えられます。</block>
   <block id="7436b418bed093768e360d32105591d2" category="doc">ONTAP Select のドキュメント</block>
@@ -3424,8 +3411,6 @@ storage aggregate show-spare-disks</block>
   <block id="1bacbb36e2afde0c7a93da85daa18ef1" category="list-text">小規模、中規模、大規模のインスタンスタイプ</block>
   <block id="4241d8a2662be78b68fdfaf8b9daec1a" category="list-text">HDD、SSD、NVMeドライブ</block>
   <block id="884fb5a94a98010f0044edb08adfd51e" category="admonition">KVMでは、SW-RAID構成でのLargeインスタンスタイプまたはNVMeドライブの使用はサポートされていません。</block>
-  <block id="4c1cad05d7febe049143598de4b3847d" category="list-text">既存のライセンスを置き換えるには、ライセンスを選択し、 <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>をクリックし、* Update *を選択します。</block>
-  <block id="22296b7841252645a75ccd1c4032738e" category="list-text">必要に応じて、ライセンスを選択し、をクリックします <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> 既存のライセンスを管理します。</block>
   <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">アドオンライセンスを管理します。</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">ライセンスの管理の概要（クラスタ管理者のみ）</block>
   <block id="a9a72d6af23763d014760a444a6e414b" category="inline-link-macro">ライセンスキーを追加して新しい機能を有効にします</block>
@@ -3771,4 +3756,28 @@ storage aggregate show-spare-disks</block>
   <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>です。</block>
   <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">VMの導入が完了したら、新しいVMを選択します。導入ウィザードへの入力内容に基づいて電源がオンになっていない場合は、手動でオンにします。</block>
   <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">初めてのサインインで、vCenterのウィザードを使用してDeployをインストールしなかった場合は、プロンプトが表示されたら次の設定情報を入力します。</block>
+  <block id="c2fffdb7e5db1a96deec5901fd1a882b" category="list-text">ページ上部の*[管理]*タブを選択します。</block>
+  <block id="7f73b891b6f89493a9a42f78c96dfbde" category="list-text">[ライセンス]*を選択し、*[容量階層]*を選択します。</block>
+  <block id="ac058bee21b19fb7d5683b470b430bce" category="list-text">必要に応じて* Filter *を選択し、表示されるライセンスを制限します。</block>
+  <block id="f76e9a144df7cb5bf308e94a6e908da4" category="list-text">既存のライセンスを置き換えるには、ライセンスを選択し、<block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>* Update *を選択します。</block>
+  <block id="2a312f34de3de288696c20c1e8fdab8c" category="list-text">新しいライセンスを追加するには、ページ上部の*[追加]*を選択し、*[ライセンスのアップロード]*を選択して、ローカルワークステーションからライセンスファイルを選択します。</block>
+  <block id="e138becae13ca9b3317ae72cd807b7ed" category="list-text">[ライセンス]*を選択し、*[容量プール]*を選択します。</block>
+  <block id="e4dbf5646ea0f3591d85a89dcc220112" category="list-text">必要に応じて、* Filter *を選択し、表示されるライセンスを制限します。</block>
+  <block id="0238150d48dcbb89f61418a79faf879c" category="list-text">必要に応じて、ライセンスを選択し、を選択し<block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>て既存のライセンスを管理します。</block>
+  <block id="f675b264e07a6d56cc74839352166e25" category="list-text">新しいライセンスを追加するか、既存のライセンスを更新します。</block>
+  <block id="e1ff67a9ee704536271bf20bae768184" category="open-title">新しいライセンスを追加</block>
+  <block id="85c89e836071c9255062f2c7b147db6a" category="paragraph">新しいライセンスを追加するには、ページ上部の*[追加]*を選択します。</block>
+  <block id="bbb047a51418944f835ae59b4e145de5" category="open-title">既存のライセンスの更新</block>
+  <block id="612b39eeafbac7f4962e5513903d070d" category="paragraph">既存のライセンスを更新するには：</block>
+  <block id="6e1121544cd3144bdf088e3fc4c6d58e" category="list-text">既存のライセンスでを選択します<block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="1f20356b85cdefac297216209ca2bcb1" category="list-text">[Upload License（s）]*を選択します。</block>
+  <block id="7d2e20d8c3e5ebfbdbd81ec85b9c313e" category="list-text">ローカルワークステーションからライセンスファイルを選択します。</block>
+  <block id="3e4b3d97ed721fa6c588b33d67e7327a" category="list-text">[概要]*を選択します。</block>
+  <block id="522aeaf73b031c733a2277fe9eadd494" category="list-text">[ * 詳細 * ] を選択します。</block>
+  <block id="055dab4754e0e1d62a339ad80dcac225" category="list-text">[ライセンス]*を選択し、*[容量プール]*を選択します。</block>
+  <block id="8ad539dc195e039c5437c07b3d810ad8" category="list-text">[追加]*を選択してから*[ライセンスのアップロード]*を選択し、ライセンスを選択してアップロードします。</block>
+  <block id="1a9274360bc45212a6a014b4c6df1e9c" category="list-text">ページの上部にある*[クラスタ]*タブAを選択し、目的のクラスタを選択します。</block>
+  <block id="e951843bb1ba0912165bd527e8312bec" category="list-text">クラスタの詳細ページの上部で、*[ここをクリック]*を選択してクラスタライセンスを変更します。</block>
+  <block id="17d9cc4f645deac6e5e367f0ef6fd4ee" category="paragraph">[クラスタの詳細]*セクションで、評価用ライセンスの横にある*[変更]*を選択することもできます。</block>
+  <block id="380ce7f967546f46005a7cb8b03e358c" category="list-text">ONTAPクレデンシャルを入力し、*[変更]*を選択します。</block>
 </blocks>
