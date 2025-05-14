@@ -63,4 +63,4 @@ image:prepare_ESXi_host_requirements.png["ESXiホストを準備するための�
 
 
 .関連情報
-link:http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]
+link:http://mysupport.netapp.com/matrix["Interoperability Matrix Tool"^]

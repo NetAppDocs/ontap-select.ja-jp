@@ -161,7 +161,7 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト
 | TLS （ 443 ） | ESXiまたはKVM | OTS ノードおよびクラスタに展開します | ONTAP にアクセスします 
 
 
-| TLS （ 443 ） | ESXiまたはKVM | 展開する各 OTS ノード | Access Deploy（容量プールライセンス） 
+| TLS （ 443 ） | ESXiまたはKVM | 展開する各 OTS ノード | Access Deploy（Capacity Poolsのライセンス） 
 
 
 | iSCSI （ 3260 ） | ESXiまたはKVM | 展開する各 OTS ノード | メディエーター / メールボックスディスク 

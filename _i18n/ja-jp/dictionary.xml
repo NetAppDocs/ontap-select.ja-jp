@@ -131,7 +131,6 @@
   <block id="7aef2921a7d9da0c29e1025af9b9bc9b" category="list-text">ONTAP Select ノードに必要なストレージ容量を決定する必要があります。この情報は、ストレージ容量を含む購入ライセンスを取得する際に必要になります。詳細については、「ストレージ容量の制限」を参照してください。</block>
   <block id="514d658beb8d2ad9347d561c047df99c" category="admonition">ONTAP Select ストレージ容量は、 ONTAP Select 仮想マシンに接続されているデータディスクの合計許容サイズに対応します。</block>
   <block id="71d95f80f78afeb107caa45cdd0d4b5a" category="list-text">本番環境のライセンスモデル</block>
-  <block id="04ad7df80604af0ba0f4b5923ab1f2ae" category="list-text">本番環境に導入する ONTAP Select クラスタごとに、容量階層または容量プールのライセンスモデルを選択する必要があります。詳細については、「 _License__ 」セクションを参照してください。</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">関連情報</block>
   <block id="680e9e82137091017ba19fdaa5193e04" category="list-text"><block ref="680e9e82137091017ba19fdaa5193e04" category="inline-link-macro-rx"></block></block>
   <block id="5def88536d2a69b4424953a923e823a2" category="list-text">* コア周波数 * 。一般には、高い周波数を使用することを推奨します。</block>
@@ -588,7 +587,6 @@
   <block id="54a5865954a8d4427e8776dfd8d07256" category="list-text">ONTAP Select Deploy ユーティリティで作成されたログファイルの導入</block>
   <block id="d2b05906fb625ce78c262b153a08cad2" category="list-text">トラブルシューティングハイパーバイザーホストと ONTAP Select ノードに関するトラブルシューティング情報とデバッグ情報</block>
   <block id="52dcae8592240a7a7f84bb108da40091" category="list-text">ハイパーバイザーホストと ONTAP Select ノードに関するパフォーマンスの情報です</block>
-  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="section-title">NetApp Interoperability Matrix Tool で確認できます</block>
   <block id="540a1899c1be5ac42092dad9fefe4e2a" category="summary">仮想 NAS （ vNAS ）環境では、 VSAN 上の ONTAP Select クラスタ、一部の HCI 製品、 NetApp HCI テクノロジ、および外付けアレイタイプのデータストアがサポートされます。これらの構成の基盤となるインフラは、データストアの耐障害性を提供します。</block>
   <block id="6b49a92f07f85cf298a2f9ca217c257d" category="doc">VSAN および外付けアレイの構成</block>
   <block id="9fdd7c03284cb54741d141ac1c486c9f" category="paragraph">基盤の構成が VMware でサポートされることが最小要件であり、その構成が VMware HCL に掲載されている必要があります。</block>
@@ -627,7 +625,6 @@
   <block id="618aade87a4c0dc9b9fe7ea456efd7ad" category="paragraph">ローカルのハードウェア RAID コントローラを使用する場合は、システムデータ用およびルートアグリゲートとデータアグリゲート用に各ノードに少なくとも 1 つのストレージプールを作成する必要があります。ONTAP Select ノードの設定の一環として、ストレージプールを接続する必要があります。</block>
   <block id="c423fd05ac4075cd52ed8e9ec9961c3f" category="paragraph">ソフトウェア RAID を使用する場合は、システムデータ用のストレージプールを作成し、 SSD ドライブがルートアグリゲートおよびデータアグリゲートに使用可能であることを確認する必要があります。ONTAP Select ノードの設定の一環として、ストレージプールとディスクを接続する必要があります。</block>
   <block id="d5ba525828b35ea241ddabb08b074ffd" category="section-title">使用可能な ONTAP Select バージョン</block>
-  <block id="9526942f4f0cae81c16b2f122cce2a1e" category="paragraph">本番環境に ONTAP Select クラスタを導入する前に、ストレージ容量ライセンスを購入し、関連するライセンスファイルをダウンロードする必要があります。各ノードでストレージのライセンスを取得するには、 _capacity Tier_model を使用するか、 _capacity pools_model を使用して共有プールのライセンスを設定します。</block>
   <block id="973a0d9d3fbac9204b63c3c4b4ef0e8e" category="paragraph">ストレージ容量を含むライセンスファイルを取得したら、ライセンスを含むファイルを Deploy 仮想マシンにアップロードして登録する必要があります。</block>
   <block id="2fec03a9efc770f765197fa8c7911b8b" category="admonition">クラスタを評価用に導入する場合は、この手順を省略できます。</block>
   <block id="b9f0026a35bc57805d0d99fdcdfe0dd7" category="paragraph">admin ユーザアカウントのパスワードが必要です。</block>
@@ -658,13 +655,10 @@
   <block id="5f503a75cbd22c8269b0eb1377d09880" category="list-text">クラスタの設定と状態を表示します。</block>
   <block id="fbba132f8bfb4917ab068c504260e91d" category="paragraph">cluster show -name clustername -detailed</block>
   <block id="fb395229c68cbade5ef8a29846dadf96" category="paragraph">ONTAP Select クラスタ内の各ノードを設定する必要があります。</block>
-  <block id="5ce515418398a169e0380c3856289f5f" category="paragraph">ノードの設定情報が必要です。大容量階層ライセンスファイルをアップロードして、 Deploy ユーティリティでインストールする必要があります。</block>
-  <block id="5d74908d060471342c6387e13df8ef36" category="paragraph">この手順 を使用して各ノードを設定する必要があります。この例では、大容量階層ライセンスがノードに適用されています。</block>
   <block id="ca43b0b07b80357b6b79621504c12e57" category="list-text">クラスタノードに割り当てられた名前を特定します。</block>
   <block id="f9b851f69cae3703f91dd7f46ee96be9" category="paragraph">'node show -cluster-name clustername</block>
   <block id="8b5cb1e38684b903416c8da0166076b5" category="list-text">ノードを選択し、基本設定を実行します。「 node modify -name nodename -cluster-name clustername -host-name &lt;fqdn|ip&gt; -license-serial -number -instance -type type -passthrough-disks false 」</block>
   <block id="6dd204eccb05c441b87e6a643950694d" category="paragraph">ノードの RAID 設定は、 _passthrough-pdisks_parameter で示されます。ローカルハードウェア RAID コントローラを使用している場合は、この値を false に設定する必要があります。ソフトウェア RAID を使用している場合は、この値が true である必要があります。</block>
-  <block id="7efc18a8265e9977fb3518551ff21574" category="paragraph">ONTAP Select ノードには大容量階層ライセンスが使用されます。</block>
   <block id="2b24bc0f21d6bbbaef36e09ddfa027a0" category="list-text">ホストで使用可能なネットワーク設定を表示します。</block>
   <block id="e5cc61140754d924e9497ca93ae33daf" category="paragraph">host network show -host-name &lt;fqdn|ip&gt; -detailed ’</block>
   <block id="bb7ea5508da973d7f3f3a022afe1dd6b" category="list-text">ノードのネットワーク設定を実行します。</block>
@@ -782,9 +776,7 @@
   <block id="215de3e5f96b8c1af251af4fe73048a7" category="list-text">ライセンスを追加するための権限を持つ ONTAP ユーザ名</block>
   <block id="cb82d6b5d827c4174c5d988710af4fe5" category="list-text">ONTAP ユーザのパスワード</block>
   <block id="6ee704534d0c8e37fdbab37fa7c81db3" category="paragraph">既存の ONTAP Select クラスタは、 script_delete_cluster.py _ を使用して削除できます。</block>
-  <block id="e4bd755214153474324cb3c791d0988e" category="summary">ONTAP Select が組織に適していることを確認したら、本番環境の導入に必要なライセンスを購入できます。各環境の容量階層または容量プールのライセンスモデルとストレージ容量を選択する必要があります。</block>
   <block id="3c868759d0863801160ccec7f31cd26a" category="section-title">一般的なライセンス特性</block>
-  <block id="5f878954b0c63a957a4fca43d50b03b3" category="paragraph">容量階層と容量プールライセンスのモデルは、いくつかの点で大きく異なります。ただし、 2 つのライセンスモデルには次のような共通の特徴があります。</block>
   <block id="1e27a8e66b6c9b86c6097d597ad1aae5" category="list-text">本番環境に ONTAP Select を導入する場合は、必要に応じて 1 つ以上のライセンスを購入する必要があります。</block>
   <block id="15dffe620a63cf36cf7950870eb1dd7f" category="list-text">ライセンスのストレージ容量は、 1TB 単位で割り当てられます。</block>
   <block id="e87c2d5c68d6bca7e5d00d0f9ba86e6c" category="list-text">ストレージ容量は物理容量を示し、 ONTAP Select 仮想マシンで使用可能なデータディスクの合計許容サイズに対応します。</block>
@@ -794,25 +786,13 @@
   <block id="c84d0d15d89203b240d22009f0e21410" category="list-text">ライセンスのインストールと適用が完了したら、ネットアップのアカウントチームまたはパートナーに連絡して更新したライセンスを調達し、容量を追加することができます。</block>
   <block id="a3263397bbc31693f6873997c36fe75d" category="list-text">HA ペア内の両方のノードのストレージ容量とライセンス容量は同じであることが必要です。</block>
   <block id="d86f9ceaae5a2db2c1aefdb22d547e86" category="list-text">最初に購入ライセンスを使用して導入した ONTAP Select ノードを評価用ライセンスに変換することはできません。</block>
-  <block id="f9e76b1ce7aec73ae826282e626e80ed" category="section-title">容量階層のライセンスモデル</block>
-  <block id="07d2c59cd8b3d442f434212582fce4bc" category="paragraph">容量階層のライセンスモデルには、次のような特徴があります。</block>
   <block id="871e597c4ae832351177624116bba41c" category="list-text">ONTAP Select ノードごとにライセンスを購入する必要があります。</block>
   <block id="13bcda60ca431e945b05ba49704703a7" category="list-text">購入可能な最小容量は 1TB です。</block>
-  <block id="171f2b7f54fcb35f8671d5a99f59cf4c" category="list-text">各大容量階層ライセンスにはストレージ容量が含まれており、特定のノードにロックされています。</block>
   <block id="41a121513d59eed4db3a4c7f1fc6d0ba" category="list-text">ネットアップが各 ONTAP Select ノードに対して 9 桁のライセンスシリアル番号を生成します。</block>
   <block id="b7fb304e7a779889262a8b4612155a54" category="list-text">ノードに割り当てられたストレージは永続的なものです（更新は不要）。</block>
   <block id="a1039017542e538bd9f244ed701a0b65" category="list-text">ノードのシリアル番号は 9 桁で、ライセンスのシリアル番号と同じです。</block>
   <block id="d9e741d943a65e9ffbf3b085cb693ee3" category="list-text">ライセンスファイルは、クラスタの導入時、またはクラスタの作成後 30 日以内に適用できます。</block>
-  <block id="f06bc89da14b727a7173d325c2f414f2" category="section-title">容量プールのライセンスモデル</block>
-  <block id="d7ca8d1fad156c6e5fcd9a56e10d2455" category="paragraph">容量プールのライセンスモデルには、次のような特徴があります。</block>
-  <block id="cbdbae6aeb6edf0b767c6aa5e5e98d07" category="list-text">共有容量プールごとにライセンスを購入する必要があります。</block>
   <block id="cb58a864ca9b83c561396808328e023e" category="list-text">購入可能な最小容量は 2TB です。</block>
-  <block id="0d728590b1ea6bc8ad55fef75c463c29" category="list-text">各容量プールライセンスにはストレージ容量があり、特定の License Manager インスタンスにロックされています。</block>
-  <block id="1bcb44fe448d5052f21974775c2594bf" category="list-text">ネットアップは、容量プールごとに 9 桁のライセンスシリアル番号を生成します。</block>
-  <block id="06b92373d44bb688094b05df7cf1ff8e" category="list-text">容量プールに割り当てられたストレージは、購入時に一定期間のみ有効です（更新が必要）。</block>
-  <block id="03aef2179b374f799679e6b0d6c70010" category="list-text">ノードのシリアル番号は 20 桁で、容量プールライセンスのシリアル番号に基づいて License Manager によって生成されます。</block>
-  <block id="a6483e971a591957efb5493b5bb42291" category="list-text">各ノードは、ローカルデータアグリゲートのストレージ容量を共有容量プールから自動的にリースします。</block>
-  <block id="4f1b3cd9fba2e292ff3f1a184f8331f0" category="paragraph">容量プールのライセンスモデルの詳細については、 _Capacity pools licensing model_ を参照してください。</block>
   <block id="ef063895a1ede73693b222ec3a2f0a63" category="summary">最適なハードウェアを選択し、パフォーマンスと耐障害性を最適化するようにネットワークを設定します。</block>
   <block id="1ff04d941ae1b8262465779276105e05" category="paragraph">ONTAP Select VM のパフォーマンスは基盤のハードウェアの特性に直接左右されるため、高速の NIC を選択して VM へのスループットを高めると、クラスタのパフォーマンスと全体的なユーザエクスペリエンスが向上します。4 つの 10Gb NIC または 2 つの高速 NIC （ 25/40Gb/ 秒）を使用すると、ハイパフォーマンスなネットワークレイアウトを実現できます。他にも、サポートされる構成がいくつかあります。2 ノードクラスタの場合は、 4 × 1Gb ポートまたは 1 × 10Gb ポートがサポートされます。シングルノードクラスタの場合は、 2 × 1Gb ポートがサポートされます。</block>
   <block id="68a547a08a3ebb293924c580b641ce65" category="paragraph">* ネットワークの最小構成と推奨構成 *</block>
@@ -851,25 +831,17 @@
   <block id="5f81c29f30b61204b5999a7d3c42704f" category="list-text">[ * スタート * ] をクリックして、ネットワーク接続テストを開始します。</block>
   <block id="893c95c096fab305c703479243f6943c" category="summary">ONTAP Select ライセンスの管理の一環として実行できる関連タスクがいくつかあります。</block>
   <block id="9eb6b36f84e03f93cb360a15fa276ffb" category="doc">ONTAP Select ライセンス</block>
-  <block id="4d072981d0459a6e8dddc5e65d85a19d" category="paragraph">ONTAP Select の大容量階層ライセンスを必要に応じて追加、編集、削除できます。</block>
   <block id="d1da5ae38aafefba216edae24c73845b" category="list-text">管理者アカウントを使用して、 Web インターフェイスから Deploy ユーティリティにサインインします。</block>
   <block id="8466d9c8baffa8020cd2061f9cb4929e" category="list-text">ページ上部の * 管理 * タブをクリックします。</block>
-  <block id="2a1af40a05dbd3e59e7040a6aba474e2" category="paragraph">必要に応じて、 ONTAP Select 容量プールライセンスを追加、編集、削除できます。</block>
   <block id="d26363bf70cc27dd1ba8f09739b8f116" category="list-text">容量プールのリストを表示するには、次の手順を実行します。</block>
   <block id="e034cc23606a54a163075931f70dbbab" category="list-text">プールを選択して展開すると、プールからストレージをリースしているクラスタとノードが表示されます。</block>
   <block id="8797856e9d86b8ee20026b14229ca29a" category="list-text">ライセンスの現在のステータスを [*License Information*] で確認します。</block>
   <block id="21b26341db1dfa394a993c5d152ccf13" category="list-text">リース期限の下でプールに対して発行されたリースの期間を変更できます。</block>
   <block id="a0d12512fae580ca38325fe122b9f447" category="list-text">クラスタのリストを表示するには、次の手順を実行します。</block>
   <block id="31881fb30a812ef998d7f2111d7bcc44" category="list-text">クラスタを選択して展開し、ストレージ利用率を確認します。</block>
-  <block id="844c5fe8a900e62416848502a4af7fdf" category="paragraph">すべてのアクティブな容量プールライセンスは、 Deploy 管理ユーティリティのインスタンスに含まれる特定の License Manager インスタンスにロックされます。容量プールライセンスを使用している場合に Deploy インスタンスをリストアまたはリカバリすると、元のライセンスは無効になります。新しい容量ライセンスファイルを生成し、そのライセンスを新しい Deploy インスタンスにインストールする必要があります。</block>
-  <block id="be0411c455172a2eece4547673c61675" category="list-text">元の Deploy インスタンスで使用されている容量プールのライセンスをすべて確認します。</block>
   <block id="80098f7971b686ffe786b2703cea27f2" category="list-text">新しい Deploy インスタンスの作成時にバックアップをリストアする場合は、バックアップが最新かつ最新のものであるかどうかを確認してください。</block>
   <block id="9ea0cf0b607e87c61eee72761d5f73a5" category="list-text">元の Deploy インスタンスで最後に作成された ONTAP Select ノードを特定します（元の Deploy インスタンスからの最新のバックアップが新しい Deploy インスタンスにリストアされない場合のみ）。</block>
   <block id="36ee47cdf830e8ef804643369ae9cb6f" category="list-text">Deploy インスタンスをリストアまたは再作成します</block>
-  <block id="3e7e570e683be353e09e19562e3196f3" category="paragraph">大まかには、このタスクは 3 つのパートで構成されます。Deploy インスタンスで使用するすべての容量プールライセンスを再生成してインストールする必要があります。新しい Deploy インスタンスにすべてのライセンスを再インストールしたら、必要に応じてシリアルシーケンス番号をリセットできます。最後に、 Deploy の IP アドレスが変更された場合は、容量プールライセンスを使用するすべての ONTAP Select ノードを更新する必要があります。</block>
-  <block id="6d46c419c8dde2ad4ea4d5623e1b4350" category="list-text">ネットアップサポートに問い合わせて、元の Deploy インスタンスの容量プールライセンスのバインドを解除し、登録を解除しておきます。</block>
-  <block id="dc94932a20b0a7c73d1e6aa60af35223" category="list-text">各容量プールライセンスの新しいライセンスファイルを取得してダウンロードします。</block>
-  <block id="8018479e33974a2b0f774cf42ec399e5" category="list-text">新しい Deploy インスタンスに容量プールライセンスをインストールします。</block>
   <block id="e05566aa3784020545c76d92dcb376ab" category="list-text">バックアップをリストアせずに新しい Deploy インスタンスを作成した場合、または最新ではないバックアップを使用した場合は、シリアルシーケンス番号を更新する必要があります。</block>
   <block id="1c4bd3e7e2bc88b1415fade6249d5a46" category="list-text">管理者アカウントを使用して、 Deploy ユーティリティのコマンドラインインターフェイスにサインインします。</block>
   <block id="1de9bd334d99fc24b79e751ee32ab23c" category="list-text">元の Deploy インスタンスで最後に作成されたノードのシリアル番号を表示します。</block>
@@ -878,7 +850,6 @@
   <block id="6b5a573590d2b4e33bc4abb08fbfc691" category="list-text">新しいシリアル・シーケンス番号を作成するには、シリアル・シーケンス番号に 20 を追加します。</block>
   <block id="569ba0d8b8c86f41c90c5df6e562c9a2" category="list-text">新しい Deploy インスタンスのシリアルシーケンス番号を設定します。</block>
   <block id="0426f75052d2375cd4d03853499c9218" category="paragraph">「 license-manager modify -serial-sequence SEQ_NUMBER 」を参照してください</block>
-  <block id="ab5251cc25a6494baca2bffd2a2d2a30" category="list-text">新しい Deploy インスタンスに割り当てられた IP アドレスが元の Deploy インスタンスの IP アドレスと異なる場合は、容量プールライセンスを使用するすべての ONTAP Select ノードで IP アドレスを更新する必要があります。</block>
   <block id="d4e6e8c5111a4fa039aeebcb814b9716" category="list-text">ONTAP Select ノードの ONTAP コマンドラインインターフェイスにサインインします。</block>
   <block id="5172e21efeb1892262831ef5031d5316" category="list-text">advanced 権限モードに切り替えます。</block>
   <block id="8751fc11929a47a202fa63c5dca19f5c" category="paragraph">「 set adv` 」</block>
@@ -886,9 +857,7 @@
   <block id="0751f3a066840ee186e51768399a17d4" category="paragraph">「 system license license-manager show 」と表示されます</block>
   <block id="98f8649e2f83d631b66784b6b451ed1c" category="list-text">ノードで使用する License Manager （ Deploy ）の IP アドレスを設定します。</block>
   <block id="f06ba64d3be7b8d25f7ebbcfc88db033" category="paragraph">'system license license-manager modify -hostnew_IP_address</block>
-  <block id="de2312541c249bc72eb1d78f6c56e732" category="paragraph">ONTAP Select 評価用クラスタをアップグレードして、 Deploy 管理ユーティリティで本番用の大容量階層ライセンスを使用できます。</block>
   <block id="bc882e7be43ec2480a6be229d77c8eaf" category="list-text">各ノードには、本番環境ライセンスに最低限必要な容量をサポートするための十分なストレージを割り当てる必要があります。</block>
-  <block id="b94a9bad5ae121ac9e7cd292197b59e1" category="list-text">評価用クラスタのノードごとに大容量階層ライセンスが必要です。</block>
   <block id="f5d5a8d93d0ff3b80b514c776adc3d06" category="paragraph">シングルノードクラスタのクラスタライセンスを変更する場合は、システムが停止します。ただし、マルチノードクラスタの場合は、変換プロセスで各ノードが一度に 1 つずつリブートされてライセンスが適用されるため、これは該当しません。</block>
   <block id="5a3b7bb229a1d7655341b191f93fef35" category="list-text">ノードごとに使用可能な本番環境ライセンスを選択するか、必要に応じて追加のライセンスをアップロードします。</block>
   <block id="7d7d0d771e408e152fe9f59aa783a245" category="paragraph">クラスタのライセンスのアップグレードには数分かかることがあります。ページを離れる前、または他の変更を行う前に、プロセスを完了させてください。</block>
@@ -1028,15 +997,11 @@
   <block id="ee2ee700615c2258dc72b2287ee4ebea" category="list-text">クレデンシャルを更新</block>
   <block id="9d7584891713572b5d5bd09e474db779" category="list-text">クレデンシャルを検証する</block>
   <block id="ccc612cd14c06b1f422a5bb1a7ec9dd4" category="list-text">管理サーバを削除します</block>
-  <block id="5f21d6245c5bb0178e94ca31973b2629" category="summary">容量階層のライセンスモデルではなく容量プールのライセンスモデルを使用すると、いくつかのメリットがあります。</block>
   <block id="f375253c446097df1911643c823bcebc" category="doc">利点のまとめ</block>
   <block id="9d7eafb0b72f9b5f7663e196c8c405d4" category="section-title">ストレージ容量をより効率的に使用できます</block>
-  <block id="045609ee650288df1c254d2307390990" category="paragraph">容量階層ライセンスを使用している場合は、各ノードに固定のストレージ容量を割り当てます。未使用のスペースを他のノードと共有することはできず、無駄になります。容量プールライセンスがあれば、各ノードがデータアグリゲートのサイズに基づいて必要な容量のみを消費します。</block>
   <block id="c49054c6883b9886c6f31a2e8723ffe6" category="paragraph">また、容量は中央のプールに固定されるため、組織内の多数のノードで共有できます。</block>
   <block id="5aaf2ab29a3c1228e8c4125acd634e5e" category="section-title">管理オーバーヘッドが大幅に削減され、コストが削減されます</block>
-  <block id="d103dad4fce7c3b935c3371288ee0e36" category="paragraph">大容量階層ライセンスを使用する場合は、ノードごとにライセンスを取得してインストールする必要があります。容量プールを使用する場合は、共有プールごとに 1 つのライセンスがあります。これにより、管理オーバーヘッドが大幅に削減され、コストが削減されます。</block>
   <block id="1e8785eff311926f53d67ca62acdaa7b" category="section-title">利用率指標の向上</block>
-  <block id="c9e41b9dec6359fc66760c0eb4d6fa5f" category="paragraph">Deploy の Web ユーザインターフェイスでは、容量プールの使用方法に関する情報が強化されています。容量プールで使用されているストレージの量と使用可能なストレージの量、プールからストレージを使用しているノード、クラスタから容量を割り当てるプールを簡単に確認できます。</block>
   <block id="3db3547bcabe9c3ed4c1a8d9ade67c26" category="summary">ソフトウェア RAID は、 ONTAP ソフトウェアスタック内で実装される RAID 抽象化レイヤです。FAS などの従来型 ONTAP プラットフォーム内の RAID レイヤと同じ機能を提供します。RAID レイヤはドライブパリティ計算を実行し、 ONTAP Select ノード内の個々のドライブ障害に対する保護を提供します。</block>
   <block id="72516b350fb14e2e3d6c3218313ea038" category="doc">ローカル接続ストレージ向けのソフトウェア RAID サービス</block>
   <block id="3687f8d0eeb8ce0b039211af5645386b" category="paragraph">ONTAP Select には、ハードウェア RAID 構成とは関係なく、ソフトウェア RAID オプションも用意されています。ハードウェア RAID コントローラは、使用できない場合や、 ONTAP Select をスモールフォームファクタコモディティハードウェアに導入する場合など、特定の環境では望ましくない場合があります。ソフトウェア RAID では、このような環境も対象となるように、使用可能な導入オプションが拡張されご使用の環境でソフトウェア RAID を有効にするには、次の点に注意してください。</block>
@@ -1158,13 +1123,9 @@
   <block id="6bc6433efd5abd7e3ac98556742ca0e4" category="paragraph">クレデンシャルストアは、ハイパーバイザーホストの追加など、 Deploy を使用する通常の管理タスクの実行時に内部的にアクセスされます。Deploy の Web ユーザインターフェイスと CLI を使用して、クレデンシャルストアを直接管理することもできます。</block>
   <block id="545d5da191e6a6ba8756e03d9e72b5d9" category="summary">ワークフローに従って、 ONTAP Select 環境用のライセンスを購入して適用できます。</block>
   <block id="67f277ce98738f33f83293525780e9a2" category="paragraph">次のワークフローは、 ONTAP Select 環境用のライセンスを購入して適用するプロセスを示しています。ライセンスを購入する際には、ライセンスモデルとストレージ容量を選択する必要があります。</block>
-  <block id="6fff1f3e41423b59b387036f1c43f446" category="paragraph">具体的なプロセスは、大容量階層ライセンスと大容量プールライセンスのどちらを使用しているかによって異なります。</block>
   <block id="0062e2b8fb35cb9835391a2defa6a065" category="list-text">9 桁のライセンスシリアル番号</block>
-  <block id="79e0e2c63445d0a61c41da376fa86f53" category="list-text">シリアル番号環境 ：ノード（大容量階層）またはストレージプール（大容量プール）</block>
   <block id="466feccbc5c615c8c64edaa9f141fd74" category="list-text">ライセンスロック ID</block>
-  <block id="8a1682395c44d437628616757dac21b3" category="list-text">容量プールライセンスを使用する場合は、 Deploy インスタンスのライセンスロック ID が必要です</block>
   <block id="c6fdf62cd5d566315189e3fc6458c3d7" category="list-text">ライセンス Web サイト</block>
-  <block id="43180a10c14034015ad04f63c4222224" category="list-text">容量階層ライセンスと容量プールライセンスは Web サイトごとに異なります</block>
   <block id="d981b46179e3f91d5fe1f32dd9134fff" category="inline-image-macro">本番用 ONTAP Select 環境用のストレージライセンスを購入してインストールするプロセスについて説明します。</block>
   <block id="87f55f3b9d86ff28fa332ac74ae68458" category="paragraph"><block ref="87f55f3b9d86ff28fa332ac74ae68458" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1aa66ef3a8e34a7a538960a80d2e1e31" category="cell">ESXi</block>
@@ -1205,9 +1166,7 @@
   <block id="468c7067a5232ce7f7b5f71d1c6e1685" category="paragraph">2 ノードクラスタは、一定の最小要件が満たされている場合、 2 つの場所に拡張できます。このアーキテクチャは、ハードウェアベースの MetroCluster と（ハードウェア定義またはソフトウェア定義の）単一のデータセンタークラスタ間に適しています。ONTAP Select MetroCluster SDS の要件では、 Software-Defined Storage ソリューションの一般的な柔軟性に加え、 Software-Defined Storage ソリューションとハードウェアベースの MetroCluster SDS との違いが強調されています。独自のハードウェアは必要ありません。</block>
   <block id="189f86e135df200ab301cdba9724b737" category="paragraph">MetroCluster とは異なり、 ONTAP Select は既存のネットワークインフラを使用し、最大 5 ミリ秒 RTT のネットワークレイテンシをサポートします。最大ジッタは 5 ミリ秒で、合計 10 ミリ秒の最大レイテンシを実現します。レイテンシプロファイルの方が重要であるものの、最大距離を 10km 以下にすることも要件となっています。マーケットスペースでの分離要件では、実際の距離よりも物理的な分離の方が重要です。たとえば、別の建物に配置することが必要になる場合があります。別のケースでは、同じ建物内に別々の部屋を配置することもできます。実際の物理的な配置に関係なく、 MetroCluster SDS としての 2 ノードクラスタとは、各ノードで別々のアップリンクスイッチを使用することを意味します。</block>
   <block id="c0a1eea8b1af6026a021d360f96c66d8" category="paragraph">2 ノード HA 構成では、フェイルオーバー中にアクティブノードを適切に識別し、ネットワークパーティション内で両方のノードが独立してアクティブのままになるスプリットブレインシナリオを回避するためにメディエーターが必要です。この処理は、以前にも提供されていた、通常の 2 ノード HA 構成と同じです。サイト障害時に適切な保護とフェイルオーバーを行うには、 2 つの HA ノードとは異なるサイトにメディエーターを配置する必要があります。メディエーターと各 ONTAP Select ノードの間で許容される最大レイテンシは 125 ミリ秒です。</block>
-  <block id="94552a5199f7104b614575781d58ffef" category="paragraph">この解決策 を使用することで、企業のお客様は、コモディティハードウェア上で Software-Defined Storage 解決策 の柔軟性を確実に活用できます。データはエンタープライズクラスの RPO ゼロ解決策 で保護されているため、安心して導入できます。</block>
   <block id="7df0d3f86ea85895ce805f02d425a395" category="paragraph">ONTAP Select MetroCluster SDS には、次のような利点があります。</block>
-  <block id="55f4eec83ef8167eeb9aae4734147eab" category="list-text">MetroCluster SDS は、 ONTAP Select 向けに、別の側面（データセンターからデータセンターへ）から保護機能を提供します。お客様は、 Software-Defined Storage と ONTAP のあらゆるメリットを活用できるだけでなく、この追加の保護機能を活用できるようになりました。</block>
   <block id="efd88036e2c90f7b3284371d9cdbb406" category="list-text">MetroCluster SDS は、 RPO ゼロと自動フェイルオーバーにより、ビジネスクリティカルなデータ保護を実現します。データストレージとアプリケーションアクセスポイントの両方が、自動的に正常に稼働しているデータセンターまたはノードに切り替わります。このとき、 IT 担当者の関与は一切ありません。</block>
   <block id="31414fd6f8904fe7a521040b566ba467" category="list-text">MetroCluster SDS は対費用効果に優れています。既存のネットワークインフラを活用して HA ペア間の耐障害性を拡張できるため、ハードウェアを追加する必要がありません。また、同じクラスタ内で、アクティブ / アクティブのデータアクセスとデータセンターの冗長性を実現します。</block>
   <block id="d6f1b8d7589890e7cbb2e641d329ba0b" category="paragraph">* MetroCluster SDS*</block>
@@ -1259,9 +1218,7 @@
   <block id="f83c877592ae6667e4f8b98d490281d8" category="paragraph">Deploy API では、次のセキュリティテクノロジを使用します。</block>
   <block id="1993a29cd22f4d42c6925aedd2416473" category="list-text">Transport Layer Security ： Deploy サーバとクライアントの間でネットワークを介して送信されるすべてのトラフィックは、 TLS を介して暗号化されます。暗号化されていないチャネル上で HTTP プロトコルを使用することはサポートされていません。TLS バージョン 1.2 がサポートされています。</block>
   <block id="21392618546d9ab8ba4ef3600ae3644e" category="list-text">HTTP 認証：すべての API トランザクションにベーシック認証が使用されます。base64 文字列のユーザ名とパスワードを含む HTTP ヘッダーがすべての要求に追加されます。</block>
-  <block id="6fad90e28618e0a28b3096e32fc10067" category="summary">容量階層ライセンスを使用している場合は、 ONTAP Select ノードごとにライセンスファイルを取得する必要があります。ライセンスファイルではノードのストレージ容量を定義します。このファイルは、ネットアップが割り当てた一意の 9 桁のシリアル番号を使用してノードにロックされます。</block>
   <block id="b83de81d9df2daba7b299079440e4a70" category="paragraph">ネットアップがノードに割り当てた 9 桁のライセンスシリアル番号が必要です。ライセンスファイルを取得する前に、注文書の出荷日から少なくとも 24 時間待ってください。</block>
-  <block id="6bb55d7bed113bc9f1eb1ceaa56c67c3" category="paragraph">大容量階層ライセンスが必要な ONTAP Select ノードごとにこのタスクを実行する必要があります。</block>
   <block id="f1119e2a8337db49fe7086c2b2267602" category="list-text">Web ブラウザを使用して ONTAP Select ライセンスサイトにアクセスします。</block>
   <block id="ac8e78a77fe7ca32132b86474e8c9de5" category="paragraph">https://register.netapp.com/register/getlicensefile`</block>
   <block id="84db9bc9926628faaa27e124a2df79bb" category="list-text">ネットアップアカウントのクレデンシャルを使用してサインインします。</block>
@@ -1345,9 +1302,7 @@
   <block id="347f9f134138bbcb42fa67aed2fbddba" category="list-text">モデル (Model) - モデル (_Model_) をクリックすると 'JSON パラメータの完全なリストが表示され ' 各パラメータの概要 が表示されます</block>
   <block id="564b7e56e433323571bde06fbe6a5d83" category="section-title">API 呼び出しを実行する際の注意事項</block>
   <block id="cc7b50f7c16a19e77b53fc2c649a6a2c" category="paragraph">Deploy のドキュメントページを使用して実行する API 処理は、すべてライブ処理です。構成ファイルやその他のデータを誤って作成、更新、削除しないように、注意してください。</block>
-  <block id="9cbb2237779591c572f2e7fa9444989e" category="summary">容量階層のライセンスモデルでは、ノードに割り当てられているライセンスのシリアル番号と 9 桁のノードシリアル番号が同じです。ただし、容量プールのライセンスモデルを使用するノードに割り当てられるシリアル番号の形式は異なります。</block>
   <block id="875d6acfb9499e910c2863da32d9284e" category="doc">ノードのシリアル番号</block>
-  <block id="5c8c6a008855a7326fa4629a85dd127e" category="paragraph">容量プールライセンスを使用しているノードのシリアル番号の形式は次のとおりです。</block>
   <block id="3341673f4960921bc2834aa8bfa4ac44" category="paragraph">「 999 ppppppppppppppppp nnnnnnnn 」と入力します</block>
   <block id="8488b21dee18149216107700b6943d61" category="admonition">わかりやすくするためにスペースが追加されていますが、実際のシリアル番号には含まれていません。</block>
   <block id="eea8b1995d50aa53af45e544818f8706" category="paragraph">ノードのシリアル番号の各セクションを、左から右の次の表に示します。</block>
@@ -1355,10 +1310,7 @@
   <block id="04adb8320a112460030976076e1b41c5" category="cell">'999'</block>
   <block id="94c8db1e39e106761ed9c4db655dd019" category="cell">ネットアップが予約した 3 桁の固定値。</block>
   <block id="0c59088c12981c5178183df5dc1d06ec" category="cell">ppppppppppppp</block>
-  <block id="2d11bc3376ef9a1325097fc3bdf98e3b" category="cell">ネットアップが容量プールに割り当てた 9 桁の可変ライセンスシリアル番号</block>
   <block id="6eff2276c4f875c14c569fbc11e4c2a0" category="cell">nnnnnnnn</block>
-  <block id="28166a3ae8b939ecccabac1b217dd6b9" category="cell">容量プールを使用する各ノードに対して License Manager によって生成される変数 8 桁の値</block>
-  <block id="d5b7ad6085f954060b4b4df44a320995" category="admonition">注意：容量プールライセンスを使用するノードを含むネットアップサポートでケースをオープンするときは、 20 桁の全ノードシリアル番号を指定することはできません。代わりに、 9 桁の容量プールライセンスシリアル番号を指定する必要があります。上記のように、ノードのシリアル番号からライセンスのシリアル番号を取得できます。ノードのシリアル番号（ '999' ）の最初の 3 桁をスキップし、次の 9 桁（ ppppppppppp ）を抽出します。</block>
   <block id="86b544aab279dcb98c0ac9a8a2cfce27" category="summary">ONTAP Select ノードを導入する各ハイパーバイザーホストを準備します。ホストの準備の一環として、導入環境を慎重に評価し、ホストが適切に設定されていること、および ONTAP Select クラスタの導入準備ができていることを確認してください。</block>
   <block id="2185b12253fdb08ce9e5bab96ce67841" category="admonition">ONTAP Select Deploy 管理ユーティリティでは、ハイパーバイザーホストのネットワークとストレージの必要な設定が実行されません。ONTAP Select クラスタを導入する前に、各ホストの準備を手動で行う必要があります。</block>
   <block id="a623b323ce5bde34ceed491f235e772c" category="section-title">ハイパーバイザーの一般的な準備</block>
@@ -1570,13 +1522,9 @@
   <block id="9fbbd5bdac28c04c1d8551e94ce3f619" category="doc">ONTAP Select リリースノート</block>
   <block id="12f423cf4aa4ff75a7ca9220c1c56cd8" category="paragraph">ONTAP Select のリリースノートには、新機能、サポートされる設定、アップグレードに関する注意事項、既知の問題など、リリース固有の情報が記載されています。 解決済みの問題と既知の制限事項。</block>
   <block id="e1060dc2ca9dac04bf54c9156ff74480" category="admonition">リリースノートにアクセスするには、ネットアップサポートサイトにサインインするアカウントが必要です。</block>
-  <block id="f7cbb5649dbc857609b9017aafeee7f1" category="summary">容量プールと容量階層のライセンスモデルには、いくつかの違いがあります。</block>
   <block id="bed7832e3f97e759fd2581b465169890" category="paragraph">次の表に、 ONTAP Select でサポートされる 2 つの本番環境ライセンスモデルの比較を示します。</block>
-  <block id="40cc20fb536f79b4342dc02e04418031" category="cell">大容量階層</block>
-  <block id="3824ce9b3abc70c7c5c21eda0ab912d0" category="cell">容量プール</block>
   <block id="d8c97127df818e94ea6e6ac7b50e96b4" category="cell">ライセンスのシリアル番号</block>
   <block id="74eb298f532f82b217f8fd4335a9809f" category="cell">ネットアップが生成してノードに割り当てる 9 桁の数字</block>
-  <block id="91bc1f85b954434200a85f3bb06ad036" category="cell">ネットアップが生成して容量プールに割り当てる 9 桁の数字</block>
   <block id="cfe9ad257383707f3fd7fae02d04d37c" category="cell">ライセンスロック</block>
   <block id="d62725d2824f19699315182c0a6b0376" category="cell">ONTAP Select ノードにロックされました</block>
   <block id="d38016c64850189116e2066e441f03ee" category="cell">License Manager インスタンスにロックされています</block>
@@ -1787,7 +1735,6 @@
   <block id="92a71e755753127bb017bb1fe9bad028" category="paragraph">ONTAP Select の 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスの設定データがバックアップされているかどうかを確認する必要があります。作成したバックアップにはクラスタが含まれていない場合があります。</block>
   <block id="618988b1c7baef58636565874807619a" category="paragraph">使用するリカバリ用手順 に応じて、 Deploy の設定データのバックアップをリストアする必要があります。</block>
   <block id="88178796123172aa042c2352197e09e0" category="paragraph">障害が発生した元の Deploy ユーティリティの仮想マシンの IP アドレスを把握しておく必要があります。</block>
-  <block id="fb66c65c562c0e260ab33c68ef45f2c7" category="paragraph">容量プールまたは容量階層のライセンスが使用されているかどうかを確認する必要があります。容量プールライセンスを使用する場合は、 Deploy インスタンスをリカバリまたはリストアしたあとに、各容量プールライセンスを再インストールする必要があります。</block>
   <block id="378cdb3591ae498a782312834334c853" category="paragraph">ONTAP Select Deploy ユーティリティのインスタンスをリカバリする際に使用する手順 を決定しておく必要があります。ONTAP Select 2 ノードクラスタを含む、障害が発生した元の Deploy ユーティリティの設定データをバックアップするかどうかを決定します。</block>
   <block id="11530c57a897d905bc943331e58f56b0" category="cell">2 ノードクラスタを含む Deploy のバックアップがあるか</block>
   <block id="b42236ddc43aefb700714337ec5fe465" category="cell">使用するリカバリ手順</block>
@@ -1808,7 +1755,6 @@
   <block id="1146fee0eb880f0892a23e726ca0a4d2" category="list-text">メールボックスディスクを 2 つのノードに割り当てます。</block>
   <block id="9d070d121ee26abdb5d314d6fff4c15c" category="list-text">ストレージフェイルオーバーが有効になっていることを確認します。</block>
   <block id="751035e5db88d172e881299c202d9b13" category="paragraph">「 storage failover show 」をクリックします</block>
-  <block id="0e6429e5a26e1f9ea7c357f0cd190a54" category="paragraph">容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。</block>
   <block id="569f883a1fcdb29c5aa5e29f182e9dd9" category="paragraph">2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがない場合は、新しい Deploy 仮想マシンにメディエーターの iSCSI ターゲットとメールボックスを設定する必要があります。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。</block>
   <block id="1b8f191261c89384d2a9550aaac5eac0" category="paragraph">新しい Deploy ユーティリティのインスタンスのメディエーターターゲットの名前が必要です。2 ノードクラスタの ONTAP CLI にサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。</block>
   <block id="b641370bc8479ac609268e5b798181a7" category="paragraph">必要に応じて、設定のバックアップを新しい Deploy 仮想マシンにリストアできます。 2 ノードクラスタがバックアップに含まれていなくてもリストアは可能です。リストアで 2 ノードクラスタが再作成されることはないため、 Deploy の ONTAP Select オンラインドキュメントの Web ページを使用して、メディエーターの iSCSI ターゲットとメールボックスを新しい Deploy ユーティリティのインスタンスに手動で追加する必要があります。2 ノードクラスタにサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。</block>
@@ -1831,7 +1777,6 @@
   <block id="109c8e36bc942c26365dbf0801f87f3d" category="list-text">[* 試してみてください !* ] をクリックして、メディエーターの iSCSI ターゲットを作成します。</block>
   <block id="3d85b7e0ce2983da3c1d066243516254" category="paragraph">要求が成功すると、 HTTP ステータスコード 200 が表示されます。</block>
   <block id="4da2af2783b38d64f7ad51f0188043f0" category="list-text">新しい Deploy 仮想マシンの IP アドレスが元の Deploy 仮想マシンと異なる場合は、 ONTAP の CLI を使用して、古いメディエーターの iSCSI ターゲットを削除し、新しいターゲットを追加する必要があります。</block>
-  <block id="9d0ce8b3bd13c88962b5522282ef1f2a" category="paragraph">容量プールライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。</block>
   <block id="f003eee578389a046f25dba6e783a672" category="summary">ONTAP Select は、組織内の 1 つ以上のプライベートクラウドのサポートに最適です。一般的なユースケースとしては、コモディティサーバ上に構築されたプライベートクラウドにストレージサービスを提供するケースがあります。</block>
   <block id="fb4b04f0bbd3011e95882612761e5f4a" category="doc">プライベートクラウドとデータセンター</block>
   <block id="cc2d9bf42776eb79fe1ddb4e755eff01" category="paragraph">パブリッククラウドと同様に、プライベートクラウドは柔軟性に優れており、設置やティアダウンも迅速に実行できます。また、プライベートクラウドでは、セキュリティと管理が強化されます。</block>
@@ -1868,26 +1813,14 @@
   <block id="aa6b728c36f1bd39c6a235c165e2dbc2" category="list-text">管理者アカウントで SSH を使用して ONTAP CLI にサインインします。</block>
   <block id="42fd4c247ebbe7dfca417006d76edd84" category="paragraph">ONTAP Select マルチノードクラスタをホストする VMware ESXi ハイパーバイザーは、 Deploy 管理ユーティリティを使用せずにアップグレードできます。</block>
   <block id="c94bc3200f704807c4c41ce4c2e2b2d8" category="paragraph">アップグレード手順 は、 ONTAP Select クラスタで使用するホストごとに実行する必要があります。</block>
-  <block id="7807c1892c85ba4af2d3c779c7823c25" category="summary">容量プールライセンスモデルを使用する場合の制限事項を次に示します。</block>
-  <block id="3e786bde6715be4e14e3475dd6ed4cce" category="paragraph">1 つの ONTAP Select クラスタ内のすべてのノードで、同じライセンスモデル、つまり容量階層または容量プールを使用する必要があります。1 つのクラスタ内で複数のノードのライセンスタイプを混在させることはできません。</block>
-  <block id="1698dae6a4f7df9ce924018053e98157" category="paragraph">ONTAP Select クラスタ内の容量プールライセンスを持つすべてのノードは、同じ License Manager インスタンスを使用する必要があります。各 Deploy インスタンスには 1 つの License Manager インスタンスが存在するため、この制限は、クラスタ内のすべてのノードを同じ Deploy インスタンスで管理する必要があるという既存の要件を再定義したものです。</block>
-  <block id="44f8a5fada3e18e6f15ff271b3edc087" category="paragraph">各ノードは、 1 つの容量プールからのみストレージをリースできます。1 つのノードで複数のプールを使用することはできません。</block>
-  <block id="9f9dee89e91dda6c0bed11a752b85182" category="paragraph">単一の HA ペアの両方のノードは、同じ容量プールからストレージをリースする必要があります。ただし、同じクラスタ内の異なる HA ペアは、同じ License Manager で管理されている異なるプールからストレージをリースできます。</block>
   <block id="ae060de04aca5e325886869d3119eab9" category="paragraph">ネットアップからストレージライセンスを取得するときは、ライセンス期間を選択する必要があります。たとえば、ライセンスは 1 年間有効です。</block>
-  <block id="3684db008f18e1ffdeda56bf51708696" category="paragraph">ONTAP Select ノードがデータアグリゲートのストレージリースを要求すると、 License Manager は容量プールの設定に基づいて、特定の期間のリースを提供します。各プールのリース期間は、 1 時間から 7 日の間で設定できます。デフォルトのリース期間は 24 時間です。</block>
-  <block id="987ded954f3b3c95296c03ab6b45ec09" category="paragraph">容量プールのライセンスを使用する場合は、 Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。</block>
-  <block id="3de1ca7c5efc91bb5c6c3fe1667e7f17" category="summary">ONTAP Select ノードで使用される容量プールごとにライセンスファイルを取得する必要があります。ライセンスファイルでは、プールのストレージ容量と有効期限が定義されます。このライセンスは、ネットアップが割り当てた一意のライセンスシリアル番号と、 Deploy インスタンスに関連付けられたライセンスロック ID を組み合わせて、 License Manager にロックされます。</block>
-  <block id="e26cab9e8e6b8390bd5be41af1d4052a" category="paragraph">ネットアップが容量プールに割り当てた 9 桁のライセンスシリアル番号が必要です。ライセンスファイルを取得する前に、注文書の出荷日から少なくとも 24 時間待ってください。</block>
-  <block id="3268086c81bdd4a048f2802c1261a578" category="paragraph">このタスクは、 ONTAP Select ノードで使用される容量プールごとに実行する必要があります。</block>
   <block id="7456bc766f2bb265ca706274029a4d1d" category="list-text">Web ブラウザを使用してネットアップサポートサイトにアクセスし、サインインします。</block>
   <block id="89d470e4f09750972e667a0aa66f60da" category="list-text">上部の [*Systems*]( システム ) をクリックし、 [*Software Licenses*]( ソフトウェアライセンス ) をクリックします。</block>
-  <block id="b8c28c22670acd8bd63bb0a805272088" category="list-text">容量プールのライセンスシリアル番号を入力し、 * Go ！ * をクリックします。</block>
   <block id="ae9aa26e0640b9c3d2d442b604f354ee" category="list-text">ライセンスの詳細ページで、 * 製品の詳細 * 列に移動します。</block>
   <block id="706a307ae92c25933ca962eb6dbd8560" category="list-text">該当する行の * Get NetApp License File * をクリックします。</block>
   <block id="e3a2b007e462109d35d40e5a66167dd3" category="list-text">ONTAP Select Deploy インスタンスのライセンスロック ID を入力し、 * Submit * をクリックします。</block>
   <block id="428eaaa9f14db57c6bd3b4e5dc5b258f" category="list-text">適切な配信方法を選択し、 * Submit * をクリックします。</block>
   <block id="e65eef77c34710d04f651265a36f1383" category="list-text">配信確認ウィンドウで [OK] をクリックします。</block>
-  <block id="f9398cacd5f1ebcc0aca8d8b93299cb5" category="paragraph">ONTAP Select ノードで容量プールを使用するには、ライセンスファイルを Deploy 管理ユーティリティにアップロードする必要があります。</block>
   <block id="010b1bb88703436584f35ee315ce708a" category="summary">コマンドラインインターフェイスを使用して、 Deploy 管理ユーティリティの既存のインスタンスを新しい仮想マシンに移行できます。</block>
   <block id="55327b42261932bc23e2c7dff5397072" category="paragraph">この手順 は、元の仮想マシンの設定データを使用する新しい仮想マシンの作成に基づいています。新しい仮想マシンと元の仮想マシンで実行する Deploy ユーティリティのバージョンとリリースが同じである必要があります。バージョンとリリースが異なる Deploy ユーティリティに移行することはできません。</block>
   <block id="50292085f30b7587c02bf7a7bdb68a00" category="paragraph">仮想マシンの移行の一環として、 Deploy の設定データのバックアップを作成する必要があります。また、 ONTAP Select クラスタを導入したあとにバックアップを作成する必要があります。データは単一の暗号化ファイルに保存され、ローカルワークステーションにダウンロードできます。</block>
@@ -1936,8 +1869,6 @@
   <block id="d200a289a8ebcab27fa991f9d753e39c" category="section-title">コアハードウェアの要件</block>
   <block id="09b8a8e0dc5db4d03118426909a90e16" category="paragraph">ONTAP Select を導入する物理ハイパーバイザーホストが、いくつかのハードウェア要件を満たしている必要があります。ハードウェアの最小要件を満たしていれば、ハイパーバイザーホストに対して任意のプラットフォームを選択できます。サポートされているハードウェアプラットフォームは、 Cisco 、 Dell 、 HP 、富士通、 Lenovo 、 と Supermicro です。</block>
   <block id="54046c200f18c7f662cdbd80eaba39a0" category="admonition">ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。</block>
-  <block id="667aa4140034cc454b837db2fc24ce3d" category="inline-link">NetApp Interoperability Matrix Tool 、ウィンドウ = _blank</block>
-  <block id="e974ba73413c61605294fbea7a63f880" category="paragraph">を参照してください<block ref="6989237bb21ab12eea7660d1d2c0793b" category="inline-link-rx"></block> を参照してください。</block>
   <block id="6ef6e53858c70e7e79a98bf86eb89b40" category="section-title">基本的なハードウェア要件</block>
   <block id="7a4cc24a8547103995174a22d62c6415" category="inline-link-macro">インテル Xeon プロセッサー、ウィンドウ = _ ブランク</block>
   <block id="fc86323f8bb43524824dfedf72c12f20" category="list-text">サーバー向けインテル Xeon プロセッサー（を参照 <block ref="b4ae18ee7ddc8509f21de2805d7b78c6" category="inline-link-macro-rx"></block> 詳細については、</block>
@@ -1959,10 +1890,7 @@
   <block id="ccda35bfbfdd918d2a198f71367f7d9d" category="inline-link-macro">ストレージと RAID</block>
   <block id="9a44a4605ab254ea4e284ea83fc225b0" category="admonition">プラットフォームライセンスに基づいて追加のディスクが必要になります。を参照してください <block ref="a3c4eb4ff3e5c01e8b1b86f1b4351b6c" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="d5955f327d5d79aa3434b5772a31b4d8" category="summary">ONTAP Select は、ハイパーバイザーホストに仮想マシンとして導入する ONTAP のソフトウェア専用バージョンです。これは、主要な FAS および AFF ONTAP 製品のスイートに加え、 Cloud Volumes ONTAP などのソフトウェアのみのその他のオプションを補完します。</block>
-  <block id="7cc14acbe7c6207c4a44a5e6e60f0a80" category="doc">ONTAP Select の概要</block>
-  <block id="2a0e91436f90a22cb84ac4d4041e2aa5" category="paragraph">ONTAP Select は、ソフトウェアのみの ONTAP バージョンで、ハイパーバイザーホストに仮想マシンとして導入できます。これは、主要な FAS および AFF ONTAP 製品のスイートに加え、 Cloud Volumes ONTAP などのソフトウェアのみのその他のオプションを補完します。</block>
   <block id="9ed6c695ae7ec8113471a76ddcea07cf" category="section-title">Software-Defined Storage</block>
-  <block id="3d55457ab585cd891246ed7dff68b788" category="paragraph">IT サービスの実装と配布をソフトウェアを通じて行うことで、管理者はかつてないスピードと即応性でリソースを迅速にプロビジョニングできます。最新のデータセンターがソフトウェア・デファインド・インフラストラクチャー（ SDI ）アーキテクチャーに移行すると、最も価値の高い IT 資産を基盤となる物理インフラストラクチャーから分離して、柔軟性、拡張性、プログラマビリティを提供できます。</block>
   <block id="718d7c969f416878691ffcaa2bdf3ca1" category="paragraph">DAS （直接接続型ストレージ）のサイロ間でデータが断片化されているコモディティ環境では、データの移動と管理が複雑な問題になっています。ソフトウェア・デファインド・ストレージ（ SDS ）は、 SDI 環境の重要な部分として、これらの問題やその他の問題に対処するために登場しました。</block>
   <block id="b2c8689de5a7643d75bcb087da31d4a0" category="paragraph">ONTAP Select は、 SDS 市場向けの NetApp 解決策 です。ONTAP Select は、 Software-Defined Data Center にエンタープライズクラスのストレージ管理機能を提供し、ネットアップデータファブリックアーキテクチャをモノのインターネット（ IoT ）や戦術的サーバなど、エッジの厳しいユースケースにまで拡張します。</block>
   <block id="5e75bdbfd3f02cf9f655d512b767dc1f" category="section-title">2 つのソフトウェアコンポーネント</block>
@@ -1978,7 +1906,6 @@
   <block id="c6d43ec5b0b49fe2c3f127531903582c" category="section-title">HA アーキテクチャが異なります</block>
   <block id="881afa18564b62e47e6c83658db1df5a" category="paragraph">クラスタで定義するノードの数に応じて、 ONTAP Select では HA 機能を利用できます。たとえば、 4 ノードクラスタは 2 つの HA ペアで構成されます。ONTAP Select で使用される HA アーキテクチャは、非共有のストレージモデルに基づいています。つまり、 HA ペアの一方のノードは、もう一方のノードが所有するストレージに直接アクセスできません。この設計は、 ONTAP Select の特定の動作特性に影響する可能性があります。</block>
   <block id="799a3fe6cff876fa3027852cc5707a2e" category="section-title">容量ベースのライセンス</block>
-  <block id="ac0038e6c040d26c9e742bc6b66ed6be" category="paragraph">ONTAP Select では、使用量に応じたライセンスモデルが導入されています。本番環境に ONTAP Select クラスタを導入する場合は、ストレージ容量を含むライセンスをノードごとまたは共有容量プールごとに購入する必要があります。Deploy ユーティリティを使用して、クラスタノードのストレージ容量を確立するライセンスファイルを適用する必要があります。</block>
   <block id="1881f93f26871d54aaa9ae5669b15643" category="section-title">ONTAP 機能のライセンス</block>
   <block id="3a621a06fd7d2a8267661a7bbea67799" category="paragraph">ONTAP Select クラスタ内の各ノードには、 ONTAP のいくつかの機能を使用するためのライセンスが自動的に付与されます。これらの機能ライセンスを手動でインストールしたり適用したりする必要はありません。</block>
   <block id="7718fb3bf518427efc070f44f598bda4" category="section-title">ONTAP の機能は ONTAP Select ではサポートされていません</block>
@@ -2097,10 +2024,7 @@
   <block id="1e738b21b4088a71993efbdd8baca955" category="list-text">ライセンスモデル</block>
   <block id="83f73443b8e5ae5f7dc3654ef7bffac3" category="list-text">ストレージ容量</block>
   <block id="2d97b8a3010b7d7eb0dc173f2d9af444" category="list-text">プラットフォームライセンスの提供</block>
-  <block id="dd2cce5aedf6d2f673323b5aa2546e29" category="list-text">容量階層のライセンスモデルは、 ONTAP Select 環境のストレージをライセンスする場合の最初のオプションです。この値は、 NetApp AFF および FAS で使用される ONTAP モデルに基づいています。ノードごとに個別のライセンスが必要です。ストレージ容量はノードにロックされ、永続的に更新されることはありません。</block>
-  <block id="54f1ce370f3764196052d27fb5bc23bd" category="list-text">容量プールのライセンスモデルは、 Deploy 2.10 を使用して ONTAP Select 9.5 で導入されました。ストレージ容量プールごとに個別のライセンスが必要です。容量プールライセンスは、ライセンスマネージャインスタンス（ Deploy インスタンス）にロックされており、購入条件に基づいて更新する必要があります。組織内の任意の数の容量プールにライセンスを付与して使用できます。ただし、容量プールは ONTAP Select ノードで共有されるため、一般に、容量階層のライセンスよりも少ない数のライセンスが必要になります。</block>
   <block id="da2d544df7edf3f50bd8cae1e601264a" category="list-text">License Manager の略</block>
-  <block id="e77002bd32b8903c6909b75ca9d0986b" category="list-text">License Manager は、容量プールのライセンスをサポートするソフトウェアコンポーネントです。現時点では、 Deploy 管理ユーティリティに含まれています。LM は、管理対象の共有プールから ONTAP Select ノードにストレージをリースします。_License Lock ID_ は、各 LM インスタンスを一意に識別する数値文字列であるため、各 Deploy インスタンスを識別します。容量プールライセンスのシリアル番号と LLID の両方を使用してライセンスファイルを生成する必要があります。</block>
   <block id="6ce3d683f11be5f1e22f253158d4c047" category="list-text">プラットフォームライセンスの提供</block>
   <block id="3cfbc322e3cddd57d170712cdb477d47" category="list-text">ライセンスの購入時に ONTAP Select 仮想マシンのサイズ機能を決定するライセンスサービスは 3 種類あります。</block>
   <block id="b23921d037d566b4c86b49c1a7df885c" category="paragraph">詳細については、 2 つのセクション _Plan_and _License_. を参照してください。</block>
@@ -2340,28 +2264,20 @@
   <block id="c23dd0988ced74624b54dfe472669701" category="paragraph"><block ref="c23dd0988ced74624b54dfe472669701" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5745af152ecc8b464559f811aa23d6fa" category="paragraph"><block ref="5745af152ecc8b464559f811aa23d6fa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="33627b673d322256698561b99c348e04" category="paragraph"><block ref="33627b673d322256698561b99c348e04" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1fa376cad2ffe76e02ea9d82c3eb6d9c" category="summary">容量プールのライセンスモデルは容量階層モデルと異なります。ストレージ容量は個々のノードに専用で割り当てるのではなく、プールに割り当てられて複数のノードで共有されます。容量プールモデルをサポートするために、追加のコンポーネントとプロセスが作成されています。</block>
   <block id="1a2858c08187c4c1503bdd84f6814aa7" category="doc">運用の詳細</block>
-  <block id="f80fce6ffa62c519c91dbe6256373e6e" category="list-text">容量プールのライセンスのシリアル番号に基づいて、各ノードの一意の 20 桁のシリアル番号を生成します</block>
-  <block id="2b2888d3189fe96ab747317d559c34f6" category="list-text">ONTAP Select ノードからの要求に基づいて、共有容量プールから容量のリースを作成します</block>
   <block id="18267b7796271fa458d6c8f635e9cebb" category="list-text">Deploy ユーザインターフェイスを使用してプールの使用状況をレポートします</block>
   <block id="52e472917eedf9e8a785e7c56e92d749" category="section-title">リース特性</block>
-  <block id="54e5aaa838921f915019ec44b1e43fa3" category="paragraph">容量プールライセンスを使用するノードで各データアグリゲート用に割り当てられるストレージには、関連付けられたリースが必要です。ノードはストレージリースを要求し、容量が使用可能な場合、 License Manager はリースで応答します。各リースには、次の明示的または暗黙的な属性があります。</block>
   <block id="5fe818f94cd9173f284c2cb187775708" category="list-text">ONTAP Select ノードごとに 1 つの License Manager インスタンスに関連づけられている License Manager</block>
-  <block id="26151cc6bc3f2e8bac3b52e9a8cad859" category="list-text">容量プール：各 ONTAP Select ノードは 1 つの容量プールに関連付けられます</block>
   <block id="d671bee3ba61f48b2736b6e6d38fbf16" category="list-text">ストレージ割り当てリースでは、特定の容量値が割り当てられます</block>
   <block id="8a41c43a78c273b7090dd972cb11c8fa" category="list-text">有効期限日時リースの期間は、ユーザの設定に応じて 1 時間から 7 日間です。</block>
-  <block id="8ddd4ae6565aad8e0220721a3b0b115f" category="paragraph">License Manager の各インスタンス、つまり、対応する Deploy ユーティリティのインスタンスは、一意の 128 ビット番号で識別されます。この番号は、プールを特定の License Manager インスタンス（実質的には Deploy インスタンス）にロックするために、 9 桁の容量プールライセンスシリアル番号と結合されます。ネットアップサポートサイトで NetApp License File （ NLF ）の生成の一環として両方の値を指定する必要があります。</block>
   <block id="c35b911ba82c4e39b4517e38d1a88551" category="paragraph">次の方法で Web ユーザインターフェイスを使用して、 Deploy インスタンスのライセンスロック ID を確認できます。</block>
   <block id="93147ad40002fa287e2077d09284c452" category="list-text">[ はじめに ] ページこのページは、 Deploy に初めてサインインすると表示されます。ページの右上にあるドロップダウンボックスをクリックして、 [ はじめに ] を選択して、ページを表示することもできます。LLID は [ ライセンスの追加 ] セクションに表示されます。</block>
   <block id="f51e8d01c52b31dc2ac35fcbc93eca28" category="list-text">管理ページ上部の * 管理 * タブをクリックし、 * システム * および * 設定 * をクリックします。</block>
   <block id="bc165811908b5de0b53e3fb455b59f7d" category="section-title">基本的なリース操作</block>
-  <block id="e02846e806da1a115348e9fee40e2ff8" category="paragraph">ONTAP Select ノードは、データアグリゲートが作成、拡張、または変更されるたびに、有効な容量リースを特定または要求する必要があります。以前の要求から取得したリースがまだ有効である場合は、リースを使用するか、必要に応じて新しいリースを要求できます。ONTAP Select ノードで容量プールのリースを検索するには、次の手順を実行します。</block>
   <block id="7d9520f0fa2db8b35655f9495b62e220" category="list-text">既存のリースがノードに存在する場合は、次の条件をすべて満たしていれば使用されます。</block>
   <block id="841155ef8ec7759dbe94406233eb27b5" category="list-text">リースの期限が切れていません</block>
   <block id="25784b4e2979db42de075e5e9dd10079" category="list-text">アグリゲートのストレージ要求がリース容量を超えていません</block>
   <block id="e854418dddc00af07fa6200a4ede9a50" category="list-text">既存のリースが見つからない場合、ノードは License Manager から新しいリースを要求します。</block>
-  <block id="4834df5eda0b47ccabbdf06e24c846dd" category="paragraph">ストレージ容量は必要に応じて容量プールから割り当てられ、新しい要求が発生するたびにプール内の使用可能なストレージ容量が少なくなることがあります。ストレージ容量は、次のようないくつかの状況でプールに返されます。</block>
   <block id="25e8c3dfe0fc86ab114fd57ec6ff2450" category="list-text">データアグリゲートのリースは期限切れになり、ノードでは更新されません</block>
   <block id="c368765dd32d8b7199f9250b99a8087b" category="list-text">データアグリゲートが削除されました</block>
   <block id="afcc04ba59c0e5b7c23adba80994022a" category="admonition">ONTAP Select 仮想マシンが削除された場合、アクティブなリースは有効期限が切れるまで有効です。この場合、容量はプールに返されます。</block>
@@ -2439,9 +2355,7 @@
   <block id="db88ef4d05292b05026992fe3ca193af" category="paragraph">ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポートします。IP バージョン 6 （ IPv6 ）はサポートされません。この制限は、次の点で ONTAP Select に影響します。</block>
   <block id="a808fd43c31372cb5ef7ac1ac9224c52" category="list-text">Deploy 仮想マシンの管理 LIF に IPv4 アドレスを割り当てる必要があります。</block>
   <block id="b3a288a6973caafe5e4ff191758f8b98" category="list-text">ONTAP LIF で IPv6 を使用するように設定された ONTAP Select ノードを Deploy で作成することはできません。</block>
-  <block id="8249cf77b8d8e1a887c3064234f33f64" category="summary">ONTAP Select の大容量階層ライセンスまたは大容量プールライセンスは、 3 つのプラットフォーム容量レベルのいずれかで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。</block>
   <block id="d8ab7c9c78c21b4a22cdfba499be0102" category="section-title">プラットフォームライセンス製品の機能</block>
-  <block id="bf2bf32468663aa60c17572fd96be228" category="paragraph">特定のライセンス製品は、ハイパーバイザーホストの機能を次の 2 つの領域で定義および制限します。</block>
   <block id="3c1861aaa9fcf5a348da316345ccfdb6" category="list-text">インスタンスタイプ（ CPU 、メモリ）</block>
   <block id="09bf8b227659727142783e5535a49102" category="list-text">その他の機能</block>
   <block id="640b087d140d4a80f7e7d94ebcced847" category="paragraph">ライセンスサービスは、 Standard XL から Premium XL まで、機能の昇順で提供されます。一般的に、選択したライセンスオプションは、そのレベルおよび下位レベルすべての機能を付与します。たとえば、 Premium レベルは Premium と Standard の両方の機能を提供します。</block>
@@ -2452,7 +2366,6 @@
   <block id="9f0890b87339c093ced753d756bc24fa" category="list-text">vNAS</block>
   <block id="9796a14555a2c8bf2cbefd825c3168c8" category="paragraph">Premium サービスには次の機能があります。</block>
   <block id="dcf1bea6142acd68dc8ee180fa525686" category="list-text">小規模または中規模のインスタンスタイプ</block>
-  <block id="d598b7c596887c12a7901f81a1798bd3" category="list-text">ハードディスクドライブ（ HDD ）またはソリッドステートドライブ（ SSD ）</block>
   <block id="242993ddd5be1ee9c2b34ac3d6e16525" category="list-text">ローカルハードウェア RAID コントローラまたはソフトウェア RAID</block>
   <block id="3df6de2a26f1404ca45737431d2a4afb" category="paragraph">プレミアム XL は、次の機能を提供します。</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
@@ -2469,7 +2382,6 @@
   <block id="794df3791a8c800841516007427a2aa3" category="sidebar">使用許諾</block>
   <block id="187e115b0c10602baa476f64acc86a80" category="sidebar">本番環境用ライセンス</block>
   <block id="e3e16bb73c0250a6a229fb457b4f957e" category="sidebar">制限事項</block>
-  <block id="b2fa85b6d75024ce8b7618eccad51ef7" category="sidebar">容量プールと大容量階層の比較</block>
   <block id="76b6a47a02685d51794b9fdb095512e5" category="sidebar">購入</block>
   <block id="d707dd0578f8287a0a8a84e71f612e87" category="sidebar">ライセンス関連のワークフロー</block>
   <block id="f33b49f74fc8933d903baf71e893888b" category="sidebar">ONTAP の機能</block>
@@ -2642,7 +2554,6 @@
   <block id="47228ec57373d626b6ba8033642aa844" category="paragraph-title">DAS SSD 構成のアップグレード動作に関する注意事項</block>
   <block id="06be3d2851694a8ac21502e41f3e4305" category="paragraph-title">クラスタごとに統一されたライセンスモデル</block>
   <block id="4b0e422dcf415e37a99fb9240372b2e7" category="paragraph-title">クラスタ内のすべてのノードが同じ License Manager インスタンスを使用します</block>
-  <block id="02adb22963ca335394cfa32d81eb77c1" category="paragraph-title">ノードごとに 1 つの容量プール</block>
   <block id="b738a2037fc94e2290be56df30341770" category="paragraph-title">HA ペアのノードに同じプール</block>
   <block id="affb254e2447d7a107f972ff759efbb0" category="paragraph-title">ストレージライセンスの期間</block>
   <block id="231c03420ee8b0ab0994fb02ab1e1c01" category="paragraph-title">データアグリゲートのリース期間</block>
@@ -2836,7 +2747,6 @@
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">改ざん防止Snapshotコピー</block>
   <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">SVM 移行</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">VMware HCX</block>
-  <block id="c87ac723a8ad54443fb95ff969ba10fa" category="admonition">容量階層ライセンスモデルと容量プールライセンスモデルを使用する場合は、クラスタノードのサイズ変更処理を実行できます。</block>
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS Deployクラスタの更新がエラーで失敗する</block>
   <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">プライマリアグリゲートの最新の（ RPO ゼロの）コピーを提供するためには、ミラーされたアグリゲートが必要ですが、プライマリアグリゲートの空きスペースが不足しないように注意してください。プライマリアグリゲートのスペースが不足すると、原因 ONTAPによってストレージギブバックのベースラインとして使用される共通のSnapshotコピーが削除される可能性があります。これは、クライアントの書き込みに対応するための設計どおりの動作です。ただし、フェイルバック時に共通の Snapshot コピーがないと、 ONTAP Select ノードがミラーアグリゲートから完全なベースラインを作成しなければなりません。シェアードナッシング環境では、この処理にかなりの時間がかかることがあります。</block>
   <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">MetroCluster SDSはプレミアム機能であり、プレミアムライセンスまたはプレミアムXLライセンスが必要です。Premium ライセンスは、中小規模の VM のほか、 HDD および SSD メディアの作成をサポートします。Premium XLライセンスではNVMeドライブの作成もサポートされます。</block>
@@ -2973,8 +2883,6 @@
   <block id="95caa54794f3f2e01024925ee49db3db" category="paragraph">次の表に、メディアタイプとソフトウェアライセンスに応じた、使用可能なStorage Efficiencyオプション、デフォルトで有効、またはデフォルトで無効だが推奨されているStorage Efficiencyオプションを示します。</block>
   <block id="e4182895110dd07e2aace12387fe72a4" category="admonition">ONTAP Selectは、iSCSI、ファイバチャネル、Fibre Channel over Ethernetなど、VMware Storage/SAN Compatibilityドキュメントに記載されているすべての外付けストレージアレイをサポートしています。</block>
   <block id="403c94a11e9f3b463bb8ab8ee8b5f368" category="section-title">メディエーターサービスのステータスを表示する</block>
-  <block id="cabaafab34446bfc39babebeb820ad0a" category="paragraph">ハードウェア、ソフトウェア、機能の要件を含む、関連するすべてのストレージコンポーネントは、に記載されている要件に従う必要があります
-<block ref="aaa18d9ccb38f09094f0c241a8585efd" category="inline-link-macro-rx"></block>。さらに、ONTAP Selectは、iSCSI、NAS（NFSv3）、ファイバチャネル、Fibre Channel over Ethernetなど、VMware Storage/SAN Compatibilityのドキュメントに記載されているすべての外付けストレージアレイをサポートしています。外付けアレイのサポートは、 ONTAP Select がサポートする ESXi のバージョンによって制限されます。</block>
   <block id="6a76e5eccaae065aae5cd7a8193204ff" category="paragraph">シングルノードクラスタまたはマルチノードクラスタを導入できます。を参照してください <block ref="4452a56e6eb6220413b5f5ed2b39c2eb" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="d2f67fbcdde5ccb2059e155c4507f07d" category="section-title">ONTAP Selectの管理</block>
   <block id="1a7f92b5b7c947bfb70b208837107708" category="paragraph">ONTAP Select のサポートの一環として、さまざまな管理手順が用意されています。また、 Deploy 管理ユーティリティに固有の手順があります。これらの手順のうち、最も重要なものを以下に示します。通常は、 Deploy の Web ユーザインターフェイスを使用します。</block>
@@ -2983,7 +2891,6 @@
   <block id="0fff1320bbb426b546cc717659845cf2" category="section-title">ONTAPの追加設定の実行</block>
   <block id="efc65817e295ad904ce33fec808387bc" category="paragraph">ONTAP Select クラスタを導入したら、ハードウェアベースの ONTAP システムの場合と同様にクラスタを設定および管理できます。たとえば、ONTAPシステムマネージャまたはONTAP CLIを使用してONTAP Selectクラスタを設定できます。</block>
   <block id="5ecb6b24c169667ff1a176768115659e" category="list-text">Active IQ Unified Manager</block>
-  <block id="2a5240540ad0583c2eeed83da7cbc0ed" category="paragraph">サポートされているクライアントソフトウェアのバージョンを確認するには、 <block ref="aaa18d9ccb38f09094f0c241a8585efd" category="inline-link-macro-rx"></block>。クライアントソフトウェアが ONTAP 9 をサポートしている場合は、同じバージョンが ONTAP Select でもサポートされます。</block>
   <block id="44d05de3077b3838b8ce9d9ad5d45351" category="list-text">データStorage VM（SVM）の作成</block>
   <block id="6b58c1940f3237f8b68aff9dee0612c0" category="section-title">API要求に関連付けられているジョブオブジェクトを照会する</block>
   <block id="cd5b6640283cfb064f238f20f8cf467f" category="doc">プラットフォームのライセンス製品を理解する</block>
@@ -2992,13 +2899,10 @@
   <block id="06a53967f62b6ebf8a1fba55cabdfecf" category="list-text"><block ref="06a53967f62b6ebf8a1fba55cabdfecf" category="inline-link-macro-rx"></block></block>
   <block id="89ac05efab2228e74e12191efccdf85c" category="inline-link-macro">新しい仮想マシンへのDeployの設定データのリストア</block>
   <block id="9731a2aaf926f5fd46b5a7343839efb4" category="list-text"><block ref="9731a2aaf926f5fd46b5a7343839efb4" category="inline-link-macro-rx"></block></block>
-  <block id="86e72ee91d7354c4e08385ba07861bd9" category="inline-link-macro">容量プールライセンスの再インストール</block>
-  <block id="88e1ef271e0da2ef1b1734cbd286219c" category="list-text"><block ref="88e1ef271e0da2ef1b1734cbd286219c" category="inline-link-macro-rx"></block></block>
   <block id="47546bf1e2847e2d81e73bde93926649" category="section-title">ONTAP Selectクラスタのオフラインとオンラインの切り替え</block>
   <block id="60458f1485d61e13b322742ae9f0113a" category="section-title">Deployクラスタ設定をリフレッシュ</block>
   <block id="c5eb28f60f3d5beee457404724018eb2" category="section-title">ONTAP Selectクラスタを削除する</block>
   <block id="24c77c4c999a67b38b8910008fcbf84a" category="paragraph">License Managerは、Deploy管理ユーティリティの各インスタンス内で個別のプロセスとして実行されます。LM で提供される機能には、次のものがあります。</block>
-  <block id="7f00ef1ed77e1ee61534d0095471e191" category="section-title">ストレージ容量を容量プールに戻します。</block>
   <block id="7df4c22f834073378cbc7bda2a69e5d8" category="section-title">Deployの設定データをバックアップする</block>
   <block id="a1f19e06427877524f78f5c30de18fb0" category="section-title">Deploy仮想マシンの新しいインスタンスをインストールする</block>
   <block id="fb9a355d46a44ee7087bc1fb6669f2f5" category="paragraph">Deploy 2.10 を使用した ONTAP Select 9.5 以降では、 VMware ESXi での新しいクラスタの導入に付属するデフォルトのネットワークドライバとして VMXNET3 が用意されています。古いONTAP Selectノードをバージョン9.5以降にアップグレードしても、ドライバは自動的にアップグレードされません。</block>
@@ -3006,7 +2910,6 @@
   <block id="f25b2c6dc6839bba6b8b58cc63c55b3c" category="section-title">出力セット内のオブジェクトをソートする</block>
   <block id="bbd1bf9de2e4077d7d60ab5cd0b761b0" category="section-title">API 応答を解釈します</block>
   <block id="0eb6f6088fedfb69df393e6f09f93699" category="list-text">ONTAP Select 9.4以前からアップグレードされたノードではソフトウェアRAIDを使用できません。その場合は、ソフトウェアRAIDを導入するための新しいノードを作成する必要があります。</block>
-  <block id="e7a0da12e39522bffee10137c534d871" category="paragraph">次に、最も重要なストレージの制限事項を示します。また、 <block ref="aaa18d9ccb38f09094f0c241a8585efd" category="inline-link-macro-rx"></block> 詳細については、を参照してください。</block>
   <block id="4e452735041997669420c443fdc5dd4b" category="admonition">ONTAP Select では、ストレージの割り当てと使用に関していくつかの制限が適用されます。ONTAP Select クラスタを導入したりライセンスを購入したりする前に、これらの制限事項を確認しておく必要があります。を参照してください <block ref="3b292653c3539e42e716109703c672f6" category="inline-link-macro-rx"></block> 詳細については、を参照してください。</block>
   <block id="21415e3d95f2107f49f15bae446d575b" category="section-title">物理ストレージ容量の計算</block>
   <block id="57f64e74028c39685007270c2544c90f" category="list-text">1つのONTAP Selectアグリゲート内のドライブはすべて同じタイプにする必要があります。たとえば、 HDD ドライブと SSD ドライブを同じアグリゲート内に混在させることはできません。</block>
@@ -3033,11 +2936,6 @@
   <block id="6f79f88c3d3696fcca3ac6e4f78fd71f" category="admonition">ONTAP Select VM に容量を追加すると、サイズの異なる VMDK が作成されることがあります。詳細については、を参照してください <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>。FAS システムとは異なり、同じアグリゲートにサイズの異なる VMDK を配置できます。ONTAP Select では、これらの VMDK にまたがる RAID 0 のストライプを使用するため、各 VMDK のすべてのスペースをそのサイズに関係なく完全に使用できます。</block>
   <block id="5498e86ddbc371087e391d7f3cae5701" category="list-text">SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）</block>
   <block id="18249feda4b97af2b71cdf46188e1e4c" category="section-title">Deploy管理者パスワードの変更</block>
-  <block id="e4faeb8305c0591d2d61731e2acd18d9" category="section-title">大容量階層のライセンスを管理する</block>
-  <block id="8332a78d15667768802110db7d461f39" category="section-title">容量プールライセンスを管理します。</block>
-  <block id="a04752e304246fb808d9263e3b56379b" category="inline-link-macro">容量プールライセンスを取得する</block>
-  <block id="659d7307965808b9de5245b56fa7b572" category="paragraph">を参照してください <block ref="4548fbfe7e75938d91eeeb4f1520ad00" category="inline-link-macro-rx"></block> を参照してください。</block>
-  <block id="9a74a1f7ca60edeb651edcb6f305db61" category="section-title">期限切れの容量プールライセンスを管理します。</block>
   <block id="39c422f1ba6768584ce2b5ea65c4f569" category="doc">CLIを使用したONTAP Selectクラスタの導入</block>
   <block id="6f78f7cef2637ad960245873ccb009cc" category="section-title">ONTAP Selectノードにストレージを接続する準備</block>
   <block id="ad34b3ead133ac2946581ad99de776f1" category="paragraph">Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください <block ref="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="inline-link-macro-rx"></block> を参照してください。</block>
@@ -3113,7 +3011,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="d9817ded489aaa35d8ba40ab33bdfd4b" category="cell">KVM の略</block>
   <block id="27867a85560994e09ee616b37ec585de" category="cell">ハイパーバイザーサーバノードに導入</block>
   <block id="2d81002b634550a1e266341254a2d597" category="cell">アクセスハイパーバイザーサーバ</block>
-  <block id="0c0158fd50f7612ddfb9136e3de8e2be" category="cell">Access Deploy（容量プールライセンス）</block>
   <block id="0777708201aec678f0082eec3aa98c10" category="list-text">カーネルベースの仮想マシン</block>
   <block id="067c35f1ba98a705741486402c1dac18" category="list-text">Kernel-Based Virtual Machine（KVM）はLinuxカーネルの仮想化機能で、ハイパーバイザープラットフォームとして機能できます。さまざまなゲストオペレーティングシステムがサポートされています。</block>
   <block id="f72371502203ff57c484242dbc67867e" category="list-text">ESXi VMでのノードのリホスト</block>
@@ -3410,7 +3307,6 @@ storage aggregate show-spare-disks</block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="list-text">NDMP</block>
   <block id="1bacbb36e2afde0c7a93da85daa18ef1" category="list-text">小規模、中規模、大規模のインスタンスタイプ</block>
   <block id="4241d8a2662be78b68fdfaf8b9daec1a" category="list-text">HDD、SSD、NVMeドライブ</block>
-  <block id="884fb5a94a98010f0044edb08adfd51e" category="admonition">KVMでは、SW-RAID構成でのLargeインスタンスタイプまたはNVMeドライブの使用はサポートされていません。</block>
   <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">アドオンライセンスを管理します。</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">ライセンスの管理の概要（クラスタ管理者のみ）</block>
   <block id="a9a72d6af23763d014760a444a6e414b" category="inline-link-macro">ライセンスキーを追加して新しい機能を有効にします</block>
@@ -3418,19 +3314,12 @@ storage aggregate show-spare-disks</block>
   <block id="b5150f2681f3eb5a5b6aab4cbdadad34" category="paragraph">仮想NAS（vNAS）環境では、仮想SAN（VSAN）上のONTAP Selectクラスタ、一部のHCI製品、外付けアレイタイプのデータストアがサポートされます。これらの構成の基盤となるインフラは、データストアの耐障害性を提供します。</block>
   <block id="106b2acee8931f9a5618948233ee3f9a" category="paragraph">クラスタの作成処理が開始されても完了しない場合は、定義したONTAP管理パスワードが適用されないことがあります。この場合、次のCLIコマンドを使用して、ONTAP Selectクラスタの一時的な管理パスワードを確認できます。</block>
   <block id="728dae8c09c02d31a488c58d0abbc713" category="paragraph-title">DeployはどのようにしてONTAP Selectライセンスが更新されたことを検出しますか。</block>
-  <block id="1c404f221fc19754e03aac9abdf229e0" category="paragraph">方法はすべてのライセンスで同じですが、詳細は容量階層と容量プールのどちらのライセンスかによって異なります。</block>
   <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link-macro">NetApp Support Site</block>
   <block id="7eb90e44cd52166d38ee412a0232d948" category="list-text">ONTAP Select Deployは、NetAppから更新されたライセンスファイルを購入することで、ライセンスとサポート契約が更新されたかどうかを検出します。ライセンスファイル（.nlf）には容量、開始日、終了日が含まれており、 <block ref="49b4f755ae136a93a19c82bfba9113cf" category="inline-link-macro-rx"></block>をクリックし、Deployサーバで更新します。</block>
-  <block id="df893ad066dabfa13efd91221b3bccff" category="admonition">NLFをDeployサーバにロードするには、* Add *および* Update *機能を使用します。*追加*サーバに新しいライセンスを追加し、*更新*は、容量、ノードライセンス（Standard、Premium、Premium XL）、サポートの開始日と終了日（大容量階層ライセンス）、サブスクリプションの開始日と終了日（容量プールライセンス）などの情報で既存のファイルを更新します。</block>
   <block id="d39f37cf3f2791c375e1df22336bc0c1" category="admonition">ライセンスファイルは変更しないでください。これにより、セキュリティキーが無効になり、ライセンスが無効になります。</block>
-  <block id="8f5801f55c8818fb8546dec02aa0cb36" category="list-text">大容量階層ライセンス*は、ONTAP Selectノードのシリアル番号に関連付けられたノード単位の永続的ライセンスです。別のサポート契約で販売されます。ライセンスは永続的ですが、ONTAP SelectのアップグレードにアクセスしてNetAppテクニカルサポートの支援を受けるには、サポート契約を更新する必要があります。容量やノードサイズなどのライセンスパラメータを変更するには、現在のサポート契約も必要です。</block>
-  <block id="477c7238569246f69cc9ae8f8ecc6b57" category="paragraph">大容量階層ライセンスの更新、パラメータの変更、サポート契約の更新を購入するには、発注にノードのシリアル番号が必要です。大容量階層ノードのシリアル番号は9桁で、先頭は「32」です。</block>
   <block id="ea9589592b98533b70a296a006630c8b" category="paragraph">購入が完了し、ライセンスファイルが生成されると、* Update *機能を使用してDeployサーバにアップロードされます。</block>
-  <block id="6e6f36110dec05c8c4b7d9473e704fee" category="list-text">容量プールライセンス*は、特定の容量プールとノードサイズ（Standard、Premium、Premium XL）を使用して1つ以上のクラスタを導入する権利を付与するサブスクリプションです。サブスクリプションには、指定された期間のライセンスとサポートを使用する権利が含まれます。ライセンスを使用する権利とサポート契約には、開始日と終了日が指定されています。</block>
   <block id="920b036cff328a6924c0fbdd7ab08f4d" category="paragraph-title">Deployは、ノードがライセンスまたはサポート契約を更新したかどうかをどのように検出しますか。</block>
   <block id="c3975d39937733b863b8e078a435a60a" category="paragraph">更新されたライセンスファイルの購入、生成、アップロードは、Deployが更新されたライセンスとサポート契約を検出する方法です。</block>
-  <block id="79416550309ddcac023464218d55a23d" category="paragraph">大容量階層のサポート契約の終了日が過ぎてもノードは稼働し続けることはできますが、ONTAPの更新をダウンロードしてインストールすることはできません。また、最初にサポート契約を最新の状態にしないかぎり、NetAppのテクニカルサポートにお問い合わせください。</block>
-  <block id="9b9568babf180c232b393ba5f95ff4c3" category="paragraph">容量プールのサブスクリプションが期限切れになると、最初に警告が表示されますが、30日後にシステムをシャットダウンすると、更新されたサブスクリプションがDeployサーバにインストールされるまでリブートされません。</block>
   <block id="666ca9627e87a2f5ba354cdf9f1b35dd" category="paragraph">ONTAP Selectとライセンスの更新の詳細については、『 <block ref="7219e755fcbad1744f8ee5b6bd1c51b6" category="inline-link-macro-rx"></block>。</block>
   <block id="e9bea8d0b42d385115a0325044f2d402" category="paragraph-title">ONTAP Selectクラスタのネットワーク設定はインストール後に変更できますか。</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">ONTAP Select Deployのネットワーク設定はインストール後に変更できますか。</block>
@@ -3502,15 +3391,11 @@ storage aggregate show-spare-disks</block>
   <block id="ffa1963f0d0a25dfc04554dbe791a3b1" category="inline-link-macro">NetApp ONTAP のマスターライセンスキー</block>
   <block id="16f9dd2af311dfdedd3814899d379c54" category="list-text"><block ref="16f9dd2af311dfdedd3814899d379c54" category="inline-link-macro-rx"></block></block>
   <block id="f588ddb32cd79889160082356416d2f3" category="list-text">KVMハイパーバイザーのサポートの更新</block>
-  <block id="bb64c7ceeafd189f9c0a2a7f1c32a914" category="list-text">ONTAP Select 9.15.1以降では、Kernel-Based Virtual Machine（KVM）ハイパーバイザーがRed Hat Enterprise Linux（RHEL）9.4およびRocky Linux 9.4でサポートされます。</block>
-  <block id="8719161a4dfa5d820c98457ce5ca446a" category="list-text">Red Hat Enterprise Linux 8.6、8.7、8.8、9.0、9.1上のKVM 9.2、9.4</block>
-  <block id="50ebec14d8a39fd9e4b4813019110499" category="list-text">Rocky Linux 8.6、8.7、8.8、8.9、9.0上のKVM 9.1、9.2、9.3、9.4</block>
   <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">VMware.13.1以降では、ONTAP 9 8.0.1 GA（ビルド20513097）がハードウェアバージョン4以降でサポートされます。</block>
   <block id="066308395ea593f82277b09bef1304dc" category="list-text">元のDeploy仮想マシンイメージを保存します。</block>
   <block id="f3d42eb73da0b3db6a0beb04d2f78c68" category="admonition">Deployの設定データを元の仮想マシンから新しい仮想マシンにリストアする場合は、この手順の後半の工程で元のDeploy仮想マシンイメージが必要です。</block>
   <block id="be0d4e27d8840d1c72235cf50443fb8d" category="inline-link-macro">ハイパーバイザーのソフトウェア互換性情報</block>
   <block id="49ea5cb7c3815d4c59fc6dcf8eca3da7" category="paragraph">ISOイメージを使用してRed Hat Enterprise Linux（RHEL）オペレーティングシステムをインストールする必要があります。サポートされているRHELのバージョンの一覧については、を参照してください<block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>。インストール時に、次のようにシステムを設定する必要があります。</block>
-  <block id="97864053a66a3401d6a681c00bd2e4e3" category="paragraph">必要なパッケージおよびその他の設定要件の詳細については、を参照してください<block ref="8929420574d68b861547fa3bcafe0ff2" category="inline-link-macro-rx"></block>。</block>
   <block id="d62b4235cf2a29152b9bcb3eb1df59d8" category="paragraph">クラスタ拡張機能を使用して、クラスタサイズを6ノードクラスタから8ノードクラスタに拡張できます。1ノード、2ノード、または4ノードのクラスタから6ノードまたは8ノードのクラスタへのクラスタの拡張は、現在サポートされていません。<block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>です。</block>
   <block id="185acadc91fc3b4d6d7a0f9ab8464c51" category="paragraph">クラスタ収縮機能を使用して、クラスタサイズを8ノードクラスタから6ノードクラスタに縮小できます。6ノードまたは8ノードのクラスタから1ノード、2ノード、または4ノードのクラスタへのクラスタ収縮は現在サポートされていません。<block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>です。</block>
   <block id="065e8e686a5cc9c043bea6a2b47a6dbc" category="section-title">ハードウェアとストレージに関する考慮事項</block>
@@ -3531,17 +3416,11 @@ storage aggregate show-spare-disks</block>
   <block id="c849264ebb01817c7925cd0a068007af" category="doc">ONTAP Select HA RSMとミラーされたアグリゲート</block>
   <block id="ec8ac2a2aba486a14f418e0d73aa199d" category="doc">ONTAP Select HAによるデータ保護の強化</block>
   <block id="2f1f8f7609cf43a281fbca2068eb08b8" category="paragraph">ハイアベイラビリティ（HA）ディスクハートビート、HAメールボックス、HAハートビート、HAフェイルオーバー、およびギブバックの機能によって、データ保護が強化されます。</block>
-  <block id="f2bf1c1269a6e0c1a495f75b5c9f308e" category="doc">ONTAP Select容量プールライセンスのメリットの概要</block>
-  <block id="747313594c8e769ed4bf654668df2753" category="doc">ONTAP Select容量プールと容量階層のライセンスの比較</block>
-  <block id="61750e2717477039b22a307414c9311b" category="doc">ONTAP Select容量プールライセンスモデルの処理の詳細</block>
-  <block id="0a00b84f2a503924f11abc21254dffab" category="doc">ONTAP Select容量プールのライセンスに関する導入の制限事項</block>
-  <block id="6cc6c24434af53794977cd3f0355096d" category="doc">ONTAP Select容量プールライセンスモデルのノードシリアル番号</block>
   <block id="55734e2f86357f8b0f60cd204e105d21" category="paragraph">ONTAP Selectは、評価用ライセンスまたは購入ライセンスを使用して導入できます。選択するライセンスは、ONTAP Selectクラスタ内の各ノード、つまりクラスタ全体に適用する必要があります。購入を決定する前に ONTAP Select を評価したい場合は、評価用ライセンスを使用できます。評価用ライセンスは ONTAP Select Deploy 管理ユーティリティに含まれており、評価用導入の一環として各 ONTAP Select ノードに自動的に適用されます。</block>
   <block id="38a6a854a485660aa1ba2f3d554e2bfe" category="paragraph">評価用クラスタを導入してサポートする場合は、いくつかの考慮事項があります。</block>
   <block id="9ccdbbc209e0eddfaf9f0b5a4154a78d" category="list-text">クラスタは評価目的でのみ使用できます。本番環境では、評価用ライセンスのあるクラスタを使用しないでください。</block>
   <block id="b559f8a2bbcf90e70f60847fb3cce85f" category="list-text">各ホストを設定するときは、ONTAP Select Deploy管理ユーティリティを次のように使用する必要があります。</block>
   <block id="f5010a0b3197d474a3b4618b60c0fd03" category="list-text">評価用ライセンスを使用するように構成</block>
-  <block id="21f27b191f1f034aa81e5f786bf9829c" category="doc">ONTAP Selectのプラットフォームライセンス製品を理解する</block>
   <block id="1b1ede8baae6a15d3ba60611103509a4" category="doc">本番環境用のONTAP Select購入ライセンス</block>
   <block id="711f738f1281862e087807884aa5cd1c" category="doc">ONTAP Selectライセンス購入時のワークフロー</block>
   <block id="8c2b226cf8dfc01c2d5885e6b1dc9fd2" category="paragraph"><block ref="8c2b226cf8dfc01c2d5885e6b1dc9fd2" category="inline-link-macro-rx"></block></block>
@@ -3566,7 +3445,6 @@ storage aggregate show-spare-disks</block>
   <block id="e1822392dfeb820c1cca38e5e718a61f" category="paragraph">ONTAP Selectで使用される仮想環境のため、NICオフロード機能はサポートされません。</block>
   <block id="6c9348bc5d04685460e6acda750ab989" category="list-text">ONTAPポートのプロパティ</block>
   <block id="b360fb78c737d920cd251b2f7358f606" category="paragraph">速度、二重、フロー制御などのONTAPポートのプロパティの変更はサポートされていません。</block>
-  <block id="89661a8f5ae5f3b88ab1a6ba4ba0dbf0" category="paragraph"><block ref="89661a8f5ae5f3b88ab1a6ba4ba0dbf0" category="inline-link-macro-rx"></block></block>
   <block id="fcc22b4e3de45bbac50b32226efb8e8c" category="doc">ONTAP Selectのパフォーマンスの概要</block>
   <block id="40bfcfb823eef6d953345bec6901d94b" category="doc">ONTAP Select 9.6 のパフォーマンス： Premium HA 直接接続 SSD ストレージ</block>
   <block id="5b7b913b9183b40db3cdac93dcffe3d9" category="doc">ONTAP Selectストレージ容量の拡張</block>
@@ -3578,7 +3456,6 @@ storage aggregate show-spare-disks</block>
   <block id="07c6a664d186f44a90042e2245e46aad" category="doc">ローカル接続ストレージ用のONTAP SelectソフトウェアRAID構成サービス</block>
   <block id="3e1672f186d30598b8343a9dbdd833ae" category="doc">ONTAP Select vSANと外付けアレイの構成</block>
   <block id="e263536030472b1b884032009157f00c" category="doc">ONTAP Selectの用語と主要概念</block>
-  <block id="fac92aa1bceedd34bdbd54ea3a5c1d41" category="doc">ONTAP Select MetroCluster Software-Defined Storage</block>
   <block id="b993d6b1ae8a2148a7be773127a7d668" category="doc">ONTAP Selectのビジネスニーズと使用シナリオ</block>
   <block id="18ea6d668ccbbc1b64935d2ae14d9c63" category="doc">ONTAP Selectによるプライベートクラウドとデータセンターのサポート</block>
   <block id="567999f9c71634f001a831b733088bbc" category="doc">リモートオフィスやブランチオフィスでONTAP Selectを使用</block>
@@ -3645,8 +3522,6 @@ storage aggregate show-spare-disks</block>
   <block id="bd633f5da3bfc77af90d4c908e9bf8ac" category="doc">ONTAP Selectクラスタを拡張または縮小する</block>
   <block id="e6bf3ba5fe1006a55faeef44787ee469" category="list-text">サポートされるのは、ESXハイパーバイザーホスト上に作成されたクラスタに限られます。ONTAP Select 9.15.1以降と互換性があるESXのバージョンは次のとおりです。</block>
   <block id="d4597f95391a261a44459b6a1ddb6a8e" category="list-text">4つ目のHAペアについて、次のようなハイアベイラビリティ（HA）ペア構成の詳細を選択します。</block>
-  <block id="e3d070f7498c7e147dc4f645a0d0165d" category="doc">ONTAP Select容量プールライセンスを取得する</block>
-  <block id="28f937bb8b94ebdea4af2d6d321d545b" category="doc">ONTAP Selectの大容量階層ライセンスを取得する</block>
   <block id="269ec7d71e2b69e0e1efbee545e82252" category="sidebar">ONTAP Select 9.16.1のドキュメント</block>
   <block id="10094bc8718a18a18fcc32e3cd50df4c" category="sidebar">Secure ONTAP Select</block>
   <block id="70ea48dd9234010492aec1d6e7a0d297" category="sidebar">ネットワーク接続の確認</block>
@@ -3694,7 +3569,6 @@ storage aggregate show-spare-disks</block>
   <block id="dfe2716b8d1ea246f6e1aa9804752d1e" category="list-text">導入の詳細を確認し、*[導入後に電源をオンにする]*を選択します。</block>
   <block id="c56b5c777d1fbf5b3503afddde839f20" category="list-text">[完了]*を選択して導入プロセスを開始します。</block>
   <block id="66723f6678d3dd5c1bae3c6838416d52" category="list-text">ONTAP Selectクラスタの導入が完了したら、System ManagerまたはCLIインターフェイスを使用してクラスタを設定できます。ディスクは、標準のONTAP * disk assign *処理を使用して割り当てる必要があります。</block>
-  <block id="7c51cb770ac84a1429ed1cfe6c686aed" category="paragraph"><block ref="7c51cb770ac84a1429ed1cfe6c686aed" category="inline-link-macro-rx"></block></block>
   <block id="8ca84893979a849d9d51eac372cc15a9" category="inline-link-macro">ONTAP Selectクラスタの90日間の評価用インスタンスを導入</block>
   <block id="cb5e9657db1221bb8eb7f5be5287d604" category="paragraph"><block ref="cb5e9657db1221bb8eb7f5be5287d604" category="inline-link-macro-rx"></block></block>
   <block id="ac951fbceb082ef32560a291949a4015" category="sidebar">クラスタの90日間の評価用インスタンスを導入</block>
@@ -3747,7 +3621,6 @@ storage aggregate show-spare-disks</block>
   <block id="76be33f6608866426ecccffc5acd6be8" category="list-text">シリアル番号を指定しない</block>
   <block id="2fcd5d5ae3d245e3d2870429d2c9381d" category="list-text">ストレージ容量を含む本番環境ライセンスは不要</block>
   <block id="695af2710450ef107be1555e59f22b01" category="paragraph">（NetAppから直接取得するわけではありません）</block>
-  <block id="0fa0a315c1605e80221e4ae40cfaac60" category="list-text">大容量階層ライセンスは使用できますが、容量プールライセンスはサポートされません。</block>
   <block id="d480e694d74a85a8bf679cab5063c9f1" category="paragraph">次の図は、4ノードONTAP Selectクラスタの導入とサポートに使用されているNetApp ONTAP Select Deploy管理ユーティリティを示しています。Deploy ユーティリティと ONTAP Select ノードは、専用のハイパーバイザーホスト上で個別の仮想マシンとして実行されます。</block>
   <block id="54d1b8efd5a74820db5617b48f538671" category="summary">ONTAP Selectクラスタのパフォーマンスは、ハードウェア構成によって異なります。</block>
   <block id="123521c98d5a32b10ae4a2d5e59ed719" category="doc">ONTAP Selectの共通サポートPythonモジュール</block>
@@ -3780,4 +3653,195 @@ storage aggregate show-spare-disks</block>
   <block id="e951843bb1ba0912165bd527e8312bec" category="list-text">クラスタの詳細ページの上部で、*[ここをクリック]*を選択してクラスタライセンスを変更します。</block>
   <block id="17d9cc4f645deac6e5e367f0ef6fd4ee" category="paragraph">[クラスタの詳細]*セクションで、評価用ライセンスの横にある*[変更]*を選択することもできます。</block>
   <block id="380ce7f967546f46005a7cb8b03e358c" category="list-text">ONTAPクレデンシャルを入力し、*[変更]*を選択します。</block>
+  <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link-macro">Interoperability Matrix Tool</block>
+  <block id="e417b438eac96386f4107e979870c70f" category="paragraph">クライアントソフトウェアのサポートされているバージョンを確認するには、を参照して<block ref="303ffee46fa5d607063d9b04cfb6d8cb" category="inline-link-macro-rx"></block>ください。クライアントソフトウェアが ONTAP 9 をサポートしている場合は、同じバージョンが ONTAP Select でもサポートされます。</block>
+  <block id="8dd24bef30862ad2a7813bfc4c46d79c" category="summary">容量階層のライセンスモデルではなく、容量プールのライセンスモデルを使用すると、いくつかのメリットがあります。</block>
+  <block id="860aff0d822e08d1cb7d1f79ee16667e" category="doc">ONTAP Select Capacity Poolsライセンスのメリットの概要</block>
+  <block id="3840ec18790ba33b63a3a6e22afe1a99" category="paragraph">容量階層のライセンスを使用する場合は、各ノードに固定ストレージ容量を割り当てます。未使用のスペースを他のノードと共有することはできず、無駄になります。容量プールライセンスの場合、各ノードはデータアグリゲートのサイズに基づいて必要な容量だけを消費します。</block>
+  <block id="49466a9207c7bafb807837aa58b28a65" category="paragraph">大容量階層ライセンスを使用する場合は、ノードごとにライセンスを取得してインストールする必要があります。容量プールを使用する場合は、共有プールごとに1つのライセンスがあります。これにより、管理オーバーヘッドが大幅に削減され、コストが削減されます。</block>
+  <block id="393a145ee32920c6a9dce6c89774161b" category="paragraph">DeployのWebユーザインターフェイスは、容量プールの使用状況に関する情報を強化します。容量プールで使用されているストレージ容量と使用可能なストレージ容量、プールのストレージを使用しているノード、およびクラスタが容量を割り当てているプールを簡単に確認できます。</block>
+  <block id="020fa1d798f607b3ef39647558b0e171" category="summary">容量プールと容量階層のライセンスモデルには、いくつかの違いがあります。</block>
+  <block id="befac9828a8ee884df5e223362669974" category="doc">ONTAP Select容量プールと容量階層のライセンスの比較</block>
+  <block id="52d1f8cb6e7593cd562d4522014e106d" category="cell">大容量階層</block>
+  <block id="a74c45c38136d5cb4b7be385e3a8c24e" category="cell">容量プール</block>
+  <block id="b3e10a17f0986c4e189b80192f1c0f19" category="cell">NetAppによって生成され、容量プールに割り当てられた9桁の数字</block>
+  <block id="a3719249a1f3a7b49dd84d53689289f9" category="summary">容量プールのライセンスモデルは、容量階層モデルとは異なります。ストレージ容量は個々のノードに専用で割り当てるのではなく、プールに割り当てられて複数のノードで共有されます。容量プールモデルをサポートするために、追加のコンポーネントとプロセスが作成されました。</block>
+  <block id="020714b69513bf3a78c5bf5e611bbf05" category="doc">ONTAP Select Capacity Poolsライセンスモデルの処理の詳細</block>
+  <block id="58e2309fa8979e52ed4f424f7ee35b93" category="list-text">容量プールライセンスのシリアル番号に基づいて、各ノードに一意の20桁のシリアル番号を生成する</block>
+  <block id="3dc7acfb50ee98a5c175fb8cdf20a88d" category="list-text">ONTAP Selectノードからの要求に基づいて、共有容量プールから容量のリースを作成</block>
+  <block id="11b2d2fecd3396efb87558be584a6d41" category="paragraph">容量プールライセンスを使用するノードのすべてのデータアグリゲートに割り当てられるストレージには、リースを関連付ける必要があります。ノードはストレージリースを要求し、容量が使用可能な場合、 License Manager はリースで応答します。各リースには、次の明示的または暗黙的な属性があります。</block>
+  <block id="9bb09439dbf58c43c8434974e261285c" category="list-text">容量プールすべてのONTAP Selectノードが1つの容量プールに関連付けられている</block>
+  <block id="c57cd85a32e181fb83420d2adb23427d" category="paragraph">License Manager の各インスタンス、つまり、対応する Deploy ユーティリティのインスタンスは、一意の 128 ビット番号で識別されます。この番号と9桁の容量プールライセンスのシリアル番号を組み合わせて、特定のLicense Managerインスタンス（実質的にはDeployインスタンス）にプールをロックします。NetApp Support Siteで NetApp License File （ NLF ）の生成の一環として両方の値を指定する必要があります。</block>
+  <block id="3ccfdfb46d04e07ae1d6fe35a8cbb514" category="paragraph">ONTAP Select ノードは、データアグリゲートが作成、拡張、または変更されるたびに、有効な容量リースを特定または要求する必要があります。以前の要求から取得したリースがまだ有効である場合は、リースを使用するか、必要に応じて新しいリースを要求できます。ONTAP Selectノードで容量プールのリースを確認するには、次の手順を実行します。</block>
+  <block id="4760e200c006091f431ae756ea50eb83" category="section-title">ストレージ容量を容量プールに戻します。</block>
+  <block id="b6249920b182baff7dc50dc8c3c21811" category="paragraph">ストレージ容量は必要に応じて容量プールから割り当てられ、新しい要求を行うたびにプール内の使用可能なストレージを減らすことができます。ストレージ容量は、次のようないくつかの状況でプールに返されます。</block>
+  <block id="d65c8696b5fd8387f8b3f5f6c5c24418" category="summary">容量プールライセンスモデルの使用時に適用される制限事項を次に示します。</block>
+  <block id="810bc88512dd1c6822f4992dd8667995" category="doc">ONTAP Select Capacity Poolsのライセンスに関する導入の制限事項</block>
+  <block id="87734871bc5735c84e6ee48cdfdad1b3" category="paragraph">単一のONTAP Selectクラスタ内のすべてのノードで、同じライセンスモデル（容量階層または容量プール）を使用する必要があります。1 つのクラスタ内で複数のノードのライセンスタイプを混在させることはできません。</block>
+  <block id="96344640227999714b6bc9eb179a6b3d" category="paragraph">ONTAP Selectクラスタ内の容量プールライセンスを持つすべてのノードで、同じライセンスマネージャインスタンスを使用する必要があります。各 Deploy インスタンスには 1 つの License Manager インスタンスが存在するため、この制限は、クラスタ内のすべてのノードを同じ Deploy インスタンスで管理する必要があるという既存の要件を再定義したものです。</block>
+  <block id="7b0e0ad6985cddb5b8e0a150a2fc65fb" category="paragraph-title">ノードあたり1つの容量プール</block>
+  <block id="3618eed950da22dba9e302693bf31644" category="paragraph">各ノードは、1つの容量プールからストレージをリースできます。1 つのノードで複数のプールを使用することはできません。</block>
+  <block id="a68727c2470d44ca2bcd0b95331bfb0c" category="paragraph">単一のHAペアの両方のノードで、同じ容量プールからストレージをリースする必要があります。ただし、同じクラスタ内の異なる HA ペアは、同じ License Manager で管理されている異なるプールからストレージをリースできます。</block>
+  <block id="121aeb58b15f5021ad094c25b9ab6875" category="paragraph">ONTAP Selectノードがデータアグリゲートのストレージリースを要求すると、ライセンスマネージャは容量プールの構成に基づいて一定期間リースを提供します。各プールのリース期間は、 1 時間から 7 日の間で設定できます。デフォルトのリース期間は 24 時間です。</block>
+  <block id="dffc25a8660670650d9dadda393882ec" category="paragraph">容量プールのライセンスを使用する場合は、Deploy管理ユーティリティに静的IPアドレスを割り当てる必要があります。</block>
+  <block id="fdaaffd277a294e5ad05141047b5c8f9" category="summary">Capacity Tiersライセンスモデルでは、9桁のノードシリアル番号は、ノードに割り当てられているライセンスシリアル番号と同じです。ただし、容量プールのライセンスモデルを使用してノードに割り当てられるシリアル番号の形式が異なります。</block>
+  <block id="aca287ce24cdc5e2ad3d2e36becf7d37" category="doc">ONTAP Select Capacity Poolsライセンスモデルのノードシリアル番号</block>
+  <block id="a875da8c90c98e4c0f1e4e3e3d4d81a7" category="paragraph">容量プールのライセンスを使用するノードのシリアル番号の形式は次のとおりです。</block>
+  <block id="769d960ab0e824951746a3c368509fcd" category="cell">NetAppによって容量プールに割り当てられる9桁の変数ライセンスシリアル番号</block>
+  <block id="28ec4566b445eb67771a9a111611e502" category="cell">容量プールを使用する各ノードについて、ライセンスマネージャによって生成される8桁の変数の値</block>
+  <block id="9aaa5ca53edcd9baf965b66b1fba1368" category="admonition">注意：容量プールライセンスを使用するノードに関連してNetAppサポートのケースをオープンする場合、20桁のノードの完全なシリアル番号を指定することはできません。代わりに、9桁の容量プールライセンスのシリアル番号を指定する必要があります。上記のように、ノードのシリアル番号からライセンスのシリアル番号を取得できます。ノードのシリアル番号（ '999' ）の最初の 3 桁をスキップし、次の 9 桁（ ppppppppppp ）を抽出します。</block>
+  <block id="35892d48da3c4641520dc5f89430eeaa" category="list-text">容量階層ライセンスは使用できますが、容量プールライセンスはサポートされません。</block>
+  <block id="1538605c931beb7706c95917ca61c48d" category="summary">ONTAP Selectの大容量階層または容量プールライセンスは、プラットフォームの3つの容量レベルのいずれかで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。</block>
+  <block id="4be94941d4ae435ad44487d075e7a367" category="doc">ONTAP Selectのプラットフォームライセンスサービスの詳細</block>
+  <block id="9cdcaf5a7aae0807b2a785f7d26f1f3f" category="paragraph">ONTAP Selectの大容量階層または容量プールライセンスは、Standard、Premium、PremiumのいずれかのXLレベルで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。</block>
+  <block id="d6a54d06ffa7a2e05f6c0d035a345cb1" category="paragraph">特定のライセンスサービスでは、ハイパーバイザーホストの機能が次の2つの領域で定義および制限されます。</block>
+  <block id="3e98038f4cdd32e64d0357acf2d03cda" category="list-text">ハードディスクドライブ（HDD）またはソリッドステートドライブ（SSD）</block>
+  <block id="56dce1f406f2aca239ffdd315cc83d5d" category="admonition">SW-RAID構成でのラージインスタンスタイプまたはNVMeドライブの使用は、Kernel-Based Virtual Machine（KVM）ではサポートされていません。</block>
+  <block id="2f2718c8a2f261e7775daae8fff84dbc" category="section-title">プラットフォームライセンス製品のハードウェアサポートの比較</block>
+  <block id="46fa26efbd4810693c18739e5417980e" category="paragraph">標準、プレミアム、およびプレミアムXLライセンス製品は、幅広いハードウェアおよびソフトウェアをサポートしています。ハードウェアおよびソフトウェアのバージョンの最新情報については、を参照してください<block ref="303ffee46fa5d607063d9b04cfb6d8cb" category="inline-link-macro-rx"></block>。</block>
+  <block id="06efa63cc6d93bbf842cc0f903057606" category="open-title">コアアイテム</block>
+  <block id="a3090b498c20b75b1533765619b273a0" category="cell">コアアイテムのタイプ</block>
+  <block id="6bf08a2d2d231573eaa714b5221158e6" category="cell">ホストプロトコル</block>
+  <block id="d9271d1702d6357cd68d0248f2b98bfb" category="cell">NFS、SMB / CIFS、iSCSI、NVMe over TCP</block>
+  <block id="e2c5a3645710b0ed6fec1053fdfe0ead" category="cell">導入オプション</block>
+  <block id="eb09c1a5eb262d090f2cc7e8158cae4e" category="cell">シングルノード2ノードクラスタ（HAペア）4ノード、6ノード、または8ノードクラスタ</block>
+  <block id="8557a15ebd845a53c232f882fe21205a" category="cell">サポートされる容量（ノードあたり）</block>
+  <block id="e8551ae26bc9361887df2597e2a2ea57" category="cell">最大400TBの生データ（ESXiおよびKVM）</block>
+  <block id="3c02a379965ab0dfcd77b1c484450433" category="open-title">ハードウェア</block>
+  <block id="440222a5c365cf69d621e3526ea562c4" category="cell">ハードウェアタイプ</block>
+  <block id="719033e288b59becdea112c671c54bda" category="cell">インスタンスサイズ</block>
+  <block id="7ddc213b44b1caa736b0d7f1efe305df" category="cell">CPUファミリー</block>
+  <block id="794e40c13e8053b2f637ceb39fb2d773" category="cell">Intel Xeon E5-26xx v3（Haswell）以降</block>
+  <block id="7c806fdbaff43b9704153f0c5c81482c" category="cell">ONTAP Select CPU/メモリ</block>
+  <block id="cfff052f97e49b5003f78ce3678da6de" category="cell">仮想CPU（vCPU）×4 / 16GBのRAM</block>
+  <block id="a0275a50dc79599db737a8bc1a17cba6" category="cell">vCPU×8 / RAM×64GB</block>
+  <block id="426c3105a73b89195130759dbbb3f08a" category="cell">vCPU×16 / RAM×128GB</block>
+  <block id="2c7f3dfe816e26a26331c6cc50536754" category="cell">ホストのCPU /メモリの最小要件^1^</block>
+  <block id="4ec4f4725cc876bcb95183576c366df4" category="cell">6コア/ 24GBのRAM</block>
+  <block id="0a63727fe995fb5d301d20fb9140de4d" category="cell">10コア/ 72GBのRAM</block>
+  <block id="e73d640a676c83c4510d0212e506bb38" category="cell">18コア/ 136GB RAM</block>
+  <block id="522c4ec4d9d59e1a992d989c8d770589" category="cell">ネットワーク（ノードあたり）</block>
+  <block id="d5fda742cbaf307ce4ca202b12335858" category="cell">シングルノードクラスタの場合は最低2つの1GbEポート2ノードクラスタ（HAペア）の場合は最低4つの1GbEポート4ノード、6ノード、または8ノードクラスタの場合は最低2つの10GbEポート</block>
+  <block id="c65eee5a4810d852ee01a79b87c993f3" category="paragraph">^1^ハイパーバイザー用に2コアと8Gb RAMを想定しています。</block>
+  <block id="f0cb6783b152b19ceab16227ca3976a2" category="open-title">ストレージタイプ</block>
+  <block id="5939197c86f855d26c9639db3b9a29d6" category="paragraph">次の表に、指定したストレージに必要な最小ライセンスタイプを示します。 </block>
+  <block id="1138bbb83d6525f914cbce8dccc4a874" category="cell">ペミウムXL</block>
+  <block id="e629ab9880aae245163ce498ab9e1389" category="cell">小規模および中規模</block>
+  <block id="a09a88160dc1591cac42ba911581e599" category="cell">小規模、中規模、大規模</block>
+  <block id="93c34d5f173f74aeed0b64401f2a6edc" category="cell">ハードウェアRAIDコントローラを搭載したローカルDAS</block>
+  <block id="2feb1874507e2463194f3c757efe6209" category="cell">8~60ドライブ</block>
+  <block id="7742d08808786c4493a46e06b5648ff9" category="cell">HDD（SAS、NL-SAS、SATA）</block>
+  <block id="fea45fcfeb873048ff2e2be995d8cb77" category="cell">4~60台のドライブ</block>
+  <block id="bb878052f3499d534f13d06526b7d885" category="cell">SSD（SAS）</block>
+  <block id="25a5b17224d1f38c386742ec7cbc343b" category="cell">4~60ドライブ（SSDのみ）</block>
+  <block id="d8e31ece33b3b9fb9373e996815932a7" category="cell">ソフトウェアRAIDを使用したローカルDAS</block>
+  <block id="a64e775634e2bf5c5e3f63f149af2601" category="cell">ドライブ×4~14本（NVMeのみ）</block>
+  <block id="518c7a2538245dd75c6daac2212b8316" category="cell">外付けアレイ^1^</block>
+  <block id="8731210144d2e5094fb4001b893115d2" category="cell">外付けアレイでホストされているデータストアがFC、FCoE、iSCSI、およびNFS経由で接続されている（KVMではNFSはサポートされていません）。これらのデータストアは、高可用性と耐障害性を提供します。</block>
+  <block id="563a5726768d43a126f11bc13b3361dd" category="paragraph">^1^外部アレイプロトコルのサポートには、ネットワークストレージの接続性が反映されています。</block>
+  <block id="719d067b229178f03bcfa1da4ac4dede" category="open-title">ソフトウェア</block>
+  <block id="e94dfbdb85e6f13fea9179c0fd50d81f" category="cell">ソフトウェアタイプ</block>
+  <block id="9295b1d52d6b9b34b829dfb4fabf6d05" category="cell">ハイパーバイザーのサポート（VMware）</block>
+  <block id="4a9dffc4c71f7a56c8a8d9b0e4381f90" category="cell">VMware vSphere 7.0GAおよびアップデート1~3C VMware vSphere 8.0GAおよびアップデート1~3</block>
+  <block id="4f17c009683074f845007741fa1c26dd" category="cell">ハイパーバイザーのサポート（KVM）</block>
+  <block id="e12f83762dfb76b01ed77a9370b24967" category="cell">Red Hat Enterprise Linux 64ビット（KVM）9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6 Rocky Linux（KVM）9および8</block>
+  <block id="049f7d1a5b523b8230ca21c727474d11" category="cell">管理ソフトウェア</block>
+  <block id="f1680d42c94acc804fddda46a7e4602d" category="cell">NetApp Active IQ Unified Manager管理スイートONTAP Select導入ユーティリティSnapCenter（オプション）</block>
+  <block id="bbf6609978bbf45921ea0dae059fde72" category="inline-link-macro">大容量階層と容量プールのライセンスタイプについて</block>
+  <block id="10aa5d1416b41ba5cd05d276a6c13328" category="paragraph"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block>です。</block>
+  <block id="91d83e84a03b1a016f22b6743fa4a929" category="summary">ONTAP Select が組織に適していることを確認したら、本番環境の導入に必要なライセンスを購入できます。容量階層または容量プールのいずれかのライセンスモデルと、導入ごとのストレージ容量を選択する必要があります。</block>
+  <block id="580ede122197eca33afea87d209746f9" category="paragraph">容量階層と容量プールのライセンスモデルは、いくつかの点で大きく異なります。ただし、 2 つのライセンスモデルには次のような共通の特徴があります。</block>
+  <block id="8e8e728e920aef8a8e61276592f8f07a" category="section-title">容量階層のライセンスモデル</block>
+  <block id="f57d33a41fff8f72b8541732b6d8adf0" category="paragraph">容量階層のライセンスモデルには、次のような特徴があります。</block>
+  <block id="ba83abe50eb1c6316ad583689b2834f6" category="list-text">各大容量階層ライセンスにはストレージ容量があり、特定のノードにロックされます。</block>
+  <block id="9e586a550fe27d06853aa45ee04db107" category="section-title">容量プールのライセンスモデル</block>
+  <block id="5308e94ce80081b419db4c906ea0e711" category="paragraph">容量プールのライセンスモデルには、次のような特徴があります。</block>
+  <block id="a5c50f7ef156865bfd5e9875fc89d1f6" category="list-text">共有容量プールごとにライセンスを購入する必要があります。</block>
+  <block id="1f463a24c9d024f8fdaeb1e4ad716c1d" category="list-text">各容量プールライセンスにはストレージ容量があり、特定のLicense Managerインスタンスにロックされます。</block>
+  <block id="72845ca8a5a798fdf6f61c6d2bed72b4" category="list-text">NetAppでは、容量プールごとに9桁のライセンスシリアル番号が生成されます。</block>
+  <block id="77ba5c2fc03c677b9c3fe2b00b4439fa" category="list-text">容量プールに割り当てられたストレージは、購入に基づいて一定期間のみ有効です（更新が必要です）。</block>
+  <block id="d150443cb572e514bfd51ac57dab1fce" category="list-text">ノードのシリアル番号は20桁で、容量プールライセンスのシリアル番号に基づいてLicense Managerによって生成されます。</block>
+  <block id="f658732514353ebc97c68b22fba83311" category="list-text">各ノードは、ローカルデータアグリゲートのストレージ容量を共有容量プールから自動的にリースします。</block>
+  <block id="260ed5703a4e4e3c27063e5ad62d8426" category="paragraph">Capacity Poolsライセンスモデルの詳細については、_Capacity Poolsライセンスモデル_を参照してください。</block>
+  <block id="52736b6c929e3fcbb90ce69d40477b01" category="paragraph">具体的なプロセスは、使用しているライセンスが大容量階層と容量プールのどちらかによって異なります。</block>
+  <block id="371311feed51b9a8b306f029ede6fb62" category="list-text">シリアル番号は、ノード（大容量階層）またはストレージプール（容量プール）のいずれかに適用されます。</block>
+  <block id="1e3bb0b8e7ecbce202ac714bd6e3f265" category="list-text">容量プールライセンスを使用する場合は、DeployインスタンスのライセンスロックIDが必要です。</block>
+  <block id="461ecad85ce670905ab753be871deb71" category="list-text">別のWebサイトで大容量階層と容量プールのライセンスを取得している場合</block>
+  <block id="69bbee1943d709d1872e201eef4b29a8" category="paragraph">ONTAP Select は、ソフトウェアのみの ONTAP バージョンで、ハイパーバイザーホストに仮想マシンとして導入できます。メインストリームのFAS、AFF、ASA ONTAP製品のスイートや、Cloud Volumes ONTAPなどの他のソフトウェアのみのオプションを補完します。</block>
+  <block id="00a3caa2896a927e39b353d23b56eb2d" category="paragraph">ONTAP Selectは、内蔵ディスクドライブ、NVMe、SSDまたはHDD、外付けアレイストレージを柔軟なストレージシステムに変換し、専用のONTAPストレージシステムと同様のメリットを多数提供します。新しいサーバや既存のサーバインフラにONTAP Selectを導入することもできます。ONTAP Selectは管理が容易で、ONTAPベースのソリューションと同じ管理ソフトウェアを活用できるため、運用上のオーバーヘッドとトレーニング要件が軽減されます。</block>
+  <block id="8307546cfa4f0ccad4627a2dcd4f46fa" category="paragraph">ONTAP Selectは、容量階層と完全に柔軟な容量プールという2つのライセンスモデルを補完して、容量消費のニーズに対応します。どちらのライセンスモデルでも、わずか1TB単位で容量を拡張できます。たとえば、数テラバイトから始めて、プロジェクトの拡大に合わせて動的に容量を追加できます。容量プールを使用している場合は、プロジェクトの完了時に適切に容量を再配分できます。</block>
+  <block id="d88f78a3aeac7464dce1dfe85df34e06" category="paragraph">ONTAP Selectは、VMware vSphereなどのクラウド管理フレームワークに統合されています。これにより、ファイルサービス、ホームディレクトリ、ソフトウェア開発環境、アプリケーションテストなどの新しいプロジェクトの導入時間を短縮できます。</block>
+  <block id="39de1f5e6bbe7e17017c377d3305e9fd" category="paragraph">SnapMirrorソフトウェアを使用すると、ハイブリッドクラウド全体のONTAPストレージ間でデータを移動できるため、どこからでも簡単にデータにアクセスできます。たとえば、環境を迅速に立ち上げてアイデアを証明することができます。その後、本番環境用の専用ストレージプラットフォームにプロジェクトを移動したり、開発ワークフローの一部としてクラウドでのアクセス性を高めたりすることができます。</block>
+  <block id="9c191e042a5bb50dde6bcacd73b9fc18" category="paragraph">IT サービスの実装と配布をソフトウェアを通じて行うことで、管理者はかつてないスピードと即応性でリソースを迅速にプロビジョニングできます。最新のデータセンターがSoftware-Defined Infrastructure（SDI）アーキテクチャに移行すると、最も価値の高いIT資産を基盤となる物理インフラから切り離すことができ、柔軟性、拡張性、プログラマビリティを実現できます。</block>
+  <block id="cc0ffc2288900bd57ac4b3e354e5fb49" category="paragraph">ONTAP Select では、使用量に応じたライセンスモデルが導入されています。本番環境にONTAP Selectクラスタを導入する場合は、各ノードまたは共有容量プールのストレージ容量を含むライセンスを購入する必要があります。Deploy ユーティリティを使用して、クラスタノードのストレージ容量を確立するライセンスファイルを適用する必要があります。</block>
+  <block id="bf66cac9fd96db287cb8aa533ce84928" category="inline-link-macro">デフォルトで有効になっているONTAP機能について</block>
+  <block id="b0781771d593eb6be846237468e85b53" category="inline-link-macro">ONTAP Selectライセンスオプションの詳細</block>
+  <block id="7096efe9fc5e8c50e1866399304968bf" category="paragraph"><block ref="dd2fc3d451e43974d9ba6b2330d17e5b" category="inline-link-macro-rx"></block> <block ref="89ee8792b4466624e22db7a555dbec1c" category="inline-link-macro-rx"></block></block>
+  <block id="1d4d54ea9194ada2657bbedc16facf76" category="list-text">容量階層のライセンスモデルは、ONTAP Select環境用にストレージのライセンスを取得する際の元 々 のオプションです。この値は、 NetApp AFF および FAS で使用される ONTAP モデルに基づいています。ノードごとに個別のライセンスが必要です。ストレージ容量はノードにロックされ、永続的に更新されることはありません。</block>
+  <block id="4336ee0e2315cb2014ffbaddbb71d150" category="list-text">容量プールライセンスモデルは、Deploy 2.10を使用したONTAP Select 9.5で導入されました。ストレージ容量プールごとに個別のライセンスが必要です。容量プールライセンスはLicense Managerインスタンス（Deployインスタンス）にロックされているため、購入条件に基づいて更新する必要があります。組織内の任意の数の容量プールのライセンスを取得して使用できます。ただし、容量プールはONTAP Selectノードで共有されるため、通常は容量階層のライセンスよりも少ないライセンスが必要です。</block>
+  <block id="07dd1826d2d39d21b05b11f5f59d47dd" category="list-text">License Managerは、容量プールのライセンスをサポートするソフトウェアコンポーネントです。現時点では、 Deploy 管理ユーティリティに含まれています。LM は、管理対象の共有プールから ONTAP Select ノードにストレージをリースします。_License Lock ID_ は、各 LM インスタンスを一意に識別する数値文字列であるため、各 Deploy インスタンスを識別します。ライセンスファイルの生成には、容量プールライセンスのシリアル番号とLLIDの両方を使用する必要があります。</block>
+  <block id="43b16943d6d5ff73da96f41d29e4303d" category="paragraph"><block ref="43b16943d6d5ff73da96f41d29e4303d" category="inline-link-macro-rx"></block></block>
+  <block id="24d0d0c7fc9a3866a568dea751e3cd63" category="doc">ONTAP Selectのデータ保護と効率性の詳細</block>
+  <block id="05ed3d70c9259c59c7d687abfdcbf9be" category="paragraph">ONTAP Selectは、ONTAPストレージソフトウェアを基盤として構築されており、可用性に優れたシェアードナッシング型スケールアウトアーキテクチャにより、エンタープライズストレージサービスを効率的に提供します。1ノード、2ノード、4ノード、6ノード、8ノードのソリューションを導入でき、ノードあたり最大400TBの物理容量を備えたNFS、SMB / CIFS、iSCSI接続のストレージをサポートします。重複排除機能と圧縮機能が標準搭載されているため、実効容量を増やしてストレージコストを削減できます。スケールアウトアーキテクチャにより、高可用性と無停止でのデータ移動が可能になり、ロードバランシングやハードウェアの保守が可能になります。</block>
+  <block id="b489b293d6cbe8b86835d3cac8c315fb" category="section-title">Snapshotによるデータ保護</block>
+  <block id="467385c0c4913cc96395e5493d47b3bc" category="paragraph">ONTAP Selectには、SnapshotやSnapMirrorソフトウェアなどのデータ保護機能が搭載されています。オンプレミス、リモートサイト、クラウドのいずれにあっても、データを他のONTAPストレージにすばやくレプリケートできます。データを迅速にリカバリする必要がある場合、SnapRestoreソフトウェアでは、ローカルSnapshotを使用して、容量やファイル数に関係なく、ファイルシステム全体またはデータボリュームを数秒でリカバリできます。</block>
+  <block id="787fb8fbafed37b77c3881f9e0c851a0" category="section-title">MetroCluster ソフトウェア・デファインド・ストレージ</block>
+  <block id="12402222727a1e6976eb8efff78d2bfe" category="paragraph">ONTAP Select MetroClusterのSoftware-Defined Storage（SDS）は、保護を強化し、対費用効果の高い導入を実現します。</block>
+  <block id="c5d9de22973474c51d806858e261da44" category="list-text">MetroCluster SDS は、 ONTAP Select 向けに、別の側面（データセンターからデータセンターへ）から保護機能を提供します。Software-Defined StorageとONTAPのすべてのメリットを活用できるだけでなく、この追加の保護機能も活用できるようになりました。</block>
+  <block id="81256dd6a1d2918b467fe7ea3176a702" category="paragraph"><block ref="81256dd6a1d2918b467fe7ea3176a702" category="inline-link-macro-rx"></block></block>
+  <block id="1849d8fe80a23e86f80eb67cb29950f0" category="paragraph">必要なパッケージおよびその他の設定要件の詳細については、を参照してください<block ref="d663e2c355c00396895dd4c79ec8b92b" category="inline-link-macro-rx"></block>。</block>
+  <block id="e8ea4a01792e4295b57655f0af615398" category="paragraph">方法はすべてのライセンスで同じですが、詳細は容量階層ライセンスと容量プールライセンスのどちらであるかによって異なります。</block>
+  <block id="9dc93dd55c92caac98cabff37fbdc64d" category="admonition">NLFをDeployサーバにロードするには、* Add *および* Update *機能を使用します。*追加*新しいライセンスをサーバに追加し、*更新*は、容量、ノードライセンス（Standard、Premium、Premium XL）、サポートの開始日と終了日（Capacity Tierライセンス）、サブスクリプションの開始日と終了日（Capacity Poolライセンス）などの情報で既存のファイルを更新します。</block>
+  <block id="88379325a2a95cc4cf31ec59c1b8d0ab" category="list-text">A *大容量階層ライセンス*は、ONTAP Selectノードのシリアル番号に関連付けられたノード単位の永続的ライセンスです。別のサポート契約で販売されます。ライセンスは永続的ですが、ONTAP SelectのアップグレードにアクセスしてNetAppテクニカルサポートの支援を受けるには、サポート契約を更新する必要があります。容量やノードサイズなどのライセンスパラメータを変更するには、現在のサポート契約も必要です。</block>
+  <block id="a7ac9aa264c0f49d4bb74a0a19f309d8" category="paragraph">容量階層ライセンスの更新、パラメータの変更、サポート契約の更新を購入するには、発注時にノードのシリアル番号が必要です。大容量階層ノードのシリアル番号は9桁で、先頭は「32」です。</block>
+  <block id="2475e8d85e4c431ed7c77eaf00da0050" category="list-text">容量プールライセンス*は、特定の容量プールとノードサイズ（Standard、Premium、Premium XL）を使用して1つ以上のクラスタを導入する権利を得るためのサブスクリプションです。サブスクリプションには、指定された期間のライセンスとサポートを使用する権利が含まれます。ライセンスを使用する権利とサポート契約には、開始日と終了日が指定されています。</block>
+  <block id="65ce848134fed42df7f25dc0a3d9d329" category="paragraph">大容量階層のサポート契約の終了日が過ぎている場合、ノードは稼働し続けることはできますが、ONTAPの更新をダウンロードしてインストールすることはできません。また、最初にサポート契約を最新の状態にしないと、NetAppのテクニカルサポートに支援を依頼することもできません。</block>
+  <block id="f72a27c1465f1a231c0f2c030e6f7e8b" category="paragraph">容量プールサブスクリプションが期限切れになると、最初に警告が表示されますが、30日後にシステムをシャットダウンすると、更新されたサブスクリプションがDeployサーバにインストールされるまでリブートされません。</block>
+  <block id="24b48c88df61ec1a7a95e26d1445ce5d" category="list-text">ONTAP Select 9.16.1以降では、Kernel-Based Virtual Machine（KVM）ハイパーバイザーがRed Hat Enterprise Linux（RHEL）9.5およびRocky Linux 9.5でサポートされます。</block>
+  <block id="c747e5d99e0cdd0a943b0b532dc7eca4" category="list-text">ONTAP Select 9.15.1以降では、カーネルベースの仮想マシン（KVM）ハイパーバイザーがRHEL 9.4およびRocky Linux 9.4でサポートされます。</block>
+  <block id="932c03094f0a77749cc455e341a3ea08" category="list-text">本番環境に導入されたONTAP Selectクラスタごとに、容量階層または容量プールのライセンスモデルを選択する必要があります。詳細については、「 _License__ 」セクションを参照してください。</block>
+  <block id="479c7e016ce22da77ff8520b53179a68" category="list-text">Red Hat Enterprise Linux 8.6、8.7、8.8、9.0、9.1、9.2、9.4、9.5上のKVM</block>
+  <block id="41e0fd5b57f80140c6e78c70ec352bc7" category="list-text">Rocky Linux 8.6、8.7、8.8、8.9、9.0、9.1、9.2、9.3、9.4、9.5上のKVM</block>
+  <block id="317a67df30f2813de3d883f1e7b38374" category="inline-link">Interoperability Matrix Tool、window=_blank</block>
+  <block id="64bdc3c3e77297346c380f015196bdd8" category="paragraph">詳細については、を参照して<block ref="6d25ea14bebd4b4dc452bcd44cab22c3" category="inline-link-rx"></block>ください。</block>
+  <block id="85d20cd418b9cf016df4a897af907e84" category="cell">Access Deploy（Capacity Poolsのライセンス）</block>
+  <block id="a2a620f52d496d9ff18156031c1fd725" category="paragraph">次に、最も重要なストレージの制限事項を示します。詳細については、も参照してください<block ref="303ffee46fa5d607063d9b04cfb6d8cb" category="inline-link-macro-rx"></block>。</block>
+  <block id="0df2aea977fec70784930b32e9e165c5" category="paragraph">関連するすべてのストレージコンポーネント（ハードウェア、ソフトウェア、機能の要件を含む）は、に記載されている要件に準拠している必要があります<block ref="303ffee46fa5d607063d9b04cfb6d8cb" category="inline-link-macro-rx"></block>。さらに、ONTAP Selectは、iSCSI、NAS（NFSv3）、ファイバチャネル、Fibre Channel over Ethernetなど、VMware Storage/SAN Compatibilityのドキュメントに記載されているすべての外付けストレージアレイをサポートしています。外付けアレイのサポートは、 ONTAP Select がサポートする ESXi のバージョンによって制限されます。</block>
+  <block id="942d9b4c043168e08967b0c909910bfe" category="section-title">大容量階層ライセンスを管理します。</block>
+  <block id="5ad35c10c680ba726e50d40a631ed9ff" category="paragraph">必要に応じて、ONTAP Selectの大容量階層ライセンスを追加、編集、削除できます。</block>
+  <block id="f39a3b280b8ce0907f247b1ecaaf100f" category="section-title">容量プールライセンスを管理します。</block>
+  <block id="7d5596892567a74637429d5d68b05f0b" category="paragraph">ONTAP Select容量プールライセンスは、必要に応じて追加、編集、削除できます。</block>
+  <block id="6c0b8fd8fa018a586b3d5d04652f30ac" category="section-title">容量プールライセンスの再インストール</block>
+  <block id="ee516c5383dfd5e420f4e45c5bda7495" category="paragraph">すべてのアクティブな容量プールライセンスは、Deploy管理ユーティリティのインスタンスに含まれる特定のLicense Managerインスタンスにロックされます。容量プールライセンスを使用している場合にDeployインスタンスをリストアまたはリカバリすると、元のライセンスは無効になります。新しい容量ライセンスファイルを生成し、そのライセンスを新しい Deploy インスタンスにインストールする必要があります。</block>
+  <block id="53f982214be91d0894e566a5ddb62557" category="list-text">元のDeployインスタンスで使用されているすべての容量プールライセンスを確認します。</block>
+  <block id="09d5514aa379a7f21298f917a2b1119e" category="paragraph">大まかには、このタスクは 3 つのパートで構成されます。Deployインスタンスで使用されるすべての容量プールライセンスを再生成してインストールする必要があります。新しい Deploy インスタンスにすべてのライセンスを再インストールしたら、必要に応じてシリアルシーケンス番号をリセットできます。最後に、Deploy IPアドレスが変更された場合は、容量プールライセンスを使用するすべてのONTAP Selectノードを更新する必要があります。</block>
+  <block id="00a96bebeb044c0b128ac4826a9e84dd" category="list-text">NetAppサポートに連絡し、元のDeployインスタンスのすべての容量プールライセンスのバインドと登録解除を依頼します。</block>
+  <block id="d4fba2927da7e42e3ecf128519764890" category="list-text">容量プールライセンスごとに新しいライセンスファイルを取得してダウンロードします。</block>
+  <block id="f957819aabc968edb10b9f8a7cd31369" category="inline-link-macro">容量プールライセンスを取得する</block>
+  <block id="efbea3f99a53c818e1b75ecc2e4f83b6" category="paragraph">詳細については、を参照してください <block ref="feab67090b12910c2c14365471a86ed6" category="inline-link-macro-rx"></block> 。</block>
+  <block id="6a0e12d4c1f68fa836d49eacdbdd6d22" category="list-text">新しいDeployインスタンスに容量プールライセンスをインストールします。</block>
+  <block id="f88bd3dead6f3ecc398404ba720d110d" category="list-text">新しいDeployインスタンスに割り当てられたIPアドレスが元のDeployインスタンスのIPアドレスと異なる場合は、容量プールライセンスを使用するすべてのONTAP SelectノードでIPアドレスを更新する必要があります。</block>
+  <block id="0656abd1f496ae9e196a1b6b0c589259" category="paragraph">ONTAP Select評価用クラスタをアップグレードして、Deploy管理ユーティリティで本番用の大容量階層ライセンスを使用することができます。</block>
+  <block id="9ea928d7a888b1b6dd05218df42c1863" category="list-text">評価用クラスタ内の各ノードの容量階層ライセンスが必要です。</block>
+  <block id="6bc11a9dac55ab4bd5f801441e32be3e" category="section-title">期限切れの容量プールライセンスを管理します。</block>
+  <block id="235d833d1553c6ac3ef4b59a69b7709d" category="admonition">容量階層ライセンスモデルと容量プールライセンスモデルを使用する場合は、クラスタノードのサイズ変更処理を実行できます。</block>
+  <block id="799f1b966e3a6731dcf1bdc532fd6e05" category="paragraph">本番環境に ONTAP Select クラスタを導入する前に、ストレージ容量ライセンスを購入し、関連するライセンスファイルをダウンロードする必要があります。各ノードのストレージのライセンスを設定するには_Capacity Tiers_modelを使用し、共有プールのライセンスを設定するには_Capacity Pools_modelを使用します。</block>
+  <block id="4f48353f20e29f22472de3805fec8341" category="paragraph">ノードの設定情報が必要です。Deployユーティリティで、大容量階層ライセンスファイルをアップロードしてインストールする必要があります。</block>
+  <block id="751e45429506270501500591ecf71f63" category="paragraph">この手順 を使用して各ノードを設定する必要があります。この例では、ノードに大容量階層ライセンスが適用されています。</block>
+  <block id="f5eacefd45f87cad9eca589aeba17364" category="paragraph">ONTAP Selectノードには大容量階層ライセンスが使用されます。</block>
+  <block id="70c6ed94827afcf20125ed21cfa0d45d" category="paragraph">容量プールまたは容量階層のライセンスが使用されているかどうかを確認する必要があります。容量プールのライセンスを使用する場合は、Deployインスタンスをリカバリまたはリストアしたあとに、各容量プールライセンスを再インストールする必要があります。</block>
+  <block id="29f5b284a6c121e6b86e23d26c5492d7" category="paragraph">容量プールのライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、容量プールライセンスの再インストール_を参照してください。</block>
+  <block id="ad8df021d39702efa54a5c4a58d4c408" category="paragraph">容量プールのライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。</block>
+  <block id="907984c60dd3b3b1d06b28812739f3a3" category="list-text"><block ref="907984c60dd3b3b1d06b28812739f3a3" category="inline-link-macro-rx"></block></block>
+  <block id="b28ceb45f344ed12e54e3531ae0bac88" category="summary">ONTAP Selectノードで使用される各容量プールのライセンスファイルを取得する必要があります。ライセンスファイルでは、プールのストレージ容量と有効期限が定義されます。このライセンスは、ネットアップが割り当てた一意のライセンスシリアル番号と、 Deploy インスタンスに関連付けられたライセンスロック ID を組み合わせて、 License Manager にロックされます。</block>
+  <block id="b06635debd20e5d8f23e5fd54016e095" category="doc">ONTAP Select容量プールライセンスを取得する</block>
+  <block id="332320e6473eb55e261b81cf0938cfbc" category="paragraph">NetAppによって容量プールに割り当てられた9桁のライセンスシリアル番号が必要です。ライセンスファイルを取得する前に、注文書の出荷日から少なくとも 24 時間待ってください。</block>
+  <block id="0e1bb7bb179252e22d246c94c588991c" category="paragraph">このタスクは、ONTAP Selectノードで使用される容量プールごとに実行する必要があります。</block>
+  <block id="1a053c6f3c727874cbf13edff1c8a80e" category="list-text">容量プールのライセンスシリアル番号を入力し、*[Go！]*をクリックします。</block>
+  <block id="69d0d1235d3907b389980501bf178f3e" category="paragraph">容量プールをONTAP Selectノードで使用するには、事前にライセンスファイルをDeploy管理ユーティリティにアップロードする必要があります。</block>
+  <block id="e34af85c97201b9096873d4c2ad19cf3" category="summary">容量階層のライセンスを使用している場合は、ONTAP Selectノードごとにライセンスファイルを取得する必要があります。ライセンスファイルではノードのストレージ容量を定義します。このファイルは、ネットアップが割り当てた一意の 9 桁のシリアル番号を使用してノードにロックされます。</block>
+  <block id="884816b6d5a6ed8f167117fc8af0b452" category="doc">ONTAP Selectの大容量階層ライセンスを取得する</block>
+  <block id="6a83549be60e71831bbfcda50973a52e" category="paragraph">このタスクは、大容量階層ライセンスが必要なONTAP Selectノードごとに実行する必要があります。</block>
+  <block id="9e2e9cf9504e665219344b4d7647d396" category="sidebar">データ保護と効率性</block>
+  <block id="7b1e0be7876419647c8d2d4cd1e3444e" category="sidebar">容量プールと容量階層の比較</block>
 </blocks>

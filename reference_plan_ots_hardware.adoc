@@ -37,8 +37,8 @@ ONTAP Select クラスタを導入するには、 ONTAP Select を実行する�
 
 ONTAP Select は次のハイパーバイザーに導入できます。
 
-* Red Hat Enterprise Linux 8.6、8.7、8.8、9.0、9.1上のKVM 9.2、9.4
-* Rocky Linux 8.6、8.7、8.8、8.9、9.0上のKVM 9.1、9.2、9.3、9.4
+* Red Hat Enterprise Linux 8.6、8.7、8.8、9.0、9.1、9.2、9.4、9.5上のKVM
+* Rocky Linux 8.6、8.7、8.8、8.9、9.0、9.1、9.2、9.3、9.4、9.5上のKVM
 * VMware ESXi 7.0 GA（ビルド15849807以降）：7.0 U1、U2、U3Cを含む
 * VMware ESXi 8.0 GA（ビルド20513097）
 * VMware ESXi 8.0 U1（ビルド21495797）
@@ -67,7 +67,7 @@ ONTAP Select を導入する物理ハイパーバイザーホストが、いく�
 
 NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。
 
-を参照してください https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool 、ウィンドウ = _blank"] を参照してください。
+詳細については、を参照して https://mysupport.netapp.com/matrix["Interoperability Matrix Tool、window=_blank"]ください。
 
 
 

@@ -134,7 +134,7 @@ KVMに対するメディアの期待:: 使用するSSDフラッシュストレ�
 
 ONTAP Select の導入を計画する際には、ストレージの割り当てと使用に関する制限事項を把握しておく必要があります。
 
-次に、最も重要なストレージの制限事項を示します。また、 link:https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] 詳細については、を参照してください。
+次に、最も重要なストレージの制限事項を示します。詳細については、も参照してくださいlink:https://mysupport.netapp.com/matrix/["Interoperability Matrix Tool"^]。
 
 
 TIP: ONTAP Select では、ストレージの割り当てと使用に関していくつかの制限が適用されます。ONTAP Select クラスタを導入したりライセンスを購入したりする前に、これらの制限事項を確認しておく必要があります。を参照してください link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html["使用許諾"] 詳細については、を参照してください。

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_lic_cp_compare_ct.html 
-keywords: license, licensing, capacity pools, capacity tiers, comparing 
+keywords: license, licensing, Capacity Pools, Capacity Tiers, comparing 
 summary: 容量プールと容量階層のライセンスモデルには、いくつかの違いがあります。 
 ---
 = ONTAP Select容量プールと容量階層のライセンスの比較
@@ -21,7 +21,7 @@ summary: 容量プールと容量階層のライセンスモデルには、い�
 |  | 大容量階層 | 容量プール 
 
 
-| ライセンスのシリアル番号 | ネットアップが生成してノードに割り当てる 9 桁の数字 | ネットアップが生成して容量プールに割り当てる 9 桁の数字 
+| ライセンスのシリアル番号 | ネットアップが生成してノードに割り当てる 9 桁の数字 | NetAppによって生成され、容量プールに割り当てられた9桁の数字 
 
 
 | ライセンスロック | ONTAP Select ノードにロックされました | License Manager インスタンスにロックされています 

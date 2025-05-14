@@ -32,7 +32,7 @@ sidebar:
       url: "/reference_new_ots.html"
   - title: 概念
     entries:
-    - title: ONTAP Select の概要
+    - title: ONTAP Selectの詳細
       url: "/concept_ots_overview.html"
     - title: ONTAP Select 導入
       url: "/concept_ots_deploy.html"
@@ -44,8 +44,8 @@ sidebar:
         url: "/concept_usecase_robo.html"
       - title: プライベートクラウドとデータセンター
         url: "/concept_usecase_private_cloud.html"
-      - title: MetroCluster SDS
-        url: "/concept_usecase_mc_sds.html"
+      - title: データ保護と効率性
+        url: "/concept-data-protection-and-efficiency.html"
     - title: 用語集
       url: "/concept_terminology.html"
   - title: 計画
@@ -102,7 +102,7 @@ sidebar:
         url: "/concept_lic_cp_serial_number.html"
       - title: 制限事項
         url: "/concept_lic_cp_restrictions.html"
-      - title: 容量プールと大容量階層の比較
+      - title: 容量プールと容量階層の比較
         url: "/concept_lic_cp_compare_ct.html"
       - title: 利点のまとめ
         url: "/concept_lic_cp_benefits.html"

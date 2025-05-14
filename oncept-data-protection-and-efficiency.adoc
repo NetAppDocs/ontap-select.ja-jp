@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: concept_usecase_mc_sds.html 
+permalink: concept-data-protection-and-efficiency.html 
 keywords: ontap select, metrocluster software defined storage, mc sds storage 
 summary: ONTAP Select MetroCluster SDS は、強化された保護機能とコスト効率の高い実装を提供します。 
 ---
-= ONTAP Select MetroCluster Software-Defined Storage
+= ONTAP Selectのデータ保護と効率性の詳細
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,19 @@ summary: ONTAP Select MetroCluster SDS は、強化された保護機能とコ�
 
 
 [role="lead"]
-ONTAP Select MetroCluster SDS は、強化された保護機能とコスト効率の高い実装を提供します。
+ONTAP Selectは、ONTAPストレージソフトウェアを基盤として構築されており、可用性に優れたシェアードナッシング型スケールアウトアーキテクチャにより、エンタープライズストレージサービスを効率的に提供します。1ノード、2ノード、4ノード、6ノード、8ノードのソリューションを導入でき、ノードあたり最大400TBの物理容量を備えたNFS、SMB / CIFS、iSCSI接続のストレージをサポートします。重複排除機能と圧縮機能が標準搭載されているため、実効容量を増やしてストレージコストを削減できます。スケールアウトアーキテクチャにより、高可用性と無停止でのデータ移動が可能になり、ロードバランシングやハードウェアの保守が可能になります。
+
+
+
+== Snapshotによるデータ保護
+
+ONTAP Selectには、SnapshotやSnapMirrorソフトウェアなどのデータ保護機能が搭載されています。オンプレミス、リモートサイト、クラウドのいずれにあっても、データを他のONTAPストレージにすばやくレプリケートできます。データを迅速にリカバリする必要がある場合、SnapRestoreソフトウェアでは、ローカルSnapshotを使用して、容量やファイル数に関係なく、ファイルシステム全体またはデータボリュームを数秒でリカバリできます。
+
+
+
+== MetroCluster ソフトウェア・デファインド・ストレージ
+
+ONTAP Select MetroClusterのSoftware-Defined Storage（SDS）は、保護を強化し、対費用効果の高い導入を実現します。
 
 2 ノードクラスタは、一定の最小要件が満たされている場合、 2 つの場所に拡張できます。このアーキテクチャは、ハードウェアベースの MetroCluster と（ハードウェア定義またはソフトウェア定義の）単一のデータセンタークラスタ間に適しています。ONTAP Select MetroCluster SDS の要件では、 Software-Defined Storage ソリューションの一般的な柔軟性に加え、 Software-Defined Storage ソリューションとハードウェアベースの MetroCluster SDS との違いが強調されています。独自のハードウェアは必要ありません。
 
@@ -22,11 +34,9 @@ MetroCluster とは異なり、 ONTAP Select は既存のネットワークイ�
 
 2 ノード HA 構成では、フェイルオーバー中にアクティブノードを適切に識別し、ネットワークパーティション内で両方のノードが独立してアクティブのままになるスプリットブレインシナリオを回避するためにメディエーターが必要です。この処理は、以前にも提供されていた、通常の 2 ノード HA 構成と同じです。サイト障害時に適切な保護とフェイルオーバーを行うには、 2 つの HA ノードとは異なるサイトにメディエーターを配置する必要があります。メディエーターと各 ONTAP Select ノードの間で許容される最大レイテンシは 125 ミリ秒です。
 
-この解決策 を使用することで、企業のお客様は、コモディティハードウェア上で Software-Defined Storage 解決策 の柔軟性を確実に活用できます。データはエンタープライズクラスの RPO ゼロ解決策 で保護されているため、安心して導入できます。
-
 ONTAP Select MetroCluster SDS には、次のような利点があります。
 
-* MetroCluster SDS は、 ONTAP Select 向けに、別の側面（データセンターからデータセンターへ）から保護機能を提供します。お客様は、 Software-Defined Storage と ONTAP のあらゆるメリットを活用できるだけでなく、この追加の保護機能を活用できるようになりました。
+* MetroCluster SDS は、 ONTAP Select 向けに、別の側面（データセンターからデータセンターへ）から保護機能を提供します。Software-Defined StorageとONTAPのすべてのメリットを活用できるだけでなく、この追加の保護機能も活用できるようになりました。
 * MetroCluster SDS は、 RPO ゼロと自動フェイルオーバーにより、ビジネスクリティカルなデータ保護を実現します。データストレージとアプリケーションアクセスポイントの両方が、自動的に正常に稼働しているデータセンターまたはノードに切り替わります。このとき、 IT 担当者の関与は一切ありません。
 * MetroCluster SDS は対費用効果に優れています。既存のネットワークインフラを活用して HA ペア間の耐障害性を拡張できるため、ハードウェアを追加する必要がありません。また、同じクラスタ内で、アクティブ / アクティブのデータアクセスとデータセンターの冗長性を実現します。
 
@@ -36,3 +46,6 @@ ONTAP Select MetroCluster SDS には、次のような利点があります。
 image:MCSDS_01.jpg["DAS 上に構築されたプライベートクラウド"]
 
 ベストプラクティスやその他の要件については、セクションを参照してください link:concept_ha_config.html#two-node-ha-versus-multi-node-ha["2 ノード HA とマルチノード HA"] および link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices["2 ノードストレッチ HA （ MetroCluster SDS ）のベストプラクティス"]。
+
+.関連情報
+link:reference_lic_ontap_features.html["ONTAP SelectでのONTAP機能のサポート"]

@@ -50,7 +50,7 @@ ONTAP Selectでは、追加のソフトウェアパッケージがいくつか�
 
 NOTE: Linuxサーバのインストール時にソフトウェアを選択するために仮想ホストを選択した場合は、必要なパッケージの一部がすでにインストールされている可能性があります。ソースコードからopenvswitchパッケージをインストールする必要がある場合があります。詳細については、 link:https://docs.openvswitch.org/en/latest/intro/install/general/["Open vSwitchのドキュメント"^]。
 
-必要なパッケージおよびその他の設定要件の詳細については、を参照してくださいlink:https://imt.netapp.com/matrix/#welcome["NetApp Interoperability Matrix Tool で確認できます"^]。
+必要なパッケージおよびその他の設定要件の詳細については、を参照してくださいlink:https://imt.netapp.com/matrix/#welcome["Interoperability Matrix Tool"^]。
 
 .ストレージプールの設定
 ONTAP Selectストレージプールは、基盤となる物理ストレージを抽象化する論理データコンテナです。ONTAP Selectが導入されているKVMホストでストレージプールを管理する必要があります。

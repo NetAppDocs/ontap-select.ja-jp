@@ -53,7 +53,7 @@ ONTAP Select クラスタを導入したら、ハードウェアベースの ONT
 * Virtual Storage Console for VMware vSphere
 
 
-サポートされているクライアントソフトウェアのバージョンを確認するには、 link:https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^]。クライアントソフトウェアが ONTAP 9 をサポートしている場合は、同じバージョンが ONTAP Select でもサポートされます。
+クライアントソフトウェアのサポートされているバージョンを確認するには、を参照してlink:https://mysupport.netapp.com/matrix/["Interoperability Matrix Tool"^]ください。クライアントソフトウェアが ONTAP 9 をサポートしている場合は、同じバージョンが ONTAP Select でもサポートされます。
 
 
 NOTE: SnapCenter と対応するプラグインを使用するには、サーバベースのライセンスが必要です。SnapCenter プラグインのストレージシステム単位のライセンスは、現在 ONTAP Select ではサポートされていません。
