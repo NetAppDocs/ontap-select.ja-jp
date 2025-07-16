@@ -121,7 +121,11 @@ sidebar:
     - title: インストール前のチェックリスト
       entries:
       - title: ホスト準備チェックリスト
-        url: "/reference_chk_host_prep.html"
+        entries:
+        - title: KVMホストのチェックリスト
+          url: "/kvm-host-configuration-and-preparation-checklist.html"
+        - title: ESXiホストのチェックリスト
+          url: "/esxi-host-configuration-and-preparation-checklist.html"
       - title: Deploy ユーティリティの必要な情報
         url: "/reference_chk_deploy_req_info.html"
       - title: ONTAP Select に必要な情報

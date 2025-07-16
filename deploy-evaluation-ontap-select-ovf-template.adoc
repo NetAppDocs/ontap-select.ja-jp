@@ -32,7 +32,7 @@ VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP 
 
 image:prepare_ESXi_host_requirements.png["ESXiホストを準備するための要件"]
 
-ホスト構成オプションの詳細については、を参照してくださいlink:reference_chk_host_prep.html["ONTAP Selectインストールマニュアル"]。
+ホスト構成オプションの詳細については、を参照してくださいlink:esxi-host-configuration-and-preparation-checklist.html["ONTAP Selectインストールマニュアル"]。
 
 
 

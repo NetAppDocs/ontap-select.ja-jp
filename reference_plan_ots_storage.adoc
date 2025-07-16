@@ -86,7 +86,7 @@ NOTE: ハードウェア RAID コントローラがある場合は、を参照�
 
 === KVM固有の要件
 
-また、特定のソフトウェアパッケージ設定要件もあります。を参照してください link:https://docs.netapp.com/us-en/ontap-select/reference_chk_host_prep.html#kvm-hypervisor["Linuxサーバの準備"] を参照してください。
+また、特定のソフトウェアパッケージ設定要件もあります。参照link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server["Linuxサーバーの準備"]詳細については、手順を参照してください。
 
 KVMに対するメディアの期待:: 使用するSSDフラッシュストレージデバイスは、次の追加要件を満たしている必要があります。
 +

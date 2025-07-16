@@ -18,33 +18,39 @@ ONTAP Select Deploy 管理ユーティリティに付属のコマンドライン
 
 
 
-== 作業を開始する前に
+== ステップ1: 展開の準備
 
 ハイパーバイザーでONTAP Selectクラスタを作成する前に、必要な準備について理解しておく必要があります。
 
+.手順
+. ONTAP Selectノードにストレージを接続する準備
++
+[role="tabbed-block"]
+====
+.ハードウェアRAID
+--
+ローカルハードウェアRAIDコントローラを使用する場合は、少なくとも1つのデータストア（ESX）または1つのlink:reference_chk_host_prep.html#create-storage-pool["ストレージプール（KVM）"]各ノードでは、システム データだけでなく、ルートとデータ集約も保存されます。ONTAP Select ノードの設定の一環として、ストレージプールを接続する必要があります。
+
+--
+.ソフトウェア RAID
+--
+ソフトウェアRAIDを使用する場合は、少なくとも1つのデータストア（ESX）または1つのlink:reference_chk_host_prep.html#create-storage-pool["ストレージプール（KVM）"]システム データ用であり、ルートおよびデータ アグリゲート用に SSD ドライブが使用可能であることを確認します。ONTAP Select ノードの設定の一環として、ストレージプールとディスクを接続する必要があります。
+
+--
+====
+. 使用可能な ONTAP Select バージョン
++
+Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンのONTAP Selectを使用してクラスタを導入する場合は、まずlink:task_cli_deploy_image_add.html["ONTAP Selectイメージを追加する"]デプロイインスタンスに追加します。
+
+. 本番環境用のライセンスONTAP Select
++
+本番環境に ONTAP Select クラスタを導入する前に、ストレージ容量ライセンスを購入し、関連するライセンスファイルをダウンロードする必要があります。あなたはできるlink:concept_lic_production.html["各ノードのストレージにライセンスを付与する"] _Capacity Tiers_ モデルを使用するか、_Capacity Pools_ モデルを使用して共有プールのライセンスを取得します。
 
 
-=== ONTAP Selectノードにストレージを接続する準備
-
-ローカルのハードウェア RAID コントローラを使用する場合は、システムデータ用およびルートアグリゲートとデータアグリゲート用に各ノードに少なくとも 1 つのストレージプールを作成する必要があります。ONTAP Select ノードの設定の一環として、ストレージプールを接続する必要があります。
-
-ソフトウェア RAID を使用する場合は、システムデータ用のストレージプールを作成し、 SSD ドライブがルートアグリゲートおよびデータアグリゲートに使用可能であることを確認する必要があります。ONTAP Select ノードの設定の一環として、ストレージプールとディスクを接続する必要があります。
 
 
 
-=== 使用可能な ONTAP Select バージョン
-
-Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンの ONTAP Select を使用してクラスタを導入する場合は、まず ONTAP Select イメージを Deploy インスタンスに追加する必要があります。を参照してください link:task_cli_deploy_image_add.html["導入するONTAP Selectイメージの追加"] を参照してください。
-
-
-
-=== 本番環境用のライセンスONTAP Select
-
-本番環境に ONTAP Select クラスタを導入する前に、ストレージ容量ライセンスを購入し、関連するライセンスファイルをダウンロードする必要があります。各ノードのストレージのライセンスを設定するには_Capacity Tiers_modelを使用し、共有プールのライセンスを設定するには_Capacity Pools_modelを使用します。
-
-
-
-== ライセンスファイルのアップロードと登録
+== ステップ2: ライセンスファイルをアップロードして登録する
 
 ストレージ容量を含むライセンスファイルを取得したら、ライセンスを含むファイルを Deploy 仮想マシンにアップロードして登録する必要があります。
 
@@ -68,20 +74,24 @@ exit
 . SSH を使用して、管理者アカウントで Deploy ユーティリティの CLI にサインインします。
 . ライセンスを登録します。
 +
-「 license add -file-name filename 」と入力します
-
+[source, cli]
+----
+license add -file-name <file_name>
+----
 +
 プロンプトが表示されたら、管理者アカウントのパスワードを入力します。
 
 . システムのライセンスを表示して、ライセンスが正しく追加されたことを確認します。
 +
-「 license show 」を参照してください
+[source, cli]
+----
+license show
+----
 
 
 
 
-
-== ハイパーバイザーホストの追加
+== ステップ3: ハイパーバイザーホストを追加する
 
 ONTAP Select ノードを実行する各ハイパーバイザーホストを登録する必要があります。
 
@@ -92,15 +102,15 @@ ONTAP Select ノードを実行する各ハイパーバイザーホストを登�
 ONTAP Selectノードを実行するハイパーバイザーホストを登録する必要があります。この一環として、Deploy管理ユーティリティはKVMホストに対して認証します。
 
 .このタスクについて
-複数のハイパーバイザーホストが必要な場合は、この手順を使用して各ホストを追加します。
+複数のハイパーバイザー ホストが必要な場合は、この手順を使用して各ホストを追加します。
 
 .手順
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
 . ホストを登録します。
 +
-[source, asciidoc]
+[source, cli]
 ----
-`host register -name <FQDN|IP> -hypervisor-type KVM -username KVM_USERNAME`
+host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
 ----
 +
 出力例
@@ -115,7 +125,7 @@ host register -name 10.234.81.14 -hypervisor-type KVM -username root
 
 . ホストの状態を表示し、認証されていることを確認します。
 +
-[source, asciidoc]
+[source, cli]
 ----
 host show -name <FQDN|IP> -detailed
 ----
@@ -141,8 +151,10 @@ vCenter で管理されているホストを登録する前に、 vCenter Server
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
 . ホストが vCenter サーバで管理されている場合は、 vCenter アカウントのクレデンシャルを追加します。
 +
-credential add -hostname <fqdn|ip> -type vcenter -username vcenter _username `
-
+[source, cli]
+----
+credential add -hostname <FQDN|IP> -type vcenter -username <vcenter_username>
+----
 +
 出力例
 
@@ -152,9 +164,18 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 ....
 . ホストを登録します。
 +
-** vCenter で管理されていないスタンドアロンホストを登録します。ホスト登録名 <fqdn|ip> ハイパーバイザータイプ esx-username esx_userName'
+** vCenterで管理されていないスタンドアロンホストを登録します。
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type ESX -username <esx_username>
+----
 ** vCenterで管理されているホストを登録します。
-`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>
+----
 +
 出力例
 
@@ -164,10 +185,12 @@ host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.com
 ....
 
 
-. ホストの状態を表示し、認証済みであることを確認します。
+. ホストの状態を表示し、認証されていることを確認します。
 +
-host show -name <fqdn|ip> -detailed ’
-
+[source, cli]
+----
+host show -name <FQDN|IP> -detailed
+----
 +
 出力例
 
@@ -181,12 +204,12 @@ host show -name 10.234.81.14 -detailed
 ====
 
 
-== ONTAP Select クラスタを作成および設定する
+== ステップ4: ONTAP Selectクラスタを作成して設定する
 
 ONTAP Select クラスタを作成し、設定する必要があります。クラスタを設定したら、個々のノードを設定できます。
 
 .作業を開始する前に
-クラスタに含まれるノード数と、関連付けられている設定情報を決定する必要があります。
+クラスターに含まれるノードの数を決定し、関連する構成情報を取得します。
 
 .このタスクについて
 ONTAP Select クラスタを作成すると、 Deploy ユーティリティは、指定したクラスタ名とノード数に基づいてノード名を自動的に生成します。Deploy は一意のノード識別子も生成します。
@@ -195,8 +218,10 @@ ONTAP Select クラスタを作成すると、 Deploy ユーティリティは�
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
 . クラスタを作成します。
 +
-cluster create -name clustername -node-count nodes を指定します
-
+[source, cli]
+----
+cluster create -name <cluster_name> -node-count <count>
+----
 +
 出力例
 
@@ -206,8 +231,10 @@ cluster create -name test-cluster -node-count 1
 ....
 . クラスタを設定します。
 +
-cluster modify -name clustername -mgmt ip ip_address -netmask netmask gateway ip_address -dns-servers <fqdn|ip>_list -dns-domains domain_list
-
+[source, cli]
+----
+cluster modify -name <cluster_name> -mgmt-ip <IP_address> -netmask <netmask> -gateway <IP_address> -dns-servers <FQDN|IP>_LIST -dns-domains <domain_list>
+----
 +
 出力例
 
@@ -218,18 +245,22 @@ cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 ....
 . クラスタの設定と状態を表示します。
 +
-cluster show -name clustername -detailed
+[source, cli]
+----
+cluster show -name <cluster_name> -detailed
+----
 
 
 
 
-
-== ONTAP Selectノードの設定
+== ステップ5: ONTAP Selectノードを構成する
 
 ONTAP Select クラスタ内の各ノードを設定する必要があります。
 
 .作業を開始する前に
-ノードの設定情報が必要です。Deployユーティリティで、大容量階層ライセンスファイルをアップロードしてインストールする必要があります。
+* ノードの構成情報があることを確認します。
+* 容量層または容量プールのライセンス ファイルが、展開ユーティリティでアップロードされ、インストールされていることを確認します。
+
 
 .このタスクについて
 この手順 を使用して各ノードを設定する必要があります。この例では、ノードに大容量階層ライセンスが適用されています。
@@ -238,9 +269,16 @@ ONTAP Select クラスタ内の各ノードを設定する必要があります�
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
 . クラスタノードに割り当てられた名前を特定します。
 +
-'node show -cluster-name clustername
-
-. ノードを選択し、基本設定を実行します。「 node modify -name nodename -cluster-name clustername -host-name <fqdn|ip> -license-serial -number -instance -type type -passthrough-disks false 」
+[source, cli]
+----
+node show -cluster-name <cluster_name>
+----
+. ノードを選択し、基本的な設定を実行します。
++
+[source, cli]
+----
+node modify -name <node_name> -cluster-name <cluster_name> -host-name <FQDN|IP> -license-serial-number <number> -instance-type TYPE -passthrough-disks false
+----
 +
 出力例
 
@@ -250,15 +288,17 @@ node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.8
 -license-serial-number 320000nnnn -instance-type small -passthrough-disks false
 ....
 +
-ノードの RAID 設定は、 _passthrough-pdisks_parameter で示されます。ローカルハードウェア RAID コントローラを使用している場合は、この値を false に設定する必要があります。ソフトウェア RAID を使用している場合は、この値が true である必要があります。
+ノードの RAID 設定は、 _passthrough-pdisks_parameter で示されます。ローカルハードウェアRAIDコントローラを使用している場合、この値は「false」にする必要があります。ソフトウェアRAIDを使用している場合、この値は「true」にする必要があります。
 
 +
 ONTAP Selectノードには大容量階層ライセンスが使用されます。
 
 . ホストで使用可能なネットワーク設定を表示します。
 +
-host network show -host-name <fqdn|ip> -detailed ’
-
+[source, cli]
+----
+host network show -host-name <FQDN|IP> -detailed
+----
 +
 出力例
 
@@ -268,10 +308,25 @@ host network show -host-name 10.234.81.14 -detailed
 ....
 . ノードのネットワーク設定を実行します。
 +
-node modify -name nodename -cluster-name clustername -mgmt -ip ip-management-networks network_name network_name network_name network_name -internal-network network_name
-
+[role="tabbed-block"]
+====
+.ESXiホスト
+--
+[source, cli]
+----
+node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-networks <network_name> -data-networks <network_name> -internal-network <network_name>
+----
+--
+.KVMホスト
+--
+[source, cli]
+----
+node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-vlans <vlan_id> -data-vlans <vlan_id> -internal-vlans <vlad_id>
+----
+--
+====
 +
-シングルノードクラスタを導入する場合は、内部ネットワークは必要なく、 -internal-network を削除する必要があります。
+単一ノード クラスターを展開する場合は、内部ネットワークは必要ないため、「-internal-network」を削除する必要があります。
 
 +
 出力例
@@ -283,8 +338,10 @@ node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.
 ....
 . ノードの設定を表示します。
 +
-node show -name nodename -cluster-name clustername -detailed ’と入力します
-
+[source, cli]
+----
+node show -name <node_name> -cluster-name <cluster_name> -detailed
+----
 +
 出力例
 
@@ -296,12 +353,12 @@ node show -name test-cluster-01 -cluster-name test-cluster -detailed
 
 
 
-== ONTAP Selectノードにストレージを接続
+== ステップ6: ONTAP Selectノードにストレージを接続する
 
-ONTAP Select クラスタ内の各ノードで使用するストレージを設定する必要があります。すべてのノードには、必ず少なくとも1つのストレージプールを割り当てる必要があります。ソフトウェアRAIDを使用する場合は、各ノードに少なくとも1本のディスクドライブを割り当てる必要があります。
+ONTAP Selectクラスタ内の各ノードで使用されるストレージを設定します。すべてのノードには、必ず少なくとも1つのストレージプールを割り当てる必要があります。ソフトウェアRAIDを使用する場合は、各ノードに少なくとも1本のディスクドライブを割り当てる必要があります。
 
 .作業を開始する前に
-ストレージプールはVMware vSphereを使用して作成する必要があります。ソフトウェアRAIDを使用する場合は、使用可能なディスクドライブが少なくとも1本必要です。
+VMware vSphere を使用してストレージ プールを作成します。ソフトウェアRAIDを使用する場合は、使用可能なディスクドライブが少なくとも1本必要です。
 
 .このタスクについて
 ローカルハードウェアRAIDコントローラを使用する場合は、手順1~4を実行する必要があります。ソフトウェアRAIDを使用する場合は、手順1~6を実行する必要があります。
@@ -310,8 +367,10 @@ ONTAP Select クラスタ内の各ノードで使用するストレージを設�
 . 管理者アカウントのクレデンシャルを使用して、SSHを使用してDeployユーティリティのCLIにサインインします。
 . ホストで使用可能なストレージプールを表示します。
 +
-host storage pool show -host-name <fqdn|ip>`
-
+[source, cli]
+----
+host storage pool show -host-name <FQDN|IP>
+----
 +
 出力例
 
@@ -325,10 +384,12 @@ VMware vSphere から使用可能なストレージプールを取得するこ�
 
 . 使用可能なストレージプールを ONTAP Select ノードに接続します。
 +
-'node storage pool attach -name poolname -cluster-name clustername -node-name -capacity-capacity-capacity-limit
-
+[source, cli]
+----
+node storage pool attach -name <pool_name> -cluster-name <cluster_name> -node-name <node_name> -capacity-limit <limit>
+----
 +
-capacity-limit パラメータを指定した場合は、 GB または TB の値を指定します。
+「-capacity-limit」パラメータを含める場合は、値を GB または TB で指定します。
 
 +
 出力例
@@ -341,8 +402,10 @@ node-name test-cluster-01 -capacity-limit 500GB
 ----
 . ノードに接続されているストレージプールを表示します。
 +
-node storage pool show -cluster-name clustername -node-name の形式です
-
+[source, cli]
+----
+node storage pool show -cluster-name <cluster_name> -node-name <node_name>
+----
 +
 出力例
 
@@ -353,8 +416,10 @@ node storage pool show -cluster-name test-cluster -node-name testcluster-01
 ----
 . ソフトウェアRAIDを使用している場合は、使用可能なドライブを接続します。
 +
-「node storage disk attach -node-name -cluster-name clustername -disk list_of drives」のように指定します
-
+[source, cli]
+----
+node storage disk attach -node-name <node_name> -cluster-name <cluster_name> -disks <list_of_drives>
+----
 +
 出力例
 
@@ -365,8 +430,10 @@ node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000
 ----
 . ソフトウェアRAIDを使用している場合は、ノードに接続されているディスクを表示します。
 +
-node storage disk show -node-name nodename -cluster-name clustername
-
+[source, cli]
+----
+node storage disk show -node-name <node_name> -cluster-name <cluster_name>`
+----
 +
 出力例
 
@@ -379,19 +446,21 @@ node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 
 
 
-== ONTAP Select クラスタを導入する
+== ステップ7: ONTAP Selectクラスタを導入する
 
 クラスタとノードを設定したら、クラスタを導入できます。
 
 .作業を開始する前に
-マルチノードクラスタを導入する前に、ネットワーク接続チェッカーを実行して、内部ネットワーク上のクラスタノード間の接続を確認する必要があります。
+ネットワーク接続チェッカーを実行するには、 link:task_adm_connectivity.html["ウェブUI"]またはlink:task_cli_connectivity.html["CLI"]内部ネットワーク上のクラスターノード間の接続を確認します。
 
 .手順
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
 . ONTAP Select クラスタを導入します。
 +
-「 cluster deploy -name clustername 」と入力します
-
+[source, cli]
+----
+cluster deploy -name <cluster_name>
+----
 +
 出力例
 
@@ -405,8 +474,10 @@ cluster deploy -name test-cluster
 
 . クラスタのステータスを表示して、導入が正常に完了したことを確認します。
 +
-cluster show -name clustername
-
+[source, cli]
+----
+cluster show -name <cluster_name>
+----
 
 
 .完了後

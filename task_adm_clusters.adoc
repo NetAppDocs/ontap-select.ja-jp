@@ -4,7 +4,7 @@ permalink: task_adm_clusters.html
 keywords: administer, administering, web, clusters 
 summary: ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。 
 ---
-= ONTAP Select クラスタ
+= ONTAP Selectクラスタの管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
