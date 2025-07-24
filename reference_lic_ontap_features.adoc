@@ -37,8 +37,9 @@ ONTAP Selectでは、次のONTAP機能がサポートされており、デフォ
 * NVMe over TCP
 * ONTAP のマルチテナンシー機能
 * ONTAP S3
-* SnapMirror
 * S3 SnapMirror
+* SnapMirror
+* SnapMirrorクラウド
 * SnapRestore
 * SnapVault
 * Storage VMディザスタリカバリ（SVM DR）

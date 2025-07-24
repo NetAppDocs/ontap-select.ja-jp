@@ -73,7 +73,7 @@ Premium サービスには次の機能があります。
 
 
 
-NOTE: SW-RAID構成でのラージインスタンスタイプまたはNVMeドライブの使用は、Kernel-Based Virtual Machine（KVM）ではサポートされていません。
+NOTE: ソフトウェア RAID 構成での大規模インスタンスタイプの使用は、カーネルベースの仮想マシン (KVM) ではサポートされていません。
 
 
 
@@ -170,10 +170,10 @@ NOTE: SW-RAID構成でのラージインスタンスタイプまたはNVMeドラ
 2+| ソフトウェアタイプ 3+| 説明 
 
 
-2+| ハイパーバイザーのサポート（VMware） 3+| VMware vSphere 7.0GAおよびアップデート1~3C VMware vSphere 8.0GAおよびアップデート1~3 
+2+| ハイパーバイザーのサポート（VMware） 3+| VMware vSphere 8.0GA およびアップデート 1 ～ 3、VMware vSphere 7.0GA およびアップデート 1 ～ 3C 
 
 
-2+| ハイパーバイザーのサポート（KVM） 3+| Red Hat Enterprise Linux 64ビット（KVM）9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6 Rocky Linux（KVM）9および8 
+2+| ハイパーバイザーのサポート（KVM） 3+| Red Hat Enterprise Linux 64 ビット (KVM) 9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.8、8.7、および 8.6 Rocky Linux (KVM) 9.6 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6 
 
 
 2+| 管理ソフトウェア 3+| NetApp Active IQ Unified Manager管理スイートONTAP Select導入ユーティリティSnapCenter（オプション） 

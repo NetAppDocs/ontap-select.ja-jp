@@ -52,6 +52,18 @@ NOTE: Linuxサーバのインストール時にソフトウェアを選択する
 +
 必要なパッケージおよびその他の設定要件の詳細については、を参照してくださいlink:https://imt.netapp.com/matrix/#welcome["Interoperability Matrix Tool"^]。
 
+. NVMe ディスクの PCI パススルーを構成します。
++
+構成でNVMeディスクを使用している場合は、KVMホストからONTAP Selectクラスタ内のローカル接続されたNVMeディスクに直接アクセスできるように、PCIパススルー（DirectPath IO）を設定する必要があります。以下のタスクを実行するには、直接アクセスが必要です。
+
++
+** link:task_chk_nvme_configure.html["NVMeドライブを使用するようにKVMホストを構成する"]
+** link:concept_stor_swraid_local.html["クラスタを展開した後はソフトウェアRAIDを使用する"]
+
+
++
+参照link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/chap-virtualization-pci_passthrough#sect-Virtualization-PCI_passthrough-AI_device_to_a_host["Red Hat ドキュメント"^] KVM ハイパーバイザーの PCI パススルー (DirectPath IO) を構成する方法については、こちらをご覧ください。
+
 . ストレージ プールを構成します。
 +
 ONTAP Selectストレージプールは、基盤となる物理ストレージを抽象化する論理データコンテナです。ONTAP Selectが導入されているKVMホストでストレージプールを管理する必要があります。

@@ -35,15 +35,28 @@ ONTAP Select クラスタを導入するには、 ONTAP Select を実行する�
 
 === ソフトウェアの互換性
 
-ONTAP Select は次のハイパーバイザーに導入できます。
+ONTAP Select は、 KVM および ESXi ハイパーバイザーに導入できます。
 
-* Red Hat Enterprise Linux 8.6、8.7、8.8、9.0、9.1、9.2、9.4、9.5上のKVM
-* Rocky Linux 8.6、8.7、8.8、8.9、9.0、9.1、9.2、9.3、9.4、9.5上のKVM
-* VMware ESXi 7.0 GA（ビルド15849807以降）：7.0 U1、U2、U3Cを含む
-* VMware ESXi 8.0 GA（ビルド20513097）
-* VMware ESXi 8.0 U1（ビルド21495797）
-* VMware ESXi 8.0 U2
+[role="tabbed-block"]
+====
+.KVM の略
+--
+ONTAP Select は、次の KVM ハイパーバイザー バージョンをサポートしています。
+
+* Red Hat Enterprise Linux 9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および 8.6 上の KVM
+* Rocky Linux 9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6 上の KVM
+
+
+--
+.ESXi
+--
+ONTAP Select は、次の ESXi ハイパーバイザー バージョンをサポートしています。
+
 * VMware ESXi 8.0 U3
+* VMware ESXi 8.0 U2
+* VMware ESXi 8.0 U1（ビルド21495797）
+* VMware ESXi 8.0 GA（ビルド20513097）
+* VMware ESXi 7.0 GA (ビルド 15843807 以上) (7.0 U3C、U2、U1 を含む)
 
 
 
@@ -52,6 +65,8 @@ NOTE: VMware でも同じバージョンがサポートされていれば、特�
 
 NOTE: ESXi 6.5 GAおよびESXi 6.7 GAが販売終了ステータスに達しました。これらのバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^]。
 
+--
+====
 
 
 === VMware vCenter およびスタンドアロンの ESXi ホスト
@@ -76,10 +91,7 @@ NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づ
 ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。
 
 .プロセッサ
-サポートされている\'83\'7dイクロプロセッサは、次のとおりです。
-
-* サーバー向けインテル Xeon プロセッサー（を参照 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["インテル Xeon プロセッサー、ウィンドウ = _ ブランク"] 詳細については、
-
+サポートされているマイクロプロセッサには、サーバー向けIntel Xeonプロセッサが含まれます。 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["インテル Xeon プロセッサー、ウィンドウ = _ ブランク"]詳細についてはこちらをご覧ください。
 
 
 NOTE: Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポートされていません。
@@ -87,10 +99,8 @@ NOTE: Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポー�
 .イーサネット構成
 クラスタのサイズに基づいて、サポートされるイーサネット構成がいくつかあります。
 
-[cols="30,35,35"]
+[cols="2,3,3"]
 |===
-
-
 | クラスタサイズ | 最小要件 | スイシヨウヨウケン 
 
 
@@ -110,23 +120,18 @@ NOTE: Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポー�
 
 を参照してください link:concept_lic_platforms.html["プラットフォームのライセンス製品を理解する"] を参照してください。
 
-.小規模
-* CPU コア 6 個以上の物理コアを搭載し、 ONTAP Select 用に 4 個確保されています。
-* メモリは 24GB 以上で、 16GB は ONTAP Select 用にリザーブされています。
-* Standard 、 Premium 、または Premium XL のプラットフォームライセンスが必要です
+[cols="a1,a2,a2,a2"]
+|===
+| ノードサイズ | CPUコア | メモリ | 必要なプラットフォームライセンスの提供 
 
 
-.中
-* 10 個以上の物理コアを搭載し、 8 個の ONTAP Select 用にリザーブされている。
-* 72 GB 以上のメモリと 64 GB の ONTAP Select 用に予約されています
-* Premium または Premium XL のプラットフォームライセンスが必要です
+| 小規模 | 6 個以上の物理コア（うち 4 個はONTAP Select用に予約） | 24GB以上、16GBはONTAP Select用に予約済み | スタンダード、プレミアム、プレミアムXL 
 
 
-.大規模
-* CPU コアは 18 個以上の物理コアを搭載し、 16 個は ONTAP Select 用に予約されています。
-* ONTAP Select 用に予約された 128GB で 136GB 以上のメモリ
-* Premium XL の必要なプラットフォームライセンスです
+| 中 | 10 個以上の物理コア（うち 8 個はONTAP Select用に予約） | 72GB以上、64GBはONTAP Select用に予約済み | プレミアムまたはプレミアムXL 
 
 
+| 大規模 | 18 個以上の物理コア（うち 16 個はONTAP Select用に予約） | 136GB以上、128GBはONTAP Select用に予約済み | Premium XL 
+|===
 
 NOTE: プラットフォームライセンスに基づいて追加のディスクが必要になります。を参照してください link:reference_plan_ots_storage.html["ストレージと RAID"] を参照してください。

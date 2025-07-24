@@ -42,30 +42,21 @@
   <block id="dd95946e5f91bc0eefaa0662bef76947" category="list-text">VMware ESXi バージョン 6.7 以降</block>
   <block id="67217e5ba4d416b3ec157550a03becb2" category="list-text">仕様 1.0 以降に準拠する NVMe デバイス</block>
   <block id="a811207ba17996dc78a58667cd177a13" category="inline-link-macro">ホスト準備チェックリスト</block>
-  <block id="8e0cad5fe5b287e29619e8a65612c78e" category="inline-link-macro">Deploy ユーティリティのインストールに必要な情報</block>
-  <block id="34ff1dcc504899915d2e35990a309b3a" category="inline-link-macro">ONTAP Select のインストールに必要な情報</block>
-  <block id="712a3f9a4e93375653a979ba058c3eb7" category="paragraph">この手順 は、新しい ONTAP Select クラスタを作成する前に実行するように設計されています。手順 を実行して、既存の SW-RAID NVMe クラスタに追加の NVMe ドライブを設定することもできます。この場合、追加の SSD ドライブと同様に、ドライブを設定したあとに、 Deploy を使用してドライブを追加する必要があります。主な違いは、 Deploy は NVMe ドライブを検出してノードをリブートする点です。既存のクラスタに NVMe ドライブを追加する場合、リブートプロセスについて次の点に注意してください。</block>
   <block id="fd5c5757c7f7041a2e15ed74c2c32432" category="list-text">Deploy は、リブートオーケストレーションを処理します。</block>
   <block id="668ad5825e6f031e6f06ed116fda245d" category="list-text">HA のテイクオーバーとギブバックは順序どおりに実行されますが、アグリゲートの再同期には時間がかかることがあります。</block>
   <block id="42487effe01c2291861c49031271a081" category="list-text">シングルノードクラスタの場合、ダウンタイムが発生します。</block>
   <block id="0c6f7899d8537fb7854dbebd827f96ec" category="list-text">ホスト上の *BIOS 設定 * メニューにアクセスして、 I/O 仮想化のサポートを有効にします。</block>
-  <block id="ff1093e5148bed2c1a1afa07042e46fd" category="list-text">ダイレクト I/O 向けインテル（ R ） VT （ VT-d ） * 設定を有効にします。</block>
   <block id="b8a8e221d048b479cfd64e7b3b67ea08" category="inline-image-macro">ソケット構成</block>
   <block id="e95bc1b908ab6027450bc8aa967f3573" category="paragraph"><block ref="e95bc1b908ab6027450bc8aa967f3573" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="81a8899c7bb0834c05ead11a32e230b4" category="list-text">一部のサーバーでは、 * インテル ® ボリューム・マネジメント・デバイス（インテル VMD ） * をサポートしています。有効にすると、使用可能な NVMe デバイスが ESXi ハイパーバイザーに認識されなくなります。続行する前に、このオプションを無効にしてください。</block>
   <block id="262ed6b63bfd7128c7e60d2c221b0f22" category="inline-image-macro">ソケット構成、 VMD</block>
   <block id="cc6e577c260893921bf62096a5e1ed4d" category="paragraph"><block ref="cc6e577c260893921bf62096a5e1ed4d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c7ce3b5be4a31c489adcac6f9afb8103" category="list-text">仮想マシンへのパススルー用に NVMe ドライブを設定します。</block>
-  <block id="18bac6afdf360dfe0f44f753b79d337d" category="list-text">vSphere で、ホスト * Configure * ビューを開き、 * Hardware ： PCI devices * の下の * Edit * をクリックします。</block>
   <block id="e8eaf97de142a452e4a7e36eb009d0dd" category="list-text">ONTAP Select に使用する NVMe ドライブを選択します。</block>
   <block id="64a4204188e36709c65fb1015fcfaee1" category="inline-image-macro">PCI デバイスの可用性を編集します</block>
   <block id="370dbdfb395c46bb7a54ea411f17b869" category="paragraph"><block ref="370dbdfb395c46bb7a54ea411f17b869" category="inline-image-macro-rx" type="image"></block></block>
   <block id="60aec31b3251291387e46c00b45b67d4" category="admonition">ONTAP Select VM システムディスクおよび仮想 NVRAM をホストするには、 NVMe デバイスにもバックアップされている VMFS データストアが必要です。PCI パススルー用に他のドライブを設定する場合は、この目的で少なくとも 1 本の NVMe ドライブを使用可能な状態にしておきます。</block>
-  <block id="6334b1d13625d19f7de068238bbf7055" category="list-text">[OK] をクリックします。選択されたデバイスは、 * Available （保留中） * と表示されます。</block>
-  <block id="0eb8ed19621c3c66eea99364d51e4514" category="list-text">[ ホストの再起動 *] をクリックします。</block>
   <block id="58b365b1fc9581d3607e3b5a4075921b" category="inline-image-macro">このホストをリブートします</block>
   <block id="0628d504dd961620b8a3eba11eb48696" category="paragraph"><block ref="0628d504dd961620b8a3eba11eb48696" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9418a111cd090e22b610dbb1e055a395" category="paragraph">ホストの準備が完了したら、 ONTAP Select Deploy ユーティリティをインストールできます。Deploy ガイド新たに準備したホストに ONTAP Select ストレージクラスタを作成する手順が示されます。このプロセスでは、 Deploy はパススルー用に設定された NVMe ドライブを検出し、 ONTAP データディスクとして使用するドライブを自動的に選択します。必要に応じて、デフォルトの選択を調整できます。</block>
   <block id="9e0dfa4dfcc314b7fbc0b7d29e510db2" category="admonition">ONTAP Select ノードごとに最大 14 個の NVMe デバイスがサポートされます。</block>
   <block id="3c0867afa1e727ea16a03079d27e16e8" category="inline-image-macro">ONTAP Select Deploy クラスタ</block>
   <block id="458ac02aa24064def3c70dac7b54b342" category="paragraph"><block ref="458ac02aa24064def3c70dac7b54b342" category="inline-image-macro-rx" type="image"></block></block>
@@ -969,22 +960,15 @@
   <block id="eebf6ea2ee46e8530008306b8870d60a" category="list-text">ONTAP ルートディスクとデータディスクでは、 SSD または NVMe （ Premium XL ライセンスが必要）ドライブのみがサポートされます。</block>
   <block id="c76e75604936e38a9f0ecb8870e09062" category="list-text">ONTAP Select VM ブートパーティション用に別のシステムディスクが必要です。</block>
   <block id="fa246858b45dc233a0bdb89592ce5ecd" category="list-text">別のディスク（ SSD または NVMe ドライブ）を選択して、システムディスクのデータストアを作成します（ NVRAM 、 Boot / CF カード、コアダンプ、およびマルチノードセットアップのメディエーター）。</block>
-  <block id="28f44037af103f0c930309365629f8ef" category="paragraph">* メモ *</block>
   <block id="e706626e85410ea82090ae7851391f6a" category="list-text">サービスディスクとシステムディスクは同じ意味で使用されています。</block>
-  <block id="f7f94501061697350cc8cc8923e9f01c" category="list-text">サービスディスクとは、 ONTAP Select VM 内で使用される VMDK で、クラスタリング、ブートなどのさまざまな項目を処理するために使用されます。</block>
   <block id="d5286ac0f0cb4a9ebadbf1e2284c0036" category="list-text">サービスディスクは、ホストから見た単一の物理ディスク（総称してサービス / システム物理ディスク）に物理的に配置されます。その物理ディスクには DAS データストアが含まれている必要があります。ONTAP Deploy は、クラスタの導入時に ONTAP Select VM 用にこれらのサービスディスクを作成します。</block>
   <block id="8e06bfc0d19fc77ae0afdb8d915cba44" category="list-text">ONTAP Select システムディスクを複数のデータストアまたは複数の物理ドライブに分割することはできません。</block>
   <block id="ae53f0b18ae561048e9e68da79653a2c" category="list-text">ハードウェア RAID は廃止されていません。</block>
   <block id="60244f3ca85db5e7a5a991f8d7390183" category="section-title">ローカル接続ストレージ向けのソフトウェア RAID 構成</block>
   <block id="44041c5e10d06ec4fea2969c916c19d5" category="paragraph">ソフトウェア RAID を使用する場合は、ハードウェア RAID コントローラがないことが理想的ですが、システムに既存の RAID コントローラがある場合は、次の要件に従う必要があります。</block>
-  <block id="53fb23810df5a40d55b84f003ecfe715" category="list-text">ハードウェア RAID コントローラを無効にして、ディスクがシステム（ JBOD ）で直接認識できるようにする必要があります。この変更は通常、 RAID コントローラの BIOS で行うことができます</block>
-  <block id="2c1d0dc8c738fb8cd53919ff88936761" category="list-text">または、ハードウェア RAID コントローラが SAS HBA モードになっている必要があります。たとえば、一部の BIOS 設定では、 RAID に加えて「 AHCI 」モードが許可されており、これを選択すると JBOD モードを有効にできます。これによりパススルーが有効になり、物理ドライブがホスト上と同じように認識されます。</block>
-  <block id="f91c8d369d9bc5534cc65fdd0cf87f50" category="paragraph">コントローラでサポートされるドライブの最大数によっては、追加のコントローラが必要になる場合があります。SAS HBA モードでは、速度 6Gb/ 秒以上の IO コントローラ（ SAS HBA ）がサポートされていることを確認してください。ただし、ネットアップが推奨するのは速度 12Gbps です。</block>
-  <block id="7236710018f688fcbfb73a07698e1dc0" category="paragraph">他のハードウェア RAID コントローラモードや構成はサポートされていません。たとえば、一部のコントローラは、ディスクのパススルーを意図的に有効にする RAID 0 のサポートを許可していますが、望ましくない結果が生じる可能性があります。サポートされる物理ディスクのサイズ（ SSD のみ）は 200GB~16TB です。</block>
   <block id="7c075be1e0db241c27816a229098fd87" category="admonition">管理者は、 ONTAP Select VM で使用されているドライブを追跡し、ホスト上のドライブが誤って使用されないようにする必要があります。</block>
   <block id="cf3ece53165fb12e6a62c8c31bb10b74" category="section-title">ONTAP Select の仮想ディスクと物理ディスク</block>
   <block id="047a82130a722cc87d04ce1c3c768e41" category="paragraph">ハードウェア RAID コントローラを使用する構成では、 RAID コントローラによって物理ディスクの冗長性が提供されます。ONTAP Select には、 ONTAP 管理者がデータアグリゲートを設定できる 1 つ以上の VMDK が表示されます。これらの VMDK は RAID 0 形式でストライピングされます。 ONTAP ソフトウェア RAID の使用は冗長で非効率、かつハードウェアレベルでの耐障害性のために効果的であるためです。さらに、システムディスクに使用される VMDK は、ユーザデータの格納に使用される VMDK と同じデータストアに配置されます。</block>
-  <block id="6a13d03cae29f356b7fc6b0917986685" category="paragraph">ソフトウェア RAID を使用する場合、 ONTAP Deploy は、 NVMe 用の一連の仮想ディスク（ VMDK ）と物理ディスクの raw デバイスマッピング（ RDM ）を ONTAP Select に提供します。また、 NVMe 用のパススルーデバイスまたは DirectPath IO デバイスもに提供します。</block>
   <block id="c1aafe133c0b3ba98838fb81849a7116" category="paragraph">次の図では、この関係を詳しく説明し、特に、 ONTAP Select VM 内部で使用される仮想ディスクと、ユーザデータの格納に使用される物理ディスクの違いを示します。</block>
   <block id="cef8adb4c866583d14e938aa050f98d8" category="paragraph">* ONTAP Select ソフトウェア RAID: 仮想ディスクと RDM* の使用</block>
   <block id="9c6ce597c0c93e3268f8d2583b8cb7f0" category="inline-image-macro">ONTAP Select ソフトウェア RAID ：仮想ディスクと RDM の使用</block>
@@ -994,35 +978,27 @@
   <block id="538c97540e657f23b7d18dc28e89ce28" category="paragraph"><block ref="538c97540e657f23b7d18dc28e89ce28" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6fc33fd5fc34cd4d0e1c573fe07dbfc6" category="paragraph">システムディスク（ VMDK ）は、同じ物理ディスク上の同じデータストア内にあります。仮想 NVRAM ディスクには、高速で耐久性の高いメディアが必要です。したがって、 NVMe データストアと SSD タイプのデータストアのみがサポートされます。NVMe ドライブをデータに使用する場合は、パフォーマンス上の理由からシステムディスクも NVMe デバイスにする必要があります。All NVMe 構成のシステムディスクに適しているのは、 Intel Optane カードです。</block>
   <block id="2171a187e31b22b36301174d9bf05b3a" category="admonition">現在のリリースでは、 ONTAP Select システムディスクを複数のデータストアまたは複数の物理ドライブに分割することはできません。</block>
-  <block id="db287db693103f0eb0bc0980a4f1a354" category="paragraph">各データディスクは、小規模なルートパーティション（ストライプ）と 2 つの同一サイズのパーティションという 3 つの部分に分割され、 ONTAP Select VM 内に 2 つのデータディスクが作成されます。シングルノードクラスタと HA ペアのノードの次の図に示すように、パーティションは Root Data Data （ RD2 ）スキーマを使用します。</block>
-  <block id="dca5b62211054283d4211aef3e88f4c8" category="paragraph">「 P 」はパリティ・ドライブを示します。「 DP 」はデュアル・パリティ・ドライブを表し、「 S 」はスペア・ドライブを表します。</block>
   <block id="f318527ee8916e5ca47f3d5ed9945b54" category="paragraph">* シングルノードクラスタ用の RDD ディスクパーティショニング *</block>
   <block id="fc8e2c1dda0465d080cba6462209023c" category="inline-image-macro">シングルノードクラスタの RDD ディスクパーティショニング</block>
   <block id="7ac31542e221cec8982a853b92968209" category="paragraph"><block ref="7ac31542e221cec8982a853b92968209" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6bf481156f28eb413de2a86da5c02655" category="paragraph">* マルチノードクラスタ（ HA ペア）の RDD ディスクパーティショニング *</block>
   <block id="0d705f093e6a9c502f09f0101718b722" category="inline-image-macro">マルチノードクラスタ（ HA ペア）の RDD ディスクパーティショニング</block>
   <block id="87b7be5aa608878acc67090d7376b040" category="paragraph"><block ref="87b7be5aa608878acc67090d7376b040" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b22bc536dec106d0fd23eb107a048c4c" category="paragraph">ONTAP ソフトウェア RAID は、 RAID タイプとして RAID 4 、 RAID-DP 、および RAID-TEC をサポートしています。これらは、 FAS プラットフォームと AFF プラットフォームで使用される RAID 構成と同じです。ルートプロビジョニング ONTAP Select では、 RAID 4 と RAID-DP のみがサポートされます。データアグリゲートに RAID-TEC を使用する場合、全体の保護は RAID-DP になります。ONTAP Select HA は、各ノードの構成を他のノードにレプリケートするシェアードナッシングアーキテクチャを使用します。つまり、各ノードは、ルートパーティションと、そのピアのルートパーティションのコピーを格納する必要があります。データディスクにはルートパーティションが 1 つあるため、最小データディスク数は ONTAP Select ノードが HA ペアの一部かどうかによって異なります。</block>
   <block id="6c1c3b52b9fafd2100a63b937535e0f3" category="paragraph">シングルノードクラスタの場合、すべてのデータパーティションを使用してローカル（アクティブ）データが格納されます。HA ペアの一部であるノードでは、 1 つのデータパーティションを使用してそのノードのローカル（アクティブ）データが格納され、 2 つ目のデータパーティションを使用して HA ピアのアクティブデータがミラーリングされます。</block>
   <block id="aa91cf53bb1527f525c6fdf50ca815d5" category="section-title">パススルー（ DirectPath IO ）デバイス vs.RDM （ raw デバイスマップ）</block>
-  <block id="b22e6426b8ceb501eb1ce0d225e63b38" category="paragraph">VMware ESX では、 NVMe ディスクを Raw デバイスマップとしてサポートしていません。ONTAP Select で NVMe ディスクを直接制御するには、 ESX で NVMe ドライブがパススルーデバイスとして設定されている必要があります。NVMe デバイスをパススルーデバイスとして設定するには、サーバ BIOS でサポートが必要であり、システム停止が伴うため、 ESX ホストのリブートが必要になることに注意してください。さらに、 ESX ホストあたりの最大パススルーデバイス数は 16 です。ただし、 ONTAP Deploy ではこれが 14 に制限されています。この ONTAP Select ノードあたりの上限は 14 個です。つまり、すべての NVMe 構成で、容量を犠牲にして非常に高い IOPS 密度（ IOPS/TB ）が実現します。また、ストレージ容量の大きいハイパフォーマンス構成が求められる場合は、大容量の ONTAP Select VM 、システムディスク用の Intel Optane カード、データストレージ用の公称数の SSD ドライブを推奨します。</block>
   <block id="7a4bd36022e514de0f12d5bae592d99d" category="admonition">NVMe のパフォーマンスを最大限に引き出すには、 ONTAP Select VM のサイズを大きくすることを検討します。</block>
-  <block id="7bc139a0138c6067c327337cb182f8e0" category="paragraph">パススルーデバイスと RDM には、さらに違いがあります。RDM は実行中の VM にマッピングできます。パススルーデバイスには VM のリブートが必要です。つまり、 NVMe ドライブの交換や容量拡張（ドライブの追加）用の手順 では、 ONTAP Select VM をリブートする必要があります。ドライブの交換と容量拡張（ドライブの追加）処理は、 ONTAP Deploy のワークフローによって実行されます。ONTAP Deploy は、シングルノードクラスタの ONTAP Select リブートおよび HA ペアのフェイルオーバー / フェイルバックを管理します。ただし、 SSD データドライブを使用する（ ONTAP Select のリブートやフェイルオーバーは不要）と NVMe データドライブを使用する（ ONTAP Select のリブートやフェイルオーバーが必要）の違いに注意する必要があります。</block>
   <block id="bfe1db46b73b47c7ae447ac33fb69e45" category="section-title">物理ディスクと仮想ディスクのプロビジョニング</block>
   <block id="0f2dd21a47272055ac8bb22a37ed1c81" category="paragraph">より効率的なユーザエクスペリエンスを提供するため、 ONTAP Deploy は指定されたデータストア（物理システムディスク）からシステム（仮想）ディスクを自動的にプロビジョニングし、それらを ONTAP Select VM に接続します。この処理は、 ONTAP Select VM がブートできるようにするため、初期セットアップ時に自動的に実行されます。RDM はパーティショニングされ、ルートアグリゲートが自動的に構築されます。ONTAP Select ノードが HA ペアの一部である場合、データパーティションはローカルストレージプールとミラーストレージプールに自動的に割り当てられます。この割り当ては、クラスタ作成処理とストレージ追加処理の両方で自動的に行われます。</block>
   <block id="cee5e25191b9dce69623e9ea9da32f76" category="paragraph">ONTAP Select VM のデータディスクは基盤となる物理ディスクに関連付けられているため、物理ディスクを多くして構成を作成するとパフォーマンスに影響します。</block>
   <block id="92697c9f70bfac874ab426e8b9d6fdf7" category="admonition">ルートアグリゲートの RAID グループタイプは、使用可能なディスクの数によって異なります。適切な RAID グループタイプは、 ONTAP Deploy によって選択されます。ノードに十分なディスクが割り当てられている場合は RAID-DP が使用され、そうでない場合は RAID-4 ルートアグリゲートが作成されます。</block>
-  <block id="699c39c6bac177f440d7e25a11eb2a32" category="paragraph">FAS システムや AFF システムと同様に、既存の RAID グループに追加できるのは、容量が同等以上のドライブのみです。容量が大きいドライブは、適切なサイズに調整されます。新しい RAID グループを作成する場合は、アグリゲート全体のパフォーマンスが低下しないように、新しい RAID グループのサイズが既存の RAID グループのサイズと一致する必要があります。</block>
   <block id="a44033dbfcef3014d1535041b262038f" category="paragraph">ONTAP Select ディスクには通常、 NET x.y というラベルが付けられますディスク UUID は、次の ONTAP コマンドを使用して取得できます。</block>
   <block id="82130f34a60b2de00ac2e3139e13fb5b" category="inline-image-macro">ONTAP Select ディスクと対応する ESX ディスクの照合</block>
   <block id="74a7c8af4aa4bac9725ff850beb40b8d" category="paragraph"><block ref="74a7c8af4aa4bac9725ff850beb40b8d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2a65a90733b904bc599f431b2bacdf4b" category="paragraph">ESXi シェルで、次のコマンドを入力して、特定の物理ディスク（ naa.unique-id で識別）の LED を点滅させることができます。</block>
   <block id="b318e3ce8108059983a7b332b8d1047f" category="section-title">ソフトウェア RAID 使用時に複数のドライブ障害が発生した場合</block>
   <block id="adde1f59e221bd8bc0f7b097114c5b3a" category="paragraph">場合によっては、複数のドライブで同時に障害が発生する状況が発生することがあります。システムの動作は、アグリゲート RAID 保護と、障害が発生したドライブの数によって異なります。</block>
   <block id="22e734a7b15ad33b4b32a5a36e1625e5" category="paragraph">1 つの RAID-TEC 4 アグリゲートは、 1 つのディスク障害、 RAID-DP アグリゲートは 2 つのディスク障害、 1 つの RAID 4 アグリゲートは 3 つのディスク障害が発生しても停止することはありません。</block>
   <block id="406158272ee9bca8ac0cb6fb1cbda719" category="paragraph">障害ディスクの数が RAID タイプでサポートされている障害の最大数よりも少なく、スペアディスクが使用可能な場合は、再構築プロセスが自動的に開始されます。スペアディスクを使用できない場合、アグリゲートは、スペアディスクが追加されるまでデグレード状態のデータを提供します。</block>
   <block id="7660ce9a6e2c4e7dfc2fdec1d7cba702" category="paragraph">障害ディスクの数が、 RAID タイプでサポートされる障害の最大数を超えている場合、ローカルプレックスは障害が発生したとマークされ、アグリゲートはデグレードの状態になります。データは、 HA パートナーの 2 番目のプレックスから提供されます。つまり、ノード 1 の I/O 要求は、クラスタインターコネクトポート e0e （ iSCSI ）を介し、ノード 2 に物理的に配置されているディスクに送信されます。2 つ目のプレックスにも障害が発生すると、アグリゲートは障害が発生したとマークされ、データが使用できなくなります。</block>
-  <block id="fc009512059b2e62d9f72f2b6648313c" category="paragraph">適切なデータミラーリングを再開するために、障害が発生したプレックスは、削除して再作成する必要があります。また、データアグリゲートのデグレードにつながるマルチディスク障害が発生すると、ルートアグリゲートもデグレードされることに注意してください。ONTAP Select は、ルート / データ / データ（ RDD ）パーティショニングスキーマを使用して、各物理ドライブをルートパーティションと 2 つのデータパーティションに分割します。そのため、 1 つ以上のディスクを失うと、ローカルルートアグリゲートやリモートルートアグリゲートのコピーのほか、ローカルデータアグリゲートやリモートデータアグリゲートのコピーなど、複数のアグリゲートに影響が及ぶ可能性があります。</block>
   <block id="f7f034960d16c32b605295a9e39541cd" category="admonition">1 つまたは複数のドライブ障害をテストまたはシミュレートするには 'storage disk fail -disk net-x.y-immediate コマンドを使用しますシステムにスペアがある場合は、アグリゲートの再構築が開始されます。再構築のステータスは、 storage aggregate show コマンドを使用して確認できます。シミュレートされた障害のあるドライブを削除するには、 ONTAP Deploy を使用します。ONTAP はドライブを「破損」としてマークしていることに注意してください。ドライブは実際には破損しておらず、 ONTAP Deploy を使用して再び追加できます。破損したラベルを消去するには、 ONTAP Select CLI で次のコマンドを入力します。</block>
   <block id="7900f137f5b84159e689df34552f1fdb" category="paragraph">最後のコマンドの出力は空である必要があります。</block>
   <block id="a18d9a58110d3cb59ca5ec3ac833794b" category="paragraph">NetApp FAS システムには、従来より物理 NVRAM PCI カードが取り付けられていました。このカードは、書き込みパフォーマンスが大幅に向上する不揮発性フラッシュメモリを搭載した高性能カードです。これは、クライアントへのライトバックをすぐに確認できる機能を ONTAP に付与することで実現されます。また、変更されたデータブロックを低速のストレージメディアに移動する、デステージと呼ばれるプロセスをスケジュール設定することもできます。</block>
@@ -1609,7 +1585,6 @@
   <block id="5ca7ce8323f7b11744e86ef1f4f9606f" category="paragraph">ONTAP Select グループ内の LUN 数を増やしても、パフォーマンスが向上することはありません。複数の LUN を使用するのは、 SATA / NL-SAS 構成のベストプラクティスに従うため、またはハイパーバイザーのファイルシステムに関する制限に対応するためです。</block>
   <block id="1089735339643620b5910924c5320981" category="section-title">VMware ESXi ホスト</block>
   <block id="2dfed98838decebcc7246099986d6886" category="paragraph">ネットアップでは、システムディスクをホストするデータストアには ESX 6.5 U2 以降と NVMe ディスクを使用することを推奨しています。この構成は、 NVRAM パーティションに最適なパフォーマンスを提供します。</block>
-  <block id="b311582b38b62f230c4a262d909d908c" category="admonition">ESX 6.5 U2 以降にインストールする場合、 ONTAP Select は、システムディスクが SSD にあるか NVME ディスクにあるかに関係なく、 vNVME ドライバを使用します。これにより、 VM のハードウェアレベルが 13 に設定され、 ESX 6.5 以降と互換性があります。</block>
   <block id="883debc749a79a13f46992bc1c04b69a" category="paragraph">ONTAP Select ネットワークと外付けストレージ（ iSCSI または NFS を使用する場合は、 VMware vSAN と汎用のストレージアレイのトラフィック）に専用のネットワークポート、帯域幅、および vSwitch の構成を定義します。</block>
   <block id="7858be6b65b0176805cc934c2f21d6dd" category="paragraph">ストレージ利用率を制限するように容量オプションを設定します（ ONTAP Select では、外部 vNAS データストアの全容量は使用できません）。</block>
   <block id="8a7d1abfb409902e561b13c9ab0a53b7" category="paragraph">可能な場合は、すべての汎用の外付けストレージアレイで、使用可能な冗長性機能と HA 機能を使用してください。</block>
@@ -1800,7 +1775,6 @@
   <block id="203736fadeb2bd7c77491d72c4dec6b4" category="section-title">VMware ライセンス</block>
   <block id="880e4da9bcc9725e517c69e219a63339" category="paragraph">ONTAP Select クラスタを導入するには、 ONTAP Select を実行するハイパーバイザーホストの有効な VMware vSphere ライセンスが必要です。導入に適したライセンスを使用してください。</block>
   <block id="da132c60d8df0a4756d0a1e64618decf" category="section-title">ソフトウェアの互換性</block>
-  <block id="f2df12ffd4f2520acaaeab11317642da" category="paragraph">ONTAP Select は次のハイパーバイザーに導入できます。</block>
   <block id="3522298772b42c1feed00428b1765cfd" category="admonition">VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。</block>
   <block id="5c4eab167cc470fbe0f1b2e9a2449486" category="section-title">VMware vCenter およびスタンドアロンの ESXi ホスト</block>
   <block id="d8492e635eeb04bc232082f13805e768" category="paragraph">ESXi ハイパーバイザーホストが vCenter サーバで管理されている場合は、 vCenter のクレデンシャルを使用して、ホストを Deploy 管理ユーティリティに登録する必要があります。ESXi のクレデンシャルを使用してホストをスタンドアロンホストとして登録することはできません。</block>
@@ -1809,22 +1783,12 @@
   <block id="54046c200f18c7f662cdbd80eaba39a0" category="admonition">ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。</block>
   <block id="6ef6e53858c70e7e79a98bf86eb89b40" category="section-title">基本的なハードウェア要件</block>
   <block id="7a4cc24a8547103995174a22d62c6415" category="inline-link-macro">インテル Xeon プロセッサー、ウィンドウ = _ ブランク</block>
-  <block id="fc86323f8bb43524824dfedf72c12f20" category="list-text">サーバー向けインテル Xeon プロセッサー（を参照 <block ref="b4ae18ee7ddc8509f21de2805d7b78c6" category="inline-link-macro-rx"></block> 詳細については、</block>
   <block id="7538c6fd2c1f96ec16f31ff621c5090f" category="list-text">10GbE × 2</block>
   <block id="d55a9ba430190ded23c2d10278bfb65d" category="section-title">インスタンスタイプに基づいた追加のハードウェア要件</block>
   <block id="bfc8cbb02384bbb523227067dcadb07e" category="paragraph">ノードインスタンスのタイプに基づいて、ハードウェアに関する追加の要件がいくつかあります。</block>
   <block id="2660064e68655415da2628c2ae2f7592" category="list-text">小規模</block>
-  <block id="0f388b65d306e7f09fac50abc309278b" category="list-text">CPU コア 6 個以上の物理コアを搭載し、 ONTAP Select 用に 4 個確保されています。</block>
-  <block id="727aba38094b8ba7f1c05edf4b594878" category="list-text">メモリは 24GB 以上で、 16GB は ONTAP Select 用にリザーブされています。</block>
-  <block id="1b1bcbc5bef4914aba7474fdc935bf7a" category="list-text">Standard 、 Premium 、または Premium XL のプラットフォームライセンスが必要です</block>
   <block id="87f8a6ab85c9ced3702b4ea641ad4bb5" category="list-text">中</block>
-  <block id="b4719369a085a3a9eadcc89a75cc3015" category="list-text">10 個以上の物理コアを搭載し、 8 個の ONTAP Select 用にリザーブされている。</block>
-  <block id="a5cad44535baf99d478fd298efce915c" category="list-text">72 GB 以上のメモリと 64 GB の ONTAP Select 用に予約されています</block>
-  <block id="49a424b177ede0679de0a453cb851491" category="list-text">Premium または Premium XL のプラットフォームライセンスが必要です</block>
   <block id="3a69b34ce86dacb205936a8094f6c743" category="list-text">大規模</block>
-  <block id="007c5cd914103b408c6c2a68d320195d" category="list-text">CPU コアは 18 個以上の物理コアを搭載し、 16 個は ONTAP Select 用に予約されています。</block>
-  <block id="fcda6b9d9feeeb26502f015e242ed459" category="list-text">ONTAP Select 用に予約された 128GB で 136GB 以上のメモリ</block>
-  <block id="b29d65d42585bb4f3ac0f65c9283ee2d" category="list-text">Premium XL の必要なプラットフォームライセンスです</block>
   <block id="ccda35bfbfdd918d2a198f71367f7d9d" category="inline-link-macro">ストレージと RAID</block>
   <block id="9a44a4605ab254ea4e284ea83fc225b0" category="admonition">プラットフォームライセンスに基づいて追加のディスクが必要になります。を参照してください <block ref="a3c4eb4ff3e5c01e8b1b86f1b4351b6c" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="d5955f327d5d79aa3434b5772a31b4d8" category="summary">ONTAP Select は、ハイパーバイザーホストに仮想マシンとして導入する ONTAP のソフトウェア専用バージョンです。これは、主要な FAS および AFF ONTAP 製品のスイートに加え、 Cloud Volumes ONTAP などのソフトウェアのみのその他のオプションを補完します。</block>
@@ -2371,7 +2335,6 @@
   <block id="0a15f7ba73868a32304fdf52855463c9" category="sidebar">ONTAP Select イメージを削除します</block>
   <block id="afc9d68a1be701598b5ef94dc0be2844" category="sidebar">2 ノードクラスタの Deploy をリカバリします</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">よく寄せられる質問</block>
-  <block id="33b6370e1de46bd324564163dfaf48a9" category="list-text">VMware ESXi 7.0 GA（ビルド15849807以降）：7.0 U1、U2、U3Cを含む</block>
   <block id="9230331b34c3673c82d4b22760bb266d" category="list-text">ハイパーバイザーESXiまたはKVMに導入できます（Deployリリースによって異なります）。ESXi に導入する際、ハイパーバイザーは vCenter で管理することも、スタンドアロンホストにすることもできます。</block>
   <block id="d0730ff14b2f6fb53d9e49978a76660e" category="summary">ONTAP Select は、ほとんどのONTAP 機能を完全にサポートしています。ONTAP の機能の多くには、クラスタの導入時に各ノードで自動的にライセンスが付与されます。ただし、一部の機能には個別のライセンスが必要です。</block>
   <block id="0deac5caf37785bb3c3ce0d80f8d8d18" category="admonition">ハードウェア固有の依存関係を持つONTAP 機能は、一般にONTAP Select ではサポートされていません。</block>
@@ -2387,7 +2350,6 @@
   <block id="cc6982c020bc97509cfd68e72db0524e" category="list-text">管理者アカウントのクレデンシャルを使用して、SSHを使用してDeployユーティリティのCLIにサインインします。</block>
   <block id="1d0fd2b207143cd0cbfe1f1eca67206a" category="list-text">ソフトウェアRAIDを使用している場合は、使用可能なドライブを接続します。</block>
   <block id="10d4b2d6f8c74f79bcce5324cfbda150" category="list-text">ソフトウェアRAIDを使用している場合は、ノードに接続されているディスクを表示します。</block>
-  <block id="1a4f0dd8a8bf6109c981c282ef6e87c9" category="paragraph">サポートされている\'83\'7dイクロプロセッサは、次のとおりです。</block>
   <block id="9adc1cc3490cf88dcf6538833825d06d" category="paragraph">クラスタのサイズに基づいて、サポートされるイーサネット構成がいくつかあります。</block>
   <block id="28f29271814291e43be7deaba751046b" category="cell">クラスタサイズ</block>
   <block id="c76e3867213cff8946148c6510af0736" category="cell">推奨事項</block>
@@ -2804,8 +2766,6 @@
   <block id="bc49d1f5d2a485c9943e8c2a2a2bc4e0" category="section-title">VMXNET3ネットワークドライバの使用</block>
   <block id="f5397683296c4bac6fda66aaf747da16" category="paragraph">VMXNET3は、VMware ESXiへの新しいクラスタの導入に含まれているデフォルトのネットワークドライバです。ONTAP Select 9.4以前を実行している既存のONTAP Selectノードをアップグレードしても、ネットワークドライバは自動的にアップグレードされません。VMXNET3 に手動でアップグレードする必要があります。アップグレードについてサポートが必要な場合は、ネットアップサポートにお問い合わせください。</block>
   <block id="f5fb21ca1cbb0f80e3bd39e8e2cdc385" category="section-title">長時間実行されているジョブの完了を確認する</block>
-  <block id="52b36e38f5557ae0240199f1a1ae8025" category="paragraph">ソフトウェア RAID を使用して ONTAP Select VM に容量を追加する場合、管理者は物理ドライブのサイズと必要なドライブ数を考慮する必要があります。詳細については、を参照してください <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>。</block>
-  <block id="6ee0fd1c12c5fa32d712d27f3dbe6591" category="section-title">ONTAP Selectディスクを対応するESXディスクと照合します。</block>
   <block id="8aa55be05177e5bb5561de524ca4fe42" category="section-title">AutoSupport を有効にします</block>
   <block id="60dd7d876105bb04790738b3d13a4f51" category="doc">DeployからのONTAP Selectイメージの削除</block>
   <block id="f5bc6ad1ffe8721334b4b90294bc5750" category="inline-link-macro">管理サーバアカウントを追加する</block>
@@ -3252,11 +3212,8 @@ storage aggregate show-spare-disks</block>
   <block id="5638b273dc7505c1415d93d081293984" category="list-text">8ノードから6ノードへのクラスタの縮小</block>
   <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">クラスタの拡張と縮小はESXクラスタのみでサポートされます。</block>
   <block id="e35a91dc5473bf4a53204a2bd1366d7e" category="summary">ONTAP Select 9.15.1以降では、既存のクラスタのサイズを6ノードから8ノードに拡張し、クラスタサイズを8ノードから6ノードに縮小できます。</block>
-  <block id="c9dd95ac8795512f2d676118ba8def1a" category="paragraph">クラスタの拡張と縮小の機能には、次のような制限があります。</block>
   <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">クラスタを拡張</block>
-  <block id="c117993f1e48f58c366f6fe0873d958b" category="paragraph">クラスタ拡張機能を使用して、既存のクラスタのサイズを6ノードから8ノードのクラスタに拡張できます。</block>
-  <block id="679ac2592315c6e7c7320336fcda4a9c" category="paragraph">クラスタの拡張手順に備えて、新しいESXホストがインベントリに追加され、新しいノードの詳細が割り当てられます。クラスタの拡張プロセスを開始する前に、選択した内部ネットワークがネットワークの事前確認で検証されます。</block>
   <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">新しいノードのライセンスの詳細を確認します。</block>
   <block id="70be200347cc17e3939c72792fe71b15" category="list-text">ページ上部の*[クラスタ]*タブを選択し、リストから目的のクラスタを選択します。</block>
   <block id="83d473b2e8f1c324b60e13d720cac51a" category="list-text">クラスタの詳細ページで、ページの右側にある歯車アイコンを選択し、*[クラスタの拡張]*を選択します。</block>
@@ -3268,7 +3225,6 @@ storage aggregate show-spare-disks</block>
   <block id="2e52445fb8b7773f56a2d476ede7614d" category="list-text">ネットワーク構成</block>
   <block id="3efe5ea2c836d42be34a86ff14766d09" category="list-text">ストレージ構成（RAIDタイプとストレージプール）</block>
   <block id="b0ef8babe86043b130158076a23be483" category="list-text">[HAペアの保存]*を選択して、構成の詳細を保存します。</block>
-  <block id="0feca9c8f9ca7540a5f57c1669c20751" category="list-text">ONTAPクレデンシャルを入力し、*[クラスタの拡張]*を選択します。</block>
   <block id="740ba937a1a632ef3c9794b633eb57cb" category="list-text">[次へ]*を選択し、*[実行]*を選択してネットワークの事前確認を実行します。</block>
   <block id="9f3d040cc965516d902623e208c24eb4" category="paragraph">ネットワークの事前チェックでは、ONTAPクラスタトラフィック用に選択した内部ネットワークが正常に機能しているかどうかを検証します。</block>
   <block id="9e517b46e538766946d13c3518579521" category="list-text">[クラスタの拡張]*を選択してクラスタの拡張プロセスを開始し、ダイアログボックスで*[OK]*を選択します。</block>
@@ -3277,7 +3233,6 @@ storage aggregate show-spare-disks</block>
   <block id="4f98a584f43949379b32f8cd6c99f91d" category="list-text">処理の進捗状況の定期的な更新については、*[イベント]*タブを参照してください。ページは一定の間隔で自動的に更新されます。</block>
   <block id="e6df350174b5d12142460122061720b4" category="paragraph">クラスタを拡張したら、ONTAP Select Deployの設定データをバックアップする必要があります。</block>
   <block id="5a9eb2ea7b273c031f127ee246370399" category="section-title">クラスタを契約する</block>
-  <block id="c724f8ae06aec94fe391a5c014d22227" category="paragraph">クラスタ収縮機能を使用して、既存のクラスタのサイズを8ノードから6ノードのクラスタに縮小できます。</block>
   <block id="a1350246f96d12c2861aa0111c1d5369" category="paragraph">手順の実行中にクラスタを縮小する準備として、必要に応じてクラスタ内のノードのHAペアが選択されます。</block>
   <block id="e1f3084dd5c5d44b681a43aa203f948d" category="list-text">クラスタの詳細ページで、ページの右側にある歯車アイコンを選択し、*[Contract Cluster]*を選択します。</block>
   <block id="ea8ea8523f4b42addd79a435f0b6ff5c" category="list-text">削除するHAペアのHAペア構成の詳細を選択してONTAPクレデンシャルを指定し、*[Contract Cluster]*を選択します。</block>
@@ -3353,8 +3308,6 @@ storage aggregate show-spare-disks</block>
   <block id="b993d6b1ae8a2148a7be773127a7d668" category="doc">ONTAP Selectのビジネスニーズと使用シナリオ</block>
   <block id="18ea6d668ccbbc1b64935d2ae14d9c63" category="doc">ONTAP Selectによるプライベートクラウドとデータセンターのサポート</block>
   <block id="567999f9c71634f001a831b733088bbc" category="doc">リモートオフィスやブランチオフィスでONTAP Selectを使用</block>
-  <block id="ecef17057a10f9337620a1aee67c110f" category="summary">NetApp ONTAP Selectは、VMware ESXiまたはKernel-Based Virtual Machine（KVM）ハイパーバイザーを実行するさまざまなコモディティハードウェアサーバに導入できるSoftware-Defined Storageアプライアンスです。柔軟性と拡張性に優れたプライベートクラウドインフラの構築に必要な即応性を提供します。このサイトには、ONTAP Select 9.16.1のドキュメントが含まれています。</block>
-  <block id="b38f50fa2d7eac1d0761ec2b46339f62" category="inline-link-macro">ONTAP Select 9.16.1に関する注意事項</block>
   <block id="de0887504497c1f3eb64ac5f23488612" category="doc">ONTAP Selectクラスタを作成するスクリプトのJSON</block>
   <block id="79ebef96ee386ef1a7dba01d303ce759" category="doc">ONTAP Selectノードライセンスを追加するスクリプト</block>
   <block id="be1f2ab308d7f936426d71ac4b257096" category="doc">ONTAP Selectクラスタを作成するスクリプト</block>
@@ -3397,7 +3350,6 @@ storage aggregate show-spare-disks</block>
   <block id="852ae4fc33b89c5131b8050b8ab9b9de" category="doc">ONTAP SelectストレージとRAIDに関する考慮事項</block>
   <block id="744c7aceadded1b7d2f7dbabcbe794a8" category="doc">ESXi上のONTAP Select VMware vCenterサーバ</block>
   <block id="634920e565b06acb85fcaff73d20a15d" category="doc">ONTAP Select VMwareESXiの要件</block>
-  <block id="0edc199faf78056856f9f042ee780e07" category="inline-link">ONTAP Select 9.16.1 リリースノート</block>
   <block id="023deab3a8c9b82a9bfd452c0b68af9b" category="doc">ONTAP Selectノード間の接続を確認する</block>
   <block id="8a96228950f9c48cb7f24c3b98404d49" category="doc">ONTAP Select Deployメディエーターサービスの管理</block>
   <block id="d2bdabf740cddb35328041a6ee746b12" category="doc">ONTAP Selectの障害が発生したソフトウェアRAIDドライブの交換</block>
@@ -3413,9 +3365,6 @@ storage aggregate show-spare-disks</block>
   <block id="6a72bf96d9b994589542338ffd146590" category="doc">ONTAP Select Deployインスタンスのアップグレード</block>
   <block id="c71000b965f24ab9f5c3995026415d28" category="doc">ONTAP Select VMware ESXiをバージョン7.0以降にアップグレードします。</block>
   <block id="bd633f5da3bfc77af90d4c908e9bf8ac" category="doc">ONTAP Selectクラスタを拡張または縮小する</block>
-  <block id="e6bf3ba5fe1006a55faeef44787ee469" category="list-text">サポートされるのは、ESXハイパーバイザーホスト上に作成されたクラスタに限られます。ONTAP Select 9.15.1以降と互換性があるESXのバージョンは次のとおりです。</block>
-  <block id="d4597f95391a261a44459b6a1ddb6a8e" category="list-text">4つ目のHAペアについて、次のようなハイアベイラビリティ（HA）ペア構成の詳細を選択します。</block>
-  <block id="269ec7d71e2b69e0e1efbee545e82252" category="sidebar">ONTAP Select 9.16.1のドキュメント</block>
   <block id="10094bc8718a18a18fcc32e3cd50df4c" category="sidebar">Secure ONTAP Select</block>
   <block id="70ea48dd9234010492aec1d6e7a0d297" category="sidebar">ネットワーク接続の確認</block>
   <block id="4ce7782445b66c31b4b4d786806ae7a1" category="sidebar">メディエーターサービスの管理</block>
@@ -3424,7 +3373,6 @@ storage aggregate show-spare-disks</block>
   <block id="5a3a053ae34a79fb35028f001babbf25" category="sidebar">障害が発生したソフトウェアRAIDドライブの交換</block>
   <block id="e2e19484d2146649c758acb6e826707f" category="sidebar">ESXiを6.5以降にアップグレード</block>
   <block id="b374e4bbc5d3bd65f35605cc784ed685" category="list-text">ONTAP Select 9.14.1では、VMware ESXi 8.0 U2がサポートされています。</block>
-  <block id="b7d2c3ffb4e7ab988d8422ff889440b1" category="paragraph">にアクセスして、現在のバージョンに関する詳細を確認できます<block ref="cf1ab4e8632efa681982f5c2d85eebd4" category="inline-link-macro-rx"></block>。</block>
   <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
   <block id="3a13e6fcb6840db51e3e181c41dff37b" category="list-text">ESXi 8.0 U2</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8.0 U1</block>
@@ -3492,7 +3440,6 @@ storage aggregate show-spare-disks</block>
   <block id="8b5ceafca01d3a14f09a0d742cbb2cfb" category="list-text">[次へ]*を選択し、*[実行]*を選択してネットワークの事前確認を実行します。ONTAPクラスタトラフィック用に選択した内部ネットワークが正常に機能しているかどうかが検証されます。</block>
   <block id="2735f745a89477a2abc1f435e606bde3" category="list-text">[クラスタの作成]*を選択してクラスタの作成プロセスを開始し、ポップアップウィンドウで*[OK]*を選択します。</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
-  <block id="4d5e19ca322ec82f576cffa70356d45b" category="paragraph"><block ref="4d5e19ca322ec82f576cffa70356d45b" category="inline-link-rx"></block></block>
   <block id="dba6192da7444fc9e5fd32119193b12b" category="admonition">ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、ナレッジベースの記事を参照して <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>ください。</block>
   <block id="a97a40851f37ebfbf5db3d3bf28da58b" category="admonition">マルチノードクラスタの内部ネットワークでは、LIFが自動で生成されます。</block>
   <block id="0f1007666fd5cc7934baffbdef1287d0" category="paragraph">3つのSVMがアクティブです。</block>
@@ -3587,7 +3534,6 @@ storage aggregate show-spare-disks</block>
   <block id="9cdcaf5a7aae0807b2a785f7d26f1f3f" category="paragraph">ONTAP Selectの大容量階層または容量プールライセンスは、Standard、Premium、PremiumのいずれかのXLレベルで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。</block>
   <block id="d6a54d06ffa7a2e05f6c0d035a345cb1" category="paragraph">特定のライセンスサービスでは、ハイパーバイザーホストの機能が次の2つの領域で定義および制限されます。</block>
   <block id="3e98038f4cdd32e64d0357acf2d03cda" category="list-text">ハードディスクドライブ（HDD）またはソリッドステートドライブ（SSD）</block>
-  <block id="56dce1f406f2aca239ffdd315cc83d5d" category="admonition">SW-RAID構成でのラージインスタンスタイプまたはNVMeドライブの使用は、Kernel-Based Virtual Machine（KVM）ではサポートされていません。</block>
   <block id="2f2718c8a2f261e7775daae8fff84dbc" category="section-title">プラットフォームライセンス製品のハードウェアサポートの比較</block>
   <block id="46fa26efbd4810693c18739e5417980e" category="paragraph">標準、プレミアム、およびプレミアムXLライセンス製品は、幅広いハードウェアおよびソフトウェアをサポートしています。ハードウェアおよびソフトウェアのバージョンの最新情報については、を参照してください<block ref="303ffee46fa5d607063d9b04cfb6d8cb" category="inline-link-macro-rx"></block>。</block>
   <block id="06efa63cc6d93bbf842cc0f903057606" category="open-title">コアアイテム</block>
@@ -3633,9 +3579,7 @@ storage aggregate show-spare-disks</block>
   <block id="719d067b229178f03bcfa1da4ac4dede" category="open-title">ソフトウェア</block>
   <block id="e94dfbdb85e6f13fea9179c0fd50d81f" category="cell">ソフトウェアタイプ</block>
   <block id="9295b1d52d6b9b34b829dfb4fabf6d05" category="cell">ハイパーバイザーのサポート（VMware）</block>
-  <block id="4a9dffc4c71f7a56c8a8d9b0e4381f90" category="cell">VMware vSphere 7.0GAおよびアップデート1~3C VMware vSphere 8.0GAおよびアップデート1~3</block>
   <block id="4f17c009683074f845007741fa1c26dd" category="cell">ハイパーバイザーのサポート（KVM）</block>
-  <block id="e12f83762dfb76b01ed77a9370b24967" category="cell">Red Hat Enterprise Linux 64ビット（KVM）9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6 Rocky Linux（KVM）9および8</block>
   <block id="049f7d1a5b523b8230ca21c727474d11" category="cell">管理ソフトウェア</block>
   <block id="f1680d42c94acc804fddda46a7e4602d" category="cell">NetApp Active IQ Unified Manager管理スイートONTAP Select導入ユーティリティSnapCenter（オプション）</block>
   <block id="bbf6609978bbf45921ea0dae059fde72" category="inline-link-macro">大容量階層と容量プールのライセンスタイプについて</block>
@@ -3688,11 +3632,8 @@ storage aggregate show-spare-disks</block>
   <block id="2475e8d85e4c431ed7c77eaf00da0050" category="list-text">容量プールライセンス*は、特定の容量プールとノードサイズ（Standard、Premium、Premium XL）を使用して1つ以上のクラスタを導入する権利を得るためのサブスクリプションです。サブスクリプションには、指定された期間のライセンスとサポートを使用する権利が含まれます。ライセンスを使用する権利とサポート契約には、開始日と終了日が指定されています。</block>
   <block id="65ce848134fed42df7f25dc0a3d9d329" category="paragraph">大容量階層のサポート契約の終了日が過ぎている場合、ノードは稼働し続けることはできますが、ONTAPの更新をダウンロードしてインストールすることはできません。また、最初にサポート契約を最新の状態にしないと、NetAppのテクニカルサポートに支援を依頼することもできません。</block>
   <block id="f72a27c1465f1a231c0f2c030e6f7e8b" category="paragraph">容量プールサブスクリプションが期限切れになると、最初に警告が表示されますが、30日後にシステムをシャットダウンすると、更新されたサブスクリプションがDeployサーバにインストールされるまでリブートされません。</block>
-  <block id="24b48c88df61ec1a7a95e26d1445ce5d" category="list-text">ONTAP Select 9.16.1以降では、Kernel-Based Virtual Machine（KVM）ハイパーバイザーがRed Hat Enterprise Linux（RHEL）9.5およびRocky Linux 9.5でサポートされます。</block>
   <block id="c747e5d99e0cdd0a943b0b532dc7eca4" category="list-text">ONTAP Select 9.15.1以降では、カーネルベースの仮想マシン（KVM）ハイパーバイザーがRHEL 9.4およびRocky Linux 9.4でサポートされます。</block>
   <block id="932c03094f0a77749cc455e341a3ea08" category="list-text">本番環境に導入されたONTAP Selectクラスタごとに、容量階層または容量プールのライセンスモデルを選択する必要があります。詳細については、「 _License__ 」セクションを参照してください。</block>
-  <block id="479c7e016ce22da77ff8520b53179a68" category="list-text">Red Hat Enterprise Linux 8.6、8.7、8.8、9.0、9.1、9.2、9.4、9.5上のKVM</block>
-  <block id="41e0fd5b57f80140c6e78c70ec352bc7" category="list-text">Rocky Linux 8.6、8.7、8.8、8.9、9.0、9.1、9.2、9.3、9.4、9.5上のKVM</block>
   <block id="317a67df30f2813de3d883f1e7b38374" category="inline-link">Interoperability Matrix Tool、window=_blank</block>
   <block id="64bdc3c3e77297346c380f015196bdd8" category="paragraph">詳細については、を参照して<block ref="6d25ea14bebd4b4dc452bcd44cab22c3" category="inline-link-rx"></block>ください。</block>
   <block id="85d20cd418b9cf016df4a897af907e84" category="cell">Access Deploy（Capacity Poolsのライセンス）</block>
@@ -3793,7 +3734,6 @@ storage aggregate show-spare-disks</block>
   <block id="49282a1612672f029a74fc4fccd6b9b8" category="inline-link-macro">Linuxサーバーの準備</block>
   <block id="be3ccaa1ff931b5bcff2fef8fbd77e26" category="paragraph">また、特定のソフトウェアパッケージ設定要件もあります。参照<block ref="8d0fd2fb7c740b9cefef72702e4861cc" category="inline-link-macro-rx"></block>詳細については、手順を参照してください。</block>
   <block id="e8b072936a8e7fac47ec8283f096be17" category="doc">ONTAP Selectクラスタの管理</block>
-  <block id="af858b3b9bb1921933e293e43cd28e6b" category="paragraph">に従って、<block ref="9cd091a25bce78cdf0c1ef780ca4d19c" category="inline-link-macro-rx"></block>および<block ref="fb856bc56f17c64169f73fa6665ecd51" category="inline-link-macro-rx"></block>のトピックで詳細を<block ref="aa150fc2553a8a0c846847314bde8f61" category="inline-link-macro-rx"></block>確認してください。</block>
   <block id="b43dccc6180e02d25b94d717af59c5d5" category="section-title">ステップ1: 展開の準備</block>
   <block id="14ce7f56600ce32dd333637eed98cd8f" category="open-title">ハードウェアRAID</block>
   <block id="66ef34be992df3691380b5f366935c14" category="inline-link-macro">ストレージプール（KVM）</block>
@@ -3853,4 +3793,117 @@ storage aggregate show-spare-disks</block>
   <block id="1b5226a9b144cf3cfc703d8ec6db57ef" category="section-title">ステップ3: 完了後</block>
   <block id="f3a5d576716c34a4548a66aa3126c77d" category="sidebar">KVMホストのチェックリスト</block>
   <block id="935f419c21e41ca992af1333488fd110" category="sidebar">ESXiホストのチェックリスト</block>
+  <block id="e7413dab214cef43694e01b289962db2" category="admonition">ソフトウェア RAID 構成での大規模インスタンスタイプの使用は、カーネルベースの仮想マシン (KVM) ではサポートされていません。</block>
+  <block id="891e3168577f6225cc6bf3c35aafa9e2" category="cell">VMware vSphere 8.0GA およびアップデート 1 ～ 3、VMware vSphere 7.0GA およびアップデート 1 ～ 3C</block>
+  <block id="1a847c26edb3f3d6892cfa25198b2272" category="cell">Red Hat Enterprise Linux 64 ビット (KVM) 9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.8、8.7、および 8.6 Rocky Linux (KVM) 9.6 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6</block>
+  <block id="637c87a94a9976e074cd8762dd5e83ec" category="list-text">サービス ディスクは、クラスタリング、ブートなどのさまざまな項目を処理するためにONTAP Select VM 内で使用される仮想ディスク (VMDK) です。</block>
+  <block id="4cc17558d82286e7c9b33471e70c4844" category="list-text">ディスクをシステムに直接認識させるには（JBOD）、ハードウェアRAIDコントローラを無効にする必要があります。通常、この変更はRAIDコントローラのBIOSで行うことができます。</block>
+  <block id="a9f1943148bcf4e2c2dec30dea4ba389" category="list-text">または、ハードウェアRAIDコントローラがSAS HBAモードになっている必要があります。例えば、一部のBIOS設定ではRAIDに加えて「AHCI」モードが使用できるため、JBODモードを有効にすることができます。これによりパススルーが有効になり、物理ドライブがホスト上でそのまま表示されます。</block>
+  <block id="c7aa49dbe6474688abf6e4f77a77963b" category="paragraph">コントローラーがサポートするドライブの最大数によっては、追加のコントローラーが必要になる場合があります。SASHBAモードの場合は、I/Oコントローラー（SAS HBA）が最低6Gbpsの速度でサポートされていることを確認してください。ただし、NetAppが推奨するのは速度12Gbpsです。</block>
+  <block id="e297f5e737877accfc734b4251306152" category="paragraph">その他のハードウェアRAIDコントローラのモードや構成はサポートされていません。例えば、一部のコントローラではRAID 0をサポートしており、これによりディスクのパススルーを人為的に有効にすることができますが、望ましくない結果が生じる可能性があります。サポートされる物理ディスク（SSDのみ）のサイズは200GBから16TBです。</block>
+  <block id="82a06c9df229016abb3c4375936e57a8" category="paragraph">ソフトウェア RAID を使用する場合、 ONTAP Deploy は、SSD の場合は VMDK と物理ディスクの Raw デバイス マッピング (RDM)、NVMe の場合はパススルーまたは DirectPath IO デバイスのセットをONTAP Selectに提示します。</block>
+  <block id="4c311f7693055e2e1706a01241eb5a8f" category="paragraph">各データディスクは、小さなルートパーティション（ストライプ）と、 ONTAP Select VM内に表示される2つのデータディスクを作成するための2つの同じサイズのパーティションの3つの部分に分割されます。パーティションは、単一ノードクラスタと高可用性（HA）ペアのノードについて、次の図に示すように、ルートデータデータ（RD2）スキーマを使用します。</block>
+  <block id="cfb747cea4702a4be972ef230ee7ba2d" category="paragraph"><block ref="44c29edb103a2872f519ad0c9a0fdaaa" prefix="" category="inline-code"></block>パリティドライブを表します。 <block ref="e2fca8135c2fadca093abd79a6b1c0d2" prefix=" " category="inline-code"></block>デュアルパリティドライブを示し、 <block ref="5dbc98dcc983a70728bd082d1a47546e" prefix=" " category="inline-code"></block>スペアドライブを示します。</block>
+  <block id="e95d355b6009270b0fb78de95e17b376" category="paragraph">ONTAPソフトウェア RAID は、RAID 4、RAID-DP、およびRAID-TECという RAID タイプをサポートしています。これらは、 FASおよびAFFプラットフォームで使用される RAID 構造と同じです。ルート プロビジョニングの場合、 ONTAP Select はRAID 4 と RAID-DP のみをサポートします。データ アグリゲートにRAID-TECを使用する場合、全体的な保護は RAID-DP になります。ONTAPONTAP Select HA は、各ノードの設定を他のノードに複製するシェアード ナッシング アーキテクチャを使用します。つまり、各ノードは自身のルート パーティションと、ピアのルート パーティションのコピーを保存する必要があります。データ ディスクには 1 つのルート パーティションがあります。つまり、データ ディスクの最小数は、 ONTAP Selectノードが HA ペアの一部であるかどうかによって異なります。</block>
+  <block id="f6566a25d7b852e1188da6a99b8c7e28" category="paragraph">ESX および KVM ハイパーバイザーは、NVMe ディスクを Raw デバイス マップ（RDM）としてサポートしていません。ONTAPONTAP Select でNVMe ディスクを直接制御できるようにするには、これらのドライブを ESX または KVM 内でパススルー デバイスとして設定する必要があります。NVMeデバイスをパススルー デバイスとして設定する場合、サーバ BIOS からのサポートが必要であり、ホストの再起動が必要になる場合があります。また、ホストごとに割り当て可能なパススルー デバイスの数には制限があり、プラットフォームによって異なる場合があります。ただし、 ONTAP Deploy では、 ONTAP Selectノードあたり 14 台の NVMe デバイスに制限されています。つまり、NVMe 構成では、総容量を犠牲にして、非常に高い IOPS 密度（IOPS/TB）が提供されます。または、大容量のストレージ容量を備えた高パフォーマンス構成が必要な場合は、大規模なONTAP Select VM サイズ、システム ディスク用の INTEL Optane カード、データ ストレージ用の公称数の SSD ドライブという構成が推奨されます。</block>
+  <block id="8512c0ed74c689714d6ae7ab7bcab8a7" category="paragraph">パススルーデバイスとRDMには、さらに違いがあります。RDMは実行中のVMにマッピングできます。パススルーデバイスではVMの再起動が必要です。つまり、NVMeドライブの交換または容量拡張（ドライブ追加）手順を実行するには、 ONTAP Select VMの再起動が必要になります。ドライブ交換および容量拡張（ドライブ追加）操作は、 ONTAP Deployのワークフローによって実行されます。ONTAPDeployは、シングルノードクラスタのONTAP ONTAP Selectの再起動と、HAペアのフェイルオーバー/フェイルバックを管理します。ただし、SSDデータドライブ（ ONTAP Selectの再起動/フェイルオーバーは不要）とNVMeデータドライブ（ONTAP Selectの再起動/フェイルオーバーが必要）の操作の違いに注意することが重要です。</block>
+  <block id="9d249683d287246a4cfcd50471562c4d" category="paragraph">ソフトウェアRAIDを使用してONTAP Select VMに容量を追加する場合、管理者は物理ドライブのサイズと必要なドライブ数を考慮する必要があります。詳細については、 <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block> 。</block>
+  <block id="9d99b1e4b1f697c0f5feafda2dee7123" category="paragraph">FASおよびAFFシステムと同様に、既存のRAIDグループには、同等以上の容量のドライブのみを追加できます。容量が大きいドライブは適切なサイズに調整されます。新しいRAIDグループを作成する場合は、全体的なパフォーマンスが低下しないように、新しいRAIDグループのサイズを既存のRAIDグループのサイズと一致させる必要があります。</block>
+  <block id="28a68bc56d41587b76eca428ce33291b" category="section-title">ONTAP Selectディスクを対応するESXまたはKVMディスクに一致させる</block>
+  <block id="1feeb707c66237a9541ece77e3e4d28f" category="paragraph">ESXi または KVM シェルで次のコマンドを入力すると、特定の物理ディスク (naa.unique-id で識別) の LED を点滅させることができます。</block>
+  <block id="8317b4a3fa4d9966b617b5491f76a3b8" category="open-title">ESX</block>
+  <block id="9c1fae3eadcb237fdb7615bb300fbc53" category="paragraph">データのミラーリングを正しく再開するには、障害が発生したプレックスを削除して再作成する必要があります。複数のディスク障害によってデータアグリゲートがデグレードすると、ルートアグリゲートもデグレードされることに注意してください。ONTAPONTAP Selectは、ルートデータデータ（RDD）パーティショニングスキーマを使用して、各物理ドライブを1つのルートパーティションと2つのデータパーティションに分割します。そのため、1つ以上のディスクが失われると、ローカルルートまたはリモートルートアグリゲートのコピー、およびローカルデータアグリゲートとリモートデータアグリゲートのコピーを含む複数のアグリゲートに影響が及ぶ可能性があります。</block>
+  <block id="3076e2016b53038d778618dee10b478d" category="paragraph">次の出力例では、障害が発生したプレックスが削除され、再作成されています。</block>
+  <block id="859b3e34f415b642df5044600cd81ad1" category="summary">NetApp ONTAP Selectは、VMware ESXiまたはカーネルベース仮想マシン（KVM）ハイパーバイザーを搭載した様々な汎用ハードウェアサーバーに導入できるソフトウェア定義ストレージアプライアンスです。柔軟で拡張性の高いプライベートクラウドインフラの構築に必要な俊敏性を提供します。このサイトには、 ONTAP Select 9.17.1のドキュメントが掲載されています。</block>
+  <block id="0f1f9d8aa7712455b66d5e8b4b971a5b" category="list-text">NVMe ディスクの PCI パススルーを構成します。</block>
+  <block id="b6edb9d93c4b2803ccdda9357c898c2a" category="paragraph">構成でNVMeディスクを使用している場合は、KVMホストからONTAP Selectクラスタ内のローカル接続されたNVMeディスクに直接アクセスできるように、PCIパススルー（DirectPath IO）を設定する必要があります。以下のタスクを実行するには、直接アクセスが必要です。</block>
+  <block id="f5b991faffa2b9298c79245107008a5c" category="inline-link-macro">NVMeドライブを使用するようにKVMホストを構成する</block>
+  <block id="46929c4e8b255c2d76dd4c43fc6ceda0" category="list-text"><block ref="46929c4e8b255c2d76dd4c43fc6ceda0" category="inline-link-macro-rx"></block></block>
+  <block id="38b8597ea0c7e467749ecc68e98b6fca" category="inline-link-macro">クラスタを展開した後はソフトウェアRAIDを使用する</block>
+  <block id="9ad4168b96591d3ce9f13beb07f453ad" category="list-text"><block ref="9ad4168b96591d3ce9f13beb07f453ad" category="inline-link-macro-rx"></block></block>
+  <block id="5f6ac3389caa4915b5df5ea4e23cdf3b" category="inline-link-macro">Red Hat ドキュメント</block>
+  <block id="1f04c0d85dac41d18c5e719982d2453c" category="paragraph">参照<block ref="9253ef5506cce823166f2bdf01913569" category="inline-link-macro-rx"></block> KVM ハイパーバイザーの PCI パススルー (DirectPath IO) を構成する方法については、こちらをご覧ください。</block>
+  <block id="43d46885286ff6d9d1bb3e3666375d7c" category="inline-link">ONTAP Select 9.17.1 に関するお知らせ</block>
+  <block id="381d9d218a33c87fe7a65bdd140b7718" category="paragraph"><block ref="381d9d218a33c87fe7a65bdd140b7718" category="inline-link-rx"></block></block>
+  <block id="3a7c61c685981e316491699fa430a141" category="list-text">SnapMirrorクラウド</block>
+  <block id="c5f33228fc937ef0d8daa944cc220984" category="section-title">ONTAP Select9.17.1</block>
+  <block id="621bccb3ca618202d65c825d13f5c7cc" category="paragraph">ONTAP Select 9.17.1 には、いくつかの新機能と改善点が含まれています。</block>
+  <block id="a1ccdb52aaae23908c894a50ab1c7942" category="list-text">KVMホスト上のローカル接続NVMeディスクに対するソフトウェアRAIDサポート</block>
+  <block id="7da7c34592a8b282c418910ab837fc00" category="list-text">ONTAP Select 9.17.1 では、カーネルベースの仮想マシン (KVM) ハイパーバイザー ホスト上のONTAP Selectローカル接続された NVMe ディスクに対するソフトウェア RAID サポートが導入されています。</block>
+  <block id="1dc28449401a7f910c3a8509d1d50bae" category="inline-link-macro">PCI パススルー (DirectPath IO) を構成する</block>
+  <block id="ce852277feeccc60284004ea91d44a6b" category="paragraph">ローカル接続されたNVMeディスクにソフトウェアRAIDを使用するには、 <block ref="7f09a366467fae8f2933e62f5a1d3600" category="inline-link-macro-rx"></block> KVMホストを準備する際に使用します。これにより、KVMホストがローカルに接続されたNVMeディスクに直接アクセスできるようになります。これは以下のタスクに必要です。</block>
+  <block id="f108a9e768021a9f2fa770b5ebcbf4ae" category="list-text">NVMeドライブを使用するためのKVMホストの構成</block>
+  <block id="d05329fb152bc7466331771720c213a7" category="list-text">クラスターを展開した後のソフトウェアRAIDの使用</block>
+  <block id="d21334ffd4138404242bb0fece3f2bd0" category="inline-link-macro">ローカル接続ストレージのソフトウェア RAID 構成サービスについて学習します</block>
+  <block id="2fd8d0de580745829d296cf2e993545d" category="paragraph"><block ref="6028b3dbcf992c3366009d78bd8049c4" category="inline-link-macro-rx"></block> 。</block>
+  <block id="135bd09a77549202951b40cf5c9539fb" category="list-text">KVMホスト上のクラスタ拡張と縮小のサポート</block>
+  <block id="84e08508432791f43f95437369ac2aa3" category="list-text">ONTAP Select 9.17.1以降では、クラスタの拡張と縮小機能がカーネルベース仮想マシン（KVM）ホストとESXiハイパーバイザーホストの両方でサポートされます。ONTAPONTAP Select 9.16.1および9.15.1では、クラスタの拡張と縮小はESXiハイパーバイザーホストでのみサポートされます。</block>
+  <block id="0a0cc9b2212847ba1af46f41c160bb46" category="paragraph">既存のONTAP Selectクラスタのクラスタ拡張および縮小機能を使用して、6 ノード クラスタから 8 ノード クラスタにサイズを拡大したり、8 ノード クラスタから 6 ノード クラスタにサイズを縮小したりできます。</block>
+  <block id="22cb6accb0a27ceffd521fb74834c16a" category="inline-link-macro">クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。</block>
+  <block id="3c14c9e8cb33411708f168ddc9b0d40c" category="paragraph"><block ref="f426c2cadf7fc519436e151211954c8a" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8c4c7ec85ddc20b785383c7e3b83aaf3" category="list-text">SnapMirrorクラウドのサポート</block>
+  <block id="8e6364cfe908f51088b3ba968ff3a1ef" category="list-text">ONTAP Select 9.17.1 以降、 SnapMirrorクラウドがONTAP Selectでサポートされます。SnapMirrorSnapMirrorは、 ONTAP Select 9.17.1 クラスタを導入するか、既存のONTAP Selectクラスタをバージョン 9.17.1 にアップグレードすると、デフォルトで有効になるライセンス対象のONTAP機能です。</block>
+  <block id="138c7cd45c4194bbbdcc248c8d717a95" category="inline-link">オブジェクトストレージへのSnapMirrorクラウドバックアップについて学ぶ</block>
+  <block id="a674f1954e78adeee48a68d3b46f7329" category="paragraph"><block ref="e78089da9b0e2900996a3bebc3fd1588" category="inline-link-rx"></block> 。</block>
+  <block id="8636e1dc9721a5c30a4e439da7b5f9a1" category="list-text">NDAドライバーのサポートを更新</block>
+  <block id="47a73413b58dd69883b3d5bfcaf3ae17" category="list-text">ONTAP Select 9.17.1以降、NVD（NVMe Expressディスクドライバ）に代わってFreeBSD NDA（NVMe Direct Access）デバイスドライバが導入されました。FreeBSDドライバは、NVMeコマンドプロトコルを実装することで、ダイレクトアクセスデバイスのサポートを提供します。ONTAPONTAP Select 9.17.1クラスタを導入する場合、または既存のONTAP Selectクラスタをバージョン9.17.1にアップグレードする場合、NVMeデバイスの設定時にFreeBSDドライバがデフォルトで起動されます。</block>
+  <block id="9fe4db073ef9cb1070ea002413806d7b" category="paragraph">ONTAP Select 9.16.1 以前では、NVD は引き続きONTAP Select展開内の NVMe デバイスのサポートを提供します。</block>
+  <block id="4d4e935615049b9792b8ee30fa5c71d3" category="list-text">ONTAP Select 9.17.1 以降、KVM ハイパーバイザーは Red Hat Enterprise Linux (RHEL) 9.6 および Rocky Linux 9.6 でサポートされます。</block>
+  <block id="ac171b57f5c680bf4d0f02d3a2a4fc1f" category="list-text">ONTAP Select 9.16.1 以降、KVM ハイパーバイザーは RHEL 9.5 および Rocky Linux 9.5 でサポートされます。</block>
+  <block id="0ea945de4d54019107b304aa9eca8fa3" category="admonition">ESX 6.5 U2以降にインストールする場合、 ONTAP SelectはシステムディスクがSSD上にあるかNVMeディスク上にあるかに関係なく、vNVMEeドライバを使用します。これにより、VMのハードウェアレベルはESX 6.5以降と互換性のある13に設定されます。</block>
+  <block id="b819d70810100dd612c72123ee67224d" category="paragraph">ONTAP Select は、 KVM および ESXi ハイパーバイザーに導入できます。</block>
+  <block id="5c4913dc2f0c23f4a31e20e72374ec36" category="paragraph">ONTAP Select は、次の KVM ハイパーバイザー バージョンをサポートしています。</block>
+  <block id="106afc8ef14315f6a60e49c2f0227fcf" category="list-text">Red Hat Enterprise Linux 9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および 8.6 上の KVM</block>
+  <block id="b2270c4043a2f0c3e82238730523c1bd" category="list-text">Rocky Linux 9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6 上の KVM</block>
+  <block id="88f7643f9d6082d2e385207946c3b5a2" category="paragraph">ONTAP Select は、次の ESXi ハイパーバイザー バージョンをサポートしています。</block>
+  <block id="8a64553b73285bd3d9851c3641c74431" category="list-text">VMware ESXi 7.0 GA (ビルド 15843807 以上) (7.0 U3C、U2、U1 を含む)</block>
+  <block id="2a861cd8eb5ba0785391c4057414e36a" category="paragraph">サポートされているマイクロプロセッサには、サーバー向けIntel Xeonプロセッサが含まれます。 <block ref="b4ae18ee7ddc8509f21de2805d7b78c6" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
+  <block id="576be828257fef81586078e09f023f12" category="cell">ノードサイズ</block>
+  <block id="3498e0560fa8448ff0a0f15cd1b168f7" category="cell">CPUコア</block>
+  <block id="4789f23283b3a61f858b641a1bef19a3" category="cell">メモリ</block>
+  <block id="36f21b96c1838ff0570ea01be9758afd" category="cell">必要なプラットフォームライセンスの提供</block>
+  <block id="5018463a0effef82b35416e53ca87e71" category="cell">6 個以上の物理コア（うち 4 個はONTAP Select用に予約）</block>
+  <block id="2d9df0a7fb6c54973389b67ba24378c8" category="cell">24GB以上、16GBはONTAP Select用に予約済み</block>
+  <block id="3e08340ed47cba6444847302e8e59010" category="cell">スタンダード、プレミアム、プレミアムXL</block>
+  <block id="ca5677b4536257e1197810eecd904660" category="cell">10 個以上の物理コア（うち 8 個はONTAP Select用に予約）</block>
+  <block id="8e6d3ad54d3ad2cc559440462160d18a" category="cell">72GB以上、64GBはONTAP Select用に予約済み</block>
+  <block id="640e223edcd3fe1348f1d6ff235a0f90" category="cell">プレミアムまたはプレミアムXL</block>
+  <block id="84bfed00d5c0f440cfe0522a957d8c09" category="cell">18 個以上の物理コア（うち 16 個はONTAP Select用に予約）</block>
+  <block id="2ab3f2081ffa300f8e39f366212f2346" category="cell">136GB以上、128GBはONTAP Select用に予約済み</block>
+  <block id="71e456c9cf1560175095f47063b9f150" category="inline-link-macro">ONTAP Select 9.17.1 リリースノート</block>
+  <block id="7a0780d1a75284704296fa1d6669fe55" category="paragraph">アクセスできます<block ref="578177b2068e55f730d2ab8da37ff1a6" category="inline-link-macro-rx"></block>現在のバージョンの詳細を表示します。</block>
+  <block id="a8fb2d9d2ce588a77ffb778ffb1f4887" category="paragraph">NVMe ドライブをソフトウェア RAID で使用する予定の場合は、ドライブを認識するように ESXi または KVM ホストを構成する必要があります。</block>
+  <block id="8fce0c649f4d72f417cda254112e0124" category="list-text">ESXホストの場合、サポートされているDeploy管理ユーティリティを備えたONTAP Select 9.7以降</block>
+  <block id="c06f7735bf993ec75621b52838eec06d" category="list-text">KVMホストの場合、サポートされているDeploy管理ユーティリティを備えたONTAP Select 9.17.1</block>
+  <block id="69376d0181427bc8147aa66d54429340" category="list-text">ESXi または KVM ホストは、サポートされているハイパーバイザー バージョンを実行しています。</block>
+  <block id="f151466e45805b85c179d53c716d1730" category="paragraph">ESXi は次のハイパーバイザー バージョンでサポートされています。</block>
+  <block id="938bda7b4f477005ecd5a1be655a2d94" category="list-text">VMware ESXi 7.0 GA（ビルド 15843807 以降）、7.0 U1、U2、U3C を含む</block>
+  <block id="b9f88b3e1ffa6ae7d67f237344be95ad" category="paragraph">KVM は次のハイパーバイザー バージョンでサポートされています。</block>
+  <block id="94df876ea98d3d9e82f501c53ff28527" category="list-text">Red Hat Enterprise Linux 9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および 8.6</block>
+  <block id="9fed076770017e73835f398d2e5b8714" category="list-text">Rocky Linux 9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6</block>
+  <block id="3f47eb1c93cfecc035015d51dea43351" category="inline-link-macro">デプロイユーティリティのインストール</block>
+  <block id="650b54030913723e437a2beaa84f5e95" category="inline-link-macro">ONTAP Selectのインストール</block>
+  <block id="2eb8006ba6af294cdeda2a87c467fa5c" category="paragraph">フォロー<block ref="98f788baf075ad6e86ad4cdcdcd40ae3" category="inline-link-macro-rx"></block> 、必要な情報を確認してください<block ref="5f52a4a178eaea2e0c4812fd7a9f2757" category="inline-link-macro-rx"></block>そして<block ref="b3b43e0c3f8f2e7f8b8f596dd2656645" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
+  <block id="9ee25f36a4c63773203c1547efed4fc1" category="paragraph">この手順は、新しいONTAP Selectクラスタを作成する前に実行する必要があります。既存のソフトウェアRAID NVMeクラスタに追加のNVMeドライブを設定する手順も実行できます。この場合、ドライブを設定した後、SSDドライブを追加する場合と同様に、Deployを使用してドライブを追加する必要があります。主な違いは、DeployがNVMeドライブを検出し、ノードを再起動することです。既存のクラスタにNVMeドライブを追加する場合は、再起動プロセスについて次の点に注意してください。</block>
+  <block id="ad1e77dc2d8bf573173118e7a9612d61" category="list-text">*Intel VT for Directed I/O (VT-d)* 設定を有効にします。</block>
+  <block id="4c223b348646a303ade4760a9df80f2f" category="list-text">一部のサーバーでは、*Intel Volume Management Device (Intel VMD)* がサポートされています。これを有効にすると、利用可能なNVMeデバイスがESXiまたはKVMハイパーバイザーから見えなくなります。続行する前に、このオプションを無効にしてください。</block>
+  <block id="5e72e3fe82bf71f2450e67351bb4e9ba" category="list-text">vSphere で、ホストの *構成* ビューを開き、*ハードウェア: PCI デバイス* の下にある *編集* を選択します。</block>
+  <block id="79c4d60ab9b9722aa87290dc7dd8f658" category="paragraph">次の出力例は、ESXi ホストで使用可能なドライブを示しています。</block>
+  <block id="814e7eb00b5aa100eaba4779662c4e69" category="list-text">「OK」を選択します。選択したデバイスは「利用可能（保留中）」と表示されます。</block>
+  <block id="a19233fed380d5b231b023ea93dbe258" category="list-text">*このホストを再起動*を選択します。</block>
+  <block id="26fe0a3b24674c6c3152ba4fb0ee4ed3" category="paragraph">次の出力例は、ESXi ホストの場合です。</block>
+  <block id="1055142d0c7647a07a5e1422110286e5" category="paragraph">ホストの準備が完了したら、 ONTAP Select Deployユーティリティをインストールできます。Deployは、新しく準備したホスト上にONTAP Selectストレージクラスタを作成する手順をガイドします。このプロセス中に、Deployはパススルー用に設定されたNVMeドライブの存在を検出し、 ONTAPデータディスクとして使用するために自動的に選択します。必要に応じて、デフォルトの選択を調整できます。</block>
+  <block id="d36012a6f1af06ad2e32fd0380ecd688" category="paragraph">既存のONTAP Selectクラスタのサイズを 6 ノードから 8 ノードに増やしたり、8 ノードから 6 ノードに減らしたりできます。</block>
+  <block id="1337ed24c95634be31bc604f5d1e6297" category="paragraph">クラスターの拡張および縮小機能は、KVM および ESXi ハイパーバイザー ホストでサポートされます。</block>
+  <block id="9c33111b54c52c9fcb0abaf82c9004f8" category="paragraph">ONTAP Select 9.17.1 以降では、KVM ハイパーバイザー ホストでクラスタの拡張と縮小がサポートされます。</block>
+  <block id="342972daa4f7bc941a67318ae7af313b" category="paragraph">クラスターの拡張と縮小は、次の KVM ハイパーバイザー バージョンでサポートされています。</block>
+  <block id="e05b0c53b1a0c5711591f986de5de129" category="list-text">Red Hat Enterprise Linux 64 ビット 9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.8、8.7、および 8.6</block>
+  <block id="a60b141bdd70b40e77bf0e83f56ade8d" category="paragraph">ONTAP Select 9.15.1 以降では、ESXi ハイパーバイザー ホストでクラスタの拡張と縮小がサポートされます。</block>
+  <block id="1062164d3bf1751bfb605324bcaf3e29" category="paragraph">クラスタの拡張と縮小は、次の ESXi ハイパーバイザー バージョンでサポートされています。</block>
+  <block id="e86abbb4089bb949221427ad94aa636a" category="paragraph">クラスター拡張機能を使用して、既存のクラスターのサイズを 6 ノードから 8 ノードに増やします。</block>
+  <block id="305009997eb17ffe0901beb32fdc2040" category="paragraph">クラスタ拡張の準備として、新しいESXiおよびKVMホストがインベントリに追加され、新しいノードの詳細が割り当てられます。クラスタ拡張プロセスを開始する前に、ネットワーク事前チェックによって、選択された内部ネットワークが検証されます。</block>
+  <block id="1c53d6d4916415921dddecf6128580f3" category="list-text">4 番目の HA ペアに対して、次の高可用性 (HA) ペア構成の詳細を選択します。</block>
+  <block id="1baec4831214642ebba2ccfdd8a785df" category="list-text">ONTAP認証情報を入力し、[*Expand Cluster*] を選択します。</block>
+  <block id="e6ed9ac65d6ce64c42573257cebe103e" category="paragraph">クラスター縮小機能を使用して、既存のクラスターのサイズを 8 ノードから 6 ノードに縮小します。</block>
+  <block id="7cf2e3fec3d1629805de3aab60343896" category="sidebar">ONTAP Select 9.17.1 ドキュメント</block>
 </blocks>
