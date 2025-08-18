@@ -882,17 +882,11 @@
   <block id="2c3df213abea0ad1cb494572704542f9" category="inline-image-macro">では、 ONTAP Select クラスタの導入に必要な完全なワークフローについて説明します。</block>
   <block id="bc0723c49208cb7ede4ce6ea0a477957" category="paragraph"><block ref="bc0723c49208cb7ede4ce6ea0a477957" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">コマンドラインインターフェイスを使用して、既存の Deploy ユーティリティの仮想マシンをインプレースアップグレードできます。</block>
-  <block id="a0352e441ba04fb28d070a715c9d2ff2" category="paragraph">アップグレード中には、 Deploy を使用して他のタスクを実行しないでください。Deploy ユーティリティのアップグレードに関する情報と制限事項については、最新のリリースノートを参照してください。</block>
-  <block id="eb75a7c0dc84d14c47a84e436b8082cc" category="paragraph">アップグレードプロセスを開始するには、ネットアップサポートサイトから適切な Deploy 仮想マシンアップグレードファイルをダウンロードする必要があります。アップグレードパッケージは単一の圧縮ファイル形式です。</block>
   <block id="67a5c1dd24ee56878ca59f7cbb4a6602" category="list-text">Web ブラウザからネットアップサポートサイトにアクセスし、「 * Support Quick Links * 」をクリックします。</block>
   <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">アップグレードパッケージの目的のリリースを選択します。</block>
   <block id="def8f653fff47640d3bcce40244c6331" category="list-text">適切なパッケージを選択してダウンロードし、環境に応じてすべてのプロンプトに応答します。</block>
-  <block id="e1592123d1df946558bd9bf257720d21" category="paragraph">アップグレードパッケージを取得したら、ファイルを Deploy 仮想マシンにアップロードする必要があります。</block>
-  <block id="d5d592c7eaf2cef1bd79103f367e703c" category="paragraph">アップグレードファイルをローカルワークステーションで使用できるようにしておく必要があります。また、管理者ユーザアカウントのパスワードが必要です。</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">このタスクは、ファイルを Deploy 仮想マシンにアップロードする方法の 1 つです。ご使用の環境に適したその他のオプションがある場合もあります。</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">アップグレードファイルは、 admin ユーザのホームディレクトリに格納されます。</block>
-  <block id="baa4f96e18f8e9fced4eec3f5a81a23a" category="paragraph">アップグレードファイルが Deploy 仮想マシンにアップロードされたら、アップグレードを適用できます。</block>
-  <block id="dbb14ca7f13323519486701e4b502763" category="paragraph">Deploy ユーティリティの仮想マシンでアップグレードファイルを配置したディレクトリを把握しておく必要があります。また、アップグレードの実行中には、 Deploy を使用して他のタスクを実行しないでください。</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">適切なディレクトリパスとファイル名を使用してアップグレードを実行します。</block>
   <block id="f5fb71abd32be9bc904db11637b6b903" category="paragraph">「 deploy upgrade-package-path filepath 」と入力します</block>
   <block id="e5338fa1dff19c951b23cd8d57a1bb1d" category="summary">SSH を使用して Deploy 管理シェルにサインインする必要があります。サインインしたら、問題 CLI コマンドを使用して ONTAP Select クラスタを作成し、関連する管理手順を実行できます。</block>
@@ -2509,7 +2503,6 @@
   <block id="58af1c2597d085d648724676529071f9" category="paragraph-title">ハイパーバイザープラットフォーム</block>
   <block id="ef85c9b02f4296b633e43a4931df8c2f" category="paragraph-title">ノード間のレイテンシ</block>
   <block id="9c62f110f4b589aa5470f4d43f3a8d6a" category="paragraph-title">ONTAP Select の現在のバージョン</block>
-  <block id="f331fac6e9cf90cf6a3bc3b228554302" category="paragraph-title">このタスクについて</block>
   <block id="d6f9f41f5e5cb8dcf5b3ce01b74d17e5" category="paragraph">ONTAP Select クラスタのパフォーマンスは、基盤のハードウェアの特性と設定によって大きく変わる可能性があります。特定のONTAP Select インスタンスのパフォーマンスにおける最大の要因となるのは、特定のハードウェア構成です。次に、特定の ONTAP Select インスタンスのパフォーマンスに影響する要因をいくつか示します。</block>
   <block id="507f8233cb2eb908786a8439f415fee2" category="list-text">ONTAP Select 9.10.1以降、KVMハイパーバイザーに新しいクラスタを導入することはできなくなりました。</block>
   <block id="93ffd34ce676a00f4a126c465fc48130" category="list-text">ONTAP Select 9.11.1以降では、既存のKVMクラスタおよびホストですべての管理機能を使用できなくなりました。ただし、Take offline機能とdelete機能は除きます。</block>
@@ -2638,7 +2631,6 @@
   <block id="f264455563ca8b26d0daffb627e42c00" category="sidebar">パフォーマンスの概要</block>
   <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">ONTAP Select 9.6のパフォーマンス</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">通常、ライセンスの有効期限が切れても何も起こりません。ただし、ノードは期限切れのライセンスに関連付けられているため、別のライセンスをインストールすることはできません。ライセンスを更新するまでは、リブート処理やフェイルオーバー処理など、アグリゲートがオフラインになるような処理を行う必要があります。推奨される対処方法は、ライセンスの更新を迅速に行うことです。</block>
-  <block id="92cbe224b663d28b8dd457992abcd653" category="list-text">ローカルワークステーション上のコマンドシェルで、scpユーティリティを使用してイメージファイルをDeploy仮想マシンにアップロードします。</block>
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">改ざん防止Snapshotコピー</block>
   <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">SVM 移行</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">VMware HCX</block>
@@ -2816,9 +2808,6 @@
   <block id="a576bfb8d18800b15b695bc702167ec1" category="admonition">ONTAP Select イメージは、 Deploy のインスタンスに含まれている元のバージョンよりも前のバージョンでのみ追加してください。Deployを更新せずに新しいバージョンのONTAP Selectを追加することはできません。</block>
   <block id="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="paragraph"><block ref="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="inline-link-macro-rx"></block></block>
   <block id="298707edb3b539391aec5a5a89670001" category="admonition">ONTAP Select Deploy管理ユーティリティの古いインスタンスがインストールされている場合は、現在のリリースにアップグレードする必要があります。ONTAP SelectノードとONTAP Select Deployコンポーネントは個別にアップグレードされます。を参照してください <block ref="fb380fde33185400cd8ee6587621860d" category="inline-link-macro-rx"></block> を参照してください。</block>
-  <block id="dded0118bab7e4547129d9826a3a53bf" category="section-title">アップグレードパッケージをダウンロードする</block>
-  <block id="295a9acceaedaed57f5a69a9e9479d14" category="section-title">Deploy仮想マシンにパッケージをアップロードする</block>
-  <block id="89a9fa7a63f2114c1852ebceaf021995" category="section-title">アップグレードパッケージを適用する</block>
   <block id="4d0baad02721160fc108f9d6af73fec0" category="doc">ONTAP Selectビデオコンソールへのアクセス</block>
   <block id="ae8d825236a3f7c43af8b7a2dcd40918" category="doc">ONTAP Selectノード間のネットワーク接続を確認する</block>
   <block id="b58c5f0cafd2de6e2a43174f49b5fb62" category="paragraph">最初のクラスタ作成手順では、初期データストアの一部またはすべてのスペースを消費する ONTAP Select クラスタを作成します。次に、目的の合計容量に達するまで、追加のデータストアを使用して 1 つ以上の容量追加処理を実行します。この機能の詳細については、を参照してください <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>。</block>
@@ -2878,7 +2867,6 @@
   <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">にアクセスします <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Webブラウザを使用して、[ダウンロード]メニューから*[ダウンロード]*を選択します。</block>
   <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">下にスクロールして* ONTAP Select展開アップグレード*を選択します。</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">エンドユーザライセンス契約（EULA）を確認し、*同意して続行*を選択します。</block>
-  <block id="3b21e87e0ddc0bee4fd0ebb1cd063173" category="paragraph">手順のアップグレードが完了する前に、Deploy仮想マシン設定のバックアップを作成するように求められます。また、新しく作成されたDeployページを表示できるように、ブラウザキャッシュをクリアする必要があります。</block>
   <block id="3a2bb6601ae9e99d12a365a40b604d74" category="paragraph">ONTAP Selectが実行されているハイパーバイザー仮想マシンのビデオコンソールにアクセスできます。</block>
   <block id="decbc79b694df69cef4879e861d5bbe4" category="list-text">必要に応じて、ハイパーバイザーホストからONTAP Selectイメージを削除します。</block>
   <block id="7460f05e2350b8a56240561f0787e129" category="open-title">ESXiノレイ</block>
@@ -3906,4 +3894,21 @@ storage aggregate show-spare-disks</block>
   <block id="e6ed9ac65d6ce64c42573257cebe103e" category="paragraph">クラスター縮小機能を使用して、既存のクラスターのサイズを 8 ノードから 6 ノードに縮小します。</block>
   <block id="7cf2e3fec3d1629805de3aab60343896" category="sidebar">ONTAP Select 9.17.1 ドキュメント</block>
   <block id="968414ab46d3b1a79f89163fe1c9a955" category="admonition">カーネルベースの仮想マシン (KVM) では、大規模インスタンス タイプの使用はサポートされていません。</block>
+  <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">ONTAP Select ONTAP Select Select Deploy ユーティリティ仮想マシンをインプレースでアップグレードできます。</block>
+  <block id="37d4c938e6c31c7ec9166448ac3458f3" category="paragraph">アップグレード中にONTAP Select Deploy を使用して他のタスクを実行しないようにしてください。  ONTAP Select Deploy ユーティリティのアップグレードに関する情報と制限については、最新のリリース ノートを参照してください。</block>
+  <block id="a59e9f814fd25c07ec74e51d966be96f" category="paragraph">ONTAP Select Deploy 9.16.1 または 9.15.1 からONTAP Select Deploy 9.17.1 にアップグレードできます。  ONTAP Select Deploy 9.14.1 以前からアップグレードするには、 ONTAP Selectバージョンのリリース ノートを確認してください。</block>
+  <block id="db1b7c6bff7b0da47260c4e758478bf5" category="section-title">ステップ1: パッケージをダウンロードする</block>
+  <block id="c81ba5c62604d6722d8975fb55e13972" category="paragraph">アップグレードプロセスを開始するには、適切なONTAP Select Deploy仮想マシンアップグレードファイルを<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block>。アップグレード パッケージは、単一の圧縮ファイルとしてフォーマットされます。</block>
+  <block id="1bd278b7a759195dc2c65f644c38efc6" category="section-title">ステップ2: ONTAP Select Deploy仮想マシンにパッケージをアップロードする</block>
+  <block id="58d35d75d5ec4b24d42607d4bf519bb0" category="paragraph">パッケージをダウンロードしたら、そのファイルをONTAP Select Deploy 仮想マシンにアップロードする必要があります。</block>
+  <block id="f210391b7941f9a4198928bc79fcba09" category="paragraph">このタスクでは、ファイルをONTAP Select Deploy 仮想マシンにアップロードする 1 つの方法について説明します。ご使用の環境に適した他のオプションがある可能性があります。</block>
+  <block id="c99ab6326cfb96cafe5cf69a39bf5e79" category="list-text">アップグレード ファイルがローカル ワークステーションで使用可能であることを確認します。</block>
+  <block id="e2a672c847bad2863e57f277c323553c" category="list-text">管理者ユーザー アカウントのパスワードがあることを確認します。</block>
+  <block id="e60c1aa35e0fea0a6ef96ddaa4b018f8" category="list-text">ローカルワークステーションのコマンドシェルで、<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) ユーティリティを使用して、イメージ ファイルをONTAP Select Deploy 仮想マシンにアップロードします。</block>
+  <block id="fc979b5c6d5eef1f824052719f508095" category="section-title">ステップ3: アップグレードパッケージを適用する</block>
+  <block id="8b24796d99b30623379a77021195b47e" category="paragraph">アップグレード ファイルをONTAP Select Deploy 仮想マシンにアップロードしたら、アップグレードを適用できます。</block>
+  <block id="91aa908b0f2003054a80626907b7d18a" category="list-text">ONTAP Select Deploy ユーティリティ仮想マシンのどのディレクトリにアップグレード ファイルが配置されているかを確認します。</block>
+  <block id="b2fb3f45f259e44e136bed021ae55392" category="list-text">アップグレードの実行中に、 ONTAP Select Deploy を使用して他のタスクが実行されていないことを確認します。</block>
+  <block id="abb9205c97b7f267bd63f25baa86e729" category="list-text">管理者アカウントで SSH を使用してONTAP Select Deploy ユーティリティ CLI にSign in。</block>
+  <block id="87a5212e058c62281b89455df9a32603" category="paragraph">アップグレード手順が完了する前に、 ONTAP Select Deploy 仮想マシン構成のバックアップを作成するように求められます。また、新しく作成されたONTAP Select Deploy ページを表示できるように、ブラウザのキャッシュをクリアする必要があります。</block>
 </blocks>
