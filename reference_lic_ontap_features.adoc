@@ -57,11 +57,16 @@ ONTAP 機能がデフォルトで有効になっていない場合は、次の�
 
 * FabricPool
 * MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）
-* SnapLock Enterprise（ONTAP SelectではSnapLockコンプライアンスはサポートされていません）
+* SnapLock Enterprise for ONTAP Select 9.16.1以前（link:https://mysupport.netapp.com/site/["NetApp Support Site"^] ）
++
+
+NOTE: SnapLock Compliance はONTAP Selectではサポートされていません。
+
 +
 ** 改ざん防止Snapshotコピー
 
 
+* SnapLockセレクト
 
 
 

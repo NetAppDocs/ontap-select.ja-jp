@@ -43,11 +43,59 @@ KVMホスト上のクラスタ拡張と縮小のサポート:: ONTAP Select 9.17
 link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。"] 。
 
 --
-SnapMirrorクラウドのサポート:: ONTAP Select 9.17.1 以降、 SnapMirrorクラウドがONTAP Selectでサポートされます。SnapMirrorSnapMirrorは、 ONTAP Select 9.17.1 クラスタを導入するか、既存のONTAP Selectクラスタをバージョン 9.17.1 にアップグレードすると、デフォルトで有効になるライセンス対象のONTAP機能です。
+ESXiホスト上のクラスタ拡張と縮小のサポート強化:: ONTAP Select 9.17.1 以降では、ESXi ホスト上の 6 ノード クラスタと 12 ノード クラスタ間のクラスタ拡張と縮小がサポートされます。
 +
 --
+--
+既存の ESXi クラスタのクラスタ サイズを次の増分単位で増やすことができます。
+
+* 6ノードから8、10、12ノードへ
+* 8ノードから10または12ノードへ
+* 10から12ノード
+
+
+既存の ESXi クラスタのクラスタ サイズを次の増分単位で減らすことができます。
+
+* 12ノードから10、8、または6ノードへ
+* 10ノードから8または6ノードへ
+* 8ノードから6ノードへ
+
+
+--
+link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。"] 。
+
+--
+ONTAP機能のサポート:: ONTAP Select 9.17.1 以降では、次のライセンスされたONTAP機能がONTAP Selectでサポートされます。
++
+--
+* SnapLockセレクト
++
+ONTAP Select 9.17.1 以降、新しい導入ではSnapLock Select のライセンスが自動的に付与されます。  ONTAP Select 9.16.1以前からのアップグレードの場合は、 SnapLock Selectライセンスをlink:https://mysupport.netapp.com/site/["NetApp Support Site"^]手動で適用します。
+
+* SnapMirrorクラウド
++
+ONTAP Select 9.17.1 以降、 SnapMirrorクラウドがONTAP Selectでサポートされます。SnapMirrorSnapMirrorは、 ONTAP Select 9.17.1 クラスタを導入するか、既存のONTAP Selectクラスタをバージョン 9.17.1 にアップグレードすると、デフォルトで有効になるライセンス対象のONTAP機能です。
+
++
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["オブジェクトストレージへのSnapMirrorクラウドバックアップについて学ぶ"^] 。
 
+
+
+--
+マルチノードクラスタでの vSAN ESA のサポート:: ONTAP Select 9.17.1 以降では、vSAN Express Storage Architecture (ESA) のサポートが拡張され、マルチノード クラスタを展開できるようになりました。この機能強化により、vSAN ESA 構成をデプロイできるようになります。
++
+--
+vSAN ESA は ESX 固有の構成であり、vSphere 8 で導入された VMware vSAN の新しいアーキテクチャです。vSAN ESA は、特に NVMe ベースの TLC フラッシュ デバイスを使用する場合に、強化された効率、スケーラビリティ、およびパフォーマンスを提供するように設計されています。
+
+ONTAP Select Deploy およびONTAP Select for ESX は、ストレージ プールに vSAN または外部アレイ タイプのデータストアを使用して、 ONTAP Selectシングルノードおよびマルチノード クラスタの構成をサポートします。
+
+[NOTE]
+====
+コンテンツ ライブラリの操作を実行するには、追加の権限レベルにアクセスする必要があります。制限されたロールで作業している場合、vSAN ESA の展開にはこれが必要です。
+
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html["コンテンツライブラリ操作のアクセス権限レベルについて学習します"^] 。
+
+====
 --
 NDAドライバーのサポートを更新:: ONTAP Select 9.17.1以降、NVD（NVMe Expressディスクドライバ）に代わってFreeBSD NDA（NVMe Direct Access）デバイスドライバが導入されました。FreeBSDドライバは、NVMeコマンドプロトコルを実装することで、ダイレクトアクセスデバイスのサポートを提供します。ONTAPONTAP Select 9.17.1クラスタを導入する場合、または既存のONTAP Selectクラスタをバージョン9.17.1にアップグレードする場合、NVMeデバイスの設定時にFreeBSDドライバがデフォルトで起動されます。
 +

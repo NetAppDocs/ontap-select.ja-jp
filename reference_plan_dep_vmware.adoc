@@ -103,3 +103,24 @@ ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポー�
 * Deploy 仮想マシンの管理 LIF に IPv4 アドレスを割り当てる必要があります。
 * ONTAP LIF で IPv6 を使用するように設定された ONTAP Select ノードを Deploy で作成することはできません。
 
+
+
+
+== ONTAP Select Deploy VMware vCenter Server の考慮事項
+
+
+
+=== ESA の VMware vSphere 権限
+
+以下は、vCenter で vSAN Express Storage Architecture (ESA) を作成および管理するために必要な vSphere コンテンツ ライブラリの特定の権限の一覧です。
+
+* ライブラリアイテムを追加
+* ローカルライブラリを作成する
+* ライブラリアイテムを削除
+* ローカルライブラリを削除する
+* ストレージの読み取り
+* ファイルの更新
+* ライブラリを更新
+* ライブラリアイテムを更新
+* ローカルライブラリを更新する
+
