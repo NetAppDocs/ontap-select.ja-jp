@@ -3153,7 +3153,6 @@ storage aggregate show-spare-disks</block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="list-text">NDMP</block>
-  <block id="1bacbb36e2afde0c7a93da85daa18ef1" category="list-text">小規模、中規模、大規模のインスタンスタイプ</block>
   <block id="4241d8a2662be78b68fdfaf8b9daec1a" category="list-text">HDD、SSD、NVMeドライブ</block>
   <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">アドオンライセンスを管理します。</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">ライセンスの管理の概要（クラスタ管理者のみ）</block>
@@ -3545,10 +3544,8 @@ storage aggregate show-spare-disks</block>
   <block id="e73d640a676c83c4510d0212e506bb38" category="cell">18コア/ 136GB RAM</block>
   <block id="522c4ec4d9d59e1a992d989c8d770589" category="cell">ネットワーク（ノードあたり）</block>
   <block id="d5fda742cbaf307ce4ca202b12335858" category="cell">シングルノードクラスタの場合は最低2つの1GbEポート2ノードクラスタ（HAペア）の場合は最低4つの1GbEポート4ノード、6ノード、または8ノードクラスタの場合は最低2つの10GbEポート</block>
-  <block id="c65eee5a4810d852ee01a79b87c993f3" category="paragraph">^1^ハイパーバイザー用に2コアと8Gb RAMを想定しています。</block>
   <block id="f0cb6783b152b19ceab16227ca3976a2" category="open-title">ストレージタイプ</block>
   <block id="5939197c86f855d26c9639db3b9a29d6" category="paragraph">次の表に、指定したストレージに必要な最小ライセンスタイプを示します。 </block>
-  <block id="1138bbb83d6525f914cbce8dccc4a874" category="cell">ペミウムXL</block>
   <block id="e629ab9880aae245163ce498ab9e1389" category="cell">小規模および中規模</block>
   <block id="a09a88160dc1591cac42ba911581e599" category="cell">小規模、中規模、大規模</block>
   <block id="93c34d5f173f74aeed0b64401f2a6edc" category="cell">ハードウェアRAIDコントローラを搭載したローカルDAS</block>
@@ -3569,7 +3566,6 @@ storage aggregate show-spare-disks</block>
   <block id="049f7d1a5b523b8230ca21c727474d11" category="cell">管理ソフトウェア</block>
   <block id="f1680d42c94acc804fddda46a7e4602d" category="cell">NetApp Active IQ Unified Manager管理スイートONTAP Select導入ユーティリティSnapCenter（オプション）</block>
   <block id="bbf6609978bbf45921ea0dae059fde72" category="inline-link-macro">大容量階層と容量プールのライセンスタイプについて</block>
-  <block id="10aa5d1416b41ba5cd05d276a6c13328" category="paragraph"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block>です。</block>
   <block id="91d83e84a03b1a016f22b6743fa4a929" category="summary">ONTAP Select が組織に適していることを確認したら、本番環境の導入に必要なライセンスを購入できます。容量階層または容量プールのいずれかのライセンスモデルと、導入ごとのストレージ容量を選択する必要があります。</block>
   <block id="580ede122197eca33afea87d209746f9" category="paragraph">容量階層と容量プールのライセンスモデルは、いくつかの点で大きく異なります。ただし、 2 つのライセンスモデルには次のような共通の特徴があります。</block>
   <block id="8e8e728e920aef8a8e61276592f8f07a" category="section-title">容量階層のライセンスモデル</block>
@@ -3949,4 +3945,8 @@ storage aggregate show-spare-disks</block>
   <block id="dbdf8658126f3cab82aa007ed31794d3" category="paragraph">クラスター縮小機能を使用して、既存の ESXi または KVM クラスターのサイズを縮小します。</block>
   <block id="419d991bb53188641539fa8dfe55b258" category="paragraph">既存の ESXi クラスタのサイズは、次の増分単位で縮小できます。</block>
   <block id="50261774776b49c62695c35def3230b0" category="paragraph">既存のクラスターのサイズを 8 ノードから 6 ノードに減らすことができます。</block>
+  <block id="64f27557c7c3169a5053aaf03c554939" category="list-text">小規模、中規模、大規模のインスタンスタイプ</block>
+  <block id="4e59a04163b76608c718d51a77e0ab85" category="paragraph">^1^ ハイパーバイザーに 2 つのコアと 8 GB の RAM を想定しています。</block>
+  <block id="8b8284ef1bc414b0568b54a0a11232ad" category="cell">該当する</block>
+  <block id="6799f681592f9a0a7cf264c2b7bcd3d7" category="list-text"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block></block>
 </blocks>
