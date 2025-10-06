@@ -132,4 +132,6 @@ ONTAP Selectで使用される仮想環境のため、NICオフロード機能�
 
 
 .関連情報
-link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["デフォルトで有効になっているONTAP機能について"] link:concept_lic_evaluation.html["ONTAP Selectライセンスオプションの詳細"]
+* link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["デフォルトで有効になっているONTAP機能について"]
+* link:concept_lic_evaluation.html["ONTAP Selectライセンスオプションの詳細"]
+

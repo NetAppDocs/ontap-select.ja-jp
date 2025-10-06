@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_stor_vsan_external.html 
 keywords: ontap select, vsan and external array configurations, vnas architecture 
-summary: 仮想 NAS （ vNAS ）環境では、 VSAN 上の ONTAP Select クラスタ、一部の HCI 製品、 NetApp HCI テクノロジ、および外付けアレイタイプのデータストアがサポートされます。これらの構成の基盤となるインフラは、データストアの耐障害性を提供します。 
+summary: '仮想 NAS (vNAS) の展開では、vSAN、一部の HCI 製品、 NetApp HCIテクノロジー、および外部アレイ タイプのデータストア上のONTAP Selectクラスターがサポートされます。これらの構成の基盤となるインフラストラクチャは、データストアの耐障害性を実現します。' 
 ---
-= ONTAP Select vSANと外付けアレイの構成
+= ONTAP Select vSANおよび外部アレイ構成
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: 仮想 NAS （ vNAS ）環境では、 VSAN 上の ONTAP Select クラ�
 
 
 [role="lead"]
-仮想NAS（vNAS）環境では、仮想SAN（VSAN）上のONTAP Selectクラスタ、一部のHCI製品、外付けアレイタイプのデータストアがサポートされます。これらの構成の基盤となるインフラは、データストアの耐障害性を提供します。
+仮想 NAS (vNAS) の展開では、仮想 SAN (vSAN)、一部の HCI 製品、および外部アレイ タイプのデータストア上のONTAP Selectクラスターがサポートされます。これらの構成の基盤となるインフラストラクチャは、データストアの耐障害性を実現します。
 
-基盤の構成が VMware でサポートされることが最小要件であり、その構成が VMware HCL に掲載されている必要があります。
+最小要件は、使用しているハイパーバイザー (サポートされている Linux ホスト上の VMware ESXi または KVM) が基盤となる構成をサポートしていることです。ハイパーバイザーが ESXi の場合、それぞれの VMware HCL にリストされている必要があります。
 
 
 
@@ -40,9 +40,9 @@ vNAS と、 RAID コントローラ搭載の DAS には、 2 つの大きな違�
 
 == vNAS NVRAM
 
-ONTAP Select NVRAM は VMDK です。つまり、 ONTAP Select は、ブロックアドレス指定可能デバイス（ VMDK ）上のバイトアドレス指定可能スペース（従来の NVRAM ）をエミュレートします。ただし、 NVRAM のパフォーマンスが、 ONTAP Select ノード全体のパフォーマンスにはきわめて重要です。
+ONTAP Select NVRAMは VMDK です。つまり、 ONTAP Select は、ブロック アドレス指定可能なデバイス (VMDK) 上でバイト アドレス指定可能な空間 (従来のNVRAM) をエミュレートします。しかし、 NVRAMのパフォーマンスはONTAP Selectノード全体のパフォーマンスにとって極めて重要です。
 
-ハードウェア RAID コントローラを使用した DAS セットアップの場合、ハードウェア RAID コントローラキャッシュは事実上の NVRAM キャッシュとして機能します。 NVRAM VMDK へのすべての書き込みは最初に RAID コントローラキャッシュにホストされるためです。
+ハードウェア RAID コントローラを備えた DAS セットアップの場合、 NVRAM VMDK へのすべての書き込みは最初に RAID コントローラ キャッシュでホストされるため、ハードウェア RAID コントローラ キャッシュはNVRAMキャッシュとして機能します。
 
 vNAS アーキテクチャの場合、 ONTAP Deploy は、 Single Instance Data Logging （ SIDL ）というブート引数を使用して、 ONTAP Select ノードを自動的に設定します。このブート引数が指定されている場合、 ONTAP Select は NVRAM をバイパスし、データペイロードをデータアグリゲートに直接書き込みます。NVRAM は、書き込み処理によって変更されたブロックのアドレスを記録するためにのみ使用されます。この機能のメリットは、 NVRAM への 1 つの書き込みと NVRAM のデステージ時のもう 1 つの書き込みで、二重の書き込みを回避できることです。この機能は vNAS でのみ有効です。 RAID コントローラキャッシュへのローカル書き込みでのレイテンシ増がわずかしかないためです。
 
@@ -64,7 +64,7 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 
 ONTAP Select は、共有ストレージ上のマルチノード ONTAP Select クラスタをサポートします。ONTAP Deploy では、複数の ONTAP Select ノードが同じクラスタに属していないかぎり、同じ ESX ホストに複数の ESX ノードを設定できます。この構成は、 vNAS 環境（共有データストア）でのみ有効です。DAS ストレージを使用している場合、ホストごとに複数の ONTAP Select インスタンスを使用することはできません。これらのインスタンスが同じハードウェア RAID コントローラで競合するためです。
 
-ONTAP Deploy は、マルチノード VNAS クラスタの初期導入時に、同じホスト上の同じクラスタから複数の ONTAP Select インスタンスが配置されないようにします。次の図は、 2 つのホスト上で交差する、 2 つの 4 ノードクラスタの正しい導入例を示しています。
+ONTAP Deployは、マルチノードVNASクラスタの初期導入時に、同じクラスタから複数のONTAP Selectインスタンスが同じホストに配置されないようにします。次の図は、2 つのホスト上で交差する 2 つの 4 ノード クラスターの正しい展開例を示しています。
 
 * マルチノード VNAS クラスタの初期導入 *
 

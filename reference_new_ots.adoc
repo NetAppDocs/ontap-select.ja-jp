@@ -65,23 +65,13 @@ ESXiホスト上のクラスタ拡張と縮小のサポート強化:: ONTAP Sele
 link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。"] 。
 
 --
-ONTAP機能のサポート:: ONTAP Select 9.17.1 以降では、次のライセンスされたONTAP機能がONTAP Selectでサポートされます。
+SnapMirrorクラウドのサポート:: ONTAP Select 9.17.1 以降、 SnapMirrorクラウドがONTAP Selectでサポートされます。SnapMirrorSnapMirrorは、 ONTAP Select 9.17.1 クラスタを導入するか、既存のONTAP Selectクラスタをバージョン 9.17.1 にアップグレードすると、デフォルトで有効になるライセンス対象のONTAP機能です。
 +
 --
-* SnapLockセレクト
-+
-ONTAP Select 9.17.1 以降、新しい導入ではSnapLock Select のライセンスが自動的に付与されます。  ONTAP Select 9.16.1以前からのアップグレードの場合は、 SnapLock Selectライセンスをlink:https://mysupport.netapp.com/site/["NetApp Support Site"^]手動で適用します。
-
-* SnapMirrorクラウド
-+
-ONTAP Select 9.17.1 以降、 SnapMirrorクラウドがONTAP Selectでサポートされます。SnapMirrorSnapMirrorは、 ONTAP Select 9.17.1 クラスタを導入するか、既存のONTAP Selectクラスタをバージョン 9.17.1 にアップグレードすると、デフォルトで有効になるライセンス対象のONTAP機能です。
-
-+
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["オブジェクトストレージへのSnapMirrorクラウドバックアップについて学ぶ"^] 。
 
-
-
 --
+SnapLock Select Enterprise のサポート:: ONTAP Select 9.17.1 以降、新しい導入ではSnapLock Select Enterprise（改ざん防止スナップショット ロックを含む）のライセンスが自動的に付与されます。  ONTAP Select 9.16.1以前からのアップグレードの場合は、 SnapLock Selectライセンスをlink:https://mysupport.netapp.com/site/["NetApp Support Site"^]手動で適用します。
 マルチノードクラスタでの vSAN ESA のサポート:: ONTAP Select 9.17.1 以降では、vSAN Express Storage Architecture (ESA) のサポートが拡張され、マルチノード クラスタを展開できるようになりました。この機能強化により、vSAN ESA 構成をデプロイできるようになります。
 +
 --
