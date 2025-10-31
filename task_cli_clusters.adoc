@@ -4,7 +4,7 @@ permalink: task_cli_clusters.html
 keywords: administer, administering, cli, clusters 
 summary: ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。 
 ---
-= ONTAP Select クラスタ
+= CLIを使用してONTAP Selectクラスタを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,71 @@ summary: ONTAP Select クラスタを管理するために実行できる関連�
 
 
 [role="lead"]
-ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。
+CLI を使用してONTAP Selectクラスタを管理するために実行できる関連タスクがいくつかあります。
+
+
+
+== ONTAP Select Deploy 構成データをバックアップします
+
+たとえば、クラスタを展開した後などのONTAP Select Deploy 構成データのバックアップ。データは単一の暗号化ファイルに保存され、ローカルワークステーションにダウンロードできます。
+
+作成するバックアップ ファイルには、すべての構成データがキャプチャされます。このデータは、 ONTAP Selectクラスタを含む導入環境のさまざまな側面を表します。
+
+.作業を開始する前に
+Deploy はバックアップ処理中に他のタスクを実行しないでください。
+
+.手順
+. 管理者アカウントで SSH を使用してONTAP Select Deploy ユーティリティ CLI にSign in。
+. ONTAP Select Deploy サーバの内部ディレクトリに保存されているONTAP Select Deploy 構成データのバックアップを作成します。
++
+[source, cli]
+----
+deploy backup create
+----
+. プロンプトが表示されたら、バックアップのパスワードを入力します。
++
+バックアップファイルは、パスワードに基づいて暗号化されます。
+
+. システムで使用可能なバックアップを表示します。
++
+[source, cli]
+----
+deploy backup show -detailed
+----
+. [ 作成日 ] フィールドの日付に基づいてバックアップファイルを選択し、 * ダウンロード URL * の値を記録します。
++
+バックアップファイルには、 URL からアクセスできます。
+
+. Curl などの Web ブラウザまたはユーティリティを使用して、 URL を指定してバックアップファイルをローカルワークステーションにダウンロードします。
+
 
 
 
 == ONTAP Selectクラスタを削除する
 
-コマンドラインインターフェイスを使用して、不要になった ONTAP Select クラスタを削除できます。
+不要になった ONTAP Select クラスタを削除できます。
 
-.このタスクについて
+.作業を開始する前に
 クラスタをオフライン状態にする必要があります。
 
 .手順
 . 管理者アカウントを使用して、 Deploy 仮想マシンの CLI にサインインします。
-. クラスタ・ステータスを表示します。 cluster show -name clustername
-. クラスタがオフラインになっていない場合は、オフライン状態の「 cluster offline-name clustername 」に移動します
-. クラスタがオフライン状態になったことを確認したら ' クラスタを削除します cluster delete -name clustername
+. クラスターのステータスを表示します。
++
+[source, cli]
+----
+cluster show -name <cluster_name>
+----
+. クラスターがオフラインでない場合は、オフライン状態に移行します。
++
+[source, cli]
+----
+cluster offline -name <cluster_name>
+----
+. クラスターがオフライン状態であることを確認した後、クラスターを削除します。
++
+[source, cli]
+----
+cluster delete -name <cluster_name>
+----
 

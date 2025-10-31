@@ -23,7 +23,7 @@ VMware 環境に関連するハードウェア要件と計画の問題がいく�
 ONTAP Select を実行するハイパーバイザーに関連する要件がいくつかあります。
 
 
-NOTE: 既知の制限事項や制限事項の追加に際しては、使用している ONTAP Select のバージョンの最新リリースノートを確認してください。
+NOTE: 確認すべきはlink:reference_release_notes.html["ONTAP Select リリースノート"]追加の既知の制限事項や制約事項については、こちらをご覧ください。
 
 
 
@@ -52,6 +52,7 @@ ONTAP Select は、次の KVM ハイパーバイザー バージョンをサポ�
 --
 ONTAP Select は、次の ESXi ハイパーバイザー バージョンをサポートしています。
 
+* VMware ESXi 9.0
 * VMware ESXi 8.0 U3
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1（ビルド21495797）
@@ -80,7 +81,7 @@ ESXi ハイパーバイザーホストが vCenter サーバで管理されてい
 ONTAP Select を導入する物理ハイパーバイザーホストが、いくつかのハードウェア要件を満たしている必要があります。ハードウェアの最小要件を満たしていれば、ハイパーバイザーホストに対して任意のプラットフォームを選択できます。サポートされているハードウェアプラットフォームは、 Cisco 、 Dell 、 HP 、富士通、 Lenovo 、 と Supermicro です。
 
 
-NOTE: ONTAP Select 9.9.1 以降では、 Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。
+NOTE: ONTAP Select 9.9.1 以降では、Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。
 
 詳細については、を参照して https://mysupport.netapp.com/matrix["Interoperability Matrix Tool、window=_blank"]ください。
 
@@ -110,7 +111,7 @@ NOTE: Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポー�
 | 2ノードクラスタまたはMetroCluster SDS | 1GbE×4または10GbE×1 | 10GbE × 2 
 
 
-| 4 / 6 / 8ノードクラスタ | 10GbE × 2 | 10GbE×4、または25/40GbE×2 
+| 4、6、または8ノードのクラスター | 10GbE × 2 | 10GbE×4、または25/40GbE×2 
 |===
 
 

@@ -23,7 +23,7 @@ ONTAP Select ONTAP Select Select Deploy ユーティリティ仮想マシンを�
 ====
 ONTAP Select Deploy管理ユーティリティの古いインスタンスがインストールされている場合は、現在のリリースにアップグレードする必要があります。ONTAP SelectノードとONTAP Select Deployコンポーネントは個別にアップグレードされます。を参照してください link:concept_adm_upgrading_nodes.html["ONTAP Selectノードをアップグレードする"^] を参照してください。
 
-ONTAP Select Deploy 9.16.1 または 9.15.1 からONTAP Select Deploy 9.17.1 にアップグレードできます。  ONTAP Select Deploy 9.14.1 以前からアップグレードするには、 ONTAP Selectバージョンのリリース ノートを確認してください。
+ONTAP Select Deploy 9.16.1 または 9.15.1 からONTAP Select Deploy 9.17.1 に直接アップグレードできます。ONTAP Select Deploy 9.14.1 以前からアップグレードするには、 ONTAP Selectバージョンのリリース ノートを確認してください。
 
 ====
 

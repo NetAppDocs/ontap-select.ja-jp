@@ -98,7 +98,7 @@ vNAS のデフォルト構成では、 Single Instance Data Logging （ SIDL ）
 
 
 [[ontap-select-image-install]]
-ONTAP Select イメージのインストール:: ONTAP Select Deploy 2.8 以降では、 Deploy 管理ユーティリティに含まれる ONTAP Select のバージョンは 1 つだけです。含まれているバージョンは、リリース時に最新のバージョンです。ONTAP Select イメージのインストール機能を使用すると、以前のバージョンの ONTAP Select を Deploy ユーティリティのインスタンスに追加できます。このユーティリティは、 ONTAP Select クラスタの導入時に使用できます。を参照してください link:task_cli_deploy_image_add.html["詳細については、 ONTAP Select イメージを追加してください"]。
+ONTAP Select イメージのインストール:: Deploy 管理ユーティリティには、 ONTAP Selectの 1 つのバージョンのみが含まれています。含まれるバージョンは、リリース時点で利用可能な最新バージョンです。ONTAPONTAP Selectイメージインストール機能を使用すると、以前のバージョンのONTAP SelectをDeployユーティリティのインスタンスに追加できます。これにより、 ONTAP Selectクラスタの導入時に使用できるようになります。見るlink:task_cli_deploy_image_add.html["詳細については、 ONTAP Select イメージを追加してください"]。
 
 
 

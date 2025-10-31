@@ -17,6 +17,9 @@ summary: REST Web サービスは柔軟性が高いため、 ONTAP Select Deploy
 REST Web サービスは柔軟性が高いため、 ONTAP Select Deploy API にはいくつかの方法でアクセスできます。
 
 
+NOTE: ONTAP Select Deployに含まれるREST APIにはバージョン番号が割り当てられています。APIのバージョン番号は、Deployのリリース番号とは無関係です。DeployONTAP Select 9.17.1 Deploy 管理ユーティリティには、REST API バージョン 3 が含まれています。
+
+
 
 == Deploy ユーティリティの標準のユーザインターフェイス
 

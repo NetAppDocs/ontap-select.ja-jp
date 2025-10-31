@@ -224,8 +224,6 @@ sidebar:
         url: "/concept_api_rest.html"
       - title: Deploy API にアクセスします
         url: "/concept_api_how_access.html"
-      - title: API のバージョン管理を導入
-        url: "/concept_api_versions.html"
       - title: 基本操作
         url: "/concept_api_operation.html"
       - title: リクエストおよびレスポンストランザクション

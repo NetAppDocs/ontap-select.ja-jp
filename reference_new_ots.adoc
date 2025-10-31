@@ -94,6 +94,7 @@ ONTAP Select 9.16.1 以前では、NVD は引き続きONTAP Select展開内の N
 
 --
 KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.17.1 以降、KVM ハイパーバイザーは Red Hat Enterprise Linux (RHEL) 9.6 および Rocky Linux 9.6 でサポートされます。
+VMware ESXiのサポートを強化:: ONTAP Select 9.17.1 には、VMware ESXi 9.0 のサポートが含まれています。
 
 
 

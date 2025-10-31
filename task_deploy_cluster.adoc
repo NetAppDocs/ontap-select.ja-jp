@@ -196,15 +196,15 @@ Deploy 管理がインストールされ、初期設定 (パスワード、 Auto
 ====
 
 
-== ステップ3: 完了後
+== ステップ3: 展開を完了する
 
-ONTAP Select AutoSupport機能が設定されていることを確認し、ONTAP Select Deployの設定データをバックアップする必要があります。
+クラスタを導入した後、 ONTAP Select AutoSupport機能が設定されていることを確認し、link:task_cli_clusters.html["ONTAP Select Deploy構成データをバックアップする"] 。
 
 [TIP]
 ====
 クラスタの作成処理が開始されても完了しない場合は、定義したONTAP管理パスワードが適用されないことがあります。この場合、次のCLIコマンドを使用して、ONTAP Selectクラスタの一時的な管理パスワードを確認できます。
 
-[listing]
+[source, cli]
 ----
 (ONTAPdeploy) !/opt/netapp/tools/get_cluster_temp_credentials --cluster-name my_cluster
 ----

@@ -162,7 +162,7 @@ NOTE: カーネルベースの仮想マシン (KVM) は、大規模なインス�
 2+| ソフトウェアタイプ 3+| 説明 
 
 
-2+| ハイパーバイザーのサポート（VMware） 3+| VMware vSphere 8.0GA およびアップデート 1 ～ 3、VMware vSphere 7.0GA およびアップデート 1 ～ 3C 
+2+| ハイパーバイザーのサポート（VMware） 3+| VMware vSphere 9.0 VMware vSphere 8.0GA およびアップデート 1 ～ 3 VMware vSphere 7.0GA およびアップデート 1 ～ 3C 
 
 
 2+| ハイパーバイザーのサポート（KVM） 3+| Red Hat Enterprise Linux 64 ビット (KVM) 9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.8、8.7、および 8.6 Rocky Linux (KVM) 9.6 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6 
