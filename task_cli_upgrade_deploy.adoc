@@ -55,7 +55,7 @@ ONTAP Select Deploy 9.16.1 または 9.15.1 からONTAP Select Deploy 9.17.1 に
 
 
 .手順
-. ローカルワークステーションのコマンドシェルで、 `scp` (Secure Copy Protocol) ユーティリティを使用して、イメージ ファイルをONTAP Select Deploy 仮想マシンにアップロードします。
+. ローカルワークステーションのコマンドシェルで、 `scp` (Secure Copy Protocol) ユーティリティを使用して、次の例に示すように、イメージ ファイルをONTAP Select Deploy 仮想マシンにアップロードします。
 +
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
@@ -80,7 +80,12 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 . 管理者アカウントで SSH を使用してONTAP Select Deploy ユーティリティ CLI にSign in。
 . 適切なディレクトリパスとファイル名を使用してアップグレードを実行します。
 +
-「 deploy upgrade-package-path filepath 」と入力します
+[source, cli]
+----
+deploy upgrade -package-path <file_path>
+----
++
+コマンド例:
 
 +
 ....

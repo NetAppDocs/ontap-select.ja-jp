@@ -278,8 +278,8 @@ sidebar:
       url: "/task_cli_clusters.html"
     - title: ノードとホスト
       entries:
-      - title: ESXiを6.5以降にアップグレード
-        url: "/task_cli_upgrade_esxi65.html"
+      - title: ESXi のアップグレード
+        url: "/cli-upgrade-esxi.html"
       - title: ホスト管理サーバを変更する
         url: "/reference_host_modify_command.html"
     - title: Deploy ユーティリティ

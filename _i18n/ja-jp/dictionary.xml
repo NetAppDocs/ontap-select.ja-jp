@@ -646,8 +646,6 @@
   <block id="193036e83646828d4e1cd41104fdee82" category="paragraph">Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。この要件は、 1 つ以上の ONTAP Select 2 ノードクラスタを管理する環境 All Deploy インスタンスです。</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select Deploy 管理ユーティリティをインストールし、ユーティリティを使用して ONTAP Select クラスタを作成する必要があります。</block>
   <block id="4457cc766e233dbf5bfec7006eded349" category="paragraph">ONTAP Select パッケージは、ネットアップサポートサイトからダウンロードできます。</block>
-  <block id="d687fa799cb928d61ab8f8c42c50439d" category="list-text">[ * 製品の検索 * ] をクリックします。</block>
-  <block id="da5ed6f3275aa7228f65de977570f140" category="list-text">下にスクロールし、 * ONTAP Select * をクリックします。</block>
   <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">パッケージのリリースを選択します。</block>
   <block id="9bf3ac5f4cb6341117598df735958bdf" category="list-text">エンドユーザライセンス契約（ EULA ）を確認し、「 * 同意して続行」をクリックします。</block>
   <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">適切なパッケージを選択してダウンロードし、必要に応じてすべてのプロンプトに応答します。</block>
@@ -869,13 +867,11 @@
   <block id="2c3df213abea0ad1cb494572704542f9" category="inline-image-macro">では、 ONTAP Select クラスタの導入に必要な完全なワークフローについて説明します。</block>
   <block id="bc0723c49208cb7ede4ce6ea0a477957" category="paragraph"><block ref="bc0723c49208cb7ede4ce6ea0a477957" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">コマンドラインインターフェイスを使用して、既存の Deploy ユーティリティの仮想マシンをインプレースアップグレードできます。</block>
-  <block id="67a5c1dd24ee56878ca59f7cbb4a6602" category="list-text">Web ブラウザからネットアップサポートサイトにアクセスし、「 * Support Quick Links * 」をクリックします。</block>
   <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">アップグレードパッケージの目的のリリースを選択します。</block>
   <block id="def8f653fff47640d3bcce40244c6331" category="list-text">適切なパッケージを選択してダウンロードし、環境に応じてすべてのプロンプトに応答します。</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">このタスクは、ファイルを Deploy 仮想マシンにアップロードする方法の 1 つです。ご使用の環境に適したその他のオプションがある場合もあります。</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">アップグレードファイルは、 admin ユーザのホームディレクトリに格納されます。</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">適切なディレクトリパスとファイル名を使用してアップグレードを実行します。</block>
-  <block id="f5fb71abd32be9bc904db11637b6b903" category="paragraph">「 deploy upgrade-package-path filepath 」と入力します</block>
   <block id="e5338fa1dff19c951b23cd8d57a1bb1d" category="summary">SSH を使用して Deploy 管理シェルにサインインする必要があります。サインインしたら、問題 CLI コマンドを使用して ONTAP Select クラスタを作成し、関連する管理手順を実行できます。</block>
   <block id="1e1c82929b36e8b866f932a031b19c58" category="paragraph">Deploy 管理者（ admin ）アカウントの現在のパスワードが必要です。初めてサインインし、 vCenter を使用して Deploy 仮想マシンをインストールする場合は、インストール時に設定したパスワードを使用してください。</block>
   <block id="ccb606fde10157eafe6d1e665b68829a" category="list-text">Deploy 仮想マシンの管理者アカウントと管理 IP アドレスを使用してサインインします。次に例を示します。</block>
@@ -1017,12 +1013,9 @@
   <block id="bdcc30baa721ccd0a5acff90c91be1eb" category="paragraph">クラスタで現在使用されていない、または将来のクラスタ導入で使用する予定の古い ONTAP Select イメージを削除できます。</block>
   <block id="782ecd049df8bffe850b977d8d9ef2dd" category="list-text">管理者（ admin ）アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。</block>
   <block id="fa1108d6713a8e964a0091afacde76b4" category="list-text">Deploy で管理されるクラスタを表示して、使用中の ONTAP イメージを記録します。</block>
-  <block id="494cb4f7976c64f111b74e9089d5bbd5" category="paragraph">「 cluster show 」を参照してください</block>
   <block id="bc51625a3fe6a0e7ccf7a1059630b41c" category="paragraph">各ケースのバージョン番号とハイパーバイザープラットフォームをメモします。</block>
   <block id="8b7bd3ee934f35f730dee72837b5aee2" category="list-text">Bash シェルを起動します。</block>
-  <block id="34eaf92501247fea4a9be97412cef6df" category="paragraph">シェル bash</block>
   <block id="75c67769109540e212db27715ac58ee9" category="list-text">使用可能なすべての ONTAP Select イメージを表示します。</block>
-  <block id="bac8e85676787adaae3dcc2dd52d64fa" category="paragraph">ls -LH /opt/NetApp/images</block>
   <block id="cf3870a4ea8df9ca19bca44e9ddb94ff" category="summary">ONTAP Select Deploy 管理ユーティリティのインストールを計画する際に考慮する必要のある一般的な要件がいくつかあります。</block>
   <block id="dbc858bba588a84f31510f7236fc9029" category="doc">ONTAP Select Deploy の一般的な要件と計画</block>
   <block id="69bed9e4fad549efbae3d288b2a4e6ac" category="section-title">Deploy ユーティリティと ONTAP Select クラスタのペアリング</block>
@@ -1103,7 +1096,6 @@
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="eab10597f9ef50e8058170729878869e" category="list-text">MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）</block>
   <block id="c3c1ba002ed4d0d1ae23559793a734bd" category="inline-link-macro">ONTAP Select と ONTAP 9 の比較</block>
-  <block id="77aaedb7dde5f69b11a5683a958edbfc" category="list-text"><block ref="77aaedb7dde5f69b11a5683a958edbfc" category="inline-link-macro-rx"></block></block>
   <block id="5cd0ad520dbcfbdeee9d38a1ad945c17" category="summary">ONTAP Select クラスタを導入したら、 ONTAP ソフトウェアの標準のアップグレード手順 を使用して、各ノードの ONTAP イメージを必要に応じてアップグレードできます。</block>
   <block id="047bc25615b74f5ee9ad03d531e71221" category="paragraph">ONTAP Select クラスタを導入したら、必要に応じて、クラスタ内の各ノードで ONTAP イメージをアップグレードできます。</block>
   <block id="30cf2dd94fe579c8d10145706d2803f2" category="admonition">Deploy 管理ユーティリティを使用して、既存の ONTAP Select ノードのアップグレードを実行することはできません。Deploy ユーティリティは、新しい ONTAP Select クラスタの作成にのみ使用できます。</block>
@@ -1588,80 +1580,45 @@
   <block id="ca91eb0ffb4e943653e46e9be3d1522e" category="summary">すべての Python スクリプトは、 1 つのモジュールで共通の Python クラスを使用します。</block>
   <block id="66cebfc655fc14a70cafa6f4ef31ce39" category="doc">共通サポートモジュール</block>
   <block id="6738f098cd2bba79a1109b07a6b3a4e3" category="summary">ONTAP Select イメージを Deploy 管理ユーティリティのインスタンスに追加できます。イメージをインストールしたら、 ONTAP Select クラスタを導入する際にそのイメージを使用できます。</block>
-  <block id="7f7382cd875100edcc778a758c7b1209" category="paragraph">ONTAP Select イメージを Deploy のインスタンスに追加するプロセスは、大きく分けて次の 4 つのステップで構成されます。</block>
-  <block id="4270b6b39fbe76ef4939c93514f88e51" category="list-text">インストールイメージをダウンロードしています</block>
-  <block id="0142950d64779e553d9f91719bd60ead" category="list-text">Deploy 仮想マシンへのインストールイメージのアップロード</block>
-  <block id="a1383adc5e3ac160ba2699050ca39978" category="list-text">インストールイメージを追加しています</block>
-  <block id="aa8c9595fedf9966773a268dbec612aa" category="list-text">使用可能なインストールイメージを表示します</block>
   <block id="ff2a9bd49048e73baaf69d5e3097f161" category="paragraph">新しい ONTAP Select イメージを Deploy に追加する前に、不要なイメージを削除する必要があります。</block>
   <block id="7e0a8cfbb81693d645b2e510efe248df" category="admonition">ONTAP Select イメージは、 Deploy ユーティリティのインスタンスに含まれている元のバージョンよりも前のバージョンでのみ追加してください。ネットアップから提供される新しいバージョンの ONTAP Select は、サポートされていない構成では追加できません。</block>
   <block id="807ad9e65833a6b39b8d8286e8b783f8" category="paragraph">ONTAP Select イメージを Deploy ユーティリティのインスタンスに追加するプロセスを開始するには、ネットアップサポートサイトからインストールイメージをダウンロードする必要があります。ONTAP Select インストールイメージは、単一の圧縮ファイルとしてフォーマットされています。</block>
-  <block id="3778083b3c866c64222ea90c43b33055" category="list-text">[* Top Tasks] の下の [* Download Software* ] をクリックして、サイトにサインインします。</block>
-  <block id="5f76f77f8f2d50493666c4d9eb015d66" category="list-text">[* Other Available Select Software* （その他の利用可能な Select ソフトウェアの選択 * ） ] で、 [* Deploy Upgrade] 、 [Node Upgrade] 、 [Image Install* （イメージ</block>
   <block id="219698a1df9fbd3c16f4a498102fbc3e" category="paragraph">ONTAP Select インストールイメージを取得したら、ファイルを Deploy 仮想マシンにアップロードする必要があります。</block>
   <block id="2a5d9f3f5564baf37e1d1a8cf1a3b68c" category="paragraph">インストールイメージファイルをローカルワークステーションで使用できるようにしておく必要があります。また、 Deploy 管理者ユーザアカウントのパスワードが必要です。</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">ステップ</block>
-  <block id="63b64c746e35843656c2e5ab351a6058" category="list-text">ローカルワークステーション上のコマンドシェルで、イメージファイルを Deploy 仮想マシンにアップロードします。</block>
   <block id="1c654c4358e2d4003c74f40926274452" category="paragraph">ノードインストールファイルは、管理者ユーザのホームディレクトリに格納されます。</block>
-  <block id="16fc31448477212537b6e77370eb37c1" category="paragraph">新しいクラスタの導入時に使用できるように、 ONTAP Select インストールイメージを Deploy images ディレクトリに追加できます。</block>
   <block id="1c6a034b63f5d95f8ce563a77103fb05" category="paragraph">Deploy ユーティリティの仮想マシンでインストールイメージファイルを配置したディレクトリを確認しておく必要があります。このファイルは、管理者のホームディレクトリにあると想定されます。</block>
-  <block id="418076c036187fc2b385bdd1281ce8bc" category="list-text">インストールイメージファイルを images ディレクトリに配置します。</block>
-  <block id="c0549956556109e315a844c123220537" category="paragraph">例： tar -xf image_v_93_install_esx.tgz -C/opt/NetApp/images/`</block>
-  <block id="9ef896581aaec3297fd8373103d43cef" category="paragraph">新しいクラスタの導入時に使用できる ONTAP Select イメージを表示できます。</block>
   <block id="723658df342d95ccbf42a5f9c876dfee" category="list-text">Deploy ユーティリティの仮想マシンのオンラインドキュメントの Web ページにアクセスし、管理者（ admin ）アカウントを使用してサインインします。</block>
   <block id="dc43755d370f894f2f9d7a9da08ce7e2" category="paragraph">http://&lt;FQDN|IP_ADDRESS&gt;/api/ui` にアクセスします</block>
   <block id="cc95115e3088d1f2d90bf48fa98be3d5" category="paragraph">Deploy 仮想マシンのドメイン名または IP アドレスを使用してください。</block>
-  <block id="a80b761ab06a4ff6731297d4de180b0b" category="list-text">ページの下部に移動し、 * Deploy * をクリックして、 * Get/images * をクリックします。</block>
-  <block id="d7053ec6f3f2e9697233f406d33a87fb" category="list-text">[* 試してみましょう !* ] をクリックすると、使用可能な ONTAP Select イメージが表示されます。</block>
   <block id="c5db03c3f05f8d27a033a2f8f7fbf211" category="list-text">目的のイメージが使用可能であることを確認します。</block>
   <block id="4497c744476a3b6774a7e4659e36bb37" category="summary">ONTAP Select Deploy ユーティリティに障害が発生した場合や、何らかの理由でユーティリティが使用できない場合は、 ONTAP Select のノードとクラスタを管理できなくなります。また、 Deploy に含まれるメディエーターサービスを使用できないため、すべての 2 ノードクラスタの HA 機能が失われます。リカバリ不能な障害が発生した場合は、 Deploy ユーティリティのインスタンスをリカバリして、管理と HA の機能をリストアする必要があります。</block>
-  <block id="732fff5218e24bea555b4f8de50d2d22" category="paragraph">Deploy ユーティリティのインスタンスを確実にリカバリするには、そのための準備をしておく必要があります。</block>
-  <block id="4e5bd66d05ea6e0425032aae26d54f07" category="paragraph">いくつかの管理手順に関する詳しい知識と情報が必要です。</block>
-  <block id="e9b71fd1c3e60cd227138ff80d4b34dd" category="paragraph">ハイパーバイザー環境に ONTAP Select Deploy ユーティリティの新しいインスタンスをインストールできる必要があります。</block>
-  <block id="d9b585388e199d807960be00480d9c37" category="paragraph">ONTAP Select クラスタの ONTAP CLI にサインインして、シェルインターフェイスを使用する必要があります。</block>
-  <block id="92a71e755753127bb017bb1fe9bad028" category="paragraph">ONTAP Select の 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスの設定データがバックアップされているかどうかを確認する必要があります。作成したバックアップにはクラスタが含まれていない場合があります。</block>
-  <block id="618988b1c7baef58636565874807619a" category="paragraph">使用するリカバリ用手順 に応じて、 Deploy の設定データのバックアップをリストアする必要があります。</block>
-  <block id="88178796123172aa042c2352197e09e0" category="paragraph">障害が発生した元の Deploy ユーティリティの仮想マシンの IP アドレスを把握しておく必要があります。</block>
-  <block id="378cdb3591ae498a782312834334c853" category="paragraph">ONTAP Select Deploy ユーティリティのインスタンスをリカバリする際に使用する手順 を決定しておく必要があります。ONTAP Select 2 ノードクラスタを含む、障害が発生した元の Deploy ユーティリティの設定データをバックアップするかどうかを決定します。</block>
   <block id="11530c57a897d905bc943331e58f56b0" category="cell">2 ノードクラスタを含む Deploy のバックアップがあるか</block>
-  <block id="b42236ddc43aefb700714337ec5fe465" category="cell">使用するリカバリ手順</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">いいえ</block>
   <block id="4780c03db443ef1fccbe9971eeda0df0" category="paragraph">2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがある場合は、新しい Deploy 仮想マシンのインスタンスに設定データをリストアできます。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。</block>
-  <block id="50f2c67c1d54b1604865c0785336a1bf" category="paragraph">2 ノードクラスタを含む、障害が発生した元の Deploy 仮想マシンの設定データのバックアップが必要です。2 ノードクラスタの ONTAP CLI にサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。</block>
   <block id="04707b3ca56ea70a35e5f72497444b18" category="paragraph">リストアする設定のバックアップには 2 ノードクラスタが含まれているため、メディエーターの iSCSI ターゲットとメールボックスは、新しい Deploy ユーティリティの仮想マシンに再作成されます。</block>
   <block id="10d3454e4067c478fcd215352578896c" category="list-text">ONTAP Select Deploy ユーティリティの新しいインスタンスを準備します。</block>
   <block id="392ad4630b9353f5418297f40a2e9465" category="list-text">新しい Deploy ユーティリティの仮想マシンをインストールします。</block>
   <block id="a5817a7120ba5c7f40fbeec33918b40c" category="list-text">Deploy の設定を以前のバックアップから新しい仮想マシンにリストアします。</block>
   <block id="2a0f6c83e2e8656a3009a7768b3bac83" category="paragraph">インストールとリストアの手順の詳細については、関連するタスクを参照してください。</block>
   <block id="3edf4cb19512d4630e64407fdbfacf0f" category="list-text">ONTAP Select の 2 ノードクラスタの ONTAP コマンドラインインターフェイスにサインインします。</block>
-  <block id="232499f93d4af76d76aa851010a3d601" category="list-text">新しい Deploy 仮想マシンの IP アドレスが元の Deploy 仮想マシンと異なる場合は、古いメディエーターの iSCSI ターゲットを削除し、新しいターゲットを追加する必要があります。</block>
   <block id="59375550d620fe069d214b870c7e2f34" category="paragraph">「 &lt;IP_address&gt; 」パラメータは、新しい Deploy 仮想マシンの IP アドレスです。</block>
   <block id="2cc23b20b088fcaa02f28b1f9267a13e" category="paragraph">これらのコマンドを使用すると、新しい Deploy ユーティリティの仮想マシン上のメールボックスディスクを ONTAP Select ノードで検出できます。</block>
   <block id="3718a86363802a2f1f5a36285c76206a" category="list-text">メディエーターディスクの名前を特定します。</block>
-  <block id="bd0690415958671ed80cf4e26c22e637" category="paragraph">disk show -container-type mediator</block>
   <block id="1146fee0eb880f0892a23e726ca0a4d2" category="list-text">メールボックスディスクを 2 つのノードに割り当てます。</block>
   <block id="9d070d121ee26abdb5d314d6fff4c15c" category="list-text">ストレージフェイルオーバーが有効になっていることを確認します。</block>
-  <block id="751035e5db88d172e881299c202d9b13" category="paragraph">「 storage failover show 」をクリックします</block>
-  <block id="569f883a1fcdb29c5aa5e29f182e9dd9" category="paragraph">2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがない場合は、新しい Deploy 仮想マシンにメディエーターの iSCSI ターゲットとメールボックスを設定する必要があります。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。</block>
-  <block id="1b8f191261c89384d2a9550aaac5eac0" category="paragraph">新しい Deploy ユーティリティのインスタンスのメディエーターターゲットの名前が必要です。2 ノードクラスタの ONTAP CLI にサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。</block>
   <block id="b641370bc8479ac609268e5b798181a7" category="paragraph">必要に応じて、設定のバックアップを新しい Deploy 仮想マシンにリストアできます。 2 ノードクラスタがバックアップに含まれていなくてもリストアは可能です。リストアで 2 ノードクラスタが再作成されることはないため、 Deploy の ONTAP Select オンラインドキュメントの Web ページを使用して、メディエーターの iSCSI ターゲットとメールボックスを新しい Deploy ユーティリティのインスタンスに手動で追加する必要があります。2 ノードクラスタにサインインし、 2 つのノードの ONTAP 名を確認しておく必要があります。</block>
   <block id="a4e19764a9b0a95876226c599e6aab9a" category="admonition">リカバリ手順 の目的は、 2 ノードクラスタを正常な状態にリストアして、通常の HA テイクオーバー処理とギブバック処理を実行できるようにすることです。</block>
   <block id="f5eb374c041ad769f9b37edbfcfdc016" category="list-text">必要に応じて、 Deploy の設定を以前のバックアップから新しい仮想マシンにリストアします。</block>
   <block id="1a811df4dc00792e0b4812c49edd60bc" category="paragraph">以前のバックアップをリストアする場合、新しい Deploy インスタンスには 2 ノードクラスタが含まれません。インストールとリストアの手順の詳細については、関連情報のセクションを参照してください。</block>
   <block id="ccade42401bf54d1ace0721ed8894959" category="list-text">advanced 権限モードに切り替えます。</block>
   <block id="cffcfc00e24ed8ca2b18bf4a888e0070" category="list-text">メディエーターの iSCSI ターゲット名を取得します。</block>
-  <block id="0b8eead8cff957b1221c528cc5815b22" category="paragraph">「 storage iscsi-initiator show -target-type mailbox 」と入力します</block>
   <block id="6beda81a8ccb785c3706cadbcacf79db" category="list-text">新しい Deploy ユーティリティの仮想マシンのオンラインドキュメント Web ページにアクセスし、 admin アカウントを使用してサインインします。</block>
   <block id="5bdffc33624cf554ff99229cfbc8bc1c" category="paragraph">http://&lt;ip_address&gt;/api/ui` にアクセスします</block>
   <block id="9cf0c17a75f430132839d17e4cdf2734" category="paragraph">Deploy 仮想マシンの IP アドレスを使用する必要があります。</block>
-  <block id="c30d588450ec2670c8abb4c5bdfcf92a" category="list-text">[* mediator* ] 、 [* Get/medators] の順にクリックします。</block>
-  <block id="896a10bc0a8946569552955f1a8b3e4c" category="list-text">[* 試してみてください !* ] をクリックすると、 Deploy によって管理されているメディエーターのリストが表示されます。</block>
   <block id="7e1f9afbb0146bf2210d834ead709d47" category="paragraph">目的のメディエーターインスタンスの ID をメモします。</block>
-  <block id="deaae3056bff3505c8cf3c3e5f9394f4" category="list-text">[* Mediator* ] 、 [* POST] の順にクリックします。</block>
   <block id="040012e13bef5621713bec788252ef98" category="list-text">mediator_id の値を指定します</block>
-  <block id="f256ba989ef4bd8aa23530c93ff59b5e" category="list-text">[iSCSI_target] の横の [*Model] をクリックして ' 名前の値を入力します</block>
   <block id="e11663ca33d9f0461cabf12f56a8c381" category="paragraph">iqn 名前パラメータのターゲット名を使用します。</block>
-  <block id="109c8e36bc942c26365dbf0801f87f3d" category="list-text">[* 試してみてください !* ] をクリックして、メディエーターの iSCSI ターゲットを作成します。</block>
   <block id="3d85b7e0ce2983da3c1d066243516254" category="paragraph">要求が成功すると、 HTTP ステータスコード 200 が表示されます。</block>
   <block id="4da2af2783b38d64f7ad51f0188043f0" category="list-text">新しい Deploy 仮想マシンの IP アドレスが元の Deploy 仮想マシンと異なる場合は、 ONTAP の CLI を使用して、古いメディエーターの iSCSI ターゲットを削除し、新しいターゲットを追加する必要があります。</block>
   <block id="f003eee578389a046f25dba6e783a672" category="summary">ONTAP Select は、組織内の 1 つ以上のプライベートクラウドのサポートに最適です。一般的なユースケースとしては、コモディティサーバ上に構築されたプライベートクラウドにストレージサービスを提供するケースがあります。</block>
@@ -1671,19 +1628,11 @@
   <block id="413237c8cac3c7cf3437693d9962b1fb" category="paragraph">これはサービス指向のプライベートクラウドモデルです。HA バージョンの ONTAP Select を使用することで、高コストの FAS アレイと変わらない ONTAP エクスペリエンスを実現できます。アプリケーション VM は別の物理インフラにホストされており、 ONTAP Select VM がストレージサーバリソースを独占的に使用します。</block>
   <block id="fb6f9f37085215c30bff064542d11394" category="paragraph">* DAS 上に構築されたプライベート・クラウド *</block>
   <block id="df4928efb348e7abebffb938d05f9853" category="paragraph"><block ref="df4928efb348e7abebffb938d05f9853" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ce78f638c1329fc432323298fd5ab053" category="paragraph">ONTAP Select クラスタをホストするハイパーバイザーで ESXi ソフトウェアをアップグレードする前に、環境に適したアップグレード手順 を準備して選択する必要があります。</block>
-  <block id="a74a74cc9eac206cd17b389aebee1edf" category="admonition">VMware ESXi 6.5 にアップグレードする場合は、 ESXi U2 （ビルド 8294253 ）以降にアップグレードする必要があります。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。</block>
   <block id="a06d958d7c1e780db3a597737559b331" category="paragraph">いくつかのアップグレード手順があります。次の基準に基づいて、該当する手順 を選択する必要があります。</block>
   <block id="d98bf1b619a94ca49b2cf4e249269541" category="list-text">ONTAP Select クラスタのサイズは、シングルノードクラスタとマルチノードクラスタのどちらでもサポートされます。</block>
-  <block id="c9a714bea6de08f5989eee603a121dae" category="list-text">ONTAP Select Deploy アップグレードは、 Deploy ユーティリティを使用する場合と使用しない場合の両方で使用できます。</block>
   <block id="649ae0572dea5b8bc6208820d18b8e73" category="admonition">Deploy 管理ユーティリティを使用するアップグレード手順 を選択する必要があります。</block>
-  <block id="0fca1939c8c0500fa2f3ed6bfce03d40" category="section-title">手順 の更新が完了したら</block>
   <block id="3020c5e4f7e244ad0af7d9b1e1c3f9cc" category="paragraph">Deploy ユーティリティを使用するアップグレード手順 を選択する場合は、すべてのノードをアップグレードしたあとに、 Deploy を使用してクラスタの更新処理を実行する必要があります。詳細については、 Deploy クラスタ設定の更新を参照してください。</block>
   <block id="2b02207ef454c2c6aeeedf7644fa1821" category="paragraph">Deploy 管理ユーティリティは、手順 の一部として使用して、 ONTAP Select シングルノードクラスタをホストする VMware ESXi ハイパーバイザーをアップグレードできます。</block>
-  <block id="681dd84e331133125fc528e3066ea4b7" category="list-text">ノードをオフライン状態にします。</block>
-  <block id="3a5d7f86dd219466ffbcb0e2f8ffd034" category="paragraph">例 : node stop --cluster-name&lt;clustername&gt; --node-name &lt;nodename&gt;</block>
-  <block id="d1c1e91e03c71fa9882b17583973d0c4" category="list-text">ノードをオンライン状態に移行します。</block>
-  <block id="fb373c881fd0931abd6943e8bcf86440" category="paragraph">例 : node start --cluster-name&lt;clustername&gt; --node-name &lt;nodename&gt;</block>
   <block id="2bcdcfed9ba53c3c8ca4e481e1451e94" category="list-text">ノードが起動したら、クラスタが正常であることを確認します。</block>
   <block id="bba96a171c35e11e4bf7eb548e322d78" category="paragraph">Deploy 管理ユーティリティを使用してクラスタの更新処理を実行する必要があります。</block>
   <block id="c924506282a3ae2065b516094cff9672" category="paragraph">Deploy 管理ユーティリティは、手順 の一部として使用して、 ONTAP Select マルチノードクラスタをホストする VMware ESXi ハイパーバイザーをアップグレードできます。</block>
@@ -1714,11 +1663,9 @@
   <block id="a2223560f3daace4da811f50f2f76708" category="paragraph">Deploy はバックアップ処理中に他のタスクを実行しないでください。</block>
   <block id="28026b3bb14f3c97b11f481645caf565" category="paragraph">作成するバックアップファイルには、仮想マシンのすべての設定データがキャプチャされます。このデータには、 ONTAP Select クラスタを含む導入環境の要素が説明されています。</block>
   <block id="c4e676380560c2d76ac3009addaa66eb" category="list-text">Deploy サーバの内部ディレクトリに格納されている Deploy の設定データのバックアップを作成します。</block>
-  <block id="d52ea963a3560a70eafe6249384cad0e" category="paragraph">'deploy backup create</block>
   <block id="5a6f96ad4278c1232327847e0020aeca" category="list-text">プロンプトが表示されたら、バックアップのパスワードを入力します。</block>
   <block id="57049f039b8ba3ed7da7870227bf63cf" category="paragraph">バックアップファイルは、パスワードに基づいて暗号化されます。</block>
   <block id="5a9fe4be7a45fa497ce5ed098b3a3aff" category="list-text">システムで使用可能なバックアップを表示します。</block>
-  <block id="08df971d378fcae2bcfc934ca648d17c" category="paragraph">'deploy backup show -detailed</block>
   <block id="1a5cb9ce2867d3b5aa027c79d38b9b4c" category="list-text">[ 作成日 ] フィールドの日付に基づいてバックアップファイルを選択し、 * ダウンロード URL * の値を記録します。</block>
   <block id="cf3583e0957dd7c033dd10fc82650d20" category="paragraph">バックアップファイルには、 URL からアクセスできます。</block>
   <block id="aeb4d606f61c7fabca15a3d3661cc539" category="list-text">Curl などの Web ブラウザまたはユーティリティを使用して、 URL を指定してバックアップファイルをローカルワークステーションにダウンロードします。</block>
@@ -1731,9 +1678,6 @@
   <block id="bc53d5b8393b0e7bd459582f7c4fe869" category="list-text">SSH を使用して Deploy ユーティリティにアクセスします。</block>
   <block id="0354884312c6d9734c8ccd7979edbee9" category="paragraph">元の Deploy ユーティリティの仮想マシンの設定データを新しい仮想マシンにリストアする必要があります。データは、ローカルワークステーションからアップロードする必要のある 1 つのファイルに格納されます。</block>
   <block id="1b364349b93e82578cfe461dabadd928" category="paragraph">以前のバックアップの設定データが必要です。データは 1 つのファイルに格納され、ローカルワークステーションで使用できる必要があります。</block>
-  <block id="f81fbf9d5f689fab977e68417016783a" category="list-text">ローカルワークステーション上のコマンドシェルで、 sftp ユーティリティを使用して、バックアップファイルを Deploy 仮想マシンにアップロードします。</block>
-  <block id="61606c32a4feee098448dfcafda7350b" category="list-text">構成データをリストアします。</block>
-  <block id="b69a9048a49045497e1363c3dd4d30a0" category="paragraph">'deploy backup restore -path pathname - filename filename</block>
   <block id="3d76d8ade4be6a0fa76347dff9a10a88" category="paragraph">'deploy backup restore-path/home/admin-filename deploy_20180601162151.tar.gz</block>
   <block id="9f8405ace72665fee032686e586d5366" category="summary">ONTAP Select クラスタを導入したら、 Deploy 管理ユーティリティを使用してノードのハイパーバイザーインスタンスタイプをアップグレードできます。</block>
   <block id="c491351d31e9a04b74d8cf6b5f75e570" category="paragraph">クラスタはオンライン状態である必要があります。</block>
@@ -2367,14 +2311,6 @@
   <block id="d670b307adcbd20c75b779bb62ae10bc" category="paragraph">[size]#^1ONTAP Select 9.6では、新しいライセンス（Premium XL）と新しいVMサイズ（大規模）がサポートされます。ただし、大規模な VM は、ソフトウェア RAID を使用する DAS 構成でのみサポートされます。ハードウェアRAIDとvNAS構成は、9.6リリースの大規模なONTAP Select VMではサポートされません。#</block>
   <block id="2b306d5ec9ffced1b4c962a0d5f78acb" category="paragraph">ONTAP Select 9.6以降にアップグレードしたら、しばらく待ちます<block ref="65c6cabf39cf5a036e1dff5fc1483802" prefix=" " category="inline-code"></block> 既存のボリュームのStorage Efficiencyの値を確認する前に、アップグレードが完了したことを示すコマンド。</block>
   <block id="7c36dc7bcc9976cf87d97958fae57918" category="paragraph">ONTAP Select 9.6以降にアップグレードされたシステムでは、既存のアグリゲートまたは新たに作成されたアグリゲートに作成された新しいボリュームの動作は、新規の環境で作成されたボリュームと同じです。ONTAP Select コードのアップグレードを実行する既存のボリュームには、新たに作成したボリュームとほとんど同じ Storage Efficiency ポリシーが適用されますが、いくつかのバリエーションがあります。</block>
-  <block id="201d6cf1ba171c49bcdcb0766d20f3f9" category="paragraph-title">必要なスキルと情報</block>
-  <block id="7322a68bf06479e293387c20bf0f3e8e" category="paragraph-title">Deploy 仮想マシンをインストールします</block>
-  <block id="816d0d92458bc1f7a68303a845228dde" category="paragraph-title">ONTAP コマンドラインインターフェイス</block>
-  <block id="fe8a09bfef8f50e4e72bec1b0f9c18db" category="paragraph-title">Deploy ユーティリティ設定のバックアップの有無</block>
-  <block id="8fbcf0a0690f2df2d9b37ca23e0733f5" category="paragraph-title">Deploy 設定のバックアップのリストア</block>
-  <block id="d929d228dc7d6e05fe2b30f1a5826c49" category="paragraph-title">元の Deploy 仮想マシンの IP アドレス</block>
-  <block id="b957b13a65ee2e9c4a639a76b0b7cce7" category="paragraph-title">ストレージ容量単位のライセンス</block>
-  <block id="ed67f205040bfaf568fb57e318f22a15" category="paragraph-title">使用するリカバリ手順 の決定</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">このタスクについて</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
   <block id="801333bc71ada3c7b40aa384a24d7978" category="paragraph-title">ネットワークの最小構成と推奨構成</block>
@@ -2603,7 +2539,6 @@
   <block id="9702dfddce9ca846a20b21815bd5bf71" category="list-text">VMware ESXi 8.0 U1（ビルド21495797）</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">Interoperability Matrix Tool （ IMT ）</block>
   <block id="be89bf0bd68c0f721ab7e25e408b6fa7" category="summary">VMware ESXiでONTAP Selectを実行している場合は、ESXiソフトウェアを以前のサポート対象バージョンからESXi 7.0以降にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。</block>
-  <block id="817a2297c74a908c3261968059682b32" category="paragraph">Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンのONTAP SelectおよびDeploy管理ユーティリティでは、ESXi 7.0へのアップグレードはサポートされていません。</block>
   <block id="f87065c0eaa86d23a9d0bc62defec91b" category="list-text">VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。</block>
   <block id="1e2be71e8b4858c0b3e832cba35731d1" category="section-title">ONTAP Select 9.13.1</block>
   <block id="cdbcb12eafeb6cc1f6a058e9c52a7f8d" category="paragraph">ONTAP Select 9.13.1には、いくつかの新機能と改善点が含まれています。</block>
@@ -2721,8 +2656,6 @@
   <block id="acac68a1e439a88d2d2599418fc3ace8" category="cell">設定のバックアップを使用したDeployユーティリティのインスタンスのリストア</block>
   <block id="e46ac92a715b42bd2cfc9c8c53a2230c" category="cell">Deployユーティリティのインスタンスを再設定してリカバリする</block>
   <block id="06a53967f62b6ebf8a1fba55cabdfecf" category="list-text"><block ref="06a53967f62b6ebf8a1fba55cabdfecf" category="inline-link-macro-rx"></block></block>
-  <block id="89ac05efab2228e74e12191efccdf85c" category="inline-link-macro">新しい仮想マシンへのDeployの設定データのリストア</block>
-  <block id="9731a2aaf926f5fd46b5a7343839efb4" category="list-text"><block ref="9731a2aaf926f5fd46b5a7343839efb4" category="inline-link-macro-rx"></block></block>
   <block id="47546bf1e2847e2d81e73bde93926649" category="section-title">ONTAP Selectクラスタのオフラインとオンラインの切り替え</block>
   <block id="60458f1485d61e13b322742ae9f0113a" category="section-title">Deployクラスタ設定をリフレッシュ</block>
   <block id="24c77c4c999a67b38b8910008fcbf84a" category="paragraph">License Managerは、Deploy管理ユーティリティの各インスタンス内で個別のプロセスとして実行されます。LM で提供される機能には、次のものがあります。</block>
@@ -2762,21 +2695,13 @@
   <block id="7616bc7ca1d0f5d08301e0593d0e18ca" category="section-title">ONTAP SelectとONTAP 9の比較</block>
   <block id="811d71286df166f702ec9b42c249d145" category="section-title">ワークフローで使用されるAPI呼び出しについて理解する</block>
   <block id="494bbba02a6f83c76ae18eeba756eafc" category="section-title">REST APIに直接アクセスするためのURLを作成する</block>
-  <block id="84bee6f12ed24b78dc6e3d711f489517" category="section-title">VMware ESXiのアップグレード方法の理解</block>
   <block id="879d008da9e1adcaebd71393252b5f05" category="paragraph">ESXi ソフトウェアのアップグレードは、 VMware で説明され、サポートされているプロセスです。ハイパーバイザーのアップグレードプロセスは、 ONTAP Select を使用する場合の大規模なアップグレード手順 の一部です。詳細については、VMwareのドキュメントを参照してください。</block>
-  <block id="9fb992cde692e6edf5e0ff97d5e5f2f8" category="section-title">アップグレード手順を選択</block>
   <block id="7040c3ccc544e203d76cb7ffe82f6911" category="inline-link-macro">1172198</block>
   <block id="2e6761a6be39f375b42a759a4e5b2ce9" category="paragraph">これらの旧バージョンを使用している場合にアップグレードを試行すると、 ONTAP Select 仮想マシンをブートできない状態のままにすることができます。この場合は、 Deploy を使用しないアップグレード手順 を選択する必要があります。を参照してください <block ref="45788d744a81e57f6ed35cd7105ed791" category="inline-link-macro-rx"></block> を参照してください。</block>
-  <block id="eb09ec92cf869be7597c08b1ed36d886" category="section-title">Deploy管理ユーティリティのアップグレード</block>
-  <block id="684106fd704b339617fbc6743afe92b6" category="paragraph">Deploy ユーティリティを使用して手順 のアップグレードを実行する前に、 Deploy インスタンスのアップグレードが必要になることがあります。通常は、最新バージョンの Deploy にアップグレードする必要があります。Deploy ユーティリティで、使用する ONTAP Select のバージョンがサポートされている必要があります。詳細については、 ONTAP Select のリリースノートを参照してください。</block>
   <block id="5b8325e442ddd32629c86630fde418de" category="section-title">Deployを使用したシングルノードクラスタのアップグレード</block>
   <block id="2863feac8b058188a45f49deaf504ce8" category="section-title">Deployを使用したマルチノードクラスタのアップグレード</block>
   <block id="77313127f25a198a72521f0ce3437025" category="section-title">Deployを使用しないシングルノードクラスタのアップグレード</block>
   <block id="4724841b242993261d4bc5bf0b22e4da" category="section-title">Deployを使用しないマルチノードクラスタのアップグレード</block>
-  <block id="e4384ef53374e50c408aa4f320771fc7" category="section-title">インストールイメージのダウンロード</block>
-  <block id="ae5dce558cc0a937c60691c0f0837ca5" category="section-title">Deployへのインストールイメージのアップロード</block>
-  <block id="df16cb9f82c152af98cbdb57cc06f0d9" category="section-title">インストールイメージの追加</block>
-  <block id="5b9b5bb226a6c70daff9ed71955c175e" category="section-title">使用可能なインストールイメージを表示する</block>
   <block id="f47ad6e4bc9bad323a7e49da78e990bc" category="doc">ONTAP Selectクラスタノードのサイズを変更する</block>
   <block id="afe2fb2999af41d32655dc1f20500f66" category="list-text">ONTAP Select 9.9.1以降では、インテルXeon Sandy Bridge以降のCPUモデルのみがONTAP Selectでサポートされます。</block>
   <block id="0fa9a0b98f503373d1e8310c7c58315c" category="cell">ONTAP Select用の製品インストール実行可能ファイル。</block>
@@ -3132,7 +3057,6 @@ storage aggregate show-spare-disks</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">詳細はこちら。</block>
   <block id="5638b273dc7505c1415d93d081293984" category="list-text">8ノードから6ノードへのクラスタの縮小</block>
   <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">クラスタの拡張と縮小はESXクラスタのみでサポートされます。</block>
-  <block id="e35a91dc5473bf4a53204a2bd1366d7e" category="summary">ONTAP Select 9.15.1以降では、既存のクラスタのサイズを6ノードから8ノードに拡張し、クラスタサイズを8ノードから6ノードに縮小できます。</block>
   <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">クラスタを拡張</block>
   <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">新しいノードのライセンスの詳細を確認します。</block>
@@ -3286,7 +3210,6 @@ storage aggregate show-spare-disks</block>
   <block id="697112fb0ffb252e40d60a5a007943a2" category="sidebar">クラスタを拡張または縮小する</block>
   <block id="9cc3c3055efc6fc5a45cfce6ac3eda87" category="sidebar">VMビデオコンソールへのアクセス</block>
   <block id="5a3a053ae34a79fb35028f001babbf25" category="sidebar">障害が発生したソフトウェアRAIDドライブの交換</block>
-  <block id="e2e19484d2146649c758acb6e826707f" category="sidebar">ESXiを6.5以降にアップグレード</block>
   <block id="b374e4bbc5d3bd65f35605cc784ed685" category="list-text">ONTAP Select 9.14.1では、VMware ESXi 8.0 U2がサポートされています。</block>
   <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
   <block id="3a13e6fcb6840db51e3e181c41dff37b" category="list-text">ESXi 8.0 U2</block>
@@ -3568,10 +3491,6 @@ storage aggregate show-spare-disks</block>
   <block id="235d833d1553c6ac3ef4b59a69b7709d" category="admonition">容量階層ライセンスモデルと容量プールライセンスモデルを使用する場合は、クラスタノードのサイズ変更処理を実行できます。</block>
   <block id="751e45429506270501500591ecf71f63" category="paragraph">この手順 を使用して各ノードを設定する必要があります。この例では、ノードに大容量階層ライセンスが適用されています。</block>
   <block id="f5eacefd45f87cad9eca589aeba17364" category="paragraph">ONTAP Selectノードには大容量階層ライセンスが使用されます。</block>
-  <block id="70c6ed94827afcf20125ed21cfa0d45d" category="paragraph">容量プールまたは容量階層のライセンスが使用されているかどうかを確認する必要があります。容量プールのライセンスを使用する場合は、Deployインスタンスをリカバリまたはリストアしたあとに、各容量プールライセンスを再インストールする必要があります。</block>
-  <block id="29f5b284a6c121e6b86e23d26c5492d7" category="paragraph">容量プールのライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、容量プールライセンスの再インストール_を参照してください。</block>
-  <block id="ad8df021d39702efa54a5c4a58d4c408" category="paragraph">容量プールのライセンスを使用する場合は、各容量プールライセンスを再インストールする必要があります。詳細については、「容量プールライセンスの再インストール」を参照してください。</block>
-  <block id="907984c60dd3b3b1d06b28812739f3a3" category="list-text"><block ref="907984c60dd3b3b1d06b28812739f3a3" category="inline-link-macro-rx"></block></block>
   <block id="b28ceb45f344ed12e54e3531ae0bac88" category="summary">ONTAP Selectノードで使用される各容量プールのライセンスファイルを取得する必要があります。ライセンスファイルでは、プールのストレージ容量と有効期限が定義されます。このライセンスは、ネットアップが割り当てた一意のライセンスシリアル番号と、 Deploy インスタンスに関連付けられたライセンスロック ID を組み合わせて、 License Manager にロックされます。</block>
   <block id="b06635debd20e5d8f23e5fd54016e095" category="doc">ONTAP Select容量プールライセンスを取得する</block>
   <block id="332320e6473eb55e261b81cf0938cfbc" category="paragraph">NetAppによって容量プールに割り当てられた9桁のライセンスシリアル番号が必要です。ライセンスファイルを取得する前に、注文書の出荷日から少なくとも 24 時間待ってください。</block>
@@ -3646,8 +3565,6 @@ storage aggregate show-spare-disks</block>
   <block id="b43dccc6180e02d25b94d717af59c5d5" category="section-title">ステップ1: 展開の準備</block>
   <block id="14ce7f56600ce32dd333637eed98cd8f" category="open-title">ハードウェアRAID</block>
   <block id="66ef34be992df3691380b5f366935c14" category="inline-link-macro">ストレージプール（KVM）</block>
-  <block id="e6590b92b825641d452dbbfa0d4cf1d1" category="paragraph">ローカルハードウェアRAIDコントローラを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block>各ノードでは、システム データだけでなく、ルートとデータ集約も保存されます。ONTAP Select ノードの設定の一環として、ストレージプールを接続する必要があります。</block>
-  <block id="19d8e46deea8d239f3274a92f88038ab" category="paragraph">ソフトウェアRAIDを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block>システム データ用であり、ルートおよびデータ アグリゲート用に SSD ドライブが使用可能であることを確認します。ONTAP Select ノードの設定の一環として、ストレージプールとディスクを接続する必要があります。</block>
   <block id="908272d4cd58c61b9a3bc042f376ee86" category="inline-link-macro">ONTAP Selectイメージを追加する</block>
   <block id="e037f6aae5e648de44fa07863c350701" category="paragraph">Deploy 管理ユーティリティには、単一バージョンの ONTAP Select が含まれています。以前のバージョンのONTAP Selectを使用してクラスタを導入する場合は、まず<block ref="6403b9b63d70488e119e79bd63bd10d8" category="inline-link-macro-rx"></block>デプロイインスタンスに追加します。</block>
   <block id="2d9d6efa5bb5baaf1e0bfc7ac2970b34" category="inline-link-macro">各ノードのストレージにライセンスを付与する</block>
@@ -3814,7 +3731,6 @@ storage aggregate show-spare-disks</block>
   <block id="f210391b7941f9a4198928bc79fcba09" category="paragraph">このタスクでは、ファイルをONTAP Select Deploy 仮想マシンにアップロードする 1 つの方法について説明します。ご使用の環境に適した他のオプションがある可能性があります。</block>
   <block id="c99ab6326cfb96cafe5cf69a39bf5e79" category="list-text">アップグレード ファイルがローカル ワークステーションで使用可能であることを確認します。</block>
   <block id="e2a672c847bad2863e57f277c323553c" category="list-text">管理者ユーザー アカウントのパスワードがあることを確認します。</block>
-  <block id="e60c1aa35e0fea0a6ef96ddaa4b018f8" category="list-text">ローカルワークステーションのコマンドシェルで、<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) ユーティリティを使用して、イメージ ファイルをONTAP Select Deploy 仮想マシンにアップロードします。</block>
   <block id="fc979b5c6d5eef1f824052719f508095" category="section-title">ステップ3: アップグレードパッケージを適用する</block>
   <block id="8b24796d99b30623379a77021195b47e" category="paragraph">アップグレード ファイルをONTAP Select Deploy 仮想マシンにアップロードしたら、アップグレードを適用できます。</block>
   <block id="91aa908b0f2003054a80626907b7d18a" category="list-text">ONTAP Select Deploy ユーティリティ仮想マシンのどのディレクトリにアップグレード ファイルが配置されているかを確認します。</block>
@@ -3852,7 +3768,6 @@ storage aggregate show-spare-disks</block>
   <block id="cbec5c675188a8b88f95c1615c33fb39" category="list-text">ライブラリを更新</block>
   <block id="cbbbf9758b7ac41123821f7ea427538f" category="list-text">ライブラリアイテムを更新</block>
   <block id="845b12256749d66531d9afd69bc3a33c" category="list-text">ローカルライブラリを更新する</block>
-  <block id="26f7069f09ce96914fa8e8c3a68a4191" category="doc">ONTAP Select ESXiまたはKVMクラスタを拡張または縮小する</block>
   <block id="b6901598f11464666113bfe479efe49f" category="paragraph">ESXi および KVM ハイパーバイザー ホストの既存のONTAP Selectクラスタのクラスタ サイズを増やすことができます。  KVM ホストの場合、クラスターのサイズを 6 ノードから 8 ノードに増やしたり、8 ノードから 6 ノードに減らしたりできます。  ESXi ホストの場合、クラスター サイズを 6 ノードから 12 ノードの間で増分して増減します。</block>
   <block id="936ee35c221853e402fecb3657e726ba" category="paragraph">次のクラスターの拡張と縮小は、ESXi および KVM ホストではサポートされていません。</block>
   <block id="ca069be0eeb72c96905b0cdbf504214d" category="paragraph">クラスターの拡張および縮小機能は、次の KVM および ESXi ハイパーバイザー ホストでサポートされています。</block>
@@ -3913,7 +3828,6 @@ storage aggregate show-spare-disks</block>
   <block id="a72643a79ec8e9d1d5c61ff835cabbeb" category="list-text">ONTAP Select 9.16.1が最初にインストールされます</block>
   <block id="588a4431a3d49dda029dcc4161fc2be3" category="list-text">ノードをバージョン 9.17.1 にアップグレードし、必要に応じてバージョン 9.16.1 に戻すことができます。</block>
   <block id="c762418e7ca866adad88c4350fc20ef0" category="list-text">ONTAP Select 9.17.1が最初にインストールされます</block>
-  <block id="02214bce8cef8e578251dc5cdd19f814" category="list-text">以前のバージョンがインストールされていないため、元に戻すことはできません。</block>
   <block id="0bb5222a5975edbdfb5210abc7bbc0d5" category="admonition">ONTAP Select Deployに含まれるREST APIにはバージョン番号が割り当てられています。APIのバージョン番号は、Deployのリリース番号とは無関係です。DeployONTAP Select 9.17.1 Deploy 管理ユーティリティには、REST API バージョン 3 が含まれています。</block>
   <block id="7b5019dce3bb835acb62c31388f47aef" category="cell">VMware vSphere 9.0 VMware vSphere 8.0GA およびアップデート 1 ～ 3 VMware vSphere 7.0GA およびアップデート 1 ～ 3C</block>
   <block id="98a200153c1be0c16d526cf021fc6c2c" category="cell">4、6、または8ノードのクラスター</block>
@@ -3928,7 +3842,6 @@ storage aggregate show-spare-disks</block>
   <block id="aea2ef463d548798da986814b7163a65" category="list-text">サポートされているDeploy管理ユーティリティを備えたONTAP Select</block>
   <block id="26a1590332f300c4ec3aa0f686d62125" category="admonition">アクティブな2ノードクラスタが1つ以上ある場合、クラスタを管理するONTAP Select Deploy仮想マシンは常に実行されている必要があります。DeployONTAP Select Deploy 仮想マシンが停止または障害が発生した場合、メディエーター サービスは利用できなくなり、2 ノード クラスタの HA 機能が失われます。</block>
   <block id="0657a1213e1f6d89d22c78ddc4608384" category="paragraph">2 ノード クラスタは通常、リモート オフィスまたはブランチ オフィスに導入されるため、企業のデータ センターや管理サポートを提供するONTAP Select Deploy ユーティリティから離れた場所に設置できます。この構成では、 ONTAP Select Deploy ユーティリティとクラスタ間の管理トラフィックは WAN 経由で流れます。制限事項の詳細については、リリースノートをご覧ください。</block>
-  <block id="b83e9ae7e9a3ccc11cef740f2d5aa5f2" category="list-text">ONTAP Select Deployに割り当てられた静的IPアドレス</block>
   <block id="ed89295e41e84f73a1840cf9d0bc49c6" category="paragraph">ONTAP Select Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。この要件は、1 つ以上のONTAP Select 2 ノード クラスタを管理するすべてのONTAP Select Deploy インスタンスに適用されます。</block>
   <block id="ee1aadb3a9fa619eb12db5d1e58032b4" category="inline-link-macro">vCenter の vSAN ESA に対する VMware vSphere 権限について学習します</block>
   <block id="653a421852b6e9fc7e8da536351d6d57" category="paragraph"><block ref="653a421852b6e9fc7e8da536351d6d57" category="inline-link-macro-rx"></block></block>
@@ -3952,8 +3865,79 @@ storage aggregate show-spare-disks</block>
   <block id="2dd89f547668d42e92b18453b0fc2db7" category="section-title">ステップ2: Deploy仮想マシンの新しいインスタンスをインストールする</block>
   <block id="20db79ddbcecf961179a8654cf93bdfa" category="section-title">ステップ3: デプロイ構成データを新しい仮想マシンに復元する</block>
   <block id="35767fb08a64b94abf91d7c25ea1b1d5" category="paragraph">ONTAP Select Deploy 9.16.1 または 9.15.1 からONTAP Select Deploy 9.17.1 に直接アップグレードできます。ONTAP Select Deploy 9.14.1 以前からアップグレードするには、 ONTAP Selectバージョンのリリース ノートを確認してください。</block>
-  <block id="f8828e764d46e46d1990e6a2dec9744f" category="doc">ONTAP Selectの VMware ESXi をバージョン 7.0 以降にアップグレードします</block>
   <block id="4c2a7675fb89ee6113fb93327fabd5f6" category="list-text">ESXi 9.0</block>
   <block id="90facdbe61c2fda7ac079c021778069e" category="section-title">ステップ3: 展開を完了する</block>
-  <block id="0ccf5aad6da0b37b9ee3f6128be956c7" category="paragraph">クラスタを導入した後、 ONTAP Select AutoSupport機能が設定されていることを確認し、<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> 。</block>
+  <block id="7a0165449b5773328368f60f5c262ddd" category="doc">ONTAP Selectの VMware ESXi 7.0 以降にアップグレードします</block>
+  <block id="dd1789a087eda271d0e3deee49558019" category="section-title">VMware ESXi のアップグレードの準備</block>
+  <block id="82c36f45db475277ee2310dec3c1e939" category="paragraph">ONTAP Selectクラスタをホストしているハイパーバイザー上の ESXi ソフトウェアをアップグレードする前に、環境に適したアップグレード手順を準備して選択します。</block>
+  <block id="0926feade48ead905fb59c610b0ac7fd" category="list-text">*VMware ESXi のアップグレード方法を理解する*</block>
+  <block id="1ca1aaf5b842ffb10893e476d56ee6d7" category="list-text">*アップグレード手順を選択してください*</block>
+  <block id="8378d8bf20941add9c4df91829cd0827" category="list-text">ONTAP Select Deployの使用</block>
+  <block id="4057b7ca0c19f851f63420c9ec32a889" category="paragraph">アップグレードは、デプロイ ユーティリティの有無にかかわらず可能です。</block>
+  <block id="017c62abcb9c0a7a31f008ff45eca54a" category="paragraph">Deploy管理ユーティリティを使用してESXiのアップグレードを実行する方が、より汎用的で復元力の高いオプションです。ただし、デプロイが利用できない、または使用できない場合があります。例えば、ESXi 7.0へのアップグレードは、以前のバージョンのONTAP SelectおよびDeploy管理ユーティリティではサポートされていません。</block>
+  <block id="2e0e9d07ffda2d85422b14435c592a64" category="list-text">*デプロイ管理ユーティリティをアップグレードする*</block>
+  <block id="c3a59d3a6472b3e407374a73000fa2d0" category="inline-link-macro">ONTAP Selectリリースノート</block>
+  <block id="f5d84950dbef357c088050b223201054" category="paragraph">Deploy ユーティリティを使用してアップグレード手順を実行する前に、Deploy インスタンスをアップグレードする必要がある場合があります。通常は、最新バージョンのDeployにアップグレードしてください。Deployユーティリティは、使用しているONTAP Selectのバージョンをサポートしている必要があります。参照<block ref="d849cafcad7044085f0bad0e874b53aa" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
+  <block id="652257fc3daae6b4fad2e2bd425ff0e3" category="list-text">*アップデート手順が完了したら*</block>
+  <block id="20f9850b56f2eecea40a57c75ab5c890" category="list-text">ノードをオフライン状態に移動します。</block>
+  <block id="13cc9f6fa9c854f457ba342b6ca56703" category="list-text">ノードをオンライン状態に移動します。</block>
+  <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">例：</block>
+  <block id="6015ee0c3c4dbc37f534783a65239e72" category="example-title">例を表示</block>
+  <block id="fc0aa017cb8518a7c70f2a39ae6553c1" category="list-text">以前のバージョンがインストールされていないため、元に戻すことはできません。</block>
+  <block id="6e1243914ebc1fc5867ce44540c39b39" category="list-text"><block ref="6e1243914ebc1fc5867ce44540c39b39" category="inline-link-macro-rx"></block></block>
+  <block id="7df4c22f834073378cbc7bda2a69e5d8" category="paragraph-title">デプロイ構成データをバックアップする</block>
+  <block id="92a0bc38a55c8986f72a9e2f38fb2581" category="paragraph">ベストプラクティスとしては、<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block>クラスターの作成後も含め、定期的に実行します。これは、バックアップにメディエーター構成データが含まれるため、2ノードクラスターでは特に重要になります。</block>
+  <block id="12702c2f8c71548bcc7c156da7d7e810" category="paragraph">ローカルハードウェアRAIDコントローラを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>各ノードでは、システム データだけでなく、ルートとデータ アグリゲートも保存されます。ONTAP Selectノードの設定の一環として、ストレージプールを接続する必要があります。</block>
+  <block id="d79e665d74455e96fa5fff08009d57ce" category="paragraph">ソフトウェアRAIDを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>システム データ用であり、ルートおよびデータ アグリゲート用に SSD ドライブが使用可能であることを確認します。ONTAP Selectノードの設定の一環として、ストレージプールとディスクを接続する必要があります。</block>
+  <block id="374fcbe92413e77c7fc7cda40bfb3be6" category="section-title">ステップ1: インストールイメージをダウンロードする</block>
+  <block id="42cd2a8efe7c9aac811d923637a0f193" category="list-text">Web ブラウザを使用してNetAppサポート サイトにアクセスし、*サポート クイック リンク* を選択します。</block>
+  <block id="6168f6eb3f1b81ec759f515fdd7bab98" category="list-text">*トップタスク*の下にある*ソフトウェアのダウンロード*を選択し、サイトにサインインします。</block>
+  <block id="84791eb50904d5d426f95112ce50d397" category="list-text">*製品を探す*を選択します。</block>
+  <block id="676522edf33055c4e8da85feed945dc5" category="list-text">*その他の利用可能なソフトウェアを選択* の下で、*デプロイのアップグレード、ノードのアップグレード、イメージのインストール* を選択します。</block>
+  <block id="4ec4ff4105057abcf44071cf2a8f84b6" category="section-title">ステップ2: インストールイメージをデプロイにアップロードする</block>
+  <block id="3ad5852905f7d86a4b551630b78bec6f" category="list-text">ローカル ワークステーションのコマンド シェルで、次の例に示すように、イメージ ファイルを Deploy 仮想マシンにアップロードします。</block>
+  <block id="9c0d19167b1e62192d344c74670ab607" category="section-title">ステップ3: インストールイメージを追加する</block>
+  <block id="b9f4869d7f31d53b61f29fe4bedd37d1" category="paragraph">新しいクラスタを展開するときに使用できるように、 ONTAP Selectインストール イメージを Deploy イメージ ディレクトリに追加します。</block>
+  <block id="461e33e15d96d32a3253838cc3faf280" category="list-text">次の例に示すように、インストール イメージ ファイルを images ディレクトリに配置します。</block>
+  <block id="152d8684d752984c61ac93dd6e93ca75" category="paragraph"><block ref="a424c72865fc5e3d7ef425ffe24358a0" prefix="" category="inline-code"></block></block>
+  <block id="55a1dda936b17c10bd6fe08210028b1d" category="section-title">ステップ4: 利用可能なインストールイメージを表示する</block>
+  <block id="bd721bab2f4844ced6ea0eeba243f8d3" category="paragraph">新しいクラスタを展開するときに使用できるONTAP Selectイメージを表示します。</block>
+  <block id="0130d1c399b188129dee9e6cb685faf8" category="list-text">ページの下部に移動して *デプロイ* を選択し、次に *GET /images* を選択します。</block>
+  <block id="9e4d41c6ecc4cf9937f573e802d657c6" category="list-text">利用可能なONTAP Selectイメージを表示するには、「*試してみる*」を選択します。</block>
+  <block id="7237d8c12d94e5a5d31950f37ac0bf7a" category="section-title">デプロイユーティリティの回復の準備</block>
+  <block id="d0d9ebbdf3a513d091f96cf877073d3f" category="paragraph">デプロイ ユーティリティのインスタンスの回復を確実に成功させるには、その前に準備を行う必要があります。いくつかの管理手順に精通し、必要な情報を把握している必要があります。</block>
+  <block id="97987a90b942fca343d336e1e3407ce1" category="list-text">ハイパーバイザー環境にONTAP Select Deploy ユーティリティの新しいインスタンスをインストールできることを確認します。</block>
+  <block id="de7a4f435396962b2c5793b09e623040" category="inline-link-macro">ONTAP Select Deployユーティリティのインストールについて学習します</block>
+  <block id="931c4bc1734c8552932d13706ff5d778" category="paragraph"><block ref="931c4bc1734c8552932d13706ff5d778" category="inline-link-macro-rx"></block></block>
+  <block id="a7e32b3c69ec3a084438d9fdb77bc17c" category="list-text">ONTAP Selectクラスタにログインし、 ONTAPクラスタ シェル (CLI) にアクセスできることを確認します。</block>
+  <block id="18a7df977db43c60a4c6a47400953591" category="list-text">ONTAP Select 2 ノード クラスタを含む、障害が発生した Deploy ユーティリティ インスタンスからの構成データのバックアップがあるかどうかを確認します。クラスタが含まれていないバックアップがある可能性があります。</block>
+  <block id="01db345147b0b1e4da305d7ddea3f030" category="list-text">使用した回復手順に応じて、デプロイ構成データのバックアップを復元できることを確認します。</block>
+  <block id="783e545e51986edbc17afe85eea0faa9" category="inline-link-macro">デプロイ構成データを新しい仮想マシンに復元する方法について説明します。</block>
+  <block id="eec0b20b3b13caf4c707ba03e2af8e20" category="paragraph"><block ref="eec0b20b3b13caf4c707ba03e2af8e20" category="inline-link-macro-rx"></block></block>
+  <block id="aafccebf49ebd86d0297ed3c4cb4bcf8" category="list-text">失敗した元の Deploy ユーティリティ仮想マシンの IP アドレスがわかります。</block>
+  <block id="b5d76ca91cc6a4bfaa8e7bf5e92bb436" category="list-text">容量プールまたは容量階層ライセンスが使用されているかどうかを決定します。容量プールライセンスを使用する場合は、デプロイインスタンスを復旧またはリストアした後、各容量プールライセンスを再インストールする必要があります。</block>
+  <block id="256f2b5a82e33e1addfa3baf312579ad" category="list-text">ONTAP Select Deploy ユーティリティのインスタンスをリカバリするときに使用する手順を決定します。この決定は、 ONTAP Selectの2ノードクラスタを含む、障害が発生した元のDeployユーティリティの設定データのバックアップがあるかどうかに基づいて行われます。</block>
+  <block id="231f652ef60095cb1f5635c5883bc6be" category="cell">回復手順を使用します...</block>
+  <block id="da5f86a9d9885a0a4f3fae17be5714c1" category="cell"><block ref="a667be25a78a5bb37fad6661b93342ca" category="inline-xref-macro-rx"></block></block>
+  <block id="254bdc26db86eb9026bb2f2a17bdfb96" category="cell"><block ref="05da0447e48edcc2947b385468da9d92" category="inline-xref-macro-rx"></block></block>
+  <block id="fa044af206f38606c388f360f301e4ae" category="paragraph">2 ノード クラスターを含む元の失敗したデプロイ仮想マシンから構成データをバックアップします。ノードクラスタのONTAP CLIにサインインでき、2つのノードのONTAP名を知っている必要があります。</block>
+  <block id="e8a314dd4d9f7c33b9bbed1a31bce762" category="list-text">新しい Deploy 仮想マシンの IP アドレスが元の Deploy 仮想マシンと異なる場合は、古いメディエーター iSCSI ターゲットを削除し、新しいターゲットを追加します。</block>
+  <block id="6b23d5e89df595635ec3a54090e64fa9" category="paragraph">容量プール ライセンスを使用する場合は、各容量プール ライセンスを再インストールします。見る<block ref="241b4315fc3c4e6905896340939f6270" category="inline-link-macro-rx"></block>詳細については、こちらをご覧ください。</block>
+  <block id="9b5fe6a20fe2a058892201f5f80f1856" category="paragraph">2 ノード クラスターを含む、障害が発生した Deploy ユーティリティ インスタンスのバックアップがない場合は、新しい Deploy 仮想マシンでメディエーター iSCSI ターゲットとメールボックスを構成します。次に、 ONTAP Selectクラスタ内の 2 つのノードの追加構成を実行して、リカバリを完了します。</block>
+  <block id="f1c1b76c2a435830bd391c2c408efc67" category="paragraph">新しいデプロイ ユーティリティ インスタンスのメディエーター ターゲットの名前があることを確認します。ノードクラスタのONTAP CLIにサインインでき、2つのノードのONTAP名を知っている必要があります。</block>
+  <block id="87ccb73575035c302ba7c38920d907ae" category="list-text">*Mediator* を選択し、*GET /mediators* を選択します。</block>
+  <block id="eb39326ecb8194aed00f77063e484a57" category="list-text">*試してみる*を選択すると、Deploy によって管理されるメディエーターのリストが表示されます。</block>
+  <block id="a78d26c86f8e1bc3f99deea85ab123e3" category="list-text">*Mediator* を選択し、次に *POST* を選択します。</block>
+  <block id="5c9d811abf74644dc7a5840670a2323a" category="list-text">横にある*モデル*を選択してください<block ref="afd1be8124115a780c2ac5cb3db1f36d" prefix=" " category="inline-code"></block>名前の値を完了します。</block>
+  <block id="69c2330b72fdbb0f24306b5344fc83ca" category="list-text">*試してみる* を選択して、メディエーター iSCSI ターゲットを作成します。</block>
+  <block id="e2cd7ceedce46e4ea3fd8396ef4baa97" category="list-text">次の例に示すように、ローカル ワークステーションのコマンド シェルで、sftp ユーティリティを使用して、バックアップ ファイルを Deploy 仮想マシンにアップロードします。</block>
+  <block id="5c7a95e189e375455d7a7bdc02ec54ba" category="list-text">構成データを復元します。</block>
+  <block id="662385e6e7c81bc5868ecc810d1b4419" category="paragraph">コマンドの例</block>
+  <block id="86069ab716d4c2ffd77a81bd3827427f" category="list-text">ローカルワークステーションのコマンドシェルで、<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) ユーティリティを使用して、次の例に示すように、イメージ ファイルをONTAP Select Deploy 仮想マシンにアップロードします。</block>
+  <block id="52396dafee59debc72b8fccab2acb4c5" category="paragraph">コマンド例:</block>
+  <block id="3817e5dd56e94cb6952f7eb0ab2a6acd" category="summary">ONTAP Select 9.15.1 以降では、既存のクラスタのサイズを増減できます。</block>
+  <block id="b4ec4e16d52cf8a4ab8bd5925fba2631" category="doc">ESXi または KVM ホスト上のONTAP Selectクラスタを拡張または縮小する</block>
+  <block id="7e6bf0ef053af206603d7df47832fbd5" category="inline-link-macro">ONTAP Select AutoSupport機能が設定されていることを確認する</block>
+  <block id="785cc01cf7efbfd5a1fd1d4863d9b83a" category="paragraph">クラスターを展開した後、<block ref="af0babf33c9640eb381afcb6484c80f3" category="inline-link-macro-rx"></block>その後<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block>。</block>
+  <block id="b7f5f41e99a6f8c3c3a0c1843b24c17b" category="sidebar">ESXi のアップグレード</block>
 </blocks>

@@ -40,16 +40,20 @@ CAUTION: Deployの設定データを元の仮想マシンから新しい仮想�
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
 . Deploy サーバの内部ディレクトリに格納されている Deploy の設定データのバックアップを作成します。
 +
-'deploy backup create
-
+[source, cli]
+----
+deploy backup create
+----
 . プロンプトが表示されたら、バックアップのパスワードを入力します。
 +
 バックアップファイルは、パスワードに基づいて暗号化されます。
 
 . システムで使用可能なバックアップを表示します。
 +
-'deploy backup show -detailed
-
+[source, cli]
+----
+deploy backup show -detailed
+----
 . [ 作成日 ] フィールドの日付に基づいてバックアップファイルを選択し、 * ダウンロード URL * の値を記録します。
 +
 バックアップファイルには、 URL からアクセスできます。
@@ -92,10 +96,7 @@ link:task_install_deploy.html["ONTAP Select Deploy をインストールする"]
 以前のバックアップの設定データが必要です。データは 1 つのファイルに格納され、ローカルワークステーションで使用できる必要があります。
 
 .手順
-. ローカルワークステーション上のコマンドシェルで、 sftp ユーティリティを使用して、バックアップファイルを Deploy 仮想マシンにアップロードします。
-+
-例
-
+. 次の例に示すように、ローカル ワークステーションのコマンド シェルで、sftp ユーティリティを使用して、バックアップ ファイルを Deploy 仮想マシンにアップロードします。
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -103,12 +104,14 @@ put deploy_backup_20190601162151.tar.gz
 exit
 ....
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
-. 構成データをリストアします。
+. 構成データを復元します。
 +
-'deploy backup restore -path pathname - filename filename
-
+[source, cli]
+----
+deploy backup restore -path <path_name> -filename <file_name>
+----
 +
-例
+コマンドの例
 
 +
 'deploy backup restore-path/home/admin-filename deploy_20180601162151.tar.gz

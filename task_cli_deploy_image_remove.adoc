@@ -26,19 +26,25 @@ CAUTION: クラスタで使用中の ONTAP Select イメージを削除しない
 . 管理者（ admin ）アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
 . Deploy で管理されるクラスタを表示して、使用中の ONTAP イメージを記録します。
 +
-「 cluster show 」を参照してください
-
+[source, cli]
+----
+cluster show
+----
 +
 各ケースのバージョン番号とハイパーバイザープラットフォームをメモします。
 
 . Bash シェルを起動します。
 +
-シェル bash
-
+[source, cli]
+----
+shell bash
+----
 . 使用可能なすべての ONTAP Select イメージを表示します。
 +
-ls -LH /opt/NetApp/images
-
+[source, cli]
+----
+ls -lh /opt/netapp/images
+----
 . 必要に応じて、ハイパーバイザーホストからONTAP Selectイメージを削除します。
 +
 [role="tabbed-block"]

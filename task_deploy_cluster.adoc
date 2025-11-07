@@ -198,7 +198,7 @@ Deploy 管理がインストールされ、初期設定 (パスワード、 Auto
 
 == ステップ3: 展開を完了する
 
-クラスタを導入した後、 ONTAP Select AutoSupport機能が設定されていることを確認し、link:task_cli_clusters.html["ONTAP Select Deploy構成データをバックアップする"] 。
+クラスターを展開した後、link:https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["ONTAP Select AutoSupport機能が設定されていることを確認する"^]その後link:task_cli_clusters.html["ONTAP Select Deploy構成データをバックアップする"]。
 
 [TIP]
 ====

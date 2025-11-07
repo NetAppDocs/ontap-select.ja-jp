@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task_cli_upgrade_esxi65.html 
-keywords: administer, administering, cli, esxi, upgrade, esxi 6.5 
+permalink: cli-upgrade-esxi.html 
+keywords: administer, administering, cli, esxi, upgrade, esxi 7.0 
 summary: VMware ESXiでONTAP Selectを実行している場合は、ESXiソフトウェアを以前のサポート対象バージョンからESXi 7.0以降にアップグレードできます。アップグレードする前に、プロセスを理解し、適切なアップグレード手順 を選択する必要があります。 
 ---
-= ONTAP Selectの VMware ESXi をバージョン 7.0 以降にアップグレードします
+= ONTAP Selectの VMware ESXi 7.0 以降にアップグレードします
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,47 +18,46 @@ VMware ESXiでONTAP Selectを実行している場合は、ESXiソフトウェ�
 
 
 
-== 作業を開始する前に
+== VMware ESXi のアップグレードの準備
 
-ONTAP Select クラスタをホストするハイパーバイザーで ESXi ソフトウェアをアップグレードする前に、環境に適したアップグレード手順 を準備して選択する必要があります。
+ONTAP Selectクラスタをホストしているハイパーバイザー上の ESXi ソフトウェアをアップグレードする前に、環境に適したアップグレード手順を準備して選択します。
 
-
-CAUTION: VMware ESXi 6.5 にアップグレードする場合は、 ESXi U2 （ビルド 8294253 ）以降にアップグレードする必要があります。ESXi 6.5 U1 を使用すると、 VMware の既知のバグによって仮想マシンの障害にさらされる可能性があります。
-
-
-
-=== VMware ESXiのアップグレード方法の理解
-
+.手順
+. *VMware ESXi のアップグレード方法を理解する*
++
 ESXi ソフトウェアのアップグレードは、 VMware で説明され、サポートされているプロセスです。ハイパーバイザーのアップグレードプロセスは、 ONTAP Select を使用する場合の大規模なアップグレード手順 の一部です。詳細については、VMwareのドキュメントを参照してください。
 
-
-
-=== アップグレード手順を選択
-
+. *アップグレード手順を選択してください*
++
 いくつかのアップグレード手順があります。次の基準に基づいて、該当する手順 を選択する必要があります。
 
-* ONTAP Select クラスタのサイズは、シングルノードクラスタとマルチノードクラスタのどちらでもサポートされます。
-* ONTAP Select Deploy アップグレードは、 Deploy ユーティリティを使用する場合と使用しない場合の両方で使用できます。
++
+** ONTAP Select クラスタのサイズは、シングルノードクラスタとマルチノードクラスタのどちらでもサポートされます。
+** ONTAP Select Deployの使用
++
+アップグレードは、デプロイ ユーティリティの有無にかかわらず可能です。
 
-
++
 
 TIP: Deploy 管理ユーティリティを使用するアップグレード手順 を選択する必要があります。
 
-Deploy 管理ユーティリティを使用した ESXi のアップグレードは、より一般的で耐障害性に優れたオプションです。ただし、 Deploy を使用できない場合や使用できない場合があります。たとえば、以前のバージョンのONTAP SelectおよびDeploy管理ユーティリティでは、ESXi 7.0へのアップグレードはサポートされていません。
++
+Deploy管理ユーティリティを使用してESXiのアップグレードを実行する方が、より汎用的で復元力の高いオプションです。ただし、デプロイが利用できない、または使用できない場合があります。例えば、ESXi 7.0へのアップグレードは、以前のバージョンのONTAP SelectおよびDeploy管理ユーティリティではサポートされていません。
 
++
 これらの旧バージョンを使用している場合にアップグレードを試行すると、 ONTAP Select 仮想マシンをブートできない状態のままにすることができます。この場合は、 Deploy を使用しないアップグレード手順 を選択する必要があります。を参照してください link:https://mysupport.netapp.com/site/bugs-online/product/ONTAPSELECT/BURT/1172198["1172198"^] を参照してください。
 
 
 
-=== Deploy管理ユーティリティのアップグレード
+. *デプロイ管理ユーティリティをアップグレードする*
++
+Deploy ユーティリティを使用してアップグレード手順を実行する前に、Deploy インスタンスをアップグレードする必要がある場合があります。通常は、最新バージョンのDeployにアップグレードしてください。Deployユーティリティは、使用しているONTAP Selectのバージョンをサポートしている必要があります。参照link:reference_release_notes.html["ONTAP Selectリリースノート"]詳細についてはこちらをご覧ください。
 
-Deploy ユーティリティを使用して手順 のアップグレードを実行する前に、 Deploy インスタンスのアップグレードが必要になることがあります。通常は、最新バージョンの Deploy にアップグレードする必要があります。Deploy ユーティリティで、使用する ONTAP Select のバージョンがサポートされている必要があります。詳細については、 ONTAP Select のリリースノートを参照してください。
-
-
-
-=== 手順 の更新が完了したら
-
+. *アップデート手順が完了したら*
++
 Deploy ユーティリティを使用するアップグレード手順 を選択する場合は、すべてのノードをアップグレードしたあとに、 Deploy を使用してクラスタの更新処理を実行する必要があります。詳細については、 Deploy クラスタ設定の更新を参照してください。
+
+
 
 
 
@@ -68,25 +67,29 @@ Deploy 管理ユーティリティは、手順 の一部として使用して、
 
 .手順
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
-. ノードをオフライン状態にします。
+. ノードをオフライン状態に移動します。
 +
-例 : node stop --cluster-name<clustername> --node-name <nodename>
-
+[source, cli]
+----
+node stop --cluster-name <cluster_name> --node-name <node_name>
+----
 . VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。
-. ノードをオンライン状態に移行します。
+. ノードをオンライン状態に移動します。
 +
-例 : node start --cluster-name<clustername> --node-name <nodename>
-
+[source, cli]
+----
+node start --cluster-name <cluster_name> --node-name <node_name>
+----
 . ノードが起動したら、クラスタが正常であることを確認します。
 +
-例
+例：
 
 +
 ....
 ESX-1N::> cluster show
-Node Health Eligibility
---------------------- ------- ------------
-sdot-d200-011d true true
+Node           Health  Eligibility
+-------------- ------- ------------
+sdot-d200-011d true    true
 ....
 
 
@@ -104,24 +107,29 @@ Deploy 管理ユーティリティは、手順 の一部として使用して、
 
 .手順
 . 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
-. ノードをオフライン状態にします。
+. ノードをオフライン状態に移動します。
 +
-例 : node stop --cluster-name<clustername> --node-name <nodename>
-
+[source, cli]
+----
+node stop --cluster-name <cluster_name> --node-name <node_name>
+----
 . VMwareが提供する手順を使用して、ONTAP Selectが実行されているハイパーバイザーホストをESXi 7.0以降にアップグレードします。
 +
 詳細については、「 VMware ESXi のアップグレードの準備」を参照してください。
 
-. ノードをオンライン状態に移行します。
+. ノードをオンライン状態に移動します。
 +
-例 : node start --cluster-name<clustername> --node-name <nodename>
-
+[source, cli]
+----
+node start --cluster-name <cluster_name> --node-name <node_name>
+----
 . ノードが起動したら、ストレージフェイルオーバーが有効になっていてクラスタが正常に動作していることを確認します。
 +
-例
-
-+
-....
+.例を表示
+[%collapsible]
+====
+[listing]
+----
 ESX-2N_I2_N11N12::> storage failover show
 Takeover
 Node Partner Possible State Description
@@ -135,7 +143,8 @@ Node Health Eligibility
 sdot-d200-011d true true
 sdot-d200-012d true true
 2 entries were displayed.
-....
+----
+====
 
 
 .完了後
@@ -163,16 +172,17 @@ ONTAP Select シングルノードクラスタをホストしている VMware ES
 
 . ノードが起動したら、クラスタが正常であることを確認します。
 +
-例
+例：
 
-
-
++
 ....
 ESX-1N::> cluster show
-Node Health Eligibility
---------------------- ------- ------------
-sdot-d200-011d true true
+Node           Health  Eligibility
+-------------- ------- ------------
+sdot-d200-011d true    true
 ....
+
+
 .完了後
 Deploy 管理ユーティリティを使用してクラスタの更新処理を実行する必要があります。
 
@@ -198,10 +208,11 @@ ONTAP Select マルチノードクラスタをホストする VMware ESXi ハイ
 
 . ノードが起動したら、ストレージフェイルオーバーが有効になっていてクラスタが正常に動作していることを確認します。
 +
-例
-
-+
-....
+.例を表示
+[%collapsible]
+====
+[listing]
+----
 ESX-2N_I2_N11N12::> storage failover show
 Takeover
 Node Partner Possible State Description
@@ -215,7 +226,8 @@ Node Health Eligibility
 sdot-d200-011d true true
 sdot-d200-012d true true
 2 entries were displayed.
-....
+----
+====
 
 
 .完了後
