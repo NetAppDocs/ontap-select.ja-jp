@@ -57,14 +57,13 @@ ONTAP Select は、次の ESXi ハイパーバイザー バージョンをサポ
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1（ビルド21495797）
 * VMware ESXi 8.0 GA（ビルド20513097）
-* VMware ESXi 7.0 GA (ビルド 15843807 以上) (7.0 U3C、U2、U1 を含む)
 
 
 
 NOTE: VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。
 
 
-NOTE: ESXi 6.5 GAおよびESXi 6.7 GAが販売終了ステータスに達しました。これらのバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^]。
+NOTE: ESXi 7.0 GA は、提供終了ステータスに達しました。このバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^] 。
 
 --
 ====
@@ -111,7 +110,7 @@ NOTE: Advanced Micro Devices (AMD)プロセッサはONTAP Selectではサポー�
 | 2ノードクラスタまたはMetroCluster SDS | 1GbE×4または10GbE×1 | 10GbE × 2 
 
 
-| 4、6、または8ノードのクラスター | 10GbE × 2 | 10GbE×4、または25/40GbE×2 
+| 4、6、8、10、または12ノードのクラスタ | 10GbE × 2 | 10GbE×4、または25/40GbE×2 
 |===
 
 
