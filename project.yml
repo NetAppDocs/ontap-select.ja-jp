@@ -294,8 +294,12 @@ sidebar:
         url: "/task_cli_deploy_image_remove.html"
       - title: 2 ノードクラスタの Deploy をリカバリします
         url: "/task_cli_deploy_recover_two_node.html"
-  - title: クラスタの90日間の評価用インスタンスを導入
-    url: "/deploy-evaluation-ontap-select-ovf-template.html"
+  - title: ONTAP Selectを試す
+    entries:
+    - title: アクセス評価ソフトウェア
+      url: "/access-evaluation-software.html"
+    - title: クラスタの90日間の評価用インスタンスを導入
+      url: "/deploy-evaluation-ontap-select-ovf-template.html"
   - title: よく寄せられる質問
     url: "/reference_faq.html"
   - title: 法的通知

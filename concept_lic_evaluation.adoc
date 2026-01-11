@@ -64,7 +64,11 @@ ONTAP Select 評価用クラスタは、本番環境ライセンスを使用す�
 
 を参照してください link:task_adm_licenses.html["評価用ライセンスを本番環境ライセンスに変換する"] を参照してください。
 
+.次の手順
+* link:access-evaluation-software.html["ONTAP Select評価ソフトウェアにアクセスする"]
+* link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Selectクラスタの90日間の評価用インスタンスを導入"]
+
+
 .関連情報
 * link:concept_lic_production.html["実稼働環境への導入に関するライセンスについて学ぶ"]
-* link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Selectクラスタの90日間の評価用インスタンスを導入"]
 

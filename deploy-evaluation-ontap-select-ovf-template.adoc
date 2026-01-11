@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: deploy-evaluation-ontap-select-ovf-template.html 
 keywords: ontap, select, ovf, template, deployment, evaluation, license 
-summary: VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP Selectクラスタの90日間の評価用インスタンスを迅速に導入できます。 
+summary: 単一ノードのONTAP Selectクラスタの 90 日間評価インスタンスを展開できます。 
 ---
 = ONTAP Selectクラスタの90日間の評価用インスタンスを導入
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: VMware ESXiでOVFテンプレートを使用して、シングルノー
 
 
 [role="lead"]
-VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP Selectクラスタの90日間の評価用インスタンスを迅速に導入できます。
+VMware ESXi 上の OVF テンプレートを使用して、単一ノードから最大 99 ノードまでのサイズのONTAP Select クラスタの 90 日間評価インスタンスを展開できます。既存のお客様でも新規のお客様でも、評価ライセンスをダウンロードできます。たとえば、既存の顧客であり、ライセンスを購入する前に新しい構成を試してみたいとします。
 
 .このタスクについて
 * NetAppからシリアル番号やストレージ容量のライセンスを取得する必要はありません。
@@ -26,7 +26,7 @@ VMware ESXiでOVFテンプレートを使用して、シングルノードONTAP 
 
 
 
-== ONTAP Selectクラスタホストを準備
+== ステップ1: ONTAP Selectクラスタホストを準備する
 
 次の要件に従って、ONTAP Selectクラスタを導入するESXiホストを準備します。プラットフォームの説明は、VMFS-5またはVMFS-6ファイルシステムを使用してフォーマットされたローカルの直接接続型ストレージ（DAS）を使用した標準または小規模のインスタンスタイプ構成に基づいています。
 
@@ -36,7 +36,7 @@ image:prepare_ESXi_host_requirements.png["ESXiホストを準備するための�
 
 
 
-== OVFテンプレートを使用してシングルノードONTAP Selectクラスタを導入
+== ステップ2: OVFテンプレートを使用して単一ノードのONTAP Selectクラスタを展開する
 
 サポートされている64ビットESXiホストサーバで、次の手順を実行します。
 
@@ -63,4 +63,6 @@ image:prepare_ESXi_host_requirements.png["ESXiホストを準備するための�
 
 
 .関連情報
-link:http://mysupport.netapp.com/matrix["Interoperability Matrix Tool"^]
+* link:concept_lic_evaluation.html["ONTAP Select導入の評価ライセンスについて"]
+* link:http://mysupport.netapp.com/matrix["Interoperability Matrix Tool"^]
+

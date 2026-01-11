@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: access-evaluation-software.html 
+keywords: ontap select, evaluation, software, register, download, access 
+summary: ONTAP Select評価ソフトウェアをダウンロードするには、アクセスをリクエストしてください。 
+---
+= ONTAP Select評価ソフトウェアにアクセスする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+アクセスできます link:https://mysupport.netapp.com/site/downloads/evaluation/ontap-select["ONTAP Select評価ソフトウェア"^] ONTAP Selectの現在の顧客であり、有効な権限を持っている場合、またはNetAppパートナーであり、新しい Capacity Tiers 評価ライセンスをダウンロードする場合。
+
+上記のどちらにも該当せず、 ONTAP Select を評価用に試してみたい場合は、次の手順に従って評価ソフトウェアをダウンロードするためのアクセスをリクエストしてください。
+
+.このタスクについて
+* この手順は、 NetApp の営業担当者、パートナー、およびNetAppと関わりのある見込み客を対象としています。
+* ONTAP Select Capacity Tiers の評価ライセンスは、インストールした日から 90 日間に制限されます。
++
+
+NOTE: 評価ライセンスを延長することはできません。90 日が経過すると、ライセンスは機能しなくなり、関連データにアクセスできなくなります。
+
+* 評価ソフトウェアには、ONTAP Select Deploy 管理ユーティリティをダウンロードしてクラスタを展開するために必要なすべての情報が含まれています。
+
+
+
+
+== ステップ1: アカウントを登録する
+
+必要に応じて、 NetAppアカウント登録を完了し、見込み客のアクセスをリクエストします。
+
+.手順
+. 新しいアカウントを作成するか、既存のアカウントからサインアウト。
++
+[role="tabbed-block"]
+====
+.新しいアカウントを作成
+--
+アカウント登録 link:https://mysupport.netapp.com/site/user/registration["NetApp Support Site"^] ビジネス用メールを使用します。
+
+
+NOTE: GmailやYahooなどの無料メールアカウントはご利用いただけません。
+
+新しく作成したアカウントでサインインしていないことを確認してください。
+
+--
+.既存のアカウント
+--
+すでにアカウントをお持ちの場合は、 link:https://mysupport.netapp.com/site/["NetApp Support Site"^] サインインしていないことを確認してください。
+
+--
+====
+. 非技術サポート ケースを作成して、アクセス レベルを「見込み客」に引き上げます。
++
+.. *ケース*タブを選択し、*非技術的なケースを作成*を選択します。
+.. フィードバック カテゴリとして *ユーザー登録の問題* を選択します。
+.. *ケースを作成*を選択します。
++
+必要な情報をすべて入力し、コメント セクションに次のように記入します:「私のビジネス メール アドレスは <your-email-address> です。」ONTAP Select評価ソフトウェアをダウンロードするための見込み客アクセスを取得したいと考えています。
+
++
+NetAppの担当者の名前を記入してください。
+
+.. *送信*を選択します。
+
+
+
+
+
+
+== ステップ2: ONTAP Select評価ソフトウェアをダウンロードする
+
+サポート ケースが審査され承認されると、 NetAppサポートは指定された電子メール アドレスを使用して通知します。
+
+.ステップ
+. https://mysupport.netapp.com/site/downloads/evaluation/ontap-select["ONTAP Select評価ソフトウェアをダウンロードする"^]。
++
+評価ライセンス ファイルは zip ファイル内にあります。
+
+. 法的要件を遵守するには、 link:https://mysupport.netapp.com/site/help["サポートケースを開く"^] アクセスする前に。これにより、 NetApp は適切な制御とドキュメントを維持しながら、必要な実稼働対応のソフトウェアを提供できるようになります。
++
+
+NOTE: NetApp は、オープンソース バージョンや代替バージョンではない、 ONTAP Selectの「本番環境対応」バージョンを提供します。サポートは、製品ライセンスにアップグレードした場合にのみ利用できます。
+
+
+
+.次の手順
+評価ソフトウェアのダウンロードが完了したら、指示に従ってONTAP Select Deploy 管理ユーティリティをダウンロードし、クラスタを展開します。
+
+.関連情報
+* link:concept_lic_evaluation.html["ONTAP Select導入の評価ライセンスについて"]
+* link:task_adm_licenses.html#convert-license["評価用ライセンスを本番環境ライセンスに変換する"]
+

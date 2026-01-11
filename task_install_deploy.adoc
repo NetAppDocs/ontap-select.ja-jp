@@ -18,9 +18,9 @@ ONTAP Select Deploy 管理ユーティリティをインストールし、ユー
 
 
 
-== 仮想マシンイメージのダウンロード
+== ステップ1: 仮想マシンイメージをダウンロードする
 
-ONTAP Select パッケージは、ネットアップサポートサイトからダウンロードできます。
+NetAppサポート サイトからONTAP Selectパッケージをダウンロードします。
 
 .作業を開始する前に
 https://mysupport.netapp.com/site/user/registration["NetAppサポートサイトの登録アカウントが必要です"^]です。
@@ -40,9 +40,9 @@ ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format�
 
 
 
-== ONTAP Select Deploy OVAシグネチャの確認
+== ステップ2: ONTAP Select Deploy OVA署名を確認する
 
-インストールパッケージをインストールする前に、ONTAP Selectオープン仮想化アプライアンス（OVA）の署名を確認する必要があります。
+インストール パッケージをインストールする前に、 ONTAP Select Open Virtualization Appliance (OVA) の署名を確認します。
 
 .作業を開始する前に
 システムが次の要件を満たしていることを確認します。
@@ -84,9 +84,9 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 
 
 
-== 仮想マシンの導入
+== ステップ3: 仮想マシンを展開する
 
-OVF VMイメージを使用して、ONTAP Select Deploy VMをインストールして起動する必要があります。インストールプロセスの一環として、DHCPまたは静的IP設定を使用するようにネットワークインターフェイスを設定します。
+OVF VM イメージを使用してONTAP Select Deploy VM をインストールして起動します。インストール プロセスの一環として、DHCP または静的 IP 構成を使用するようにネットワーク インターフェイスを構成します。
 
 .作業を開始する前に
 ESXiハイパーバイザーの場合は、ONTAP Select Deploy VMの導入を準備する必要があります。
@@ -200,9 +200,9 @@ Use DHCP to set networking information? [n]:
 ====
 
 
-== DeployのWebインターフェイスへのサインイン
+== ステップ4: デプロイウェブインターフェースにSign in
 
-Web ユーザインターフェイスにサインインして、 Deploy ユーティリティが使用可能であることを確認し、初期設定を実行する必要があります。
+Web ユーザー インターフェイスにSign in、デプロイ ユーティリティが使用可能であることを確認して初期構成を実行します。
 
 .手順
 . ブラウザで IP アドレスまたはドメイン名を使用して、 Deploy ユーティリティにアクセスします。
