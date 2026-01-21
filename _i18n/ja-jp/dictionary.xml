@@ -1408,16 +1408,10 @@
   <block id="20e5e85bddb25cf1cf39977f4a5b8f1f" category="cell">データアグリゲートのリース期間</block>
   <block id="a051cb6fe36d0d57186040136f51ded4" category="cell">ノードのシリアル番号</block>
   <block id="0f4f157087aaf0bd28aa76133fd9d2c3" category="summary">2NIC 構成と 4NIC 構成の ONTAP Select vSwitch 構成とロードバランシングポリシー。</block>
-  <block id="96600f2ed0fb970e508d5209faa2adc5" category="paragraph">ONTAP Select では、標準 vSwitch 構成と分散 vSwitch 構成の両方を使用できます。分散 vSwitch は、リンクアグリゲーションの構成要素（ LACP ）をサポートします。リンクアグリゲーションは、複数の物理アダプタ間の帯域幅を集約するために使用される共通のネットワーク構造です。LACP はベンダーに依存しない標準プロトコルです。ネットワークエンドポイントのオープンプロトコルとして、物理ネットワークポートのグループを 1 つの論理チャネルにまとめるために使用します。ONTAP Select は、リンクアグリゲーショングループ（ LAG ）として設定されたポートグループと連携できます。ただし、 LAG 設定を回避するために、個々の物理ポートを単純なアップリンク（トランク）ポートとして使用することを推奨します。このような場合、標準 vSwitch と分散 vSwitch のベストプラクティスは同じです。</block>
   <block id="10e7ad3863cdd2b48f9a7524784cedee" category="paragraph">このセクションでは、 2NIC 構成と 4NIC 構成で使用する必要がある vSwitch 構成とロードバランシングポリシーについて説明します。</block>
-  <block id="da05a02ceee0169095d6250face3e1a6" category="paragraph">ONTAP Select で使用するポートグループを設定する際には、次のベストプラクティスに従う必要があります。ポートグループレベルでのロードバランシングポリシーは、「 Route Based on Originating Virtual Port ID 」です。VMware では、 ESXi ホストに接続されたスイッチポートで STP を Portfast に設定することを推奨しています。</block>
-  <block id="dcd113410e8de0e424c08da8f26e1dbc" category="paragraph">すべての vSwitch 構成では、少なくとも 2 つの物理ネットワークアダプタを 1 つの NIC チームにまとめる必要があります。ONTAP Select では、 2 ノードクラスタ用に 1 つの 10Gb リンクがサポートされます。ただし、ネットアップでは、 NIC アグリゲーションを使用してハードウェアの冗長性を確保することをベストプラクティスとして推奨します。</block>
   <block id="0293fc87704541accd375dc13230c50f" category="paragraph">vSphere サーバでは、 NIC チームをアグリゲーションの構成要素として使用し、複数の物理ネットワークアダプタを 1 つの論理チャネルにまとめることで、ネットワークの負荷をすべてのメンバーポート間で分散します。重要な点は、物理スイッチのサポートがなくても NIC チームを作成できることです。ロードバランシングポリシーとフェイルオーバーポリシーは NIC チームに直接適用でき、 NIC チームはアップストリームのスイッチ構成を認識しません。この場合、ポリシーはアウトバウンドトラフィックにのみ適用されます。</block>
-  <block id="962c108610eb5a070640fd5feb949ee7" category="admonition">静的なポートチャネルは、 ONTAP Select ではサポートされません。LACP 対応チャネルは分散 vSwitch でサポートされますが、 LACP LAG を使用すると、 LAG メンバー間で不均衡な負荷分散が実行される場合があります。</block>
-  <block id="65d24c9d61558a8b366aef70cb0aaf2b" category="paragraph">シングルノードクラスタの場合、 ONTAP Deploy は、外部ネットワークにポートグループを使用するように ONTAP Select VM を設定し、同じポートグループまたは必要に応じてクラスタとノードの管理トラフィックに別のポートグループを使用するように設定します。シングルノードクラスタの場合は、必要な数の物理ポートを、アクティブアダプタとして外部ポートグループに追加できます。</block>
   <block id="ada616a12184135d755f2a6ccd530c96" category="paragraph">マルチノードクラスタの場合、 ONTAP Deploy は、内部ネットワーク用に 1 つまたは 2 つのポートグループを使用し、外部ネットワーク用に 1 つまたは 2 つのポートグループを使用するように各 ONTAP Select VM を構成します。クラスタおよびノード管理トラフィックは、外部トラフィックと同じポートグループを使用することも、オプションで別のポートグループを使用することもできます。クラスタおよびノード管理トラフィックは、内部トラフィックと同じポートグループを共有できません。</block>
   <block id="c290c5e002f0a732c59304f5b0fe70da" category="section-title">標準または分散 vSwitch および各ノードの 4 つの物理ポート</block>
-  <block id="2305672b68f3fcd4d97158e1567f1348" category="paragraph">マルチノードクラスタの各ノードには、 4 つのポートグループを割り当てることができます。各ポートグループには、次の図に示すように、 1 つのアクティブな物理ポートと 3 つのスタンバイ物理ポートがあります。</block>
   <block id="ce0e9f9d478595e72d2141086ae9f75d" category="paragraph">* 各ノードに 4 つの物理ポートを備えた vSwitch *</block>
   <block id="87a3d8fd5fd63cf0600c00dc23888a61" category="inline-image-macro">ノードごとに 4 つの物理ポートを備えた vSwitch</block>
   <block id="7651ca0c40d4efc698e62170cd7090ec" category="paragraph"><block ref="7651ca0c40d4efc698e62170cd7090ec" category="inline-image-macro-rx" type="image"></block></block>
@@ -1458,7 +1452,6 @@
   <block id="6f46b92116baa2fe630b25033fb2c0e6" category="cell">アクティブアダプタ： vmnic4 スタンバイアダプタ： vmnic6 、 vmnic5 、 vmnic7</block>
   <block id="26fb40e405c6787f5c9155475ec643d2" category="cell">アクティブアダプタ： vmnic6 スタンバイアダプタ： vmnic4 、 vmnic7 、 vmnic5</block>
   <block id="940b9a48464ec3646e72e186108b51ee" category="section-title">標準または分散 vSwitch および各ノードに 2 つの物理ポート</block>
-  <block id="7bf41ff56e10e1288ea5b99b9eea56f1" category="paragraph">2 つの高速（ 25 / 40GB ） NIC を使用する場合は、 10Gb アダプタを 4 つ使用する構成と概念的にはほぼ同じです。2 つの物理アダプタだけを使用する場合でも、 4 つのポートグループを使用する必要があります。ポートグループの割り当ては次のとおりです。</block>
   <block id="60a83065f51a4fb288f92ed5f3f3e6ff" category="cell">外部 1 （ e0a 、 e0b ）</block>
   <block id="c6ea565d82c996559ab3190b92e2184c" category="cell">内部 1 （ e0c 、 e0e ）</block>
   <block id="e36f7006bc8a130c74ace6103753342a" category="cell">内部 2 （ e0d 、 e0f ）</block>
@@ -1468,7 +1461,6 @@
   <block id="a6c5ebdcab23a94a53b4e0d809a928b9" category="inline-image-macro">ノードごとに 2 つの高速（ 25 / 40GB ）物理ポートを備えた vSwitch</block>
   <block id="72b4a9e2850e5c37368d3f887a4ee79e" category="paragraph"><block ref="72b4a9e2850e5c37368d3f887a4ee79e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee9ff79a0430be4d206d034450f94331" category="paragraph">2 つの物理ポート（ 10Gb 以下）を使用する場合は、各ポートグループにアクティブアダプタとスタンバイアダプタが相互に反対に設定されている必要があります。内部ネットワークは、マルチノード ONTAP Select クラスタにのみ存在します。シングルノードクラスタの場合は、外部ポートグループで両方のアダプタをアクティブとして設定できます。</block>
-  <block id="70b278867da9b18f6b861f59616de27a" category="paragraph">次の例に示す vSwitch の構成では、 2 つのポートグループがマルチノード ONTAP Select クラスタの内部および外部の通信サービスを処理します。内部ネットワークの VMNIC はこのポートグループの一部であり、スタンバイモードで構成されているため、外部ネットワークはネットワーク停止時に内部ネットワークの VMNIC を使用できます。その逆が、外部ネットワークの場合です。2 つのポートグループ間でアクティブとスタンバイの VMNIC を交互にすることは、ネットワークの停止中に ONTAP Select VM を適切にフェイルオーバーするために重要です。</block>
   <block id="8b863e843ddaab1e6b236310dfc11e3d" category="paragraph">* 各ノードに 2 つの物理ポート（ 10Gb 以下）を備えた vSwitch *</block>
   <block id="0b192facec240b8aef1dfcf704fc55d3" category="inline-image-macro">ノードごとに 2 つの物理ポートを備えた vSwitch</block>
   <block id="40294088ed92f54e85ec516b44b1ec99" category="paragraph"><block ref="40294088ed92f54e85ec516b44b1ec99" category="inline-image-macro-rx" type="image"></block></block>
@@ -1484,7 +1476,6 @@
   <block id="97b13387c67304525d26e84d4e08bd65" category="paragraph">* LACP が有効な分散 vSwitch を使用する内部ポートグループ構成 *</block>
   <block id="164e5bf0b14a04120f4d4c3828747329" category="inline-image-macro">LACP が有効な分散 vSwitch を使用する内部ポートグループ構成</block>
   <block id="e30ba3e13f82c433092d944bfb964d6d" category="paragraph"><block ref="e30ba3e13f82c433092d944bfb964d6d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a0cbdc264f5b7833605773dd16cbd5e7" category="admonition">LACP では、アップストリームスイッチポートをポートチャネルとして設定する必要があります。分散 vSwitch でこの構成を有効にする前に、 LACP を有効にしたポートチャネルが適切に構成されていることを確認してください。</block>
   <block id="a451fb0a81dc4fb9e6df8ff3f0cd6380" category="summary">リモートオフィス / ブランチオフィス（ ROBO ）環境に ONTAP Select を導入できます。ROBO 環境の計画の一環として、目標を達成するための設定を選択する必要があります。</block>
   <block id="1cfe009dafaa293a83a8a143e8aeb868" category="paragraph">ROBO 環境への ONTAP Select の導入時に使用できる設定は主に 2 つあります。</block>
   <block id="c4f68953c4ccc7ea124ccc4e8eebd13a" category="admonition">ONTAP Select の導入時には、任意の VMware vSphere ライセンスを使用できます。</block>
@@ -3987,4 +3978,13 @@ storage aggregate show-spare-disks</block>
   <block id="619fea79d54cac08622de23d5f1d57d5" category="paragraph">Web ユーザー インターフェイスにSign in、デプロイ ユーティリティが使用可能であることを確認して初期構成を実行します。</block>
   <block id="97b3aadab6e4066f1f4afb183a83298c" category="sidebar">ONTAP Selectを試す</block>
   <block id="3ff87e54e9b20339b68f24cf241f05b0" category="sidebar">アクセス評価ソフトウェア</block>
+  <block id="276d590b2be111ae083f54bd5b504fe8" category="paragraph">ONTAP Select は、標準 vSwitch 構成と分散 vSwitch 構成の両方の使用をサポートしています。分散 vSwitch はリンク アグリゲーション構造 (LACP) をサポートします。リンク アグリゲーションは、複数の物理アダプタ間で帯域幅を集約するために使用される一般的なネットワーク構造です。LACP はベンダー中立の標準です。物理ネットワーク ポートのグループを単一の論理チャネルにまとめる、ネットワーク エンドポイント用のオープン プロトコルを提供します。ONTAP Select は、リンク アグリゲーション グループ (LAG) として設定されたポート グループで動作します。ただし、 NetApp、LAG 構成を回避するために、個々の物理ポートを単純なアップリンク (トランク) ポートとして使用することをお勧めします。このような場合、標準 vSwitch と分散 vSwitch のベスト プラクティスは同じです。</block>
+  <block id="fc3b15f3ea67bdb8fc3ec8d8e92401b0" category="paragraph">ONTAP Selectのポート グループを設定するときは、次のベスト プラクティスに従ってください。ポート グループ レベルのロード バランシング ポリシーは、発信元仮想ポート ID に基づいたルートです。VMware では、ESXi ホストに接続されたスイッチ ポートで STP を Portfast に設定することを推奨しています。</block>
+  <block id="fc3d6769c570c96a63f36620bb0017bf" category="paragraph">すべての vSwitch 構成では、単一の NIC チームにバンドルされた少なくとも 2 つの物理ネットワーク アダプタが必要です。ONTAP Select は、 2 ノード クラスタに対して単一の 10Gb リンクをサポートします。ただし、 NetApp、ハードウェアの冗長性を確保するために NIC アグリゲーションの使用を推奨しています。</block>
+  <block id="0b06404b1fc0eb6b5008a738720c52d4" category="admonition">静的ポート チャネルはONTAP Selectではサポートされません。LACP 対応チャネルは分散 vSwitch でサポートされていますが、LACP LAG を使用すると、LAG メンバー間で負荷が不均等に分散される可能性があります。</block>
+  <block id="e6128f1d2ba49d3a9848a10d14efa016" category="paragraph">単一ノード クラスタの場合、 ONTAP Deploy は、外部ネットワーク用のポート グループと、クラスタおよびノー​​ド管理トラフィック用の同じポート グループまたはオプションで別のポート グループを使用するようにONTAP Select VM を構成します。単一ノード クラスターの場合、必要な数の物理ポートをアクティブ アダプターとして外部ポート グループに追加できます。</block>
+  <block id="315e6be6bae80f791d4affd9528b854b" category="paragraph">マルチノード クラスター内の各ノードに 4 つのポート グループを割り当てることができます。各ポート グループには、次の図に示すように、1 つのアクティブ物理ポートと 3 つのスタンバイ物理ポートがあります。</block>
+  <block id="23063442dbfdc1f0a8618060853d7bce" category="paragraph">2 つの高速 (25/40Gb) NIC を使用する場合、推奨されるポート グループ構成は、概念的には 4 つの 10Gb アダプタを使用した構成と非常に似ています。物理アダプタを 2 つだけ使用する場合でも、4 つのポート グループを使用する必要があります。ポート グループの割り当ては次のとおりです。</block>
+  <block id="9bc25e03ceb7e341916e8e6cca6a827b" category="paragraph">次の例は、マルチノードONTAP Selectクラスタの内部および外部通信サービスを処理する vSwitch と 2 つのポート グループの構成を示しています。内部ネットワーク VMNIC はこのポート グループの一部であり、スタンバイ モードで構成されているため、ネットワーク障害が発生した場合に外部ネットワークは内部ネットワーク VMNIC を使用できます。外部ネットワークの場合は逆になります。ネットワーク停止時にONTAP Select VM を正しくフェイルオーバーするには、2 つのポート グループ間でアクティブ VMNIC とスタンバイ VMNIC を交互に切り替えることが重要です。</block>
+  <block id="bad767c4cc128e0a2a4e8d23a72bdbce" category="admonition">LACP では、アップストリーム スイッチ ポートをポート チャネルとして設定する必要があります。分散 vSwitch でこの設定を有効にする前に、LACP 対応ポート チャネルが正しく設定されていることを確認してください。</block>
 </blocks>
