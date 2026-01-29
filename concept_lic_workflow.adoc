@@ -25,5 +25,12 @@ summary: ワークフローに従って、 ONTAP Select 環境用のライセン
 
 image:purchased_license_workflow.png["本番用 ONTAP Select 環境用のストレージライセンスを購入してインストールするプロセスについて説明します。"]
 
+.次の手順
+ONTAP Selectライセンスのサイズ設定に関する考慮事項について説明します。
+
+* link:sizing-capacity-tier-license.html["Capacity Tiers ライセンス"]
+* link:sizing-capacity-pool-license.html["Capacity Pools ライセンス"]
+
+
 .関連情報
-link:task_adm_licenses.html["ONTAP Select ライセンス"]
+link:task_adm_licenses.html["ONTAP Selectライセンスの管理について学ぶ"]

@@ -88,32 +88,42 @@ sidebar:
     entries:
     - title: オプション（ Options ）
       entries:
-      - title: 評価用ライセンス
+      - title: 評価ライセンスについて学ぶ
         url: "/concept_lic_evaluation.html"
       - title: 本番環境用ライセンス
-        url: "/concept_lic_production.html"
-      - title: プラットフォームライセンスの提供
-        url: "/concept_lic_platforms.html"
-    - title: 容量プールのライセンスモデル
-      entries:
-      - title: 運用の詳細
-        url: "/concept_lic_cp_operation.html"
-      - title: ノードのシリアル番号
-        url: "/concept_lic_cp_serial_number.html"
-      - title: 制限事項
-        url: "/concept_lic_cp_restrictions.html"
-      - title: 容量プールと容量階層の比較
-        url: "/concept_lic_cp_compare_ct.html"
-      - title: 利点のまとめ
-        url: "/concept_lic_cp_benefits.html"
-    - title: 購入
+        entries:
+        - title: 本番ライセンスについて学ぶ
+          url: "/concept_lic_production.html"
+        - title: プラットフォームライセンスの提供
+          url: "/concept_lic_platforms.html"
+        - title: 容量プールのライセンスモデル
+          entries:
+          - title: 運用の詳細
+            url: "/concept_lic_cp_operation.html"
+          - title: ノードのシリアル番号
+            url: "/concept_lic_cp_serial_number.html"
+          - title: 制限事項
+            url: "/concept_lic_cp_restrictions.html"
+          - title: 利点のまとめ
+            url: "/concept_lic_cp_benefits.html"
+        - title: 容量階層と容量プール
+          url: "/concept_lic_cp_compare_ct.html"
+    - title: ライセンスを購入する
       entries:
       - title: ライセンス関連のワークフロー
         url: "/concept_lic_workflow.html"
       - title: 大容量階層
-        url: "/task_lic_acquire_ct.html"
+        entries:
+        - title: ライセンスのサイズ設定に関する考慮事項
+          url: "/sizing-capacity-tier-license.html"
+        - title: ライセンスを取得する
+          url: "/task_lic_acquire_ct.html"
       - title: 容量プール
-        url: "/task_lic_acquire_cp.html"
+        entries:
+        - title: ライセンスのサイズ設定に関する考慮事項
+          url: "/sizing-capacity-pool-license.html"
+        - title: ライセンスを取得する
+          url: "/task_lic_acquire_cp.html"
     - title: ONTAP の機能
       url: "/reference_lic_ontap_features.html"
   - title: をインストールします
