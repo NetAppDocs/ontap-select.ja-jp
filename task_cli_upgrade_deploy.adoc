@@ -14,10 +14,10 @@ summary: コマンドラインインターフェイスを使用して、既存�
 
 
 [role="lead"]
-ONTAP Select ONTAP Select Select Deploy ユーティリティ仮想マシンをインプレースでアップグレードできます。
+ONTAP Select Deploy ユーティリティ CLI を使用して、既存の ONTAP Select Deploy ユーティリティ仮想マシンをインプレースでアップグレードします。
 
 .作業を開始する前に
-アップグレード中にONTAP Select Deploy を使用して他のタスクを実行しないようにしてください。  ONTAP Select Deploy ユーティリティのアップグレードに関する情報と制限については、最新のリリース ノートを参照してください。
+アップグレード中に ONTAP Select Deploy が他のタスクの実行に使用されていないことを確認します。ONTAP Select Deploy ユーティリティのアップグレードに関する情報と制限事項については、link:reference_release_notes.html["リリース ノート"]を参照してください。
 
 [NOTE]
 ====
@@ -28,16 +28,16 @@ ONTAP Select Deploy 9.17.1 または 9.16.1 からONTAP Select Deploy 9.18.1 に
 ====
 
 
-== ステップ1: パッケージをダウンロードする
+== ステップ1：アップグレードパッケージをダウンロードする
 
-アップグレードプロセスを開始するには、適切なONTAP Select Deploy仮想マシンアップグレードファイルをlink:https://mysupport.netapp.com/site/["NetApp Support Site"^]。アップグレード パッケージは、単一の圧縮ファイルとしてフォーマットされます。
+アップグレードプロセスを開始するには、NetApp Support SiteからONTAP Select Deployアップグレードファイルをダウンロードします。アップグレードパッケージは、単一の圧縮ファイルとしてフォーマットされます。
 
 .手順
-. にアクセスします link:https://mysupport.netapp.com/site/["NetApp Support Site"^] Webブラウザを使用して、[ダウンロード]メニューから*[ダウンロード]*を選択します。
-. 下にスクロールして* ONTAP Select展開アップグレード*を選択します。
-. アップグレードパッケージの目的のリリースを選択します。
+. link:https://mysupport.netapp.com/site/downloads/["NetApp Support Site ダウンロード"^]ページにアクセスします。
+. 下にスクロールして*ONTAP Select Deploy*を選択してください。
+. 希望する ONTAP Select バージョンを選択してください。
 . エンドユーザライセンス契約（EULA）を確認し、*同意して続行*を選択します。
-. 適切なパッケージを選択してダウンロードし、環境に応じてすべてのプロンプトに応答します。
+. 適切な*ONTAP Select Deploy Upgrade*パッケージを選択してダウンロードします。必要に応じてすべてのプロンプトに応答します。
 
 
 

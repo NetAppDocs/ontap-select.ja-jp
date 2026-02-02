@@ -51,18 +51,9 @@ ESXi は次のハイパーバイザー バージョンでサポートされて�
 KVM は次のハイパーバイザー バージョンでサポートされています。
 
 ** Red Hat Enterprise Linux (RHEL) 10.1、10.0、9.7、9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および8.6
-** Rocky Linux 10.0、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6
+** Rocky Linux 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6
 
 
-[NOTE]
-====
-RHEL 10.1、10.0、およびRocky Linux 10.0ホスト上のKVMハイパーバイザーには、ソフトウェアRAIDワークフローの制限があります。詳細については、以下のナレッジベースの記事をご覧ください：
-
-** link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020["CDEPLOY-4020: ONTAP Select Deploy: RHEL 10 および ROCKY 10 を使用してクラスタ HWR を作成中に警告メッセージが表示される"^]
-** link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025["CDEPLOY-4025: ONTAP Select DeployGUI: RHEL10/Rocky 10 を搭載したホスト上のクラスタ作成ページで、SWR のストレージ プールとストレージ ディスクが表示されない"^]
-
-
-====
 --
 ====
 * 仕様 1.0 以降に準拠する NVMe デバイス

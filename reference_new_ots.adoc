@@ -21,6 +21,29 @@ summary: 現在のリリースには、ONTAP Selectに固有のいくつかの�
 
 == ONTAP Select9.18.1
 
+ONTAP Select製品のダウンロードオプションのアップデート:: NetApp Support Site の ONTAP Select 製品ダウンロードオプションは、ONTAP Select 9.18.1 リリースに伴い、*ONTAP Select Deploy* および *ONTAP Select Image* に変更されます。これら 2 つの新しい製品ダウンロードオプションは、以下の表に示す従来の 4 つのオプションに取って代わります：
++
+--
+[cols="30,30,40"]
+|===
+| 以前の製品のダウンロードオプション | 新製品のダウンロードオプション | 詳細については、以下を参照してください。 
+
+
+| ONTAP Select の場合 | ONTAP Select 導入 | link:task_install_deploy.html["ONTAP Select Deploy をインストールする"] 
+
+
+| ONTAP Select イメージのインストール | ONTAP Selectイメージ | link:task_cli_deploy_image_add.html["導入するONTAP Selectイメージの追加"] 
+
+
+| ONTAP Select Deployのアップグレード | ONTAP Select 導入 | link:task_cli_upgrade_deploy.html["ONTAP Select Deployインスタンスのアップグレード"] 
+
+
+| ONTAP Selectノードのアップグレード | ONTAP Selectイメージ | link:concept_adm_upgrading_nodes.html["ONTAP Selectノードをアップグレードする"] 
+|===
+
+NOTE: 製品ダウンロードの変更は、ONTAP Select 9.17.1、9.16.1、9.15.1、および9.14.1にも適用されます。
+
+--
 クラスタの拡張と縮小のサポート強化:: ONTAP Select 9.18.1 以降では、ESXi および KVM ハイパーバイザ ホスト上の 4 ノードと 12 ノードのONTAP Selectクラスタ間でのクラスタの拡張と縮小がサポートされます。
 +
 --
@@ -121,12 +144,12 @@ NDAドライバーのサポートを更新:: ONTAP Select 9.17.1以降、NVD（N
 ONTAP Select 9.16.1 以前では、NVD は引き続きONTAP Select展開内の NVMe デバイスのサポートを提供します。
 
 --
-KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.17.1 以降、KVM ハイパーバイザーは Red Hat Enterprise Linux（RHEL）10.1、10.0、9.7、9.6、および Rocky Linux 10.0、9.6 でサポートされます。
+KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.17.1 以降、KVM ハイパーバイザーは Red Hat Enterprise Linux (RHEL) 10.1、10.0、9.7、および 9.6 と Rocky Linux 10.1、10.0、9.7、および 9.6 でサポートされます。
 +
 --
 [NOTE]
 ====
-RHEL 10.1、10.0、およびRocky Linux 10.0ホスト上のKVMハイパーバイザーには、ソフトウェアRAIDワークフローの制限があります。詳細については、以下のナレッジベースの記事をご覧ください：
+RHEL 10.1および10.0、Rocky Linux 10.1および10.0ホスト上のKVMハイパーバイザーには、ソフトウェアRAIDワークフローの制限があります。詳細については、以下のナレッジベースの記事をご覧ください：
 
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020["CDEPLOY-4020: ONTAP Select Deploy: RHEL 10 および ROCKY 10 を使用してクラスタ HWR を作成中に警告メッセージが表示される"^]
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025["CDEPLOY-4025: ONTAP Select DeployGUI: RHEL10/Rocky 10 を搭載したホスト上のクラスタ作成ページで、SWR のストレージ プールとストレージ ディスクが表示されない"^]
@@ -134,8 +157,6 @@ RHEL 10.1、10.0、およびRocky Linux 10.0ホスト上のKVMハイパーバイ
 
 ====
 --
-
-
 VMware ESXiのサポートを強化:: ONTAP Select 9.17.1 には、VMware ESXi 9.0 のサポートが含まれています。
 
 

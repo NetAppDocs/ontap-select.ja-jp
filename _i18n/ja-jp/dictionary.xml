@@ -640,8 +640,6 @@
   <block id="d6c73b916c498a2010460cc1dcfffcbc" category="admonition">MetroCluster SDS を導入する場合、分散トポロジまたは「拡張」トポロジで VSAN を使用することはできません。</block>
   <block id="193036e83646828d4e1cd41104fdee82" category="paragraph">Deploy 管理ユーティリティに静的 IP アドレスを割り当てる必要があります。この要件は、 1 つ以上の ONTAP Select 2 ノードクラスタを管理する環境 All Deploy インスタンスです。</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select Deploy 管理ユーティリティをインストールし、ユーティリティを使用して ONTAP Select クラスタを作成する必要があります。</block>
-  <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">パッケージのリリースを選択します。</block>
-  <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">適切なパッケージを選択してダウンロードし、必要に応じてすべてのプロンプトに応答します。</block>
   <block id="780f7110b279a0cc42242a48431ab5bd" category="list-text">VMware クライアント統合プラグインのインストールまたは同様の設定を必要に応じて実行し、 OVF 機能を有効にします</block>
   <block id="a361c1b4cc67946dba724c8e11e34b6c" category="list-text">Deploy 仮想マシンの IP アドレス</block>
   <block id="536f68587c52377d3e98807b214c5de8" category="list-text">ネットマスク</block>
@@ -650,9 +648,7 @@
   <block id="60c150c56022cbbbdd418bfab95c0aca" category="list-text">2 番目の DNS サーバの IP アドレス</block>
   <block id="44bd913515358cfa80f997ed9a93595a" category="list-text">DNS 検索ドメイン</block>
   <block id="c7b5afc9e76543d6c823b8732fde22cc" category="list-text">階層内の適切な場所に移動し、 [Deploy OVF Template* （ OVF テンプレートの展開） ] を選択します。</block>
-  <block id="3186b86d87a207cefd5620929256fbd0" category="list-text">OVA ファイルを選択し、 Deploy OVF Template ウィザードを実行して、環境に適したオプションを選択します。</block>
   <block id="c400d3339e8bc65ccc2657e3aee763be" category="paragraph">管理者アカウントのパスワードを定義する必要があります。Deploy ユーティリティへのサインインの際に、このパスワードを指定する必要があります。</block>
-  <block id="1d7370ec51f294f5948f3cc2550b812a" category="list-text">コンソール * タブをクリックして ESXi ホストのセットアップ・シェルにアクセスし、電源投入プロセスを監視します。</block>
   <block id="4b6e5972b38c860adc515c05d7100df8" category="list-text">次のプロンプトが表示されるまで待ちます。</block>
   <block id="08dc93d24cbfbbfd880b1bb1ccc94728" category="paragraph">ホスト名：</block>
   <block id="be35756ada0a94e987f82992b890a61a" category="list-text">ホスト名を入力し、 *Enter* キーを押します。</block>
@@ -854,8 +850,6 @@
   <block id="2c3df213abea0ad1cb494572704542f9" category="inline-image-macro">では、 ONTAP Select クラスタの導入に必要な完全なワークフローについて説明します。</block>
   <block id="bc0723c49208cb7ede4ce6ea0a477957" category="paragraph"><block ref="bc0723c49208cb7ede4ce6ea0a477957" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">コマンドラインインターフェイスを使用して、既存の Deploy ユーティリティの仮想マシンをインプレースアップグレードできます。</block>
-  <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">アップグレードパッケージの目的のリリースを選択します。</block>
-  <block id="def8f653fff47640d3bcce40244c6331" category="list-text">適切なパッケージを選択してダウンロードし、環境に応じてすべてのプロンプトに応答します。</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">このタスクは、ファイルを Deploy 仮想マシンにアップロードする方法の 1 つです。ご使用の環境に適したその他のオプションがある場合もあります。</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">アップグレードファイルは、 admin ユーザのホームディレクトリに格納されます。</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">適切なディレクトリパスとファイル名を使用してアップグレードを実行します。</block>
@@ -1087,11 +1081,6 @@
   <block id="30cf2dd94fe579c8d10145706d2803f2" category="admonition">Deploy 管理ユーティリティを使用して、既存の ONTAP Select ノードのアップグレードを実行することはできません。Deploy ユーティリティは、新しい ONTAP Select クラスタの作成にのみ使用できます。</block>
   <block id="debe5df850e1b90f9e0e1e836af7a573" category="section-title">General 手順 の略</block>
   <block id="6faefe32fa9943fbdd41223aa8a6c274" category="paragraph">既存の ONTAP Select ノードをアップグレードするには、以下の手順を実行する必要があります。</block>
-  <block id="e105a9c27bf2d9ddd5067b411d434cd6" category="list-text">ネットアップサポートサイトのダウンロードページに移動します。</block>
-  <block id="68f9ff06ec00760816a8852081d652a9" category="inline-link">ネットアップサポートのダウンロードページ</block>
-  <block id="332fd48f854bf692aea555e091e1b3cc" category="paragraph"><block ref="332fd48f854bf692aea555e091e1b3cc" category="inline-link-rx"></block></block>
-  <block id="eea1cec828c419810e082867558ec301" category="list-text">ONTAP Select Node Upgrade* をクリックします。</block>
-  <block id="a864f71b844955db4e27746202712f1b" category="list-text">必要に応じて、すべてのプロンプトに対応した適切なアップグレードイメージを選択してダウンロードします。</block>
   <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link">ONTAP 9 のドキュメント</block>
   <block id="07c8a5b8b80ed7661d95b9bce5bd8b54" category="summary">REST で共通のテクノロジとベストプラクティスは確立されますが、各 API の詳細は設計内容に応じて異なる場合があります。API を使用する前に、 ONTAP Select Deploy API の詳細と運用上の特性を把握しておく必要があります。</block>
   <block id="ffc3a232eea6b80d3f2a2bcac9d3a918" category="section-title">ハイパーバイザーホストと ONTAP Select ノードです</block>
@@ -1544,12 +1533,10 @@
   <block id="e90f6cdf6b8c74cc61711c81444b5f4c" category="paragraph">Virtual Guest Tagging （ VGT ；仮想ゲストタギング）と 2 ノードクラスタを使用する場合は、さらに注意が必要です。2 ノードクラスタ構成では、ノード管理 IP アドレスを使用して、 ONTAP が完全に使用可能になる前にメディエーターへの初期接続を確立します。したがって、ノード管理 LIF （ポート e0a ）にマッピングされたポートグループでは、外部スイッチタギング（ EST ）と仮想スイッチタギング（ VST ）のみがサポートされます。さらに、管理トラフィックとデータトラフィックの両方が同じポートグループを使用している場合、 2 ノードクラスタ全体でサポートされるのは、 EST と VST だけです。</block>
   <block id="ca91eb0ffb4e943653e46e9be3d1522e" category="summary">すべての Python スクリプトは、 1 つのモジュールで共通の Python クラスを使用します。</block>
   <block id="66cebfc655fc14a70cafa6f4ef31ce39" category="doc">共通サポートモジュール</block>
-  <block id="6738f098cd2bba79a1109b07a6b3a4e3" category="summary">ONTAP Select イメージを Deploy 管理ユーティリティのインスタンスに追加できます。イメージをインストールしたら、 ONTAP Select クラスタを導入する際にそのイメージを使用できます。</block>
   <block id="ff2a9bd49048e73baaf69d5e3097f161" category="paragraph">新しい ONTAP Select イメージを Deploy に追加する前に、不要なイメージを削除する必要があります。</block>
   <block id="7e0a8cfbb81693d645b2e510efe248df" category="admonition">ONTAP Select イメージは、 Deploy ユーティリティのインスタンスに含まれている元のバージョンよりも前のバージョンでのみ追加してください。ネットアップから提供される新しいバージョンの ONTAP Select は、サポートされていない構成では追加できません。</block>
   <block id="807ad9e65833a6b39b8d8286e8b783f8" category="paragraph">ONTAP Select イメージを Deploy ユーティリティのインスタンスに追加するプロセスを開始するには、ネットアップサポートサイトからインストールイメージをダウンロードする必要があります。ONTAP Select インストールイメージは、単一の圧縮ファイルとしてフォーマットされています。</block>
   <block id="219698a1df9fbd3c16f4a498102fbc3e" category="paragraph">ONTAP Select インストールイメージを取得したら、ファイルを Deploy 仮想マシンにアップロードする必要があります。</block>
-  <block id="2a5d9f3f5564baf37e1d1a8cf1a3b68c" category="paragraph">インストールイメージファイルをローカルワークステーションで使用できるようにしておく必要があります。また、 Deploy 管理者ユーザアカウントのパスワードが必要です。</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">ステップ</block>
   <block id="1c654c4358e2d4003c74f40926274452" category="paragraph">ノードインストールファイルは、管理者ユーザのホームディレクトリに格納されます。</block>
   <block id="1c6a034b63f5d95f8ce563a77103fb05" category="paragraph">Deploy ユーティリティの仮想マシンでインストールイメージファイルを配置したディレクトリを確認しておく必要があります。このファイルは、管理者のホームディレクトリにあると想定されます。</block>
@@ -2484,7 +2471,6 @@
   <block id="cfa6562e428e1a648631dac061567897" category="paragraph">システムが次の要件を満たしていることを確認します。</block>
   <block id="80c9c2739b6086de81c8ec7262f87af8" category="list-text">OpenSSLバージョン1.0.2～3.0（基本検証用）</block>
   <block id="03018e3ee63fad9b70308ee5184022f9" category="list-text">Online Certificate Status Protocol（OCSP）検証用のパブリックインターネットアクセス</block>
-  <block id="940949e444a7d7ca33644736f8b10bcd" category="list-text">NetApp Support Siteの製品ダウンロードページから次のファイルを入手します。</block>
   <block id="0b27918290ff5323bea1e3b78a9cf04e" category="cell">ファイル。</block>
   <block id="249111a1c7f415853c625e0755631d11" category="cell"><block ref="008c7b6d630fe84ef2d584c45f088cb2" prefix="" category="inline-code"></block></block>
   <block id="e4069d9d0927b15ac9a4b5a57f151285" category="cell">署名の検証に使用する公開鍵。</block>
@@ -2496,7 +2482,6 @@
   <block id="4e4e408ba11d90a1648acdc6230e66d0" category="cell"><block ref="20db26963ac3dc0b119aa4c781855701" prefix="" category="inline-code"></block></block>
   <block id="51efe37fbdc37f9d0c55c657a430d296" category="cell">SHA-256アルゴリズムはハッシュ化され、Remote Support Agent（RSA）によって<block ref="b6ad60ee94a07b2ba8c24c883ec70503" prefix=" " category="inline-code"></block> インストーラのキーと署名。</block>
   <block id="1f463ad70f232a0c4114c51cb2a44a5a" category="list-text">を確認します<block ref="20db26963ac3dc0b119aa4c781855701" prefix=" " category="inline-code"></block> ファイルで関連する証明書と検証コマンドが使用されています。</block>
-  <block id="134cfba28fd247854afe7ce4d31767ad" category="list-text">次のコマンドを使用して署名を確認します。</block>
   <block id="db05ec33127afb72e99fdef2dd7e222b" category="section-title">MFAの設定</block>
   <block id="aef6d7448e31d21fcd5e57734fa1fb88" category="paragraph">ONTAP Select 9.13.1以降では、ONTAP Select Deploy管理者アカウントで多要素認証（MFA）がサポートされます。</block>
   <block id="b43e5dc621bb5f7a6746a0bf53636924" category="inline-link-macro">ONTAP Select YubiKey Personal Identity Verification（PIV）またはFast Identity Online（FIDO2）認証を使用したCLI MFAログインの導入</block>
@@ -2553,7 +2538,6 @@
   <block id="306a97cf9f5c4fb1198deb28baf7cf94" category="list-text">Storage VMディザスタリカバリ（SVM DR）</block>
   <block id="c38c45e0a73411d375d048ee41944853" category="list-text">SnapLock コンプライアンス</block>
   <block id="b22e984a3a8e13089712aab13bd49e4f" category="paragraph">いいえONTAP Select VM は、 VMware ベースの Snapshot から除外される独立した永続的ドライブを使用します。ONTAP Selectのバックアップ方法としてサポートされているのは、SnapMirrorまたはSnapVaultのみです。</block>
-  <block id="0778e2d9c54386153e2e52bad4129abe" category="doc">SSHを使用したDeployへのサインイン</block>
   <block id="0ef79c5150efdedf5079964981d01a0f" category="section-title">ONTAP Selectクラスタを削除する</block>
   <block id="483c848cf08aacd19acb4d0b41190eb1" category="inline-link-macro">ストレージ容量の拡張</block>
   <block id="fdd1d325ffe2bc60f1cb8023f18ff770" category="paragraph">を参照してください <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block> 追加情報 の場合。</block>
@@ -2561,7 +2545,6 @@
   <block id="a86b0aeeb47174a94a9b648d015c71d1" category="admonition">また可能です <block ref="ea53b27a388cf53d44c3f702619eab0e" category="inline-link-macro-rx"></block>。</block>
   <block id="cf86e8b21059cea7afe42d59893ab1bb" category="inline-link-macro">導入するONTAP Selectイメージの追加</block>
   <block id="f300769ad7ade3ee1597c88f58750b97" category="doc">ONTAP Selectノードをアップグレードする</block>
-  <block id="2e17a67d810d937603511ac8eb9044c5" category="paragraph">ONTAP Select ノードをアップグレードする前に、追加情報 リリースノートおよび必要な手順を確認してください。</block>
   <block id="2a883d1fe3d932e9f2fc25c99deaa4b9" category="inline-link-macro">ONTAPのアップグレードの概要</block>
   <block id="46928a27773a23230df6e5bda4c3aeb9" category="section-title">ONTAP Selectノードのリバート</block>
   <block id="140182c4500e816e4313b2abddef452d" category="paragraph">ONTAP Selectノードを最初にインストールされていたバージョンよりも前のバージョンにリバートすることはできません。例：</block>
@@ -2637,7 +2620,6 @@
   <block id="f47ad6e4bc9bad323a7e49da78e990bc" category="doc">ONTAP Selectクラスタノードのサイズを変更する</block>
   <block id="afe2fb2999af41d32655dc1f20500f66" category="list-text">ONTAP Select 9.9.1以降では、インテルXeon Sandy Bridge以降のCPUモデルのみがONTAP Selectでサポートされます。</block>
   <block id="0fa9a0b98f503373d1e8310c7c58315c" category="cell">ONTAP Select用の製品インストール実行可能ファイル。</block>
-  <block id="ccbbd15600c60abef8f9d734d84b4a4e" category="paragraph"><block ref="ccbbd15600c60abef8f9d734d84b4a4e" category="inline-link-macro-rx"></block></block>
   <block id="2d288e7805c1ececa65188f89defd9ce" category="admonition">API v3 リリースは、以前のバージョンの API と後方互換性がありません。新しいAPI手順を<block ref="d0140e6551623cc2284467774c9abf91" category="inline-link-rx"></block>。</block>
   <block id="7b2b79b3670795398d15d8b845f9018a" category="section-title">YubiKey PIVまたはFIDO2公開鍵の取得</block>
   <block id="7b52eae9ffa5eadcc0fc79391b99411f" category="section-title">ONTAP Select Deployでの公開鍵の設定</block>
@@ -2659,8 +2641,6 @@
   <block id="20f67f07ed859b317730c48838666bb5" category="sidebar">ワークフロー1クラスタを作成する</block>
   <block id="d95d85ec027f0d5da378060fe690a4ec" category="sidebar">スクリプトを理解する</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp Support Site</block>
-  <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">にアクセスします <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Webブラウザを使用して、[ダウンロード]メニューから*[ダウンロード]*を選択します。</block>
-  <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">下にスクロールして* ONTAP Select展開アップグレード*を選択します。</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">エンドユーザライセンス契約（EULA）を確認し、*同意して続行*を選択します。</block>
   <block id="3a2bb6601ae9e99d12a365a40b604d74" category="paragraph">ONTAP Selectが実行されているハイパーバイザー仮想マシンのビデオコンソールにアクセスできます。</block>
   <block id="decbc79b694df69cef4879e861d5bbe4" category="list-text">必要に応じて、ハイパーバイザーホストからONTAP Selectイメージを削除します。</block>
@@ -2962,11 +2942,6 @@ storage aggregate show-spare-disks</block>
   <block id="666ca9627e87a2f5ba354cdf9f1b35dd" category="paragraph">ONTAP Selectとライセンスの更新の詳細については、『 <block ref="7219e755fcbad1744f8ee5b6bd1c51b6" category="inline-link-macro-rx"></block>。</block>
   <block id="e9bea8d0b42d385115a0325044f2d402" category="paragraph-title">ONTAP Selectクラスタのネットワーク設定はインストール後に変更できますか。</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">ONTAP Select Deployのネットワーク設定はインストール後に変更できますか。</block>
-  <block id="53e646b7dd5ddb95bd47f8626f05f330" category="paragraph">ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルのサフィックス<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>。VMは、ONTAP SelectノードのDeployサーバとインストールイメージを提供します。</block>
-  <block id="a8b083480f6b19e605e4aaa8bd3425f1" category="list-text">にアクセスします <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Webブラウザを使用してサインインします。</block>
-  <block id="cc97556611cf17d7a90f16087052f93b" category="list-text">メニューから* Downloads *を選択し、ドロップダウンメニューから* Downloads *を選択します。</block>
-  <block id="ab0ffe542101d39137dce2c19869d545" category="list-text">[Downloads]ページの[All Products A-Z]で、文字「* O *」を選択します。</block>
-  <block id="a896447aac9deddba0f8b7bc142c079f" category="list-text">下にスクロールして* ONTAP Select *を選択します。</block>
   <block id="b41a57a870dbb2988a82d37df74541fa" category="list-text">* Welcome to ONTAP Select *ポップアップウィンドウが表示されたら、前提条件を確認し、* OK *を選択して続行します。</block>
   <block id="044e8c7d609a0b31483ad9c6588ccd58" category="admonition">Largeインスタンスタイプへのサイズ変更は、ESXiでのみサポートされます。</block>
   <block id="afc299163ecc817c9d73bc5033f67218" category="admonition">実行中のクラスタでは、単一リンクトポロジと複数リンクトポロジの変換がサポートされていません。トポロジごとに異なるNICチーミング設定を変換する必要がある可能性があるためです。</block>
@@ -3221,7 +3196,6 @@ storage aggregate show-spare-disks</block>
   <block id="bf55dfa0f53f23704c47337781c41d3d" category="inline-link">NetAppサポートサイトの登録アカウントが必要です</block>
   <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>です。</block>
   <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">VMの導入が完了したら、新しいVMを選択します。導入ウィザードへの入力内容に基づいて電源がオンになっていない場合は、手動でオンにします。</block>
-  <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">初めてのサインインで、vCenterのウィザードを使用してDeployをインストールしなかった場合は、プロンプトが表示されたら次の設定情報を入力します。</block>
   <block id="c2fffdb7e5db1a96deec5901fd1a882b" category="list-text">ページ上部の*[管理]*タブを選択します。</block>
   <block id="7f73b891b6f89493a9a42f78c96dfbde" category="list-text">[ライセンス]*を選択し、*[容量階層]*を選択します。</block>
   <block id="ac058bee21b19fb7d5683b470b430bce" category="list-text">必要に応じて* Filter *を選択し、表示されるライセンスを制限します。</block>
@@ -3599,10 +3573,6 @@ storage aggregate show-spare-disks</block>
   <block id="305009997eb17ffe0901beb32fdc2040" category="paragraph">クラスタ拡張の準備として、新しいESXiおよびKVMホストがインベントリに追加され、新しいノードの詳細が割り当てられます。クラスタ拡張プロセスを開始する前に、ネットワーク事前チェックによって、選択された内部ネットワークが検証されます。</block>
   <block id="1c53d6d4916415921dddecf6128580f3" category="list-text">4 番目の HA ペアに対して、次の高可用性 (HA) ペア構成の詳細を選択します。</block>
   <block id="1baec4831214642ebba2ccfdd8a785df" category="list-text">ONTAP認証情報を入力し、[*Expand Cluster*] を選択します。</block>
-  <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">ONTAP Select ONTAP Select Select Deploy ユーティリティ仮想マシンをインプレースでアップグレードできます。</block>
-  <block id="37d4c938e6c31c7ec9166448ac3458f3" category="paragraph">アップグレード中にONTAP Select Deploy を使用して他のタスクを実行しないようにしてください。  ONTAP Select Deploy ユーティリティのアップグレードに関する情報と制限については、最新のリリース ノートを参照してください。</block>
-  <block id="db1b7c6bff7b0da47260c4e758478bf5" category="section-title">ステップ1: パッケージをダウンロードする</block>
-  <block id="c81ba5c62604d6722d8975fb55e13972" category="paragraph">アップグレードプロセスを開始するには、適切なONTAP Select Deploy仮想マシンアップグレードファイルを<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block>。アップグレード パッケージは、単一の圧縮ファイルとしてフォーマットされます。</block>
   <block id="1bd278b7a759195dc2c65f644c38efc6" category="section-title">ステップ2: ONTAP Select Deploy仮想マシンにパッケージをアップロードする</block>
   <block id="58d35d75d5ec4b24d42607d4bf519bb0" category="paragraph">パッケージをダウンロードしたら、そのファイルをONTAP Select Deploy 仮想マシンにアップロードする必要があります。</block>
   <block id="f210391b7941f9a4198928bc79fcba09" category="paragraph">このタスクでは、ファイルをONTAP Select Deploy 仮想マシンにアップロードする 1 つの方法について説明します。ご使用の環境に適した他のオプションがある可能性があります。</block>
@@ -3753,10 +3723,6 @@ storage aggregate show-spare-disks</block>
   <block id="12702c2f8c71548bcc7c156da7d7e810" category="paragraph">ローカルハードウェアRAIDコントローラを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>各ノードでは、システム データだけでなく、ルートとデータ アグリゲートも保存されます。ONTAP Selectノードの設定の一環として、ストレージプールを接続する必要があります。</block>
   <block id="d79e665d74455e96fa5fff08009d57ce" category="paragraph">ソフトウェアRAIDを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>システム データ用であり、ルートおよびデータ アグリゲート用に SSD ドライブが使用可能であることを確認します。ONTAP Selectノードの設定の一環として、ストレージプールとディスクを接続する必要があります。</block>
   <block id="374fcbe92413e77c7fc7cda40bfb3be6" category="section-title">ステップ1: インストールイメージをダウンロードする</block>
-  <block id="42cd2a8efe7c9aac811d923637a0f193" category="list-text">Web ブラウザを使用してNetAppサポート サイトにアクセスし、*サポート クイック リンク* を選択します。</block>
-  <block id="6168f6eb3f1b81ec759f515fdd7bab98" category="list-text">*トップタスク*の下にある*ソフトウェアのダウンロード*を選択し、サイトにサインインします。</block>
-  <block id="84791eb50904d5d426f95112ce50d397" category="list-text">*製品を探す*を選択します。</block>
-  <block id="676522edf33055c4e8da85feed945dc5" category="list-text">*その他の利用可能なソフトウェアを選択* の下で、*デプロイのアップグレード、ノードのアップグレード、イメージのインストール* を選択します。</block>
   <block id="4ec4ff4105057abcf44071cf2a8f84b6" category="section-title">ステップ2: インストールイメージをデプロイにアップロードする</block>
   <block id="3ad5852905f7d86a4b551630b78bec6f" category="list-text">ローカル ワークステーションのコマンド シェルで、次の例に示すように、イメージ ファイルを Deploy 仮想マシンにアップロードします。</block>
   <block id="9c0d19167b1e62192d344c74670ab607" category="section-title">ステップ3: インストールイメージを追加する</block>
@@ -3849,7 +3815,6 @@ storage aggregate show-spare-disks</block>
   <block id="bae2221cd26cec7b066734cfd0888c05" category="paragraph">アクセスするには<block ref="b88c41ab6f0bacccf3a706fd6b4f9780" category="inline-link-macro-rx"></block>現在のバージョンの詳細を表示します。</block>
   <block id="8fce0c649f4d72f417cda254112e0124" category="list-text">ESXホストの場合、サポートされているDeploy管理ユーティリティを備えたONTAP Select 9.7以降</block>
   <block id="14d3f202c8554a54e4a6f4f52aa78fb3" category="list-text">KVMホストの場合、サポートされているDeploy管理ユーティリティを備えたONTAP Select 9.17.1以降</block>
-  <block id="da5ed6f3275aa7228f65de977570f140" category="list-text">下にスクロールして* ONTAP Select*をクリックします。</block>
   <block id="bb68cf2408900213fd35084701d5c32c" category="paragraph">ONTAP Select Deploy 9.17.1 または 9.16.1 からONTAP Select Deploy 9.18.1 に直接アップグレードできます。ONTAP Select Deploy 9.15.1 以前からアップグレードするには、 ONTAP Selectバージョンのリリース ノートを確認してください。</block>
   <block id="b69fcb807e0b12e6b52ca8806f85c011" category="paragraph">ESXi および KVM ハイパーバイザー ホストの既存のONTAP Selectクラスタのクラスタ サイズを増減します。どちらのホスト タイプでも、クラスター サイズを 4 ノードから 12 ノードの間で増分して増減できます。</block>
   <block id="a0b486320d46bfa4e7a315349c3d059b" category="list-text">1 ノードまたは 2 ノードのクラスターから 6 ノード、8 ノード、10 ノード、または 12 ノードのクラスターへの拡張。</block>
@@ -3866,9 +3831,6 @@ storage aggregate show-spare-disks</block>
   <block id="7ceba9002504861c21a7c60ab97ce4d0" category="list-text"><block ref="7ceba9002504861c21a7c60ab97ce4d0" category="inline-link-macro-rx"></block></block>
   <block id="05e40b852405f8fbe510662799c939d2" category="inline-link-macro">CDEPLOY-4025: ONTAP Select DeployGUI: RHEL10/Rocky 10 を搭載したホスト上のクラスタ作成ページで、SWR のストレージ プールとストレージ ディスクが表示されない</block>
   <block id="5b121e358e0c7c08ef9cd2f6ed82464f" category="list-text"><block ref="5b121e358e0c7c08ef9cd2f6ed82464f" category="inline-link-macro-rx"></block></block>
-  <block id="b3511106033b4eaf52fa527685aee9bf" category="paragraph">Rocky Linux (KVM) 10.0、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6</block>
-  <block id="fc0e52e7a743e546179c3376db422db0" category="list-text">Rocky Linux 10.0、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6 上の KVM</block>
-  <block id="5701e65b5391163c34edb9efc807ee5f" category="list-text">Rocky Linux 10.0、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および 8.6</block>
   <block id="1d635a2bfb4e1fe570efdeb7e95a39b1" category="summary">ONTAP Select評価ソフトウェアをダウンロードするには、アクセスをリクエストしてください。</block>
   <block id="14a6da11ffa9cf53251b9ff57d86f2e3" category="doc">ONTAP Select評価ソフトウェアにアクセスする</block>
   <block id="fe359189fa4d670313b3429fe242de5a" category="inline-link-macro">ONTAP Select評価ソフトウェア</block>
@@ -3919,7 +3881,6 @@ storage aggregate show-spare-disks</block>
   <block id="35f9f1c9a9790bd3fc497db798819083" category="section-title">ステップ3: 仮想マシンを展開する</block>
   <block id="a84a05d08c99af325673887887ed8fdb" category="paragraph">OVF VM イメージを使用してONTAP Select Deploy VM をインストールして起動します。インストール プロセスの一環として、DHCP または静的 IP 構成を使用するようにネットワーク インターフェイスを構成します。</block>
   <block id="7e5f2ca43da3004f8d3d7bae3edb7bae" category="section-title">ステップ4: デプロイウェブインターフェースにSign in</block>
-  <block id="619fea79d54cac08622de23d5f1d57d5" category="paragraph">Web ユーザー インターフェイスにSign in、デプロイ ユーティリティが使用可能であることを確認して初期構成を実行します。</block>
   <block id="97b3aadab6e4066f1f4afb183a83298c" category="sidebar">ONTAP Selectを試す</block>
   <block id="3ff87e54e9b20339b68f24cf241f05b0" category="sidebar">アクセス評価ソフトウェア</block>
   <block id="276d590b2be111ae083f54bd5b504fe8" category="paragraph">ONTAP Select は、標準 vSwitch 構成と分散 vSwitch 構成の両方の使用をサポートしています。分散 vSwitch はリンク アグリゲーション構造 (LACP) をサポートします。リンク アグリゲーションは、複数の物理アダプタ間で帯域幅を集約するために使用される一般的なネットワーク構造です。LACP はベンダー中立の標準です。物理ネットワーク ポートのグループを単一の論理チャネルにまとめる、ネットワーク エンドポイント用のオープン プロトコルを提供します。ONTAP Select は、リンク アグリゲーション グループ (LAG) として設定されたポート グループで動作します。ただし、 NetApp、LAG 構成を回避するために、個々の物理ポートを単純なアップリンク (トランク) ポートとして使用することをお勧めします。このような場合、標準 vSwitch と分散 vSwitch のベスト プラクティスは同じです。</block>
@@ -3931,10 +3892,7 @@ storage aggregate show-spare-disks</block>
   <block id="23063442dbfdc1f0a8618060853d7bce" category="paragraph">2 つの高速 (25/40Gb) NIC を使用する場合、推奨されるポート グループ構成は、概念的には 4 つの 10Gb アダプタを使用した構成と非常に似ています。物理アダプタを 2 つだけ使用する場合でも、4 つのポート グループを使用する必要があります。ポート グループの割り当ては次のとおりです。</block>
   <block id="9bc25e03ceb7e341916e8e6cca6a827b" category="paragraph">次の例は、マルチノードONTAP Selectクラスタの内部および外部通信サービスを処理する vSwitch と 2 つのポート グループの構成を示しています。内部ネットワーク VMNIC はこのポート グループの一部であり、スタンバイ モードで構成されているため、ネットワーク障害が発生した場合に外部ネットワークは内部ネットワーク VMNIC を使用できます。外部ネットワークの場合は逆になります。ネットワーク停止時にONTAP Select VM を正しくフェイルオーバーするには、2 つのポート グループ間でアクティブ VMNIC とスタンバイ VMNIC を交互に切り替えることが重要です。</block>
   <block id="bad767c4cc128e0a2a4e8d23a72bdbce" category="admonition">LACP では、アップストリーム スイッチ ポートをポート チャネルとして設定する必要があります。分散 vSwitch でこの設定を有効にする前に、LACP 対応ポート チャネルが正しく設定されていることを確認してください。</block>
-  <block id="666e2d64cc00d0a8b97b0fd56b7dd1f8" category="paragraph">RHEL 10.1、10.0、およびRocky Linux 10.0ホスト上のKVMハイパーバイザーには、ソフトウェアRAIDワークフローの制限があります。詳細については、以下のナレッジベースの記事をご覧ください：</block>
   <block id="fd03a137fae70421c1edc03522f9a111" category="paragraph">Red Hat Enterprise Linux 64-bit (KVM) 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.8、8.7、および 8.6</block>
-  <block id="4c593fb6a6971787a6c1b21b1778dbf1" category="paragraph">*注*：RHEL 10.1、10.0、およびRocky Linux 10.0ホスト上のKVMハイパーバイザーには、ソフトウェアRAIDワークフローの制限があります。詳細については、以下のナレッジベースの記事をご覧ください：</block>
-  <block id="cc11bdf4f5765009cf63440bceecaf71" category="list-text">ONTAP Select 9.17.1 以降、KVM ハイパーバイザーは Red Hat Enterprise Linux（RHEL）10.1、10.0、9.7、9.6、および Rocky Linux 10.0、9.6 でサポートされます。</block>
   <block id="9f67ae0fbf0ec858c854905b95acf153" category="list-text">Red Hat Enterprise Linux（RHEL）10.1、10.0、9.7、9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および8.6上のKVM</block>
   <block id="02d99372e9e1eb54a9dddd0b08891357" category="list-text">Red Hat Enterprise Linux (RHEL) 10.1、10.0、9.7、9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および8.6</block>
   <block id="d65f97fb1a167a35c6951233420ba74d" category="list-text">Red Hat Enterprise Linux (RHEL) 64-bit 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.8、8.7、および 8.6</block>
@@ -4054,4 +4012,54 @@ storage aggregate show-spare-disks</block>
   <block id="3b32ccaa0766722aa2afed59d3051ca8" category="sidebar">ライセンスを購入する</block>
   <block id="9be9343d8314647310e47876ae581a39" category="sidebar">ライセンスのサイズ設定に関する考慮事項</block>
   <block id="f207357dde5b74df08cbece4e6ecc93d" category="sidebar">ライセンスを取得する</block>
+  <block id="e9acce0d3652d40c91f9bd7e814291c0" category="inline-link-macro">NetApp Support Site ダウンロード</block>
+  <block id="17838336399b2e69627cea0614c17f30" category="list-text"><block ref="8e92c016cc209b5ea10cc71b5bfe5577" category="inline-link-macro-rx"></block>ページにアクセスします。</block>
+  <block id="102500ba079e1f102bac567290d3e053" category="list-text">下にスクロールして、* ONTAP Select Image *を選択します。</block>
+  <block id="1ccd2fe0ab425cd480daec44d7c332ba" category="list-text">インストールイメージの目的のリリースを選択します。</block>
+  <block id="b0ccaa273cbf1ac7308b75b9c7fd6d4e" category="list-text">適切な*ONTAP Select Image Upgrade*パッケージを選択してダウンロードしてください。必要に応じてすべてのプロンプトに応答します。</block>
+  <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">リリース ノート</block>
+  <block id="b7a85c17919c6d783689e1a6530de3d7" category="paragraph">ONTAP Selectノードをアップグレードする前に、<block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block>で追加情報と必要な手順を確認してください。</block>
+  <block id="bf159becb82fac20415db1b695308945" category="paragraph">Rocky Linux (KVM) 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、8.6</block>
+  <block id="f16085e2960ce67f0152bfa786bc2c84" category="list-text">ONTAP Select製品のダウンロードオプションのアップデート</block>
+  <block id="b5993ee67ee45c2b4a002d556ac6eef4" category="list-text">NetApp Support Site の ONTAP Select 製品ダウンロードオプションは、ONTAP Select 9.18.1 リリースに伴い、*ONTAP Select Deploy* および *ONTAP Select Image* に変更されます。これら 2 つの新しい製品ダウンロードオプションは、以下の表に示す従来の 4 つのオプションに取って代わります：</block>
+  <block id="258b030fd9d8536d96ad2ea29b1f1f5b" category="cell">以前の製品のダウンロードオプション</block>
+  <block id="01ed5dadeb59dcf70821bb6cfcca823b" category="cell">新製品のダウンロードオプション</block>
+  <block id="c878ab6b03f2e21c7ddaab60666fe9c7" category="cell">詳細については、以下を参照してください。</block>
+  <block id="0fcfd1d06aa4a00c5f6fec474f6f1c06" category="cell">ONTAP Select イメージのインストール</block>
+  <block id="65d8989162e041cfdb5373e9d5f90a01" category="cell">ONTAP Selectイメージ</block>
+  <block id="daa5867d7c0f09c140622ae0bc6ab1fd" category="cell">ONTAP Select Deployのアップグレード</block>
+  <block id="5922d941fc08a3cbcc408274f92d86e5" category="cell"><block ref="5922d941fc08a3cbcc408274f92d86e5" category="inline-link-macro-rx"></block></block>
+  <block id="5048172a57085779b0d43a0be3872dc8" category="cell">ONTAP Selectノードのアップグレード</block>
+  <block id="d228516350120c9cc4d55069f100cc11" category="inline-link-macro">ONTAP Selectノードをアップグレードする</block>
+  <block id="97ea190c2e3ce90f52a63364b67dcef9" category="cell"><block ref="97ea190c2e3ce90f52a63364b67dcef9" category="inline-link-macro-rx"></block></block>
+  <block id="bf40684242d22732e87ac0716a947f3f" category="admonition">製品ダウンロードの変更は、ONTAP Select 9.17.1、9.16.1、9.15.1、および9.14.1にも適用されます。</block>
+  <block id="e342911175fb54ab7198aeaf9378ba80" category="list-text">ONTAP Select 9.17.1 以降、KVM ハイパーバイザーは Red Hat Enterprise Linux (RHEL) 10.1、10.0、9.7、および 9.6 と Rocky Linux 10.1、10.0、9.7、および 9.6 でサポートされます。</block>
+  <block id="f5bbe572ad2fdd6b30f8297ec74c9ee1" category="paragraph">RHEL 10.1および10.0、Rocky Linux 10.1および10.0ホスト上のKVMハイパーバイザーには、ソフトウェアRAIDワークフローの制限があります。詳細については、以下のナレッジベースの記事をご覧ください：</block>
+  <block id="77c3f1eb72717033f409425f67ee4a6d" category="list-text">Rocky Linux 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6上のKVM</block>
+  <block id="f1200e5ffcff7a7cc8b8ea25410cc78a" category="list-text">Rocky Linux 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6</block>
+  <block id="ab0efa1679a96e82121715180bb36a1d" category="summary">Deploy管理ユーティリティのインスタンスにONTAP Selectイメージを追加します。インストール後、ONTAP Selectクラスタの導入時に使用できます。</block>
+  <block id="91dd9283705750f9fe7e837b0a40349f" category="paragraph">ONTAP Select イメージを Deploy 管理ユーティリティのインスタンスに追加します。イメージをインストールしたら、ONTAP Select クラスタの導入時に使用できます。</block>
+  <block id="c887723161d2b70aba693fc5b80ea33b" category="list-text">適切な*ONTAP Select Image Install*パッケージを選択してダウンロードしてください。必要に応じてすべてのプロンプトに応答します。</block>
+  <block id="04574480371a2b80422d880e51839d84" category="paragraph">ローカルワークステーションにインストールイメージファイルがあることを確認します。Deploy管理者ユーザーアカウントのパスワードも必要です。</block>
+  <block id="71b6b56cdf9a8f06858b086466ade95e" category="paragraph">ONTAP Select Deploy ユーティリティ CLI を使用して、既存の ONTAP Select Deploy ユーティリティ仮想マシンをインプレースでアップグレードします。</block>
+  <block id="893d0216a6847b8a50f3efc04d175542" category="paragraph">アップグレード中に ONTAP Select Deploy が他のタスクの実行に使用されていないことを確認します。ONTAP Select Deploy ユーティリティのアップグレードに関する情報と制限事項については、<block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="a935f72e89684cc4e1e44be3fa93301b" category="section-title">ステップ1：アップグレードパッケージをダウンロードする</block>
+  <block id="9c7dbffc228f5e20cfc38dd2e9d52183" category="paragraph">アップグレードプロセスを開始するには、NetApp Support SiteからONTAP Select Deployアップグレードファイルをダウンロードします。アップグレードパッケージは、単一の圧縮ファイルとしてフォーマットされます。</block>
+  <block id="c7de263deca2f546c4c7b9417bbb6aec" category="list-text">下にスクロールして*ONTAP Select Deploy*を選択してください。</block>
+  <block id="224ba05e3cb699bfc71537bae00db024" category="list-text">希望する ONTAP Select バージョンを選択してください。</block>
+  <block id="edef4f12cb19840bbbb69b8757b99015" category="list-text">適切な*ONTAP Select Deploy Upgrade*パッケージを選択してダウンロードします。必要に応じてすべてのプロンプトに応答します。</block>
+  <block id="1ace48b65c22215b19f774b3df5f35bc" category="paragraph">ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルには、ESXiホスト用のサフィックス<block ref="586ba478b7ebec665f3df120799b6c2e" prefix=" " category="inline-code"></block>とKVMホスト用のサフィックス<block ref="fe0b8e90d35ee4c0d89c53587e2d402e" prefix=" " category="inline-code"></block>が付いています。VMは、ONTAP Selectノード用のDeployサーバーとインストールイメージを提供します。</block>
+  <block id="1b889c4574d56e52bb5c7740f68139d2" category="list-text">適切な*ONTAP Select Deploy Install*パッケージを選択してダウンロードしてください。必要に応じてすべてのプロンプトに応答します。</block>
+  <block id="3f5028687bfdb0f40e4748a9cf9f5076" category="list-text">NetApp Support Site の製品ダウンロードページから次のファイルを入手します。</block>
+  <block id="f754a351095ccdb252bb15b2152c09f3" category="list-text">署名を検証します：</block>
+  <block id="5029ec7f3dcb7c58660c1d47f8dce6c3" category="list-text">OVA ファイルを選択し、Deploy OVF Template ウィザードを完了します。ご使用の環境に適したオプションを選択してください。</block>
+  <block id="77b39f7b1e60aa5d2af3e45d47ff1adf" category="list-text">*コンソール*タブを選択して、ESXi ホストセットアップシェルにアクセスし、電源オンプロセスを監視します。</block>
+  <block id="b976538163f8bd7f20f37762f79adba6" category="list-text">静的構成を選択する場合は、必要なネットワーク構成情報をすべて指定します。</block>
+  <block id="896f4c4fdd4e61c33a930415e20d88d3" category="paragraph">Web ユーザー インターフェイスに Sign in して、デプロイ ユーティリティが使用可能であることを確認し、初期構成を実行します。</block>
+  <block id="a88f396cb1d0d25e4d7b5bc9e25d3617" category="paragraph-title">次の手順：</block>
+  <block id="4452a56e6eb6220413b5f5ed2b39c2eb" category="paragraph"><block ref="4452a56e6eb6220413b5f5ed2b39c2eb" category="inline-link-macro-rx"></block></block>
+  <block id="186a0749125d9c043615b75ece89e1b9" category="inline-link-macro">SSHを使用してDeployにSign inする方法を学ぶ</block>
+  <block id="3127e7fd2160f6fce263d627cbcb5a4d" category="list-text"><block ref="3127e7fd2160f6fce263d627cbcb5a4d" category="inline-link-macro-rx"></block></block>
+  <block id="53e65bd37d1e95a079cd2ec376ccf900" category="inline-link-macro">ONTAP Selectクラスタの90日間評価インスタンスの導入について学ぶ</block>
+  <block id="f5f0f7b9b906ffe1f1af3b3d9bc2a475" category="list-text"><block ref="f5f0f7b9b906ffe1f1af3b3d9bc2a475" category="inline-link-macro-rx"></block></block>
 </blocks>
