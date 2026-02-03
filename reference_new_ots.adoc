@@ -40,9 +40,6 @@ ONTAP Select製品のダウンロードオプションのアップデート:: Ne
 
 | ONTAP Selectノードのアップグレード | ONTAP Selectイメージ | link:concept_adm_upgrading_nodes.html["ONTAP Selectノードをアップグレードする"] 
 |===
-
-NOTE: 製品ダウンロードの変更は、ONTAP Select 9.17.1、9.16.1、9.15.1、および9.14.1にも適用されます。
-
 --
 クラスタの拡張と縮小のサポート強化:: ONTAP Select 9.18.1 以降では、ESXi および KVM ハイパーバイザ ホスト上の 4 ノードと 12 ノードのONTAP Selectクラスタ間でのクラスタの拡張と縮小がサポートされます。
 +
