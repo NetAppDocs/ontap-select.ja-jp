@@ -88,9 +88,9 @@ NOTE: 現在のリリースでは、 ONTAP Select システムディスクを複
 
 image:ST_19.jpg["シングルノードクラスタの RDD ディスクパーティショニング"]
 
-* マルチノードクラスタ（ HA ペア）の RDD ディスクパーティショニング *
+*マルチノードクラスタ（HAペア）のRDDディスクパーティショニング*
 
-image:ST_20.jpg["マルチノードクラスタ（ HA ペア）の RDD ディスクパーティショニング"]
+image:ST_20.jpg["マルチノードクラスタ（HAペア）のRDDディスクパーティショニング"]
 
 ONTAPソフトウェア RAID は、RAID 4、RAID-DP、およびRAID-TECという RAID タイプをサポートしています。これらは、 FASおよびAFFプラットフォームで使用される RAID 構造と同じです。ルート プロビジョニングの場合、 ONTAP Select はRAID 4 と RAID-DP のみをサポートします。データ アグリゲートにRAID-TECを使用する場合、全体的な保護は RAID-DP になります。ONTAPONTAP Select HA は、各ノードの設定を他のノードに複製するシェアード ナッシング アーキテクチャを使用します。つまり、各ノードは自身のルート パーティションと、ピアのルート パーティションのコピーを保存する必要があります。データ ディスクには 1 つのルート パーティションがあります。つまり、データ ディスクの最小数は、 ONTAP Selectノードが HA ペアの一部であるかどうかによって異なります。
 
@@ -100,7 +100,7 @@ ONTAPソフトウェア RAID は、RAID 4、RAID-DP、およびRAID-TECという
 
 == パススルー（ DirectPath IO ）デバイス vs.RDM （ raw デバイスマップ）
 
-ESX および KVM ハイパーバイザーは、NVMe ディスクを Raw デバイス マップ（RDM）としてサポートしていません。ONTAPONTAP Select でNVMe ディスクを直接制御できるようにするには、これらのドライブを ESX または KVM 内でパススルー デバイスとして設定する必要があります。NVMeデバイスをパススルー デバイスとして設定する場合、サーバ BIOS からのサポートが必要であり、ホストの再起動が必要になる場合があります。また、ホストごとに割り当て可能なパススルー デバイスの数には制限があり、プラットフォームによって異なる場合があります。ただし、 ONTAP Deploy では、 ONTAP Selectノードあたり 14 台の NVMe デバイスに制限されています。つまり、NVMe 構成では、総容量を犠牲にして、非常に高い IOPS 密度（IOPS/TB）が提供されます。または、大容量のストレージ容量を備えた高パフォーマンス構成が必要な場合は、大規模なONTAP Select VM サイズ、システム ディスク用の INTEL Optane カード、データ ストレージ用の公称数の SSD ドライブという構成が推奨されます。
+ESXiおよびKVMハイパーバイザーは、NVMeディスクをRaw Device Maps（RDM）としてサポートしていません。ONTAP SelectがNVMeディスクを直接制御できるようにするには、これらのドライブをESXiまたはKVM内でパススルーデバイスとして構成する必要があります。NVMeデバイスをパススルーデバイスとして構成する場合、サーバーBIOSからのサポートが必要になり、ホストの再起動が必要になる場合があります。さらに、ホストごとに割り当て可能なパススルーデバイスの数には制限があり、プラットフォームによって異なる場合があります。ただし、ONTAP DeployではONTAP Selectノードあたり14台のNVMeデバイスに制限されます。つまり、NVMe構成では、総容量を犠牲にして、非常に高いIOPS密度（IOPS/TB）が提供されます。あるいは、大容量ストレージを備えた高性能構成を希望する場合は、大容量のONTAP Select VMサイズ、システムディスク用のINTEL Optaneカード、およびデータストレージ用の適切な数のSSDドライブという構成が推奨されます。
 
 
 NOTE: NVMe のパフォーマンスを最大限に引き出すには、 ONTAP Select VM のサイズを大きくすることを検討します。
@@ -124,7 +124,7 @@ FASおよびAFFシステムと同様に、既存のRAIDグループには、同�
 
 
 
-== ONTAP Selectディスクを対応するESXまたはKVMディスクに一致させる
+== ONTAP Selectディスクを対応するESXiまたはKVMディスクに一致させる
 
 ONTAP Select ディスクには通常、 NET x.y というラベルが付けられますディスク UUID は、次の ONTAP コマンドを使用して取得できます。
 
@@ -142,7 +142,7 @@ Checksum Compatibility: advanced_zoned
 Aggregate: -
 Plex: -This UID can be matched with the device UID displayed in the ‘storage devices’ tab for the ESX host
 ----
-image:ST_21.jpg["ONTAP Select ディスクと対応する ESX ディスクの照合"]
+image:ST_21.jpg["ONTAP Selectディスクとそれに対応するESXiディスクの照合"]
 
 ESXi または KVM シェルで次のコマンドを入力すると、特定の物理ディスク (naa.unique-id で識別) の LED を点滅させることができます。
 

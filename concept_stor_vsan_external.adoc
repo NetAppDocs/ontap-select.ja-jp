@@ -22,7 +22,7 @@ summary: '仮想 NAS (vNAS) の展開では、vSAN、一部の HCI 製品、 Net
 
 == vNAS アーキテクチャ
 
-vNAS という名称は、 DAS を使用しないすべてのセットアップで使用されます。マルチノード ONTAP Select クラスタの場合、これには、同じ HA ペアの 2 つの ONTAP Select ノードが 1 つのデータストア（ vSAN データストアを含む）を共有するアーキテクチャが含まれます。ノードは、同じ共有外付けアレイから別々のデータストアにインストールすることもできます。これにより、アレイ側の Storage Efficiency が向上し、 ONTAP Select HA ペア全体の全体的な設置面積が削減されます。ONTAP Select vNAS ソリューションのアーキテクチャは、ローカル RAID コントローラを使用する DAS の ONTAP Select のアーキテクチャと非常によく似ています。つまり、各 ONTAP Select ノードには HA パートナーのデータのコピーが引き続き保持されます。ONTAP の Storage Efficiency ポリシーは、ノード範囲に適用されます。そのため、アレイ側の Storage Efficiency を高めることを推奨します。これにより、両方の ONTAP Select ノードのデータセットに適用できる可能性があるためです。
+vNAS命名法は、DASを使用しないすべてのセットアップに使用されます。マルチノードONTAP Selectクラスタの場合、これには同じHAペア内の2つのONTAP Selectノードが単一のデータストア（vSANデータストアを含む）を共有するアーキテクチャが含まれます。ノードは、同じ共有外部アレイからの別のデータストアにインストールすることもできます。これにより、アレイ側のストレージ効率が向上し、ONTAP Select HAペア全体のフットプリントを削減できます。ONTAP Select vNASソリューションのアーキテクチャは、ローカルRAIDコントローラを使用するDAS上のONTAP Selectのアーキテクチャと非常によく似ています。つまり、各ONTAP SelectノードはHAパートナーのデータのコピーを引き続き保持します。ONTAPストレージ効率化ポリシーはノードスコープです。したがって、アレイ側のストレージ効率化は、両方のONTAP Selectノードからのデータセットに適用できる可能性があるため、望ましいです。
 
 HA ペアの各 ONTAP Select ノードで別々の外付けアレイを使用することもできます。これは、外付けストレージで ONTAP Select MetroCluster SDS を使用する場合の一般的な選択肢です。
 
@@ -52,7 +52,8 @@ SIDL 機能は、 ONTAP Select のすべての Storage Efficiency 機能とは�
 ----
 storage aggregate modify -aggregate aggr-name -single-instance-data-logging off
 ----
-SIDL 機能をオフにすると、書き込みパフォーマンスに影響します。アグリゲート内のすべてのボリュームの Storage Efficiency ポリシーをすべて無効にした後で、 SIDL 機能を再度有効にすることは可能です。
+
+NOTE: SIDL 機能をオフにすると、書き込みパフォーマンスに影響します。アグリゲート内のすべてのボリューム上のすべてのストレージ効率ポリシーを無効にした後で、SIDL 機能を再度有効にすることができます：
 
 [listing]
 ----
@@ -62,18 +63,21 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 
 == ESXiでvNASを使用する場合のONTAP Selectノードの配置
 
-ONTAP Select は、共有ストレージ上のマルチノード ONTAP Select クラスタをサポートします。ONTAP Deploy では、複数の ONTAP Select ノードが同じクラスタに属していないかぎり、同じ ESX ホストに複数の ESX ノードを設定できます。この構成は、 vNAS 環境（共有データストア）でのみ有効です。DAS ストレージを使用している場合、ホストごとに複数の ONTAP Select インスタンスを使用することはできません。これらのインスタンスが同じハードウェア RAID コントローラで競合するためです。
+ONTAP Selectには、共有ストレージ上のマルチノードONTAP Selectクラスタのサポートが含まれています。ONTAP Deployでは、これらのノードが同じクラスタの一部でない限り、同じESXiホスト上に複数のONTAP Selectノードを設定できます。
 
-ONTAP Deployは、マルチノードVNASクラスタの初期導入時に、同じクラスタから複数のONTAP Selectインスタンスが同じホストに配置されないようにします。次の図は、2 つのホスト上で交差する 2 つの 4 ノード クラスターの正しい展開例を示しています。
 
-* マルチノード VNAS クラスタの初期導入 *
+NOTE: この構成は、VNAS環境（共有データストア）に対してのみ有効です。DASストレージを使用する場合、ホストあたりの複数のONTAP Selectインスタンスはサポートされません。これらのインスタンスは同じハードウェアRAIDコントローラを競合するためです。
 
-image:ST_14.jpg["マルチノード VNAS クラスタの初期導入"]
+ONTAP Deployは、マルチノードVNASクラスタの初期導入時に、同じクラスタの複数のONTAP Selectインスタンスが同じホスト上に配置されないようにします。次の図は、2つのホスト上で交差する2つの4ノードクラスタの正しい導入例を示しています。
+
+*マルチノード VNAS クラスタの初期導入*
+
+image:ST_14.jpg["マルチノードVNASクラスタの初期導入"]
 
 導入後、 ONTAP Select ノードはホスト間で移行できます。これにより、不適切な構成やサポート対象外の構成が発生し、同じクラスタにある複数の ONTAP Select ノードが、基盤となる同じホストを共有する可能性があります。ネットアップでは、 VM の非アフィニティルールを手動で作成し、 VMware が、同じ HA ペアのノードだけでなく、同じクラスタのノード間での物理的な分離を自動的に管理するようにすることを推奨します。
 
 
-NOTE: 非アフィニティルールでは、 ESX クラスタで DRS が有効になっている必要があります。
+NOTE: アンチアフィニティ ルールでは、ESXi クラスタで DRS が有効になっている必要があります。
 
 ONTAP Select VM の非アフィニティルールを作成する方法については、次の例を参照してください。ONTAP Select クラスタに複数の HA ペアが含まれている場合は、クラスタ内のすべてのノードをこのルールに含める必要があります。
 
@@ -81,12 +85,13 @@ image:ST_15.jpg["VM / ホストのルール"]
 
 image:ST_16.jpg["VM / ホストルールを編集します"]
 
-次のいずれかの理由で、同じ ONTAP Select クラスタの 2 つ以上の ONTAP Select ノードが同じ ESX ホスト上に見つかる場合があります。
+同じONTAP SelectクラスタからONTAP Selectノードが2つ以上、次のいずれかの理由により同じESXiホスト上に見つかる可能性があります：
 
 * VMware vSphere のライセンス制限により DRS がない、または DRS が有効になっていない。
 * VMware HA 処理または管理者が開始した VM 移行が優先されるため、 DRS の非アフィニティルールがバイパスされる。
 
 
-ONTAP Deploy は、 ONTAP Select VM の場所のプロアクティブな監視は行いません。ただし、クラスタの更新処理により、次のようなサポートされていない構成が ONTAP Deploy ログに反映されます。
+
+NOTE: ONTAP DeployはONTAP Select VMの場所を積極的に監視しません。ただし、クラスタ更新操作では、このサポートされていない構成がONTAP Deployログに反映されます：
 
 image:ST_17.PNG["ONTAP Deploy ログ"]

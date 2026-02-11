@@ -4,7 +4,7 @@ permalink: reference_plan_ots_kvm.html
 keywords: plan, planning, vnas, kvm 
 summary: KVMハイパーバイザーの使用に関連するいくつかの計画の問題について考慮する必要があります。 
 ---
-= ONTAP Select KVMの要件
+= ONTAP Select のKVM外部ストレージ要件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,7 +35,7 @@ CAUTION: 外部ストレージの許容ストレージ制限内のストレー�
 
 == ベストプラクティス
 
-次の推奨事項に従う必要があります。
+次のベスト プラクティスに従う必要があります：
 
 * ONTAP Selectネットワークおよび外部ストレージ用に、専用のネットワークポート、帯域幅、およびvSwitchの構成を定義する
 * 容量オプションを設定してストレージ利用率を制限する（ONTAP Selectは外部ストレージプールの全容量を使用できない）

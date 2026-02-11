@@ -113,19 +113,19 @@ ESXiホスト上のクラスタ拡張と縮小のサポート強化:: ONTAP Sele
 link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。"] 。
 
 --
-SnapMirrorクラウドのサポート:: ONTAP Select 9.17.1 以降、 SnapMirrorクラウドがONTAP Selectでサポートされます。SnapMirrorSnapMirrorは、 ONTAP Select 9.17.1 クラスタを導入するか、既存のONTAP Selectクラスタをバージョン 9.17.1 にアップグレードすると、デフォルトで有効になるライセンス対象のONTAP機能です。
+SnapMirror Cloudのサポート:: ONTAP Select 9.17.1以降、SnapMirror CloudはONTAP Selectでサポートされています。SnapMirror Cloudは、ONTAP Select 9.17.1クラスタを導入するとき、または既存のONTAP Selectクラスタをバージョン9.17.1にアップグレードするときにデフォルトで有効になる、ライセンスされたONTAP機能です。
 +
 --
-https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["オブジェクトストレージへのSnapMirrorクラウドバックアップについて学ぶ"^] 。
+https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror クラウドのオブジェクトストレージへのバックアップについて説明します"^]。
 
 --
-SnapLock Select Enterprise のサポート:: ONTAP Select 9.17.1 以降、新しい導入ではSnapLock Select Enterprise（改ざん防止スナップショット ロックを含む）のライセンスが自動的に付与されます。  ONTAP Select 9.16.1以前からのアップグレードの場合は、 SnapLock Selectライセンスをlink:https://mysupport.netapp.com/site/["NetApp Support Site"^]手動で適用します。
+SnapLock Selectのサポート:: ONTAP Select 9.17.1以降、新しい導入ではSnapLock Select（改ざん防止Snapshotロックを含む）が自動的にライセンス付与されます。ONTAP Select 9.16.1以前からのアップグレードの場合は、link:https://mysupport.netapp.com/site/["NetApp Support Site"^]からSnapLock Selectライセンスを無料でダウンロードして手動で適用できます。詳細については、link:reference_lic_ontap_features.html#enabled-ontap-features["ONTAP の機能はデフォルトで自動的に有効になります"]を参照してください。
 マルチノードクラスタでの vSAN ESA のサポート:: ONTAP Select 9.17.1 以降では、vSAN Express Storage Architecture (ESA) のサポートが拡張され、マルチノード クラスタを展開できるようになりました。この機能強化により、vSAN ESA 構成をデプロイできるようになります。
 +
 --
-vSAN ESA は ESX 固有の構成であり、vSphere 8 で導入された VMware vSAN の新しいアーキテクチャです。vSAN ESA は、特に NVMe ベースの TLC フラッシュ デバイスを使用する場合に、強化された効率、スケーラビリティ、およびパフォーマンスを提供するように設計されています。
+vSAN ESAはESXi固有の構成であり、vSphere 8で導入されたVMware vSANの新しいアーキテクチャです。vSAN ESAは、特にNVMeベースのTLCフラッシュデバイスを使用する場合に、効率性、スケーラビリティ、およびパフォーマンスの向上を提供するように設計されています。
 
-ONTAP Select Deploy およびONTAP Select for ESX は、ストレージ プールに vSAN または外部アレイ タイプのデータストアを使用して、 ONTAP Selectシングルノードおよびマルチノード クラスタの構成をサポートします。
+ONTAP Select DeployおよびONTAP Select for ESXiは、ストレージプールにvSANまたは外部アレイタイプのデータストアを使用する、ONTAP Selectシングルノードおよびマルチノードクラスタの構成をサポートします。
 
 [NOTE]
 ====
@@ -194,7 +194,7 @@ KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.15.1以降�
 
 
 
-NOTE: クラスタの拡張と縮小はESXクラスタのみでサポートされます。
+NOTE: クラスタの拡張と縮小のサポートは、ESXi クラスタのみに制限されます。
 
 
 

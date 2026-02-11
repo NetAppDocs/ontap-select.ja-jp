@@ -69,7 +69,7 @@ NOTE: API v3 リリースは、以前のバージョンの API と後方互換�
 はい、 ONTAP Select クラスタのリバート手順 は、 FAS クラスタのリバート手順 とほぼ同じです。ただし、いくつかの違いがあります。
 
 * リバートできるのは、アップグレードされた ONTAP Select インスタンスのみで、元のインストールバージョンのみです。ONTAP Select が以前のリリースをサポートしていても、新しいインストールは古いコードリリースに戻すことはできません。
-* ソフトウェア RAID を使用する ONTAP Select （ KVM ）および ONTAP Select （ ESX ）の場合、ソフトウェア RAID をサポートしていない以前のバージョンにリバートすることはできません。さらに、 ESX への ONTAP Select 9.5 以降の新規インストールでは、 VMXNET3 ネットワークドライバおよび可能な場合は vNMVE ドライバが使用されます。これらの新規インストールを以前のバージョンの ONTAP Select にリバートすることはできません。
+* ソフトウェアRAIDを使用するONTAP Select（KVM）およびONTAP Select（ESX）では、ソフトウェアRAIDをサポートしていない以前のバージョンに戻すことはできません。さらに、ESXi上のONTAP Select 9.5以降の新規インストールでは、VMXNET3ネットワークドライバーと、可能な場合はvNMVEドライバーが使用されます。これらの新規インストールは、以前のバージョンのONTAP Selectに戻すことはできません。
 * ONTAP Select VM も Large インスタンスにアップグレードされている場合 (Premium XL ライセンスを使用)、Large インスタンス機能は以前のバージョンでは使用できないため、9.6 より前のバージョンに戻すことはサポートされません。
 
 
@@ -129,11 +129,11 @@ CAUTION: ライセンスファイルは変更しないでください。これ�
 
 ストレージに関するいくつかの質問と回答があります。
 
-.1つのONTAP Select DeployインスタンスでESXとKVMの両方にクラスタを作成できますか。
+.単一のONTAP Select Deployインスタンスで、ESXiとKVMの両方にクラスタを作成できますか。
 はい。ONTAP Select DeployはKVMまたはESXにインストールできます。両方のインストール環境で、どちらのハイパーバイザーにもONTAP Select クラスタを作成できます。
 
 .ESX 上の ONTAP Select には vCenter が必要ですか。
-ESX ホストのライセンスが適切な場合は、 ESX ホストを vCenter Server で管理する必要はありません。ただし、ホストがvCenterサーバで管理されている場合は、そのvCenter Serverを使用するようにONTAP Select Deployを設定する必要があります。つまり、ESXホストがvCenter Serverによってアクティブに管理されている場合、ONTAP Select DeployでESXホストをスタンドアロンとして設定することはできません。ONTAP Select Deploy VMは、vMotionまたはVMwareのHAイベントが原因で、vCenterに依存してESXiホスト間のすべてのONTAP Select VM移行を追跡します。
+ESXiホストが適切にライセンスされている場合、ESXiホストをvCenter Serverで管理する必要はありません。ただし、ホストがvCenter serverで管理されている場合は、ONTAP Select DeployをそのvCenter Serverを使用するように設定する必要があります。つまり、ESXiホストがvCenter Serverによって積極的に管理されている場合、ONTAP Select Deployでスタンドアロンとして設定することはできません。ONTAP Select Deploy VMは、vMotionやVMware HAイベントによるESXiホスト間のすべてのONTAP Select VMの移行を追跡するために、vCenterに依存していることに注意してください。
 
 .ソフトウェア RAID とは
 ONTAP Select では、ハードウェアRAIDコントローラなしでサーバを使用できます。この場合、RAID機能はソフトウェアで実装されます。ソフトウェアRAIDを使用する場合は、SSDとNVMeの両方のドライブがサポートされます。ONTAP Select ブートディスクおよびコアディスクは、引き続き仮想化されたパーティション（ストレージプールまたはデータストア）内に配置する必要があります。ONTAP Select は、 RD2 （ルート / データ / データパーティショニング）を使用して SSD をパーティショニングします。したがって、 ONTAP Select ルートパーティションは、データアグリゲートに使用される物理スピンドルと同じ上にあります。ただし、ルートアグリゲートおよびブートディスクとコア仮想ディスクは容量ライセンスには含まれません。
@@ -145,7 +145,7 @@ AFF / FAS で使用できるすべての RAID 方式を ONTAP Select でも使�
 
 ソフトウェア RAID の要件には、次のものがあります。
 
-* ESXトKVMテサホオト
+* ESXiおよびKVMでサポートされます
 +
 ** ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでは、ONTAP Select 9.10.1でKVMハイパーバイザーのサポートが廃止されていました。
 
@@ -182,19 +182,19 @@ ONTAP Select Deployには、ONTAP Select ノードでの容量拡張処理をサ
 ストレージの追加はソフトウェア RAID もサポートします。ただし、ソフトウェア RAID の場合は、 ONTAP Select VM に物理ドライブを追加する必要があります。この場合のストレージ追加は、 FAS または AFF アレイの管理と似ています。ソフトウェア RAID を使用して ONTAP Select ノードにストレージを追加する場合は、 RAID グループのサイズとドライブサイズを考慮する必要があります。
 
 .ONTAP Select は、 VSAN または外付けアレイタイプのデータストアをサポートしますか。
-ONTAP Select DeployおよびONTAP Select for ESXでは、VSANまたは外付けアレイタイプのデータストアをストレージプールに使用するONTAP Select シングルノードクラスタの構成をサポートしています。
+ONTAP Select DeployおよびONTAP Select for ESXiは、ストレージプールにvSANまたは外部アレイタイプのデータストアを使用するONTAP Selectシングルノード クラスタの構成をサポートします。
 
 ONTAP Select DeployおよびONTAP Select for KVMでは、外部アレイで共有論理ストレージプールタイプを使用するONTAP Select シングルノードクラスタの設定がサポートされます。ストレージプールのベースには iSCSI と FC / FCoE があります。それ以外のタイプのストレージプールはサポートされません。
 
-共有ストレージ上のマルチノード HA クラスタがサポートされます。
+共有ストレージ上のマルチノード HA クラスターがサポートされています。
 
-.ONTAP Select は、 VSAN または一部の HCI スタックを含むその他の共有外付けストレージ上のマルチノードクラスタをサポートしていますか。
-外付けストレージ（マルチノード VNAS ）を使用するマルチノードクラスタは、 ESX と KVM の両方でサポートされます。同じクラスタ内にハイパーバイザーを混在させることはサポートされていません。共有ストレージ上の HA アーキテクチャは、 HA ペア内の各ノードにパートナーデータのミラーコピーがあることを意味します。ただし、マルチノードクラスタを使用すると、 ONTAP HA または KVM Live Motion を使用するシングルノードクラスタに比べて、のノンストップオペレーションのメリットが得られます。
+.ONTAP SelectはvSANまたは一部のHCIスタックを含むその他の共有外部ストレージ上のマルチノードクラスタをサポートしていますか？
+外部ストレージを使用するマルチノード クラスタ（マルチノード vNAS）は、ESXi と KVM の両方でサポートされています。同じクラスタ内でのハイパーバイザーの混在はサポートされていません。共有ストレージ上の HA アーキテクチャでは、HA ペアの各ノードにパートナー データのミラー コピーが存在することが依然として前提となります。ただし、マルチノード クラスタには、VMware HA または KVM Live Motion に依存するシングルノード クラスタとは対照的に、ONTAP の無停止運用という利点があります。
 
-ONTAP Select Deploy では、同一ホスト上で複数のONTAP Select VM がサポートされるようになりましたが、クラスタ作成時にこれらのインスタンスを同じONTAP Selectクラスタに含めることはできません。ESX環境では、VMware HA が複数のONTAP Select VM を同じONTAP Selectクラスタから単一のESX ホストに移行しないように、VM アンチアフィニティ ルールを作成することをNetApp は推奨しています。さらに、 ONTAP Select ONTAP Select ONTAP Select Deploy によって検出された場合、 ONTAP Select Deploy は Deploy UI とログにアラートを出力します。ONTAPONTAP Select Deploy がONTAP Select VM の場所を認識する唯一の方法は、クラスタ更新操作を実行することです。これは、 ONTAP Select Deploy 管理者が手動で開始する必要があります。ONTAP Select Deployにはプロアクティブな監視を可能にする機能がなく、アラートはDeployのUIまたはログでのみ確認できます。つまり、このアラートを集中監視インフラストラクチャに転送することはできません。
+ONTAP Select Deployは同じホスト上の複数のONTAP Select VMをサポートしますが、クラスタ作成時にそれらのインスタンスが同じONTAP Selectクラスタの一部になることはできません。ESXi環境の場合、NetAppはVMアンチアフィニティルールを作成して、VMware HAが同じONTAP Selectクラスタの複数のONTAP Select VMを単一のESXiホストに移行しないようにすることを推奨します。さらに、ONTAP Select Deployが管理者（ユーザーが開始した）vMotionまたはONTAP Select VMのライブマイグレーションによって、2つのONTAP Selectノードが同じ物理ホスト上に配置されるなどのベストプラクティス違反が発生したことを検出した場合、ONTAP Select DeployはDeploy UIとログにアラートを投稿します。ONTAP Select DeployがONTAP Select VMの場所を認識する唯一の方法は、クラスタ更新操作の結果としてであり、これはONTAP Select Deploy管理者が開始する必要がある手動操作です。ONTAP Select Deployにはプロアクティブな監視を可能にする機能はなく、アラートはDeploy UIまたはログを通じてのみ表示されます。つまり、このアラートは集中監視インフラストラクチャに転送できません。
 
 .ONTAP Select は、 VMware の NSX VXLAN をサポートしていますか。
-NSX と V の VXLAN ポートグループがサポートされます。マルチノード HA （ ONTAP MetroCluster SDS を含む）の場合は、 VXLAN のオーバーヘッドに対応するために、内部ネットワーク MTU を（ 9000 ではなく） 7500 ～ 8900 の範囲で設定する必要があります。内部ネットワークMTUは、クラスタの導入時にONTAP Select Deployで設定できます。
+NSX-V VXLAN ポート グループがサポートされています。ONTAP MetroCluster SDSを含むマルチノードHAの場合は、VXLANオーバーヘッドに対応するために、内部ネットワークMTUを7500~8900（9000ではなく）に設定してください。内部ネットワークMTUは、クラスタ導入時にONTAP Select Deployで設定できます。
 
 .ONTAP Select は KVM のライブマイグレーションをサポートしていますか。
 外部アレイストレージプールで実行される ONTAP Select VM は、 virsh ライブマイグレーションをサポートします。
@@ -208,8 +208,8 @@ Select VM は VSAN データストアのストレージポリシーを継承し�
 .複数の ONTAP Select ノードが異なる Select クラスタに属している場合、それらのノードを同じホストで実行することはできますか。
 vNAS 構成では、同じホスト上の複数の ONTAP Select ノードを vNAS 構成でのみ設定できます。ただし、それらのノードが同じ ONTAP Select クラスタに含まれていない必要があります。この方法は DAS 構成ではサポートされていません。同じ物理ホスト上の複数の ONTAP Select ノードが RAID コントローラへのアクセスで競合するためです。
 
-.1 つの 10GE ポートを搭載したホストで ONTAP Select を実行できますか。また、 ESX と KVM の両方に使用できますか。
-1 つの 10GE ポートを使用して外部ネットワークに接続できます。ただし、この方法は、制約のあるスモールフォームファクタ環境でのみ使用することを推奨します。これは ESX と KVM の両方でサポートされます。
+.10GEポートを1つだけ搭載したホストでONTAP Selectを実行できますか?また、ESXiとKVMの両方で使用できますか?
+単一の10GEポートを使用して外部ネットワークに接続できます。ただし、NetAppでは、制約のある小型フォームファクタ環境でのみ使用することを推奨しています。これはESXiとKVMの両方でサポートされています。
 
 .KVM でライブマイグレーションを実行するには、どのような追加プロセスを実行する必要がありますか。
 CLVM および Pacemaker （ PC ）コンポーネントは、ライブマイグレーションに参加する各ホストにインストールして実行する必要があります。これは、各ホストで同じボリュームグループにアクセスするために必要です。
@@ -221,7 +221,7 @@ CLVM および Pacemaker （ PC ）コンポーネントは、ライブマイグ
 VMware vCenterに関するいくつかの質問と回答があります。
 
 .ONTAP Select DeployはどのようにしてvCenterと通信し、どのファイアウォールポートを開く必要がありますか？
-ONTAP Select Deploy は、VMware VIX API を使用して、vCenter、ESX ホスト、またはその両方と通信します。のドキュメントによると、vCenter ServerまたはESXホストへの初期接続は、TCPポート443でHTTPS/SOAPを使用して行われます。これは、TLS/SSLを介したセキュアHTTPのポートです。次に、TCPポート902のソケットでESXホストへの接続が確立されます。この接続でやり取りされるデータはSSLで暗号化されます。さらに、 ONTAP Select Deployは、  `PING`指定した IP アドレスに応答する ESX ホストがあることを確認するコマンドです。
+ONTAP Select DeployはVMware VIX APIを使用してvCenter、ESXiホスト、またはその両方と通信します。VMwareのドキュメントには、vCenter ServerまたはESXiホストへの初期接続は、TCPポート443でHTTPS/SOAPを使用して行われると記載されています。これは、TLS/SSL経由のセキュアなHTTP用のポートです。次に、TCPポート902のソケットでESXiホストへの接続が開かれます。この接続を介して送信されるデータはSSLで暗号化されます。さらに、ONTAP Select Deployは `PING`コマンドを実行して、指定したIPアドレスで応答するESXiホストがあることを確認します。
 
 ONTAP Select Deployは、次のようにONTAP Select ノードおよびクラスタ管理IPアドレスと通信できる必要もあります。
 
@@ -232,7 +232,7 @@ ONTAP Select Deployは、次のようにONTAP Select ノードおよびクラス
 
 2ノードクラスタの場合、ONTAP Select Deployはクラスタのメールボックスをホストします。各ONTAP Select ノードは、iSCSI（ポート3260）を使用してONTAP Select Deployにアクセスできる必要があります。
 
-マルチノードクラスタの場合、内部ネットワークを完全に開く必要があります（ NAT やファイアウォールは使用しない）。
+マルチノード クラスタの場合、内部ネットワークは完全にオープンである必要があります（NATまたはファイアウォールなし）。
 
 .ONTAP Select DeployでONTAP Select クラスタを作成するために必要なvCenterの権限はどれですか？
 必要な vCenter 権限の一覧については、以下を参照してください。 link:reference_plan_ots_vcenter.html["VMware vCenter サーバ"]。
@@ -284,15 +284,16 @@ ONTAP MetroCluster SDS は、あらゆるタイプのストレージ構成（ DA
 VSAN データストアまたは外付けアレイデータストア（ vNAS 環境）上で実行される ONTAP Select VM は、 vMotion 、 DRS 、 VMware HA 機能をサポートします。
 
 .ONTAP Select は Storage vMotion をサポートしていますか。
-Storage vMotionは、シングルノードおよびマルチノードのONTAP Select クラスタとONTAP Select Deploy VMを含むすべての構成でサポートされます。Storage vMotionを使用して、ONTAP Select またはONTAP Select Deploy VMを異なるVMFSバージョン（VMFS 5からVMFS 6など）間で移行できますが、このユースケースに限定されません。Storage vMotion 処理を開始する前に VM をシャットダウンすることを推奨します。ONTAP Select Deployは、Storage vMotion処理の完了後に次の処理を問題 する必要があります。
+ストレージvMotionは、シングルノードおよびマルチノードのONTAP SelectクラスタとONTAP Select Deploy VMを含むすべての構成でサポートされています。ストレージvMotionは、ONTAP SelectまたはONTAP Select Deploy VMを異なるVMFSバージョン間（たとえば、VMFS 5からVMFS 6）で移行するために使用できますが、この使用例に限定されるわけではありません。ベストプラクティスは、ストレージvMotion操作を開始する前にVMをシャットダウンすることです。ONTAP Select Deployは、ストレージvMotion操作が完了した後に次の操作を実行する必要があります：
 
 [listing]
 ----
 cluster refresh
 ----
-異なるタイプのデータストア間での Storage vMotion 処理はサポートされていないことに注意してください。つまり、 NFS タイプのデータストアと VMFS データストア間の Storage vMotion 処理はサポートされません。一般に、外付けデータストアと DAS データストア間の Storage vMotion 処理はサポートされていません。
 
-.ONTAP Select ノード間の HA トラフィックは、異なる vSwitch 、または分離された物理ポート、あるいは ESX ホスト間のポイントツーポイント IP ケーブルを使用して実行できますか。
+NOTE: 異なるタイプのデータストア間のストレージvMotion操作はサポートされていません。つまり、NFSタイプのデータストアとVMFSデータストア間のストレージvMotion操作はサポートされていません。一般的に、外部データストアとDASデータストア間のストレージvMotion操作はサポートされていません。
+
+.ONTAP SelectノードとESXiホスト間のHAトラフィックは、異なるvSwitchおよび/または分離された物理ポート、および/またはESXiホスト間のポイントツーポイントIPケーブルを使用して実行できますか？
 これらの構成はサポートされていません。ONTAP Select では、クライアントトラフィックを伝送する物理ネットワークアップリンクのステータスは確認できません。したがって、 ONTAP Select は、 HA ハートビートを使用して、 VM がクライアントとそのピアに対して同時にアクセス可能であることを確認します。物理的な接続が失われると、 HA ハートビートを受信できなくなると、もう一方のノードへの自動フェイルオーバーが実行されます。これは望ましい動作です。
 
 HA トラフィックを別の物理インフラに分離することで、 Select VM はピアと通信できますが、クライアントとは通信できません。これにより、自動 HA プロセスが無効になるため、手動フェイルオーバーが開始されるまではデータを使用できなくなります。

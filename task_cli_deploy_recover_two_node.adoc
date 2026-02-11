@@ -5,11 +5,8 @@ keywords: administer, administering, cli, two node cluster, recover, recovering
 summary: ONTAP Select Deploy ユーティリティに障害が発生した場合や、何らかの理由でユーティリティが使用できない場合は、 ONTAP Select のノードとクラスタを管理できなくなります。また、 Deploy に含まれるメディエーターサービスを使用できないため、すべての 2 ノードクラスタの HA 機能が失われます。リカバリ不能な障害が発生した場合は、 Deploy ユーティリティのインスタンスをリカバリして、管理と HA の機能をリストアする必要があります。 
 ---
 = 2ノードクラスタのONTAP Select Deployユーティリティをリカバリする
+:hardbreaks:
 :allow-uri-read: 
-:firstname: :hardbreaks:reints
-:author: :hardbreaks:reints
-:authorinitials: :
-:authors: :hardbreaks:reints
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -214,7 +211,7 @@ storage iscsi-initiator add-target -node <node2_name> -label mediator-target-typ
 +
 [source, cli]
 ----
-disk show -container-type mediator`
+disk show -container-type mediator
 ----
 . メールボックスディスクを 2 つのノードに割り当てます。
 +

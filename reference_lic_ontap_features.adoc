@@ -37,15 +37,18 @@ ONTAP Selectでは、次のONTAP機能がサポートされており、デフォ
 * NVMe over TCP
 * ONTAP のマルチテナンシー機能
 * ONTAP S3
+* SnapLock Select
++
+SnapLock SelectはONTAP Select向けに設計されたONTAP SnapLockの実装であり、SnapLock Enterpriseが含まれています。SnapLock Complianceは含まれていません。詳細については、link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock ドキュメント"^]を参照してください。
+
 * S3 SnapMirror
 * SnapMirror
-* SnapMirrorクラウド
+* SnapMirror Cloud
 * SnapRestore
 * SnapVault
 * Storage VMディザスタリカバリ（SVM DR）
 +
-
-NOTE: ONTAP Selectでは、ソースとデスティネーションの両方としてSVM DRがサポートされ、最大16の関係が確立されます。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。
+ONTAP Selectでは、ソースとデスティネーションの両方としてSVM DRがサポートされ、最大16の関係が確立されます。SVM DRのサポートは、ソースONTAPのバージョン+2の使用に限定されます。たとえば、ONTAP Select 9.12.1ソースは、デスティネーションONTAPバージョン9.12.1、9.13.1、または9.14.1に接続できます。
 
 
 
@@ -56,17 +59,13 @@ NOTE: ONTAP Selectでは、ソースとデスティネーションの両方と�
 デフォルトで有効になっていない次のようなONTAP機能については、別途ライセンスを取得する必要があります。
 
 * FabricPool
++
+
+NOTE: StorageGRIDを使用する場合は、FabricPoolライセンスは必要ありません。
+
 * MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）
 
 
-[NOTE]
-====
-* ONTAP Select 9.16.1以前では、 SnapLock Select Enterprise（改ざん防止スナップショットロックを含む）は、link:https://mysupport.netapp.com/site/["NetApp Support Site"^] 。
-* SnapLock Compliance はONTAP Selectではサポートされていません。
-* StorageGRIDを使用する場合は、FabricPoolライセンスは必要ありません。
-
-
-====
 .関連情報
 * link:concept_ots_overview.html#compare-ontap-select-and-ontap-9["ONTAP Select と ONTAP 9 の比較"]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP のマスターライセンスキー"^]
