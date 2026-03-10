@@ -34,7 +34,7 @@ CAUTION: Deploy 管理ユーティリティを使用して、既存の ONTAP Sel
 +
 ONTAP Selectノードをアップグレードする前に、link:reference_release_notes.html["リリース ノート"]で追加情報と必要な手順を確認してください。
 
-. ONTAP Select アップグレードファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。サポートされているアップグレードパスについては、を参照してください。 link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html["サポートされるONTAPのアップグレードパス"^]。
+. ONTAP Select アップグレード ファイルを使用して、標準の ONTAP アップグレード手順で ONTAP Select ノードをアップグレードします。サポートされているアップグレード パスの詳細については、link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html["サポートされるONTAPのアップグレードパス"^]を参照してください。
 
 
 
