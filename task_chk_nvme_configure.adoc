@@ -59,7 +59,7 @@ KVM は次のハイパーバイザー バージョンでサポートされてい
 * 仕様 1.0 以降に準拠する NVMe デバイス
 
 
-フォローlink:kvm-host-configuration-and-preparation-checklist["ホスト準備チェックリスト"] 、必要な情報を確認してくださいlink:reference_chk_deploy_req_info.html["デプロイユーティリティのインストール"]そしてlink:reference_chk_select_req_info.html["ONTAP Selectのインストール"]詳細についてはこちらをご覧ください。
+link:kvm-host-configuration-and-preparation-checklist.html["ホスト準備チェックリスト"]に従い、link:reference_chk_deploy_req_info.html["デプロイユーティリティのインストール"]およびlink:reference_chk_select_req_info.html["ONTAP Selectのインストール"]に必要な情報を確認してください。
 
 .このタスクについて
 この手順は、新しいONTAP Selectクラスタを作成する前に実行する必要があります。既存のソフトウェアRAID NVMeクラスタに追加のNVMeドライブを設定する手順も実行できます。この場合、ドライブを設定した後、SSDドライブを追加する場合と同様に、Deployを使用してドライブを追加する必要があります。主な違いは、DeployがNVMeドライブを検出し、ノードを再起動することです。既存のクラスタにNVMeドライブを追加する場合は、再起動プロセスについて次の点に注意してください。

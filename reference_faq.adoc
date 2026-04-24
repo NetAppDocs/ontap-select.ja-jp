@@ -250,12 +250,12 @@ ONTAP Select Deploy VMが主にクラスタの作成に使用される4ノード
 MetroCluster SDS は、ネットアップの MetroCluster ビジネス継続性ソリューションのカテゴリに分類される、低コストの同期レプリケーションオプションです。FASハイブリッド フラッシュ、 AFF、 NetApp Private Storage for Cloud で使用できるNetApp MetroClusterとは異なり、 ONTAP Selectでのみ使用できます。
 
 .MetroCluster SDS と NetApp MetroCluster の違いは何ですか。
-MetroCluster SDS は、同期レプリケーション解決策 を提供し、ネットアップの MetroCluster ソリューションに該当します。ただし、主な違いは、サポートされる距離（約 10km と 300km ）と接続タイプ（ FC と IP ではなく IP ネットワークのみがサポート）です。
+MetroCluster SDSは同期レプリケーションソリューションであり、NetApp MetroClusterソリューションに分類されます。ただし、主な違いは接続タイプです（FCとIPではなく、IPネットワークのみがサポートされます）。
 
 .2 ノード ONTAP Select クラスタと 2 ノード ONTAP MetroCluster SDS の違いは何ですか。
 2 ノードクラスタとは、同じデータセンター内にある 2 つのノードが相互に 300m 以内の範囲にあるクラスタです。一般に、両方のノードには、スイッチ間リンクで接続された同じネットワークスイッチまたは一連のネットワークスイッチへのアップリンクがあります。
 
-2 ノード MetroCluster SDS は、ノードが物理的に分離され（異なる部屋、異なる建物、または異なるデータセンター）、各ノードのアップリンク接続が別々のネットワークスイッチに接続されているクラスタとして定義されます。MetroCluster SDS には専用のハードウェアは必要ありませんが、環境ではレイテンシ（ 5 ミリ秒 RTT と 5 ミリ秒ジッター）と物理距離（ 10km ）の観点から一連の最小要件をサポートする必要があります。
+2ノードMetroCluster SDSは、物理的に分離されたノード（異なる部屋、異なる建物、または異なるデータセンター）で構成されるクラスタとして定義され、各ノードのアップリンク接続は個別のネットワークスイッチに接続されています。MetroCluster SDSは専用ハードウェアを必要としませんが、環境はレイテンシに関する最小要件（RTT 5ms、ジッター5ms、合計最大10ms）をサポートする必要があります。
 
 MetroCluster SDS はプレミアム機能であり、 Premium または Premium XL ライセンスが必要です。Premium ライセンスは、中小規模の VM のほか、 HDD および SSD メディアの作成をサポートします。これらの構成はすべてサポートされます。
 
@@ -274,10 +274,10 @@ ONTAP MetroCluster SDS は、あらゆるタイプのストレージ構成（ DA
 .ONTAP MetroCluster SDS の要件は何ですか。
 要件は次のとおりです。
 
-* 3つのデータセンター（ONTAP Select Deployメディエーター用に1つ、ノードごとに1つ）。
-* 5 ミリ秒 RTT と 5 ミリ秒ジッタ。 ONTAP Select ノード間の最大合計 10 ミリ秒と最大物理距離 10 ミリ秒です。
-* ONTAP Select Deployメディエーターと各ONTAP Select ノードの間で125ミリ秒RTT、最小帯域幅5Mbps
-* Premium または Premium XL ライセンス。
+* 3つのデータセンター（1つはONTAP Select Deploy Mediator用、各ノードに1つずつ）
+* 最大合計10msの5ms RTTと5msジッター
+* ONTAP Select Deploy MediatorとONTAP Selectノード間の125msのRTTと5Mbpsの最小帯域幅
+* PremiumまたはPremium XLライセンス
 
 
 .ONTAP Select は vMotion または VMware HA をサポートしていますか。
