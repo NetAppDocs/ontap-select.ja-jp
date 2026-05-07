@@ -45,7 +45,7 @@ shell bash
 ----
 ls -lh /opt/netapp/images
 ----
-. 必要に応じて、ハイパーバイザーホストからONTAP Selectイメージを削除します。
+. 必要に応じて、ハイパーバイザー ホストから ONTAP Select イメージを削除します。
 +
 [role="tabbed-block"]
 ====
