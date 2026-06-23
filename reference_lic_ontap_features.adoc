@@ -30,7 +30,7 @@ ONTAP Selectでは、次のONTAP機能がサポートされており、デフォ
 * 重複排除機能と圧縮機能
 * Key Management Interoperability Protocol（KMIP）を使用した外部キー管理
 +
-外部キー管理は、ONTAP Select でサポートされている唯一のキー管理です。link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["外部キー管理の有効化と設定"^]について学習します。
+link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["外部キー管理の有効化と設定"^]について学ぶ。
 
 * FlexCache
 +
