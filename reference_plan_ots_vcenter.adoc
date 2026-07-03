@@ -83,4 +83,4 @@ ONTAP Select クラスタの作成と管理に必要な最小限の管理者権�
 カテゴリ内のすべての権限。
 
 .関連情報
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html#ontap-select-deploy-vmware-vcenter-server-considerations["vCenter の vSAN ESA に対する VMware vSphere 権限について学習します"]
+link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["vCenter の vSAN ESA に対する VMware vSphere 権限について学習します"]

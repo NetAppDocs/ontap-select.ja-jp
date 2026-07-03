@@ -125,8 +125,8 @@ NOTE: アカウント情報は、 AES 暗号化アルゴリズムと SHA-256 ハ
 .クレデンシャルのタイプ
 次のタイプのクレデンシャルがサポートされます。
 
-* ONTAP Select ノードを VMware ESXi に直接導入する際にハイパーバイザーホストを認証するために使用するホスト
-* ホストが VMware vCenter で管理されている場合、 ESXi への ONTAP Select ノードの導入時に vCenter サーバの認証に使用する vCenter
+* *ホスト*：VMware ESXi にONTAP Select ノードを直接デプロイする際に、ハイパーバイザーホストを認証するために使用されます
+* *vCenter*: ホストが VMware vCenter によって管理されている場合に、ONTAP Select ノードを ESXi にデプロイする一環として vCenter サーバーを認証するために使用されます
 
 
 .にアクセスします

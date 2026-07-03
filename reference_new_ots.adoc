@@ -138,9 +138,9 @@ ONTAP Select DeployおよびONTAP Select for ESXiは、ストレージプール�
 
 [NOTE]
 ====
-コンテンツ ライブラリの操作を実行するには、追加の権限レベルにアクセスする必要があります。制限されたロールで作業している場合、vSAN ESA の展開にはこれが必要です。
+コンテンツライブラリの操作を実行するには、追加の権限レベルへのアクセスが必要です。制限付きロールを使用している場合、vSAN ESA のデプロイメントにはこのアクセス権限が必要です。
 
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html["コンテンツライブラリ操作のアクセス権限レベルについて学習します"^] 。
+link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["コンテンツライブラリの操作におけるアクセス権限レベルについて"]。
 
 ====
 --
