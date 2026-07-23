@@ -21,6 +21,8 @@ NOTE: ハードウェア固有の依存関係を持つONTAP 機能は、一般�
 
 
 
+[[ontap-features-licensed-by-default]]
+[[licensed-ontap-features]]
 == デフォルトでライセンスされるONTAP機能
 
 ONTAP Selectでは、次のONTAP機能がサポートされており、デフォルトでライセンスが付与されています。
@@ -56,6 +58,9 @@ SnapLock SelectはONTAP Select向けに設計されたONTAP SnapLockの実装で
 link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^]について学ぶ
 
 * SnapMirror
++
+ONTAP Selectは、非同期 SnapMirrorにおけるコンシステンシー グループをサポートしていません。
+
 * SnapRestore
 * SnapVault
 * Storage VMディザスタリカバリ（SVM DR）
@@ -66,6 +71,8 @@ ONTAP SelectはSVM DRをソースと宛先の両方としてサポートし、�
 
 
 
+[[ontap-features-that-are-separately-licensed]]
+[[other-ontap-features]]
 == 個別にライセンスされるONTAP の機能
 
 デフォルトではライセンスされていないONTAP機能については、別途ライセンスを取得する必要があります。これには次のものが含まれます：

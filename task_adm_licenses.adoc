@@ -18,6 +18,7 @@ ONTAP Select ライセンスの管理の一環として実行できる関連タ�
 
 
 
+[[manage-the-capacity-tier-licenses]]
 == 大容量階層ライセンスを管理します。
 
 必要に応じて、ONTAP Selectの大容量階層ライセンスを追加、編集、削除できます。
@@ -33,6 +34,7 @@ ONTAP Select ライセンスの管理の一環として実行できる関連タ�
 
 
 
+[[manage-the-capacity-pool-licenses]]
 == 容量プールライセンスを管理します。
 
 ONTAP Select容量プールライセンスは、必要に応じて追加、編集、削除できます。
@@ -81,6 +83,7 @@ ONTAP Select容量プールライセンスは、必要に応じて追加、編�
 
 
 
+[[reinstall-a-capacity-pool-license]]
 == 容量プールライセンスの再インストール
 
 すべてのアクティブな容量プールライセンスは、Deploy管理ユーティリティのインスタンスに含まれる特定のLicense Managerインスタンスにロックされます。容量プールライセンスを使用している場合にDeployインスタンスをリストアまたはリカバリすると、元のライセンスは無効になります。新しい容量ライセンスファイルを生成し、そのライセンスを新しい Deploy インスタンスにインストールする必要があります。
@@ -145,6 +148,8 @@ node show -cluster-name cluster_name -name node_name -detailed ’
 
 
 
+[[convert-an-evaluation-license-to-a-production-license]]
+[[convert-license]]
 == 評価用ライセンスを本番環境ライセンスに変換する
 
 ONTAP Select評価用クラスタをアップグレードして、Deploy管理ユーティリティで本番用の大容量階層ライセンスを使用することができます。
@@ -176,6 +181,7 @@ ONTAP Select評価用クラスタをアップグレードして、Deploy管理�
 
 
 
+[[manage-an-expired-capacity-pool-license]]
 == 期限切れの容量プールライセンスを管理します。
 
 通常、ライセンスの有効期限が切れても何も起こりません。ただし、ノードは期限切れのライセンスに関連付けられているため、別のライセンスをインストールすることはできません。ライセンスを更新するまでは、リブート処理やフェイルオーバー処理など、アグリゲートがオフラインになるような処理を行う必要があります。推奨される対処方法は、ライセンスの更新を迅速に行うことです。
@@ -184,6 +190,7 @@ ONTAP Selectとライセンスの更新の詳細については、link:reference
 
 
 
+[[manage-add-on-licenses]]
 == アドオンライセンスを管理します。
 
 ONTAP Select製品の場合、アドオンライセンスはONTAP内で直接適用され、ONTAP Select Deployでは管理されません。を参照してください link:https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["ライセンスの管理の概要（クラスタ管理者のみ）"^] および link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html["ライセンスキーを追加して新しい機能を有効にします"^] を参照してください。

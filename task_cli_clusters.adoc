@@ -18,6 +18,7 @@ CLI を使用してONTAP Selectクラスタを管理するために実行でき�
 
 
 
+[[back-up-the-ontap-select-deploy-configuration-data]]
 == ONTAP Select Deploy 構成データをバックアップします
 
 たとえば、クラスタを展開した後などのONTAP Select Deploy 構成データのバックアップ。データは単一の暗号化ファイルに保存され、ローカルワークステーションにダウンロードできます。
@@ -54,6 +55,7 @@ deploy backup show -detailed
 
 
 
+[[delete-an-ontap-select-cluster]]
 == ONTAP Selectクラスタを削除する
 
 不要になった ONTAP Select クラスタを削除できます。

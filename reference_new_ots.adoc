@@ -19,6 +19,7 @@ summary: 現在のリリースには、ONTAP Selectに固有のいくつかの�
 
 
 
+[[ontap-select-9-19-1]]
 == ONTAP Select 9.19.1
 
 外部キー管理（KMIP）のサポート:: ONTAP Select 9.19.1以降、ONTAP Selectは鍵管理相互運用プロトコル（KMIP）を使用した外部鍵管理をサポートします。ONTAP Select 9.19.1クラスタの導入後、または既存のクラスタをONTAP Select 9.19.1にアップグレードした後に、外部鍵管理を有効にすることができます。詳細については、link:reference_lic_ontap_features.html#licensed-ontap-features["デフォルトでライセンスされるONTAP機能"]を参照してください。
@@ -32,6 +33,7 @@ Advanced Micro Devices（AMD）プロセッサのサポート:: ONTAP Select 9.1
 
 
 
+[[ontap-select-9-18-1]]
 == ONTAP Select9.18.1
 
 ONTAP Select製品のダウンロードオプションのアップデート:: NetApp Support Site の ONTAP Select 製品ダウンロードオプションは、ONTAP Select 9.18.1 リリースに伴い、*ONTAP Select Deploy* および *ONTAP Select Image* に変更されます。これら 2 つの新しい製品ダウンロードオプションは、以下の表に示す従来の 4 つのオプションに取って代わります：
@@ -83,6 +85,7 @@ KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.18.1以降�
 
 
 
+[[ontap-select-9-17-1]]
 == ONTAP Select9.17.1
 
 KVMホスト上のローカル接続NVMeディスクに対するソフトウェアRAIDサポート:: ONTAP Select 9.17.1では、KVMハイパーバイザーホスト上のONTAP Selectローカル接続NVMeディスク用のソフトウェアRAIDサポートが導入されました。
@@ -168,6 +171,7 @@ VMware ESXiのサポートを強化:: ONTAP Select 9.17.1 には、VMware ESXi 9
 
 
 
+[[ontap-select-9-16-1]]
 == ONTAP Select 9.16.1
 
 NetAppライセンスファイルのサポートの更新:: ONTAP Select 9.16.1以降、NetAppライセンスファイル（NLF）のサポートが更新されました。新しいNLFフォーマットには、ARP、ONTAP S3、およびS3 SnapMirror機能のライセンスが含まれています。link:reference_lic_ontap_features.html#licensed-ontap-features["詳細はこちら。"]。
@@ -183,6 +187,7 @@ KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.16.1 以降
 
 
 
+[[ontap-select-9-15-1]]
 == ONTAP Select 9.15.1
 
 KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.15.1以降では、カーネルベースの仮想マシン（KVM）ハイパーバイザーがRHEL 9.4およびRocky Linux 9.4でサポートされます。
@@ -207,6 +212,7 @@ NOTE: クラスタの拡張と縮小のサポートは、ESXi クラスタのみ
 
 
 
+[[ontap-select-9-14-1]]
 == ONTAP Select 9.14.1
 
 KVMハイパーバイザーのサポート:: ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでのONTAP Select 9.10.1では、KVMハイパーバイザーへの新しいクラスタの導入がサポートされなくなり、ONTAP Select 9.11.1では、オフラインへの切り替えや削除を除く既存のKVMクラスタとホストの管理がサポートされなくなりました。
@@ -217,6 +223,7 @@ VMware ESXiのサポートを強化:: ONTAP Select 9.14.1では、VMware ESXi 8.
 
 
 
+[[ontap-select-9-13-1]]
 == ONTAP Select 9.13.1
 
 NVMe over TCPのサポート:: ONTAP Select 9.13.1にアップグレードする場合は、NVMe over TCPをサポートする新しいライセンスが必要です。このライセンスは、バージョン9.13.1からONTAP Selectを初めて導入するときに自動的に含まれます。
@@ -226,6 +233,7 @@ ONTAP Select Deployサポートの更新:: 2024年4月現在、ONTAP Select Depl
 
 
 
+[[ontap-select-9-12-1]]
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1は、現在のコアONTAP 製品のリリースに新しく開発されたほとんどの機能を活用しています。ONTAP Select 固有の新機能や機能強化は含まれていません。
@@ -234,6 +242,7 @@ ONTAP Select 9.12.1は、現在のコアONTAP 製品のリリースに新しく�
 
 
 
+[[ontap-select-9-11-1]]
 == ONTAP Select 9.11.1
 
 VMware ESXiのサポートを強化:: ONTAP Select 9.11.1では、VMware ESXi 7.0 U3Cがサポートされています。
@@ -262,6 +271,7 @@ NetAppでは、ONTAP Select for KVMから、ONTAP Select for ESXiを含む他の
 
 
 
+[[ontap-select-9-10-1]]
 == ONTAP Select 9.10.1
 
 VMware NSX のサポート:: ONTAP Select 9.10.1 は VMware NSX -T バージョン 3.1.2 に対応しています。OVAファイルとONTAP Select Deploy管理ユーティリティを使用して導入されたONTAP Select シングルノードクラスタでNSXとTを使用しても、機能の問題や不具合は発生しません。ただし、 NSX と ONTAP Select マルチノードクラスタを併用する場合は、次の要件および制限事項に注意してください。
@@ -287,6 +297,7 @@ KVM ハイパーバイザーのサポートが廃止されました:: ONTAP Sele
 
 
 
+[[ontap-select-9-9-1]]
 == ONTAP Select 9.9.1
 
 プロセッサー・ファミリーのサポート:: ONTAP Select 9.9.1以降では、インテルXeon Sandy Bridge以降のCPUモデルのみがONTAP Selectでサポートされます。
@@ -302,6 +313,7 @@ VMware ESXiのサポートを更新:: VMware ESXiのサポートは、ONTAP Sele
 
 
 
+[[ontap-select-9-8]]
 == ONTAP Select 9.8
 
 高速インターフェイス:: 高速インターフェイス機能は、25G（25GbE）と40G（40GbE）の両方にオプションを提供することで、ネットワーク接続を強化します。この速度を高速で使用する場合のパフォーマンスを最大限に高めるには、ONTAP Select のドキュメントに従ってポートマッピング設定のベストプラクティスに従う必要があります。

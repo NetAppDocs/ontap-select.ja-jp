@@ -18,6 +18,7 @@ ONTAP Select Deploy 管理ユーティリティのインストールを計画す
 
 
 
+[[pairing-the-deploy-utility-with-the-ontap-select-clusters]]
 == Deploy ユーティリティと ONTAP Select クラスタのペアリング
 
 Deploy ユーティリティのインスタンスを ONTAP Select クラスタにペアリングする際に使用するいくつかのオプションがあります。
@@ -36,6 +37,7 @@ NOTE: Deploy ユーティリティの 1 つのインスタンスで、最大 400
 
 
 
+[[requirements-related-to-the-kvm-environment]]
 == KVM環境に関連する要件
 
 Deploy管理ユーティリティをKVMハイパーバイザー環境にインストールする前に、基本的な要件を確認し、導入の準備を行う必要があります。
@@ -70,6 +72,7 @@ ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポー�
 
 
 
+[[required-configuration-information]]
 == 必要な設定情報
 
 導入計画の一環として、 ONTAP Select Deploy 管理ユーティリティをインストールする前に、必要な設定情報を特定しておく必要があります。
@@ -88,6 +91,7 @@ Deploy VMが接続されているネットワーク。
 
 
 
+[[optional-network-configuration-information]]
 == オプションのネットワーク構成情報
 
 Deploy VMは、デフォルトでDHCPを使用して設定されます。ただし、必要に応じて、VMのネットワークインターフェイスを手動で設定できます。
@@ -115,6 +119,7 @@ Deploy VMは、デフォルトでDHCPを使用して設定されます。ただ�
 
 
 
+[[authentication-using-the-credential-store]]
 == クレデンシャルストアを使用した認証
 
 ONTAP Select Deployクレデンシャルストアは、アカウント情報を保持するデータベースです。Deploy は、クラスタの作成と管理の一環として、アカウントのクレデンシャルを使用してホスト認証を実行します。ONTAP Select の導入計画の一環として、クレデンシャルストアがどのように使用されるかを理解しておく必要があります。

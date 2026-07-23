@@ -20,6 +20,7 @@ VMware 環境への ONTAP Select クラスタの導入準備の一環として�
 
 
 
+[[cluster-level-information]]
 == クラスタレベルの情報
 
 ONTAP Select クラスタに関連する情報を収集する必要があります。
@@ -39,6 +40,7 @@ ONTAP Select クラスタに関連する情報を収集する必要がありま�
 |===
 
 
+[[host-level-information]]
 == ホストレベルの情報
 
 ONTAP Select クラスタ内の各ノードに関連する情報を収集する必要があります。

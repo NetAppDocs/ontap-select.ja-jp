@@ -18,6 +18,7 @@ ONTAP Select Deploy ユーティリティに障害が発生した場合や、何
 
 
 
+[[prepare-to-recover-the-deploy-utility]]
 == デプロイユーティリティの回復の準備
 
 デプロイ ユーティリティのインスタンスの回復を確実に成功させるには、その前に準備を行う必要があります。いくつかの管理手順に精通し、必要な情報を把握している必要があります。
@@ -51,6 +52,8 @@ link:task_cli_migrate_deploy.html#step-3-restore-the-deploy-configuration-data-t
 
 
 
+[[restore-a-deploy-utility-instance-using-a-configuration-backup]]
+[[restore-deploy-backup]]
 == 設定のバックアップを使用したDeployユーティリティのインスタンスのリストア
 
 2 ノードクラスタを含む、障害が発生した Deploy ユーティリティのインスタンスのバックアップがある場合は、新しい Deploy 仮想マシンのインスタンスに設定データをリストアできます。次に、 ONTAP Select クラスタ内の 2 つのノードの追加設定を実行して、リカバリを完了する必要があります。
@@ -127,6 +130,8 @@ storage failover show
 
 
 
+[[reconfigure-and-recover-a-deploy-utility-instance]]
+[[restore-and-recover-deploy]]
 == Deployユーティリティのインスタンスを再設定してリカバリする
 
 2 ノード クラスターを含む、障害が発生した Deploy ユーティリティ インスタンスのバックアップがない場合は、新しい Deploy 仮想マシンでメディエーター iSCSI ターゲットとメールボックスを構成します。次に、 ONTAP Selectクラスタ内の 2 つのノードの追加構成を実行して、リカバリを完了します。

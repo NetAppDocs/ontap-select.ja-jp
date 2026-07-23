@@ -38,6 +38,7 @@ ONTAP Select Deploy管理ユーティリティをダウンロードするには�
 
 
 
+[[licensing-characteristics]]
 == ライセンスの特性
 
 ONTAP Select 評価用ライセンスには次のような特徴があります。
@@ -53,6 +54,7 @@ ONTAP Select 評価用ライセンスには次のような特徴があります�
 
 
 
+[[upgrade-to-a-production-license]]
 == 本番環境ライセンスへのアップグレード
 
 ONTAP Select 評価用クラスタは、本番環境ライセンスを使用するようにアップグレードできます。次の制限事項に注意してください。

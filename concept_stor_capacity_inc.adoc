@@ -54,6 +54,7 @@ image:ST_07.jpg["容量の配分：ノード 1 に対する 2 つのストレー
 
 
 
+[[increase-capacity-for-ontap-select-with-software-raid]]
 == ソフトウェアRAIDを使用したONTAP Selectの容量の拡張
 
 ストレージ追加ウィザードを使用すると、ソフトウェア RAID を使用して、 ONTAP Select ノードの管理下にある容量を増やすことができます。このウィザードでは、使用可能な DAS SDD ドライブのみが表示され、 ONTAP Select VM に RDM としてマッピングできます。

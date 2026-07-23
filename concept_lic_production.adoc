@@ -18,6 +18,7 @@ ONTAP Selectが組織に適していると判断したら、本番環境の導�
 
 
 
+[[common-licensing-characteristics]]
 == 一般的なライセンス特性
 
 _Capacity Pools_ と _Capacity Tiers_ のライセンス モデルは、いくつかの点で大きく異なります。ただし、これら 2 つのライセンス モデルには、次のような共通の特性があります：
@@ -33,6 +34,7 @@ _Capacity Pools_ と _Capacity Tiers_ のライセンス モデルは、いく�
 
 
 
+[[capacity-tiers-licensing-model]]
 == 容量階層のライセンスモデル
 
 容量階層のライセンスモデルには、次のような特徴があります。
@@ -50,6 +52,7 @@ _Capacity Pools_ と _Capacity Tiers_ のライセンス モデルは、いく�
 
 
 
+[[capacity-pools-licensing-model]]
 == 容量プールのライセンスモデル
 
 容量プールのライセンスモデルには、次のような特徴があります。

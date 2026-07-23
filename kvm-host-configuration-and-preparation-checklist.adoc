@@ -21,6 +21,8 @@ NOTE: ONTAP Select Deploy管理ユーティリティは、ハイパーバイザ�
 
 
 
+[[step-1-prepare-the-kvm-hypervisor-host]]
+[[prepare-linux-server]]
 == ステップ1: KVMハイパーバイザーホストを準備する
 
 ONTAP Selectノードが展開されている各 Linux KVM サーバを準備する必要があります。また、ONTAP Select Deploy管理ユーティリティを導入するサーバを準備する必要があります。
@@ -72,6 +74,7 @@ ONTAP Selectストレージプールは、基盤となる物理ストレージ�
 
 
 
+[[step-2-create-a-storage-pool]]
 == ステップ2: ストレージプールを作成する
 
 各ONTAP Selectノードに少なくとも 1 つのストレージ プールを作成します。ローカルハードウェアRAIDの代わりにソフトウェアRAIDを使用する場合は、ストレージディスクがルートアグリゲートとデータアグリゲートのノードに接続されます。この場合も、システムデータ用のストレージプールを作成する必要があります。
@@ -137,6 +140,7 @@ virsh pool-list
 
 
 
+[[step-3-optionally-delete-a-storage-pool]]
 == ステップ3: オプションでストレージプールを削除する
 
 ストレージ プールは不要になったら削除できます。
@@ -224,6 +228,7 @@ pvremove <physical_volume_name>
 
 
 
+[[step-4-review-the-ontap-select-cluster-configuration]]
 == ステップ4: ONTAP Selectクラスタ構成を確認する
 
 ONTAP Select はマルチノードクラスタまたはシングルノードクラスタとして導入できます。多くの場合、追加のストレージ容量と高可用性 (HA) 機能があるため、マルチノード クラスターが適しています。
@@ -256,6 +261,7 @@ image:CHK_03.jpg["4 ノードクラスタ内のシングルノード"]
 ====
 
 
+[[step-5-configure-open-vswitch]]
 == ステップ5: Open vSwitchを構成する
 
 Open vSwitch を使用して、各 KVM ホスト ノードにソフトウェア定義スイッチを構成します。

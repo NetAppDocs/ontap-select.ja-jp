@@ -21,6 +21,7 @@ CAUTION: ネットアップサポートからの指示がないかぎり、 ONTA
 
 
 
+[[hypervisor-independent]]
 == ハイパーバイザーに依存しない
 
 ONTAP SelectとONTAP Select Deploy管理ユーティリティはどちらもハイパーバイザーに依存しません。
@@ -64,6 +65,7 @@ ONTAP Select ノードをハードウェアベースの ONTAP クラスタに直
 
 
 
+[[vmware-hypervisor-environment]]
 == VMware ハイパーバイザー環境です
 
 VMware 環境に固有の要件と制限事項がいくつかあります。これらは、 VMware 環境に ONTAP Select Deploy ユーティリティをインストールする前に検討する必要があります。
@@ -106,6 +108,7 @@ ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポー�
 
 
 
+[[vmware-vcenter-server-considerations]]
 == VMware vCenter サーバーに関する考慮事項
 
 .ESA の VMware vSphere 権限

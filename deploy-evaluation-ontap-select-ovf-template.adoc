@@ -26,6 +26,7 @@ VMware ESXi 上の OVF テンプレートを使用して、単一ノードから
 
 
 
+[[step-1-prepare-the-ontap-select-cluster-host]]
 == ステップ1: ONTAP Selectクラスタホストを準備する
 
 次の要件に従って、ONTAP Selectクラスタを導入するESXiホストを準備します。プラットフォームの説明は、VMFS-5またはVMFS-6ファイルシステムを使用してフォーマットされたローカルの直接接続型ストレージ（DAS）を使用した標準または小規模のインスタンスタイプ構成に基づいています。
@@ -36,6 +37,7 @@ image:prepare_ESXi_host_requirements.png["ESXiホストを準備するための�
 
 
 
+[[step-2-deploy-a-single-node-ontap-select-cluster-using-an-ovf-template]]
 == ステップ2: OVFテンプレートを使用して単一ノードのONTAP Selectクラスタを展開する
 
 サポートされている64ビットESXiホストサーバで、次の手順を実行します。

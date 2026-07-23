@@ -18,6 +18,7 @@ ONTAP Select クラスタを管理するために実行できる関連タスク�
 
 
 
+[[move-an-ontap-select-cluster-offline-and-online]]
 == ONTAP Selectクラスタのオフラインとオンラインの切り替え
 
 作成したクラスタは、必要に応じてオフラインやオンラインに切り替えることができます。
@@ -40,6 +41,7 @@ ONTAP Select クラスタを管理するために実行できる関連タスク�
 
 
 
+[[delete-an-ontap-select-cluster]]
 == ONTAP Selectクラスタを削除する
 
 不要になった ONTAP Select クラスタを削除できます。
@@ -59,6 +61,7 @@ ONTAP Select クラスタを管理するために実行できる関連タスク�
 
 
 
+[[refresh-the-deploy-cluster-configuration]]
 == Deployクラスタ設定をリフレッシュ
 
 ONTAP Select クラスタを作成したあと、 ONTAP またはハイパーバイザー管理ツールを使用して、 Deploy ユーティリティ以外でクラスタまたは仮想マシンの設定を変更できます。仮想マシンの構成は、移行後に変更することもできます。

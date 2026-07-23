@@ -18,12 +18,14 @@ summary: このONTAP Select Deployインスタンスでホスト管理サーバ�
 
 
 
+[[syntax]]
 == 構文
 
 `host modify [-help] [-foreground] -name _name_ -mgmt-server _management_server_ [-username _username_]`
 
 
 
+[[required-parameters]]
 == 必須パラメータ
 
 [cols="35,65"]
@@ -48,6 +50,7 @@ summary: このONTAP Select Deployインスタンスでホスト管理サーバ�
 |===
 
 
+[[optional-parameters]]
 == オプションのパラメータ
 
 [cols="35,65"]

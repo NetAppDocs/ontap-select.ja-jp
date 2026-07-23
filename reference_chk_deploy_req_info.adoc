@@ -18,6 +18,7 @@ Deploy管理ユーティリティをハイパーバイザー環境にインス�
 
 
 
+[[required-configuration-information]]
 == 必要な設定情報
 
 導入計画の一環として、 ONTAP Select Deploy 管理ユーティリティをインストールする前に、必要な設定情報を特定しておく必要があります。
@@ -40,6 +41,7 @@ Deploy管理ユーティリティをハイパーバイザー環境にインス�
 |===
 
 
+[[optional-network-configuration-information]]
 == オプションのネットワーク構成情報
 
 Deploy 仮想マシンは、デフォルトでは DHCP を使用して設定されます。ただし、必要に応じて、仮想マシンのネットワークインターフェイスを手動で設定できます。

@@ -28,6 +28,7 @@ ONTAP Select Deploy管理ユーティリティの古いインスタンスがイ�
 
 
 
+[[step-1-download-the-upgrade-package]]
 == ステップ1：アップグレードパッケージをダウンロードする
 
 アップグレードプロセスを開始するには、NetApp Support SiteからONTAP Select Deployアップグレードファイルをダウンロードします。アップグレードパッケージは、単一の圧縮ファイルとしてフォーマットされます。
@@ -42,6 +43,7 @@ ONTAP Select Deploy管理ユーティリティの古いインスタンスがイ�
 
 
 
+[[step-2-upload-the-package-to-the-ontap-select-deploy-virtual-machine]]
 == ステップ2: ONTAP Select Deploy仮想マシンにパッケージをアップロードする
 
 パッケージをダウンロードしたら、そのファイルをONTAP Select Deploy 仮想マシンにアップロードする必要があります。
@@ -65,6 +67,7 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 
 
 
+[[step-3-apply-the-upgrade-package]]
 == ステップ3: アップグレードパッケージを適用する
 
 アップグレード ファイルをONTAP Select Deploy 仮想マシンにアップロードしたら、アップグレードを適用できます。

@@ -21,6 +21,7 @@ CAUTION: Deploy 管理ユーティリティを使用して、既存の ONTAP Sel
 
 
 
+[[general-procedure]]
 == General 手順 の略
 
 既存の ONTAP Select ノードをアップグレードするには、以下の手順を実行する必要があります。
@@ -39,6 +40,7 @@ ONTAP Selectノードをアップグレードする前に、link:reference_relea
 
 
 
+[[revert-an-ontap-select-node]]
 == ONTAP Selectノードのリバート
 
 ONTAP Selectノードを最初にインストールされていたバージョンよりも前のバージョンにリバートすることはできません。例：
@@ -49,6 +51,7 @@ ONTAP Select 9.17.1が最初にインストールされます:: 以前のバー�
 
 
 
+[[use-the-vmxnet3-network-driver]]
 == VMXNET3ネットワークドライバの使用
 
 VMXNET3は、VMware ESXiへの新しいクラスタの導入に含まれているデフォルトのネットワークドライバです。ONTAP Select 9.4以前を実行している既存のONTAP Selectノードをアップグレードしても、ネットワークドライバは自動的にアップグレードされません。VMXNET3 に手動でアップグレードする必要があります。アップグレードについてサポートが必要な場合は、ネットアップサポートにお問い合わせください。

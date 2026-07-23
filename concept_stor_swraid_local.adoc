@@ -42,6 +42,7 @@ ONTAP Select には、ハードウェア RAID 構成とは関係なく、ソフ�
 ====
 
 
+[[software-raid-configuration-for-local-attached-storage]]
 == ローカル接続ストレージ向けのソフトウェア RAID 構成
 
 ソフトウェア RAID を使用する場合は、ハードウェア RAID コントローラがないことが理想的ですが、システムに既存の RAID コントローラがある場合は、次の要件に従う必要があります。
@@ -59,6 +60,7 @@ NOTE: 管理者は、 ONTAP Select VM で使用されているドライブを追
 
 
 
+[[ontap-select-virtual-and-physical-disks]]
 == ONTAP Select の仮想ディスクと物理ディスク
 
 ハードウェア RAID コントローラを使用する構成では、 RAID コントローラによって物理ディスクの冗長性が提供されます。ONTAP Select には、 ONTAP 管理者がデータアグリゲートを設定できる 1 つ以上の VMDK が表示されます。これらの VMDK は RAID 0 形式でストライピングされます。 ONTAP ソフトウェア RAID の使用は冗長で非効率、かつハードウェアレベルでの耐障害性のために効果的であるためです。さらに、システムディスクに使用される VMDK は、ユーザデータの格納に使用される VMDK と同じデータストアに配置されます。
@@ -98,6 +100,7 @@ ONTAPソフトウェア RAID は、RAID 4、RAID-DP、およびRAID-TECという
 
 
 
+[[passthrough-directpath-io-devices-vs-raw-device-maps-rdms]]
 == パススルー（ DirectPath IO ）デバイス vs.RDM （ raw デバイスマップ）
 
 ESXiおよびKVMハイパーバイザーは、NVMeディスクをRaw Device Maps（RDM）としてサポートしていません。ONTAP SelectがNVMeディスクを直接制御できるようにするには、これらのドライブをESXiまたはKVM内でパススルーデバイスとして構成する必要があります。NVMeデバイスをパススルーデバイスとして構成する場合、サーバーBIOSからのサポートが必要になり、ホストの再起動が必要になる場合があります。さらに、ホストごとに割り当て可能なパススルーデバイスの数には制限があり、プラットフォームによって異なる場合があります。ただし、ONTAP DeployではONTAP Selectノードあたり14台のNVMeデバイスに制限されます。つまり、NVMe構成では、総容量を犠牲にして、非常に高いIOPS密度（IOPS/TB）が提供されます。あるいは、大容量ストレージを備えた高性能構成を希望する場合は、大容量のONTAP Select VMサイズ、システムディスク用のINTEL Optaneカード、およびデータストレージ用の適切な数のSSDドライブという構成が推奨されます。
@@ -109,6 +112,7 @@ NOTE: NVMe のパフォーマンスを最大限に引き出すには、 ONTAP Se
 
 
 
+[[physical-and-virtual-disk-provisioning]]
 == 物理ディスクと仮想ディスクのプロビジョニング
 
 より効率的なユーザエクスペリエンスを提供するため、 ONTAP Deploy は指定されたデータストア（物理システムディスク）からシステム（仮想）ディスクを自動的にプロビジョニングし、それらを ONTAP Select VM に接続します。この処理は、 ONTAP Select VM がブートできるようにするため、初期セットアップ時に自動的に実行されます。RDM はパーティショニングされ、ルートアグリゲートが自動的に構築されます。ONTAP Select ノードが HA ペアの一部である場合、データパーティションはローカルストレージプールとミラーストレージプールに自動的に割り当てられます。この割り当ては、クラスタ作成処理とストレージ追加処理の両方で自動的に行われます。
@@ -124,6 +128,7 @@ FASおよびAFFシステムと同様に、既存のRAIDグループには、同�
 
 
 
+[[match-an-ontap-select-disk-to-the-corresponding-esxi-or-kvm-disk]]
 == ONTAP Selectディスクを対応するESXiまたはKVMディスクに一致させる
 
 ONTAP Select ディスクには通常、 NET x.y というラベルが付けられますディスク UUID は、次の ONTAP コマンドを使用して取得できます。
@@ -165,6 +170,7 @@ cat /sys/block/<block_device_id>/device/wwid
 ====
 
 
+[[multiple-drive-failures-when-using-software-raid]]
 == ソフトウェア RAID 使用時に複数のドライブ障害が発生した場合
 
 場合によっては、複数のドライブで同時に障害が発生する状況が発生することがあります。システムの動作は、アグリゲート RAID 保護と、障害が発生したドライブの数によって異なります。
@@ -244,6 +250,7 @@ disk show -broken
 ====
 
 
+[[virtualized-nvram]]
 == 仮想 NVRAM
 
 NetApp FAS システムには、従来より物理 NVRAM PCI カードが取り付けられていました。このカードは、書き込みパフォーマンスが大幅に向上する不揮発性フラッシュメモリを搭載した高性能カードです。これは、クライアントへのライトバックをすぐに確認できる機能を ONTAP に付与することで実現されます。また、変更されたデータブロックを低速のストレージメディアに移動する、デステージと呼ばれるプロセスをスケジュール設定することもできます。

@@ -14,7 +14,7 @@ summary: ONTAP Select は、ハイパーバイザーホストに仮想マシン�
 
 
 [role="lead"]
-ONTAP Select は、ソフトウェアのみの ONTAP バージョンで、ハイパーバイザーホストに仮想マシンとして導入できます。メインストリームのFAS、AFF、ASA ONTAP製品のスイートや、Cloud Volumes ONTAPなどの他のソフトウェアのみのオプションを補完します。
+ONTAP Selectは、ハイパーバイザーホスト上の仮想マシンとしてデプロイできる、ソフトウェアのみのバージョンのONTAPです。主流のAFFおよびFAS ONTAP製品群や、Cloud Volumes ONTAPなどの他のソフトウェアのみのオプションを補完します。
 
 ONTAP Selectは、内蔵ディスクドライブ、NVMe、SSDまたはHDD、外付けアレイストレージを柔軟なストレージシステムに変換し、専用のONTAPストレージシステムと同様のメリットを多数提供します。新しいサーバや既存のサーバインフラにONTAP Selectを導入することもできます。ONTAP Selectは管理が容易で、ONTAPベースのソリューションと同じ管理ソフトウェアを活用できるため、運用上のオーバーヘッドとトレーニング要件が軽減されます。
 
@@ -26,28 +26,32 @@ SnapMirrorソフトウェアを使用すると、ハイブリッドクラウド�
 
 
 
+[[software-defined-storage]]
 == Software-Defined Storage
 
 IT サービスの実装と配布をソフトウェアを通じて行うことで、管理者はかつてないスピードと即応性でリソースを迅速にプロビジョニングできます。最新のデータセンターがSoftware-Defined Infrastructure（SDI）アーキテクチャに移行すると、最も価値の高いIT資産を基盤となる物理インフラから切り離すことができ、柔軟性、拡張性、プログラマビリティを実現できます。
 
-DAS （直接接続型ストレージ）のサイロ間でデータが断片化されているコモディティ環境では、データの移動と管理が複雑な問題になっています。ソフトウェア・デファインド・ストレージ（ SDS ）は、 SDI 環境の重要な部分として、これらの問題やその他の問題に対処するために登場しました。
+データが直接接続ストレージ（DAS）のサイロに分散しているコモディティ化された世界では、データへのアクセスと管理はより複雑な問題となっています。ソフトウェア定義ストレージ（SDS）は、これらの問題やその他の問題に対処するために、SDI環境において重要な要素として登場しました。
 
 ONTAP Select は、 SDS 市場向けの NetApp 解決策 です。ONTAP Select は、 Software-Defined Data Center にエンタープライズクラスのストレージ管理機能を提供し、ネットアップデータファブリックアーキテクチャをモノのインターネット（ IoT ）や戦術的サーバなど、エッジの厳しいユースケースにまで拡張します。
 
 
 
+[[two-software-components]]
 == 2 つのソフトウェアコンポーネント
 
 ONTAP Select は、次の 2 つの主要なソフトウェアコンポーネントで構成されます。
 
 
 
+[[ontap-select-node]]
 === ONTAP Select ノード
 
 ONTAP Selectクラスタは、1、2、4、6、8、10、または 12 個のノードで構成されます。各クラスタノードは個別の仮想マシンとして導入され、特別に設計されたバージョンのONTAP 9ソフトウェアを実行します。
 
 
 
+[[ontap-select-deploy-administration-utility]]
 === ONTAP Select Deploy 管理ユーティリティ
 
 Deploy 管理ユーティリティは、個別の Linux 仮想マシンとしてパッケージ化されてインストールされます。本番環境に ONTAP Select クラスタを導入するには、ユーティリティを使用する必要があります。最新バージョンの ONTAP Select ノードイメージが Deploy ユーティリティにバンドルされています。
@@ -57,6 +61,7 @@ NOTE: Deploy管理ユーティリティには別のバージョン番号が割�
 
 
 
+[[illustration-of-a-typical-deployment]]
 == 一般的な導入の図
 
 次の図は、4ノードONTAP Selectクラスタの導入とサポートに使用されているNetApp ONTAP Select Deploy管理ユーティリティを示しています。Deploy ユーティリティと ONTAP Select ノードは、専用のハイパーバイザーホスト上で個別の仮想マシンとして実行されます。
@@ -65,6 +70,7 @@ image:ots_architecture.png["は、 Deploy 管理ユーティリティで作成�
 
 
 
+[[flexcache-write-back-with-ontap-select]]
 == FlexCache による ONTAP Select への書き戻し
 
 ONTAP Selectは、ライトバック機能を備えたFlexCacheキャッシュボリュームをサポートしています。ONTAP Selectインスタンス全体のパフォーマンスは、エントリーレベルのONTAPシステムに匹敵します。
@@ -82,30 +88,35 @@ link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-bac
 
 
 
+[[compare-ontap-select-and-ontap-9]]
 == ONTAP SelectとONTAP 9の比較
 
 ハードウェアベースの ONTAP と ONTAP Select は、どちらもエンタープライズクラスのストレージソリューションを提供します。ただし、設計と実装方法が異なるため、対応するビジネス要件や利用シナリオもそれぞれ異なります。ONTAP Select の導入を計画する前に、プラットフォーム間の主な違いを理解しておく必要があります。
 
 
 
+[[different-ha-architecture]]
 === HA アーキテクチャが異なります
 
 クラスタで定義するノードの数に応じて、 ONTAP Select では HA 機能を利用できます。たとえば、 4 ノードクラスタは 2 つの HA ペアで構成されます。ONTAP Select で使用される HA アーキテクチャは、非共有のストレージモデルに基づいています。つまり、 HA ペアの一方のノードは、もう一方のノードが所有するストレージに直接アクセスできません。この設計は、 ONTAP Select の特定の動作特性に影響する可能性があります。
 
 
 
+[[capacity-licensing]]
 === 容量ベースのライセンス
 
 ONTAP Select では、使用量に応じたライセンスモデルが導入されています。本番環境にONTAP Selectクラスタを導入する場合は、各ノードまたは共有容量プールのストレージ容量を含むライセンスを購入する必要があります。Deploy ユーティリティを使用して、クラスタノードのストレージ容量を確立するライセンスファイルを適用する必要があります。
 
 
 
+[[ontap-feature-licensing]]
 === ONTAP 機能のライセンス
 
 ONTAP Select クラスタ内の各ノードには、 ONTAP のいくつかの機能を使用するためのライセンスが自動的に付与されます。これらの機能ライセンスを手動でインストールしたり適用したりする必要はありません。
 
 
 
+[[ontap-features-not-supported-in-ontap-select]]
 === ONTAP の機能は ONTAP Select ではサポートされていません
 
 一部の ONTAP 機能は ONTAP Select ではサポートされません。ほとんどの場合、これらの機能には仮想化された ONTAP Select 環境で使用できない特殊なハードウェアが必要です。
@@ -120,6 +131,7 @@ NOTE: ONTAP Select 9.16.1以降では、ARPの手動更新がサポートされ�
 +
 クラスタIPspaceに対する変更（ポート、仮想LAN（VLAN）、リンクアグリゲーショングループの追加や削除など）はサポートされていません。
 
+* 非同期 SnapMirror の整合グループ
 * ファイバチャネル
 +
 Fibre ChannelおよびFibre Channel over Ethernetはサポートされていません。
@@ -142,7 +154,7 @@ ONTAP Selectで使用される仮想環境のため、NICオフロード機能�
 速度、二重、フロー制御などのONTAPポートのプロパティの変更はサポートされていません。
 
 * サービスプロセッサ
-* SVM 移行
+* SVM-Migrate
 * SnapLock コンプライアンス
 * SnapMirrorアクティブ同期
 * VMware HCX

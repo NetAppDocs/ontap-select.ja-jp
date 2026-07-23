@@ -20,6 +20,7 @@ NVMe デバイスで VMDirectPath I/O パススルーを使用することで、
 
 
 
+[[step-1-configure-the-host]]
 == ステップ1: ホストを構成する
 
 ドライブを認識するように ESXi または KVM ホストを構成します。
@@ -109,6 +110,7 @@ image:nvme_03.png["このホストをリブートします"]
 
 
 
+[[step-2-install-the-ontap-select-deploy-utility]]
 == ステップ2: ONTAP Select Deployユーティリティをインストールする
 
 ホストの準備が完了したら、 ONTAP Select Deployユーティリティをインストールできます。Deployは、新しく準備したホスト上にONTAP Selectストレージクラスタを作成する手順をガイドします。このプロセス中に、Deployはパススルー用に設定されたNVMeドライブの存在を検出し、 ONTAPデータディスクとして使用するために自動的に選択します。必要に応じて、デフォルトの選択を調整できます。

@@ -29,6 +29,7 @@ Deploy に固有の手順がいくつかあります（管理者のパスワー�
 
 
 
+[[administer-ontap-select]]
 == ONTAP Selectの管理
 
 ONTAP Select のサポートの一環として、さまざまな管理手順が用意されています。また、 Deploy 管理ユーティリティに固有の手順があります。これらの手順のうち、最も重要なものを以下に示します。通常は、 Deploy の Web ユーザインターフェイスを使用します。
@@ -38,6 +39,7 @@ NOTE: また可能です link:https://docs.netapp.com/us-en/ontap-select/task_cl
 
 
 
+[[perform-additional-ontap-configuration]]
 == ONTAPの追加設定の実行
 
 ONTAP Select クラスタを導入したら、ハードウェアベースの ONTAP システムの場合と同様にクラスタを設定および管理できます。たとえば、ONTAPシステムマネージャまたはONTAP CLIを使用してONTAP Selectクラスタを設定できます。

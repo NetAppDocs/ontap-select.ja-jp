@@ -30,6 +30,7 @@ NOTE: 評価ライセンスを延長することはできません。90 日が�
 
 
 
+[[step-1-register-for-an-account]]
 == ステップ1: アカウントを登録する
 
 必要に応じて、 NetAppアカウント登録を完了し、見込み客のアクセスをリクエストします。
@@ -73,6 +74,7 @@ NetAppの担当者の名前を記入してください。
 
 
 
+[[step-2-download-ontap-select-evaluation-software]]
 == ステップ2: ONTAP Select評価ソフトウェアをダウンロードする
 
 サポート ケースが審査され承認されると、 NetAppサポートは指定された電子メール アドレスを使用して通知します。

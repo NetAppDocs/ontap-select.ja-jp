@@ -18,6 +18,7 @@ ONTAP Selectの大容量階層または容量プールライセンスは、Stand
 
 
 
+[[what-a-platform-license-offering-provides]]
 == プラットフォームライセンス製品の機能
 
 特定のライセンス オファリングによって、次の 2 つの領域におけるハイパーバイザー ホストの機能が決まります。
@@ -69,6 +70,7 @@ NOTE: カーネルベースの仮想マシン (KVM) は、大規模なインス�
 
 
 
+[[compare-hardware-support-for-platform-license-offerings]]
 == プラットフォームライセンス製品のハードウェアサポートの比較
 
 標準、プレミアム、プレミアム XL ライセンス オファリングは、幅広いハードウェアとソフトウェアをサポートします。ハードウェアとソフトウェアのバージョンに関する最新情報については、link:https://mysupport.netapp.com/matrix/["Interoperability Matrix Tool"^]を参照してください。

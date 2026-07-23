@@ -21,6 +21,7 @@ NOTE: ONTAP Select Deploy管理ユーティリティは、ハイパーバイザ�
 
 
 
+[[step-1-prepare-the-esxi-hypervisor-host]]
 == ステップ1: ESXiハイパーバイザーホストを準備する
 
 ESXi ホストとファイアウォール ポートの構成を確認します。
@@ -63,6 +64,7 @@ NetApp、vSphere へのアクセスを許可するために次のファイアウ
 
 
 
+[[step-2-review-the-ontap-select-cluster-configuration]]
 == ステップ2: ONTAP Selectクラスタ構成を確認する
 
 ONTAP Select はマルチノードクラスタまたはシングルノードクラスタとして導入できます。多くの場合、追加のストレージ容量と高可用性 (HA) 機能があるため、マルチノード クラスターが適しています。
