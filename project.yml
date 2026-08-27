@@ -221,11 +221,7 @@ sidebar:
       - title: その他のハイアベイラビリティ機能
         url: "/concept_ha_other.html"
     - title: パフォーマンス
-      entries:
-      - title: パフォーマンスの概要
-        url: "/concept_perf_general.html"
-      - title: ONTAP Select 9.6のパフォーマンス
-        url: "/concept_perf_premium_ha_direct_ssd_96.html"
+      url: "/concept_perf_general.html"
   - title: REST による自動化
     entries:
     - title: 概念

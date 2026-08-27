@@ -2206,73 +2206,6 @@
   <block id="90cbb6ff863c3db71ceae9fe55f8e66f" category="paragraph">このパラメータは、長時間実行するコマンドの動作を制御します。設定すると、コマンドがフォアグラウンドで実行され、処理に関連するイベントメッセージが発生したときに表示されます。</block>
   <block id="830e3840fa2bc88cc12b99cba76ee4d3" category="paragraph"><block ref="82aa9c15f1551f89eb92d3d4b0470f4c" prefix="" category="inline-code"></block></block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
-  <block id="f601b21fb8e0d97eaf4f9b6866a264f6" category="summary">ONTAP Select 9.6 パフォーマンスに関するパフォーマンス情報 - HA 直接接続型のプレミアム SSD ストレージ。</block>
-  <block id="2d1e1ff5065ae8a1f3c889ed2101b09c" category="paragraph">リファレンスプラットフォームのパフォーマンス情報。</block>
-  <block id="e4491605377fcc65eaedf127cb13bb15" category="section-title">リファレンス・プラットフォーム</block>
-  <block id="1046c015c70060135ed38c7cc90d8b86" category="paragraph">ONTAP Select （Premium XL）ハードウェア（ノードあたり）</block>
-  <block id="bb0064a43bb00378129d1ac5e83e43bf" category="list-text">Fujitsu PRIMERGY RX2540 M4 ：</block>
-  <block id="9dbfeafb0252249e9084dd194033f966" category="list-text">Intel （ R ） Xeon （ R ） Gold 6142b CPU 、 2.6GHz</block>
-  <block id="1412e1f8c4d7128be7fcb48c7ef515ec" category="list-text">物理コア × 32 （ 16 × 2 ソケット）、論理コア × 64</block>
-  <block id="2907b386b6969a2dd1b7d5b358e4ef78" category="list-text">256 GB の RAM</block>
-  <block id="f47dfc5af3acf2b805371be41d3a8fb8" category="list-text">ホストあたりのドライブ数： 960GB SSD × 24</block>
-  <block id="2526f2963a36a530588c55a6e858c9ea" category="paragraph">クライアントハードウェア</block>
-  <block id="d70f3d88adda420e79658dc52e515383" category="list-text">NFSv3 IBM 3550m4 クライアント × 5</block>
-  <block id="8b9a96e40ebcda35ce12190b41789b64" category="paragraph">設定情報</block>
-  <block id="644583ef81af3657d263540fe36659df" category="list-text">SW RAID 1 × 9 + 2 RAID-DP （ 11 ドライブ）</block>
-  <block id="42eab3ef64ce236896a31222c04ddcb1" category="list-text">22+1 RAID-5 （ ONTAP では RAID-0 ） / RAID キャッシュ NVRAM</block>
-  <block id="417cf38711a7b90410407706cc8becb3" category="list-text">Storage Efficiency 機能（圧縮、重複排除、 Snapshot コピー、 SnapMirror など）は使用しない</block>
-  <block id="8b753111757d995e14e8b502f0b060f5" category="paragraph">次の表に、ソフトウェアRAIDとハードウェアRAIDの両方を使用したONTAP Select ノードのハイアベイラビリティ（HA）ペアで、読み取り/書き込みワークロードに対して測定されたスループットを示します。パフォーマンスの測定には、 SIO 負荷生成ツールが使用されました。</block>
-  <block id="8f0b44fb88a1368b40ccf845bb51b622" category="admonition">これらのパフォーマンス値はONTAP Select 9.6に基づいています。</block>
-  <block id="5f0987d7c836e13b5c975378b71cb33d" category="paragraph">*ソフトウェアRAIDおよびハードウェアRAIDを使用した、直接接続型ストレージ（DAS）SSD上のシングルノード（4ノードの中規模インスタンスの一部）ONTAP Select クラスタのパフォーマンス結果*</block>
-  <block id="f85fbc2afc4c94e602061bdba197fe30" category="cell">シーケンシャルリードの 64KiB</block>
-  <block id="b744fd78ba8f25a68adbe10e05a26b83" category="cell">シーケンシャルライト 64KiB</block>
-  <block id="1a6235b566ae1675e7cad6ac984c685e" category="cell">ランダムリード 8KiB</block>
-  <block id="5b12bccfe0f07270acf93f4031d373f1" category="cell">ランダムライト 8KiB</block>
-  <block id="e78425925b16cdbe3107734a56031c80" category="cell">ランダム WR / RD （ 50 / 50 ） 8KiB</block>
-  <block id="b9f7179a485f0a08d3f620ea3027bc01" category="cell">DAS（SSD）ソフトウェアRAIDを使用したONTAP Select 大規模インスタンス</block>
-  <block id="2007f3de4fd76c0e193542767d4effc7" category="cell">2171 MiBps</block>
-  <block id="886d5bb2e31ec3b29b47bde33f33ab35" category="cell">559 MiBps</block>
-  <block id="04b957821e0e9aaeddab7defcb730f2f" category="cell">954 MiBps</block>
-  <block id="33f3d2c18291e3e31d92f624e5d6fc94" category="cell">394 MiBps</block>
-  <block id="e68ffca78bd9ae750e095401b76ab77b" category="cell">564 MiBps</block>
-  <block id="729966193ad3771980bdca3507a1eaaf" category="cell">DAS（SSD）ソフトウェアRAIDを使用したONTAP Select 中規模インスタンス</block>
-  <block id="90c72b2cc73b17ddc733acde371321d3" category="cell">2090 MiBps</block>
-  <block id="53db68f311ff8fbb9f8fef66f62313e5" category="cell">592 MiBps</block>
-  <block id="7bbb1b1c0cf0b7b3631b2c01d6ddcaf3" category="cell">677 MiBps</block>
-  <block id="51a0447c2e07541855854e57a4fd6609" category="cell">335 MiBps</block>
-  <block id="276f86f46c58000ab83f7a81f3e1ac40" category="cell">441 3MiBps</block>
-  <block id="e4475fda14f8565f7c25947659d1c3d9" category="cell">DAS（SSD）ハードウェアRAIDを使用したONTAP Select 中規模インスタンス</block>
-  <block id="6974008be6157ab7da440e5a88cd72d1" category="cell">2038 MiBps</block>
-  <block id="cb52eb73b63cc7f2910e3bfb2b2d354a" category="cell">520 MiBps</block>
-  <block id="9d7e909c3efb2e3288aa3ec2c6d24f71" category="cell">578 MiBps</block>
-  <block id="cdbbaf4862a8ab2f6b371a9be781a4cb" category="cell">325 MiBps</block>
-  <block id="a65e3663e8513b684e6d94125f4e11f5" category="cell">399 MiBps</block>
-  <block id="44607c8f3709be606339fc490a5b45c3" category="section-title">64K のシーケンシャルリード</block>
-  <block id="2babe53026309ed1bc4d26626dbaf9b3" category="paragraph">詳細：</block>
-  <block id="1c565cb1ef40fca7276174f53620ea60" category="list-text">SIO ダイレクト I/O が有効です</block>
-  <block id="47957b19a7354408ab1556b6c86baf29" category="list-text">2 ノード</block>
-  <block id="dc6520d5a009ec5f940d658ec28adabd" category="list-text">ノードあたりのデータ NIC × 2</block>
-  <block id="4bcdc16a8f6fec0919f4bfd39504533f" category="list-text">ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 8TB のソフトウェア RAID ）</block>
-  <block id="1eec63dddc28c105e19e99a28e53426c" category="list-text">SIO プロセス数 =64 、プロセスあたりのスレッド数 =1</block>
-  <block id="217f0d39a6dd36c24aa44ac1d6a1978f" category="list-text">ノードあたりのボリューム数は 32</block>
-  <block id="df5b44ae62b5b5de9a6c68ef74b8631f" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 12 、 000MB です</block>
-  <block id="6a054d687d8afaf7ec67dbc99b543066" category="section-title">64K のシーケンシャルライト</block>
-  <block id="0f298226345a9b3c58f0c3df3b00ab51" category="list-text">ノードごとにデータネットワークインターフェイスカード（NIC）×2</block>
-  <block id="f0d309eaf86b429045988bce455aacb3" category="list-text">ノードあたりのデータアグリゲート × 1 （ 2TB のハードウェア RAID ）、（ 4TB のソフトウェア RAID ）</block>
-  <block id="af5bc1c073864156b93943dba0eb0a17" category="list-text">SIO プロセス数 =128 、プロセスあたりのスレッド数 =1</block>
-  <block id="ebfa598c2ae4ecaca547d57ec9bcebda" category="list-text">ノードあたりのボリューム数：32（ハードウェアRAID）、16（ソフトウェアRAID）</block>
-  <block id="64e33af903cb7246c7d6049d95b81855" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 30720MB です</block>
-  <block id="f6285a044a1b4d88a9e7fb351cf9e8c1" category="section-title">8K ランダムリード</block>
-  <block id="06f2713882df7e7a8c3ec49774af3f5d" category="list-text">ノードあたり2つのデータNIC</block>
-  <block id="5432662d6c3f66b86011e5482fd1b013" category="list-text">SIO プロセス数 =64 、プロセスあたりのスレッド数 =8</block>
-  <block id="37b92a84c96cf144d3d2f1ddd9e668dc" category="list-text">ノードあたりのボリューム数：32</block>
-  <block id="4af562d52353844c11ed213dc9654510" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 12228MB です</block>
-  <block id="c85b30614082693f9ffcec7ecb79fb0a" category="section-title">8K のランダムライト</block>
-  <block id="c19f2ae8c94be0ce03b44a63782498a1" category="list-text">プロセスあたりのファイル数 × 1 、各ファイルのサイズは 8192MB です</block>
-  <block id="c177226dbb26cef0a4f5eff0b87d5d44" category="section-title">8K ランダム書き込み 50% 読み取り</block>
-  <block id="5e9d95d213033fcb57aae50adca56cb0" category="list-text">プロセスあたりの SIO プロセス数 =64</block>
-  <block id="f264455563ca8b26d0daffb627e42c00" category="sidebar">パフォーマンスの概要</block>
-  <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">ONTAP Select 9.6のパフォーマンス</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">通常、ライセンスの有効期限が切れても何も起こりません。ただし、ノードは期限切れのライセンスに関連付けられているため、別のライセンスをインストールすることはできません。ライセンスを更新するまでは、リブート処理やフェイルオーバー処理など、アグリゲートがオフラインになるような処理を行う必要があります。推奨される対処方法は、ライセンスの更新を迅速に行うことです。</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">VMware HCX</block>
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS Deployクラスタの更新がエラーで失敗する</block>
@@ -2838,7 +2771,6 @@ storage aggregate show-spare-disks</block>
   <block id="6c9348bc5d04685460e6acda750ab989" category="list-text">ONTAPポートのプロパティ</block>
   <block id="b360fb78c737d920cd251b2f7358f606" category="paragraph">速度、二重、フロー制御などのONTAPポートのプロパティの変更はサポートされていません。</block>
   <block id="fcc22b4e3de45bbac50b32226efb8e8c" category="doc">ONTAP Selectのパフォーマンスの概要</block>
-  <block id="40bfcfb823eef6d953345bec6901d94b" category="doc">ONTAP Select 9.6 のパフォーマンス： Premium HA 直接接続 SSD ストレージ</block>
   <block id="5b7b913b9183b40db3cdac93dcffe3d9" category="doc">ONTAP Selectストレージ容量の拡張</block>
   <block id="180d14e1cfcab830c1ec4fafd5097838" category="doc">ONTAP Selectストレージ：一般的な概念と特徴</block>
   <block id="4c09693df54f78ec01dcfce83626b988" category="doc">ONTAP Select Storage Efficiencyのサポート</block>
@@ -2912,7 +2844,6 @@ storage aggregate show-spare-disks</block>
   <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">ノードインスタンスのタイプやライセンスサービスに関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。</block>
   <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">NetAppからシリアル番号やストレージ容量のライセンスを取得する必要はありません。</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">購入したライセンスと同じ量のストレージをユーザデータに割り当てることができます。</block>
-  <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">ノードを評価用ライセンスから購入ライセンスにアップグレードすることはできません。</block>
   <block id="de68e769353f85803d50af3ad5192201" category="list-text">OVFテンプレートの導入にはvCenterアカウントのみを使用できます。ESXiホストに直接インストールすることは現在サポートされていません。</block>
   <block id="1ec19b1e234462f154c2312b865baa14" category="paragraph">次の要件に従って、ONTAP Selectクラスタを導入するESXiホストを準備します。プラットフォームの説明は、VMFS-5またはVMFS-6ファイルシステムを使用してフォーマットされたローカルの直接接続型ストレージ（DAS）を使用した標準または小規模のインスタンスタイプ構成に基づいています。</block>
   <block id="7564075dd4184b322f666087a8172ae7" category="inline-image-macro">ESXiホストを準備するための要件</block>
@@ -3654,7 +3585,6 @@ storage aggregate show-spare-disks</block>
   <block id="120dfe55114bd18d238461d392d2851f" category="doc">ONTAP Select容量プールライセンスのサイズ設定に関する考慮事項</block>
   <block id="18bea776141012ab15d569765a0801f0" category="list-text">シングルノード クラスタのオーバーヘッド係数は1.13です</block>
   <block id="50e947c808b914257cb5209da74fa627" category="list-text">マルチノード クラスタのオーバーヘッド係数は2.67です</block>
-  <block id="249a516ff48049712229714792dc7131" category="paragraph">展開に十分な容量があることを確認するには、使用可能なスペースに基づいてライセンス容量を計算する必要があります。</block>
   <block id="3d1317b428299aa3785275ff6eb8e119" category="cell">シングルノード</block>
   <block id="ee77295963ed13bed36e924ed72f669e" category="cell">使用可能スペース</block>
   <block id="686d2bd292fa941724920d9f5764926c" category="cell">ライセンス スペース</block>
@@ -3663,9 +3593,7 @@ storage aggregate show-spare-disks</block>
   <block id="349097419d01aa81b07916c8f94601e6" category="paragraph"><block ref="349097419d01aa81b07916c8f94601e6" category="inline-link-macro-rx"></block></block>
   <block id="32f9dc8bfa4ac02c770716ebf1eaf2df" category="doc">ONTAP Select Capacity Tiersライセンスのサイズ設定に関する考慮事項</block>
   <block id="c5915502bf73930e10d7d62d217a0adc" category="paragraph">Capacity Tiersライセンスは、各ONTAP Selectノードによって管理される基盤となるディスク容量に基づいており、ノード、HAペア、またはクラスタの使用可能容量に基づいていません。各Capacity Tiersライセンスは、指定された容量の個々のノードシリアル番号に割り当てられ、付随するサポート契約が必要です。</block>
-  <block id="d7af2ad49563ae7106d8189ee369825b" category="paragraph">使用可能なスペースに基づいてライセンス容量を計算し、導入に十分な容量があることを確認します。</block>
   <block id="5aabc9069557be7e4aeff466605cbc75" category="cell">シングル ノード</block>
-  <block id="23561a5c65d75192f0c089566ae29f4a" category="paragraph">HA ペアのノードごと：</block>
   <block id="754bc948e75e62a589ebb57f97b00d1a" category="paragraph">マルチノード クラスタ内の HA ペアごと：</block>
   <block id="68a88e5fe4c22c1950c0f9b28b07d5c6" category="inline-link-macro">ONTAP Select の容量階層ライセンスを取得する</block>
   <block id="a3da07f3b51f418f1d1a05b62b272ccb" category="paragraph"><block ref="a3da07f3b51f418f1d1a05b62b272ccb" category="inline-link-macro-rx"></block></block>
@@ -3788,7 +3716,6 @@ storage aggregate show-spare-disks</block>
   <block id="a5fdda4a32aaa656687dc3ed4336767b" category="paragraph">マルチノード クラスタ内の各ノードに4つのポート グループを割り当てることができます。各ポート グループには、次の図に示すように、1つのアクティブ物理ポートと3つのスタンバイ物理ポートがあります。</block>
   <block id="383749e0c2b6120b7d3219465c253e8d" category="paragraph">2つの物理ポート（10Gb以下）を使用する場合、各ポートグループにはアクティブアダプタとスタンバイアダプタが互いに反対に構成されている必要があります。内部ネットワークは、マルチノードONTAP Selectクラスタにのみ存在します。シングルノードクラスタの場合、両方のアダプタを外部ポートグループでアクティブとして構成できます。</block>
   <block id="fd5410072ea2a4b129708a2e752af2fb" category="paragraph">次の例は、vSwitchとマルチノードONTAP Selectクラスタの内部および外部通信サービスを処理する2つのポートグループの構成を示しています。内部ネットワークVMNICはこのポートグループの一部であり、スタンバイモードで構成されているため、ネットワーク障害が発生した場合、外部ネットワークは内部ネットワークVMNICを使用できます。外部ネットワークの場合は逆になります。2つのポートグループ間でアクティブVMNICとスタンバイVMNICを交互に切り替えることは、ネットワーク停止中のONTAP Select VMの正しいフェイルオーバーにとって重要です。</block>
-  <block id="df46fd1cc3592c160ce26bd78c3e9761" category="list-text">ESXi 6.5U1</block>
   <block id="358d64cf39b6c9eced01e45fdfd7e797" category="paragraph">容量追加操作中に使用される最大VMDKサイズは16TBです。クラスタ作成操作中に使用される最大VMDKサイズは引き続き8TBです。ONTAP Deployでは、構成（シングルノードまたはマルチノードクラスタ）と追加される容量に応じて、適切なサイズのVMDKが作成されます。ただし、各VMDKの最大サイズは、クラスタ作成操作中は8TBを超えてはならず、ストレージ追加操作中は16TBを超えてはなりません。</block>
   <block id="a7c2d78e472b2fbe1b7627532aec0745" category="admonition">HAペアでは、ノード1にストレージを追加するには、ノードのHAペア（ノード2）でも同じ数のドライブが使用可能である必要があります。ローカルドライブとリモートディスクの両方が、ノード1上の1つのストレージ追加操作によって使用されます。つまり、リモートドライブは、ノード1の新しいストレージがノード2に複製され、保護されていることを確認するために使用されます。ノード2にローカルで使用可能なストレージを追加するには、別のストレージ追加操作と、両方のノードで別個の同数のドライブが使用可能である必要があります。</block>
   <block id="90e04b1522b6ea952b583f994c8d3c8b" category="admonition">古い ESXi リリースの最大エクステントおよびデータストア サイズは 64TB であり、これらの大容量ドライブによって提供される合計生容量をサポートするために必要な LUN の数に影響する可能性があります。</block>
@@ -3853,14 +3780,12 @@ storage aggregate show-spare-disks</block>
   <block id="324bea2f11169e67c398f52f2473e586" category="doc">ONTAP SelectのVMware ESXi外部ストレージ要件</block>
   <block id="75a86bcbac7e603bc4f5c0065d1a3a07" category="paragraph">VMware のドキュメントを確認し、 ESXi ホストに該当するベストプラクティスに従ってください。さらに（：）</block>
   <block id="84a80a698e14acfb3da1da2ebe7ef8c2" category="list-text">すべての汎用外部ストレージアレイが、可能な限り利用可能な冗長性とHA機能を使用していることを確認します</block>
-  <block id="d29cfb45957918aefdd8d5c4b6faa886" category="paragraph">容量プールライセンスのライセンス容量はTB単位で、最小2TBです。使用可能なスペースの量にオーバーヘッド係数を掛けて、ライセンス容量を計算します。オーバーヘッド係数は、シングルノード クラスタとマルチノード（HAペア ベース）クラスタ間で異なります。</block>
   <block id="b4c21a84e70314772f63f682c92e2bd5" category="cell">20 TB</block>
   <block id="f53c95b0502281ef3f4bc5968b571b0f" category="cell">シングルノード クラスタあたり10TB、HAペアの場合は20TB</block>
   <block id="3860ef90e12d15d0420cb040ee51a64c" category="cell">23 TB（20 x 1.13 = 22.6、次の完全な TB に切り上げ）</block>
   <block id="598d217f06b9250ad27a8198bb5c2a4b" category="cell">54 TB（20 x 2.67 = 53.4、次の完全な TB に切り上げ）</block>
   <block id="6694602e4cd7d0b05713de6bd31c888e" category="cell">ノードあたりの最大使用可能容量 *注*：ノードまたはHAペアあたりの最大管理容量は400 TBです</block>
   <block id="0ff836b729a9f331160a37a804c5f502" category="cell">353 TB（400／1.13）</block>
-  <block id="9ed860bf7c910e8f72592e603158fb1a" category="paragraph">Capacity Tiers ライセンスのライセンス容量は TB 単位で、最小値は 1 TB です。使用可能なスペースの量にオーバーヘッド係数を掛けて、ライセンス容量を計算します。オーバーヘッド係数は、シングルノード クラスタとマルチノード（HA ペア ベース）クラスタ間で異なります：</block>
   <block id="1191f788083da9194f8eef9400d10898" category="cell">10 TB</block>
   <block id="f515aabc5719e9815156a5bba11b0271" category="cell">ノードあたり5 TB、HAペアの場合は10 TB</block>
   <block id="8ef83a850a4c3f98639c08c641ced5a0" category="cell">12 TB（10 x 1.13 = 11.3、次の完全な TB に切り上げ）</block>
@@ -4070,4 +3995,14 @@ storage aggregate show-spare-disks</block>
   <block id="972cc139ce081218935961184ceb872f" category="list-text">非同期 SnapMirror の整合グループ</block>
   <block id="2dd64bd29dd925332151bac56daee54d" category="list-text">SVM-Migrate</block>
   <block id="191cca9b69f6675fd704265efaee5cd4" category="paragraph">ONTAP Selectは、非同期 SnapMirrorにおけるコンシステンシー グループをサポートしていません。</block>
+  <block id="4b24c4ea95509e5cbdbe193ec75f463e" category="paragraph">容量プールライセンスの認可容量は、テラバイト単位（TB）で、最小容量は2 TBです。ライセンス容量は、使用可能なスペースの量にオーバーヘッド係数を掛けることで計算します。オーバーヘッド係数は、使用可能なスペースから取得されるONTAP Selectソフトウェアオーバーヘッド容量を推定するものであり、NVMe、SSD、HDD、または仮想ドライブに対するONTAP Selectの容量の決定に適用されます。オーバーヘッド係数は、シングルノードクラスタとマルチノード（HAペアベース）クラスタで異なります：</block>
+  <block id="b3a8f80cb2ce78cbbf07a7817fabad7d" category="paragraph">導入に必要な容量を確保するためには、使用可能なスペースに基づいてライセンス容量を計算する必要があります。例えば、HAペア用に20 TBの使用可能容量（ノードあたり10 TB）が必要な場合：</block>
+  <block id="863cc3c84b4e89fdd7579f92bb937ebc" category="list-text">HAペアでは、冗長性を確保するためにデータが両方のノード間で複製されます。そのため、HAペアで20 TBの利用可能なデータを使用する場合、いずれかのノードがオフラインになった場合に備えて、ノードごとに20 TBの容量が必要になります。</block>
+  <block id="3e0455dedd9dea9911d6347cfe0aee63" category="list-text">2.67 という係数は各ノードの容量を 2 倍にし、ONTAP Select が機能するために必要なオーバーヘッド容量 （0.67） を追加します。</block>
+  <block id="e1b77540ab30a2b9d111bb1c6ae9524f" category="list-text">ノードあたりのライセンス容量は27 TB（10 x 2.67 = 26.7）です。HAペアの場合、20 TBの使用可能容量を確保するには、27 TBのライセンスが2つ必要です。</block>
+  <block id="60a2cd8b21b5abdd1f9f570f98aead06" category="paragraph">容量ティアライセンスのライセンス容量は、1 TB単位で、最小容量は1 TBです。ライセンス容量は、使用可能なスペースの量にオーバーヘッド係数を掛けることで計算します。オーバーヘッド係数は、使用可能なスペースから取得されるONTAP Selectソフトウェアのオーバーヘッド容量を推定するものであり、NVMe、SSD、HDD、または仮想ドライブに対するONTAP Selectの容量の決定に適用されます。オーバーヘッド係数は、シングルノードクラスタとマルチノード（HAペアベース）クラスタで異なります。</block>
+  <block id="ab9e259cd278dabfae81423ce071874c" category="paragraph">導入に必要な容量を確保するためには、使用可能なスペースに基づいてライセンス容量を計算する必要があります。例えば、HAペア用に10 TBの使用可能容量（ノードあたり5 TB）が必要な場合：</block>
+  <block id="bd88bf77fede236871bbdaecddefca53" category="list-text">HAペアでは、冗長性を確保するためにデータが両方のノード間で複製されます。そのため、HAペアで10 TBの利用可能なデータを使用する場合、いずれかのノードがオフラインになった場合に備えて、ノードごとに10 TBの容量が必要になります。</block>
+  <block id="c0945522d1f6ae9ba28c16c4d8e24c38" category="list-text">ノードあたりのライセンス容量は14TB（5×2.67＝13.35）です。HA構成の場合、10TBの使用可能容量を確保するには、14TBのライセンスが2つ必要です。</block>
+  <block id="74b1b9052c3c702d9cea5b8cd980a547" category="paragraph">HAペアのノードごとに：</block>
 </blocks>
