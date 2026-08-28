@@ -4,7 +4,7 @@ permalink: concept_lic_workflow.html
 keywords: license, licensing, purchase, purchasing, workflow 
 summary: ワークフローに従って、 ONTAP Select 環境用のライセンスを購入して適用できます。 
 ---
-= ONTAP Selectライセンス購入時のワークフロー
+= ONTAP Select のライセンス購入ワークフロー
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

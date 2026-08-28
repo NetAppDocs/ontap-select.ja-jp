@@ -4,7 +4,7 @@ permalink: concept_lic_cp_compare_ct.html
 keywords: license, licensing, Capacity Pools, Capacity Tiers, comparing 
 summary: Capacity Tiers と Capacity Pools のライセンス モデルにはいくつかの違いがあります。 
 ---
-= ONTAP Select容量階層と容量プールのライセンスを比較する
+= ONTAP Select容量階層と容量プールのライセンス比較
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

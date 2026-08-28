@@ -207,7 +207,6 @@
   <block id="18c27fdda3b31de582a5c418705a0eab" category="paragraph">クラスタが作成されるまで、 30 分程度かかる場合があります。</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="list-title">完了後</block>
   <block id="f0d06352d26117769577e30b4e00ca4a" category="summary">ONTAP Select クラスタを管理するために実行できる関連タスクがいくつかあります。</block>
-  <block id="c57ef2657d4baa07c3da17d9b8ee2e20" category="doc">ONTAP Select クラスタ</block>
   <block id="270415548e638f6227a9943760c4601e" category="paragraph">作成したクラスタは、必要に応じてオフラインやオンラインに切り替えることができます。</block>
   <block id="dfff66df61854331286bf47398ed3c65" category="paragraph">作成されたクラスタの初期状態はオンラインです。</block>
   <block id="8f7d4958a1bc5ef246671f311712972f" category="list-text">管理者アカウントを使用して、 Deploy ユーティリティの Web ユーザインターフェイスにサインインします。</block>
@@ -1575,7 +1574,6 @@
   <block id="8a52c9125fd5cf696cd865c130b46cf7" category="inline-image-macro">リモートオフィスから企業のデータセンターへのバックアップを定期的に行う</block>
   <block id="4823eec54391d8d1fd865ee32e32e7f9" category="paragraph"><block ref="4823eec54391d8d1fd865ee32e32e7f9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b73167eee5082eed4d7d4c53de18c738" category="summary">ONTAP Select クラスタを作成したあと、さまざまな管理タスクを実行して導入をサポートできます。注意が必要な一般的な考慮事項がいくつかあります。</block>
-  <block id="1af7e96c06b83a1ff6aad6bd1d3d9fa0" category="doc">ONTAP Select の管理を開始する前に</block>
   <block id="0a4ded0e98055bab8bb8d671237cbb41" category="paragraph">通常、 Deploy の Web インターフェイスを使用して実行できる手順は、 3 つのカテゴリのいずれかに分類されます。</block>
   <block id="da70b9ce263d0deac21a9bdc090db697" category="paragraph">サポート対象である次のネットアップクライアントソフトウェアを使用して ONTAP Select に接続できます。</block>
   <block id="32c236bbc7c47900f75310cfa59abd2a" category="list-text">OnCommand Insight</block>
@@ -1956,7 +1954,6 @@
   <block id="c1b060c144785f27389c5e134af018e1" category="sidebar">ハイパーバイザーとハードウェア</block>
   <block id="392ef7332861d17c4a3770570a1a87a4" category="sidebar">2 ノードクラスタ</block>
   <block id="40762683748106b1d1e0792d0c278678" category="sidebar">リモートオフィス、ブランチオフィス</block>
-  <block id="6e000ad3ab759a6cf44e1c9a970752c4" category="sidebar">VMware 環境</block>
   <block id="794df3791a8c800841516007427a2aa3" category="sidebar">使用許諾</block>
   <block id="187e115b0c10602baa476f64acc86a80" category="sidebar">本番環境用ライセンス</block>
   <block id="e3e16bb73c0250a6a229fb457b4f957e" category="sidebar">制限事項</block>
@@ -2351,8 +2348,6 @@
   <block id="dceaaeb84342d2c83b2b279b2eb057a8" category="paragraph">サーバベンダーは、お客様にさまざまなニーズがあり、選択の自由が重要であることを理解しています。そのため、物理サーバを購入する際には、ネットワーク接続を決定する際に使用できるオプションが多数あります。ほとんどのコモディティシステムでは NIC についてさまざまな選択肢が用意されており、速度とスループットの多様な組み合わせの中から、シングルポートとマルチポートのオプションを選択できます。これには、VMware ESXでの25Gb/秒および40Gb/秒NICアダプタのサポートが含まれます。</block>
   <block id="a576bfb8d18800b15b695bc702167ec1" category="admonition">ONTAP Select イメージは、 Deploy のインスタンスに含まれている元のバージョンよりも前のバージョンでのみ追加してください。Deployを更新せずに新しいバージョンのONTAP Selectを追加することはできません。</block>
   <block id="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="paragraph"><block ref="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="inline-link-macro-rx"></block></block>
-  <block id="4d0baad02721160fc108f9d6af73fec0" category="doc">ONTAP Selectビデオコンソールへのアクセス</block>
-  <block id="ae8d825236a3f7c43af8b7a2dcd40918" category="doc">ONTAP Selectノード間のネットワーク接続を確認する</block>
   <block id="b58c5f0cafd2de6e2a43174f49b5fb62" category="paragraph">最初のクラスタ作成手順では、初期データストアの一部またはすべてのスペースを消費する ONTAP Select クラスタを作成します。次に、目的の合計容量に達するまで、追加のデータストアを使用して 1 つ以上の容量追加処理を実行します。この機能の詳細については、を参照してください <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>。</block>
   <block id="18249feda4b97af2b71cdf46188e1e4c" category="section-title">Deploy管理者パスワードの変更</block>
   <block id="39c422f1ba6768584ce2b5ea65c4f569" category="doc">CLIを使用したONTAP Selectクラスタの導入</block>
@@ -2369,7 +2364,6 @@
   <block id="2863feac8b058188a45f49deaf504ce8" category="section-title">Deployを使用したマルチノードクラスタのアップグレード</block>
   <block id="77313127f25a198a72521f0ce3437025" category="section-title">Deployを使用しないシングルノードクラスタのアップグレード</block>
   <block id="4724841b242993261d4bc5bf0b22e4da" category="section-title">Deployを使用しないマルチノードクラスタのアップグレード</block>
-  <block id="f47ad6e4bc9bad323a7e49da78e990bc" category="doc">ONTAP Selectクラスタノードのサイズを変更する</block>
   <block id="afe2fb2999af41d32655dc1f20500f66" category="list-text">ONTAP Select 9.9.1以降では、インテルXeon Sandy Bridge以降のCPUモデルのみがONTAP Selectでサポートされます。</block>
   <block id="0fa9a0b98f503373d1e8310c7c58315c" category="cell">ONTAP Select用の製品インストール実行可能ファイル。</block>
   <block id="2d288e7805c1ececa65188f89defd9ce" category="admonition">API v3 リリースは、以前のバージョンの API と後方互換性がありません。新しいAPI手順を<block ref="d0140e6551623cc2284467774c9abf91" category="inline-link-rx"></block>。</block>
@@ -2387,10 +2381,8 @@
   <block id="5c7750df890d8a1ae46102a5c56d163d" category="sidebar">ONTAP Selectブログ</block>
   <block id="bafb5d4f7ed06fcf88f3e77fadecc81b" category="sidebar">ONTAP Selectコミュニティ</block>
   <block id="dd3d71b5f68ad8da8831a0b5ea514e35" category="sidebar">Interoperability Matrix</block>
-  <block id="f2efd2b383af9a0515aa1f64f9691215" category="sidebar">クラスタノードのサイズを変更する</block>
   <block id="cdedd922b30b9f8699ea17f5d0045e3d" category="sidebar">VMFS6へのアップグレード</block>
   <block id="ba0ae169498601730046cfffe2523387" category="sidebar">API呼び出しについて理解する</block>
-  <block id="20f67f07ed859b317730c48838666bb5" category="sidebar">ワークフロー1クラスタを作成する</block>
   <block id="d95d85ec027f0d5da378060fe690a4ec" category="sidebar">スクリプトを理解する</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp Support Site</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">エンドユーザライセンス契約（EULA）を確認し、*同意して続行*を選択します。</block>
@@ -2731,24 +2723,16 @@ storage aggregate show-spare-disks</block>
   <block id="185acadc91fc3b4d6d7a0f9ab8464c51" category="paragraph">クラスタ収縮機能を使用して、クラスタサイズを8ノードクラスタから6ノードクラスタに縮小できます。6ノードまたは8ノードのクラスタから1ノード、2ノード、または4ノードのクラスタへのクラスタ収縮は現在サポートされていません。<block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>です。</block>
   <block id="065e8e686a5cc9c043bea6a2b47a6dbc" category="section-title">ハードウェアとストレージに関する考慮事項</block>
   <block id="054e946fb0b83b6a666a6ad91e898f0a" category="doc">ONTAP Selectのジョブオブジェクトを使用した非同期処理</block>
-  <block id="1203a64f6c4121eab9dbc97f2336a51b" category="doc">ブラウザを使用してONTAP Select Deploy APIにアクセスする前に</block>
-  <block id="d507d585a3bf4790d7db816f3a8055fe" category="doc">Pythonを使用してONTAP Select Deploy APIにアクセスする前に</block>
-  <block id="0efdd662738a644a15c7b4b5f469d2e9" category="doc">ONTAP Select Deploy APIワークフローを使用する前に</block>
-  <block id="c0edc4a15c9a8f5add1ff16d8cb1a838" category="doc">ONTAP Select Deploy APIへのアクセス方法</block>
   <block id="fe0458f6f4e5f651de36cf8596142eb6" category="doc">ONTAP Select Deploy APIの基本的な動作特性</block>
-  <block id="231ed5a6a889053c28b06cb17cb1e4ee" category="doc">ONTAP Selectクラスタの導入と管理のためのREST Webサービスの基盤</block>
   <block id="b71dcac4419af40029253724c36ca33b" category="doc">ONTAP Selectの要求と応答のAPIトランザクション</block>
-  <block id="f8b6aa0580faab5529017cf022ac2d16" category="doc">ONTAP Select DeployのPythonスクリプトを理解する</block>
   <block id="bbc20c2ea315836d08b392ce75c91d0b" category="doc">ONTAP Selectハイアベイラビリティコウセイ</block>
   <block id="c849264ebb01817c7925cd0a068007af" category="doc">ONTAP Select HA RSMとミラーされたアグリゲート</block>
-  <block id="ec8ac2a2aba486a14f418e0d73aa199d" category="doc">ONTAP Select HAによるデータ保護の強化</block>
   <block id="2f1f8f7609cf43a281fbca2068eb08b8" category="paragraph">ハイアベイラビリティ（HA）ディスクハートビート、HAメールボックス、HAハートビート、HAフェイルオーバー、およびギブバックの機能によって、データ保護が強化されます。</block>
   <block id="55734e2f86357f8b0f60cd204e105d21" category="paragraph">ONTAP Selectは、評価用ライセンスまたは購入ライセンスを使用して導入できます。選択するライセンスは、ONTAP Selectクラスタ内の各ノード、つまりクラスタ全体に適用する必要があります。購入を決定する前に ONTAP Select を評価したい場合は、評価用ライセンスを使用できます。評価用ライセンスは ONTAP Select Deploy 管理ユーティリティに含まれており、評価用導入の一環として各 ONTAP Select ノードに自動的に適用されます。</block>
   <block id="38a6a854a485660aa1ba2f3d554e2bfe" category="paragraph">評価用クラスタを導入してサポートする場合は、いくつかの考慮事項があります。</block>
   <block id="9ccdbbc209e0eddfaf9f0b5a4154a78d" category="list-text">クラスタは評価目的でのみ使用できます。本番環境では、評価用ライセンスのあるクラスタを使用しないでください。</block>
   <block id="b559f8a2bbcf90e70f60847fb3cce85f" category="list-text">各ホストを設定するときは、ONTAP Select Deploy管理ユーティリティを次のように使用する必要があります。</block>
   <block id="f5010a0b3197d474a3b4618b60c0fd03" category="list-text">評価用ライセンスを使用するように構成</block>
-  <block id="711f738f1281862e087807884aa5cd1c" category="doc">ONTAP Selectライセンス購入時のワークフロー</block>
   <block id="5a61239e15d4a26620f5d89e4b1a8f7f" category="doc">ONTAP Selectネットワークの概念と特徴</block>
   <block id="73a89e5a391bfad2dcfbcec41e378787" category="doc">ONTAP Selectのデータトラフィックと管理トラフィックの分離</block>
   <block id="f84037cae3830b722ecf096ad5fd58ef" category="doc">ONTAP Selectの内部ネットワークと外部ネットワーク</block>
@@ -2770,24 +2754,18 @@ storage aggregate show-spare-disks</block>
   <block id="e1822392dfeb820c1cca38e5e718a61f" category="paragraph">ONTAP Selectで使用される仮想環境のため、NICオフロード機能はサポートされません。</block>
   <block id="6c9348bc5d04685460e6acda750ab989" category="list-text">ONTAPポートのプロパティ</block>
   <block id="b360fb78c737d920cd251b2f7358f606" category="paragraph">速度、二重、フロー制御などのONTAPポートのプロパティの変更はサポートされていません。</block>
-  <block id="fcc22b4e3de45bbac50b32226efb8e8c" category="doc">ONTAP Selectのパフォーマンスの概要</block>
-  <block id="5b7b913b9183b40db3cdac93dcffe3d9" category="doc">ONTAP Selectストレージ容量の拡張</block>
-  <block id="180d14e1cfcab830c1ec4fafd5097838" category="doc">ONTAP Selectストレージ：一般的な概念と特徴</block>
   <block id="4c09693df54f78ec01dcfce83626b988" category="doc">ONTAP Select Storage Efficiencyのサポート</block>
-  <block id="e85029c6308bf8469ad5d2bf5ac5a6da" category="doc">ONTAP Selectローカル接続ストレージ用のハードウェアRAIDサービス</block>
   <block id="72270ae5ad1efa50cbda87b77a2b8c8d" category="inline-link-macro">ONTAP SelectソフトウェアRAID構成で障害が発生したドライブの交換</block>
   <block id="9e21cea65d2285f38de1d74bb5ebe82c" category="admonition">ハードウェアRAID構成を使用しているONTAP Select VMから仮想ディスクの接続を解除することはできません。ディスクの接続解除は、ソフトウェアRAID構成を使用しているONTAP Select VMでのみサポートされます。詳細については、を参照してください <block ref="2a48fe6fcfd810b54ef07e2d1e2a735b" category="inline-link-macro-rx"></block> 。</block>
   <block id="07c6a664d186f44a90042e2245e46aad" category="doc">ローカル接続ストレージ用のONTAP SelectソフトウェアRAID構成サービス</block>
   <block id="e263536030472b1b884032009157f00c" category="doc">ONTAP Selectの用語と主要概念</block>
   <block id="b993d6b1ae8a2148a7be773127a7d668" category="doc">ONTAP Selectのビジネスニーズと使用シナリオ</block>
   <block id="18ea6d668ccbbc1b64935d2ae14d9c63" category="doc">ONTAP Selectによるプライベートクラウドとデータセンターのサポート</block>
-  <block id="567999f9c71634f001a831b733088bbc" category="doc">リモートオフィスやブランチオフィスでONTAP Selectを使用</block>
   <block id="de0887504497c1f3eb64ac5f23488612" category="doc">ONTAP Selectクラスタを作成するスクリプトのJSON</block>
   <block id="79ebef96ee386ef1a7dba01d303ce759" category="doc">ONTAP Selectノードライセンスを追加するスクリプト</block>
   <block id="be1f2ab308d7f936426d71ac4b257096" category="doc">ONTAP Selectクラスタを作成するスクリプト</block>
   <block id="d066221405020e2f85c198e0b44e228b" category="doc">ONTAP Selectクラスタを削除するスクリプト</block>
   <block id="3a029b8899590dc6c31883e4d8b049d0" category="doc">ONTAP Selectクラスタノードのサイズを変更するスクリプト</block>
-  <block id="f2b54f29c4af2bc66f70b4a5a52b0e2b" category="doc">ワークフロー1：ESXiでのONTAP Selectシングルノード評価クラスタの作成</block>
   <block id="169dafc7979793a9e61147f233aa45c3" category="doc">ONTAP Select Deployユーティリティのインストールに必要な情報</block>
   <block id="cddb93cf729be75720f6155855c70d38" category="doc">ONTAP Select Deployのホスト管理サーバを変更する</block>
   <block id="7ccffa1050dd38b57df1fa0990bb72a7" category="doc">導入後のONTAP Selectクラスタの初期状態</block>
@@ -2812,8 +2790,6 @@ storage aggregate show-spare-disks</block>
   <block id="834b02e64c437c938996a121579bbd87" category="list-text">VMware ESXi 8.0 U3</block>
   <block id="91aac4a7f60b41d08a32c5e3e97fd852" category="list-text">可能な場合は、すべての外付けストレージアレイで使用可能な冗長性とハイアベイラビリティ（HA）機能が使用されていることを確認します。</block>
   <block id="e3527493b496eac4476a36800671c21b" category="summary">ONTAP Selectの導入計画の一環として、MetroCluster SDSにはいくつかの要件を考慮する必要があります。</block>
-  <block id="61134acc5ec932d98d83e0b1968f4ba0" category="doc">ONTAP Select MetroCluster SDS導入の準備</block>
-  <block id="42696bcb531049bc468130ae11afc8ee" category="doc">ONTAP Selectネットワークに関する考慮事項</block>
   <block id="42e12ad664d00b6d50a44dac72efaa21" category="doc">ONTAP Selectのリモートオフィスとブランチオフィスへの導入</block>
   <block id="852ae4fc33b89c5131b8050b8ab9b9de" category="doc">ONTAP SelectストレージとRAIDに関する考慮事項</block>
   <block id="744c7aceadded1b7d2f7dbabcbe794a8" category="doc">ESXi上のONTAP Select VMware vCenterサーバ</block>
@@ -2821,7 +2797,6 @@ storage aggregate show-spare-disks</block>
   <block id="8a96228950f9c48cb7f24c3b98404d49" category="doc">ONTAP Select Deployメディエーターサービスの管理</block>
   <block id="d2bdabf740cddb35328041a6ee746b12" category="doc">ONTAP Selectの障害が発生したソフトウェアRAIDドライブの交換</block>
   <block id="d2d9b29d15ac79b034bfba1cc5f636be" category="doc">ONTAP Select環境のセキュリティを確保</block>
-  <block id="7bce3fa777739691b187f554fac27625" category="doc">ONTAP Selectの診断とサポート</block>
   <block id="ecc7a573e63ad51d6c5b87c50988984a" category="doc">Storage vMotionを使用したONTAP SelectノードのVMFS6へのアップグレード</block>
   <block id="2d17a30222011fb034c3d9e239fbd264" category="doc">ONTAP Select Deployのドキュメントページへのアクセス</block>
   <block id="4560429c3136b530a65edc28b99c356a" category="doc">ONTAP Select Deploy API呼び出しの理解と実行</block>
@@ -2834,7 +2809,6 @@ storage aggregate show-spare-disks</block>
   <block id="70ea48dd9234010492aec1d6e7a0d297" category="sidebar">ネットワーク接続の確認</block>
   <block id="4ce7782445b66c31b4b4d786806ae7a1" category="sidebar">メディエーターサービスの管理</block>
   <block id="697112fb0ffb252e40d60a5a007943a2" category="sidebar">クラスタを拡張または縮小する</block>
-  <block id="9cc3c3055efc6fc5a45cfce6ac3eda87" category="sidebar">VMビデオコンソールへのアクセス</block>
   <block id="5a3a053ae34a79fb35028f001babbf25" category="sidebar">障害が発生したソフトウェアRAIDドライブの交換</block>
   <block id="b374e4bbc5d3bd65f35605cc784ed685" category="list-text">ONTAP Select 9.14.1では、VMware ESXi 8.0 U2がサポートされています。</block>
   <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
@@ -2975,7 +2949,6 @@ storage aggregate show-spare-disks</block>
   <block id="28ec4566b445eb67771a9a111611e502" category="cell">容量プールを使用する各ノードについて、ライセンスマネージャによって生成される8桁の変数の値</block>
   <block id="35892d48da3c4641520dc5f89430eeaa" category="list-text">容量階層ライセンスは使用できますが、容量プールライセンスはサポートされません。</block>
   <block id="1538605c931beb7706c95917ca61c48d" category="summary">ONTAP Selectの大容量階層または容量プールライセンスは、プラットフォームの3つの容量レベルのいずれかで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。</block>
-  <block id="4be94941d4ae435ad44487d075e7a367" category="doc">ONTAP Selectのプラットフォームライセンスサービスの詳細</block>
   <block id="9cdcaf5a7aae0807b2a785f7d26f1f3f" category="paragraph">ONTAP Selectの大容量階層または容量プールライセンスは、Standard、Premium、PremiumのいずれかのXLレベルで購入できます。これらのライセンスサービスによって、 ONTAP Select を導入するホストの機能が決まります。</block>
   <block id="2f2718c8a2f261e7775daae8fff84dbc" category="section-title">プラットフォームライセンス製品のハードウェアサポートの比較</block>
   <block id="06efa63cc6d93bbf842cc0f903057606" category="open-title">コアアイテム</block>
@@ -3043,7 +3016,6 @@ storage aggregate show-spare-disks</block>
   <block id="4336ee0e2315cb2014ffbaddbb71d150" category="list-text">容量プールライセンスモデルは、Deploy 2.10を使用したONTAP Select 9.5で導入されました。ストレージ容量プールごとに個別のライセンスが必要です。容量プールライセンスはLicense Managerインスタンス（Deployインスタンス）にロックされているため、購入条件に基づいて更新する必要があります。組織内の任意の数の容量プールのライセンスを取得して使用できます。ただし、容量プールはONTAP Selectノードで共有されるため、通常は容量階層のライセンスよりも少ないライセンスが必要です。</block>
   <block id="07dd1826d2d39d21b05b11f5f59d47dd" category="list-text">License Managerは、容量プールのライセンスをサポートするソフトウェアコンポーネントです。現時点では、 Deploy 管理ユーティリティに含まれています。LM は、管理対象の共有プールから ONTAP Select ノードにストレージをリースします。_License Lock ID_ は、各 LM インスタンスを一意に識別する数値文字列であるため、各 Deploy インスタンスを識別します。ライセンスファイルの生成には、容量プールライセンスのシリアル番号とLLIDの両方を使用する必要があります。</block>
   <block id="43b16943d6d5ff73da96f41d29e4303d" category="paragraph"><block ref="43b16943d6d5ff73da96f41d29e4303d" category="inline-link-macro-rx"></block></block>
-  <block id="24d0d0c7fc9a3866a568dea751e3cd63" category="doc">ONTAP Selectのデータ保護と効率性の詳細</block>
   <block id="b489b293d6cbe8b86835d3cac8c315fb" category="section-title">Snapshotによるデータ保護</block>
   <block id="467385c0c4913cc96395e5493d47b3bc" category="paragraph">ONTAP Selectには、SnapshotやSnapMirrorソフトウェアなどのデータ保護機能が搭載されています。オンプレミス、リモートサイト、クラウドのいずれにあっても、データを他のONTAPストレージにすばやくレプリケートできます。データを迅速にリカバリする必要がある場合、SnapRestoreソフトウェアでは、ローカルSnapshotを使用して、容量やファイル数に関係なく、ファイルシステム全体またはデータボリュームを数秒でリカバリできます。</block>
   <block id="787fb8fbafed37b77c3881f9e0c851a0" category="section-title">MetroCluster ソフトウェア・デファインド・ストレージ</block>
@@ -3091,7 +3063,6 @@ storage aggregate show-spare-disks</block>
   <block id="82f452184fa717ab2fcdbde25eea3a2b" category="inline-link-macro">実稼働環境への導入に関するライセンスについて学ぶ</block>
   <block id="74d4caeb059278dbd1c813ff422126a8" category="list-text"><block ref="74d4caeb059278dbd1c813ff422126a8" category="inline-link-macro-rx"></block></block>
   <block id="ac40d7358d4d4fc23aa16496ea43e162" category="summary">ONTAP Selectノードを導入する各ESXiハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが適切に構成され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
-  <block id="48a140923c82edfd6e65489c46f2fd26" category="doc">ONTAP Selectの ESXi ホスト構成と準備チェックリスト</block>
   <block id="cd4dd6c5342dd2939f0e0bdd97cfa640" category="paragraph">ONTAP Selectノードを導入する各ESXiハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが正しく設定され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
   <block id="6943ac53dc25f522d2ecc61d1df4d254" category="admonition">ONTAP Select Deploy管理ユーティリティは、ハイパーバイザーホストに必要なネットワークおよびストレージ設定を実行しません。ONTAPONTAP Selectクラスタを導入する前に、各ホストを手動で準備する必要があります。</block>
   <block id="423f466fab8357286c6cf217990032a9" category="section-title">ステップ1: ESXiハイパーバイザーホストを準備する</block>
@@ -3110,7 +3081,6 @@ storage aggregate show-spare-disks</block>
   <block id="2e5a1a6424ee2d0aa549b427d2f571d2" category="open-title">4ノードクラスター</block>
   <block id="e6a67192413f528c465842e03f8443e0" category="paragraph">次の図は、2 つのネットワークを示す 4 ノード クラスターを示しています。内部ネットワークでは、 ONTAP クラスタネットワークサービスに対応するためにノード間で通信できます。外部ネットワークは、クライアント、管理、およびクラスタ間のレプリケーションのトラフィックを伝送します（ SnapMirror / SnapVault ）。</block>
   <block id="9450ade0fc753dddabd4ea63d8bb1187" category="summary">ONTAP Selectノードを導入する各KVMハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが適切に設定され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
-  <block id="6ca9942b969b8c587ad10afd9e0ef119" category="doc">ONTAP Selectの KVM ホスト構成と準備のチェックリスト</block>
   <block id="75b870251dc6cf53eee7c05860c964ad" category="paragraph">ONTAP Selectノードを導入する各KVMハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが正しく設定され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
   <block id="70927fa219016e15d1c052484c1bd8b6" category="section-title">ステップ1: KVMハイパーバイザーホストを準備する</block>
   <block id="f815b88c3f2e295185a91f57bfa50353" category="paragraph">ONTAP Selectノードが展開されている各 Linux KVM サーバを準備する必要があります。また、ONTAP Select Deploy管理ユーティリティを導入するサーバを準備する必要があります。</block>
@@ -3427,7 +3397,6 @@ storage aggregate show-spare-disks</block>
   <block id="86069ab716d4c2ffd77a81bd3827427f" category="list-text">ローカルワークステーションのコマンドシェルで、<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) ユーティリティを使用して、次の例に示すように、イメージ ファイルをONTAP Select Deploy 仮想マシンにアップロードします。</block>
   <block id="52396dafee59debc72b8fccab2acb4c5" category="paragraph">コマンド例:</block>
   <block id="3817e5dd56e94cb6952f7eb0ab2a6acd" category="summary">ONTAP Select 9.15.1 以降では、既存のクラスタのサイズを増減できます。</block>
-  <block id="b4ec4e16d52cf8a4ab8bd5925fba2631" category="doc">ESXi または KVM ホスト上のONTAP Selectクラスタを拡張または縮小する</block>
   <block id="7e6bf0ef053af206603d7df47832fbd5" category="inline-link-macro">ONTAP Select AutoSupport機能が設定されていることを確認する</block>
   <block id="785cc01cf7efbfd5a1fd1d4863d9b83a" category="paragraph">クラスターを展開した後、<block ref="af0babf33c9640eb381afcb6484c80f3" category="inline-link-macro-rx"></block>その後<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block>。</block>
   <block id="b7f5f41e99a6f8c3c3a0c1843b24c17b" category="sidebar">ESXi のアップグレード</block>
@@ -3544,7 +3513,6 @@ storage aggregate show-spare-disks</block>
   <block id="d65f97fb1a167a35c6951233420ba74d" category="list-text">Red Hat Enterprise Linux (RHEL) 64-bit 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.8、8.7、および 8.6</block>
   <block id="9619f591215dbfb1d346be6b36138040" category="paragraph">容量は中央プールに固定され、組織内の多数のノード間で共有できます。</block>
   <block id="7e440cfb9036689e833e4df17a0ae529" category="summary">Capacity Tiers と Capacity Pools のライセンス モデルにはいくつかの違いがあります。</block>
-  <block id="fee8461b7e8ddef9ec0ec4e060511b93" category="doc">ONTAP Select容量階層と容量プールのライセンスを比較する</block>
   <block id="446240bc49bf82cd1fa165cc8e5438c5" category="cell">NetApp は9桁の数字を生成し、ノードに割り当てる</block>
   <block id="36fce331144baf1f211037348fdd68dc" category="cell">NetAppは9桁の数字を生成し、それを容量プールに割り当てます</block>
   <block id="7775850407e0cb325d7561581f3925f0" category="cell">購入に基づく固定期間（更新が必要）</block>
@@ -3582,7 +3550,6 @@ storage aggregate show-spare-disks</block>
   <block id="55ecb9826f7deb57441eeedae69c0a6d" category="inline-link-macro">ONTAP Selectライセンスの管理について学ぶ</block>
   <block id="e9cb552b57937edc77138a16fc98ada5" category="paragraph"><block ref="e9cb552b57937edc77138a16fc98ada5" category="inline-link-macro-rx"></block></block>
   <block id="f4f97ec2d091cfbe40253c1e9206cef4" category="summary">Capacity Tiers ライセンスは、各ノードが管理する基盤となるディスク容量に基づいており、ノード、HA ペア、またはクラスタの使用可能容量に基づいていません。各 Capacity Tiers ライセンスは、指定された容量の個々のノード シリアル番号に割り当てられ、付随するサポート契約が必要です。</block>
-  <block id="120dfe55114bd18d238461d392d2851f" category="doc">ONTAP Select容量プールライセンスのサイズ設定に関する考慮事項</block>
   <block id="18bea776141012ab15d569765a0801f0" category="list-text">シングルノード クラスタのオーバーヘッド係数は1.13です</block>
   <block id="50e947c808b914257cb5209da74fa627" category="list-text">マルチノード クラスタのオーバーヘッド係数は2.67です</block>
   <block id="3d1317b428299aa3785275ff6eb8e119" category="cell">シングルノード</block>
@@ -3591,7 +3558,6 @@ storage aggregate show-spare-disks</block>
   <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">次の手順</block>
   <block id="336320a7d1fb36ba0e0e250060a962ec" category="inline-link-macro">ONTAP Select の Capacity Pools ライセンスを取得する</block>
   <block id="349097419d01aa81b07916c8f94601e6" category="paragraph"><block ref="349097419d01aa81b07916c8f94601e6" category="inline-link-macro-rx"></block></block>
-  <block id="32f9dc8bfa4ac02c770716ebf1eaf2df" category="doc">ONTAP Select Capacity Tiersライセンスのサイズ設定に関する考慮事項</block>
   <block id="c5915502bf73930e10d7d62d217a0adc" category="paragraph">Capacity Tiersライセンスは、各ONTAP Selectノードによって管理される基盤となるディスク容量に基づいており、ノード、HAペア、またはクラスタの使用可能容量に基づいていません。各Capacity Tiersライセンスは、指定された容量の個々のノードシリアル番号に割り当てられ、付随するサポート契約が必要です。</block>
   <block id="5aabc9069557be7e4aeff466605cbc75" category="cell">シングル ノード</block>
   <block id="754bc948e75e62a589ebb57f97b00d1a" category="paragraph">マルチノード クラスタ内の HA ペアごと：</block>
@@ -3618,11 +3584,9 @@ storage aggregate show-spare-disks</block>
   <block id="5ad7da60ec9981258981a60e93dca7dd" category="list-text">*製品シリアル番号*を含む、*ライセンス ジェネレーター* ページの残りのフィールドに入力します。</block>
   <block id="02fa13004899b54713212c43efd75d1b" category="paragraph">「製品シリアル番号」は、ONTAP Selectノードのシリアル番号です。</block>
   <block id="85281ac8736ae43694fb2a98eed37831" category="paragraph">*ライセンスのダウンロード*または*ライセンスのメール送信*のいずれかを選択できます。</block>
-  <block id="457728d9249110c26fc907c7cbd93060" category="sidebar">評価ライセンスについて学ぶ</block>
   <block id="baf734525ec008b6cbc548f24ce32475" category="sidebar">本番ライセンスについて学ぶ</block>
   <block id="d3a14fe349c75db44b4f42be06485d39" category="sidebar">容量階層と容量プール</block>
   <block id="3b32ccaa0766722aa2afed59d3051ca8" category="sidebar">ライセンスを購入する</block>
-  <block id="9be9343d8314647310e47876ae581a39" category="sidebar">ライセンスのサイズ設定に関する考慮事項</block>
   <block id="f207357dde5b74df08cbece4e6ecc93d" category="sidebar">ライセンスを取得する</block>
   <block id="e9acce0d3652d40c91f9bd7e814291c0" category="inline-link-macro">NetApp Support Site ダウンロード</block>
   <block id="17838336399b2e69627cea0614c17f30" category="list-text"><block ref="8e92c016cc209b5ea10cc71b5bfe5577" category="inline-link-macro-rx"></block>ページにアクセスします。</block>
@@ -4005,4 +3969,44 @@ storage aggregate show-spare-disks</block>
   <block id="bd88bf77fede236871bbdaecddefca53" category="list-text">HAペアでは、冗長性を確保するためにデータが両方のノード間で複製されます。そのため、HAペアで10 TBの利用可能なデータを使用する場合、いずれかのノードがオフラインになった場合に備えて、ノードごとに10 TBの容量が必要になります。</block>
   <block id="c0945522d1f6ae9ba28c16c4d8e24c38" category="list-text">ノードあたりのライセンス容量は14TB（5×2.67＝13.35）です。HA構成の場合、10TBの使用可能容量を確保するには、14TBのライセンスが2つ必要です。</block>
   <block id="74b1b9052c3c702d9cea5b8cd980a547" category="paragraph">HAペアのノードごとに：</block>
+  <block id="374fd6d8cc46742d7f222ee4d0032d06" category="doc">ONTAP Select データ保護と効率性</block>
+  <block id="37e47edc52662df47ba4f7cb5426a905" category="doc">ONTAP Select の管理について学ぶ</block>
+  <block id="f0d342fa2629145fee40586516d069d4" category="doc">ブラウザを使用した ONTAP Select Deploy API へのアクセスについて</block>
+  <block id="bd922b949dfd0f5015ae892b074c86fe" category="doc">Python を使用した ONTAP Select Deploy API へのアクセスについて</block>
+  <block id="830b37e1792571a94c8f2e142ec71e6f" category="doc">ONTAP Select Deploy API ワークフローの使用方法について学ぶ</block>
+  <block id="57c2192d371e5d6ffed970b8060cd9f5" category="doc">ONTAP Select Deploy APIへのアクセスについて</block>
+  <block id="60259b7656595391fda931689cb5cb7f" category="doc">ONTAP Select クラスターのデプロイと管理のための REST Web サービスについて</block>
+  <block id="604c5195cdcb73ac8392d4ed143900f5" category="doc">ONTAP Select Deploy 向け Python スクリプトについて</block>
+  <block id="2f2d0dac4c403b493fb5e8532be94232" category="doc">ONTAP Select HAによるデータ保護の強化</block>
+  <block id="ac562c2dbd3b8631c53c5c4a091bb34f" category="doc">ONTAP Select容量階層と容量プールのライセンス比較</block>
+  <block id="b0b8cf0b3b07b2bf38733ca70970fe1a" category="doc">ONTAP Select のプラットフォームライセンスの提供</block>
+  <block id="0e487a9412079574703cbaef01b17f23" category="doc">ONTAP Select のライセンス購入ワークフロー</block>
+  <block id="aa75ac7723ea758193118b7d2dd533b9" category="doc">ONTAP Select Deploy について</block>
+  <block id="2dfbf69454cf0d709c2534496ca26479" category="doc">ONTAP Select のパフォーマンスについて学ぶ</block>
+  <block id="236f0c179844e96f0bbb83b11155c27e" category="doc">ONTAP Select ストレージ容量の増加に関する考慮事項</block>
+  <block id="2f602e200eb803a080145dc400b89b38" category="doc">ONTAP Select の一般的なストレージ特性について</block>
+  <block id="b17d8f81c665435778657d2fbd01dfe2" category="doc">ローカル接続ストレージを使用した ONTAP Select のハードウェア RAID サービス</block>
+  <block id="f6c1e5144436a8b950313a679c0f951a" category="doc">ONTAP Select リモートオフィスおよびブランチオフィス向けのユースケース</block>
+  <block id="3205b956a440a5064cc130d79ad166bc" category="doc">ONTAP Select 用に ESXi ホストを準備する</block>
+  <block id="c1dc49d041aef30ada0e85f7632085ee" category="doc">ONTAP Select 用に KVM ホストを準備する</block>
+  <block id="aed7657def5c64d964e831a2205c5b4e" category="doc">ONTAP Select の法的通知</block>
+  <block id="9416497f668ea2bfba48d9ebd6b67b29" category="doc">ESXi 上での ONTAP Select シングルノード評価クラスタの作成</block>
+  <block id="e354af9228cee7b217b134d4a1a2e400" category="doc">ONTAP Select MetroCluster SDS 導入要件</block>
+  <block id="d07fdbe1aaea0a4d53b825b146643572" category="doc">ONTAP Select ネットワーク要件</block>
+  <block id="5e1f16d2572c5a66822138bf9b7326ba" category="doc">ONTAP Select の容量プールライセンスサイズの決定</block>
+  <block id="c00ac1b18d84fff7bbf4760c9b4e23b0" category="doc">ONTAP Select の容量ティアライセンスサイズの決定</block>
+  <block id="d2d0829938e88afff6042d0a5eac4e74" category="doc">ONTAP Select クラスタノードのサイズ変更</block>
+  <block id="4bf856dcf874a77bd96aff6e04aa7aef" category="doc">ONTAP Select の診断とサポートの管理</block>
+  <block id="6beca47bb8f34bb637db0116eee5c174" category="doc">ONTAP Select ビデオコンソールへのアクセス</block>
+  <block id="851f7bf9b2c883c2b30f957c8b6f8d6a" category="doc">ONTAP Select ノード間のネットワーク接続を確認する</block>
+  <block id="ad18a17d3c6f3699e8114e6ba4d091df" category="doc">ESXiまたはKVMホスト上のONTAP Selectクラスタの拡張または縮小</block>
+  <block id="5b8b5ae2deba1b6579e39def9460550a" category="sidebar">ハイパーバイザーホスト環境</block>
+  <block id="8b3398557c7fb55b263bf52bece82b68" category="sidebar">評価ライセンス</block>
+  <block id="ad98307e279e8369c80fc498106160d2" category="sidebar">容量ティアのライセンスサイズを決定する</block>
+  <block id="11f5f4c2a5569d4e34b180729cd689bc" category="sidebar">キャパシティプールのライセンスサイズを決定する</block>
+  <block id="0d9029e785d6af991e53b31b279e9aa4" category="sidebar">クラスタを管理します。</block>
+  <block id="f86585270713788c4d391e92b289c1b7" category="sidebar">VMビデオコンソールへのアクセス</block>
+  <block id="9f0562c731b8981f21e8a7ac75bd947f" category="sidebar">ライセンスを管理します。</block>
+  <block id="3ed621212c6f1b8569fd40f868bd89b6" category="sidebar">ESXi上にクラスタを作成する</block>
+  <block id="b420f92a45e1d6fca9bee10cca41ea8e" category="sidebar">スクリプトを使用してクラスターを作成する</block>
 </blocks>

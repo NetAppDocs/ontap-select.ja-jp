@@ -4,7 +4,7 @@ permalink: concept_stor_capacity_inc.html
 keywords: ontap select, deploy, increase storage 
 summary: ONTAP Deploy は、 ONTAP Select クラスタ内の各ノードにストレージを追加し、ライセンスを付与するために使用できます。 
 ---
-= ONTAP Selectストレージ容量の拡張
+= ONTAP Select ストレージ容量の増加に関する考慮事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

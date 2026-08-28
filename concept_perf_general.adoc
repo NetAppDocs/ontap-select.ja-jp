@@ -4,7 +4,7 @@ permalink: concept_perf_general.html
 keywords: ontap select, performance 
 summary: ONTAP Selectクラスタのパフォーマンスは、ハードウェア構成によって異なります。 
 ---
-= ONTAP Selectのパフォーマンスの概要
+= ONTAP Select のパフォーマンスについて学ぶ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

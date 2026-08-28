@@ -4,7 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps 
 summary: ONTAP Select 9.15.1 以降では、既存のクラスタのサイズを増減できます。 
 ---
-= ESXi または KVM ホスト上のONTAP Selectクラスタを拡張または縮小する
+= ESXiまたはKVMホスト上のONTAP Selectクラスタの拡張または縮小
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: reference_plan_ots_mcc_sds.html
 keywords: plan, planning, metrocluster, metrocluster sds 
 summary: ONTAP Selectの導入計画の一環として、MetroCluster SDSにはいくつかの要件を考慮する必要があります。 
 ---
-= ONTAP Select MetroCluster SDS導入の準備
+= ONTAP Select MetroCluster SDS 導入要件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

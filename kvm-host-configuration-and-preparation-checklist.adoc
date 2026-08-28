@@ -4,7 +4,7 @@ permalink: kvm-host-configuration-and-preparation-checklist.html
 keywords: ontap select, pre-installation checklist, kvm, host preparation 
 summary: ONTAP Selectノードを導入する各KVMハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが適切に設定され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。 
 ---
-= ONTAP Selectの KVM ホスト構成と準備のチェックリスト
+= ONTAP Select 用に KVM ホストを準備する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

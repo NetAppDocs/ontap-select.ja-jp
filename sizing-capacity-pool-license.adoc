@@ -4,7 +4,7 @@ permalink: sizing-capacity-pool-license.html
 keywords: license, licensing, Capacity Tiers, usable, space 
 summary: Capacity Tiers ライセンスは、各ノードが管理する基盤となるディスク容量に基づいており、ノード、HA ペア、またはクラスタの使用可能容量に基づいていません。各 Capacity Tiers ライセンスは、指定された容量の個々のノード シリアル番号に割り当てられ、付随するサポート契約が必要です。 
 ---
-= ONTAP Select容量プールライセンスのサイズ設定に関する考慮事項
+= ONTAP Select の容量プールライセンスサイズの決定
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

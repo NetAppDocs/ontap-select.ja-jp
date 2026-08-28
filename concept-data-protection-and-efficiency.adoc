@@ -4,7 +4,7 @@ permalink: concept-data-protection-and-efficiency.html
 keywords: ontap select, metrocluster software defined storage, mc sds storage 
 summary: ONTAP Select MetroCluster SDS は、強化された保護機能とコスト効率の高い実装を提供します。 
 ---
-= ONTAP Selectのデータ保護と効率性の詳細
+= ONTAP Select データ保護と効率性
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

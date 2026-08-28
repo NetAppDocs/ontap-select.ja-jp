@@ -4,7 +4,7 @@ permalink: concept_adm_before.html
 keywords: administer, administering, web, before you begin 
 summary: ONTAP Select クラスタを作成したあと、さまざまな管理タスクを実行して導入をサポートできます。注意が必要な一般的な考慮事項がいくつかあります。 
 ---
-= ONTAP Select の管理を開始する前に
+= ONTAP Select の管理について学ぶ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

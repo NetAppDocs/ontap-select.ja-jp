@@ -4,7 +4,7 @@ permalink: esxi-host-configuration-and-preparation-checklist.html
 keywords: ontap select, pre-installation checklist, esxi, host preparation 
 summary: ONTAP Selectノードを導入する各ESXiハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが適切に構成され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。 
 ---
-= ONTAP Selectの ESXi ホスト構成と準備チェックリスト
+= ONTAP Select 用に ESXi ホストを準備する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

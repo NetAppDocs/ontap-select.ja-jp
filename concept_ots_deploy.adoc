@@ -4,7 +4,7 @@ permalink: concept_ots_deploy.html
 keywords: ontap select deploy, deploy administration utility, deploy utility, functionality, accessing 
 summary: ONTAP Select Deploy は、 ONTAP Select クラスタの導入と管理に使用する管理ユーティリティです。 
 ---
-= ONTAP Select 導入
+= ONTAP Select Deploy について
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
