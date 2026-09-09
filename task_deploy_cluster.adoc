@@ -4,7 +4,7 @@ permalink: task_deploy_cluster.html
 keywords: install, installing, deploy ontap select cluster, create cluster 
 summary: ONTAP Select Deploy 管理ユーティリティに付属の Web ユーザインターフェイスを使用して、シングルノードまたはマルチノードの ONTAP Select クラスタを導入できます。 
 ---
-= ONTAP Select クラスタを導入する
+= Web UIを使用してONTAP Select クラスタを導入する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

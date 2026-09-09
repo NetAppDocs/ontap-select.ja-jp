@@ -249,7 +249,7 @@ sidebar:
       - title: 作業を開始する前に
         url: "/concept_api_before_workflows.html"
       - title: ESXi上にクラスタを作成する
-        url: "/reference_api_workflow01.html"
+        url: "/reference_api_workflow.html"
     - title: Python を使用してアクセスします
       entries:
       - title: 作業を開始する前に
@@ -258,7 +258,7 @@ sidebar:
         url: "/concept_api_understanding_scripts.html"
     - title: Python コードサンプル
       entries:
-      - title: スクリプトを使用してクラスターを作成する
+      - title: クラスタを作成するためのスクリプト
         url: "/reference_api_script_cc.html"
       - title: JSON を使用してクラスタを作成します
         url: "/reference_api_json_cc.html"

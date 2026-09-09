@@ -4,7 +4,7 @@ permalink: concept_lic_evaluation.html
 keywords: license, licensing, evaluation, upgrade license 
 summary: 購入を決定する前に ONTAP Select を評価したい場合は、評価用ライセンスを使用できます。評価用ライセンスは ONTAP Select Deploy 管理ユーティリティに含まれており、評価用導入の一環として各 ONTAP Select ノードに自動的に適用されます。 
 ---
-= ONTAP Select環境用の評価ライセンス
+= ONTAP Select導入の評価ライセンスについて
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

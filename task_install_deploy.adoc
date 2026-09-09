@@ -16,6 +16,9 @@ summary: ONTAP Select Deploy 管理ユーティリティをインストールし
 [role="lead"]
 ONTAP Select Deploy 管理ユーティリティをインストールし、ユーティリティを使用して ONTAP Select クラスタを作成する必要があります。
 
+.作業を開始する前に
+link:kvm-host-configuration-and-preparation-checklist.html["インストール前のチェックリスト"]をレビューしました。
+
 
 
 [[step-1-download-the-virtual-machine-image]]

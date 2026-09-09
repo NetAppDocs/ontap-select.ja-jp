@@ -16,4 +16,28 @@ summary: ONTAP Select クラスタの導入に使用できるワークフロー�
 [role="lead"]
 次のワークフローを使用して、 ONTAP Select クラスタを導入および管理できます。
 
-image:deploy_workflow2.png["では、 ONTAP Select クラスタの導入に必要な完全なワークフローについて説明します。"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:reference_plan_ots_general.html["展開計画を立て、環境を準備する"]
+[role="quick-margin-para"]
+ONTAP Select ノード、ストレージ、ネットワーク、およびハイパーバイザー環境の計画要件を確認してください。事前に環境を準備しておくことで、導入時の問題を回避できます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] link:task_install_deploy.html["ONTAP Select Deploy 管理ユーティリティのインストール"]
+[role="quick-margin-para"]
+ONTAP Select クラスタのデプロイと管理に使用するユーティリティをインストールします。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] link:concept_lic_workflow.html["本番環境への導入に必要なライセンスを取得する"]
+[role="quick-margin-para"]
+本番環境への導入に必要なライセンスを購入し、適用してください。容量階層型ライセンスモデルと容量プール型ライセンスモデルのいずれかを選択できます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"] ONTAP Select Deploy管理ユーティリティを使用してONTAP Select クラスタをデプロイする
+[role="quick-margin-para"]
+Deploy ユーティリティを使用して ONTAP Select クラスタを作成します：
+
+[role="quick-margin-list"]
+* link:task_deploy_cluster.html["Web UIを使用してデプロイする"]
+* link:task_cli_deploy_cluster.html["CLIを使用してデプロイする"]
+* link:reference_api_workflow.html["REST API を使用してデプロイする"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] link:concept_adm_before.html["標準の NetApp 管理ツールとインターフェースを使用して ONTAP Select クラスタを管理する"]
+[role="quick-margin-para"]
+他の ONTAP クラスターで使用するのと同じ管理ツールおよびインターフェースを使用して、ONTAP Select クラスターを管理します。
