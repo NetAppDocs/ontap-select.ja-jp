@@ -2499,7 +2499,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="d8ca36c2c2dd21202d873bdf26e7ec79" category="cell">仮想マシンファイルが格納されているハイパーバイザーデータストアの識別子（約40GBが必要）。</block>
   <block id="a295d719442375039396c1ff541e8a8f" category="paragraph">ESXiハイパーバイザーの場合は、ONTAP Select Deploy VMの導入を準備する必要があります。</block>
   <block id="171890587c5a7811013eb0e4f687968f" category="list-text">Deploy VMにIPアドレスを動的に割り当てる場合は、VMware環境でDHCPを有効にします。</block>
-  <block id="4ecc6637981131c676cdedcda970a661" category="paragraph">ESXiハイパーバイザーとKVMハイパーバイザーの場合は、VMの作成時に使用する設定情報（VMの名前、外部ネットワーク、ホスト名など）が必要です。静的なネットワーク設定を定義する場合は、次の追加情報 が必要です。</block>
   <block id="d98fb3ce51b49ee9b9e8ea2645524f08" category="list-text">Deploy VMのIPアドレス</block>
   <block id="30e58d6b4fce06c690ff3897ae040f55" category="paragraph">vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、Deploy VMのコンソールを使用してネットワークを設定できます。</block>
   <block id="922bafb0938c68773e29242e2675f0b9" category="paragraph">実行する手順は、ESXiハイパーバイザーとKVMハイパーバイザーのどちらを使用しているかによって異なります。</block>
@@ -2943,13 +2942,10 @@ storage aggregate show-spare-disks</block>
   <block id="e629ab9880aae245163ce498ab9e1389" category="cell">小規模および中規模</block>
   <block id="a09a88160dc1591cac42ba911581e599" category="cell">小規模、中規模、大規模</block>
   <block id="93c34d5f173f74aeed0b64401f2a6edc" category="cell">ハードウェアRAIDコントローラを搭載したローカルDAS</block>
-  <block id="2feb1874507e2463194f3c757efe6209" category="cell">8~60ドライブ</block>
   <block id="7742d08808786c4493a46e06b5648ff9" category="cell">HDD（SAS、NL-SAS、SATA）</block>
   <block id="fea45fcfeb873048ff2e2be995d8cb77" category="cell">4~60台のドライブ</block>
   <block id="bb878052f3499d534f13d06526b7d885" category="cell">SSD（SAS）</block>
-  <block id="25a5b17224d1f38c386742ec7cbc343b" category="cell">4~60ドライブ（SSDのみ）</block>
   <block id="d8e31ece33b3b9fb9373e996815932a7" category="cell">ソフトウェアRAIDを使用したローカルDAS</block>
-  <block id="a64e775634e2bf5c5e3f63f149af2601" category="cell">ドライブ×4~14本（NVMeのみ）</block>
   <block id="518c7a2538245dd75c6daac2212b8316" category="cell">外付けアレイ^1^</block>
   <block id="8731210144d2e5094fb4001b893115d2" category="cell">外付けアレイでホストされているデータストアがFC、FCoE、iSCSI、およびNFS経由で接続されている（KVMではNFSはサポートされていません）。これらのデータストアは、高可用性と耐障害性を提供します。</block>
   <block id="563a5726768d43a126f11bc13b3361dd" category="paragraph">^1^外部アレイプロトコルのサポートには、ネットワークストレージの接続性が反映されています。</block>
@@ -3272,7 +3268,6 @@ storage aggregate show-spare-disks</block>
   <block id="a72643a79ec8e9d1d5c61ff835cabbeb" category="list-text">ONTAP Select 9.16.1が最初にインストールされます</block>
   <block id="588a4431a3d49dda029dcc4161fc2be3" category="list-text">ノードをバージョン 9.17.1 にアップグレードし、必要に応じてバージョン 9.16.1 に戻すことができます。</block>
   <block id="c762418e7ca866adad88c4350fc20ef0" category="list-text">ONTAP Select 9.17.1が最初にインストールされます</block>
-  <block id="7b5019dce3bb835acb62c31388f47aef" category="cell">VMware vSphere 9.0 VMware vSphere 8.0GA およびアップデート 1 ～ 3 VMware vSphere 7.0GA およびアップデート 1 ～ 3C</block>
   <block id="709b51c435c268c165dc26b6de6a856e" category="list-text">Deploy 管理ユーティリティには、 ONTAP Selectの 1 つのバージョンのみが含まれています。含まれるバージョンは、リリース時点で利用可能な最新バージョンです。ONTAPONTAP Selectイメージインストール機能を使用すると、以前のバージョンのONTAP SelectをDeployユーティリティのインスタンスに追加できます。これにより、 ONTAP Selectクラスタの導入時に使用できるようになります。見る<block ref="9252191d0d6c29910ebabc98ee426eb0" category="inline-link-macro-rx"></block>。</block>
   <block id="d4859de543e918748cbd58f23dedb243" category="list-text">ONTAP Select 9.17.1 には、VMware ESXi 9.0 のサポートが含まれています。</block>
   <block id="bc70eaa4fe619d482b08c680b31e9639" category="paragraph">クラスターの作成後も含め、デプロイ構成データを定期的にバックアップすることがベストプラクティスです。これは、2ノードクラスタの場合、メディエーター構成データがバックアップに含まれるため、特に重要になります。</block>
@@ -4035,4 +4030,14 @@ storage aggregate show-spare-disks</block>
   <block id="cdf955804034c3c67f90a9fa2b26792d" category="paragraph"><block ref="1a659edfd1511c28d59e934c80be869d" category="inline-link-macro-rx"></block>をレビューしました。</block>
   <block id="e16c906ba61aeeafbcb69e14b4357d15" category="sidebar">クラスタを作成するためのスクリプト</block>
   <block id="9a2f5932020cd5f8335afc3f02118937" category="sidebar">ONTAPコミュニティ</block>
+  <block id="50ae596e882ccedcefde5c47743d7203" category="cell">8～60ドライブ</block>
+  <block id="70d9e3c68d42d6ec42ab792e06c44357" category="cell">NVMe</block>
+  <block id="09c766d054990e91a8bd7172378ef91f" category="cell">4～14ドライブ</block>
+  <block id="4afe31410695c2d966b3cab63555adc2" category="cell">4～14台のドライブ（NVMeのみ）</block>
+  <block id="a993152ace9c48fc9ffe20e1239c701e" category="cell">VMware vSphere 9.1、9.0 VMware vSphere 8.0GAおよびアップデート1～3</block>
+  <block id="d6a844c0eee1b2460b68d5e1674ce3ee" category="list-text">ONTAP Select 9.19.1には、VMware ESXi 9.1のサポートが含まれています。</block>
+  <block id="7fad4e1ab4f0475552986341e454b657" category="list-text">VMware ESXi 9.1</block>
+  <block id="e95da606b42156a1d47560476c9088a5" category="list-text">ESXi 9.1</block>
+  <block id="05297b8670c42857ef0d5c0e4996e75c" category="paragraph">VMを作成する際には、VM名、外部ネットワーク、ホスト名など、使用する構成情報が必要です。静的ネットワーク構成を定義する際には、以下の追加情報が必要です：</block>
+  <block id="9db175ef7b9ec37a8ebe335363d8fbe5" category="paragraph">KVMハイパーバイザーの場合、VMを作成する際に使用する構成情報（VM名、外部ネットワーク、ホスト名など）が必要です。静的ネットワーク構成を定義する際には、以下の追加情報が必要です：</block>
 </blocks>

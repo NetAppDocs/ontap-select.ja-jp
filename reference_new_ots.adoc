@@ -29,6 +29,7 @@ ONTAP Select はクラウドキーマネージャーをサポートしていま�
 
 --
 Advanced Micro Devices（AMD）プロセッサのサポート:: ONTAP Select 9.19.1以降、ONTAP SelectはKernel-Based Virtual Machine（KVM）およびESXiハイパーバイザーホスト上でAMDプロセッサをサポートします。詳細については、link:reference_plan_ots_hardware.html["VMware ハイパーバイザーとハードウェアに関する考慮事項"]を参照してください。
+VMware ESXiのサポートを強化:: ONTAP Select 9.19.1には、VMware ESXi 9.1のサポートが含まれています。
 
 
 

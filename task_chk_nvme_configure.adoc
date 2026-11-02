@@ -39,6 +39,7 @@ NVMe デバイスで VMDirectPath I/O パススルーを使用することで、
 --
 ESXi は次のハイパーバイザー バージョンでサポートされています。
 
+** VMware ESXi 9.1
 ** VMware ESXi 9.0
 ** VMware ESXi 8.0 U3
 ** VMware ESXi 8.0 U2
