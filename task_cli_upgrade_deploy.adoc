@@ -16,7 +16,7 @@ summary: コマンドラインインターフェイスを使用して、既存�
 [role="lead"]
 ONTAP Select Deploy ユーティリティ CLI を使用して、既存の ONTAP Select Deploy ユーティリティ仮想マシンをインプレースでアップグレードします。
 
-ONTAP Select Deploy 9.18.1または9.17.1からONTAP Select Deploy 9.19.1に直接アップグレードできます。たとえば、ONTAP Select Deploy 9.16.1などの以前のリリースからアップグレードするには、まずONTAP Select Deploy 9.17.1または9.18.1にアップグレードしてから、ONTAP Select Deploy 9.19.1にアップグレードする必要があります。
+ONTAP Select Deploy 9.19.1または9.18.1からONTAP Select Deploy 9.20.1に直接アップグレードできます。たとえば、ONTAP Select Deploy 9.17.1などの以前のリリースからアップグレードするには、まずONTAP Select Deploy 9.18.1または9.19.1にアップグレードしてから、ONTAP Select Deploy 9.20.1にアップグレードする必要があります。
 
 [NOTE]
 ====

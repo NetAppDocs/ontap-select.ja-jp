@@ -19,6 +19,9 @@ NVMe ドライブをソフトウェア RAID で使用する予定の場合は、
 NVMe デバイスで VMDirectPath I/O パススルーを使用することで、データ効率を最大化できます。この設定では、ドライブが ONTAP Select 仮想マシンに公開されるため、 ONTAP からデバイスに直接 PCI アクセスできます。
 
 
+NOTE: ONTAP Selectは、Hyper-Vホスト上でNVMeドライブをSCSIディスクとしてサポートします。ONTAP Selectは、Hyper-Vホスト上でNVMeドライブを個別のデバイス割り当て（パススルーデバイス）としてサポートしていません。
+
+
 
 [[step-1-configure-the-host]]
 == ステップ1: ホストを構成する

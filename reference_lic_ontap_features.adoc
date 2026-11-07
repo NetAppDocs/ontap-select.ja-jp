@@ -25,73 +25,98 @@ NOTE: ハードウェア固有の依存関係を持つONTAP 機能は、一般�
 [[licensed-ontap-features]]
 == デフォルトでライセンスされるONTAP機能
 
-ONTAP Selectでは、次のONTAP機能がサポートされており、デフォルトでライセンスが付与されています。
+以下のONTAP機能は、ONTAP Selectでサポートされており、デフォルトでライセンスが付与されています。
 
-* Autonomous Ransomware Protection（ARP）（手動更新）
-* CIFS
-* 重複排除機能と圧縮機能
-* Key Management Interoperability Protocol（KMIP）を使用した外部キー管理
-+
-link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["外部キー管理の有効化と設定"^]について学ぶ。
-
-* FlexCache
-+
-ONTAP Selectは、ライトバック機能付きFlexCacheキャッシュボリュームをサポートしています。ライトバック機能を持つFlexCacheオリジンボリュームはサポートされていません。
-
-+
-link:concept_ots_overview.html#flexcache-write-back-with-ontap-select["ONTAP SelectでのFlexCacheライトバックの詳細"]
-
-* FlexClone
-* iSCSI
-* NDMP
-* NetApp Volume Encryption （規制対象外の国のみ）
-* NFS
-* NVMe over TCP
-* ONTAP のマルチテナンシー機能
-* ONTAP S3
-* S3 SnapMirror
-* SnapLock Select
-+
-SnapLock SelectはONTAP Select向けに設計されたONTAP SnapLockの実装であり、SnapLock Enterpriseが含まれています。SnapLock Complianceは含まれていません。
-
-+
-link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^]について学ぶ
-
-* SnapMirror
-+
-ONTAP Selectは、非同期 SnapMirrorにおけるコンシステンシー グループをサポートしていません。
-
-* SnapRestore
-* SnapVault
-* Storage VMディザスタリカバリ（SVM DR）
-+
-ONTAP SelectはSVM DRをソースと宛先の両方としてサポートし、最大16件の関係を設定できます。SVM DRのサポートは、ソースONTAPバージョンからバージョン+2までの使用に限定されます。たとえば、ONTAP Select 9.16.1ソースは、宛先ONTAPバージョン9.16.1、9.17.1、または9.18.1に接続できます。
+[cols="1,1,1"]
+|===
+| 機能 | 詳細情報 | Notes 
 
 
+| 自律型ランサムウェア対策（ARP） | link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP自律型ランサムウェア対策"^] | ONTAP Selectは、ARPの手動アップデートのみをサポートしています。 
 
+
+| CIFS | link:https://docs.netapp.com/us-en/ontap/smb-admin/index.html["ONTAP SMB"^] |  
+
+
+| 重複排除機能と圧縮機能 | link:https://docs.netapp.com/us-en/ontap-restapi/storage_volumes_endpoint_overview.html["ストレージボリュームの管理"^] |  
+
+
+| Key Management Interoperability Protocol（KMIP）を使用した外部キー管理 | link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["外部キー管理の有効化と設定"^] |  
+
+
+| FlexCache | link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html["ONTAP FlexCacheライトバック"^] | ONTAP Selectは、ライトバック機能付きのFlexCacheキャッシュボリュームをサポートしています。*注意*：ONTAP SelectでのFlexCacheライトバックには制限があります。詳細については、link:concept_ots_overview.html#flexcache-write-back-with-ontap-select["FlexCache による ONTAP Select への書き戻し"]を参照してください。 
+
+
+| FlexClone | link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html["ONTAP FlexCloneボリューム"^] |  
+
+
+| iSCSI  a| 
+* link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_credentials_endpoint_overview.html["iSCSI認証情報の管理"^]
+* link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_services_endpoint_overview.html["iSCSIサービスの管理"^]
+* link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_sessions_endpoint_overview.html["iSCSIセッションの表示"^]
+
+|  
+
+
+| NDMP | link:https://docs.netapp.com/us-en/ontap/tape-backup/ndmp-management-concept.html["ONTAP FlexVolボリューム向けNDMP"^] |  
+
+
+| NetApp Volume Encryption | link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["ONTAP NetAppボリュームおよびアグリゲートの暗号化"^] | ONTAP Selectは、制限のない国でのみNetAppボリューム暗号化をサポートしています。 
+
+
+| NFS | link:https://docs.netapp.com/us-en/ontap/nfs-admin/index.html["NFSプロトコルでのONTAPファイルアクセス"^] |  
+
+
+| NFS over TLS | link:https://docs.netapp.com/us-en/ontap/nfs-admin/enable-nfs-over-tls-task.html["NFS over TLSの有効化"^] | ONTAP Selectは、CLIを使用してTLS経由のNFSをサポートします。System Managerはサポートされていません。 
+
+
+| NVMe over TCP | link:https://docs.netapp.com/us-en/ontap-restapi/protocols_nvme_services_endpoint_overview.html["NVMeサービスの管理"^] |  
+
+
+| ONTAP のマルチテナンシー機能 | link:https://docs.netapp.com/us-en/ontap/concepts/svm-use-cases-concept.html["ONTAP SVMのユースケース"^] |  
+
+
+| ONTAP S3 | link:https://docs.netapp.com/us-en/ontap/s3-config/index.html["ONTAP S3構成"^] |  
+
+
+| S3 SnapMirror | link:https://docs.netapp.com/us-en/ontap/s3-snapmirror/index.html["ONTAP SnapMirror S3"^] |  
+
+
+| SnapLock Select | link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^] | SnapLock SelectはONTAP Select向けに設計されたONTAP SnapLockの実装であり、SnapLock Enterpriseが含まれています。SnapLock Complianceは含まれていません。 
+
+
+| SnapMirror | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html["ONTAP SnapMirror非同期ディザスタリカバリ"^] | ONTAP Selectは、非同期 SnapMirrorにおけるコンシステンシー グループをサポートしていません。 
+
+
+| SnapRestore | link:https://docs.netapp.com/us-en/ontap/data-protection/restore-contents-volume-snapshot-task.html["ONTAPスナップショットからボリュームの内容を復元する"^] |  
+
+
+| SnapMirror DR、アーカイブ（旧SnapVault） | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-workflow-concept.html["ONTAP SnapMirrorレプリケーション ワークフロー"^] |  
+
+
+| Storage VMディザスタリカバリ（SVM DR） | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-svm-replication-concept.html["ONTAP SnapMirror SVMレプリケーション"^] | ONTAP SelectはSVM DRをソースと宛先の両方としてサポートし、最大16件の関係を設定できます。SVM DRのサポートは、ソースONTAPバージョンからバージョン+2までの使用に限定されます。たとえば、ONTAP Select 9.16.1ソースは、宛先ONTAPバージョン9.16.1、9.17.1、または9.18.1に接続できます。 
+|===
 
 
 [[ontap-features-that-are-separately-licensed]]
 [[other-ontap-features]]
 == 個別にライセンスされるONTAP の機能
 
-デフォルトではライセンスされていないONTAP機能については、別途ライセンスを取得する必要があります。これには次のものが含まれます：
+ONTAP Selectでサポートされているものの、デフォルトではライセンスが付与されていない以下のONTAP機能については、別途ライセンスを取得する必要があります。
 
-* FabricPool
-+
-
-NOTE: StorageGRIDを使用する場合は、FabricPoolライセンスは必要ありません。
-
-* MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）
-* SnapMirrorクラウド
-+
-link:https://mysupport.netapp.com/site/help["非技術的なサポートケースを開く"^]してSnapMirrorクラウドライセンスを取得する必要があります。
-
-+
-link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["オブジェクト ストレージへのSnapMirrorクラウドのバックアップ"^]について学ぶ
+[cols="1,1,1"]
+|===
+| 機能 | 詳細情報 | メモ 
 
 
+| FabricPool | link:https://docs.netapp.com/us-en/ontap/concepts/fabricpool-concept.html["ONTAP FabricPool"^] | StorageGRIDを使用する場合は、FabricPoolライセンスは必要ありません。 
 
+
+| MetroCluster SDS | link:https://docs.netapp.com/us-en/ontap/concepts/mcc-sds-ontap-select.html["ONTAP Select向けMetroCluster SDS"^] | これはONTAP Selectプレミアムライセンスの提供です。 
+
+
+| SnapMirrorクラウド | link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["オブジェクト ストレージへのSnapMirrorクラウドのバックアップ"^] | link:https://mysupport.netapp.com/site/help["非技術的なサポートケースを開く"^]してSnapMirrorクラウドライセンスを取得する必要があります。 
+|===
 .関連情報
 * link:concept_ots_overview.html#compare-ontap-select-and-ontap-9["ONTAP SelectとONTAP 9の比較"]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP マスター ライセンス キーについて学ぶ"^]

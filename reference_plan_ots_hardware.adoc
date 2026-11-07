@@ -38,19 +38,10 @@ ONTAP Select クラスタを導入するには、 ONTAP Select を実行する�
 [[software-compatibility]]
 === ソフトウェアの互換性
 
-ONTAP Select は、 KVM および ESXi ハイパーバイザーに導入できます。
+ONTAP Selectは、ESXi、Hyper-V、およびKVMハイパーバイザー上に展開できます。
 
 [role="tabbed-block"]
 ====
-.KVM の略
---
-ONTAP Select は、次の KVM ハイパーバイザー バージョンをサポートしています。
-
-* Red Hat Enterprise Linux（RHEL）10.1、10.0、9.7、9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および8.6上のKVM
-* Rocky Linux 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6上のKVM
-
-
---
 .ESXi
 --
 ONTAP Select は、次の ESXi ハイパーバイザー バージョンをサポートしています。
@@ -63,11 +54,29 @@ ONTAP Select は、次の ESXi ハイパーバイザー バージョンをサポ
 * VMware ESXi 8.0 GA（ビルド20513097）
 
 
+[NOTE]
+====
+VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。
 
-NOTE: VMware でも同じバージョンがサポートされていれば、特定されたバージョンの ESXi で ONTAP Select がサポートされます。
+ESXi 7.0 GA は、提供終了ステータスに達しました。このバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^] 。
+
+====
+--
+.Hyper-V
+--
+ONTAP Selectは、以下のHyper-Vハイパーバイザー バージョンをサポートしています：
+
+* Microsoft Windows Server 2025および2022
 
 
-NOTE: ESXi 7.0 GA は、提供終了ステータスに達しました。このバージョンのONTAP Selectクラスタを使用している場合は、 https://mysupport.netapp.com/matrix["Interoperability Matrix Tool （ IMT ）"^] 。
+--
+.KVM の略
+--
+ONTAP Select は、次の KVM ハイパーバイザー バージョンをサポートしています。
+
+* Red Hat Enterprise Linux（RHEL）10.1、10.0、9.7、9.6、9.5、9.4、9.2、9.1、9.0、8.8、8.7、および8.6上のKVM
+* Rocky Linux 10.1、10.0、9.7、9.6、9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7、および8.6上のKVM
+
 
 --
 ====

@@ -38,7 +38,7 @@ Deploy 2.10 を使用した ONTAP Select 9.5 以降では、 VMware ESXi での�
 [[cluster-mtu]]
 == クラスタ MTU
 
-マルチノードクラスタの ONTAP Select ノードの接続には、別の内部ネットワークが使用されます。通常、このネットワークの MTU サイズは 9000 です。ただし、 ONTAP Select ノードを接続するネットワークの MTU サイズが大きすぎる場合もあります。小さいフレームに対応するために、内部ネットワーク上の ONTAP Select で使用される MTU サイズは 7500~9000 バイトの範囲で指定できます。
+マルチノードクラスタ内のONTAP Selectノードを接続するために、別の内部ネットワークが使用されます。通常、このネットワークの最大伝送単位（MTU）サイズは9000です。しかし、ONTAP Selectノードを接続するネットワークにとって、このMTUサイズが大きすぎる状況もあります。より小さなフレームに対応するため、内部ネットワークでONTAP Selectが使用するMTUサイズは、7500～9000バイトの範囲にすることができます。
 
 MTU サイズは、クラスタ作成ページの「 Cluster Details 」セクションに表示されます。この値は、 Deploy 管理ユーティリティで次のように決定されます。
 
@@ -123,19 +123,35 @@ NOTE: ネットワークの設計に基づいて、必要に応じてクラス�
 [[network-traffic-requirements]]
 == ネットワークトラフィックの要件
 
-ONTAP Select 環境のさまざまな参加者間でネットワークトラフィックが流れるように、ファイアウォールが適切に設定されていることを確認する必要があります。
+ONTAP Selectデプロイ環境のさまざまな参加者間でネットワーク トラフィックが流れるように、ファイアウォールが正しく設定されていることを確認する必要があります。
 
 .参加者
 ONTAP Select 環境の一部としてネットワークトラフィックを交換する複数の参加者またはエンティティがあります。これらの情報が導入され、ネットワークトラフィック要件の要約概要 で使用されます。
 
-* Deploy ONTAP Select 管理ユーティリティを導入する
+* 導入
++
+ONTAP Select Deploy 管理ユーティリティ
+
 * vSphere（ESXiのみ）
-vSphereサーバまたはESXiホスト（クラスタ環境でのホストの管理方法に応じて）
-* ハイパーバイザーサーバ
-ESXiハイパーバイザーホストまたはLinux KVMホスト
-* OTS ノード： ONTAP Select ノード
-* OTS クラスタ ONTAP Select クラスタです
-* Admin WS ローカル管理ワークステーション
++
+クラスタ展開でのホストの管理方法に応じて、vSphereサーバーまたはESXiホストのいずれか
+
+* ハイパーバイザーサーバー
++
+ESXiハイパーバイザーホスト、Microsoft Hyper-Vホスト、またはLinux KVMホスト
+
+* ONTAP Select ノード
++
+ONTAP Selectノード
+
+* ONTAP Select クラスタ
++
+ONTAP Selectクラスタ
+
+* 管理WS
++
+ローカル管理ワークステーション
+
 
 
 .ネットワークトラフィック要件の要約
@@ -143,7 +159,25 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト
 
 [cols="20,20,35,25"]
 |===
-| プロトコル / ポート | ESXi / KVM | 方向（ Direction ） | 説明 
+| プロトコル / ポート | ESXi / Hyper-V / KVM | 方向（ Direction ） | 説明 
+
+
+| ICMP | ESXi、Hyper-V、またはKVM | ハイパーバイザーサーバに導入します | Ping 
+
+
+| ICMP | ESXi、Hyper-V、またはKVM | 各ONTAP Selectノードに展開 | Ping 
+
+
+| SSH （ 22 ） | ESXi、Hyper-V、またはKVM | 管理WSから各ONTAP Selectノードへ | 管理 
+
+
+| SSH （ 22 ） | KVM の略 | ハイパーバイザーサーバノードに導入 | アクセスハイパーバイザーサーバ 
+
+
+| TLS （ 443 ） | ESXi、Hyper-V、またはKVM | ONTAP Selectノードとクラスタへのデプロイ | ONTAP にアクセスします 
+
+
+| TLS （ 443 ） | ESXi、Hyper-V、またはKVM | デプロイする各ONTAP Selectノード | Access Deploy（Capacity Poolsのライセンス） 
 
 
 | TLS （ 443 ） | ESXi | vCenterサーバ（管理対象）またはESXi（管理対象または管理対象外）に導入 | VMware VIX API 
@@ -152,23 +186,8 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト
 | 902 | ESXi | vCenter Server （管理対象）または ESXi （管理対象外）に導入 | VMware VIX API 
 
 
-| ICMP | ESXiまたはKVM | ハイパーバイザーサーバに導入します | Ping 
+| iSCSI （ 3260 ） | ESXi、Hyper-V、またはKVM | デプロイする各ONTAP Selectノード | メディエーター / メールボックスディスク 
 
 
-| ICMP | ESXiまたはKVM | 各 OTS ノードに展開します | Ping 
-
-
-| SSH （ 22 ） | ESXiまたはKVM | 管理 WS を各 OTS ノードに割り当てます | 管理 
-
-
-| SSH （ 22 ） | KVM の略 | ハイパーバイザーサーバノードに導入 | アクセスハイパーバイザーサーバ 
-
-
-| TLS （ 443 ） | ESXiまたはKVM | OTS ノードおよびクラスタに展開します | ONTAP にアクセスします 
-
-
-| TLS （ 443 ） | ESXiまたはKVM | 展開する各 OTS ノード | Access Deploy（Capacity Poolsのライセンス） 
-
-
-| iSCSI （ 3260 ） | ESXiまたはKVM | 展開する各 OTS ノード | メディエーター / メールボックスディスク 
+| WinRM HTTPS（5986） | Hyper-V | ハイパーバイザーサーバノードに導入 | アクセスハイパーバイザーサーバ 
 |===

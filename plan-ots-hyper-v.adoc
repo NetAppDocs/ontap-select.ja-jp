@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: plan-ots-hyper-v.html 
+keywords: plan, planning, vnas, hyper-v 
+summary: Hyper-Vハイパーバイザーの使用に関連して、考慮すべき計画上の事項がいくつかあります。 
+---
+= ONTAP SelectのHyper-Vストレージ要件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hyper-VハイパーバイザーでONTAP Selectを設定する場合、ONTAP Selectは仮想マシン（VM）と仮想ディスクをHyper-Vホスト上のローカルボリュームに保存します。
+
+
+
+[[basic-requirements-and-restrictions]]
+== 基本的な要件と制限事項
+
+Hyper-Vホスト上のONTAP Selectストレージプールには、以下の構成要件と制限が適用されます：
+
+* ストレージプールは、ドライブ文字が割り当てられたNTFSまたはReFSボリュームである必要があります。デプロイユーティリティは、ストレージプールをドライブ文字で識別します。
+* クラスタ共有ボリュームはストレージプールとしてはサポートされていません。
+* ネットワークファイル共有やリモートUNCパス（SMB 3.0など）は、ストレージプールとしてサポートされていません。
+* ボリュームにドライブレターがないため、ONTAP Selectはフォルダパスにのみマウントされているボリュームを検出しません。
+* ONTAP Selectは、Hyper-VホストがLUNをNTFSまたはReFSとしてフォーマットし、ドライブ文字を割り当てる場合、FC、FCoE、またはiSCSIを使用して外部ストレージアレイ上のLUNを使用できます。ONTAP Selectは、このようなボリュームをローカルホストストレージとして扱います。ESXiで使用されるONTAP Select vNASモデルは、Hyper-Vには適用されません。
+* Storage Spacesの仮想ディスクは、NTFSまたはReFS形式でフォーマットされ、ドライブ文字が割り当てられていれば、ストレージプールを保持できます。ただし、ソフトウェアRAIDは、Storage Spacesプールに属する物理ディスクを使用することはできません。
+* Hyper-V構成では、シンプロビジョニングされたストレージは認識されません。ONTAP Selectは、Windowsがボリュームに対して報告する容量を使用します。
+
+
+
+
+[[best-practices]]
+== ベストプラクティス
+
+次のベスト プラクティスに従う必要があります：
+
+* ONTAP Selectネットワーク用に、専用のネットワークアダプタ、帯域幅、および仮想スイッチ構成を定義します。iSCSIなどの外部ストレージトラフィックには、別のアダプタを使用してください。
+* ストレージプールボリュームはONTAP Select専用にします。同じボリューム上に別のHyper-V仮想マシンやWindowsワークロードを配置しないでください。また、Windowsブートボリュームをストレージプールとして使用しないでください。
+* ONTAP Selectが容量全体を消費しないように、ボリュームのサイズを設定します。
+* 外部ストレージアレイ向けにWindows MPIOを設定し、LUNが冗長パス経由で提供されるようにします。
+

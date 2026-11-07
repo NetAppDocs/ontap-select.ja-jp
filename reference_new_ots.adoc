@@ -19,6 +19,23 @@ summary: 現在のリリースには、ONTAP Selectに固有のいくつかの�
 
 
 
+[[ontap-select-9-20-1]]
+== ONTAP Select 9.20.1
+
+Hyper-Vハイパーバイザーのサポート:: ONTAP Select 9.20.1以降では、Windows Server 2025およびWindows Server 2022を実行しているMicrosoft Hyper-Vハイパーバイザー上にONTAP Selectクラスタをデプロイできます。ONTAP Select Deploy管理ユーティリティを使用して、サポートされているHyper-Vホスト上でシングルノード、2ノード、および4ノードのクラスタを構成および管理できます。
++
+--
+* link:plan-ots-hyper-v.html["Hyper-Vのストレージ要件"]について
+* link:hyper-v-host-configuration-and-preparation-checklist.html["Hyper-Vホストの構成と準備チェックリスト"]について
+* link:task_install_deploy.html["Hyper-VホストへのONTAP Select Deployのインストール"]について学ぶ
+
+
+--
+TLS経由のNFSのサポート:: ONTAP Select 9.20.1以降、ONTAP SelectはCLIを使用したTLS経由のNFSをサポートします。System Managerはサポートされていません。詳細については、link:reference_lic_ontap_features.html#licensed-ontap-features["デフォルトでライセンスされるONTAP機能"]を参照してください。
+
+
+
+
 [[ontap-select-9-19-1]]
 == ONTAP Select 9.19.1
 
@@ -28,7 +45,7 @@ summary: 現在のリリースには、ONTAP Selectに固有のいくつかの�
 ONTAP Select はクラウドキーマネージャーをサポートしていません。
 
 --
-Advanced Micro Devices（AMD）プロセッサのサポート:: ONTAP Select 9.19.1以降、ONTAP SelectはKernel-Based Virtual Machine（KVM）およびESXiハイパーバイザーホスト上でAMDプロセッサをサポートします。詳細については、link:reference_plan_ots_hardware.html["VMware ハイパーバイザーとハードウェアに関する考慮事項"]を参照してください。
+Advanced Micro Devices（AMD）プロセッサのサポート:: ONTAP Select 9.19.1以降、ONTAP Selectは、ESXiおよびカーネルベースの仮想マシン（KVM）ハイパーバイザーホスト上のAMDプロセッサをサポートします。詳細については、link:reference_plan_ots_hardware.html["VMware ハイパーバイザーとハードウェアに関する考慮事項"]を参照してください。
 VMware ESXiのサポートを強化:: ONTAP Select 9.19.1には、VMware ESXi 9.1のサポートが含まれています。
 
 
@@ -78,7 +95,7 @@ ESXi または KVM ホスト上の既存のクラスタのサイズを、次の�
 
 
 --
-link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。"] 。
+link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされているESXiとKVMハイパーバイザーのバージョンについて説明します。"]。
 
 --
 KVMハイパーバイザーのサポートの更新:: ONTAP Select 9.18.1以降、KVMハイパーバイザーはRocky Linux 10.1でサポートされています。
@@ -101,12 +118,12 @@ KVMホスト上のローカル接続NVMeディスクに対するソフトウェ�
 link:concept_stor_swraid_local.html["ローカル接続ストレージのソフトウェア RAID 構成サービスについて学習します"] 。
 
 --
-KVMホスト上のクラスタ拡張と縮小のサポート:: ONTAP Select 9.17.1以降では、クラスタの拡張と縮小機能がカーネルベース仮想マシン（KVM）ホストとESXiハイパーバイザーホストの両方でサポートされます。ONTAPONTAP Select 9.16.1および9.15.1では、クラスタの拡張と縮小はESXiハイパーバイザーホストでのみサポートされます。
+KVMホスト上のクラスタ拡張と縮小のサポート:: ONTAP Select 9.17.1以降、クラスタの拡張および縮小機能は、ESXiとカーネルベースの仮想マシン（KVM）の両方のハイパーバイザーホストでサポートされます。ONTAP Select 9.16.1および9.15.1では、クラスタの拡張および縮小はESXiハイパーバイザーホストでのみサポートされます。
 +
 --
 既存のONTAP Selectクラスタのクラスタ拡張および縮小機能を使用して、6 ノード クラスタから 8 ノード クラスタにサイズを拡大したり、8 ノード クラスタから 6 ノード クラスタにサイズを縮小したりできます。
 
-link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。"] 。
+link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされているESXiとKVMハイパーバイザーのバージョンについて説明します。"]。
 
 --
 ESXiホスト上のクラスタ拡張と縮小のサポート強化:: ONTAP Select 9.17.1 以降では、ESXi ホスト上の 6 ノード クラスタと 12 ノード クラスタ間でのクラスタの拡張と縮小がサポートされます。
@@ -128,7 +145,7 @@ ESXiホスト上のクラスタ拡張と縮小のサポート強化:: ONTAP Sele
 
 
 --
-link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。"] 。
+link:task_cluster_expansion_contraction.html["クラスタの拡張と縮小、およびサポートされているESXiとKVMハイパーバイザーのバージョンについて説明します。"]。
 
 --
 SnapMirror クラウドのサポート:: ONTAP Select 9.17.1以降、SnapMirror cloudはONTAP Selectでサポートされています。SnapMirror cloudは、ONTAP Selectではデフォルトでライセンスされていません。ONTAP Select 9.17.1クラスタを導入する場合、または既存のONTAP Selectクラスタをバージョン9.17.1にアップグレードする場合は、SnapMirror cloudライセンスをリクエストする必要があります。詳細については、link:reference_lic_ontap_features.html#other-ontap-features["個別にライセンスされるONTAP の機能"]を参照してください。
@@ -144,7 +161,7 @@ ONTAP Select DeployおよびONTAP Select for ESXiは、ストレージプール�
 ====
 コンテンツライブラリの操作を実行するには、追加の権限レベルへのアクセスが必要です。制限付きロールを使用している場合、vSAN ESA のデプロイメントにはこのアクセス権限が必要です。
 
-link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["コンテンツライブラリの操作におけるアクセス権限レベルについて"]。
+link:plan-deploy-hypervisor.html#vmware-vcenter-server-considerations["コンテンツライブラリの操作におけるアクセス権限レベルについて"]。
 
 ====
 --
@@ -280,7 +297,7 @@ VMware NSX のサポート:: ONTAP Select 9.10.1 は VMware NSX -T バージョ�
 --
 * クラスタ MTU
 +
-追加のオーバーヘッドを考慮してクラスタを導入する前に、クラスタの MTU サイズを 8800 に手動で調整する必要があります。VMware のガイダンスでは、 NSX を使用する場合に 200 バイトのバッファを使用できるようにする方法を説明しています
+追加のオーバーヘッドを考慮するため、クラスタをデプロイする前に、クラスタの最大伝送単位（MTU）サイズを手動で8800に調整する必要があります。VMwareのガイドラインでは、NSX-Tを使用する際には200バイトのバッファを確保することを推奨しています。
 
 * ネットワーク 4x10Gb 構成
 +

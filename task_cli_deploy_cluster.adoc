@@ -100,49 +100,6 @@ ONTAP Select ノードを実行する各ハイパーバイザーホストを登�
 
 [role="tabbed-block"]
 ====
-.KVM の略
---
-ONTAP Selectノードを実行するハイパーバイザーホストを登録する必要があります。この一環として、Deploy管理ユーティリティはKVMホストに対して認証します。
-
-.このタスクについて
-複数のハイパーバイザー ホストが必要な場合は、この手順を使用して各ホストを追加します。
-
-.手順
-. 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
-. ホストを登録します。
-+
-[source, cli]
-----
-host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
-----
-+
-出力例：
-
-+
-[listing]
-----
-host register -name 10.234.81.14 -hypervisor-type KVM -username root
-----
-+
-プロンプトが表示されたら、ホストアカウントのパスワードを入力します。
-
-. ホストの状態を表示し、認証されていることを確認します。
-+
-[source, cli]
-----
-host show -name <FQDN|IP> -detailed
-----
-+
-出力例：
-
-+
-[listing]
-----
-host show -name 10.234.81.14 -detailed
-----
-
-
---
 .ESXi
 --
 この一部として、 Deploy 管理ユーティリティは、ホストを管理する vCenter Server への認証、または ESXi スタンドアロンホストへの直接の認証を行います。
@@ -201,6 +158,60 @@ host show -name <FQDN|IP> -detailed
 ....
 host show -name 10.234.81.14 -detailed
 ....
+
+
+--
+.Hyper-VまたはKVM
+--
+ONTAP Selectノードを実行するハイパーバイザーホストを登録する必要があります。この一環として、Deploy管理ユーティリティはKVMホストに対して認証します。
+
+.このタスクについて
+複数のハイパーバイザー ホストが必要な場合は、この手順を使用して各ホストを追加します。
+
+.手順
+. 管理者アカウントで SSH を使用して、 Deploy ユーティリティの CLI にサインインします。
+. ホストを登録します。
++
+*Hyper-V*
+
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type Hyper-V -username <Hyper-V_username>
+----
++
+*KVM*
+
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
+----
++
+出力例：
+
++
+[listing]
+----
+host register -name 10.234.81.14 -hypervisor-type KVM -username root
+----
++
+プロンプトが表示されたら、ホストアカウントのパスワードを入力します。
+
+. ホストの状態を表示し、認証されていることを確認します。
++
+[source, cli]
+----
+host show -name <FQDN|IP> -detailed
+----
++
+出力例：
+
++
+[listing]
+----
+host show -name 10.234.81.14 -detailed
+----
 
 
 --
@@ -315,14 +326,14 @@ host network show -host-name 10.234.81.14 -detailed
 +
 [role="tabbed-block"]
 ====
-.ESXiホスト
+.ESXi
 --
 [source, cli]
 ----
 node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-networks <network_name> -data-networks <network_name> -internal-network <network_name>
 ----
 --
-.KVMホスト
+.Hyper-VまたはKVM
 --
 [source, cli]
 ----

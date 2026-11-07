@@ -3,12 +3,12 @@ indexpage:
   title: ONTAP Select のドキュメント
   lead: NetApp ONTAP Selectは、VMware ESXiまたはKernel-based Virtual Machine（KVM）ハイパーバイザーを実行しているさまざまなコモディティ
     ハードウェア サーバに導入できる、ソフトウェアで定義されるストレージアプライアンスです。柔軟で拡張性の高いプライベートクラウドインフラを構築するために必要な俊敏性を提供します。このサイトには、ONTAP
-    Select 9.19.1のドキュメントが含まれています。
+    Select 9.20.1のドキュメントが含まれています。
   tiles:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3378465
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3390867
     - title: 新機能
       url: "/reference_new_ots.html"
     - title: ONTAP Selectの詳細

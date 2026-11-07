@@ -17,7 +17,7 @@ summary: ONTAP Select ホストストレージに関連するいくつかの計�
 ONTAP Select ホストストレージに関連するいくつかの計画の問題について考慮する必要があります。
 
 
-NOTE: ESXi および KVM ホストの外部ストレージ サポート情報について説明します。詳細については、link:reference_plan_ots_vnas.html["VMware ESXi の要件"]およびlink:reference_plan_ots_kvm.html["KVMの要件"]を参照してください。
+NOTE: ESXi、Hyper-V、およびKVMホスト向けのストレージサポート情報について説明します。詳細については、link:reference_plan_ots_vnas.html["VMware ESXiの外部ストレージ要件"]、link:plan-ots-hyper-v.html["Hyper-Vのストレージ要件"]、およびlink:reference_plan_ots_kvm.html["KVM外部ストレージの要件"]を参照してください。
 
 
 

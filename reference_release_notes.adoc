@@ -20,4 +20,4 @@ ONTAP Select のリリースノートには、新機能、サポートされる�
 NOTE: リリースノートにアクセスするには、ネットアップサポートサイトにサインインするアカウントが必要です。
 
 .ONTAP Select の現在のバージョン
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3378465["ONTAP Select 9.19.1 リリースノート"^]にアクセスして、現在のバージョンの詳細を表示できます。
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3390867["ONTAP Select 9.20.1 リリースノート"^]にアクセスして、現在のバージョンの詳細を表示できます。

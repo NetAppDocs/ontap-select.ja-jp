@@ -17,7 +17,12 @@ summary: ONTAP Select Deploy 管理ユーティリティをインストールし
 ONTAP Select Deploy 管理ユーティリティをインストールし、ユーティリティを使用して ONTAP Select クラスタを作成する必要があります。
 
 .作業を開始する前に
-link:kvm-host-configuration-and-preparation-checklist.html["インストール前のチェックリスト"]をレビューしました。
+ハイパーバイザーホストのインストール前チェックリストを確認しました：
+
+* link:esxi-host-configuration-and-preparation-checklist.html["ESXiホストのチェックリスト"]
+* link:hyper-v-host-configuration-and-preparation-checklist.html["Hyper-Vホストチェックリスト"]
+* link:kvm-host-configuration-and-preparation-checklist.html["KVMホストのチェックリスト"]
+
 
 
 
@@ -30,7 +35,7 @@ NetAppサポート サイトからONTAP Selectパッケージをダウンロー�
 https://mysupport.netapp.com/site/user/registration["NetAppサポートサイトの登録アカウントが必要です"^]です。
 
 .このタスクについて
-ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルには、ESXiホスト用のサフィックス `OVA`とKVMホスト用のサフィックス `TGZ`が付いています。VMは、ONTAP Selectノード用のDeployサーバーとインストールイメージを提供します。
+ONTAP Select Deploy管理ユーティリティは、オープン仮想化フォーマットに基づいた仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルのサフィックスは、ESXiホストの場合は `ova`、Hyper-Vの場合は `vhdx.tgz`、KVMホストの場合は `raw.tgz`となります。このVMは、ONTAP Selectノード用のDeployサーバーとインストールイメージを提供します。
 
 .手順
 . link:https://mysupport.netapp.com/site/downloads/["NetApp Support Site ダウンロード"^]ページにアクセスします。
@@ -90,10 +95,15 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 [[step-3-deploy-the-virtual-machine]]
 == ステップ3: 仮想マシンを展開する
 
-OVF VM イメージを使用してONTAP Select Deploy VM をインストールして起動します。インストール プロセスの一環として、DHCP または静的 IP 構成を使用するようにネットワーク インターフェイスを構成します。
+ハイパーバイザーホスト上にONTAP Select Deploy仮想マシンを作成します。
 
-.作業を開始する前に
 [role="tabbed-block"]
+====
+.ESXi
+--
+OVF VMイメージを使用して、ESXiホストにONTAP Select Deploy VMをインストールして起動します。インストールプロセスの一環として、DHCPまたは静的IP設定を使用するようにネットワークインターフェイスを設定します。
+
+--
 ====
 .ESXi
 --
@@ -127,17 +137,12 @@ KVMハイパーバイザーの場合、VMを作成する際に使用する構成
 
 
 --
+[]
 ====
 .このタスクについて
 vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、Deploy VMのコンソールを使用してネットワークを設定できます。
 
 .手順
-実行する手順は、ESXiハイパーバイザーとKVMハイパーバイザーのどちらを使用しているかによって異なります。
-
-[role="tabbed-block"]
-====
-.ESXi
---
 . vSphere Client にアクセスしてサインインします。
 . 階層内の適切な場所に移動し、 [Deploy OVF Template* （ OVF テンプレートの展開） ] を選択します。
 . OVA ファイルを選択し、Deploy OVF Template ウィザードを完了します。ご使用の環境に適したオプションを選択してください。
@@ -169,8 +174,131 @@ DHCP を使用してネットワーク情報を設定しますか？[n] ：
 
 
 --
-.KVM の略
+
 --
+新規仮想マシンウィザードを使用して、Hyper-Vホスト上にONTAP Select Deploy VMをインストールして起動します。
+
+.作業を開始する前に
+Hyper-Vホストが以下の要件を満たしていることを確認してください：
+
+[cols="1,2"]
+|===
+| 要件 | Value 
+
+
+| Hyper-V の役割 | Hyper-V PowerShell モジュールを含め、インストール済み 
+
+
+| VM世代 | 第1世代 
+
+
+| vCPU | 2 
+
+
+| メモリ | 4GB、静的（動的メモリは無効） 
+
+
+| ブートディスク | IDEコントローラ0、位置0に接続済み 
+
+
+| 空きディスク スペース | VMディスクを保存するボリュームに少なくとも40GB 
+
+
+| アーカイブツール | Windows Server 2019以降に付属するtar 
+|===
+以下の情報が揃っていることを確認してください：
+
+[cols="1,2"]
+|===
+| 情報 | 説明 
+
+
+| VM name | デプロイVMの名前、たとえばONTAP-deploy-HV 
+
+
+| 仮想スイッチ名 | 外部仮想スイッチの名前（例：ONTAP_Vswitch） 
+
+
+| 物理NIC名 | Deploy VMネットワークに接続されたホストネットワークアダプタ 
+
+
+| VLAN ID | 上流のスイッチ ポートがタグ付きトラフィックを想定している場合にのみ必要 
+
+
+| ホスト名 | デプロイVMのFQDNまたは短いホスト名 
+
+
+| 管理者のパスワード | 管理者アカウントのパスワード（初回起動時に設定） 
+|===
+静的ネットワーク構成を定義する際には、以下の追加情報が必要です：
+
+* Deploy VMのIPアドレス
+* ネットマスク
+* ゲートウェイ（ルータ）の IP アドレス
+* プライマリ DNS サーバの IP アドレス
+* 2 番目の DNS サーバの IP アドレス
+* DNS 検索ドメイン
+
+
+.このタスクについて
+外部仮想スイッチを作成すると、物理NIC上のネットワーク トラフィックが一時的に中断されます。物理NIC経由でホストにリモート接続している場合は、アクセスが失われないように、帯域外コンソール（サーバーのBMCなど）または別のネットワーク アダプタを使用してください。
+
+.手順
+. Hyper-V マネージャーで、*新規* > *仮想マシン* を選択して、新しい仮想マシン ウィザードを開きます。
+. 「次へ」を選択します。
+. VM名を入力し、「次へ」を選択してください。
+. *第1世代*を選択し、*次へ*を選択します。
++
+
+NOTE: Hyper-V環境のONTAP Selectは第2世代VMをサポートしていません。
+
+. メモリ容量を入力し、*次へ*を選択します。
++
+
+NOTE: 最低メモリ要件は4GBです。
+
+. ドロップダウンリストから仮想スイッチを選択し、*次へ*を選択します。
+. *既存の仮想ハードディスクを使用する* > *参照* を選択し、 `vhdx.tgz` イメージファイルを見つけて選択します。
+. 「次へ」を選択します。
+. 設定内容を確認したら、「完了」を選択してください。
+. 必要に応じて、VMコンソールを使用してDeployネットワークを設定できます。
++
+.. 次のプロンプトが表示されるまで待ちます。
++
+[listing]
+----
+Host name :
+----
+.. ホスト名を入力し、* Enter *を選択します。
+.. 次のプロンプトが表示されるまで待ちます。
++
+[listing]
+----
+Use DHCP to set networking information? [n]:
+----
+.. 静的IP設定を定義する場合は「n *」、DHCPを使用する場合は「* y *」と入力し、* Enter *を選択します。
+.. 静的な設定を選択した場合は、必要に応じてすべてのネットワーク設定情報を指定します。
+
+
+
+
+--
+
+--
+OVF VMイメージを使用して、KVMホストにONTAP Select Deploy VMをインストールして起動します。インストールプロセスの一環として、ネットワークインターフェイスでDHCPまたは静的IP構成を使用するように設定します。
+
+.作業を開始する前に
+VMを作成する際には、VM名、外部ネットワーク、ホスト名など、使用する構成情報が必要です。静的ネットワーク構成を定義する際には、以下の追加情報が必要です：
+
+* Deploy VMのIPアドレス
+* ネットマスク
+* ゲートウェイ（ルータ）の IP アドレス
+* プライマリ DNS サーバの IP アドレス
+* 2 番目の DNS サーバの IP アドレス
+* DNS 検索ドメイン
+
+
+.手順
 . LinuxサーバでCLIにサインインします。
 +
 [listing]
@@ -220,6 +348,8 @@ Use DHCP to set networking information? [n]:
 
 
 --
+
+--
 ====
 
 
@@ -231,7 +361,7 @@ Web ユーザー インターフェイスに Sign in して、デプロイ ユ�
 .手順
 . ブラウザで IP アドレスまたはドメイン名を使用して、 Deploy ユーティリティにアクセスします。
 +
-https://<ip_address>/` にアクセスします
+`\https://<IP_address>/`
 
 . 管理者（ admin ）アカウント名とパスワードを入力し、サインインします。
 . * Welcome to ONTAP Select *ポップアップウィンドウが表示されたら、前提条件を確認し、* OK *を選択して続行します。

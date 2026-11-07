@@ -38,7 +38,7 @@ ESXi および KVM ハイパーバイザー ホストの既存のONTAP Selectク
 [[hardware-and-storage-considerations]]
 == ハードウェアとストレージに関する考慮事項
 
-クラスターの拡張および縮小機能は、次の KVM および ESXi ハイパーバイザー ホストでサポートされています。
+クラスタの拡張および縮小機能は、以下のESXiおよびKVMハイパーバイザーホストでサポートされています。
 
 [role="tabbed-block"]
 ====

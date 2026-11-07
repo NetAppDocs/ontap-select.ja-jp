@@ -76,17 +76,12 @@
   <block id="9c05d1783e3b3ca48efdac5091f94a6e" category="list-text">専用の導入とコロケーション導入</block>
   <block id="a1243e7975c2ed7f07b0d3228b2e496e" category="list-text">アプリケーションタイプに基づいて、専用モデルとコロケーションモデルのどちらに従って導入を行うかを決定する必要があります。ワークロードの多様性と緊密な統合が原因で、コロケーションモデルの方が複雑になる可能性があります。</block>
   <block id="9820c1446b39a881e3e340990358c27b" category="paragraph">ハイパーバイザーホストに関連するいくつかの計画の問題について考慮する必要があります。</block>
-  <block id="cc9dd19eef0d3ed17e05b373a3ea9026" category="admonition">ネットアップサポートからの指示がないかぎり、 ONTAP Select 仮想マシンの構成を直接変更しないでください。仮想マシンの設定と変更は、 Deploy 管理ユーティリティからのみ実行してください。ネットアップサポートの支援なしで Deploy ユーティリティ以外の ONTAP Select 仮想マシンに変更を加えると、原因 でその仮想マシンが失敗し、使用できなくなる可能性があります。</block>
   <block id="d0c2a55b754162e2e27a73f6c486806c" category="list-text">ハイパーバイザーに依存しない</block>
   <block id="33476e54e425c79d4fbac2f9f1b2b4aa" category="list-text">ONTAP Select と ONTAP Select Deploy 管理ユーティリティは、どちらもハイパーバイザーに依存しません。両方に対して次のハイパーバイザーがサポートされています。</block>
   <block id="f7eea647714641318ee86fedbbed4691" category="list-text">VMware ESXi</block>
   <block id="c361c20443811fad6f41fa10f5dde140" category="list-text">Kernel-based Virtual Machine （ KVM ）</block>
   <block id="ea51f3ae402e2a34b5af47d7dcc3dbb7" category="list-text">ONTAP Select ノードと管理ユーティリティ用のハイパーバイザー</block>
-  <block id="1cc3032009578783bd053fa9e9aafa64" category="list-text">Deploy 管理ユーティリティと ONTAP Select ノードは、どちらも仮想マシンとして実行されます。Deploy ユーティリティ用に選択したハイパーバイザーは、 ONTAP Select ノード用に選択したハイパーバイザーに依存しません。この 2 つをペアリングすると、完全な柔軟性が得られます。</block>
-  <block id="66cdd3fc21e9ccc9ba875c612395d8fb" category="list-text">VMware ESXi で実行される Deploy ユーティリティは、 VMware ESXi または KVM で ONTAP Select クラスタを作成および管理できます</block>
-  <block id="6a30505aecb1ec174eaf14cc5ba2fa9a" category="list-text">KVM で実行される Deploy ユーティリティは、 VMware ESXi または KVM で ONTAP Select クラスタを作成および管理できます</block>
   <block id="fa5c37ab2e13c7d936d9de7290cbf046" category="list-text">ホストごとに 1 つ以上の ONTAP Select ノードインスタンス</block>
-  <block id="dda6b7d969ecbcf9818ada242e785b37" category="list-text">各 ONTAP Select ノードは専用の仮想マシンとして実行されます。同じハイパーバイザーホストに複数のノードを作成できますが、次の制限事項があります。</block>
   <block id="9c5ba468b106fd01f1438d41bf88e1c7" category="list-text">1 つの ONTAP Select クラスタの複数のノードを同じホストで実行することはできません。特定のホスト上のすべてのノードは、異なる ONTAP Select クラスタに属している必要があります。</block>
   <block id="193a1e0cbc23c720ad62006d3466dfda" category="list-text">外付けストレージを使用する必要があります。</block>
   <block id="dfd00531a3c2247cc55a12b5be0e94d7" category="list-text">ソフトウェア RAID を使用する場合、ホストに導入できる ONTAP Select ノードは 1 つだけです。</block>
@@ -113,7 +108,6 @@
   <block id="9d2a0edc21e7d063aa6e7cd77583f17f" category="list-text">汎用の外付けストレージアレイ</block>
   <block id="5fcee5ff28b9334935fa219eb818b2c3" category="list-text">必要なストレージの見積り</block>
   <block id="7aef2921a7d9da0c29e1025af9b9bc9b" category="list-text">ONTAP Select ノードに必要なストレージ容量を決定する必要があります。この情報は、ストレージ容量を含む購入ライセンスを取得する際に必要になります。詳細については、「ストレージ容量の制限」を参照してください。</block>
-  <block id="514d658beb8d2ad9347d561c047df99c" category="admonition">ONTAP Select ストレージ容量は、 ONTAP Select 仮想マシンに接続されているデータディスクの合計許容サイズに対応します。</block>
   <block id="71d95f80f78afeb107caa45cdd0d4b5a" category="list-text">本番環境のライセンスモデル</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">関連情報</block>
   <block id="680e9e82137091017ba19fdaa5193e04" category="list-text"><block ref="680e9e82137091017ba19fdaa5193e04" category="inline-link-macro-rx"></block></block>
@@ -381,7 +375,6 @@
   <block id="aba50a4db4f2d357e877595c641130a5" category="list-text">Premium または Premium XL ONTAP Select ライセンスが必要です</block>
   <block id="6bc864440af96dd0ce3cfac81f642cc2" category="list-text">ハードウェア RAID コントローラがないか無効になっているか、 SAS HBA モードで動作している必要があります</block>
   <block id="f249bf8d9e4b8c7b417b66fb9c6c3c90" category="list-text">システムディスクのコアダンプ、ブート / NVRAM 、メディエーターなどに、専用の LUN に基づく LVM ストレージプールまたはデータストアを使用する必要があります。</block>
-  <block id="98188cc87f947a659e62ebdc6dab134c" category="paragraph">KVM にインストールするときは、単一のボンドと単一のブリッジを使用する必要があります。物理ポートが 2 つまたは 4 つあるホストでは、すべてのポートを同じボンドに含める必要があります。</block>
   <block id="56bf9f6724c0961bfe3efdd9a5936afd" category="paragraph">ハードウェア RAID コントローラを使用する場合、 ONTAP Select は、基盤となるサーバの問題をほとんど認識しません。ベストプラクティスに従ってサーバを設定する場合は、ある程度の冗長性が必要です。ドライブ障害に備えて RAID 5/6 を使用することを推奨します。ソフトウェア RAID 構成の場合、 ONTAP はディスク障害に関するアラートを発行し、スペアドライブがある場合は、ドライブのリビルドを開始します。</block>
   <block id="5328a869dd2ed37e5be32f4f227e54d6" category="paragraph">VSAN を含むすべての構成で、 ONTAP Select ノードあたり 400TB のストレージがサポートされます。</block>
   <block id="4906d0b814c398d1e0b3d033c584f66b" category="paragraph">サポートされる最大サイズを超えるデータストアにインストールする場合は、製品のセットアップ時に容量の上限を使用する必要があります。</block>
@@ -390,7 +383,6 @@
   <block id="21805aa29c0279006893a37fa10cb7a0" category="paragraph">いいえ。外付けアレイ構成と VSAN 構成のどちらがオールフラッシュであるかに関係なく、すべてのバージョンがサポートされます。</block>
   <block id="b71c323c02a503e916ed60dc691b1996" category="paragraph">Select VM は VSAN データストアのストレージポリシーを継承し、 FTT / FTM の設定に制限はありません。ただし、 FTT / FTM の設定によっては、 ONTAP Select VM のサイズがセットアップ時に設定した容量よりも大幅に大きくなる可能性があることに注意してください。ONTAP Select は、セットアップ時に作成される eager-zeroed-thick VMDK を使用します。同じ共有データストアを使用する他の VM への影響を回避するためには、 Select の容量と FTT / FTM の設定から導き出された実際の Select VM のサイズに対応できる十分な空き容量をデータストアに確保することが重要です。</block>
   <block id="b3a3c95a19412336bd440086e55f0895" category="paragraph">vNAS 構成では、同じホスト上の複数の ONTAP Select ノードを vNAS 構成でのみ設定できます。ただし、それらのノードが同じ ONTAP Select クラスタに含まれていない必要があります。この方法は DAS 構成ではサポートされていません。同じ物理ホスト上の複数の ONTAP Select ノードが RAID コントローラへのアクセスで競合するためです。</block>
-  <block id="41fd632619fae4aba953abf6d07d3df1" category="paragraph">CLVM および Pacemaker （ PC ）コンポーネントは、ライブマイグレーションに参加する各ホストにインストールして実行する必要があります。これは、各ホストで同じボリュームグループにアクセスするために必要です。</block>
   <block id="e10ca1adb349a5228f7573a244805247" category="section-title">vCenter</block>
   <block id="b85815d04cec053ce6deb8021f2df1b8" category="list-text">Ping</block>
   <block id="1c3f33b65f0aa5f84082196fb6960db5" category="list-text">SSH （ポート 22 ）</block>
@@ -441,7 +433,6 @@
   <block id="8e0ca202aa963b415cd3e4acbf4423eb" category="list-text">IPv4 のみ</block>
   <block id="fc0b3751b82db582f1498de83d5d16d6" category="list-text">DHCP は使用されません</block>
   <block id="2265870af3b30ee13c0095059f102f54" category="list-text">リンクローカルアドレス</block>
-  <block id="71386a0f2af9f2e73df98533ed0a9b70" category="list-text">MTU サイズはデフォルトで 9000 バイトで、 7500~9000 の範囲内で調整できます（両端の値を含む）</block>
   <block id="c6917e8b577d0b240f757b2bdb66611c" category="section-title">外部ネットワーク</block>
   <block id="9226ce9d35f47d9d263c7a6d145d09b6" category="paragraph">外部ネットワークは、 ONTAP Select クラスタのノードと外付けストレージクライアントおよびその他のマシンの間のトラフィックを処理します。外部ネットワークはすべてのクラスタ環境に含まれており、次のような特徴があります。</block>
   <block id="e3f50a296800939ffe587eedbbc90be9" category="list-text">次の ONTAP トラフィックの処理に使用されます。</block>
@@ -459,9 +450,7 @@
   <block id="4b7d4eeb0e4f1e81527344ec1089fd37" category="paragraph">ハイパーバイザーホストは、いくつかのネットワーク機能を提供します。</block>
   <block id="6896ef368d0f399629d235f303aaf845" category="paragraph">ONTAP Select は、仮想マシンを通じて次の機能を利用できます。</block>
   <block id="4a0c19a55a200c7ed7c0adef73b030f6" category="list-text">仮想マシンのポート</block>
-  <block id="bd8b82d2bde43ad5d412973515ef45be" category="list-text">ONTAP Select で使用できるポートがいくつかあります。割り当てと使用は、クラスタのサイズなど、いくつかの要因に基づいて行われます。</block>
   <block id="fabd320b3b2249377e53e93099e27657" category="list-text">仮想スイッチ</block>
-  <block id="a10008cea0defb4e67624bfd88feafb7" category="list-text">vSwitch （ VMware ）または Open vSwitch （ KVM ）に関係なく、ハイパーバイザー環境内の仮想スイッチソフトウェアは、仮想マシンが公開するポートを物理イーサネット NIC ポートに結合します。それぞれの環境に応じて、各 ONTAP Select ホストに対して vSwitch を設定する必要があります。</block>
   <block id="8e5c75406092b84c33a434dd62222ee5" category="summary">RAID SyncMirror （ RSM ）、ミラーされたアグリゲート、および書き込みパスを使用してデータ損失を防止します。</block>
   <block id="b56265ceb6311e42003e668438136a59" category="section-title">同期レプリケーション</block>
   <block id="04f481194539048ee85acd710271244a" category="paragraph">ONTAP の HA モデルは、 HA パートナーの概念に基づいています。ONTAP Select は、 ONTAP の RAID SyncMirror （ RSM ）機能を使用してクラスタノード間でデータブロックをレプリケートして、 HA ペア内でユーザデータのコピーが 2 つ保持されるようにすることで、このアーキテクチャを非共有型コモディティサーバへと拡張します。</block>
@@ -582,7 +571,6 @@
   <block id="c5d6ff59e8e5595e5fc323f4237b333c" category="paragraph">DHCP を使用してネットワーク情報を設定しますか？[n] ：</block>
   <block id="79a72de3f5191386741777dd0441f591" category="list-text">静的な設定を選択した場合は、必要に応じてすべてのネットワーク設定情報を指定します。</block>
   <block id="32be4d152f2326423c990dde583d8768" category="list-text">ブラウザで IP アドレスまたはドメイン名を使用して、 Deploy ユーティリティにアクセスします。</block>
-  <block id="cc0e719d3ebda123b94502d26d56a7eb" category="paragraph">https://&lt;ip_address&gt;/` にアクセスします</block>
   <block id="533f8108cde4f7f1af2f1fb435cc4710" category="list-text">管理者（ admin ）アカウント名とパスワードを入力し、サインインします。</block>
   <block id="1d2215b67b18c63fb1146b841d364f01" category="list-text">初めてサインインしたときに、 vCenter で使用できるウィザードを使用して Deploy をインストールしなかった場合は、プロンプトが表示されたら次の設定情報を入力します。</block>
   <block id="f6c0536935d8c4b9da68277e49781b74" category="list-text">管理者アカウントの新しいパスワード（必須）</block>
@@ -678,8 +666,6 @@
   <block id="5f47ba8ca8ef153067865d84e604898c" category="paragraph">テストに含まれるすべての ONTAP Select ノードを設定し、電源をオンにする必要があります。</block>
   <block id="aa19db9725c19062530071e955bf0ff5" category="paragraph">テストを開始するたびに、新しいプロセスがバックグラウンドで作成され、一意の実行識別子が割り当てられます。一度にアクティブにできるランは 1 つだけです。</block>
   <block id="c0dbf326273ddd678fd895913cfd5eda" category="paragraph">テストには、次の 2 つのモードがあります。</block>
-  <block id="db9204729f08cb4385393fe5893b923a" category="list-text">Quick このモードは、基本的な無停止テストを実行します。ping テストが、ネットワークの MTU サイズと vSwitch のテストとともに実行されます。</block>
-  <block id="77dbd78cf02f80eed5e827a38e313d88" category="list-text">Extended このモードでは、すべての冗長ネットワークパスでより包括的なテストが実行されます。アクティブな ONTAP Select クラスタでこのテストを実行すると、クラスタのパフォーマンスに影響する可能性があります。</block>
   <block id="fff2cd3088a57b7ead920c3c47a6346c" category="admonition">マルチノードクラスタを作成する前には、必ずクイックテストを実行することを推奨します。クイックテストが正常に完了したら、本番環境の要件に基づいて拡張テストを実行することもできます。</block>
   <block id="0b30e81c88d5ec27b841310a84373595" category="paragraph">必要に応じて、 HA ペアを追加および設定できます。</block>
   <block id="893c95c096fab305c703479243f6943c" category="summary">ONTAP Select ライセンスの管理の一環として実行できる関連タスクがいくつかあります。</block>
@@ -847,7 +833,6 @@
   <block id="fc8e2c1dda0465d080cba6462209023c" category="inline-image-macro">シングルノードクラスタの RDD ディスクパーティショニング</block>
   <block id="7ac31542e221cec8982a853b92968209" category="paragraph"><block ref="7ac31542e221cec8982a853b92968209" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6c1c3b52b9fafd2100a63b937535e0f3" category="paragraph">シングルノードクラスタの場合、すべてのデータパーティションを使用してローカル（アクティブ）データが格納されます。HA ペアの一部であるノードでは、 1 つのデータパーティションを使用してそのノードのローカル（アクティブ）データが格納され、 2 つ目のデータパーティションを使用して HA ピアのアクティブデータがミラーリングされます。</block>
-  <block id="aa91cf53bb1527f525c6fdf50ca815d5" category="section-title">パススルー（ DirectPath IO ）デバイス vs.RDM （ raw デバイスマップ）</block>
   <block id="7a4bd36022e514de0f12d5bae592d99d" category="admonition">NVMe のパフォーマンスを最大限に引き出すには、 ONTAP Select VM のサイズを大きくすることを検討します。</block>
   <block id="bfe1db46b73b47c7ae447ac33fb69e45" category="section-title">物理ディスクと仮想ディスクのプロビジョニング</block>
   <block id="0f2dd21a47272055ac8bb22a37ed1c81" category="paragraph">より効率的なユーザエクスペリエンスを提供するため、 ONTAP Deploy は指定されたデータストア（物理システムディスク）からシステム（仮想）ディスクを自動的にプロビジョニングし、それらを ONTAP Select VM に接続します。この処理は、 ONTAP Select VM がブートできるようにするため、初期セットアップ時に自動的に実行されます。RDM はパーティショニングされ、ルートアグリゲートが自動的に構築されます。ONTAP Select ノードが HA ペアの一部である場合、データパーティションはローカルストレージプールとミラーストレージプールに自動的に割り当てられます。この割り当ては、クラスタ作成処理とストレージ追加処理の両方で自動的に行われます。</block>
@@ -957,14 +942,11 @@
   <block id="c6546b53840ec8245dd4d4d70fcdbc26" category="list-text">CIFS</block>
   <block id="e4e1c13bb0b14f6cb7608cbecea948ef" category="list-text">iSCSI</block>
   <block id="794cb725c5631ad99b5b7c000307f0df" category="list-text">SnapMirror</block>
-  <block id="5bc075cee240a70af54270621d93765c" category="list-text">SnapVault</block>
   <block id="a701f5d044348085ee4f97fef6636845" category="list-text">FlexClone</block>
   <block id="82ef718f4ebe0c276814ee3d51e33361" category="list-text">SnapRestore</block>
   <block id="37f51edec96ed159381e4d3d076a8787" category="list-text">重複排除機能と圧縮機能</block>
   <block id="1effda8a28add2fb64ed5a7d4d67deae" category="list-text">ONTAP のマルチテナンシー機能</block>
-  <block id="f8f58e06b7004f2c9a02a8875d2bd10d" category="list-text">NetApp Volume Encryption （規制対象外の国のみ）</block>
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
-  <block id="eab10597f9ef50e8058170729878869e" category="list-text">MetroCluster SDS （ ONTAP Select プレミアムライセンスサービス）</block>
   <block id="5cd0ad520dbcfbdeee9d38a1ad945c17" category="summary">ONTAP Select クラスタを導入したら、 ONTAP ソフトウェアの標準のアップグレード手順 を使用して、各ノードの ONTAP イメージを必要に応じてアップグレードできます。</block>
   <block id="047bc25615b74f5ee9ad03d531e71221" category="paragraph">ONTAP Select クラスタを導入したら、必要に応じて、クラスタ内の各ノードで ONTAP イメージをアップグレードできます。</block>
   <block id="30cf2dd94fe579c8d10145706d2803f2" category="admonition">Deploy 管理ユーティリティを使用して、既存の ONTAP Select ノードのアップグレードを実行することはできません。Deploy ユーティリティは、新しい ONTAP Select クラスタの作成にのみ使用できます。</block>
@@ -1178,7 +1160,6 @@
   <block id="8e18eb8cd4ab44854a5b30a491abc11b" category="summary">ONTAP Select を導入する前に、ハイパーバイザーのネットワークを正しく設定する必要があります。</block>
   <block id="75e93aaa8b7d5677986d65d277ddcb62" category="section-title">仮想スイッチのオプション</block>
   <block id="ef3130800246f4eb268ad46a6cf7a179" category="paragraph">各 ONTAP Select ホストで、外部ネットワークと内部ネットワーク（マルチノードクラスタの場合のみ）をサポートするように仮想スイッチを設定する必要があります。マルチノードクラスタの導入の一環として、内部クラスタネットワーク上のネットワーク接続をテストしてください。</block>
-  <block id="0ba079a4ad07a128e7d1b64a1f049ce4" category="paragraph">マルチノードクラスタの ONTAP Select ノードの接続には、別の内部ネットワークが使用されます。通常、このネットワークの MTU サイズは 9000 です。ただし、 ONTAP Select ノードを接続するネットワークの MTU サイズが大きすぎる場合もあります。小さいフレームに対応するために、内部ネットワーク上の ONTAP Select で使用される MTU サイズは 7500~9000 バイトの範囲で指定できます。</block>
   <block id="6400ea9731efe70975ad17d9728916c6" category="paragraph">MTU サイズは、クラスタ作成ページの「 Cluster Details 」セクションに表示されます。この値は、 Deploy 管理ユーティリティで次のように決定されます。</block>
   <block id="d36cd74a97143aba9b60f057c06e1b7d" category="list-text">初期デフォルト値は 9000 です。</block>
   <block id="f69c2bf8fd5f0159cd052a23397cf151" category="list-text">HA ペアのホストとネットワークを追加すると、ネットワーク内の vSwitch の構成に基づいて、必要に応じて MTU 値が減ります。</block>
@@ -1213,12 +1194,7 @@
   <block id="af3983087e4a8c72b79296a90259281f" category="list-text">NIC4 はアクティブです</block>
   <block id="ed68ac51ec027e81c401cad4e2e93ad1" category="list-text">NIC1 、 NIC2 、 NIC3 、スタンバイ状態</block>
   <block id="7964ae7c8fad0d845f719ede0526f7ba" category="section-title">ネットワークトラフィックの要件</block>
-  <block id="69df7fce20f6977be8327100cd007c49" category="paragraph">ONTAP Select 環境のさまざまな参加者間でネットワークトラフィックが流れるように、ファイアウォールが適切に設定されていることを確認する必要があります。</block>
   <block id="9c0384a1be7c43f3c01309bd8f00ba3c" category="list-text">ONTAP Select 環境の一部としてネットワークトラフィックを交換する複数の参加者またはエンティティがあります。これらの情報が導入され、ネットワークトラフィック要件の要約概要 で使用されます。</block>
-  <block id="571e74c42b6fd0c863d99ca79791a730" category="list-text">Deploy ONTAP Select 管理ユーティリティを導入する</block>
-  <block id="3f12ba0452b3f203ed1214e5940e1081" category="list-text">OTS ノード： ONTAP Select ノード</block>
-  <block id="3bdd590d159ba5504414880a79c1fc2d" category="list-text">OTS クラスタ ONTAP Select クラスタです</block>
-  <block id="ecc02548801c9dc440947852ec64fb1b" category="list-text">Admin WS ローカル管理ワークステーション</block>
   <block id="8162ed45793cc1d2005e69959d63d2e0" category="list-text">次の表に、 ONTAP Select 環境のネットワークトラフィック要件を示します。</block>
   <block id="392b33076379ee53142fbbc232079cc8" category="cell">プロトコル / ポート</block>
   <block id="02674a4ef33e11c879283629996c8ff8" category="cell">方向（ Direction ）</block>
@@ -1228,12 +1204,8 @@
   <block id="b6a1085a27ab7bff7550f8a3bd017df8" category="cell">902</block>
   <block id="7d6fe0dd606232f7155fdeae2ea620a9" category="cell">ICMP</block>
   <block id="d4d85c100efb1a790a5ce1ac21c5f1d7" category="cell">ハイパーバイザーサーバに導入します</block>
-  <block id="b4c0ac254ff78c85a9101fea561af4f8" category="cell">各 OTS ノードに展開します</block>
   <block id="35b0dc774d85cf09afe1d96a59548c0d" category="cell">SSH （ 22 ）</block>
-  <block id="52d8cb03f7e1ba28b40cf59aba9d23a6" category="cell">管理 WS を各 OTS ノードに割り当てます</block>
-  <block id="7b9cdb50ce993f8da32e0203d7891e3b" category="cell">OTS ノードおよびクラスタに展開します</block>
   <block id="4aefb9d8b97710c922355b95aa968b29" category="cell">ONTAP にアクセスします</block>
-  <block id="33049db6f4337fdeb40a9daa0f02990a" category="cell">展開する各 OTS ノード</block>
   <block id="7500b5713f13bc8f1704bb7da699f783" category="cell">iSCSI （ 3260 ）</block>
   <block id="486a5d62fc96d90727c1ed173ccfa4b5" category="cell">メディエーター / メールボックスディスク</block>
   <block id="9fbbd5bdac28c04c1d8551e94ce3f619" category="doc">ONTAP Select リリースノート</block>
@@ -1304,7 +1276,6 @@
   <block id="0b192facec240b8aef1dfcf704fc55d3" category="inline-image-macro">ノードごとに 2 つの物理ポートを備えた vSwitch</block>
   <block id="40294088ed92f54e85ec516b44b1ec99" category="paragraph"><block ref="40294088ed92f54e85ec516b44b1ec99" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f0c56ce994467f28cee98b9efa3502af" category="section-title">LACP を使用した分散 vSwitch</block>
-  <block id="37f2bb8e73a0b07124a33a18dec27a01" category="paragraph">分散 vSwitch を構成で使用する場合は、ネットワーク構成を簡易化するために LACP を使用できます（ただしベストプラクティスではありません）。サポートされる唯一の LACP 構成では、すべての VMNIC を 1 つの LAG にまとめる必要があります。アップリンクの物理スイッチは、チャネル内のすべてのポートで 7 、 500~9 、 000 の MTU をサポートする必要があります。ONTAP Select の内部ネットワークと外部ネットワークは、ポートグループレベルで分離する必要があります。内部ネットワークはルーティングされない（分離された） VLAN を使用する必要があります。外部ネットワークは VST 、 EST 、または VGT を使用できます。</block>
   <block id="0423511198455fa6be1e5399012b4fce" category="paragraph">次に、 LACP を使用した分散 vSwitch の設定例を示します。</block>
   <block id="5551a8338b11967dc3b3f01a0497767e" category="paragraph">* LACP 使用時の LAG プロパティ *</block>
   <block id="12150f10ef6d8e391576653025b49543" category="inline-image-macro">LACP を使用する場合の LAG プロパティ</block>
@@ -1615,7 +1586,6 @@
   <block id="629de471ebcc58755321b61a566eef22" category="paragraph">クラスタが 2 つのノードで構成されている場合は、ノードに障害が発生したり、通信が失われたりすると、必要なクォーラムを確保できません。このようなスプリットブレイン状態を解決するために、 ONTAP Select Deploy ユーティリティの各インスタンスにはメディエーターサービスが用意されています。このサービスは、アクティブな 2 ノードクラスタ内の各ノードに接続して HA ペアを監視し、障害の管理を支援します。メディエーターサービスは、各 2 ノードクラスタに関連付けられている専用の iSCSI ターゲットで HA の状態情報を管理します。</block>
   <block id="e5b41f4225b398db953f0053c56d6542" category="summary">ONTAP Select の調査と導入の計画を開始するにあたって、まず用語や主な概念を理解しておくと役立ちます。</block>
   <block id="391a56271aac0c7272e3e9bc2a840da1" category="list-text">ONTAP Select Deploy は、 ONTAP Select クラスタの導入に使用する管理ユーティリティです。Deploy ユーティリティは、専用の Linux 仮想マシンで実行されます。Deploy ユーティリティには、 Web ユーザインターフェイス、 CLI 管理シェル、および REST API を使用してアクセスできます。</block>
-  <block id="153e118152db4eb4b3aaf5802efa8cfa" category="list-text">a_hypervisor host_ は、 ONTAP Select 仮想マシンをホストするコアハードウェアプラットフォームです。ハイパーバイザーホストに導入されてアクティブになった ONTAP Select 仮想マシンは、 _ ONTAP Select Node_. とみなされます。</block>
   <block id="016402ba882e183fec09aa422afcb53e" category="list-text">ONTAP Select クラスタ</block>
   <block id="85b0e2165794c108ba013b7cf182db29" category="list-text">ハイパーバイザーホスト環境の準備</block>
   <block id="6fad2c05f92dba415c7e46f30eb18bfb" category="list-text">Deploy 管理ユーティリティを使用して ONTAP Select クラスタを導入する前に、ストレージ環境とネットワーク環境を含む、 ONTAP Select を実行するハイパーバイザーホストを準備する必要があります。このホストの事前設定は、現在の要件と制限事項に基づいて、 ONTAP Select 製品の外部で実行されます。</block>
@@ -1626,29 +1596,22 @@
   <block id="2d97b8a3010b7d7eb0dc173f2d9af444" category="list-text">プラットフォームライセンスの提供</block>
   <block id="da2d544df7edf3f50bd8cae1e601264a" category="list-text">License Manager の略</block>
   <block id="6ce3d683f11be5f1e22f253158d4c047" category="list-text">プラットフォームライセンスの提供</block>
-  <block id="3cfbc322e3cddd57d170712cdb477d47" category="list-text">ライセンスの購入時に ONTAP Select 仮想マシンのサイズ機能を決定するライセンスサービスは 3 種類あります。</block>
   <block id="0bc2f0b52f71747c660272aed0ae049b" category="list-text">ストレージプールとデータストアの比較</block>
   <block id="88f2b69e46c782f548718ec1e46e374d" category="list-text">ONTAP Select ストレージプールは、基盤となる物理ストレージを抽象化して見えなくすることを目的として設計された論理データコンテナです。ストレージプールはハイパーバイザーに依存しません。ESXi ハイパーバイザーホストに導入した ONTAP Select ストレージプールは、 vmware_datastore__ と同義です。</block>
-  <block id="b29945d8f2baa1d8d6f0173c13e17127" category="list-text">クラスタ MTU は、 ONTAP Select マルチノードクラスタで使用される内部ネットワークで使用される MTU サイズを設定できる機能です。Deploy 管理ユーティリティは、ネットワーク環境に合わせて HA ペアを設定する際に MTU サイズを調整します。値は手動で設定することもできます。</block>
   <block id="8146798c3a58748cf36a3686cf1080c1" category="list-text">ONTAP Select vNAS</block>
   <block id="ceadd042106e2e6e38c086059f6d92ed" category="list-text">ONTAP Select vNAS 解決策 を使用すると、 ONTAP Select ノードから外付けストレージ上の VMware データストアにアクセスできます。ONTAP Select vNAS では、ローカルの RAID コントローラが必要ありません。 RAID 機能はリモートストレージが提供します。ONTAP Select vNAS の設定方法は次のとおりです。</block>
   <block id="500c7e4a0b475daf983a1d345400eab1" category="paragraph">どちらの場合も、 ONTAP Select クラスタの作成前または既存のノードのストレージ容量の拡張前に、外付けストレージを設定する必要があります。</block>
-  <block id="82166e37834867840aa4138c1d0fc9a2" category="list-text">ONTAP Select vNAS 解決策 （ VMware vSAN または汎用の外付けストレージアレイ）を介して利用可能な外付けストレージを使用するクラスタを導入すると、 ONTAP Select ノードをホストする ESXi 仮想マシンを、次の VMware の機能を利用して移動できます。</block>
   <block id="6c1a84b789b54fd42511ce582be94d21" category="list-text">vMotion</block>
-  <block id="91382f342b0426a94cda249d98215456" category="paragraph">ONTAP Select Deploy ユーティリティは、クラスタで実行される次のような処理の一環として、仮想マシンの移動を検出します。</block>
   <block id="f233a4495de11c850f2f950fdcf04f43" category="list-text">クラスタがオンラインです</block>
   <block id="80a4efc6a0539a2b0ec5182e3e552b8a" category="list-text">クラスタがオフラインです</block>
   <block id="8f640a3c65205453464e1cf24cc47039" category="list-text">ストレージの追加</block>
-  <block id="3c0e5ec8c56207121b85850c28697f1b" category="paragraph">仮想マシンが移動されると、 Deploy ユーティリティはその内部データベースを更新して、新しい ESXi ホストを設定します。ONTAP Select ノードで実行されるすべての操作は、仮想マシンの移動と Deploy による更新が完了するまでブロックされます。</block>
   <block id="430715a64a3d17a55636a8254ceda4b3" category="list-text">ONTAP Select Deploy ユーティリティには、アクティブな 2 ノードクラスタ内のノードに接続するメディエーターサービスが含まれています。このサービスは各 HA ペアを監視し、障害の管理を支援します。</block>
-  <block id="0c84667a56b6c4af08d4d19104f54079" category="admonition">アクティブな 2 ノードクラスタが 1 つ以上ある場合は、クラスタを管理する ONTAP Select Deploy 仮想マシンが常時稼働している必要があります。Deploy 仮想マシンが停止すると、メディエーターサービスが使用できなくなり、 2 ノードクラスタの HA 機能が失われます。</block>
   <block id="0ffe501fe086c67c3769d18d093b040d" category="list-text">MetroCluster SDS</block>
   <block id="3413c9ff161800be72d32031c8ce680a" category="list-text">MetroCluster SDS は、 2 ノード ONTAP Select クラスタを導入する際に追加の設定オプションを提供する機能です。通常の 2 ノード ROBO 環境とは異なり、 MetroCluster SDS ノードはより長い距離で分離できます。この物理的な分離により、ディザスタリカバリなど、さらに多くのユースケースに対応できます。MetroCluster SDS を使用するには、 Premium ライセンス以上が必要です。また、ノード間のネットワークで最小レイテンシ要件がサポートされている必要があります。</block>
   <block id="a2a3387842d1c8945343b658a1f0ebe5" category="list-text">クレデンシャルストア</block>
   <block id="fd18465573ec21a6218982055981f6b1" category="list-text">ストレージ効率</block>
   <block id="423954cad6922467121a80645e239eab" category="list-text">ONTAP Select では、 FAS アレイや AFF アレイとほぼ同じ Storage Efficiency オプションが提供されます。概念的には、直接接続型ストレージ（ DAS ） SSD を搭載した ONTAP Select （プレミアムライセンスを使用）は、 AFF アレイに似ています。HDD を搭載した DAS と vNAS 構成をすべて FAS アレイと同様に検討してください。この 2 つの構成の主な違いは、 DAS SSD を搭載した ONTAP Select では、インラインアグリゲートレベルの重複排除とアグリゲートレベルのバックグラウンド重複排除がサポートされる点です。残りの Storage Efficiency オプションは、両方の構成で使用できます。</block>
   <block id="b23e7417b5586a4f61be9e35dc573c79" category="list-text">クラスタの更新</block>
-  <block id="fdd4493009c6ff1abb79748d95baf6a5" category="list-text">クラスタの作成後、 ONTAP またはハイパーバイザー管理ツールを使用して、 Deploy ユーティリティ以外でクラスタまたは仮想マシンの設定を変更できます。また、構成を変更する仮想マシンを移行することもできます。この変更が行われた場合、 Deploy ユーティリティは自動的には更新されず、クラスタの状態と同期していない可能性があります。クラスタの更新機能を使用して、 Deploy 構成データベースを更新できます。クラスタの更新は、 Deploy の Web ユーザインターフェイス、 CLI 管理シェル、 REST API を使用して実行できます。</block>
   <block id="cb7eb9d776ea3a35e4332b008a0d3f33" category="list-text">ソフトウェア RAID</block>
   <block id="a74754f3e0ef6a5ec48499da6d42fe6a" category="list-text">DAS （直接接続型ストレージ）を使用する場合、 RAID 機能は従来、ローカルのハードウェア RAID コントローラを通じて提供されていました。ONTAP Select ノードが RAID 機能を提供する _software raid_ を使用するようにノードを設定することもできます。ソフトウェア RAID を使用する場合、ハードウェア RAID コントローラは不要になります。</block>
   <block id="37820bb98a74e718dcb62cbc8e1295e8" category="list-text">ONTAP Select イメージのインストール</block>
@@ -1791,18 +1754,12 @@
   <block id="aa2fcb2cdb811557a9850bad1ec5d893" category="summary">Deploy 管理ユーティリティを VMware 環境にインストールする前に、基本的な要件を確認し、導入を成功させるための準備をしておきます。</block>
   <block id="afb48a56af012ba490b6f0c683ca069d" category="section-title">必要な設定情報</block>
   <block id="d9185ee4415c568b0cdb77e572a7390e" category="paragraph">導入計画の一環として、 ONTAP Select Deploy 管理ユーティリティをインストールする前に、必要な設定情報を特定しておく必要があります。</block>
-  <block id="0b570abbf74d00b0ddac40b3df73bc38" category="cell">Deploy 仮想マシンの名前</block>
-  <block id="cd27c0db3afcfe11031bba370c52b44c" category="cell">仮想マシンに使用する ID 。</block>
-  <block id="e4e89d14bd02fe7b90bab4cb494078c8" category="cell">仮想マシンのネットワーク</block>
-  <block id="8f6eb425fe672a82f3f3d94604e78f26" category="cell">Deploy 仮想マシンが接続されているネットワークの識別子。</block>
   <block id="d68b443bd8d19cbd04e6ac11a9c4e5c1" category="section-title">オプションのネットワーク構成情報</block>
-  <block id="dc0dbca06687940c14e147cd5f17d675" category="paragraph">Deploy 仮想マシンは、デフォルトでは DHCP を使用して設定されます。ただし、必要に応じて、仮想マシンのネットワークインターフェイスを手動で設定できます。</block>
   <block id="0a355c4393c1a56055370fb4b9058ac5" category="cell">ネットワーク情報</block>
   <block id="7e479bcd42ddcf9cdd3981a2aaf316f6" category="cell">ホスト・マシンの識別子</block>
   <block id="8c8fd7ca4837547552e390579a444bbe" category="cell">ホストの IP アドレス</block>
   <block id="747ee4e24febca30ac019112ccf4eddd" category="cell">ホストマシンの静的 IPv4 アドレス。</block>
   <block id="3dccf72fe610d6922e392e93335fdb6d" category="cell">サブネットマスク</block>
-  <block id="85aeb305b9f4971d93793bc84782eb14" category="cell">仮想マシンが属するネットワークに基づくサブネットワークマスク。</block>
   <block id="926dec9494209cb088b4962509df1a91" category="cell">ゲートウェイ</block>
   <block id="e4054bde6dc67a6507361aeb9df916ba" category="cell">デフォルトゲートウェイまたはルータ。</block>
   <block id="68eeeed01bf11dc7edb656408cbfd0b6" category="cell">プライマリ DNS サーバ</block>
@@ -1869,7 +1826,6 @@
   <block id="20d8c400c91f244c437959b1015faf77" category="paragraph">2 ノードクラスタでは、 4 ノードクラスタに必要な 2 つの 10Gb ポートの代わりに、 4 つの 1Gb ポートまたは 1 つの 10Gb ポートを使用できます。サーバに 4 つの 10Gb NIC カードを装着できない環境では、内部ネットワーク用に 10Gb NIC カードを 2 つ、外部 ONTAP ネットワーク用に 1Gb NIC を 2 つ使用できます。</block>
   <block id="2ce84fe48597ac937066a2883f19084f" category="section-title">内部ネットワークの検証とトラブルシューティング</block>
   <block id="48d34abcc024a4f782dd82b39ba8903e" category="paragraph">次のコマンドを実行してテストの出力を表示します。</block>
-  <block id="16992ee8f8caed0bb049b0e9dd94317f" category="paragraph">ONTAP Deploy 2.10 以降では、内部ネットワークで使用される MTU サイズを 7 、 500~9 、 000 に設定できます。また、ネットワーク接続チェッカーを使用して、 MTU サイズを 7 、 500~9 、 000 の範囲でテストすることもできます。デフォルトの MTU 値は、仮想ネットワークスイッチの値に設定されます。VXLAN などのネットワークオーバーレイが環境に存在する場合は、このデフォルト値をより小さい値に置き換える必要があります。</block>
   <block id="31de76b28cce5b959eace72203221efb" category="section-title">ONTAP Select 外部ネットワーク</block>
   <block id="48bf680004e59a7ee0fdd464f7b9eec5" category="paragraph">次の表に、 ONTAP Select の内部ネットワークと外部ネットワークの主な違いを示します。</block>
   <block id="c56287834ec31f321469fa7bf5643275" category="paragraph">* 内部ネットワークと外部ネットワークのクイックリファレンス *</block>
@@ -1893,21 +1849,16 @@
   <block id="493eafc0cc0b21e8010845dec6e8f37b" category="section-title">MAC アドレスの生成</block>
   <block id="ce1b0fc992e2d8e0e68ad93e1af99070" category="paragraph">すべての ONTAP Select ネットワークポートに割り当てられた MAC アドレスは、付属の導入ユーティリティによって自動的に生成されます。このユーティリティは、ネットアップ固有のプラットフォーム専用 OUI （ Organizationally Unique Identifier ）を使用して、 FAS システムとの競合がないことを確認します。その後のノードの導入時に同じアドレスが誤って割り当てられないように、このアドレスのコピーが ONTAP Select インストール VM （ ONTAP Deploy ）の内部データベースに保存されます。ネットワークポートに割り当てられた MAC アドレスを管理者が変更することはできません。</block>
   <block id="5105302096dd720ab813764e8580a00d" category="summary">VMware 環境に固有の要件と制限事項がいくつかあります。これらは、 VMware 環境に ONTAP Select Deploy ユーティリティをインストールする前に検討する必要があります。</block>
-  <block id="8b93cc40161cdbd01ab9e18838bcb683" category="doc">VMware ハイパーバイザー環境です</block>
-  <block id="080eeefb865f5c5b09e0ddbf462e23ba" category="section-title">ESXi ホストサーバハードウェアの要件</block>
   <block id="4832f452ca99a142c0e0db2c856d79e2" category="list-text">ESXi サーバ：</block>
   <block id="683c2567130f6a4546bb443f353cff0d" category="list-text">ハードウェアとソフトウェアは 64 ビットである必要があります</block>
   <block id="501ecbf501c47a3b1460cba563bd3cb2" category="list-text">ONTAP Select ノードに対して定義されたものと同じ、サポート対象のバージョンを使用している必要があります</block>
   <block id="f4fde6e81ed5f551541e5e43f2da3276" category="list-text">仮想 CPU （ 2 ）</block>
   <block id="665f528a615917daa6e68c9858e8973e" category="list-text">仮想メモリ（ 4GB ）</block>
-  <block id="2460c4c672fe5aa97bccda9a2c15381a" category="list-text">ストレージ（ 40GB ）</block>
-  <block id="6571206ea0d72e18ca7e523cdfac9bf3" category="list-text">DHCP が有効（静的 IP アドレスを割り当てることも可能）</block>
   <block id="66a0461d2d8cd670baf00d1c2bb16adb" category="section-title">ネットワーク接続</block>
   <block id="a8f60467940bda53d9db3f4b1f47ca5a" category="paragraph">導入する決定に応じて、 Deploy VM が管理する vCenter サーバ、 ESXi ハイパーバイザーホスト、および ONTAP Select ノードに接続できる必要があります。必要なトラフィックを許可するようにファイアウォールを設定する必要があります。</block>
   <block id="62a5303a3a11fbd7213daedd9ed6e5b5" category="list-text">ping コマンド（ ICMP ）</block>
   <block id="4d73f908f3df233953e0c67052f26665" category="section-title">IP バージョン 4 のサポート</block>
   <block id="db88ef4d05292b05026992fe3ca193af" category="paragraph">ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポートします。IP バージョン 6 （ IPv6 ）はサポートされません。この制限は、次の点で ONTAP Select に影響します。</block>
-  <block id="a808fd43c31372cb5ef7ac1ac9224c52" category="list-text">Deploy 仮想マシンの管理 LIF に IPv4 アドレスを割り当てる必要があります。</block>
   <block id="b3a288a6973caafe5e4ff191758f8b98" category="list-text">ONTAP LIF で IPv6 を使用するように設定された ONTAP Select ノードを Deploy で作成することはできません。</block>
   <block id="d8ab7c9c78c21b4a22cdfba499be0102" category="section-title">プラットフォームライセンス製品の機能</block>
   <block id="3c1861aaa9fcf5a348da316345ccfdb6" category="list-text">インスタンスタイプ（ CPU 、メモリ）</block>
@@ -1984,7 +1935,6 @@
   <block id="483b2bdf1e13fa583e93f86544ae9ee4" category="admonition">障害が発生したドライブの取り外しと新しいドライブ（スペアとしてマークされている）の追加は、ONTAP Select Deployを使用して実行する必要があります。vSphere を使用した ONTAP Select VM へのドライブの接続はサポートされていません。</block>
   <block id="04985546e9771cbfe818d7c08949cb4e" category="paragraph">ドライブで障害が発生した場合は、ONTAP CLIを使用して障害ディスクを特定する必要があります。</block>
   <block id="76b45a86afe9ddfec423de5caad088a5" category="list-text">管理者アカウントを使用して、ONTAP CLIにサインインします。</block>
-  <block id="56f32587956bc806f4ffe1823a1a1872" category="list-text">障害が発生したディスクドライブを特定します。</block>
   <block id="2976fb0a07ffd25ea274d2cc9bc187be" category="paragraph">ローカルハードウェアRAIDコントローラを使用する場合は、手順1~4を実行する必要があります。ソフトウェアRAIDを使用する場合は、手順1~6を実行する必要があります。</block>
   <block id="cc6982c020bc97509cfd68e72db0524e" category="list-text">管理者アカウントのクレデンシャルを使用して、SSHを使用してDeployユーティリティのCLIにサインインします。</block>
   <block id="1d0fd2b207143cd0cbfe1f1eca67206a" category="list-text">ソフトウェアRAIDを使用している場合は、使用可能なドライブを接続します。</block>
@@ -2026,7 +1976,6 @@
   <block id="40a60db1cb196f556dfa7fc31b0fc0de" category="paragraph">はい。ONTAP Select Deployユーティリティは、ONTAP Select クラスタとは別にアップグレードできます。同様に、SelectクラスタもONTAP Select Deployユーティリティとは別にアップグレードできます。</block>
   <block id="1c1b6371821b57c0181e5ac9c60110dd" category="paragraph">ONTAP Select Deploy 2.6にアップグレードすると、導入済みだが元の構成からは変更されていないONTAP Select クラスタに対して、これらの変更をサポートできるようになります。つまり、上記のONTAP Select クラスタプロパティがSystem ManagerまたはvCenterを使用して変更された場合、ONTAP Select Deploy 2.6にアップグレードしても、これらの不整合は修正されません。ONTAP Select Deployによって一意のメタデータが各ONTAP Select VMに追加されるようにするには、ONTAP Select プロパティの変更を最初にロールバックする必要があります。</block>
   <block id="c18d02964afefd62e8842192dcbd79b4" category="paragraph">ONTAP Select Deployには、ONTAP Select ノードでの容量拡張処理をサポートするストレージ追加ワークフローが含まれています。管理下でストレージを拡張するには、同じデータストアのスペースを使用するか（使用可能なスペースが残っている場合）、別のデータストアのスペースを追加します。ローカルデータストアとリモートデータストアを同じアグリゲートに混在させることはできません。</block>
-  <block id="6ec35a9fea619f9056b56a9cceaecd8a" category="paragraph">ONTAP Select DeployおよびONTAP Select for KVMでは、外部アレイで共有論理ストレージプールタイプを使用するONTAP Select シングルノードクラスタの設定がサポートされます。ストレージプールのベースには iSCSI と FC / FCoE があります。それ以外のタイプのストレージプールはサポートされません。</block>
   <block id="38f6621fec19ff801692cfd74b3d8e9a" category="paragraph">ONTAP Select Deployは、次のようにONTAP Select ノードおよびクラスタ管理IPアドレスと通信できる必要もあります。</block>
   <block id="fc46f3e8b95ad7a4187367a3d699fabf" category="paragraph">2ノードクラスタの場合、ONTAP Select Deployはクラスタのメールボックスをホストします。各ONTAP Select ノードは、iSCSI（ポート3260）を使用してONTAP Select Deployにアクセスできる必要があります。</block>
   <block id="81cd6c8ef1512058861a9e8233376fb2" category="paragraph">ONTAP Select Deploy VMが主にクラスタの作成に使用される4ノード、6ノード、および8ノードクラスタとは異なり、2ノードクラスタは、HAクォーラム用にONTAP Select Deploy VMを継続的に利用します。ONTAP Select Deploy VMが使用できない場合、フェイルオーバーサービスは無効になります。</block>
@@ -2081,7 +2030,6 @@
   <block id="6c934076f6916c570e1e192badaff0f6" category="paragraph-title">ONTAP MetroCluster SDS には、 Premium ライセンス以上が必要ですか？</block>
   <block id="3690bfca39d229721656be52d6e38df1" category="paragraph-title">ソフトウェア RAID とは</block>
   <block id="4e0891be88802b935c566dc6245269b2" category="paragraph-title">ソフトウェア RAID とハードウェア RAID 構成の違いは何ですか。</block>
-  <block id="d0093f68bddcefc4d27db886e2488615" category="paragraph-title">ONTAP Select for KVM では複数の NIC ボンドをサポートしていますか。</block>
   <block id="baf467f7c147f366ee1e95629aa35ddb" category="paragraph-title">ハイパーバイザーホスト内の障害が発生した物理ディスクまたは NIC について、 ONTAP Select で報告またはアラートを生成する方法を教えてください。ONTAP Select はハイパーバイザーからこの情報を取得しますか、それともハイパーバイザーレベルで監視を設定する必要がありますか？</block>
   <block id="c7b611d510bc619ec380a5444620746f" category="paragraph-title">ONTAP Select でサポートされるデータストアの最大サイズはいくつですか。</block>
   <block id="4bb81c896f6353933a5f144d4f155bba" category="paragraph-title">ONTAP Select ノードの容量はどのようにして拡張できますか。</block>
@@ -2091,7 +2039,6 @@
   <block id="ce777469b9f51fcc7f290822407d49c8" category="paragraph-title">VSAN AF に ONTAP Select Premium が必要ですか。</block>
   <block id="8835ca2abfedf3bf3f774e0cbc020504" category="paragraph-title">サポートされている VSAN FTT / FTM 設定はどれか？</block>
   <block id="f13bfc8565d5515f3a1d879c5ecc3e18" category="paragraph-title">複数の ONTAP Select ノードが異なる Select クラスタに属している場合、それらのノードを同じホストで実行することはできますか。</block>
-  <block id="935a7d198067fd5cc94997a307675cd6" category="paragraph-title">KVM でライブマイグレーションを実行するには、どのような追加プロセスを実行する必要がありますか。</block>
   <block id="217b7fb2555068ab584db913a7aea017" category="paragraph-title">ONTAP Select DeployはどのようにしてvCenterと通信し、どのファイアウォールポートを開く必要がありますか？</block>
   <block id="60789e3f721edfada82e8544b0181a42" category="paragraph-title">ONTAP Select DeployでONTAP Select クラスタを作成するために必要なvCenterの権限はどれですか？</block>
   <block id="b622687ba14734f3e63b4781b7e16324" category="paragraph-title">4 ノード、 6 ノード、または 8 ノードのクラスタと 2 ノードの ONTAP Select クラスタの違いは何ですか。</block>
@@ -2136,7 +2083,6 @@
   <block id="d2cc16162b6d3a24dc4a4501cf469cb0" category="inline-link">販売終了通知</block>
   <block id="bdcccc9d04bbc9b8540a1fbdebef3b93" category="section-title">ONTAP Select 9.10.1</block>
   <block id="4774053cb57a95a02a834cf823224b16" category="list-text">ONTAP Select 9.10.1 は VMware NSX -T バージョン 3.1.2 に対応しています。OVAファイルとONTAP Select Deploy管理ユーティリティを使用して導入されたONTAP Select シングルノードクラスタでNSXとTを使用しても、機能の問題や不具合は発生しません。ただし、 NSX と ONTAP Select マルチノードクラスタを併用する場合は、次の要件および制限事項に注意してください。</block>
-  <block id="ad136d3e5fb5acdd03500618ef8e1a95" category="paragraph">追加のオーバーヘッドを考慮してクラスタを導入する前に、クラスタの MTU サイズを 8800 に手動で調整する必要があります。VMware のガイダンスでは、 NSX を使用する場合に 200 バイトのバッファを使用できるようにする方法を説明しています</block>
   <block id="be4edc608044981ff1193ab01e2a80a8" category="list-text">ネットワーク 4x10Gb 構成</block>
   <block id="e3f9b3ee4bd0f7a9715c1acd839cb82b" category="paragraph">4 つの NIC が設定された VMware ESXi ホストに ONTAP Select を導入する場合、 Deploy ユーティリティから、 2 つの異なるポートグループに内部トラフィックを分割し、 2 つの異なるポートグループに外部トラフィックを分けるというベストプラクティスに従うように求められます。ただし、オーバーレイネットワークを使用する場合、この設定は機能しないため、推奨事項は無視してください。この場合は、内部ポートグループを 1 つと外部ポートグループを 1 つだけ使用してください。</block>
   <block id="2380ad5ce6796e080b2fcb896e8b4d72" category="list-text">ONTAP Select 9.10.1 以降、 KVM ハイパーバイザーに新しいクラスタを導入することはできなくなりました。ただし、クラスタを以前のリリースから 9.10.1 にアップグレードしても、 Deploy ユーティリティを使用してクラスタを管理できます。</block>
@@ -2359,13 +2305,7 @@
   <block id="ddb3e9a5262cd471087b75501bb8e76f" category="section-title">VMXNET3へのアップグレード（ESXiのみ）</block>
   <block id="0d96b85e7095867ad0ed8bb6b07bfbba" category="section-title">標準vSwitchを使用する2NICホスト（ESXiのみ）</block>
   <block id="38313565feb70deddb18b57a0fa6a1bb" category="section-title">標準vSwitchを使用する4 NICホスト（ESXiのみ）</block>
-  <block id="fd74a67cb918f85d1311a0a4e861bd1b" category="list-text">vSphere（ESXiのみ）
-vSphereサーバまたはESXiホスト（クラスタ環境でのホストの管理方法に応じて）</block>
-  <block id="a5bd35425a22d7507b9825330440172b" category="list-text">ハイパーバイザーサーバ
-ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
-  <block id="60145e5f14771910fe0e92292987cc3f" category="cell">ESXi / KVM</block>
   <block id="6d500778aac22c014a759f2014a2f901" category="cell">vCenterサーバ（管理対象）またはESXi（管理対象または管理対象外）に導入</block>
-  <block id="76e219b6c1ed75496f137268149de1c2" category="cell">ESXiまたはKVM</block>
   <block id="d9817ded489aaa35d8ba40ab33bdfd4b" category="cell">KVM の略</block>
   <block id="27867a85560994e09ee616b37ec585de" category="cell">ハイパーバイザーサーバノードに導入</block>
   <block id="2d81002b634550a1e266341254a2d597" category="cell">アクセスハイパーバイザーサーバ</block>
@@ -2374,24 +2314,14 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="f72371502203ff57c484242dbc67867e" category="list-text">ESXi VMでのノードのリホスト</block>
   <block id="723175906733e981a3c4cecfa676d718" category="list-text">KVM用Open vSwitch</block>
   <block id="f2e1bec0bf9dc8b72ed85acdb710b7b3" category="list-text">Open vSwitch（OVS）は、複数のネットワークプロトコルをサポートする仮想スイッチのソフトウェア実装です。OVSはオープンソースであり、Apache License 2.0に従って利用可能である。</block>
-  <block id="a58369c5f825885c0e854fc71f3182d2" category="section-title">KVM環境に関連する要件</block>
-  <block id="a31d24c92bf934198daf4c9de0fbf6fe" category="paragraph">Deploy管理ユーティリティをKVMハイパーバイザー環境にインストールする前に、基本的な要件を確認し、導入の準備を行う必要があります。</block>
-  <block id="2bc4d2a9f4f1cb16b80458ad693c0e10" category="paragraph-title">導入の要件と制限事項</block>
-  <block id="65e89c4f981236771238a0b496352bca" category="paragraph">ONTAP Select DeployユーティリティをKVM環境にインストールするときは、いくつかの要件と制限事項について考慮する必要があります。</block>
-  <block id="8382764faa40c85296e40ce47d8e2659" category="paragraph-title">Linux KVMホストサーバハードウェアの要件</block>
-  <block id="4593c0f0a0fb23901365136dfc24adfa" category="paragraph">Linux KVMハイパーバイザーホストがいくつかのリソースの最小要件を満たしている必要があります。ONTAP Selectを導入するホストが次の基本的な要件を満たしていることを確認します。</block>
   <block id="35307f57a5a3d5fba69141c7640ae906" category="list-text">Linuxサーバ：</block>
   <block id="4ccae4a1fb3244b847162c1cb3b7ae58" category="list-text">ハードウェアとソフトウェアは64ビットである必要があります。</block>
   <block id="4a915b532cf0b74fe5180c0a6dc75660" category="list-text">サーバは、ONTAP Selectノードに対して定義されたものと同じサポートされているバージョンに準拠している必要があります。</block>
   <block id="ee18d93b22281a9786909ae8a0b98515" category="list-text">仮想メモリ（4GB）</block>
   <block id="10f5f98977364b596f783d0a406aadfe" category="list-text">ストレージ（40GB）</block>
-  <block id="568988b6e429774739a42de9ebe12cc6" category="list-text">"Dynamic Host Configuration Protocol（DHCP；動的ホスト構成プロトコル）が有効になっています（静的IPアドレスを割り当てることもできます）。</block>
-  <block id="d04b3cf1f8dd0c991d3972ba84ac3077" category="paragraph">Deploy仮想マシンのネットワークインターフェイスが設定され、管理するONTAP Selectホストに接続できることを確認します。</block>
   <block id="b55ccebbca214632e5d9433799968869" category="list-text">Deploy VMの管理LIFにIPv4アドレスを割り当てる必要があります。</block>
   <block id="7edc68d99c3fd608be16166aa0e21c0f" category="paragraph-title">Deploy VMの名前</block>
   <block id="32913e3560abd1d0dd93b28afbe52d2f" category="paragraph">VMに使用する名前。</block>
-  <block id="8062acefaa85f6d60598895ada1eb469" category="paragraph-title">Linux KVMホストの名前</block>
-  <block id="6dcac66856368463828a8255b569b02d" category="paragraph">DeployユーティリティがインストールされているLinux KVMホスト。</block>
   <block id="38e239d5702d629bfaeed6a1e18be7b6" category="paragraph-title">ストレージプールの名前</block>
   <block id="346476d0d78ca9f5916db3f90ab976bc" category="paragraph">VMファイルを格納するストレージプール（約40GBが必要）。</block>
   <block id="a1241b7a8525c966e2271e084ca17d72" category="paragraph-title">VMのネットワーク</block>
@@ -2404,7 +2334,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="777b19c22868c22da39574161da371d9" category="paragraph">プライマリドメインネームサーバ。</block>
   <block id="26ec863fd422c7a03737e7244f0b5cd0" category="paragraph">セカンダリドメインネームサーバ。</block>
   <block id="5480d57f7795c54d0c142dc167b0796b" category="paragraph">使用する検索ドメイン。</block>
-  <block id="d987059988021a19bbaac8058137dc2c" category="paragraph">ONTAP Select Deployクレデンシャルストアは、アカウント情報を保持するデータベースです。Deploy は、クラスタの作成と管理の一環として、アカウントのクレデンシャルを使用してホスト認証を実行します。ONTAP Select の導入計画の一環として、クレデンシャルストアがどのように使用されるかを理解しておく必要があります。</block>
   <block id="694d40220902b22c12e6697b843de1d6" category="summary">VMware ESXiの使用に関連するいくつかの計画の問題について考慮する必要があります。</block>
   <block id="bcee2262402cb4341eea3a827fc4df93" category="paragraph">ONTAP Select vNASは、ONTAP Select仮想マシンを実行するESXiハイパーバイザーホストの外部にONTAP Selectデータストアを配置できる解決策です。これらのリモートデータストアには、VMware vSANまたは汎用の外付けストレージアレイを使用してアクセスできます。</block>
   <block id="f091a7241376ec9602b657e6a2749d35" category="section-title">KVMに必要なLinuxに関する知識とスキル</block>
@@ -2431,9 +2360,7 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="555ee4330a0f3ec58e21bf1d006303ea" category="section-title">ハイパーバイザーホストに関する考慮事項</block>
   <block id="c544f28388744c5e480876a75289180f" category="admonition">ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでのONTAP Select 9.10.1では、KVMハイパーバイザーへの新しいクラスタの導入がサポートされなくなり、ONTAP Select 9.11.1では、オフラインへの切り替えや削除を除く既存のKVMクラスタとホストの管理がサポートされなくなりました。</block>
   <block id="6fb6843bd9a214011969c02729c7d671" category="section-title">ストレージに関する考慮事項</block>
-  <block id="d0de7dbc0a6e4f3130eda9548616177c" category="admonition">アカウント情報は、Advanced Encryption Standard（AES）暗号化アルゴリズムとSHA-256ハッシュアルゴリズムを使用して、データベースに安全に保存されます。</block>
   <block id="67b3dba8bc6778101892eb77249db32e" category="list-text">ホスト</block>
-  <block id="ab1a5ca8734e7b768b79cd78806fa499" category="paragraph">host *クレデンシャルは、ONTAP SelectノードをESXiまたはKVMに直接導入する際にハイパーバイザーホストを認証するために使用します。</block>
   <block id="76d3c1486fd20c4d5dbded1de701a315" category="list-text">vCenter</block>
   <block id="a4378567585e5f41b101707c9ab650d5" category="paragraph">vCenter *クレデンシャルは、ホストがVMware vCenterで管理されている場合に、ESXiにONTAP Selectノードを導入する際にvCenter Serverを認証するために使用されます。</block>
   <block id="311bfa395d01805b98ac74d2adf9fb5c" category="paragraph">次の推奨事項に従う必要があります。</block>
@@ -2473,7 +2400,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="18be2ae62eb484adbc3df06931ebe10e" category="list-text">物理ボリュームが削除されたことを確認します。</block>
   <block id="f8e80305c6a752fa480425736440f0ae" category="list-text">物理ボリュームを表示します。</block>
   <block id="683ecb73afda15fde88ea1f13553db88" category="list-text">プールの物理ボリュームが存在する場合は、削除します。</block>
-  <block id="648b7564cebb88ef62230c6f20be68e5" category="section-title">KVMホスト</block>
   <block id="50d78cdae1dbe643fde69294232f2373" category="paragraph">ネットワークマネージャが無効になっていて、ネイティブのLinuxネットワークサービスが有効になっていることを確認します。</block>
   <block id="61265c1e27724fae1f9a2cd60d857810" category="paragraph">ONTAP Selectには2つの独立したネットワークが必要です。どちらもポートボンディングを利用してネットワークのHA機能を提供します。</block>
   <block id="b4a77e012bdccdd189f5aef0dce990f6" category="list-text">ホストでOpen vSwitchがアクティブであることを確認します。</block>
@@ -2485,7 +2411,6 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="e72eb41a052109bb91a2314fa0d6e4fc" category="list-text">ネットワークインターフェイスを停止します。</block>
   <block id="ccaee579ce14596b2dda7bc7da054d94" category="admonition">ボンドを設定する必要があるのは、インターフェイスが複数ある場合だけです。</block>
   <block id="646f02137c96603aa789a9457d4d0957" category="list-text">ネットワークインターフェイスを有効にします。</block>
-  <block id="52a1e1faba85313e38b02d33db3e72fa" category="section-title">ESXiホスト</block>
   <block id="fb8668e0bc658a022bb57683502e41f4" category="paragraph">MetroCluster SDSを導入する前に、次の要件を満たしていることを確認してください。</block>
   <block id="790a20028135688e75d10ebcae79b5ee" category="paragraph">次のROBO構成がサポートされます。</block>
   <block id="c11557a633da8e8234fe07d4d53492c4" category="paragraph">次の図は、VM ESXi上でONTAP Selectを使用する一般的なリモートオフィスの構成を示しています。スケジュールベースの SnapMirror 関係：メインのデータセンターに配置された自社開発のストレージアレイにリモートオフィスから定期的にデータをレプリケートします。</block>
@@ -2494,14 +2419,10 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="a11197ec2a2c19c156f167ee81e6aafb" category="list-text">ONTAP Select 9.14.1以降では、KVMハイパーバイザーのサポートが再開されました。これまでは、ONTAP Select 9.10.1でKVMハイパーバイザーのサポートが廃止されていました。</block>
   <block id="d5ee496328aece24f2ebb18c38c9fdc5" category="paragraph">Deploy管理ユーティリティをハイパーバイザー環境にインストールする前に、必要な設定情報とオプションのネットワーク設定情報を確認して、導入の準備をします。</block>
   <block id="42526c4d633daba88899ba9e18234452" category="cell">ハイパーバイザーホストの名前</block>
-  <block id="d337df11b3ebf63c5a2171392491798f" category="cell">DeployユーティリティがインストールされているVMware ESXiまたはKVMハイパーバイザーホストの識別子。</block>
-  <block id="e827723eb84c3ca87c21fd4dbca2ccda" category="cell">データストアの名前</block>
-  <block id="d8ca36c2c2dd21202d873bdf26e7ec79" category="cell">仮想マシンファイルが格納されているハイパーバイザーデータストアの識別子（約40GBが必要）。</block>
   <block id="a295d719442375039396c1ff541e8a8f" category="paragraph">ESXiハイパーバイザーの場合は、ONTAP Select Deploy VMの導入を準備する必要があります。</block>
   <block id="171890587c5a7811013eb0e4f687968f" category="list-text">Deploy VMにIPアドレスを動的に割り当てる場合は、VMware環境でDHCPを有効にします。</block>
   <block id="d98fb3ce51b49ee9b9e8ea2645524f08" category="list-text">Deploy VMのIPアドレス</block>
   <block id="30e58d6b4fce06c690ff3897ae040f55" category="paragraph">vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、Deploy VMのコンソールを使用してネットワークを設定できます。</block>
-  <block id="922bafb0938c68773e29242e2675f0b9" category="paragraph">実行する手順は、ESXiハイパーバイザーとKVMハイパーバイザーのどちらを使用しているかによって異なります。</block>
   <block id="1c2f49da17d54e224e8288edcb35fd8b" category="list-text">必要に応じて、VMコンソールを使用してDeployネットワークを設定できます。</block>
   <block id="e24d94772b7fb552cdad8786d3972fe1" category="list-text">静的IP設定を定義する場合は「n *」、DHCPを使用する場合は「* y *」と入力し、* Enter *を選択します。</block>
   <block id="64c8e1a4f8f739423fd7163b603a4b32" category="list-text">LinuxサーバでCLIにサインインします。</block>
@@ -2509,17 +2430,12 @@ ESXiハイパーバイザーホストまたはLinux KVMホスト</block>
   <block id="5e3c1106cdccc5163a9adeb91282141d" category="list-text">Deploy管理ユーティリティを実行するKVM VMを作成して起動します。</block>
   <block id="2f1d867c33574a0e8fe8ef9afc5d3296" category="list-text">VMコンソールに接続します。</block>
   <block id="6cc6377064b4e1df43ff21fb26f8883a" category="list-text">ホスト名を入力し、* Enter *を選択します。</block>
-  <block id="f1741a8266818c8703f19efc49be41de" category="paragraph">ONTAP Select仮想マシンのVM ID、およびONTAP SelectおよびONTAP Select Deploy管理者アカウントのクレデンシャルが必要です。</block>
   <block id="56dd3f18edf7122ba5999fe0ca86dd75" category="paragraph">この手順は、ONTAP SelectノードがKVMで実行され、ソフトウェアRAIDを使用するように設定されている場合にのみ使用してください。</block>
   <block id="81ed103c3b5f4403473e6854f899d18d" category="list-text">ONTAP Select CLIで、交換するディスクを特定します。</block>
-  <block id="6f67e53d0fcccf4a43b4f0bae7f982c3" category="list-text">仮想マシンのシリアル番号、UUID、またはターゲットアドレスでディスクを識別します。</block>
   <block id="40bb7911d7ffd670ff2824f769603b59" category="list-text">必要に応じて、パーティショニングされたディスクを含むスペアディスク容量の一覧を表示します。
 storage aggregate show-spare-disks</block>
   <block id="3fe6e8d8e2b7644f9bcf08647f6601a2" category="list-text">Linuxのコマンドラインインターフェイスで、ディスクの場所を確認します。</block>
   <block id="3b37cd3b04171e8cd033821d3417c6d1" category="list-text">システムデバイスを調べ、ディスクのシリアル番号またはUUID（ディスク名）を検索します。</block>
-  <block id="348b084718fedf38007dba06e906d239" category="list-text">ターゲットアドレスを検索して、仮想マシンの構成を確認します。</block>
-  <block id="9407a9aa6f629a5e88183554a76a25a9" category="open-title">Deployを使用したKVM</block>
-  <block id="378f8d307bedecbc78a5b660ed70baf9" category="paragraph">ディスクの交換時または不要になったときは、KVMホストからディスクの接続を解除できます。</block>
   <block id="58cb9282a39be89806c95a5bcb0bbf72" category="paragraph">ONTAP SelectおよびONTAP Select Deploy管理者アカウントのクレデンシャルが必要です。</block>
   <block id="c64a62202a13cf0d3a7f10d31269230b" category="list-text">ページ上部の*[クラスタ]*タブを選択し、リストから目的のクラスタを選択します。</block>
   <block id="1b99a2270fef003a6af52de346d23a6d" category="list-text">目的のHAペアまたはノードの横にある*+*を選択します。</block>
@@ -2531,9 +2447,6 @@ storage aggregate show-spare-disks</block>
   <block id="bab59d063e1e9209616cd20c2abaa6e3" category="paragraph">不要になった物理ディスクをホストから取り外すことができます。</block>
   <block id="733b43998e34e1b8dd56318529edcbdb" category="open-title">CLIヲシヨウシタKVM</block>
   <block id="cb3e57c785ecd3c019ad90c0189c2674" category="paragraph">ディスクを特定したら、次の手順を実行します。</block>
-  <block id="358802b5460baa7c4302d9202d2039f2" category="list-text">仮想マシンからディスクの接続を解除します。</block>
-  <block id="423e8c0ceb388dc1a4dcd5770d6f7d63" category="list-text">設定をダンプします。</block>
-  <block id="04fe3ae8e42c2f151fc36c9eda4b1ce7" category="list-text">ファイルを編集し、仮想マシンから切断するディスク以外をすべて削除します。</block>
   <block id="5f248e1848bbc485e31bc49693137774" category="paragraph">ディスクのターゲットアドレスは、ONTAPのvmdisk-target-addressフィールドに対応している必要があります。</block>
   <block id="acddd91fe74aa744481d5a69925bb58b" category="list-text">ディスクを取り外します。</block>
   <block id="5367cd939b3607a36637881943335d78" category="list-text">物理ディスクを交換します。</block>
@@ -2547,13 +2460,11 @@ storage aggregate show-spare-disks</block>
   <block id="b3e9d310c3325f9d1cbe92e1adac30cb" category="list-text">[編集]*を選択して接続されているディスクを変更し、障害が発生したドライブのチェックを外します。</block>
   <block id="123d4b8c0c806b4e1df85c1841901374" category="list-text">クラスタのクレデンシャルを入力し、*[ストレージの編集]*を選択します。</block>
   <block id="7f40367356db41f1df6202ad57738cac" category="paragraph-title">Deployを使用したディスクの接続</block>
-  <block id="4db6b7349b0d33689899c431369ba1ae" category="paragraph">ディスクの交換時やストレージ容量の追加時に、KVMホストにディスクを接続できます。</block>
   <block id="5ead32d42e697cb642be701532d125ed" category="paragraph">新しいディスクをKVM Linuxホストに物理的にインストールする必要があります。</block>
   <block id="777a7f938c48f35fab54a605ef3aaafa" category="list-text">ノードに接続するディスクを選択し、ONTAP管理者のクレデンシャルを入力し、*[ストレージの編集]*を選択して変更を適用します。</block>
   <block id="ec96e42529202942700289e017995ece" category="list-text">[イベント]タブを選択して、接続操作を監視および確認します。</block>
   <block id="3b4fabd2a64a5ae54b1bfbf5af5b1cb0" category="list-text">ノードのストレージ構成を調べて、ディスクが接続されていることを確認します。</block>
   <block id="f612d7c30425f3fcbc2db7fffbe8991e" category="paragraph">障害ドライブを特定して取り外したら、新しいドライブを接続できます。</block>
-  <block id="33f273240323df66af70f29f294d7ab2" category="list-text">新しいディスクを仮想マシンに接続します。</block>
   <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">結果</block>
   <block id="f778b020848c4bce334b26593dd9cc1f" category="paragraph">ディスクはスペアとして割り当てられ、ONTAP Selectで使用できます。ディスクが使用可能になるまでに1分以上かかることがあります。</block>
   <block id="a743fc9c91bd7ab650676dc7bcff7cbe" category="paragraph">ノード設定が変更されたため、Deploy管理ユーティリティを使用してクラスタの更新処理を実行する必要があります。</block>
@@ -2598,9 +2509,7 @@ storage aggregate show-spare-disks</block>
   <block id="1cb67b03c1b735ec0f703760feb89d57" category="paragraph">データストアの合計サイズがサポートされる最大データストアサイズを超えない場合は、同じデータストアにエクステントとして新しいスペースを追加できます。ONTAP Selectがインストールされているデータストアにデータストアエクステントを動的に追加でき、ONTAP Selectノードの処理には影響しません。</block>
   <block id="15818992ad5aa575f4bd8e3f962a4103" category="paragraph">ONTAP SelectとONTAP Select Deploy管理ユーティリティはどちらもハイパーバイザーに依存しません。</block>
   <block id="e1f15dc0a8b6bac52055031b948ca4f7" category="paragraph">次のハイパーバイザーは、ONTAP SelectとONTAP Select Deployの両方の管理でサポートされます。</block>
-  <block id="c6eb2a17c97fb0ba37255cda6d2abe41" category="paragraph">Deploy管理ユーティリティとONTAP Selectノードは、どちらも仮想マシンとして実行されます。Deploy ユーティリティ用に選択したハイパーバイザーは、 ONTAP Select ノード用に選択したハイパーバイザーに依存しません。この 2 つをペアリングすると、完全な柔軟性が得られます。</block>
   <block id="a00a440e4e7508545fb84f9e32bb861b" category="paragraph-title">ONTAP SelectとONTAPハードウェアベースのクラスタの統合</block>
-  <block id="e289810d4028b10554ae6b447fa581ee" category="sidebar">ガイブストレージノヨウケン</block>
   <block id="a9e831fb19f71068ebfd5cb9b303ea66" category="sidebar">ESXi上のVMware vCenter</block>
   <block id="e681a3b45989b468533c4b90ee960bf9" category="cell">該当なし</block>
   <block id="7ce9d272dad1050f5d215fea78fec004" category="cell">1時間~7日</block>
@@ -2736,8 +2645,6 @@ storage aggregate show-spare-disks</block>
   <block id="cddb93cf729be75720f6155855c70d38" category="doc">ONTAP Select Deployのホスト管理サーバを変更する</block>
   <block id="7ccffa1050dd38b57df1fa0990bb72a7" category="doc">導入後のONTAP Selectクラスタの初期状態</block>
   <block id="c05931b717a76d4cc74840146d98c8ce" category="doc">ONTAP SelectでのONTAP機能のサポート</block>
-  <block id="b1c0fbe7ae4d4da25057b44b579da0f7" category="paragraph">ONTAP Selectでは、次のONTAP機能がサポートされており、デフォルトでライセンスが付与されています。</block>
-  <block id="f6d1a5bbfc21cf8963e7008a59fa0a5c" category="list-text">Autonomous Ransomware Protection（ARP）（手動更新）</block>
   <block id="1716834171e243de0f898a67621b6624" category="list-text">ONTAP S3</block>
   <block id="2511ead16bda3bbe0040b8814548bb87" category="list-text">S3 SnapMirror</block>
   <block id="d8d124daaa3196fc86bdde707e37359d" category="admonition">StorageGRIDを使用する場合は、FabricPoolライセンスは必要ありません。</block>
@@ -2922,7 +2829,6 @@ storage aggregate show-spare-disks</block>
   <block id="d9271d1702d6357cd68d0248f2b98bfb" category="cell">NFS、SMB / CIFS、iSCSI、NVMe over TCP</block>
   <block id="e2c5a3645710b0ed6fec1053fdfe0ead" category="cell">導入オプション</block>
   <block id="8557a15ebd845a53c232f882fe21205a" category="cell">サポートされる容量（ノードあたり）</block>
-  <block id="e8551ae26bc9361887df2597e2a2ea57" category="cell">最大400TBの生データ（ESXiおよびKVM）</block>
   <block id="3c02a379965ab0dfcd77b1c484450433" category="open-title">ハードウェア</block>
   <block id="440222a5c365cf69d621e3526ea562c4" category="cell">ハードウェアタイプ</block>
   <block id="719033e288b59becdea112c671c54bda" category="cell">インスタンスサイズ</block>
@@ -2947,7 +2853,6 @@ storage aggregate show-spare-disks</block>
   <block id="bb878052f3499d534f13d06526b7d885" category="cell">SSD（SAS）</block>
   <block id="d8e31ece33b3b9fb9373e996815932a7" category="cell">ソフトウェアRAIDを使用したローカルDAS</block>
   <block id="518c7a2538245dd75c6daac2212b8316" category="cell">外付けアレイ^1^</block>
-  <block id="8731210144d2e5094fb4001b893115d2" category="cell">外付けアレイでホストされているデータストアがFC、FCoE、iSCSI、およびNFS経由で接続されている（KVMではNFSはサポートされていません）。これらのデータストアは、高可用性と耐障害性を提供します。</block>
   <block id="563a5726768d43a126f11bc13b3361dd" category="paragraph">^1^外部アレイプロトコルのサポートには、ネットワークストレージの接続性が反映されています。</block>
   <block id="719d067b229178f03bcfa1da4ac4dede" category="open-title">ソフトウェア</block>
   <block id="e94dfbdb85e6f13fea9179c0fd50d81f" category="cell">ソフトウェアタイプ</block>
@@ -3025,7 +2930,6 @@ storage aggregate show-spare-disks</block>
   <block id="82f452184fa717ab2fcdbde25eea3a2b" category="inline-link-macro">実稼働環境への導入に関するライセンスについて学ぶ</block>
   <block id="74d4caeb059278dbd1c813ff422126a8" category="list-text"><block ref="74d4caeb059278dbd1c813ff422126a8" category="inline-link-macro-rx"></block></block>
   <block id="ac40d7358d4d4fc23aa16496ea43e162" category="summary">ONTAP Selectノードを導入する各ESXiハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが適切に構成され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
-  <block id="cd4dd6c5342dd2939f0e0bdd97cfa640" category="paragraph">ONTAP Selectノードを導入する各ESXiハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが正しく設定され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
   <block id="6943ac53dc25f522d2ecc61d1df4d254" category="admonition">ONTAP Select Deploy管理ユーティリティは、ハイパーバイザーホストに必要なネットワークおよびストレージ設定を実行しません。ONTAPONTAP Selectクラスタを導入する前に、各ホストを手動で準備する必要があります。</block>
   <block id="423f466fab8357286c6cf217990032a9" category="section-title">ステップ1: ESXiハイパーバイザーホストを準備する</block>
   <block id="ffcbf41bb4fefee8d2ebaec73aee544e" category="paragraph">ESXi ホストとファイアウォール ポートの構成を確認します。</block>
@@ -3043,7 +2947,6 @@ storage aggregate show-spare-disks</block>
   <block id="2e5a1a6424ee2d0aa549b427d2f571d2" category="open-title">4ノードクラスター</block>
   <block id="e6a67192413f528c465842e03f8443e0" category="paragraph">次の図は、2 つのネットワークを示す 4 ノード クラスターを示しています。内部ネットワークでは、 ONTAP クラスタネットワークサービスに対応するためにノード間で通信できます。外部ネットワークは、クライアント、管理、およびクラスタ間のレプリケーションのトラフィックを伝送します（ SnapMirror / SnapVault ）。</block>
   <block id="9450ade0fc753dddabd4ea63d8bb1187" category="summary">ONTAP Selectノードを導入する各KVMハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが適切に設定され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
-  <block id="75b870251dc6cf53eee7c05860c964ad" category="paragraph">ONTAP Selectノードを導入する各KVMハイパーバイザーホストを準備します。ホストを準備する際には、導入環境を慎重に評価し、ホストが正しく設定され、 ONTAP Selectクラスタの導入をサポートできる状態であることを確認します。</block>
   <block id="70927fa219016e15d1c052484c1bd8b6" category="section-title">ステップ1: KVMハイパーバイザーホストを準備する</block>
   <block id="f815b88c3f2e295185a91f57bfa50353" category="paragraph">ONTAP Selectノードが展開されている各 Linux KVM サーバを準備する必要があります。また、ONTAP Select Deploy管理ユーティリティを導入するサーバを準備する必要があります。</block>
   <block id="c241fe11e545bc063ad09b24a98effc6" category="list-text">Red Hat Enterprise Linux (RHEL) をインストールします。</block>
@@ -3132,7 +3035,6 @@ storage aggregate show-spare-disks</block>
   <block id="8512c0ed74c689714d6ae7ab7bcab8a7" category="paragraph">パススルーデバイスとRDMには、さらに違いがあります。RDMは実行中のVMにマッピングできます。パススルーデバイスではVMの再起動が必要です。つまり、NVMeドライブの交換または容量拡張（ドライブ追加）手順を実行するには、 ONTAP Select VMの再起動が必要になります。ドライブ交換および容量拡張（ドライブ追加）操作は、 ONTAP Deployのワークフローによって実行されます。ONTAPDeployは、シングルノードクラスタのONTAP ONTAP Selectの再起動と、HAペアのフェイルオーバー/フェイルバックを管理します。ただし、SSDデータドライブ（ ONTAP Selectの再起動/フェイルオーバーは不要）とNVMeデータドライブ（ONTAP Selectの再起動/フェイルオーバーが必要）の操作の違いに注意することが重要です。</block>
   <block id="9d249683d287246a4cfcd50471562c4d" category="paragraph">ソフトウェアRAIDを使用してONTAP Select VMに容量を追加する場合、管理者は物理ドライブのサイズと必要なドライブ数を考慮する必要があります。詳細については、 <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block> 。</block>
   <block id="9d99b1e4b1f697c0f5feafda2dee7123" category="paragraph">FASおよびAFFシステムと同様に、既存のRAIDグループには、同等以上の容量のドライブのみを追加できます。容量が大きいドライブは適切なサイズに調整されます。新しいRAIDグループを作成する場合は、全体的なパフォーマンスが低下しないように、新しいRAIDグループのサイズを既存のRAIDグループのサイズと一致させる必要があります。</block>
-  <block id="1feeb707c66237a9541ece77e3e4d28f" category="paragraph">ESXi または KVM シェルで次のコマンドを入力すると、特定の物理ディスク (naa.unique-id で識別) の LED を点滅させることができます。</block>
   <block id="9c1fae3eadcb237fdb7615bb300fbc53" category="paragraph">データのミラーリングを正しく再開するには、障害が発生したプレックスを削除して再作成する必要があります。複数のディスク障害によってデータアグリゲートがデグレードすると、ルートアグリゲートもデグレードされることに注意してください。ONTAPONTAP Selectは、ルートデータデータ（RDD）パーティショニングスキーマを使用して、各物理ドライブを1つのルートパーティションと2つのデータパーティションに分割します。そのため、1つ以上のディスクが失われると、ローカルルートまたはリモートルートアグリゲートのコピー、およびローカルデータアグリゲートとリモートデータアグリゲートのコピーを含む複数のアグリゲートに影響が及ぶ可能性があります。</block>
   <block id="3076e2016b53038d778618dee10b478d" category="paragraph">次の出力例では、障害が発生したプレックスが削除され、再作成されています。</block>
   <block id="0f1f9d8aa7712455b66d5e8b4b971a5b" category="list-text">NVMe ディスクの PCI パススルーを構成します。</block>
@@ -3151,15 +3053,11 @@ storage aggregate show-spare-disks</block>
   <block id="d21334ffd4138404242bb0fece3f2bd0" category="inline-link-macro">ローカル接続ストレージのソフトウェア RAID 構成サービスについて学習します</block>
   <block id="2fd8d0de580745829d296cf2e993545d" category="paragraph"><block ref="6028b3dbcf992c3366009d78bd8049c4" category="inline-link-macro-rx"></block> 。</block>
   <block id="135bd09a77549202951b40cf5c9539fb" category="list-text">KVMホスト上のクラスタ拡張と縮小のサポート</block>
-  <block id="84e08508432791f43f95437369ac2aa3" category="list-text">ONTAP Select 9.17.1以降では、クラスタの拡張と縮小機能がカーネルベース仮想マシン（KVM）ホストとESXiハイパーバイザーホストの両方でサポートされます。ONTAPONTAP Select 9.16.1および9.15.1では、クラスタの拡張と縮小はESXiハイパーバイザーホストでのみサポートされます。</block>
   <block id="0a0cc9b2212847ba1af46f41c160bb46" category="paragraph">既存のONTAP Selectクラスタのクラスタ拡張および縮小機能を使用して、6 ノード クラスタから 8 ノード クラスタにサイズを拡大したり、8 ノード クラスタから 6 ノード クラスタにサイズを縮小したりできます。</block>
-  <block id="22cb6accb0a27ceffd521fb74834c16a" category="inline-link-macro">クラスタの拡張と縮小、およびサポートされている KVM と ESXi ハイパーバイザーのバージョンについて学習します。</block>
-  <block id="3c14c9e8cb33411708f168ddc9b0d40c" category="paragraph"><block ref="f426c2cadf7fc519436e151211954c8a" category="inline-link-macro-rx"></block> 。</block>
   <block id="8636e1dc9721a5c30a4e439da7b5f9a1" category="list-text">NDAドライバーのサポートを更新</block>
   <block id="47a73413b58dd69883b3d5bfcaf3ae17" category="list-text">ONTAP Select 9.17.1以降、NVD（NVMe Expressディスクドライバ）に代わってFreeBSD NDA（NVMe Direct Access）デバイスドライバが導入されました。FreeBSDドライバは、NVMeコマンドプロトコルを実装することで、ダイレクトアクセスデバイスのサポートを提供します。ONTAPONTAP Select 9.17.1クラスタを導入する場合、または既存のONTAP Selectクラスタをバージョン9.17.1にアップグレードする場合、NVMeデバイスの設定時にFreeBSDドライバがデフォルトで起動されます。</block>
   <block id="9fe4db073ef9cb1070ea002413806d7b" category="paragraph">ONTAP Select 9.16.1 以前では、NVD は引き続きONTAP Select展開内の NVMe デバイスのサポートを提供します。</block>
   <block id="ac171b57f5c680bf4d0f02d3a2a4fc1f" category="list-text">ONTAP Select 9.16.1 以降、KVM ハイパーバイザーは RHEL 9.5 および Rocky Linux 9.5 でサポートされます。</block>
-  <block id="b819d70810100dd612c72123ee67224d" category="paragraph">ONTAP Select は、 KVM および ESXi ハイパーバイザーに導入できます。</block>
   <block id="5c4913dc2f0c23f4a31e20e72374ec36" category="paragraph">ONTAP Select は、次の KVM ハイパーバイザー バージョンをサポートしています。</block>
   <block id="88f7643f9d6082d2e385207946c3b5a2" category="paragraph">ONTAP Select は、次の ESXi ハイパーバイザー バージョンをサポートしています。</block>
   <block id="576be828257fef81586078e09f023f12" category="cell">ノードサイズ</block>
@@ -3230,7 +3128,6 @@ storage aggregate show-spare-disks</block>
   <block id="cbbbf9758b7ac41123821f7ea427538f" category="list-text">ライブラリアイテムを更新</block>
   <block id="845b12256749d66531d9afd69bc3a33c" category="list-text">ローカルライブラリを更新する</block>
   <block id="936ee35c221853e402fecb3657e726ba" category="paragraph">次のクラスターの拡張と縮小は、ESXi および KVM ホストではサポートされていません。</block>
-  <block id="ca069be0eeb72c96905b0cdbf504214d" category="paragraph">クラスターの拡張および縮小機能は、次の KVM および ESXi ハイパーバイザー ホストでサポートされています。</block>
   <block id="4e59a04163b76608c718d51a77e0ab85" category="paragraph">^1^ ハイパーバイザーに 2 つのコアと 8 GB の RAM を想定しています。</block>
   <block id="8b8284ef1bc414b0568b54a0a11232ad" category="cell">該当する</block>
   <block id="533eb39cd8f514c69a3b793cb415846c" category="paragraph">次の図は、vCenter UI からの外部ネットワーク ポート グループ（ONTAP-External およびONTAP-External2）の設定を示しています。アクティブなアダプタは異なるネットワーク カードに接続されていることに注意してください。この設定では、vmnic 4 と vmnic 5 は同じ物理 NIC 上のデュアル ポートであり、vmnic 6 と vmnic 7 は同様に別の NIC 上のデュアル ポートです（この例では、vnmics 0 ～ 3 は使用されていません）。スタンバイ アダプタの順序により、内部ネットワークのポートが最後に表示される階層的なフェイルオーバーが実現されます。スタンバイ リスト内の内部ポートの順序も、2 つの外部ポート グループ間で同様に入れ替わっています。</block>
@@ -3377,7 +3274,6 @@ storage aggregate show-spare-disks</block>
   <block id="b08e028303a5953366cd3dd0357eaa1e" category="cell">4、6、8、10、または12ノードのクラスタ</block>
   <block id="452e45a3d17c3fc2acb4be240729a77b" category="paragraph">ONTAP Selectクラスタは、1、2、4、6、8、10、または 12 個のノードで構成されます。各クラスタノードは個別の仮想マシンとして導入され、特別に設計されたバージョンのONTAP 9ソフトウェアを実行します。</block>
   <block id="cc52ad49f55b8ec4cd8245398800774b" category="list-text">1、2、4、6、8、10、または 12 個のノードで構成される _ONTAP Select クラスタ_ を作成できます。マルチノードクラスタには、常に1つ以上のHAペアが含まれます。例えば、4ノードクラスタは2つのHAペアで構成されます。シングルノードクラスタではHA機能は提供されません。</block>
-  <block id="5ec5e552cbceca200e1e7e00c7ece71f" category="list-text">OVFテンプレート（ovaファイル内）は、vSphereスタンドアロンクライアントまたはvSphere Webクライアント（ESXi 8.0以降ではWebクライアントのみ）を使用してインストールする必要があります。ONTAPONTAP Select Deploy管理ユーティリティは使用しません。</block>
   <block id="7f9a5208c0fd2a2b8aada8a0fe2106b3" category="section-title">ONTAP Select9.18.1</block>
   <block id="aa440a24775cc384ed06594a84a01bed" category="list-text">クラスタの拡張と縮小のサポート強化</block>
   <block id="6cfc3c136010d00411d3802838588e31" category="list-text">ONTAP Select 9.18.1 以降では、ESXi および KVM ハイパーバイザ ホスト上の 4 ノードと 12 ノードのONTAP Selectクラスタ間でのクラスタの拡張と縮小がサポートされます。</block>
@@ -3457,7 +3353,6 @@ storage aggregate show-spare-disks</block>
   <block id="0230ee7e6071858ebc377c057e5e603e" category="section-title">ステップ2: ONTAP Select Deploy OVA署名を確認する</block>
   <block id="9e0015dd89b19bd3443ad4f4a14527ab" category="paragraph">インストール パッケージをインストールする前に、 ONTAP Select Open Virtualization Appliance (OVA) の署名を確認します。</block>
   <block id="35f9f1c9a9790bd3fc497db798819083" category="section-title">ステップ3: 仮想マシンを展開する</block>
-  <block id="a84a05d08c99af325673887887ed8fdb" category="paragraph">OVF VM イメージを使用してONTAP Select Deploy VM をインストールして起動します。インストール プロセスの一環として、DHCP または静的 IP 構成を使用するようにネットワーク インターフェイスを構成します。</block>
   <block id="7e5f2ca43da3004f8d3d7bae3edb7bae" category="section-title">ステップ4: デプロイウェブインターフェースにSign in</block>
   <block id="97b3aadab6e4066f1f4afb183a83298c" category="sidebar">ONTAP Selectを試す</block>
   <block id="3ff87e54e9b20339b68f24cf241f05b0" category="sidebar">アクセス評価ソフトウェア</block>
@@ -3581,7 +3476,6 @@ storage aggregate show-spare-disks</block>
   <block id="c7de263deca2f546c4c7b9417bbb6aec" category="list-text">下にスクロールして*ONTAP Select Deploy*を選択してください。</block>
   <block id="224ba05e3cb699bfc71537bae00db024" category="list-text">希望する ONTAP Select バージョンを選択してください。</block>
   <block id="edef4f12cb19840bbbb69b8757b99015" category="list-text">適切な*ONTAP Select Deploy Upgrade*パッケージを選択してダウンロードします。必要に応じてすべてのプロンプトに応答します。</block>
-  <block id="1ace48b65c22215b19f774b3df5f35bc" category="paragraph">ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルには、ESXiホスト用のサフィックス<block ref="586ba478b7ebec665f3df120799b6c2e" prefix=" " category="inline-code"></block>とKVMホスト用のサフィックス<block ref="fe0b8e90d35ee4c0d89c53587e2d402e" prefix=" " category="inline-code"></block>が付いています。VMは、ONTAP Selectノード用のDeployサーバーとインストールイメージを提供します。</block>
   <block id="1b889c4574d56e52bb5c7740f68139d2" category="list-text">適切な*ONTAP Select Deploy Install*パッケージを選択してダウンロードしてください。必要に応じてすべてのプロンプトに応答します。</block>
   <block id="3f5028687bfdb0f40e4748a9cf9f5076" category="list-text">NetApp Support Site の製品ダウンロードページから次のファイルを入手します。</block>
   <block id="f754a351095ccdb252bb15b2152c09f3" category="list-text">署名を検証します：</block>
@@ -3634,7 +3528,6 @@ storage aggregate show-spare-disks</block>
   <block id="ffa55c8a093220c17cde8651e0b2c8df" category="admonition">外部ネットワーク ポート グループと内部ネットワーク ポート グループの両方に、4つのNICアダプタすべてが対称的に含まれています。外部ネットワーク ポート グループ内のアクティブ ポートは、内部ネットワーク内のスタンバイ ポートです。逆に、内部ネットワーク ポート グループ内のアクティブ ポートは、外部ネットワーク ポート グループ内のスタンバイ ポートになります。</block>
   <block id="55891df6eb1a61c96f47da7b65730b81" category="admonition">これらのインターフェイスに静的 IP アドレスを割り当てることはできません。また、追加のクラスタ インターフェイスを作成しないでください。</block>
   <block id="fe2ca1c23cdfbf14cb84930e7fbd3932" category="paragraph">クラスタネットワーク トラフィックは、低レイテンシでルーティングされないレイヤー2ネットワークを経由する必要があります。クラスタのスループットとレイテンシの要件により、ONTAP Selectクラスタを物理的に近接した場所（たとえば、マルチパック、単一のデータセンター）に配置する必要があります。WANまたは地理的に離れた場所を介してHAノードを分離して、4、6、8、10、または12ノードのストレッチクラスタ構成を構築することはサポートされていません。メディエーターを使用した拡張2ノード構成がサポートされています。</block>
-  <block id="7cee97691c1433ced8f79caf5ee0b6dd" category="admonition">クラスタ ネットワーク トラフィックの最大スループットを確保するため、このネットワーク ポートは、ジャンボ フレーム（7500～9000 MTU）を使用するように構成されています。クラスタを正しく動作させるには、ONTAP Select クラスタ ノードに内部ネットワーク サービスを提供する上流のすべての仮想スイッチと物理スイッチでジャンボ フレームが有効になっていることを確認してください。</block>
   <block id="ba38f84c2fb89aaf452025e6e3b8fae1" category="admonition">ポートe0eは、ONTAPによって内部レプリケーション トラフィック用に予約されています。そのため、ポートもホストされているLIFも、ONTAP CLIまたはSystem Managerには表示されません。このインターフェイスは、自動的に生成されたリンク ローカルIPアドレスを使用するように設定されており、代替IPアドレスを割り当てることはできません。このネットワーク ポートでは、ジャンボ フレーム（7500～9000 MTU）を使用する必要があります。</block>
   <block id="b32bef47a4a82019d65351ab5d14f501" category="admonition">RSMポート（e0e）と同様に、物理ポートもホストされているネットワークインターフェイスも、ONTAP CLIまたはSystem Managerからユーザーには表示されません。その結果、このインターフェイスのIPアドレスを変更することはできず、ポートの状態を変更することもできません。このネットワークポートでは、ジャンボフレーム（7500～9000 MTU）を使用する必要があります。</block>
   <block id="c3c09360138474ae299e46492fe56f2c" category="paragraph">マルチノードクラスタの場合、ONTAP Deployは各ONTAP Select VMを、内部ネットワーク用に1つまたは2つのポートグループを使用し、それとは別に、外部ネットワーク用に1つまたは2つのポートグループを使用するように構成します。クラスタおよびノード管理トラフィックは、外部トラフィックと同じポートグループを使用することも、オプションで別のポートグループを使用することもできます。クラスタおよびノード管理トラフィックは、内部トラフィックと同じポートグループを共有できません。</block>
@@ -3651,7 +3544,6 @@ storage aggregate show-spare-disks</block>
   <block id="0d1cd3826c99976140121149797365db" category="inline-image-macro">マルチノードクラスタ（HAペア）のRDDディスクパーティショニング</block>
   <block id="82089a7d5e0786a51a09161cabba34f7" category="paragraph"><block ref="82089a7d5e0786a51a09161cabba34f7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="91b76b92c43f4bf4b92ab84eb2fb7a5e" category="paragraph">ESXiおよびKVMハイパーバイザーは、NVMeディスクをRaw Device Maps（RDM）としてサポートしていません。ONTAP SelectがNVMeディスクを直接制御できるようにするには、これらのドライブをESXiまたはKVM内でパススルーデバイスとして構成する必要があります。NVMeデバイスをパススルーデバイスとして構成する場合、サーバーBIOSからのサポートが必要になり、ホストの再起動が必要になる場合があります。さらに、ホストごとに割り当て可能なパススルーデバイスの数には制限があり、プラットフォームによって異なる場合があります。ただし、ONTAP DeployではONTAP Selectノードあたり14台のNVMeデバイスに制限されます。つまり、NVMe構成では、総容量を犠牲にして、非常に高いIOPS密度（IOPS/TB）が提供されます。あるいは、大容量ストレージを備えた高性能構成を希望する場合は、大容量のONTAP Select VMサイズ、システムディスク用のINTEL Optaneカード、およびデータストレージ用の適切な数のSSDドライブという構成が推奨されます。</block>
-  <block id="4cf51185eeed421692ae1005a5ed3452" category="section-title">ONTAP Selectディスクを対応するESXiまたはKVMディスクに一致させる</block>
   <block id="4a99b78b8bee356a2a3329e5f0e6254d" category="inline-image-macro">ONTAP Selectディスクとそれに対応するESXiディスクの照合</block>
   <block id="1d79484f6a25be5cf5c76cee45ddd50e" category="paragraph"><block ref="1d79484f6a25be5cf5c76cee45ddd50e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4780d1ea9db455a95860420be711dd34" category="paragraph">vNAS命名法は、DASを使用しないすべてのセットアップに使用されます。マルチノードONTAP Selectクラスタの場合、これには同じHAペア内の2つのONTAP Selectノードが単一のデータストア（vSANデータストアを含む）を共有するアーキテクチャが含まれます。ノードは、同じ共有外部アレイからの別のデータストアにインストールすることもできます。これにより、アレイ側のストレージ効率が向上し、ONTAP Select HAペア全体のフットプリントを削減できます。ONTAP Select vNASソリューションのアーキテクチャは、ローカルRAIDコントローラを使用するDAS上のONTAP Selectのアーキテクチャと非常によく似ています。つまり、各ONTAP SelectノードはHAパートナーのデータのコピーを引き続き保持します。ONTAPストレージ効率化ポリシーはノードスコープです。したがって、アレイ側のストレージ効率化は、両方のONTAP Selectノードからのデータセットに適用できる可能性があるため、望ましいです。</block>
@@ -3665,17 +3557,11 @@ storage aggregate show-spare-disks</block>
   <block id="61fb86fdbe96d1d9dd8ed00fb9e18d5c" category="admonition">アンチアフィニティ ルールでは、ESXi クラスタで DRS が有効になっている必要があります。</block>
   <block id="592501c5459546f04dadb6278fe14a02" category="paragraph">同じONTAP SelectクラスタからONTAP Selectノードが2つ以上、次のいずれかの理由により同じESXiホスト上に見つかる可能性があります：</block>
   <block id="69c6d72d3bfe2144eed5d1bc93fb737b" category="admonition">ONTAP DeployはONTAP Select VMの場所を積極的に監視しません。ただし、クラスタ更新操作では、このサポートされていない構成がONTAP Deployログに反映されます：</block>
-  <block id="6286239ac8816d055f09183ec0f2d10f" category="paragraph-title">単一のONTAP Select Deployインスタンスで、ESXiとKVMの両方にクラスタを作成できますか。</block>
   <block id="6522ebb7ee236fead5fde81946283e38" category="paragraph">ESXiホストが適切にライセンスされている場合、ESXiホストをvCenter Serverで管理する必要はありません。ただし、ホストがvCenter serverで管理されている場合は、ONTAP Select DeployをそのvCenter Serverを使用するように設定する必要があります。つまり、ESXiホストがvCenter Serverによって積極的に管理されている場合、ONTAP Select Deployでスタンドアロンとして設定することはできません。ONTAP Select Deploy VMは、vMotionやVMware HAイベントによるESXiホスト間のすべてのONTAP Select VMの移行を追跡するために、vCenterに依存していることに注意してください。</block>
-  <block id="6ec0d5b9179c92ce9142bf6d78034824" category="list-text">ESXiおよびKVMでサポートされます</block>
   <block id="f3947d72068ee6bf70fda194a68212bb" category="paragraph">ONTAP Select DeployおよびONTAP Select for ESXiは、ストレージプールにvSANまたは外部アレイタイプのデータストアを使用するONTAP Selectシングルノード クラスタの構成をサポートします。</block>
   <block id="6c4ba4171f676563959876eb43337eb8" category="paragraph">共有ストレージ上のマルチノード HA クラスターがサポートされています。</block>
   <block id="0676a886b083caddfc16c4ac07310836" category="paragraph-title">ONTAP SelectはvSANまたは一部のHCIスタックを含むその他の共有外部ストレージ上のマルチノードクラスタをサポートしていますか？</block>
-  <block id="23430fa2efa044f543d072fba46c9a38" category="paragraph">外部ストレージを使用するマルチノード クラスタ（マルチノード vNAS）は、ESXi と KVM の両方でサポートされています。同じクラスタ内でのハイパーバイザーの混在はサポートされていません。共有ストレージ上の HA アーキテクチャでは、HA ペアの各ノードにパートナー データのミラー コピーが存在することが依然として前提となります。ただし、マルチノード クラスタには、VMware HA または KVM Live Motion に依存するシングルノード クラスタとは対照的に、ONTAP の無停止運用という利点があります。</block>
   <block id="40a19923f31ec5a36ee0c2288f101222" category="paragraph">ONTAP Select Deployは同じホスト上の複数のONTAP Select VMをサポートしますが、クラスタ作成時にそれらのインスタンスが同じONTAP Selectクラスタの一部になることはできません。ESXi環境の場合、NetAppはVMアンチアフィニティルールを作成して、VMware HAが同じONTAP Selectクラスタの複数のONTAP Select VMを単一のESXiホストに移行しないようにすることを推奨します。さらに、ONTAP Select Deployが管理者（ユーザーが開始した）vMotionまたはONTAP Select VMのライブマイグレーションによって、2つのONTAP Selectノードが同じ物理ホスト上に配置されるなどのベストプラクティス違反が発生したことを検出した場合、ONTAP Select DeployはDeploy UIとログにアラートを投稿します。ONTAP Select DeployがONTAP Select VMの場所を認識する唯一の方法は、クラスタ更新操作の結果としてであり、これはONTAP Select Deploy管理者が開始する必要がある手動操作です。ONTAP Select Deployにはプロアクティブな監視を可能にする機能はなく、アラートはDeploy UIまたはログを通じてのみ表示されます。つまり、このアラートは集中監視インフラストラクチャに転送できません。</block>
-  <block id="387e218906971fb8249605e71671dfe6" category="paragraph">NSX-V VXLAN ポート グループがサポートされています。ONTAP MetroCluster SDSを含むマルチノードHAの場合は、VXLANオーバーヘッドに対応するために、内部ネットワークMTUを7500~8900（9000ではなく）に設定してください。内部ネットワークMTUは、クラスタ導入時にONTAP Select Deployで設定できます。</block>
-  <block id="0ee2ddd3b147f59c9e693e231c79533b" category="paragraph-title">10GEポートを1つだけ搭載したホストでONTAP Selectを実行できますか?また、ESXiとKVMの両方で使用できますか?</block>
-  <block id="20c9341325ca4dcb8c531770abbdd380" category="paragraph">単一の10GEポートを使用して外部ネットワークに接続できます。ただし、NetAppでは、制約のある小型フォームファクタ環境でのみ使用することを推奨しています。これはESXiとKVMの両方でサポートされています。</block>
   <block id="2629fa144793f0d11ed75fb2448a6a43" category="paragraph">ONTAP Select DeployはVMware VIX APIを使用してvCenter、ESXiホスト、またはその両方と通信します。VMwareのドキュメントには、vCenter ServerまたはESXiホストへの初期接続は、TCPポート443でHTTPS/SOAPを使用して行われると記載されています。これは、TLS/SSL経由のセキュアなHTTP用のポートです。次に、TCPポート902のソケットでESXiホストへの接続が開かれます。この接続を介して送信されるデータはSSLで暗号化されます。さらに、ONTAP Select Deployは<block ref="e07ff41a486c27c095a15898dcca34d1" prefix=" " category="inline-code"></block>コマンドを実行して、指定したIPアドレスで応答するESXiホストがあることを確認します。</block>
   <block id="167e2d09cfde81e0a9fac086bdcd0bf4" category="paragraph">マルチノード クラスタの場合、内部ネットワークは完全にオープンである必要があります（NATまたはファイアウォールなし）。</block>
   <block id="5e0521fb8dc48f239b6b91dceaa434c5" category="paragraph">ストレージvMotionは、シングルノードおよびマルチノードのONTAP SelectクラスタとONTAP Select Deploy VMを含むすべての構成でサポートされています。ストレージvMotionは、ONTAP SelectまたはONTAP Select Deploy VMを異なるVMFSバージョン間（たとえば、VMFS 5からVMFS 6）で移行するために使用できますが、この使用例に限定されるわけではありません。ベストプラクティスは、ストレージvMotion操作を開始する前にVMをシャットダウンすることです。ONTAP Select Deployは、ストレージvMotion操作が完了した後に次の操作を実行する必要があります：</block>
@@ -3692,9 +3578,6 @@ storage aggregate show-spare-disks</block>
   <block id="82bdbb76898b0180c94652062ec80baa" category="paragraph">NetApp では、ESXi と物理スイッチの両方で LACP モードをアクティブにすることを推奨しています。さらに、LACP タイマーは、物理スイッチ、ポート、ポート チャネル インターフェイス、および VMNIC では、高速（1 秒）に設定する必要があります。</block>
   <block id="6365bcda00f160b8b98458c70dc7af21" category="doc">ONTAP Select のKVM外部ストレージ要件</block>
   <block id="f464ef11a36a53bc2586fa67ede9d298" category="paragraph">次のベスト プラクティスに従う必要があります：</block>
-  <block id="2d35d1539bc69cac0c1cee98b2414b66" category="inline-link-macro">VMware ESXi の要件</block>
-  <block id="2b809e6e28a276d80064529a78c549fa" category="inline-link-macro">KVMの要件</block>
-  <block id="ba0ba608ea103231de623485915bf351" category="admonition">ESXi および KVM ホストの外部ストレージ サポート情報について説明します。詳細については、<block ref="e7f2fc913cba34a1fad6d98db3126a36" category="inline-link-macro-rx"></block>および<block ref="09b07f14d7637fc1b6d8c55870c362e4" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="33bf853ec189a3f154123afe7d47ee42" category="list-text">RAID コントローラの背後にあるすべてのローカルディスクは、単一の RAID グループとして構成する必要があります。必要に応じて複数の RAID コントローラを使用します：</block>
   <block id="ff93169366782c1f57b7c6a38db5aee8" category="list-text">次のガイドラインに基づいて LUN 構成を実行します：</block>
   <block id="7f2e89d44cb66b0077df69ac834a0c34" category="list-text">RAIDグループのサイズが最大LUNサイズの64TBを超える場合は、RAIDグループ内の使用可能なストレージをすべて消費する、同じサイズの複数のLUNを構成します。</block>
@@ -3745,12 +3628,9 @@ storage aggregate show-spare-disks</block>
   <block id="b56c7584acb614d91c56ebd6451a2fda" category="paragraph">ISO イメージを使用して RHEL オペレーティング システムをインストールします。サポートされている RHEL バージョンのリストについては、<block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>を参照してください。インストール中に、システムを次のように設定します：</block>
   <block id="ff3bda6e1ef5b3081c73b514e661efea" category="paragraph">必要なパッケージやその他の構成要件の詳細については、<block ref="d663e2c355c00396895dd4c79ec8b92b" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="cb84ef92f4b0ce5c0d1fc59a66ab0db2" category="paragraph">KVMハイパーバイザーのPCIパススルー（DirectPath IO）の設定方法については、<block ref="9253ef5506cce823166f2bdf01913569" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="50583cd33ae6013e0b67501721e36911" category="list-text">ONTAP Select（KVM）およびONTAP Select（ESXi）でソフトウェアRAIDを使用している場合、ソフトウェアRAIDをサポートしていない以前のバージョンに戻すことはできません。さらに、ESXi上のONTAP Select 9.5以降の新規インストールでは、VMXNET3ネットワークドライバーと、可能な場合はvNVMeドライバーが使用されます。これらの新規インストールは、以前のバージョンのONTAP Selectに戻すことはできません。</block>
   <block id="98a737ad70b6aadceb97934fd2608639" category="paragraph">環境で実行された後に Deploy インスタンスのネットワーク詳細を変更することはサポートされていません。詳細については、ナレッジベースの記事<block ref="1f47723f3d53f678e4270c8826127324" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="2a70f1792ebe4265422309ddc1cb2b6e" category="paragraph">はい。ONTAP Select DeployはKVMまたはESXiのいずれかにインストールでき、どちらのインストールでもいずれかのハイパーバイザー上にONTAP Selectクラスタを作成できます。</block>
   <block id="39d2346ea64afe6f3c9bd54ade3230d4" category="paragraph-title">ESXi 上の ONTAP Select には vCenter が必要ですか。</block>
   <block id="8c063756a27520f5d139a252b96be93c" category="paragraph">ONTAP Selectノードをリカバリする必要がある場合（ONTAP Select VMまたはホストが完全に失われた場合やシングルノード クラスタが誤って削除された場合など）は、NetAppテクニカルサポートにお問い合わせください。詳細については、ナレッジベースの記事<block ref="6bcd08825607343c167fd40133e564c3" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="bf08937f29ce2c6cc8ebfd8adac74c30" category="paragraph">はい、ソフトウェア RAID は KVM と ESXi の両方で SSD メディアでサポートされています。</block>
   <block id="79092136aaae87778b4f99302fefcfcc" category="admonition">ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理機能が制限される可能性があります。詳細については、ナレッジベースの記事<block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="3a7c61c685981e316491699fa430a141" category="list-text">SnapMirrorクラウド</block>
   <block id="11afad06b7613110311cd1bf0ce33518" category="list-text">ONTAP Select 9.18.1以降、KVMハイパーバイザーはRocky Linux 10.1でサポートされています。</block>
@@ -3764,7 +3644,6 @@ storage aggregate show-spare-disks</block>
   <block id="e6bc9337cf602662aa915f0307b698b0" category="paragraph">ハイパーバイザーホスト上でOpen vSwitchを設定する方法の詳細については、<block ref="2b1f7dd3493f53e1ee03e8fab05e0af0" category="inline-link-macro-rx"></block>テクニカルレポートを参照してください。</block>
   <block id="22dfc7e2c9e1eadb809148e3f70e8c02" category="admonition">サポートされているプラットフォームに関する追加の詳細については、ハイパーバイザー固有の計画情報および<block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="e8753a8eb9d5740fbd1ad059de8103b9" category="inline-link-macro">ホスト構成チェックリスト</block>
-  <block id="796a770d3dc0ff868717ec9615962605" category="paragraph">Linuxサーバーの準備に関する詳細情報（必要な構成やソフトウェアパッケージを含む）については、<block ref="9c7e38865048e0154faab91c0ef357d6" category="inline-link-macro-rx"></block>を参照してください。現在サポートされているLinuxディストリビューションについては、ハイパーバイザーの要件を参照してください。</block>
   <block id="9be0858d6d60be26fae2fcfdc4ae9c9a" category="admonition">ハイパーバイザーホストでのvSwitchの設定方法と高速インターフェース機能の詳細については、<block ref="6a6c3a35bed163956cd809e794515882" category="inline-link-macro-rx"></block>セクションを参照してください。</block>
   <block id="7771f502e7c894f276ea538ddf2c8d2a" category="paragraph">2つのNIC導入の詳細については、<block ref="6a6c3a35bed163956cd809e794515882" category="inline-link-macro-rx"></block>セクションを参照してください。</block>
   <block id="bd0cf98e3a525d934758ffaaa173b477" category="paragraph">4つのNIC導入の詳細については、<block ref="6a6c3a35bed163956cd809e794515882" category="inline-link-macro-rx"></block>セクションを参照してください。</block>
@@ -3775,7 +3654,6 @@ storage aggregate show-spare-disks</block>
   <block id="5c2e3f1b284a7eb8d03229a6f711a6d8" category="paragraph">ONTAP Selectとライセンスの更新の詳細については、<block ref="244262621d739af44a70be8c211b652b" category="inline-link-macro-rx"></block>の「Licenses, installation, upgrades, and reverts」セクションを参照してください。</block>
   <block id="d3687f9d5cbe754b85309258725912ba" category="paragraph">ローカルハードウェアRAIDコントローラを使用する場合は、システムデータ、ルートアグリゲート、データアグリゲート用に、各ノードで少なくとも1つのデータストア（ESXi）または1つの<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>を作成する必要があります。ONTAP Selectノードの設定時に、ストレージプールを接続する必要があります。</block>
   <block id="01d8de06079a4b45d8794e7643ed43a1" category="paragraph">ソフトウェアRAIDを使用する場合は、少なくとも1つのデータストア（ESXi）または1つの<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>をシステムデータ用に作成し、ルートアグリゲートとデータアグリゲート用にSSDドライブが使用可能であることを確認する必要があります。ONTAP Selectノードの設定時に、ストレージプールとディスクを接続する必要があります。</block>
-  <block id="5b6d4054ef7052cdbac6938952fde107" category="paragraph">ONTAP SelectはVMwarevSphereやKernel-based Virtual Machine（KVM）などのクラウド管理フレームワークに統合されています。これにより、ファイルサービス、ホームディレクトリ、ソフトウェア開発環境、アプリケーションテストなどの新しいプロジェクトの導入を加速できます。</block>
   <block id="8c58e4482a12bf26ee215d6f58f5c8a8" category="paragraph">アップグレード中にONTAP Select Deployが他のタスクの実行に使用されていないことを確認します。</block>
   <block id="8380920f551ca0c124aced59300fc93c" category="paragraph">MetroClusterとは異なり、ONTAP Selectは既存のネットワーク インフラを使用し、最大5msのRTTと最大5msのジッターをサポートし、合計で最大10msの遅延に対応します。市場における分離要件は、実際の距離よりも物理的な分離に関係することが多い。場合によっては、これは異なる建物を意味することもある。また、同じ建物内の異なる部屋を指す場合もある。実際の物理的な配置に関係なく、2ノードクラスタをMetroCluster SDSとして定義するのは、各ノードがそれぞれ独立したアップリンクスイッチを使用することです。</block>
   <block id="558e06b6dd08fae765da42c411221de9" category="paragraph">2ノードMetroCluster SDSは、物理的に300m以上離れたノード（異なる部屋、異なる建物、異なるデータセンター）で構成されるクラスタとして定義されます。さらに、各ノードのアップリンク接続は、それぞれ別のネットワークスイッチに接続されます。MetroCluster SDSは専用ハードウェアを必要としません。ただし、環境はレイテンシに関する要件（RTTが最大5ms、ジッターが最大5ms、合計10ms）を満たす必要があります。</block>
@@ -3797,9 +3675,6 @@ storage aggregate show-spare-disks</block>
   <block id="046bd5bd096bff2b27e500aa8d2dfa80" category="list-text">最大合計10msの5ms RTTと5msジッター</block>
   <block id="1d6a755bc579447fd7ccaf4c366f016d" category="list-text">ONTAP Select Deploy MediatorとONTAP Selectノード間の125msのRTTと5Mbpsの最小帯域幅</block>
   <block id="2cc135ee22f21247b52a24a050dc5f69" category="list-text">PremiumまたはPremium XLライセンス</block>
-  <block id="442ec7099645bccabb5c77484a2a86e7" category="paragraph">ONTAP Selectは、ライトバック機能付きFlexCacheキャッシュボリュームをサポートしています。ライトバック機能を持つFlexCacheオリジンボリュームはサポートされていません。</block>
-  <block id="8e27ba9474a19cb9db424e02974a1138" category="inline-link-macro">ONTAP SelectでのFlexCacheライトバックの詳細</block>
-  <block id="9a079a12f3415657c4b643769a34e014" category="paragraph"><block ref="9a079a12f3415657c4b643769a34e014" category="inline-link-macro-rx"></block></block>
   <block id="38b80c13e49233a5fa3471c364fdc493" category="paragraph">SnapLock SelectはONTAP Select向けに設計されたONTAP SnapLockの実装であり、SnapLock Enterpriseが含まれています。SnapLock Complianceは含まれていません。</block>
   <block id="418abba3a088e4f2cf70e0dd10df26f7" category="list-text"><block ref="418abba3a088e4f2cf70e0dd10df26f7" category="inline-link-macro-rx"></block></block>
   <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDSは、2ノードONTAP Selectクラスタを作成する際の構成オプションです。これは、リモートオフィス／ブランチオフィス（ROBO）の導入に似ています。この強化された2ノード構成により、さらに多くのユースケースシナリオが利用可能になります。MetroCluster SDSを導入する準備の一環として、要件と制限事項を認識しておく必要があります。</block>
@@ -3807,7 +3682,6 @@ storage aggregate show-spare-disks</block>
   <block id="65c9d4a0a890972603f08c15cefc6e2c" category="list-text">値の例 API 呼び出しで _値の例_ を選択すると、その呼び出しの典型的な JSON 構造が表示されます。必要に応じて例を修正し、リクエストの入力として使用できます。</block>
   <block id="4b20b9ab832d81ba14a30b61abb5b1dd" category="list-text">Model _Model_を選択すると、JSONパラメータの完全なリストが表示され、各パラメータの説明が表示されます。</block>
   <block id="7f8520b0a74af459fbd9124e1ba42c44" category="list-text">カテゴリ API呼び出しは、ドキュメントページ上で機能的に関連する領域またはカテゴリごとに整理されています。特定のAPI呼び出しを探すには、ページの一番下までスクロールして、該当するAPIカテゴリを選択してください。</block>
-  <block id="9002a2c3f733f9464cfcaf7f36aa37fc" category="admonition">ONTAP Select Deploy に付属の REST API にはバージョン番号が割り当てられます。API のバージョン番号は、Deploy のリリース番号とは無関係です。ONTAP Select 9.19.1 Deploy 管理ユーティリティには、バージョン 3 の REST API が含まれています。</block>
   <block id="42c7f3e6305f66f2ea3338dd50ae64bc" category="paragraph">AMD EPYC Embedded 9004以降および8004</block>
   <block id="a10e3cf42e84403eadb751a60ad2b6be" category="inline-link-macro">ONTAP Selectライセンスの購入</block>
   <block id="e7daae4075d5bdd9bde4cc68402fd1f2" category="paragraph"><block ref="5c94a3679252eb07d0be97dec0ed51c6" category="inline-link-macro-rx"></block>について学ぶ</block>
@@ -3815,22 +3689,16 @@ storage aggregate show-spare-disks</block>
   <block id="0787a133742358e15f1408449a947498" category="list-text">クラウドキーマネージャー</block>
   <block id="68ffa6029012ee771b596812c2486f1d" category="inline-link-macro">デフォルトでライセンスされるONTAP機能について学ぶ</block>
   <block id="c1be83a573684359d468165f04280ecd" category="list-text"><block ref="c1be83a573684359d468165f04280ecd" category="inline-link-macro-rx"></block></block>
-  <block id="4aa87041681017f21c0b6f84ed445620" category="list-text">*Datacenter* を選択します。次に右クリックして *Deploy OVF Template* を選択します。</block>
-  <block id="2699cf96edfd52b58ddb99dc10aae24f" category="inline-link">ONTAP Select 9.19.1 に関する注意事項</block>
-  <block id="15657f95ada9bcf44fd12b81d8947839" category="paragraph"><block ref="15657f95ada9bcf44fd12b81d8947839" category="inline-link-rx"></block></block>
   <block id="c2600605d40c9e18ba287714b414a2e9" category="inline-link-macro">デフォルトでライセンスされるONTAP機能</block>
   <block id="7e5bcd8d0368abad77f3eac590f46667" category="list-text"><block ref="7e5bcd8d0368abad77f3eac590f46667" category="inline-link-macro-rx"></block></block>
   <block id="fd0dbd8bebcc43fead168f5622ddebfe" category="list-text">Key Management Interoperability Protocol（KMIP）を使用した外部キー管理</block>
-  <block id="2e8dd933da455f97d0346b5dbf4a613e" category="inline-link-macro">外部キー管理の有効化と設定</block>
   <block id="cd5be0e2614d645c9518750113177f36" category="paragraph">ONTAP SelectはSVM DRをソースと宛先の両方としてサポートし、最大16件の関係を設定できます。SVM DRのサポートは、ソースONTAPバージョンからバージョン+2までの使用に限定されます。たとえば、ONTAP Select 9.16.1ソースは、宛先ONTAPバージョン9.16.1、9.17.1、または9.18.1に接続できます。</block>
-  <block id="2e40e79011d79ba775bc0fd15440b064" category="paragraph">デフォルトではライセンスされていないONTAP機能については、別途ライセンスを取得する必要があります。これには次のものが含まれます：</block>
   <block id="40f6e07c12708670ebf0f73074ff7664" category="inline-link-macro">NetApp ONTAP マスター ライセンス キーについて学ぶ</block>
   <block id="afc27579825b6d622e6b65ba8caa43d7" category="list-text"><block ref="afc27579825b6d622e6b65ba8caa43d7" category="inline-link-macro-rx"></block></block>
   <block id="4012704160e9bfa02e6dbcc74ea22f57" category="section-title">ONTAP Select 9.19.1</block>
   <block id="ea6285edde5e13f5be6286758935545a" category="list-text">外部キー管理（KMIP）のサポート</block>
   <block id="49a93de28fa869cbe187cf5e8b63b039" category="list-text">Advanced Micro Devices（AMD）プロセッサのサポート</block>
   <block id="c6be59d8f4c6188156fe9d80753e59f8" category="inline-link-macro">VMware ハイパーバイザーとハードウェアに関する考慮事項</block>
-  <block id="d68e21bf4e5582ed1019332f3cd04b09" category="list-text">ONTAP Select 9.19.1以降、ONTAP SelectはKernel-Based Virtual Machine（KVM）およびESXiハイパーバイザーホスト上でAMDプロセッサをサポートします。詳細については、<block ref="db422ba85aa25b901cf43f6d42795d78" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="3c833d1ee8d4e9669082a8240b31214c" category="list-text">ONTAP Select 9.17.1では、KVMハイパーバイザーホスト上のONTAP Selectローカル接続NVMeディスク用のソフトウェアRAIDサポートが導入されました。</block>
   <block id="241b40bcae013c473d9644fea50dbf5c" category="list-text">ONTAP Select 9.16.1以降、NetAppライセンスファイル（NLF）のサポートが更新されました。新しいNLFフォーマットには、ARP、ONTAP S3、およびS3 SnapMirror機能のライセンスが含まれています。<block ref="1c797fc87ce45f1ff9b7973693d40c4e" category="inline-link-macro-rx"></block>。</block>
   <block id="3afaa3f98df333db327702e79529e9a3" category="list-text">ONTAP Select 9.16.1では、Autonomous Ransomware Protection（ARP）のサポートが導入されました。ONTAP Select 9.16.1ではARPの手動更新のみがサポートされており、自動更新はサポートされていません。ARP機能ライセンスは、ONTAP Select 9.16.1のNLFに含まれています。<block ref="1c797fc87ce45f1ff9b7973693d40c4e" category="inline-link-macro-rx"></block>。</block>
@@ -3842,8 +3710,6 @@ storage aggregate show-spare-disks</block>
   <block id="104962d056a9ee304187acaf220c0fb8" category="paragraph">詳細については、<block ref="a25f42072e4419657d9fe3656945750a" category="inline-link-macro-rx"></block>および<block ref="5da0a6018bb8de582853f06950fc0ff2" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="51d0af5857a15f4523f466b62caa3b47" category="inline-link-macro">ONTAP Select のプラットフォーム ライセンス製品</block>
   <block id="9ce9dee68c19a032c5683fc8fb16f3af" category="paragraph"><block ref="c71a107a8e3ad44e2cdb58b989b68453" category="inline-link-macro-rx"></block>について学ぶ</block>
-  <block id="143495f2ffcb62c79ae7d7ce4cd12598" category="inline-link-macro">ONTAP Select 9.19.1 リリースノート</block>
-  <block id="db1256fa61a71d591ff8c5f48bb4019d" category="paragraph"><block ref="d520216255ae6d06f75dd94565dafb47" category="inline-link-macro-rx"></block>にアクセスして、現在のバージョンの詳細を表示できます。</block>
   <block id="27d6d9aa8bcd915fcd39641c3d52912b" category="list-text">クラスタの右側にある<block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>を選択し、*オフラインにする*を選択します。</block>
   <block id="c2d79d7f8cafccb77c116946ab358d79" category="list-text">ポップアップ ウィンドウで *Yes* を選択して、リクエストを確定します。</block>
   <block id="8d72116cf0fefcfe17b4e1249383efe5" category="list-text">クラスタがオフラインであることを確認するには、*更新*を時々選択します。</block>
@@ -3876,44 +3742,31 @@ storage aggregate show-spare-disks</block>
   <block id="bf15f97bdb64b92705b22e37139088e2" category="list-text">*Settings &amp; AutoSupport* を選択し、<block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>を選択します。</block>
   <block id="c67e909aabe72e49f90ee7cbe67386f3" category="list-text">* Generate * を選択します。</block>
   <block id="f596dd83e2e4fb45e9506e1d1cc4b094" category="list-text">必要に応じて、*AutoSupport 履歴*で適切なパッケージを選択し、ダウンロードアイコンを選択して AutoSupport ファイルをローカルワークステーションに保存します。</block>
-  <block id="f6ce3f3d7fff348eefc0ae8bb5f7d897" category="list-text">仮想マシンを右クリックし、*コンソールを開く*を選択します。</block>
   <block id="d846e4bf1e2d722e31d756fd29cd8303" category="list-text">ブラウザに URL を入力して *Enter* キーを押してください。</block>
   <block id="24e281b285f5687579fdd74bccb7d7d8" category="list-text">メイン ページで、一番下までスクロールして *Cluster* を選択します。</block>
   <block id="049de6e621b35e20ae4e985327debd57" category="list-text">*GET /clusters/{cluster_id}* を選択して、ONTAP Select クラスタに関する情報を返すために使用された API 呼び出しの詳細を表示します。</block>
   <block id="b86fe38a5198fd6d4bd827931af09329" category="list-text">必要に応じて、ハイパーバイザー ホストから ONTAP Select イメージを削除します。</block>
   <block id="9a9d2a3e575828c99c27456faacd2c43" category="list-text">必要に応じて、以前のバックアップから Deploy 構成を新しい仮想マシンにリストアします。</block>
   <block id="7610adfde6544c9cdd579f00810afcd3" category="list-text">*?* と入力して *Enter* を選択すると、使用可能な管理シェルコマンドのリストが表示されます。</block>
-  <block id="041edc0152d64db1964544d7b5884c1c" category="paragraph">ONTAP Select Deploy 9.18.1または9.17.1からONTAP Select Deploy 9.19.1に直接アップグレードできます。たとえば、ONTAP Select Deploy 9.16.1などの以前のリリースからアップグレードするには、まずONTAP Select Deploy 9.17.1または9.18.1にアップグレードしてから、ONTAP Select Deploy 9.19.1にアップグレードする必要があります。</block>
   <block id="791ac28327378556d58422291b2864e5" category="paragraph">ONTAP Select Deploy管理ユーティリティの古いインスタンスがインストールされている場合は、最新リリースにアップグレードする必要があります。ONTAP SelectノードとONTAP Select Deployコンポーネントは個別にアップグレードします。詳細については、<block ref="fb380fde33185400cd8ee6587621860d" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="022346328acf67e828e800f24e979488" category="list-text">パスワードを入力し、* Enter * を選択します。</block>
-  <block id="65602a883b3293c14c5c6b3ed9367b58" category="sidebar">NetApp ONTAP Selectは、VMware ESXiまたはKernel-based Virtual Machine（KVM）ハイパーバイザーを実行しているさまざまなコモディティ ハードウェア サーバに導入できる、ソフトウェアで定義されるストレージアプライアンスです。柔軟で拡張性の高いプライベートクラウドインフラを構築するために必要な俊敏性を提供します。このサイトには、ONTAP Select 9.19.1のドキュメントが含まれています。</block>
-  <block id="85b340552d2a4b137eb45059da3b6af2" category="sidebar">ONTAP Select 9.19.1 ドキュメント</block>
   <block id="af30d81f9a8c2c0f5b25d08da7858ddc" category="inline-link-macro">ONTAP SnapLock</block>
-  <block id="4f187117101edb6221a27ad094532806" category="paragraph"><block ref="e5be20e426588130203bae7a7e597f79" category="inline-link-macro-rx"></block>について学ぶ</block>
   <block id="b638d0f1dd4c80d3617cfefeec604c5d" category="inline-link-macro">非技術的なサポートケースを開く</block>
   <block id="7a3af7c91740e45930119ddce3bf0d83" category="paragraph"><block ref="edc9445a6277b18c79e0ada4e6ba9f5f" category="inline-link-macro-rx"></block>してSnapMirrorクラウドライセンスを取得する必要があります。</block>
   <block id="d6e5e04c7b9c56d9515955d288b0e813" category="inline-link-macro">オブジェクト ストレージへのSnapMirrorクラウドのバックアップ</block>
-  <block id="609570e1a92256aa3f9b774f7dbf24fc" category="paragraph"><block ref="4ae01b68125388898638ecb3eb2e59b7" category="inline-link-macro-rx"></block>について学ぶ</block>
   <block id="d8818ebf9ca1095fb7a5372f4292243c" category="list-text">ONTAP Select 9.17.1以降、SnapMirror cloudはONTAP Selectでサポートされています。SnapMirror cloudは、ONTAP Selectではデフォルトでライセンスされていません。ONTAP Select 9.17.1クラスタを導入する場合、または既存のONTAP Selectクラスタをバージョン9.17.1にアップグレードする場合は、SnapMirror cloudライセンスをリクエストする必要があります。詳細については、<block ref="721bf771faed6cfbdee5aa217f7b1ff8" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="852cb5ef58dc20087f2fcb39137748a7" category="list-text">ONTAP Select 9.17.1以降、新しい導入ではSnapLock Select（改ざん防止Snapshotロックを含む）が自動的にライセンス付与されます。ONTAP Select 9.16.1以前からのアップグレードの場合は、<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block>からSnapLock Selectライセンスを無料でダウンロードして手動で適用できます。詳細については、<block ref="d74e51aab974d5584eeccb899c4795c8" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="ec0736970ae0e8ef44338bd9345f3951" category="paragraph"><block ref="56cfa00fc3eb294dcd6bd0a608d346a4" category="inline-link-macro-rx"></block>について学ぶ。</block>
   <block id="93c62ab5c9e2a68e9993e9a6f79af3e0" category="list-text">ONTAP Select 9.19.1以降、ONTAP Selectは鍵管理相互運用プロトコル（KMIP）を使用した外部鍵管理をサポートします。ONTAP Select 9.19.1クラスタの導入後、または既存のクラスタをONTAP Select 9.19.1にアップグレードした後に、外部鍵管理を有効にすることができます。詳細については、<block ref="d74e51aab974d5584eeccb899c4795c8" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="a53e97c2bb7494f6cd88d2ca9e3f6cfb" category="paragraph">ONTAP Select はクラウドキーマネージャーをサポートしていません。</block>
   <block id="115b70fb63fe464e7cf86f17b11f1d67" category="paragraph">コンテンツライブラリの操作を実行するには、追加の権限レベルへのアクセスが必要です。制限付きロールを使用している場合、vSAN ESA のデプロイメントにはこのアクセス権限が必要です。</block>
   <block id="b1689d890e3bfdba864c509e65029ab6" category="inline-link-macro">コンテンツライブラリの操作におけるアクセス権限レベルについて</block>
-  <block id="420c43a81b06eb199719986301b88739" category="paragraph"><block ref="349cc67b5cd523e4bbe7acd476212356" category="inline-link-macro-rx"></block>。</block>
   <block id="31a9fcd92544b53d42e4000ae7c63c29" category="list-text">*ホスト*：VMware ESXi にONTAP Select ノードを直接デプロイする際に、ハイパーバイザーホストを認証するために使用されます</block>
   <block id="9a5195b1ff4c19906bdb0971591f465c" category="list-text">*vCenter*: ホストが VMware vCenter によって管理されている場合に、ONTAP Select ノードを ESXi にデプロイする一環として vCenter サーバーを認証するために使用されます</block>
-  <block id="26185f28054346a59a9c3901db564d91" category="list-text">VMware ESXi 上で動作する Deploy ユーティリティは、VMware ESXi または KVM 上の ONTAP Select クラスタを作成および管理できます。</block>
-  <block id="f862ce787876275b8b041dd3b50bc344" category="list-text">KVM上で動作するDeployユーティリティは、VMware ESXiまたはKVM上のONTAP Selectクラスタを作成および管理できます。</block>
-  <block id="722c5f11159798669e97619a3674eb66" category="paragraph">ESXiハイパーバイザーホストは、いくつかの最低限のリソース要件を満たす必要があります。ONTAP Select が導入されるホストが以下の基本要件を満たしていることを確認してください。</block>
-  <block id="cbdb21e82973d8b56af711a4e158e10d" category="paragraph">ONTAP Select Deploy 仮想マシンのネットワークインターフェイスが設定済みであり、単一の管理 IP アドレスを持っていることを確認してください。DHCP を使用して IP アドレスを動的に割り当てるか、静的 IP アドレスを手動で設定することができます。</block>
   <block id="4677d18a24fcb2eb3f37347531f81229" category="paragraph">Deploy は VMware VIX API を使用して、vCenter サーバーおよび ESXi ホストと通信します。まず、TCP ポート 443 で SOAP over SSL を使用して接続を確立します。その後、ポート 902 で SSL を使用して接続が開かれます。さらに、Deploy は PING コマンドを発行して、指定した IP アドレスに ESXi ホストが存在することを確認します。</block>
   <block id="bb055e0f2f4e26b5aad8eaa467d4f3fa" category="paragraph">さらに、Deploy は、以下のプロトコルを使用して ONTAP Select ノードおよびクラスタ管理 IP アドレスと通信できる必要があります：</block>
   <block id="645dbfc8ae0a73e8087fbcb0a997027f" category="section-title">VMware vCenter サーバーに関する考慮事項</block>
   <block id="3c877a9561264bd22f7ed715473c9258" category="paragraph">vCenter で vSAN Express Storage Architecture （ESA） を作成および管理するには、次の vSphere コンテンツライブラリ権限が必要です：</block>
   <block id="913b24f487842d48914e3794480e83cc" category="admonition">コンテンツライブラリの権限にアクセスするには、管理者が vCenter Server のグローバル権限へのアクセスを許可する必要があります。</block>
-  <block id="c0d2cde9a14e7d58e2ab5a38de5b380d" category="paragraph"><block ref="c0d2cde9a14e7d58e2ab5a38de5b380d" category="inline-link-macro-rx"></block></block>
   <block id="35c865322fb18e49c0e0d5db1a728645" category="paragraph">ONTAP Select は、高可用性の共有なしのスケールアウトアーキテクチャを採用した ONTAP ストレージソフトウェアをベースに構築されており、エンタープライズストレージサービスを効率的に提供します。1ノード、2ノード、4ノード、6ノード、8ノード、10ノード、または12ノードでソリューションをデプロイでき、各ノードあたり最大400TBのNFS、SMB/CIFS、およびiSCSI接続ストレージの生容量を利用できます。ネイティブの重複排除と圧縮を活用することで、実効容量を増やし、ストレージコストを削減できます。スケールアウトアーキテクチャにより、ロード バランシングやハードウェアの保守のための高可用性と中断のないデータアクセスが実現します。</block>
   <block id="8caf5b702720dd48353d13906ca133b0" category="paragraph">ONTAP Selectは、ハイパーバイザーホスト上の仮想マシンとしてデプロイできる、ソフトウェアのみのバージョンのONTAPです。主流のAFFおよびFAS ONTAP製品群や、Cloud Volumes ONTAPなどの他のソフトウェアのみのオプションを補完します。</block>
   <block id="8132fb388d9980a45bf3e73000044650" category="paragraph">データが直接接続ストレージ（DAS）のサイロに分散しているコモディティ化された世界では、データへのアクセスと管理はより複雑な問題となっています。ソフトウェア定義ストレージ（SDS）は、これらの問題やその他の問題に対処するために、SDI環境において重要な要素として登場しました。</block>
@@ -4026,8 +3879,6 @@ storage aggregate show-spare-disks</block>
   <block id="d9b35950bad487aa3680b88379c9a3a5" category="list-text">ONTAP管理者アカウントのパスワードを入力してください。</block>
   <block id="f5d566772171e02b234fa74a25218c5b" category="paragraph">コマンドラインインターフェイスを使用して、必要に応じて Deploy 仮想マシンの管理者アカウントのパスワードを変更することで、ONTAP Select の展開環境をセキュリティで保護できます。</block>
   <block id="9026f6c98a9723f3a17a4324a530f75e" category="doc">Web UIを使用してONTAP Select クラスタを導入する</block>
-  <block id="d8dbba8f3ce92ce5f07a5e0348eee10d" category="inline-link-macro">インストール前のチェックリスト</block>
-  <block id="cdf955804034c3c67f90a9fa2b26792d" category="paragraph"><block ref="1a659edfd1511c28d59e934c80be869d" category="inline-link-macro-rx"></block>をレビューしました。</block>
   <block id="e16c906ba61aeeafbcb69e14b4357d15" category="sidebar">クラスタを作成するためのスクリプト</block>
   <block id="9a2f5932020cd5f8335afc3f02118937" category="sidebar">ONTAPコミュニティ</block>
   <block id="50ae596e882ccedcefde5c47743d7203" category="cell">8～60ドライブ</block>
@@ -4040,4 +3891,394 @@ storage aggregate show-spare-disks</block>
   <block id="e95da606b42156a1d47560476c9088a5" category="list-text">ESXi 9.1</block>
   <block id="05297b8670c42857ef0d5c0e4996e75c" category="paragraph">VMを作成する際には、VM名、外部ネットワーク、ホスト名など、使用する構成情報が必要です。静的ネットワーク構成を定義する際には、以下の追加情報が必要です：</block>
   <block id="9db175ef7b9ec37a8ebe335363d8fbe5" category="paragraph">KVMハイパーバイザーの場合、VMを作成する際に使用する構成情報（VM名、外部ネットワーク、ホスト名など）が必要です。静的ネットワーク構成を定義する際には、以下の追加情報が必要です：</block>
+  <block id="4624a3d710907c86baab80d40c84e706" category="admonition">ONTAP Select Deploy に付属の REST API にはバージョン番号が割り当てられます。API のバージョン番号は、Deploy のリリース番号とは無関係です。ONTAP Select 9.20.1 Deploy 管理ユーティリティには、バージョン 3 の REST API が含まれています。</block>
+  <block id="0147f8f31be648fb76a1f8e52fad6bac" category="paragraph">Microsoft Hyper-Vは、小規模、中規模、大規模のインスタンスタイプをサポートしています。</block>
+  <block id="53716995394b9da64981d2678057ccbf" category="cell">最大400TBの生データ（ESXi、Hyper-V、KVM）</block>
+  <block id="1469be4dc7a4b9f885ea997a2e768e50" category="cell">外部アレイ上にホストされているデータストアは、ESXi、Hyper-V、KVMではFC、FCoE、iSCSIを介して接続され、ESXiではNFSを介して接続されます。KVMおよびHyper-VではNFSはサポートされていません。これらのデータストアは、高い可用性と耐障害性を提供します。</block>
+  <block id="9d0a058987de9e88ef9bf37e028da25b" category="cell">ハイパーバイザーのサポート（Hyper-V）</block>
+  <block id="bc0b52f1c0ea0bf39ebd47fecd5444fc" category="cell">Windows Server 2025および2022</block>
+  <block id="2558fd9571df71aa35ecf9f760d1c22a" category="list-text">最大伝送単位（MTU）のサイズは、デフォルトでは9000バイトで、7500～9000の範囲（両端を含む）で調整可能です</block>
+  <block id="80dd37cc993aa6b15b696ede872ddc92" category="list-text">ONTAP Select で使用できるポートがいくつかあります。それらは、クラスタのサイズなど、いくつかの要因に基づいて割り当てられ、使用されます。</block>
+  <block id="33141c5be83ac5b02480b1a56097eab6" category="list-text">ハイパーバイザー環境内の仮想スイッチソフトウェアは、vSwitch（VMwareおよびHyper-V）であってもOpen vSwitch（KVM）であっても、仮想マシンが公開するポートと物理イーサネットNICポートを接続します。環境に応じて、すべてのONTAP SelectホストにvSwitchを設定する必要があります。</block>
+  <block id="eb94db0ae71307bf4abebf394990bb47" category="paragraph">ONTAP Deploy 2.10以降では、内部ネットワークで使用される最大伝送単位（MTU）サイズを7,500～9,000の間で設定できます。ネットワーク接続チェッカーを使用して、7,500～9,000のMTUサイズをテストすることもできます。デフォルトのMTU値は、仮想ネットワークスイッチの値に設定されます。環境にVXLANのようなネットワークオーバーレイが存在する場合は、そのデフォルト値をより小さな値に置き換える必要があります。</block>
+  <block id="2f2ed22ec426d384bbed87396b5c9e28" category="paragraph-title">Hyper-VとKVM</block>
+  <block id="28f2f3019ca5fcfa77b110d8c2f2c86c" category="admonition">クラスタ ネットワーク トラフィックの最大スループットを確保するため、このネットワーク ポートは、最大伝送単位（MTU）が7500～9000バイトのジャンボ フレームを使用するように構成されています。クラスタが正しく動作するように、ONTAP Selectクラスタノードに内部ネットワークサービスを提供するすべての上流の仮想スイッチおよび物理スイッチで、ジャンボ フレームが有効になっていることを確認してください。</block>
+  <block id="dc23653130ed62dd8362cb56e0db332b" category="paragraph">構成で分散vSwitchesを使用する場合、ネットワーク構成を簡素化するためにLACPを使用できます（ただし、ベストプラクティスではありません）。サポートされている唯一のLACP構成では、すべてのVMNICが単一のLAGに属している必要があります。アップリンクの物理スイッチは、チャネル内のすべてのポートで、7,500～9,000の最大伝送単位（MTU）サイズをサポートする必要があります。内部および外部のONTAP Selectネットワークは、ポートグループ レベルで分離する必要があります。内部ネットワークは、ルーティング不可能な（分離された）VLANを使用する必要があります。外部ネットワークは、VST、EST、またはVGTのいずれかを使用できます。</block>
+  <block id="1cf90a2801818dee7b6d258e78aeed0b" category="paragraph">ONTAP Selectは、VMware vSphere、Microsoft Hyper-V、カーネルベース仮想マシン（KVM）などのクラウド管理フレームワークに統合されています。これにより、ファイルサービス、ホームディレクトリ、ソフトウェア開発環境、アプリケーションテストなどの新規プロジェクトの展開を加速できます。</block>
+  <block id="7c74a39ff87dd7c7ec920f58bb13fbfe" category="section-title">パススルー（DirectPath IO）デバイスとRaw Device Maps（RDM）の比較</block>
+  <block id="d5a22899289ebb210b9417100395cc14" category="admonition">ONTAP Selectは、Hyper-Vハイパーバイザー上でNVMeドライブをSCSIディスクとしてサポートします。ONTAP Selectは、Hyper-Vハイパーバイザー上でNVMeドライブを個別のデバイス割り当て（パススルーデバイス）としてサポートしていません。</block>
+  <block id="2e5e2bf73be19909a4376bcff1b61264" category="section-title">ONTAP Selectディスクを対応するESXi、Hyper-V、またはKVMディスクと照合する</block>
+  <block id="a26caf02645178881185801f94db7a3b" category="paragraph">ESXi、Hyper-V、またはKVMシェルで、次のコマンドを入力すると、特定の物理ディスク（naa.unique-idで識別されます）のLEDを点滅させることができます。</block>
+  <block id="c5865855c43d734069987786177edd98" category="open-title">Hyper-V</block>
+  <block id="bbc2d665b02dc421c5c756db4b973610" category="list-text">Microsoft Hyper-V</block>
+  <block id="6471c0fa36feb159a59e99db5a846c85" category="list-text">Microsoft Hyper-Vは、Windows Serverに付属するハードウェア仮想化プラットフォームです。Hyper-Vロールを有効にすると、Windows Serverホストは仮想マシン（VM）のライフサイクル全体を作成、実行、管理できるようになります。ONTAP Select環境では、Hyper-Vを実行しているWindows Serverホストが、ONTAP Select Deploy VMおよびONTAP Select仮想ノードのハイパーバイザーホストプラットフォームになります。</block>
+  <block id="d13014c04a3c319d02b1bab84cea2a1b" category="list-text">_ハイパーバイザーホスト_は、ONTAP Select VMをホストするコア ハードウェア プラットフォームです。ONTAP Select VMがハイパーバイザーホストにデプロイされてアクティブになると、_ONTAP Selectノード_とみなされます。</block>
+  <block id="b4995b9d6b30ebe36c3d45bc995ef739" category="list-text">ライセンスを購入する際、ONTAP Select VMのサイズ機能を決定する3つのライセンス製品が用意されています：</block>
+  <block id="a4cdf73651dfa53cf3376ac7d52d188c" category="list-text">クラスタ最大伝送単位（MTU）は、ONTAP Selectマルチノードクラスタで使用される内部ネットワークのMTUサイズを設定できる機能です。Deploy管理ユーティリティは、HAペアを構成する際に、ネットワーク環境に合わせてMTUサイズを調整します。値を手動で設定することもできます。</block>
+  <block id="ad5701689be209088c1ca81b1d3e4367" category="list-text">ONTAP Select vNASソリューション（VMware vSANまたは汎用外部ストレージアレイ）を介して利用可能な外部ストレージを使用するクラスタをデプロイする場合、ONTAP SelectノードをホストするESXi VMは、次のVMware機能を利用したアクションによって移動できます：</block>
+  <block id="d9340cf8dce48f798e5813924287d1d5" category="paragraph">ONTAP Selectデプロイユーティリティは、次のようなクラスタ上での操作の実行の一環として、VMの移動を検出します：</block>
+  <block id="f48d2c32c8152c4d36a758fcf7870bd1" category="paragraph">VMが移動すると、デプロイユーティリティは内部データベースを更新し、新しいESXiホストを構成します。ONTAP Selectノードで実行されるすべてのアクションは、VMの移動とデプロイの更新が完了するまでブロックされます。</block>
+  <block id="1f9451709d2fec788f78f9ef1041ca00" category="admonition">アクティブな2ノードクラスタが1つ以上ある場合、クラスタを管理するONTAP Select Deploy VMは常に稼働している必要があります。Deploy VMが停止すると、メディエーターサービスが利用できなくなり、2ノードクラスタのHA機能が失われます。</block>
+  <block id="cbc5c81a3aad3d3286457cf571865dfd" category="list-text">クラスタの作成後、ONTAPまたはハイパーバイザー管理ツールを使用して、Deployユーティリティの外部でクラスタまたはVM構成に変更を加えることができます。構成の変更を伴うVMの移行を行うこともできます。これらの変更が発生した場合、Deployユーティリティは自動的に更新されないため、クラスタの状態と同期が取れなくなる可能性があります。クラスタ更新機能を使用して、Deploy構成データベースを更新できます。クラスタの更新は、Deploy Webユーザーインターフェイス、CLI管理シェル、およびREST APIから利用できます。</block>
+  <block id="533e5341983a61870ce4c049cdcdf502" category="list-text">vSphereスタンドアロン クライアントまたはvSphere Webクライアント（ESXi 8.0以降では唯一の選択肢）を使用して、OVFテンプレート（OVAファイルに含まれる）をインストールする必要があります。ONTAP Select Deploy管理ユーティリティは使用しません。</block>
+  <block id="96a3af93a31aa2d6987b7e0083ab462b" category="list-text">*Datacenter* を選択します。次に右クリックして *Deploy OVF Template* を選択します。</block>
+  <block id="0423c9de6e34c7ed9ab3e99fdb3b90f6" category="paragraph">ONTAP Selectノードがデプロイされる各ESXiハイパーバイザー ホストを準備します。ホストが正しく構成され、ONTAP Selectクラスタのデプロイをサポートする準備ができていることを確認します。</block>
+  <block id="2dc338d48268124d1b82604e9381a8db" category="summary">ONTAP Selectノードがデプロイされる各Hyper-Vハイパーバイザー ホストを準備します。ホストを準備する際には、ホストが適切に構成され、ONTAP Selectクラスタのデプロイをサポートする準備ができていることを確認するために、デプロイ環境を慎重に評価します。</block>
+  <block id="509b2a82acc00256b9f46e9e9ba552ca" category="doc">ONTAP Select 用に Hyper-V ホストを準備する</block>
+  <block id="67cbbb1f4d86f2fd92b96f15d408d7bf" category="paragraph">ONTAP Selectノードがデプロイされる各Hyper-Vハイパーバイザー ホストを準備します。ホストが正しく構成され、ONTAP Selectクラスタのデプロイをサポートする準備ができていることを確認してください。</block>
+  <block id="b32f0291077d60f86e6a21e8f84f366d" category="section-title">ステップ1：Hyper-Vハイパーバイザーホストを準備する</block>
+  <block id="02112d1e90965c50d2ad0a605e3c9531" category="paragraph">ONTAP Selectノードがデプロイされる各Windows Hyper-Vサーバを準備します。</block>
+  <block id="3c8735d0c63864aa4a8afcfb032181cb" category="paragraph">これらの手順を実行する方法の詳細については、Windowsのドキュメントを参照してください。</block>
+  <block id="2e5df0bbab9a4e89f23804bc21180d71" category="list-text">サポートされているWindows Serverリリースをインストールし、サーバーマネージャー、Windows Admin Center、またはPowerShellを使用してHyper-Vロールを有効にします。</block>
+  <block id="cdca205f71ba47c802b076db99d6d1a3" category="list-text">ローカルブートディスクにWindowsをインストールします。ONTAP Selectに割り当てる予定のディスクにはWindowsをインストールしないでください。</block>
+  <block id="4351e7eba3cb562654c73dcc3b27e5af" category="list-text">構成が以下の要件を満たしていることを確認してください：</block>
+  <block id="8ea573251dbe45b287e3ccf78ae03a24" category="list-text">Windows Serverリリースはサポート対象として記載されています。Deployユーティリティは、ホスト登録時に製品名を読み取り、サポートされていないリリースであることを報告します。</block>
+  <block id="1cf1bd1a15131fa62e9e3c4bd12a60b1" category="list-text">Hyper-Vの役割が有効になっています。Deployユーティリティはホストの登録時にこれを検証し、役割が有効になっていない場合は登録に失敗します。</block>
+  <block id="2484a776a594e674da21654aeb26429d" category="list-text">ホストCPUとメモリはWindows Serverに対応できる容量を備えています。Deployユーティリティは、ノードのサイズを決定する際に、ホスト用に2つのCPUコアと8GBのメモリを予約します。</block>
+  <block id="7155235ed5081b7ea81f151b8b2b3cff" category="section-title">ステップ2：Deployへのリモート管理アクセスを提供する</block>
+  <block id="10924badaa211f2b1a7489626b61e4f7" category="paragraph">Deployユーティリティは、HTTPSおよびPowerShellリモート設定を使用して、Windowsリモート管理（WinRM）経由でホストを管理します。WinRM HTTPSリスナー、関連する証明書、およびファイアウォールルールを設定する必要があります。</block>
+  <block id="7a0a083c88ffcf30a53b02551d8a90f1" category="list-text">WinRM HTTPを有効にする：</block>
+  <block id="60e2cd65c7d048e3456cb4847b044708" category="list-text">WinRM構成の確認：</block>
+  <block id="4c8840e0712fcab935d1c8f82502ee8d" category="list-text">HTTPSポート5986でのネットワーク接続を受け入れるファイアウォール受信ルールを作成します：</block>
+  <block id="1d963735cd6b79bee2bdf1cb6d0ead7c" category="list-text">関連付けられた証明書を設定します：</block>
+  <block id="75c6e5457b300c796fada64d6fece4d1" category="open-title">証明書は利用可能です</block>
+  <block id="537b0c6167471c02152b89dbeb463c0a" category="paragraph">ローカルマシンの証明書ストアに有効な証明書が既に存在する場合：</block>
+  <block id="aa0a1c7d606d51df64882a2fa9c92c80" category="list-text">証明書のPowerShellリモート処理を設定する：</block>
+  <block id="40e474139f2129eaffe3528a6cce78fd" category="list-text">リモート管理のためにWinRMを構成する：</block>
+  <block id="143981f82c1128e7fe7d4e93e13f2903" category="list-text">WinRM HTTPSリスナーの設定を確認します：</block>
+  <block id="b245c513bd8335afe82b17d23dade037" category="open-title">証明書は利用できません</block>
+  <block id="07fcc01ed277fcbb9f299bc089599ef6" category="list-text">自己署名証明書を生成します：</block>
+  <block id="f9110594ed6c056bf5b6da12216139aa" category="list-text">証明書をWinRMリスナーにバインドします：</block>
+  <block id="2e41cfa0d0b1290bd3d0514df0eb8b06" category="list-text">グループ ポリシーを構成するには、*コンピューターの構成* &gt; *管理用テンプレート* &gt; *Windows コンポーネント* &gt; *Windows リモート管理（WinRM）* &gt; *WinRM サービス* を選択します。</block>
+  <block id="6aa39629257cd892de645c1600d841dd" category="list-text">Deploy仮想マシン（VM）は、TCPポート5986でWinRM HTTPSリスナーにアクセスできます。DeployユーティリティはHTTPまたはTCPポート5985を使用しません。</block>
+  <block id="ec2c25f9a35e0507985e81b925e4f7d1" category="list-text">自己署名証明書があります。Deployユーティリティは、認証局に対して証明書の検証を行いません。</block>
+  <block id="6702ab97fe23c9ea4e50fd2d98276462" category="list-text">ホストの登録に使用されたアカウントは、ホスト上で管理者権限を持っています。DeployユーティリティはKerberos認証を使用します。DeployユーティリティがKerberosを使用できない場合、NTLMにフォールバックします。</block>
+  <block id="8a6a3f370df2534a13e671d95abcac83" category="list-text">TCPポート5986で応答する一意の名前を使用して、Hyper-Vホストを登録しました。デプロイユーティリティは、登録名を使用して証明書を取得します。</block>
+  <block id="32241a37ec0400ec853fc6c79983a572" category="admonition">デプロイユーティリティは証明書を記録し、以降の接続のたびにその証明書を検証します。証明書が置き換えられた場合、ホストへの接続は失敗し、デプロイユーティリティからホストを削除して再度登録する必要があります。</block>
+  <block id="662776498f923f145a861948c475fdb4" category="section-title">ステップ3：ホストストレージを準備する</block>
+  <block id="2ea4b2d787d08de3f6da66daf00997fb" category="paragraph">Hyper-Vホスト上のストレージプールは、ONTAP Select VMとその仮想ディスクを保持するローカルボリュームです。</block>
+  <block id="2fd4b1a686aaf69c48d7598d677af2ad" category="list-text">ディスクの管理、サーバーマネージャー、またはWindows Admin Centerを使用してローカルボリュームを作成します。詳細については、Microsoftのドキュメントを参照してください。</block>
+  <block id="9ea84a5db0f07bbc5d1b876033ccade2" category="list-text">各ONTAP Selectノードに少なくとも1つのストレージプールを作成します。詳細については、Microsoftのドキュメントを参照してください。</block>
+  <block id="a894950139b5d1f8c80364f1755f0519" category="list-text">ソフトウェアRAIDを使用する場合は、ストレージプールを作成する必要があります。</block>
+  <block id="b3cc90d4d2bb6ffd83a9231ad81e8a35" category="list-text">ストレージプールを削除するには、まずそのストレージプールを使用しているONTAP Selectクラスタまたはノードを削除してから、標準のWindowsツールを使用してボリュームを削除します。</block>
+  <block id="7009810dcffb3805a56093205396a1e8" category="list-text">ボリュームがNTFSまたはReFS形式でフォーマットされており、ドライブ文字が割り当てられていることを確認してください。Deployユーティリティは、ストレージプールをドライブ文字で識別します。</block>
+  <block id="af09e68f4c3775f33fe72f13c4c0680e" category="list-text">Deployユーティリティは、ボリュームの2%をオーバーヘッドとして予約し、単一のストレージプールから最大64 TBを割り当てることができます。</block>
+  <block id="e2dd9f8591683e3e0762b37258b1581e" category="list-text">Cluster Shared Volumes と SMB 3.0 ファイル共有を ONTAP Select ストレージ プールとして使用することはできません。</block>
+  <block id="b4300bf057a4887ef61f40a8fb256f9b" category="list-text">ONTAP Selectは、ドライブ文字が割り当てられていないため、フォルダパスにのみマウントされているボリュームを検出できません。</block>
+  <block id="bd1e3326bf71a92ce665e4d945f8026c" category="list-text">ソフトウェアRAIDを使用している場合は、ONTAP Select用に物理ディスクを予約する必要があります。Hyper-VではPCIパススルーがサポートされていないため、ディスクはパススルー物理ディスクとしてVMに提示されます。物理ディスクは以下の要件を満たす必要があります：</block>
+  <block id="dbf927ca2cb3bcffe49ed58a5b3a2ec5" category="list-text">それらは、それぞれ少なくとも200GBのストレージ容量を持つSSDまたはNVMeディスクです。</block>
+  <block id="39efeac872c30a8d2d8f7d2ff7bad8f1" category="list-text">これらは、パーティション、ボリューム、ドライブレターが一切設定されていない、生のディスクです。</block>
+  <block id="6b821145578791483aa9da052efdd2c9" category="list-text">これらのディスクはストレージスペースプールに属していません。</block>
+  <block id="2f60382d05998ebf23164d07dff075c3" category="list-text">ディスクはオンライン状態のままです。Deployユーティリティは、ディスクをVMに接続する際に、各ディスクをオフラインにします。</block>
+  <block id="9d5232dc183039ab2fb482ae3d67ad75" category="list-text">シングルノード クラスタでは、ソフトウェアRAIDに最低3台のディスク、ソフトウェアRAID-DPに4台または5台のディスクが必要です。2ノードクラスタでは、ソフトウェアRAIDに6台のディスク、ソフトウェアRAID-DPに10台のディスクが必要です。ONTAP Selectは、ノードあたり最大60台のパススルーディスクをサポートします。</block>
+  <block id="d772e21486d4beb95c322f54953adcc4" category="paragraph">ホストを登録する前に、予約したディスクが使用可能であることを確認してください：</block>
+  <block id="4c3090996d5139e29cf5d79cbd7f6741" category="admonition"><block ref="6153ada49848cfc6b6b9a477f894bc0f" prefix=" " category="inline-code"></block> の出力でストレージスペースプールのメンバーとして表示されるディスクは、Deployユーティリティによって除外され、ソフトウェアRAIDでは使用できません。</block>
+  <block id="c5a39dec817928b8cbcd62e3de07cb9d" category="paragraph">ONTAP Selectは、2ノードクラスタ、4ノードクラスタ、またはシングルノード クラスタとして展開できます。多くの場合、追加のストレージ容量と高可用性（HA）機能があるため、マルチノードクラスタの方が望ましいです。</block>
+  <block id="fb609de47e5d20bd59b73bb62f0ed522" category="paragraph">次の図は、4ノードクラスタ内の単一のONTAP Select VMの一般的なネットワーク構成を示しています。2つの独立したネットワークが存在します：ONTAP内部とONTAP外部。</block>
+  <block id="a10f32e305e2e153935c47f506a4d6d5" category="section-title">ステップ5：ネットワークを準備する</block>
+  <block id="a02edc05eb43543678aa054b6e3055df" category="paragraph">ONTAP Select DeployはHyper-V仮想スイッチを介して物理ネットワークに接続します。ホストを登録する前に、仮想スイッチを作成する必要があります。</block>
+  <block id="32b9ddc50ee365f460f479bb6303e944" category="list-text">Hyper-V マネージャー、Windows Admin Center、または PowerShell の仮想スイッチ マネージャーを使用してスイッチを作成します。</block>
+  <block id="de369dc51c7c9c7f92c73abb207a34dc" category="paragraph">ONTAP Selectで使用する各物理アダプタに対して、外部仮想スイッチを作成します。シングルノード クラスタには少なくとも1つのアダプタが必要であり、2ノードクラスタには少なくとも2つのアダプタが必要です。</block>
+  <block id="3dee451c56b0c13935b0c4316c730192" category="list-text">物理アダプタの詳細設定でジャンボ フレームを設定します。</block>
+  <block id="00802fb0fd82fd7d8ab3450bc8c75ef1" category="list-text">各仮想スイッチに1つの物理アダプタをバインドします。</block>
+  <block id="683bb39d850d69c815705d0c938b9b85" category="admonition">NICチーミングおよびスイッチ組み込みチーミングはサポートされていません。</block>
+  <block id="6225060c9c6a4178baad7381e6a1dd47" category="list-text">各アップリンクが<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block>であることを確認します。</block>
+  <block id="70734dd87af4b8747835d6daa8c581f8" category="admonition">アップリンクが<block ref="74e8333ad11685ff3bdae589c8f6e34d" prefix=" " category="inline-code"></block>である外部仮想スイッチが、利用不可として報告されています。</block>
+  <block id="6d2f8e586a3c78855ba9d62a615026a1" category="list-text">物理スイッチ ポートまたは管理オペレーティング システム アダプタでVLANタグ付けを設定します。Deployユーティリティは使用中のVLANを読み取りますが、VLANの割り当ては行いません。</block>
+  <block id="4ceb8422b78eced9862b46ec59638c97" category="list-text">2ノードクラスタの内部ネットワークには、7500～9000バイトの最大伝送単位（MTU）が必要です。内部ネットワークを伝送するアダプタでジャンボ フレームを有効にします。</block>
+  <block id="8f12ceec1f5c0361e7316e0a917cc07e" category="admonition">Windows Serverはイーサネットヘッダーを含むジャンボ フレーム サイズを報告するため、アダプタを9014バイトに設定するとMTUは9000バイトになります。これは、Deployユーティリティがアダプタ設定のMTU値を解釈する方法です。仮想スイッチが管理オペレーティングシステムと共有されている場合、対応するホスト アダプタのIP MTUも、Deployユーティリティが報告するMTUを制限します。</block>
+  <block id="debea92f5e744f7d89af32e6ef9ef6c4" category="paragraph">ONTAP Selectノードがデプロイされる各KVMハイパーバイザーホストを準備します。ホストが正しく構成され、ONTAP Selectクラスタのデプロイをサポートする準備ができていることを確認してください。</block>
+  <block id="10041e221d7d3c8f73a6f96d63fb4b9c" category="paragraph"><block ref="1d65a4e93b9cf9b17a7bb89dcb1e6f5a" category="inline-link-rx"></block> [ONTAP Select 9.20.1に関するお知らせ^]</block>
+  <block id="7edc283ffe7b561fd920cbb81a14d610" category="admonition">NetAppサポートから指示がない限り、ONTAP Select仮想マシン（VM）の構成を直接変更しないでください。VMは、Deploy管理ユーティリティを使用してのみ構成および変更する必要があります。NetAppサポートの支援なしにDeployユーティリティの外部でONTAP Select VMに変更を加えると、VMに障害が発生して使用できなくなる可能性があります。</block>
+  <block id="6063476515087b7929040db8b546f99e" category="paragraph">Deploy管理ユーティリティとONTAP SelectノードはどちらもVMとして動作します。Deployユーティリティ用に選択するハイパーバイザーは、ONTAP Selectノード用に選択するハイパーバイザーとは独立しています。この2つを組み合わせる際には、完全な柔軟性があります：</block>
+  <block id="5c62f35447e8a3e341601731e703c20b" category="list-text">VMware ESXi上で動作するDeployユーティリティは、VMware ESXi、Hyper-V、またはKVM上のONTAP Selectクラスタを作成および管理できます。</block>
+  <block id="fc1ed3d770d14fb2acff7980deb95fee" category="list-text">Hyper-V上で実行されるデプロイユーティリティは、VMware ESXi、Hyper-V、またはKVM上のONTAP Selectクラスタを作成および管理できます。</block>
+  <block id="f0a4cb81a6d4d7d4824e748bf190c27a" category="list-text">KVM上で動作するデプロイユーティリティは、VMware ESXi、Hyper-V、またはKVM上のONTAP Selectクラスタを作成および管理できます。</block>
+  <block id="371211d486859e2ceb74e289f9026608" category="paragraph">各ONTAP Selectノードは専用のVMとして実行されます。同じハイパーバイザーホスト上に複数のノードを作成できますが、以下の制限があります：</block>
+  <block id="6f390444612ff73af7b4eacaa455bcbb" category="section-title">ハイパーバイザー環境</block>
+  <block id="402b218b7b00b93f0bd94fdbbb3885c4" category="paragraph">ハイパーバイザー環境にDeploy管理ユーティリティをインストールする前に、基本的な要件を確認し、導入の準備を行う必要があります。</block>
+  <block id="47dee50ad0138b8f5ca70e40e86e6c04" category="paragraph-title">ハードウェア要件</block>
+  <block id="07d4be337f2d66cd650bf5f584f9d7f5" category="paragraph">ONTAP Selectが導入されているESXiハイパーバイザーホストが、以下の基本要件を満たしていることを確認します：</block>
+  <block id="6b028a187d797f05e84c3144d643b126" category="list-text">動的ホスト構成プロトコル（DHCP）が有効になっています（静的IPアドレスを割り当てることも可能です）</block>
+  <block id="d1a24d11616124346e618e42973ae731" category="paragraph">ONTAP Select Deploy VMのネットワークインターフェイスが構成され、単一の管理IPアドレスが設定されていることを確認します。DHCPを使用してIPアドレスを動的に割り当てるか、静的IPアドレスを手動で構成できます。</block>
+  <block id="ffac4087d4b91edc12c1b0d0f1a0e5b6" category="paragraph">Hyper-V環境にONTAP Select Deployユーティリティをインストールする前に考慮すべき、Hyper-V環境固有の要件と制限がいくつかあります。</block>
+  <block id="1ec7aa4b18256f27394857140c55fdba" category="paragraph">ONTAP Selectが導入されるWindows Hyper-Vハイパーバイザーホストが、以下の基本要件を満たしていることを確認します：</block>
+  <block id="28a80c499eb23b8d54932e2fa0feb291" category="list-text">Windows Server：</block>
+  <block id="fb7db41070ad950d89211edd219a9803" category="list-text">動的ホスト構成プロトコル（DHCP）が有効になっています（静的IPアドレスを割り当てることもできます）</block>
+  <block id="013ce7afa9cd10a3d70185c962e874e1" category="paragraph">Deploy仮想マシンのネットワークインターフェイスが構成され、管理対象のONTAP Selectホストに接続できることを確認します。</block>
+  <block id="e98756733055aa5fb787fcc00f4f0d6f" category="cell">DeployユーティリティがインストールされているWindows Hyper-Vハイパーバイザーホスト。</block>
+  <block id="c5cc7d9701523b61beb3f9d3ef99e3d0" category="paragraph">KVM環境にONTAP Select Deployユーティリティをインストールする前に考慮すべき、ハイパーバイザー環境に固有の要件と制限がいくつかあります。</block>
+  <block id="1c473125781ad8e64aaa8bce6cb0a008" category="paragraph">ONTAP Selectが導入されるLinux KVMハイパーバイザーホストが、以下の基本要件を満たしていることを確認してください：</block>
+  <block id="7201ef87e3397f0d7190418f150e89ca" category="cell">DeployユーティリティがインストールされているLinux KVMハイパーバイザーホスト。</block>
+  <block id="69d8e48c6c49e4127f1093bef6fe2e3e" category="summary">Hyper-Vハイパーバイザーの使用に関連して、考慮すべき計画上の事項がいくつかあります。</block>
+  <block id="d7fd00268720d733ee8e71af7a296183" category="doc">ONTAP SelectのHyper-Vストレージ要件</block>
+  <block id="3ecaefaf5d1592f06cc757c6ad456be8" category="paragraph">Hyper-VハイパーバイザーでONTAP Selectを設定する場合、ONTAP Selectは仮想マシン（VM）と仮想ディスクをHyper-Vホスト上のローカルボリュームに保存します。</block>
+  <block id="dd23614ca8bd9516740fb72335a2726d" category="paragraph">Hyper-Vホスト上のONTAP Selectストレージプールには、以下の構成要件と制限が適用されます：</block>
+  <block id="410e3b7f4709d067bd354dc1fc26ddca" category="list-text">ストレージプールは、ドライブ文字が割り当てられたNTFSまたはReFSボリュームである必要があります。デプロイユーティリティは、ストレージプールをドライブ文字で識別します。</block>
+  <block id="0879863cb4607d398fad7f2a7b93ca24" category="list-text">クラスタ共有ボリュームはストレージプールとしてはサポートされていません。</block>
+  <block id="be1c23407f09f4740a4b18c0b98b61e9" category="list-text">ネットワークファイル共有やリモートUNCパス（SMB 3.0など）は、ストレージプールとしてサポートされていません。</block>
+  <block id="668b17ec9468ff750f4e39abeecfb34a" category="list-text">ボリュームにドライブレターがないため、ONTAP Selectはフォルダパスにのみマウントされているボリュームを検出しません。</block>
+  <block id="825ff18a7a9928a569185c29afd54ce6" category="list-text">ONTAP Selectは、Hyper-VホストがLUNをNTFSまたはReFSとしてフォーマットし、ドライブ文字を割り当てる場合、FC、FCoE、またはiSCSIを使用して外部ストレージアレイ上のLUNを使用できます。ONTAP Selectは、このようなボリュームをローカルホストストレージとして扱います。ESXiで使用されるONTAP Select vNASモデルは、Hyper-Vには適用されません。</block>
+  <block id="fde1a165227d1e6572f0942a3d1ef032" category="list-text">Storage Spacesの仮想ディスクは、NTFSまたはReFS形式でフォーマットされ、ドライブ文字が割り当てられていれば、ストレージプールを保持できます。ただし、ソフトウェアRAIDは、Storage Spacesプールに属する物理ディスクを使用することはできません。</block>
+  <block id="8f0a241ee43db9a3e8871b721052504b" category="list-text">Hyper-V構成では、シンプロビジョニングされたストレージは認識されません。ONTAP Selectは、Windowsがボリュームに対して報告する容量を使用します。</block>
+  <block id="54b6c05f68680ae5ff2ca045e1cb64e0" category="list-text">ONTAP Selectネットワーク用に、専用のネットワークアダプタ、帯域幅、および仮想スイッチ構成を定義します。iSCSIなどの外部ストレージトラフィックには、別のアダプタを使用してください。</block>
+  <block id="42a91e5c9d54163947150f34fdd1c521" category="list-text">ストレージプールボリュームはONTAP Select専用にします。同じボリューム上に別のHyper-V仮想マシンやWindowsワークロードを配置しないでください。また、Windowsブートボリュームをストレージプールとして使用しないでください。</block>
+  <block id="20259f7390d45f11f78f55f82595bfc5" category="list-text">ONTAP Selectが容量全体を消費しないように、ボリュームのサイズを設定します。</block>
+  <block id="a445e5a29209fef3fa6559458aa4ee6e" category="list-text">外部ストレージアレイ向けにWindows MPIOを設定し、LUNが冗長パス経由で提供されるようにします。</block>
+  <block id="7dbda241099a3f4e76e812956b396429" category="cell">Deploy仮想マシン（VM）の名前</block>
+  <block id="4ac1016a7fdf95b5107daedaec3275bc" category="cell">VMに使用する識別子。</block>
+  <block id="a4c504f5dd88c47519bc63a9e46e076a" category="cell">DeployユーティリティがインストールされているVMware ESXi、Hyper-V、またはKVMハイパーバイザーホストの識別子。</block>
+  <block id="6b4d5b1b414478b173472ea273ea4d66" category="cell">保管場所の名前</block>
+  <block id="44640e3efd05148b3ee0ac248ef3439a" category="cell">VMファイルが格納されているデータストア（ESXi）またはストレージプール（Hyper-VまたはKVM）の識別子（約40GBの容量が必要です）。</block>
+  <block id="31c72f60779aff4088c84a9baba22027" category="cell">Deploy VMが接続されているネットワークの識別子。</block>
+  <block id="0c616e48f1ef6b2b458afe6855c85175" category="paragraph">デプロイ用VMは、デフォルトではDHCPを使用して構成されます。ただし、必要に応じて、VMのネットワークインターフェースを手動で設定することもできます。</block>
+  <block id="161ffac8ac7182a63bae806165aea2a2" category="cell">VMが属するネットワークに基づいたサブネットワークマスク。</block>
+  <block id="c01a358acffe642fe27e742f5d30459f" category="list-text">ソフトウェアRAIDを使用するONTAP Select（ESXi）およびONTAP Select（KVM）では、ソフトウェアRAIDをサポートしていない以前のバージョンに戻すことはできません。さらに、ESXi上のONTAP Select 9.5以降の新規インストールでは、VMXNET3ネットワークドライバと、可能な場合はvNVMeドライバが使用されます。これらの新規インストールは、以前のバージョンのONTAP Selectに戻すことはできません。</block>
+  <block id="acfc60ec9f8f05c3871b6da9a754e5e1" category="paragraph-title">単一のONTAP Select Deployインスタンスで、ESXi、Hyper-V、KVM上にクラスタを作成できますか？</block>
+  <block id="4b27f0d8ac6b23a67d5a268c19d587a9" category="paragraph">はい。ONTAP Select DeployはESXi、Hyper-V、またはKVMにインストールでき、これらのインストール環境を使用して、これらのいずれかのハイパーバイザー上にONTAP Selectクラスタを作成できます。</block>
+  <block id="2e30201082a917b59ae60a1753a50e72" category="list-text">ESXi、Hyper-V、およびKVMに対応しています</block>
+  <block id="02043ef6bc7f332a01887b245b8d3ad2" category="list-text">ONTAP Select 9.20.1以降、ONTAP SelectはHyper-Vハイパーバイザーをサポートします。</block>
+  <block id="711a77eb97d9ead8951522e7361dc3a7" category="paragraph-title">Hyper-VおよびKVM向けのONTAP Selectは、複数のNICボンディングをサポートしていますか？</block>
+  <block id="3495d24c5401b6b09edf87fc936e334b" category="paragraph">Hyper-VまたはKVMにインストールする場合は、単一のボンドと単一のブリッジを使用する必要があります。物理ポートが2つまたは4つあるホストでは、すべてのポートを同じボンドに含める必要があります。</block>
+  <block id="86219d239e3462d8165c24ad072d5554" category="paragraph">ONTAP Select DeployおよびKVM向けONTAP Selectは、外部アレイ上の共有論理ストレージプールタイプを使用したONTAP Select シングルノード クラスタの構成をサポートします。ストレージプールは、iSCSI、FC/FCoE、およびNFSに基づいて構築できます。その他の種類のストレージプールはサポートされていません。</block>
+  <block id="b8f5f1fe9fbf96b30ca71cd9acb55c8e" category="paragraph">外部ストレージを使用するマルチノードクラスタ（マルチノードvNAS）は、ESXiとKVMの両方でサポートされています。マルチノードvNASモデルはHyper-Vではサポートされていません。同一クラスタ内でのハイパーバイザーの混在はサポートされていません。共有ストレージ上のHAアーキテクチャは、HAペア内の各ノードがパートナーデータのミラーコピーを保持していることを意味します。しかし、VMware HAやKVM Live Motionに依存するシングルノード クラスタとは異なり、マルチノードクラスタはONTAPの無停止運用という利点をもたらします。</block>
+  <block id="6959b85ef43f7bd69d6c4bef1d636c7e" category="paragraph">NSX-V VXLANポートグループがサポートされています。ONTAP MetroCluster SDSを含むマルチノードHAの場合は、VXLANのオーバーヘッドに対応するため、内部ネットワークの最大伝送単位（MTU）を（9000ではなく）7500～8900に設定してください。内部ネットワークのMTUは、クラスタの導入時にONTAP Select Deployを使用して設定できます。</block>
+  <block id="f51827abc6f2c44c523da0640488337b" category="paragraph-title">ONTAP SelectはHyper-Vライブマイグレーションをサポートしていますか？</block>
+  <block id="5e3c2938c1e0c6df379e3f9f37dff20e" category="paragraph">iSCSIまたはFC上のクラスタ共有ボリュームなどの共有ストレージを使用してWindows Serverフェールオーバークラスタ内で構成されたONTAP SelectノードVMは、ライブマイグレーションをサポートします。ローカルの直接接続ストレージ（DAS）を使用するONTAP Selectは、ライブマイグレーションをサポートしません。</block>
+  <block id="b65fe799f2d4fd459e10c5a558968fa3" category="paragraph-title">10GEポートが1つしかないホストでONTAP Selectを実行できますか？また、ESXi、Hyper-V、KVMに対応していますか？</block>
+  <block id="c5cdc255b652de04fdebb5421af0e5ef" category="paragraph">外部ネットワークへの接続には、10GEポートを1つ使用できます。ただし、NetAppでは、制約のあるスモールフォームファクタ環境でのみこれを使用することをお勧めします。これはESXi、Hyper-V、およびKVMでサポートされています。</block>
+  <block id="9ddef41d5c2a6e149419b691c71c0fec" category="paragraph-title">Hyper-VおよびKVM上でライブマイグレーションを実行するために、他にどのようなプロセスを実行する必要がありますか？</block>
+  <block id="1960cb969f62523f142c4a479f42e7eb" category="paragraph">ライブマイグレーションに参加する各ホストに、オープンソースのCLVMおよびpacemaker（pcs）コンポーネントをインストールして実行する必要があります。これは、各ホスト上の同じボリュームグループにアクセスするために必要です。さらに、受信および送信のライブマイグレーションを行うには、Hyper-Vサーバーでライブマイグレーション機能を有効にする必要があります。</block>
+  <block id="c5782d9c6a98280b613d48222b56074d" category="paragraph">はい、ESXiとKVMの両方で、SSDメディアを使用したソフトウェアRAIDがサポートされています。</block>
+  <block id="4354f28c608cc9dce68e73c241034a9f" category="paragraph">以下のONTAP機能は、ONTAP Selectでサポートされており、デフォルトでライセンスが付与されています。</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">機能</block>
+  <block id="0ff3fcd44035e3f54a2216140f6b51ae" category="cell">詳細情報</block>
+  <block id="f4c6f851b00d5518bf888815de279aba" category="cell">Notes</block>
+  <block id="7259cd6e0f46eebf9079f25f465a8c63" category="cell">自律型ランサムウェア対策（ARP）</block>
+  <block id="26614a7649b9605c8e9b89f419dcbbc9" category="inline-link-macro">ONTAP自律型ランサムウェア対策</block>
+  <block id="1448b230297de6aae5be5a84ffad1b2b" category="cell"><block ref="1448b230297de6aae5be5a84ffad1b2b" category="inline-link-macro-rx"></block></block>
+  <block id="80c76c469dc2eb518fb0c4babad302f4" category="cell">ONTAP Selectは、ARPの手動アップデートのみをサポートしています。</block>
+  <block id="8085c3ad4fb9054b641b8c4859975cb3" category="inline-link-macro">ONTAP SMB</block>
+  <block id="9f534ec9b5153a8e4f1065cf9518425c" category="cell"><block ref="9f534ec9b5153a8e4f1065cf9518425c" category="inline-link-macro-rx"></block></block>
+  <block id="ff0692a5632dd96493b5d7ddad4feb27" category="inline-link-macro">ストレージボリュームの管理</block>
+  <block id="ec06f5a1e6d7953d27f202c3e18b0e33" category="cell"><block ref="ec06f5a1e6d7953d27f202c3e18b0e33" category="inline-link-macro-rx"></block></block>
+  <block id="5ca8be7c9188958ecb365ef1e4add7fe" category="inline-link-macro">外部キー管理の有効化と設定</block>
+  <block id="789dc442f4615e0003b0fd7c6ed193b6" category="cell"><block ref="789dc442f4615e0003b0fd7c6ed193b6" category="inline-link-macro-rx"></block></block>
+  <block id="5b05ca084458312270e7b2e9cc9bad18" category="inline-link-macro">ONTAP FlexCacheライトバック</block>
+  <block id="0a2474e0f0b442b67679cb4764b8b967" category="cell"><block ref="0a2474e0f0b442b67679cb4764b8b967" category="inline-link-macro-rx"></block></block>
+  <block id="5bf49491fe603fcbb3ea7b5c512079b1" category="cell">ONTAP Selectは、ライトバック機能付きのFlexCacheキャッシュボリュームをサポートしています。*注意*：ONTAP SelectでのFlexCacheライトバックには制限があります。詳細については、<block ref="21c6bdb9bdf4ae0555605ffef9379227" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="447225dae996c4b3ff4b5ccf57470055" category="inline-link-macro">ONTAP FlexCloneボリューム</block>
+  <block id="5ca933407935a994a67ab0be148daee9" category="cell"><block ref="5ca933407935a994a67ab0be148daee9" category="inline-link-macro-rx"></block></block>
+  <block id="e976f2c0bf72ea1b59022c62fef2667b" category="inline-link-macro">iSCSI認証情報の管理</block>
+  <block id="03e88967d85e661395f6900284463e76" category="list-text"><block ref="03e88967d85e661395f6900284463e76" category="inline-link-macro-rx"></block></block>
+  <block id="6d98487ef0d3d28e0e6d7c995a9eb9e7" category="inline-link-macro">iSCSIサービスの管理</block>
+  <block id="03c5dad65283d467237d9598399a1839" category="list-text"><block ref="03c5dad65283d467237d9598399a1839" category="inline-link-macro-rx"></block></block>
+  <block id="d242a03692a44ddc0ce4752059930ea4" category="inline-link-macro">iSCSIセッションの表示</block>
+  <block id="dcd9372bab71dcb5302044335f60a33c" category="list-text"><block ref="dcd9372bab71dcb5302044335f60a33c" category="inline-link-macro-rx"></block></block>
+  <block id="79f68f3f0ccb18c8c68bcc3dfd57afa7" category="inline-link-macro">ONTAP FlexVolボリューム向けNDMP</block>
+  <block id="5c0af76461ab26e246b49c28592981c5" category="cell"><block ref="5c0af76461ab26e246b49c28592981c5" category="inline-link-macro-rx"></block></block>
+  <block id="c4b8c29f448328e82ce27062b5fd9c28" category="cell">NetApp Volume Encryption</block>
+  <block id="b7556a7908a41e4bc927e98b5ce11d72" category="inline-link-macro">ONTAP NetAppボリュームおよびアグリゲートの暗号化</block>
+  <block id="568182e38d6d2a4f76a5ee0cedef0554" category="cell"><block ref="568182e38d6d2a4f76a5ee0cedef0554" category="inline-link-macro-rx"></block></block>
+  <block id="afa89ddcffee0403e8eae2569506f41c" category="cell">ONTAP Selectは、制限のない国でのみNetAppボリューム暗号化をサポートしています。</block>
+  <block id="fdda10dce460c492b1406b2531e87673" category="inline-link-macro">NFSプロトコルでのONTAPファイルアクセス</block>
+  <block id="253276cb66c2ae0370ad3870f945610e" category="cell"><block ref="253276cb66c2ae0370ad3870f945610e" category="inline-link-macro-rx"></block></block>
+  <block id="4ade1e690485ace608877ec90f1e5fbc" category="cell">NFS over TLS</block>
+  <block id="bdb75401df4f0f10d6062b698543b0d0" category="inline-link-macro">NFS over TLSの有効化</block>
+  <block id="72a86ac8e44fcf04dcd940778eea39a3" category="cell"><block ref="72a86ac8e44fcf04dcd940778eea39a3" category="inline-link-macro-rx"></block></block>
+  <block id="c13609af4d6579ef7a77cbbc76b87886" category="cell">ONTAP Selectは、CLIを使用してTLS経由のNFSをサポートします。System Managerはサポートされていません。</block>
+  <block id="78712174327bc670c206ea76f8f2d084" category="inline-link-macro">NVMeサービスの管理</block>
+  <block id="978a2d8e13a00eeb355cd55e313808b4" category="cell"><block ref="978a2d8e13a00eeb355cd55e313808b4" category="inline-link-macro-rx"></block></block>
+  <block id="109404a5e80458665ac1cc1024768b13" category="inline-link-macro">ONTAP SVMのユースケース</block>
+  <block id="b63cfa4654ce2959afbae9169a822bd9" category="cell"><block ref="b63cfa4654ce2959afbae9169a822bd9" category="inline-link-macro-rx"></block></block>
+  <block id="fe40466112ae5bec26e67871cf0726fb" category="inline-link-macro">ONTAP S3構成</block>
+  <block id="01dc85ac438e7fc65596547e04a8cd50" category="cell"><block ref="01dc85ac438e7fc65596547e04a8cd50" category="inline-link-macro-rx"></block></block>
+  <block id="97818ee0b170323c6470b53b4692a5a3" category="inline-link-macro">ONTAP SnapMirror S3</block>
+  <block id="2224e7bcc05261d01e18720b15f1a672" category="cell"><block ref="2224e7bcc05261d01e18720b15f1a672" category="inline-link-macro-rx"></block></block>
+  <block id="e5be20e426588130203bae7a7e597f79" category="cell"><block ref="e5be20e426588130203bae7a7e597f79" category="inline-link-macro-rx"></block></block>
+  <block id="9d6239ea1f59ffd717bd304c22536112" category="inline-link-macro">ONTAP SnapMirror非同期ディザスタリカバリ</block>
+  <block id="064bf7715c2e89fdbeb2f44556e15fdc" category="cell"><block ref="064bf7715c2e89fdbeb2f44556e15fdc" category="inline-link-macro-rx"></block></block>
+  <block id="7e770fb30856a63099e3476135b27f84" category="inline-link-macro">ONTAPスナップショットからボリュームの内容を復元する</block>
+  <block id="67176923873ee8abd891150afa0eae72" category="cell"><block ref="67176923873ee8abd891150afa0eae72" category="inline-link-macro-rx"></block></block>
+  <block id="730c68a466f644d836d0cf9bc4bc7fb4" category="cell">SnapMirror DR、アーカイブ（旧SnapVault）</block>
+  <block id="0aa1117bb089f8873e3b481abb0fc667" category="inline-link-macro">ONTAP SnapMirrorレプリケーション ワークフロー</block>
+  <block id="4c4da27d1865ad030bdce4f530b97108" category="cell"><block ref="4c4da27d1865ad030bdce4f530b97108" category="inline-link-macro-rx"></block></block>
+  <block id="dbe8f5587bcaee638ca03f4db909f84f" category="inline-link-macro">ONTAP SnapMirror SVMレプリケーション</block>
+  <block id="7c655860d2960a2c2347c22732aefe8c" category="cell"><block ref="7c655860d2960a2c2347c22732aefe8c" category="inline-link-macro-rx"></block></block>
+  <block id="e4eb0164f8d958428b40d9d3cfc41e2a" category="paragraph">ONTAP Selectでサポートされているものの、デフォルトではライセンスが付与されていない以下のONTAP機能については、別途ライセンスを取得する必要があります。</block>
+  <block id="3b0649c72650c313a357338dcdfb64ec" category="cell">メモ</block>
+  <block id="990ddb1a4a5333b31f268a30646a04db" category="inline-link-macro">ONTAP FabricPool</block>
+  <block id="8f243a23fbbc8a0796e81a03d9ca89ce" category="cell"><block ref="8f243a23fbbc8a0796e81a03d9ca89ce" category="inline-link-macro-rx"></block></block>
+  <block id="4c1cd6c4889f6c77d0e40984793ba6c5" category="inline-link-macro">ONTAP Select向けMetroCluster SDS</block>
+  <block id="d0b58b47db6599da942ab7b05527c8b1" category="cell"><block ref="d0b58b47db6599da942ab7b05527c8b1" category="inline-link-macro-rx"></block></block>
+  <block id="a952d3957d6eb062e5276a4a3ab708b0" category="cell">これはONTAP Selectプレミアムライセンスの提供です。</block>
+  <block id="4ae01b68125388898638ecb3eb2e59b7" category="cell"><block ref="4ae01b68125388898638ecb3eb2e59b7" category="inline-link-macro-rx"></block></block>
+  <block id="ad8f7b67034a355f5ce7dc712ef53241" category="section-title">ONTAP Select 9.20.1</block>
+  <block id="b5dedb5cdecd975d8792b0a6f6ad6856" category="list-text">Hyper-Vハイパーバイザーのサポート</block>
+  <block id="6e41f0ef6d71c02d76b3643636fde9df" category="list-text">ONTAP Select 9.20.1以降では、Windows Server 2025およびWindows Server 2022を実行しているMicrosoft Hyper-Vハイパーバイザー上にONTAP Selectクラスタをデプロイできます。ONTAP Select Deploy管理ユーティリティを使用して、サポートされているHyper-Vホスト上でシングルノード、2ノード、および4ノードのクラスタを構成および管理できます。</block>
+  <block id="a95c86b0fda91ef22617d1adcaefd9f5" category="inline-link-macro">Hyper-Vのストレージ要件</block>
+  <block id="e5962387d01ad89be56c5d3926f5491b" category="list-text"><block ref="4a9bab0dcad25972940769f3fc61ed04" category="inline-link-macro-rx"></block>について</block>
+  <block id="e417cb9f66584f41e35dc1d49adea159" category="inline-link-macro">Hyper-Vホストの構成と準備チェックリスト</block>
+  <block id="eab1cbed9479a9465742f70e75968ff9" category="list-text"><block ref="4163238a43b16b6936e4b7885b7fc1d5" category="inline-link-macro-rx"></block>について</block>
+  <block id="4618a1c3f088d658e34ad45f8d1f4009" category="inline-link-macro">Hyper-VホストへのONTAP Select Deployのインストール</block>
+  <block id="7049803ae62a23f632a857d6c6913eda" category="list-text"><block ref="db0aafd64e26493cb502a023c55d498c" category="inline-link-macro-rx"></block>について学ぶ</block>
+  <block id="6e3e18f860c1809f7d919a011f06c756" category="list-text">TLS経由のNFSのサポート</block>
+  <block id="98157c408dfe87393854180a2649fc7d" category="list-text">ONTAP Select 9.20.1以降、ONTAP SelectはCLIを使用したTLS経由のNFSをサポートします。System Managerはサポートされていません。詳細については、<block ref="d74e51aab974d5584eeccb899c4795c8" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="f202310de6626276ab9dc3024a772ea3" category="list-text">ONTAP Select 9.19.1以降、ONTAP Selectは、ESXiおよびカーネルベースの仮想マシン（KVM）ハイパーバイザーホスト上のAMDプロセッサをサポートします。詳細については、<block ref="db422ba85aa25b901cf43f6d42795d78" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="af067500ca47f8d84b13047390c83022" category="inline-link-macro">クラスタの拡張と縮小、およびサポートされているESXiとKVMハイパーバイザーのバージョンについて説明します。</block>
+  <block id="91049a3c49749c730676df7d4db20d30" category="paragraph"><block ref="837a3188129b93af8a6a34be49f82872" category="inline-link-macro-rx"></block>。</block>
+  <block id="6f4935f7e06e483f26d92e85864bd0d1" category="list-text">ONTAP Select 9.17.1以降、クラスタの拡張および縮小機能は、ESXiとカーネルベースの仮想マシン（KVM）の両方のハイパーバイザーホストでサポートされます。ONTAP Select 9.16.1および9.15.1では、クラスタの拡張および縮小はESXiハイパーバイザーホストでのみサポートされます。</block>
+  <block id="ea0115fc6cdd830c7764b40e0c2df09e" category="paragraph"><block ref="6b838167151356187bd9baa4e8a498a4" category="inline-link-macro-rx"></block>。</block>
+  <block id="c112ff7a239201d8494dbe6c016c6f39" category="paragraph">追加のオーバーヘッドを考慮するため、クラスタをデプロイする前に、クラスタの最大伝送単位（MTU）サイズを手動で8800に調整する必要があります。VMwareのガイドラインでは、NSX-Tを使用する際には200バイトのバッファを確保することを推奨しています。</block>
+  <block id="ccff6764a404cdbfc02d31c4c6b41443" category="paragraph">ONTAP Select Deployの認証情報ストアは、アカウント情報を保持するデータベースです。Deployは、クラスタの作成および管理の一環として、アカウント認証情報を使用してホスト認証を実行します。ONTAP Selectの展開を計画する一環として、認証情報ストアがどのように使用されるかを認識しておく必要があります。</block>
+  <block id="84a3b0924beefbde67dc3bb65fd4a47d" category="section-title">Hyper-Vに必要なWindowsの知識とスキル</block>
+  <block id="581dd2389fdbc2be51f2e224d7cca828" category="paragraph">Hyper-Vハイパーバイザーを搭載したWindows Serverは、複雑な環境です。Hyper-VにONTAP Selectを展開する前に、必要な知識とスキルを備えている必要があります。</block>
+  <block id="f9045873132a32fce76b808dc3623f79" category="paragraph">ONTAP Select Deploy管理ユーティリティは、ONTAP Select仮想マシン（VM）を作成および管理します。Deployが管理するWindowsホストを準備し、そのホストがONTAP Selectの要件を満たしていることを確認するには、次のスキルが必要です。</block>
+  <block id="c64c33959a0202ede91d99d011c82839" category="list-text">Windows Server 管理</block>
+  <block id="77d5b635873f439619876c06959512b2" category="list-text">ONTAP Selectの展開に使用するWindows Serverリリースに関する経験が必要です。具体的には、以下のタスクを実行できる必要があります：</block>
+  <block id="179727b3c017b3aaacd5e19f8d05ee02" category="list-text">Windows Serverのインストールとアップデート</block>
+  <block id="f084e01de2985121d2c1b3aadeb02baf" category="list-text">インストールされているWindows Serverのリリースを特定し、サポートされていることを確認します</block>
+  <block id="f187356547a749b7b553ceb1836766a1" category="list-text">サーバーロールとオプション機能（Hyper-Vロールを含む）をインストールして有効化します</block>
+  <block id="7fb0a91a7e4c676ac7b29f71d2e67ce2" category="list-text">ONTAP Selectノードの導入後もホストで容量を利用できるように、ホストCPUとメモリのサイズを調整します。</block>
+  <block id="35a93441a0b29e9ad58ccb207e4cce0f" category="paragraph">必要な構成やソフトウェア パッケージなど、Windows サーバーの準備に関する詳細については、<block ref="27172d33f1ac758411b153c9480bb6ff" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="8adefc51b4dcf652594e8fb4a1469d8c" category="list-text">Hyper-Vの概念と管理</block>
+  <block id="f3c20d0d16fb5087fb56fce46d63347a" category="list-text">仮想化の一般的な概念とHyper-Vプラットフォームについて理解しておく必要があります。具体的には、以下の点を理解しておく必要があります：</block>
+  <block id="ea19debfef4cc2bf5b4d82e5663339fc" category="list-text">Hyper-Vロールを有効にすると、ホスト上のネットワークとストレージがどのように変化するか</block>
+  <block id="b052d48baa30d65574b010da245625fe" category="list-text">仮想ハードディスクとVMにパススルーされる物理ディスクの違いなど、Hyper-VがVMにストレージを提示する方法</block>
+  <block id="4418cd66e8d3c798569542dd48b380cd" category="list-text">VMとそのリソースの構成と状態を表示する方法</block>
+  <block id="5c8cd61034509ce159bd33b49cedc45c" category="admonition">Deploy管理ユーティリティは、ONTAP Select VMを作成および管理します。Hyper-Vマネージャー、フェールオーバー クラスター マネージャー、またはPowerShellを使用して、VMを再構成、チェックポイントの作成、移行、または削除しないでください。</block>
+  <block id="c8449eb3da37f618f1633a0ab285f9b5" category="list-text">ネットワーク構成と仮想スイッチ構成</block>
+  <block id="89097ab003425329ec190c9e54797db7" category="list-text">ネットワークの概念とネットワークスイッチの設定について理解しておく必要があります。さらに、Hyper-Vホスト上で以下のタスクを実行できる必要があります：</block>
+  <block id="248a28d683447813ed5d85a790724482" category="list-text">外部仮想スイッチを計画および作成し、各仮想スイッチが物理ネットワークアダプタにどのようにバインドされるかを理解する</block>
+  <block id="71b78279a9c7f2343e9bcb4c438e9358" category="list-text">ホストネットワークアダプタのリンク状態、速度、およびIP構成を確認します</block>
+  <block id="e8ba1b5541530623ecc81bc6538306ee" category="list-text">ホストと物理ネットワークの両方でVLANタギングを統一的に設定する</block>
+  <block id="2ce628c7a4b701d13170fb3ef800f104" category="list-text">物理ネットワークアダプタ上でジャンボフレームを設定し、結果として得られる最大伝送単位（MTU）を決定します</block>
+  <block id="d50ce054d2bfefc9d3b1ff5e2b6f1ac8" category="paragraph">Deploy管理ユーティリティは、ホスト上にすでに存在する仮想スイッチを使用するため、デプロイ前に仮想スイッチのレイアウトを計画する必要があります。たとえば、2ノードクラスタには、7500～9000バイトのMTUを持つ内部ネットワークが必要です。</block>
+  <block id="381f3a4b24840141a038524fbf7e0810" category="list-text">ストレージの管理</block>
+  <block id="a15f488842baebd129cea799b6f01d9a" category="list-text">Windows Server上でディスクとボリュームを管理できる必要があります。具体的には、以下のタスクを実行できる必要があります：</block>
+  <block id="fee5fe868dd0b0eb87004597d9f344f6" category="list-text">NTFSまたはReFSボリュームを作成してサイズを設定し、ドライブ文字を割り当てる</block>
+  <block id="43efc485a22520e1fec588f17606019e" category="list-text">物理ディスクのメディアタイプ、ストレージ転送プロトコル（バスタイプ）、および容量を特定します</block>
+  <block id="4a95632a7b72229aca28e0dcc2340f1b" category="list-text">未加工のディスクと、パーティション分割済みまたは既にボリュームが含まれているディスクを区別する</block>
+  <block id="468248e831a88bb938402a78cc10ea1b" category="list-text">システムで使用するrawディスクを初期化します</block>
+  <block id="4af52022504a9f231e4f829075474148" category="paragraph">Linuxサーバーの準備に関する詳細情報（必要な構成やソフトウェアパッケージを含む）については、<block ref="9c7e38865048e0154faab91c0ef357d6" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="64c208ef36c425aebf158d1804ef123f" category="admonition">NetAppサポートから指示されない限り、ONTAP Select VMの構成を直接変更しないでください。VMの構成と変更は、Deploy管理ユーティリティからのみ行う必要があります。NetAppサポートの支援なしにDeployユーティリティの外部からONTAP Select VMに変更を加えると、VMに障害が発生して使用できなくなる可能性があります。</block>
+  <block id="8502da5e27f8da217136762c1b99ecdd" category="admonition">ONTAP Select 9.20.1以降では、Microsoft Hyper-Vハイパーバイザーがサポートされています。</block>
+  <block id="e7b8b8e5efa55a6c656776fb995c3a5c" category="list-text">Deploy管理ユーティリティとONTAP SelectノードはどちらもVMとして実行されます。Deployユーティリティに選択するハイパーバイザーは、ONTAP Selectノードに選択するハイパーバイザーとは独立しています。この2つを組み合わせる際には、完全な柔軟性があります：</block>
+  <block id="ada918398bc82492c7bba73eb213d571" category="admonition">ONTAP Selectのストレージ容量は、ONTAP Select VMに接続されたデータディスクの合計許容サイズに対応します。</block>
+  <block id="a3c8599d86a5dac411e68d7e5d48abc2" category="admonition">アカウント情報は、Advanced Encryption Standard（AES）暗号化アルゴリズムとSHA-256ハッシュアルゴリズムを使用して、データベースに安全に保存されます。</block>
+  <block id="9726190e0f93115ca88c6e3a60995011" category="paragraph">*ホスト*認証情報は、ONTAP SelectノードをESXi、Hyper-V、またはKVMに直接デプロイする一環として、ハイパーバイザーホストを認証するために使用されます。</block>
+  <block id="3ede611409bdfb5258609134e2705561" category="paragraph">ONTAP Selectは、ESXi、Hyper-V、およびKVMハイパーバイザー上に展開できます。</block>
+  <block id="a2774350841e2b80ffa67a7e9403373f" category="paragraph">ONTAP Selectは、以下のHyper-Vハイパーバイザー バージョンをサポートしています：</block>
+  <block id="c28904f7b1f886569945d492c5455560" category="list-text">Microsoft Windows Server 2025および2022</block>
+  <block id="ffd691b3fb520c85d3de9cb0a89da3fe" category="paragraph">マルチノードクラスタ内のONTAP Selectノードを接続するために、別の内部ネットワークが使用されます。通常、このネットワークの最大伝送単位（MTU）サイズは9000です。しかし、ONTAP Selectノードを接続するネットワークにとって、このMTUサイズが大きすぎる状況もあります。より小さなフレームに対応するため、内部ネットワークでONTAP Selectが使用するMTUサイズは、7500～9000バイトの範囲にすることができます。</block>
+  <block id="6892e87994354b891ab1678fabb5056f" category="paragraph">ONTAP Selectデプロイ環境のさまざまな参加者間でネットワーク トラフィックが流れるように、ファイアウォールが正しく設定されていることを確認する必要があります。</block>
+  <block id="a03d4e675187731309f7bcbccb5f4c8b" category="list-text">vSphere（ESXiのみ）</block>
+  <block id="4a98ca63619b454dcd0d6d3b573463b1" category="paragraph">クラスタ展開でのホストの管理方法に応じて、vSphereサーバーまたはESXiホストのいずれか</block>
+  <block id="59548ab4c1fb4b2b2587a5adae37b741" category="list-text">ハイパーバイザーサーバー</block>
+  <block id="51793a82aad81fa6d5173f381cd0f99a" category="paragraph">ESXiハイパーバイザーホスト、Microsoft Hyper-Vホスト、またはLinux KVMホスト</block>
+  <block id="c8897d5d1ae6525c84260457a4b60bf1" category="paragraph">ONTAP Selectノード</block>
+  <block id="3056572311cdce9d88f8e3e296feb93d" category="paragraph">ONTAP Selectクラスタ</block>
+  <block id="284f543d2115bac3034d14ca8d227d6a" category="list-text">管理WS</block>
+  <block id="f6e60ebc001be1b906b24a295ba103ed" category="paragraph">ローカル管理ワークステーション</block>
+  <block id="d747fb00946696158328357ecfce05b6" category="cell">ESXi / Hyper-V / KVM</block>
+  <block id="74bf39243dbcc6a48d4bb438078966ae" category="cell">ESXi、Hyper-V、またはKVM</block>
+  <block id="bf89a28c8b7e08e5d998e322349cb98c" category="cell">各ONTAP Selectノードに展開</block>
+  <block id="0f6790e5ad8828d6d326893f48b45491" category="cell">管理WSから各ONTAP Selectノードへ</block>
+  <block id="241b93383b2f1b3f6df6b94a05f7c7e9" category="cell">ONTAP Selectノードとクラスタへのデプロイ</block>
+  <block id="0af4355899ab3569bdfd03d8f10d1450" category="cell">デプロイする各ONTAP Selectノード</block>
+  <block id="85ca0b9d59a401c0894d8e7003bbef74" category="cell">WinRM HTTPS（5986）</block>
+  <block id="4ed1d4b1f4d57977158c11ad43adcc40" category="inline-link-macro">VMware ESXiの外部ストレージ要件</block>
+  <block id="2277d6e5d3c946b879401f23382126ac" category="inline-link-macro">KVM外部ストレージの要件</block>
+  <block id="ef79421440f75921bd7b0354c4bee16e" category="admonition">ESXi、Hyper-V、およびKVMホスト向けのストレージサポート情報について説明します。詳細については、<block ref="05e8702333175c7a7289081097967d7b" category="inline-link-macro-rx"></block>、<block ref="4a9bab0dcad25972940769f3fc61ed04" category="inline-link-macro-rx"></block>、および<block ref="1287c8cd6da3255aff72b98414f0c7e7" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="f6d904a8a1905571b4c121fa5b319819" category="paragraph"><block ref="f6d904a8a1905571b4c121fa5b319819" category="inline-link-macro-rx"></block></block>
+  <block id="bae9702007f4a338ae0ec62e027e6260" category="inline-link-macro">ONTAP Select 9.20.1 リリースノート</block>
+  <block id="15f010faf42c808b97c12d0b5e18d4dd" category="paragraph"><block ref="74d7c8f957684ee28ac7a5164b141b65" category="inline-link-macro-rx"></block>にアクセスして、現在のバージョンの詳細を表示できます。</block>
+  <block id="809b7a805a28884b364837536cdc38b7" category="list-text">クイック</block>
+  <block id="82fd626c0a62e86df480fd491a4b8886" category="paragraph">このモードでは、基本的な無停止テストを実行します。PINGテストに加えて、ネットワークの最大伝送単位（MTU）サイズとvSwitchのテストが実行されます。</block>
+  <block id="f23578fcd2a868168854ab714e7de537" category="list-text">拡張版</block>
+  <block id="746bf151494c55cbeb05a63863c7528d" category="paragraph">このモードでは、すべての冗長ネットワークパスに対してより包括的なテストが実行されます。アクティブなONTAP Selectクラスタでこれを実行すると、クラスタのパフォーマンスに影響が及ぶ可能性があります。</block>
+  <block id="9c8c039227edd38f782e54dd945fe047" category="list-text">故障したディスクドライブを特定してください：</block>
+  <block id="8d6e73ab6ec07960802e5d33f0844fbc" category="paragraph">Hyper-Vホスト上のONTAP Select仮想マシン（VM）の名前、およびONTAP SelectとONTAP Select Deployの管理者アカウントの認証情報が必要です。</block>
+  <block id="2c4a8993c3be6a7bcc38b3e86d636044" category="paragraph">この手順は、ONTAP SelectノードがHyper-V上で実行され、ソフトウェアRAIDを使用するように構成されている場合にのみ使用してください。Hyper-Vでは、ONTAP Selectはパススルーディスクの仮想化されたシリアル番号を報告するため、物理ドライブはシリアル番号ではなくターゲットアドレスで識別します。</block>
+  <block id="ebcf7c61460f813be8638ab091c17802" category="list-text">管理者アカウントを使用してONTAP Select CLIにサインインし、故障したディスクドライブを特定します：</block>
+  <block id="ce14bb8402e0abf4608a9a8c6669e488" category="list-text">[[record-lun-value]]障害が発生したディスクのターゲットアドレスを表示します：</block>
+  <block id="1f91b3a75024222e536ddf998a6583bd" category="paragraph">故障したディスクの<block ref="03628ea331120176369891df319619e8" prefix=" " category="inline-code"></block>値を記録します。<block ref="d20f83ee6933aa1ea047fe5cbd9c1fd5" prefix=" " category="inline-code"></block>値は、パススルーディスクを伝送する仮想SCSIコントローラを識別します。</block>
+  <block id="eb2ac41d6d5fcc8b5a0fe494aa99d856" category="list-text">オプションで、パーティション分割されたディスクとともにスペア ディスクの容量を表示します：</block>
+  <block id="fca3741314ef7728223ce608a9b7a26d" category="list-text">Hyper-Vホストで、ONTAP Select VMに接続されているディスクを表示します：</block>
+  <block id="a3c3aa89f13602d9eac7d522cc04f474" category="inline-xref">記録された&lt;block ref="03628ea331120176369891df319619e8" prefix=" " category='inline-code'/&gt;値</block>
+  <block id="1ca0e904be798a322940b2723da35898" category="paragraph">パススルーディスクはディスク番号を報告するエントリであり、ファイルパスを持つエントリはシステムディスクです。障害が発生したディスクは、<block ref="e5df76445d5447782a1b4899f3c4fcff" prefix=" " category="inline-code"></block>が<block ref="57e00cfb1915df932ecdb6b196daf803" category="inline-xref-macro-rx"></block>と一致するエントリです。障害が発生したディスクの<block ref="d39d7cf6b60929f6ffe1848711dcf3a2" prefix=" " category="inline-code"></block>は、Windowsのディスク番号です。</block>
+  <block id="a2adc4e51d2765a8314cca94868d28a3" category="list-text">故障したディスクの物理的な識別情報を表示します：</block>
+  <block id="d19e9c6fcaf15caed90871cd4b068a80" category="paragraph">ONTAP Select VMのVM ID、およびONTAP SelectとONTAP Select Deployの管理者アカウントの認証情報が必要です。</block>
+  <block id="682eb011ee8bbc4853b5bdce8b9dd17f" category="list-text">VM内で、シリアル番号、UUID、またはターゲットアドレスによってディスクを識別します：</block>
+  <block id="4bc3be9916721d782a37f91c38230eaa" category="list-text">VM構成を調べて、ターゲットアドレスを検索します：</block>
+  <block id="278505fd874d15426b689d8b8cf3e3d7" category="open-title">Hyper-VまたはKVMを使用したDeploy</block>
+  <block id="98eb0458e12d6bc4470adb23c6a2770d" category="paragraph">ディスクを交換する際、またはディスクが不要になった場合、Hyper-VまたはKVMホストからディスクを取り外すことができます。</block>
+  <block id="81b532bf2557db498a47f387ca0ffeb0" category="list-text">仮想マシンからディスクを取り外します：</block>
+  <block id="7cc9c6b21467fd7e35ad421cdcc01ae7" category="list-text">設定をダンプする：</block>
+  <block id="ceb764e0b7f7ea5af32c593c4465d871" category="list-text">ファイルを編集し、VMから切り離すディスク以外のすべてを削除します。</block>
+  <block id="3b0e104d046db5854a8af15dbdc651a3" category="paragraph">ディスクの交換やストレージ容量の増設の一環として、Hyper-VまたはKVMホストにディスクを接続することができます。</block>
+  <block id="7f0e991052e85d16940a50b121c18c83" category="list-text">新しいディスクをVMに接続します：</block>
+  <block id="5633af1542fc5f1b28b3ef270b2bb997" category="list-text">仮想マシンを右クリックして、*Open Console*を選択します。</block>
+  <block id="89f8923fc07dc8c71e9bcc61166ccac8" category="admonition">ONTAP Selectは、Hyper-Vホスト上でNVMeドライブをSCSIディスクとしてサポートします。ONTAP Selectは、Hyper-Vホスト上でNVMeドライブを個別のデバイス割り当て（パススルーデバイス）としてサポートしていません。</block>
+  <block id="fa1a7ecd35675403f9b52f09bc65c7b9" category="open-title">Hyper-VまたはKVM</block>
+  <block id="d8bb427a6d0f379c75987807344d7df2" category="paragraph">*Hyper-V*</block>
+  <block id="2072d0251e6b09f8e1a13bf27ab1ff69" category="paragraph">*KVM*</block>
+  <block id="fdcf4ef4eb4cac7c887723a7e8b35500" category="open-title">Hyper-Vの例</block>
+  <block id="4a9e1ef6fe2872777a6caf76b5012c38" category="paragraph">ONTAP Select Deploy 9.19.1または9.18.1からONTAP Select Deploy 9.20.1に直接アップグレードできます。たとえば、ONTAP Select Deploy 9.17.1などの以前のリリースからアップグレードするには、まずONTAP Select Deploy 9.18.1または9.19.1にアップグレードしてから、ONTAP Select Deploy 9.20.1にアップグレードする必要があります。</block>
+  <block id="9582a82de7077a19f15f8dd5d18ccb41" category="paragraph">クラスタの拡張および縮小機能は、以下のESXiおよびKVMハイパーバイザーホストでサポートされています。</block>
+  <block id="d2c6cdbb1ba2082c486c22017ae09fec" category="paragraph">ハイパーバイザーホストのインストール前チェックリストを確認しました：</block>
+  <block id="658a6219d588ac3ee40e9198378326df" category="list-text"><block ref="658a6219d588ac3ee40e9198378326df" category="inline-link-macro-rx"></block></block>
+  <block id="32b55a334f708e03cdc4bf4baaae3bd1" category="inline-link-macro">Hyper-Vホストチェックリスト</block>
+  <block id="602bab26b5515a7169c055f39f7fed4b" category="list-text"><block ref="602bab26b5515a7169c055f39f7fed4b" category="inline-link-macro-rx"></block></block>
+  <block id="2c60a7da1e6009f41de5ad14e246fdb0" category="list-text"><block ref="2c60a7da1e6009f41de5ad14e246fdb0" category="inline-link-macro-rx"></block></block>
+  <block id="3f8d2b0a53b1f1cb284adbc7d739d346" category="paragraph">ONTAP Select Deploy管理ユーティリティは、オープン仮想化フォーマットに基づいた仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルのサフィックスは、ESXiホストの場合は<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>、Hyper-Vの場合は<block ref="cf9744c1f12063e301c718a61772e891" prefix=" " category="inline-code"></block>、KVMホストの場合は<block ref="dac59a59e4a69d020a14df6782d60746" prefix=" " category="inline-code"></block>となります。このVMは、ONTAP Selectノード用のDeployサーバーとインストールイメージを提供します。</block>
+  <block id="18ffd95fbccf770e99c3c4f262b55c2e" category="paragraph">ハイパーバイザーホスト上にONTAP Select Deploy仮想マシンを作成します。</block>
+  <block id="9429680247022fd6035dfb18171d3634" category="paragraph">OVF VMイメージを使用して、ESXiホストにONTAP Select Deploy VMをインストールして起動します。インストールプロセスの一環として、DHCPまたは静的IP設定を使用するようにネットワークインターフェイスを設定します。</block>
+  <block id="6bef955127c696a3a902e0c5082337f9" category="paragraph">新規仮想マシンウィザードを使用して、Hyper-Vホスト上にONTAP Select Deploy VMをインストールして起動します。</block>
+  <block id="804dc7b7a573f0e06f67535aa5a0c4fd" category="paragraph">Hyper-Vホストが以下の要件を満たしていることを確認してください：</block>
+  <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">要件</block>
+  <block id="689202409e48743b914713f96d93947c" category="cell">Value</block>
+  <block id="d37ca9f37c3780d422da8a85016a670b" category="cell">Hyper-V の役割</block>
+  <block id="0a097aa72a0360d0a5a6daacac8304b2" category="cell">Hyper-V PowerShell モジュールを含め、インストール済み</block>
+  <block id="a9e2802e537d8b7fdd78663881e62500" category="cell">VM世代</block>
+  <block id="7308e59d84ab3b083a242c73966e2c05" category="cell">第1世代</block>
+  <block id="ce3dfaedf282c19c5710c3e4b7302a4e" category="cell">vCPU</block>
+  <block id="c81e728d9d4c2f636f067f89cc14862c" category="cell">2</block>
+  <block id="92b4465a5a4d4916f36afe473fee931a" category="cell">4GB、静的（動的メモリは無効）</block>
+  <block id="0fe30f7d2c6d9fa750acc035e9d2df03" category="cell">ブートディスク</block>
+  <block id="6d53ff6c17cf70b744eb81f5cc8cdb3d" category="cell">IDEコントローラ0、位置0に接続済み</block>
+  <block id="ec1e54ae04652319df5c011f228c07ac" category="cell">空きディスク スペース</block>
+  <block id="6acf3af0da12db04e960662332e3f235" category="cell">VMディスクを保存するボリュームに少なくとも40GB</block>
+  <block id="ff6bf47273397f3d19a5adeb54e5a709" category="cell">アーカイブツール</block>
+  <block id="ed31b224658fd7f7cabe3992e08ba556" category="cell">Windows Server 2019以降に付属するtar</block>
+  <block id="261c6fe98ccd03c107d2acc80a11a53b" category="paragraph">以下の情報が揃っていることを確認してください：</block>
+  <block id="a82be0f551b8708bc08eb33cd9ded0cf" category="cell">情報</block>
+  <block id="ccb87330d11d127f4e1691116f8e3d05" category="cell">VM name</block>
+  <block id="64fc7a578ea4e42c5544a82780470553" category="cell">デプロイVMの名前、たとえばONTAP-deploy-HV</block>
+  <block id="ce22ab854ad98aa00d50a5bbf50cbe06" category="cell">仮想スイッチ名</block>
+  <block id="ce4085a5a913267d045a007888607138" category="cell">外部仮想スイッチの名前（例：ONTAP_Vswitch）</block>
+  <block id="99f52394d612d0d0d7fad20c648b4cd7" category="cell">物理NIC名</block>
+  <block id="d7ec9e9d793fe7e9c40330af76d394c1" category="cell">Deploy VMネットワークに接続されたホストネットワークアダプタ</block>
+  <block id="05808f0e86c04c2a062c2e041f9e0827" category="cell">VLAN ID</block>
+  <block id="5e04a8fcefae5e7f57656c332b3312f1" category="cell">上流のスイッチ ポートがタグ付きトラフィックを想定している場合にのみ必要</block>
+  <block id="25a28d2831156bd7c602183db5a687fb" category="cell">デプロイVMのFQDNまたは短いホスト名</block>
+  <block id="33ccba682d8aacdfad3cf694806f090e" category="cell">管理者のパスワード</block>
+  <block id="ecd1fd4a8994d5ada8b57b4e162c5328" category="cell">管理者アカウントのパスワード（初回起動時に設定）</block>
+  <block id="add6b4b6b68c0b75c5d9a29ed1bb3654" category="paragraph">静的ネットワーク構成を定義する際には、以下の追加情報が必要です：</block>
+  <block id="a2db39725d823f31f5f2fb44777246df" category="paragraph">外部仮想スイッチを作成すると、物理NIC上のネットワーク トラフィックが一時的に中断されます。物理NIC経由でホストにリモート接続している場合は、アクセスが失われないように、帯域外コンソール（サーバーのBMCなど）または別のネットワーク アダプタを使用してください。</block>
+  <block id="6f1bb71bbc76f3447806d1cc7ec8ac97" category="list-text">Hyper-V マネージャーで、*新規* &gt; *仮想マシン* を選択して、新しい仮想マシン ウィザードを開きます。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">「次へ」を選択します。</block>
+  <block id="03e5c2076658ec504bf56b613178c4a0" category="list-text">VM名を入力し、「次へ」を選択してください。</block>
+  <block id="60f749d5ba632b7347a39b038bedf602" category="list-text">*第1世代*を選択し、*次へ*を選択します。</block>
+  <block id="eae449d96f8a4553d90b35c45de0cee1" category="admonition">Hyper-V環境のONTAP Selectは第2世代VMをサポートしていません。</block>
+  <block id="95986a6ca8768981c022c1de01788185" category="list-text">メモリ容量を入力し、*次へ*を選択します。</block>
+  <block id="0149be86be653ca406b0880b7453489c" category="admonition">最低メモリ要件は4GBです。</block>
+  <block id="44bc03e5eed3f711057771a04bd489ad" category="list-text">ドロップダウンリストから仮想スイッチを選択し、*次へ*を選択します。</block>
+  <block id="92351bf132a305fa68e836ff84ee9388" category="list-text">*既存の仮想ハードディスクを使用する* &gt; *参照* を選択し、<block ref="cf9744c1f12063e301c718a61772e891" prefix=" " category="inline-code"></block> イメージファイルを見つけて選択します。</block>
+  <block id="f66380be9e6695594ab66c45f95890ec" category="list-text">設定内容を確認したら、「完了」を選択してください。</block>
+  <block id="ae1ad4595a8a1df05a608a41788e585a" category="paragraph">OVF VMイメージを使用して、KVMホストにONTAP Select Deploy VMをインストールして起動します。インストールプロセスの一環として、ネットワークインターフェイスでDHCPまたは静的IP構成を使用するように設定します。</block>
+  <block id="8f6dcf016364469bc7f7d218f521cc5c" category="paragraph"><block ref="2079fb4d3836188df4d9b42eed89dd7f" prefix="" category="inline-code"></block></block>
+  <block id="cbaf0c40003847a7288e202f27b4a137" category="sidebar">NetApp ONTAP Selectは、VMware ESXiまたはKernel-based Virtual Machine（KVM）ハイパーバイザーを実行しているさまざまなコモディティ ハードウェア サーバに導入できる、ソフトウェアで定義されるストレージアプライアンスです。柔軟で拡張性の高いプライベートクラウドインフラを構築するために必要な俊敏性を提供します。このサイトには、ONTAP Select 9.20.1のドキュメントが含まれています。</block>
+  <block id="2cf5ace986ea526c45a66e1931e641bd" category="sidebar">ONTAP Select 9.20.1 ドキュメント</block>
+  <block id="41b36522e1e1020bad35b072e2f4caeb" category="sidebar">ストレージ要件</block>
 </blocks>

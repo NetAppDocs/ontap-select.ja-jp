@@ -100,8 +100,8 @@ ONTAPソフトウェア RAID は、RAID 4、RAID-DP、およびRAID-TECという
 
 
 
-[[passthrough-directpath-io-devices-vs-raw-device-maps-rdms]]
-== パススルー（ DirectPath IO ）デバイス vs.RDM （ raw デバイスマップ）
+[[passthrough-directpath-io-devices-versus-raw-device-maps-rdms]]
+== パススルー（DirectPath IO）デバイスとRaw Device Maps（RDM）の比較
 
 ESXiおよびKVMハイパーバイザーは、NVMeディスクをRaw Device Maps（RDM）としてサポートしていません。ONTAP SelectがNVMeディスクを直接制御できるようにするには、これらのドライブをESXiまたはKVM内でパススルーデバイスとして構成する必要があります。NVMeデバイスをパススルーデバイスとして構成する場合、サーバーBIOSからのサポートが必要になり、ホストの再起動が必要になる場合があります。さらに、ホストごとに割り当て可能なパススルーデバイスの数には制限があり、プラットフォームによって異なる場合があります。ただし、ONTAP DeployではONTAP Selectノードあたり14台のNVMeデバイスに制限されます。つまり、NVMe構成では、総容量を犠牲にして、非常に高いIOPS密度（IOPS/TB）が提供されます。あるいは、大容量ストレージを備えた高性能構成を希望する場合は、大容量のONTAP Select VMサイズ、システムディスク用のINTEL Optaneカード、およびデータストレージ用の適切な数のSSDドライブという構成が推奨されます。
 
@@ -109,6 +109,9 @@ ESXiおよびKVMハイパーバイザーは、NVMeディスクをRaw Device Maps
 NOTE: NVMe のパフォーマンスを最大限に引き出すには、 ONTAP Select VM のサイズを大きくすることを検討します。
 
 パススルーデバイスとRDMには、さらに違いがあります。RDMは実行中のVMにマッピングできます。パススルーデバイスではVMの再起動が必要です。つまり、NVMeドライブの交換または容量拡張（ドライブ追加）手順を実行するには、 ONTAP Select VMの再起動が必要になります。ドライブ交換および容量拡張（ドライブ追加）操作は、 ONTAP Deployのワークフローによって実行されます。ONTAPDeployは、シングルノードクラスタのONTAP ONTAP Selectの再起動と、HAペアのフェイルオーバー/フェイルバックを管理します。ただし、SSDデータドライブ（ ONTAP Selectの再起動/フェイルオーバーは不要）とNVMeデータドライブ（ONTAP Selectの再起動/フェイルオーバーが必要）の操作の違いに注意することが重要です。
+
+
+NOTE: ONTAP Selectは、Hyper-Vハイパーバイザー上でNVMeドライブをSCSIディスクとしてサポートします。ONTAP Selectは、Hyper-Vハイパーバイザー上でNVMeドライブを個別のデバイス割り当て（パススルーデバイス）としてサポートしていません。
 
 
 
@@ -128,8 +131,8 @@ FASおよびAFFシステムと同様に、既存のRAIDグループには、同�
 
 
 
-[[match-an-ontap-select-disk-to-the-corresponding-esxi-or-kvm-disk]]
-== ONTAP Selectディスクを対応するESXiまたはKVMディスクに一致させる
+[[match-an-ontap-select-disk-to-the-corresponding-esxi-hyper-v-or-kvm-disk]]
+== ONTAP Selectディスクを対応するESXi、Hyper-V、またはKVMディスクと照合する
 
 ONTAP Select ディスクには通常、 NET x.y というラベルが付けられますディスク UUID は、次の ONTAP コマンドを使用して取得できます。
 
@@ -149,7 +152,7 @@ Plex: -This UID can be matched with the device UID displayed in the ‘storage d
 ----
 image:ST_21.jpg["ONTAP Selectディスクとそれに対応するESXiディスクの照合"]
 
-ESXi または KVM シェルで次のコマンドを入力すると、特定の物理ディスク (naa.unique-id で識別) の LED を点滅させることができます。
+ESXi、Hyper-V、またはKVMシェルで、次のコマンドを入力すると、特定の物理ディスク（naa.unique-idで識別されます）のLEDを点滅させることができます。
 
 [role="tabbed-block"]
 ====
@@ -158,6 +161,13 @@ ESXi または KVM シェルで次のコマンドを入力すると、特定の�
 [source, cli]
 ----
 esxcli storage core device set -d <naa_id> -l=locator -L=<seconds>
+----
+--
+.Hyper-V
+--
+[source, cli]
+----
+Enable-PhysicalDiskIdentification -UniqueId <unique_id>
 ----
 --
 .KVM の略
