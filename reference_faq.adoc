@@ -191,7 +191,7 @@ ONTAP Select Deployには、ONTAP Select ノードでの容量拡張処理をサ
 .ONTAP Select は、 VSAN または外付けアレイタイプのデータストアをサポートしますか。
 ONTAP Select DeployおよびONTAP Select for ESXiは、ストレージプールにvSANまたは外部アレイタイプのデータストアを使用するONTAP Selectシングルノード クラスタの構成をサポートします。
 
-ONTAP Select DeployおよびKVM向けONTAP Selectは、外部アレイ上の共有論理ストレージプールタイプを使用したONTAP Select シングルノード クラスタの構成をサポートします。ストレージプールは、iSCSI、FC/FCoE、およびNFSに基づいて構築できます。その他の種類のストレージプールはサポートされていません。
+ONTAP Select DeployおよびKVM向けONTAP Selectは、外部アレイ上の共有論理ストレージプールタイプを使用したONTAP Select シングルノード クラスタの構成をサポートします。ストレージプールは、iSCSIまたはFC/FCoEに基づいて構築できます。その他の種類のストレージプールはサポートされていません。
 
 共有ストレージ上のマルチノード HA クラスターがサポートされています。
 

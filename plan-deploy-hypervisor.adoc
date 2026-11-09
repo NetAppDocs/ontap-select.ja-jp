@@ -166,7 +166,7 @@ ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポー�
 --
 .KVM の略
 --
-KVM環境にONTAP Select Deployユーティリティをインストールする前に考慮すべき、ハイパーバイザー環境に固有の要件と制限がいくつかあります。
+KVM環境にONTAP Select Deployユーティリティをインストールする前に、KVMハイパーバイザー環境に特有のいくつかの要件と制限事項を考慮する必要があります。
 
 .ハードウェア要件
 ONTAP Selectが導入されるLinux KVMハイパーバイザーホストが、以下の基本要件を満たしていることを確認してください：
@@ -216,10 +216,10 @@ ONTAP Select Deploy は、 IP バージョン 4 （ IPv4 ）のみをサポー�
 ====
 
 
+[[vmware-vsphere-privileges-for-esa]]
 [[vmware-vcenter-server-considerations]]
-== VMware vCenter サーバーに関する考慮事項
+== ESA の VMware vSphere 権限
 
-.ESA の VMware vSphere 権限
 vCenter で vSAN Express Storage Architecture （ESA） を作成および管理するには、次の vSphere コンテンツライブラリ権限が必要です：
 
 

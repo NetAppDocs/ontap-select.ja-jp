@@ -103,10 +103,7 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 --
 OVF VMイメージを使用して、ESXiホストにONTAP Select Deploy VMをインストールして起動します。インストールプロセスの一環として、DHCPまたは静的IP設定を使用するようにネットワークインターフェイスを設定します。
 
---
-====
-.ESXi
---
+.作業を開始する前に
 ESXiハイパーバイザーの場合は、ONTAP Select Deploy VMの導入を準備する必要があります。
 
 * VMware クライアント統合プラグインのインストールまたは同様の設定を必要に応じて実行し、 OVF 機能を有効にします
@@ -123,22 +120,6 @@ VMを作成する際には、VM名、外部ネットワーク、ホスト名な�
 * DNS 検索ドメイン
 
 
---
-.KVM の略
---
-KVMハイパーバイザーの場合、VMを作成する際に使用する構成情報（VM名、外部ネットワーク、ホスト名など）が必要です。静的ネットワーク構成を定義する際には、以下の追加情報が必要です：
-
-* Deploy VMのIPアドレス
-* ネットマスク
-* ゲートウェイ（ルータ）の IP アドレス
-* プライマリ DNS サーバの IP アドレス
-* 2 番目の DNS サーバの IP アドレス
-* DNS 検索ドメイン
-
-
---
-[]
-====
 .このタスクについて
 vSphere を使用する場合は、 Deploy OVF テンプレートウィザードのフォームを使用して、ネットワーク設定を含むすべての Deploy 設定情報を指定します。ただし、このフォームを使用しない場合は、Deploy VMのコンソールを使用してネットワークを設定できます。
 
@@ -174,7 +155,7 @@ DHCP を使用してネットワーク情報を設定しますか？[n] ：
 
 
 --
-
+.Hyper-V
 --
 新規仮想マシンウィザードを使用して、Hyper-Vホスト上にONTAP Select Deploy VMをインストールして起動します。
 
@@ -283,7 +264,7 @@ Use DHCP to set networking information? [n]:
 
 
 --
-
+.KVM の略
 --
 OVF VMイメージを使用して、KVMホストにONTAP Select Deploy VMをインストールして起動します。インストールプロセスの一環として、ネットワークインターフェイスでDHCPまたは静的IP構成を使用するように設定します。
 
@@ -346,8 +327,6 @@ Use DHCP to set networking information? [n]:
 
 
 
-
---
 
 --
 ====
