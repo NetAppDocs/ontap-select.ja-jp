@@ -3773,12 +3773,10 @@ storage aggregate show-spare-disks</block>
   <block id="2dd64bd29dd925332151bac56daee54d" category="list-text">SVM-Migrate</block>
   <block id="191cca9b69f6675fd704265efaee5cd4" category="paragraph">ONTAP Selectは、非同期 SnapMirrorにおけるコンシステンシー グループをサポートしていません。</block>
   <block id="4b24c4ea95509e5cbdbe193ec75f463e" category="paragraph">容量プールライセンスの認可容量は、テラバイト単位（TB）で、最小容量は2 TBです。ライセンス容量は、使用可能なスペースの量にオーバーヘッド係数を掛けることで計算します。オーバーヘッド係数は、使用可能なスペースから取得されるONTAP Selectソフトウェアオーバーヘッド容量を推定するものであり、NVMe、SSD、HDD、または仮想ドライブに対するONTAP Selectの容量の決定に適用されます。オーバーヘッド係数は、シングルノードクラスタとマルチノード（HAペアベース）クラスタで異なります：</block>
-  <block id="b3a8f80cb2ce78cbbf07a7817fabad7d" category="paragraph">導入に必要な容量を確保するためには、使用可能なスペースに基づいてライセンス容量を計算する必要があります。例えば、HAペア用に20 TBの使用可能容量（ノードあたり10 TB）が必要な場合：</block>
   <block id="863cc3c84b4e89fdd7579f92bb937ebc" category="list-text">HAペアでは、冗長性を確保するためにデータが両方のノード間で複製されます。そのため、HAペアで20 TBの利用可能なデータを使用する場合、いずれかのノードがオフラインになった場合に備えて、ノードごとに20 TBの容量が必要になります。</block>
   <block id="3e0455dedd9dea9911d6347cfe0aee63" category="list-text">2.67 という係数は各ノードの容量を 2 倍にし、ONTAP Select が機能するために必要なオーバーヘッド容量 （0.67） を追加します。</block>
   <block id="e1b77540ab30a2b9d111bb1c6ae9524f" category="list-text">ノードあたりのライセンス容量は27 TB（10 x 2.67 = 26.7）です。HAペアの場合、20 TBの使用可能容量を確保するには、27 TBのライセンスが2つ必要です。</block>
   <block id="60a2cd8b21b5abdd1f9f570f98aead06" category="paragraph">容量ティアライセンスのライセンス容量は、1 TB単位で、最小容量は1 TBです。ライセンス容量は、使用可能なスペースの量にオーバーヘッド係数を掛けることで計算します。オーバーヘッド係数は、使用可能なスペースから取得されるONTAP Selectソフトウェアのオーバーヘッド容量を推定するものであり、NVMe、SSD、HDD、または仮想ドライブに対するONTAP Selectの容量の決定に適用されます。オーバーヘッド係数は、シングルノードクラスタとマルチノード（HAペアベース）クラスタで異なります。</block>
-  <block id="ab9e259cd278dabfae81423ce071874c" category="paragraph">導入に必要な容量を確保するためには、使用可能なスペースに基づいてライセンス容量を計算する必要があります。例えば、HAペア用に10 TBの使用可能容量（ノードあたり5 TB）が必要な場合：</block>
   <block id="bd88bf77fede236871bbdaecddefca53" category="list-text">HAペアでは、冗長性を確保するためにデータが両方のノード間で複製されます。そのため、HAペアで10 TBの利用可能なデータを使用する場合、いずれかのノードがオフラインになった場合に備えて、ノードごとに10 TBの容量が必要になります。</block>
   <block id="c0945522d1f6ae9ba28c16c4d8e24c38" category="list-text">ノードあたりのライセンス容量は14TB（5×2.67＝13.35）です。HA構成の場合、10TBの使用可能容量を確保するには、14TBのライセンスが2つ必要です。</block>
   <block id="74b1b9052c3c702d9cea5b8cd980a547" category="paragraph">HAペアのノードごとに：</block>
@@ -4279,4 +4277,14 @@ storage aggregate show-spare-disks</block>
   <block id="0b3fbf115b7bb8c3a3284542b9840849" category="paragraph">KVM環境にONTAP Select Deployユーティリティをインストールする前に、KVMハイパーバイザー環境に特有のいくつかの要件と制限事項を考慮する必要があります。</block>
   <block id="6ec35a9fea619f9056b56a9cceaecd8a" category="paragraph">ONTAP Select DeployおよびKVM向けONTAP Selectは、外部アレイ上の共有論理ストレージプールタイプを使用したONTAP Select シングルノード クラスタの構成をサポートします。ストレージプールは、iSCSIまたはFC/FCoEに基づいて構築できます。その他の種類のストレージプールはサポートされていません。</block>
   <block id="bf1bf7b2d6495806e380ad07c5f6c4ac" category="cell"><block ref="bf1bf7b2d6495806e380ad07c5f6c4ac" category="inline-link-macro-rx"></block></block>
+  <block id="973e60ac87d2047ed8383fc1a9ccd1ab" category="summary">Capacity Poolsライセンスは、各ノードが管理する基盤となるディスク容量に基づいており、ノード、HAペア、またはクラスタの使用可能な容量に基づいているわけではありません。各Capacity Poolsライセンスは、特定の容量に対応する個々のノードシリアル番号に割り当てられ、付随するサポート契約が必要です。</block>
+  <block id="77abd6d38068ade401e1cda5d6d4f4bf" category="paragraph">デプロイメントに十分なライセンス容量を確保するために、使用可能なスペースとクラスタ構成のオーバーヘッドに基づいて、ONTAP Selectキャパシティプールのライセンスサイズを計算します。</block>
+  <block id="fc16ee53985da42d5d6e0c02fdd5f183" category="paragraph">Capacity Poolsのライセンスサイズを決定する前に、以下の点を確認してください：</block>
+  <block id="afbbd458508df60809b6d4aec77f511e" category="list-text">ハードウェアRAID（VMDK）構成とソフトウェアRAID（NVMeまたはSSD）構成の両方において、ライセンス消費量は、データアグリゲートに割り当てられたデータディスクまたはデータパーティションに基づいて計算されます。</block>
+  <block id="d8d5fad58568a0f0ba995cf205ca4b44" category="list-text">ONTAP Selectは、RAID-DPのパリティディスクおよびパーティションをライセンス消費の対象から除外します。アグリゲートに追加されたデータパーティションとディスクのみがライセンスの対象となるため、RAID-DPのパリティオーバーヘッドによって追加のライセンス容量が消費されることはありません。</block>
+  <block id="fca20405fb9c0582e499eb228377067f" category="list-text">スタンバイドライブの容量は、アグリゲートの使用可能容量には含まれず、ライセンス容量も消費しません。</block>
+  <block id="95970b7eb58e4eefe52eb37d1c8a622d" category="list-text">パリティディスクはデータ保護専用です。これらはボリュームやデータのための利用可能なストレージを提供せず、利用可能な容量としてカウントされません。</block>
+  <block id="94d3cb7d191621094c7273b8f519cdcb" category="paragraph">導入に必要な容量を確保するためには、使用可能なスペースに基づいてライセンス容量を計算する必要があります。例えば、HAペア用に20 TBの使用可能容量（ノードあたり10 TB）が必要な場合：</block>
+  <block id="914e50a7e70b439cfca1376c40659db4" category="paragraph">Capacity Tiersライセンスのサイズを決定する前に、以下の点を確認してください：</block>
+  <block id="97a23d2070cc57242b398716549eaa47" category="paragraph">導入に必要な容量を確保するためには、使用可能なスペースに基づいてライセンス容量を計算する必要があります。例えば、HAペア用に10TBの使用可能容量（ノードあたり5TB）が必要な場合：</block>
 </blocks>
